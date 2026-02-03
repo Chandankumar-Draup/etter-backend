@@ -27,7 +27,7 @@ import sys
 ENVIRONMENTS = {
     "local": {
         "base_url": "http://localhost:7071",
-        "pipeline_prefix": "/api/v1/pipeline",
+        "pipeline_prefix": "/v1/pipeline", #"/api/v1/pipeline",
         "token": None,  # No auth for local
     },
     "qa": {
