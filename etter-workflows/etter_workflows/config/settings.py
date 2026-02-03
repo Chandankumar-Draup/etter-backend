@@ -65,9 +65,9 @@ class Settings(BaseSettings):
         default="neo4j",
         description="Neo4j username"
     )
-    neo4j_password: str = Field(
-        default="BK13730kmyDcR5R",
-        description="Neo4j password"
+    neo4j_password: Optional[str] = Field(
+        default=None,
+        description="Neo4j password (required, set via NEO4J_PASSWORD env var)"
     )
     neo4j_database: str = Field(
         default="neo4j",
@@ -97,8 +97,8 @@ class Settings(BaseSettings):
         description="Redis database number"
     )
     redis_password: Optional[str] = Field(
-        default="F6muBM65GqSyvtzBqArK",
-        description="Redis password"
+        default=None,
+        description="Redis password (set via REDIS_PASSWORD env var)"
     )
     redis_socket_timeout: int = Field(
         default=30,
@@ -218,7 +218,6 @@ class Settings(BaseSettings):
     )
 
     model_config = SettingsConfigDict(
-        env_prefix="ETTER_",
         env_file=".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
