@@ -14,11 +14,22 @@ Endpoints (via reverse proxy at /api):
 
 import asyncio
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
+import uuid
 
 from fastapi import APIRouter, BackgroundTasks, HTTPException, Query
 from fastapi.responses import JSONResponse
+
+# Temporal client imports
+try:
+    from temporalio.client import Client as TemporalClient
+    from temporalio.common import RetryPolicy
+    TEMPORAL_AVAILABLE = True
+except ImportError:
+    TemporalClient = None
+    RetryPolicy = None
+    TEMPORAL_AVAILABLE = False
 
 from etter_workflows.api.schemas import (
     PushRequest,
@@ -63,6 +74,64 @@ logger = logging.getLogger(__name__)
 
 # Router prefix: /v1/pipeline (accessed via /api/v1/pipeline through reverse proxy)
 router = APIRouter(prefix="/v1/pipeline", tags=["pipeline"])
+
+# Global Temporal client singleton
+_temporal_client: Optional[TemporalClient] = None
+_temporal_client_lock = asyncio.Lock()
+
+
+async def get_temporal_client() -> Optional[TemporalClient]:
+    """
+    Get or create the Temporal client singleton.
+
+    Returns:
+        Temporal client if available and connected, None otherwise.
+    """
+    global _temporal_client
+
+    if not TEMPORAL_AVAILABLE:
+        logger.warning("Temporal client not available (temporalio not installed)")
+        return None
+
+    async with _temporal_client_lock:
+        if _temporal_client is not None:
+            return _temporal_client
+
+        try:
+            settings = get_settings()
+            logger.info(f"Connecting to Temporal at {settings.temporal_address}")
+
+            _temporal_client = await TemporalClient.connect(
+                settings.temporal_address,
+                namespace=settings.get_temporal_namespace(),
+            )
+
+            logger.info(f"Connected to Temporal namespace: {settings.get_temporal_namespace()}")
+            return _temporal_client
+
+        except Exception as e:
+            logger.error(f"Failed to connect to Temporal: {e}")
+            return None
+
+
+async def is_temporal_connected() -> tuple[bool, str]:
+    """
+    Check if Temporal is connected.
+
+    Returns:
+        Tuple of (is_connected, status_message)
+    """
+    if not TEMPORAL_AVAILABLE:
+        return False, "temporalio package not installed"
+
+    try:
+        client = await get_temporal_client()
+        if client is None:
+            settings = get_settings()
+            return False, f"failed to connect to {settings.temporal_address}"
+        return True, "healthy"
+    except Exception as e:
+        return False, f"error: {str(e)}"
 
 
 @router.post("/push", response_model=PushResponse)
@@ -158,43 +227,95 @@ async def push_role(
                 },
             )
 
-        # Create workflow
-        workflow = RoleOnboardingWorkflow(use_mock_assessment=use_mock)
+        # Generate workflow ID
+        workflow_id = str(uuid.uuid4())
+        settings = get_settings()
 
-        # Create initial status
-        status_client = get_status_client()
-        initial_status = RoleStatus(
-            workflow_id=workflow.workflow_id,
-            company_id=input.company_id,
-            role_name=input.role_name,
-            state=WorkflowState.QUEUED,
-            progress=workflow._create_progress_info(),
-            queued_at=datetime.utcnow(),
-            estimated_duration_seconds=600,  # 10 minutes estimated
-        )
-        status_client.set_status(initial_status)
+        # Try to submit to Temporal
+        temporal_client = await get_temporal_client()
 
-        # Execute workflow in background
-        async def run_workflow():
+        if temporal_client:
+            # Submit workflow to Temporal
+            logger.info(f"Submitting workflow {workflow_id} to Temporal")
+
             try:
-                await workflow.execute(input)
-            except Exception as e:
-                logger.error(f"Workflow execution failed: {e}")
-                # Update status to failed
-                status_client.update_state(
-                    workflow.workflow_id,
-                    WorkflowState.FAILED,
-                    error={"code": "EXECUTION_ERROR", "message": str(e)},
+                await temporal_client.start_workflow(
+                    RoleOnboardingWorkflow,
+                    input,
+                    id=workflow_id,
+                    task_queue=settings.temporal_task_queue,
+                    execution_timeout=timedelta(minutes=input.options.timeout_minutes),
                 )
 
-        background_tasks.add_task(asyncio.create_task, run_workflow())
+                logger.info(f"Workflow {workflow_id} submitted to Temporal successfully")
 
-        return PushResponse(
-            workflow_id=workflow.workflow_id,
-            status="queued",
-            estimated_duration_seconds=600,
-            message=f"Workflow started for {request.role_name} at {request.company_id}",
-        )
+                return PushResponse(
+                    workflow_id=workflow_id,
+                    status="queued",
+                    estimated_duration_seconds=600,
+                    message=f"Workflow submitted to Temporal for {request.role_name} at {request.company_id}",
+                )
+
+            except Exception as e:
+                logger.error(f"Failed to submit workflow to Temporal: {e}")
+                raise HTTPException(
+                    status_code=503,
+                    detail={
+                        "error": "TEMPORAL_ERROR",
+                        "message": f"Failed to submit workflow to Temporal: {str(e)}",
+                        "recoverable": True,
+                    },
+                )
+        else:
+            # Fallback to standalone mode (for development/testing without Temporal)
+            logger.warning("Temporal not available, running workflow in standalone mode")
+
+            # Create workflow
+            workflow = RoleOnboardingWorkflow(
+                workflow_id=workflow_id,
+                use_mock_assessment=use_mock,
+            )
+
+            # Create initial status in Redis (if available)
+            try:
+                status_client = get_status_client()
+                initial_status = RoleStatus(
+                    workflow_id=workflow.workflow_id,
+                    company_id=input.company_id,
+                    role_name=input.role_name,
+                    state=WorkflowState.QUEUED,
+                    progress=workflow._create_progress_info(),
+                    queued_at=datetime.utcnow(),
+                    estimated_duration_seconds=600,
+                )
+                status_client.set_status(initial_status)
+            except Exception as e:
+                logger.warning(f"Failed to set initial status in Redis: {e}")
+
+            # Execute workflow in background
+            async def run_workflow():
+                try:
+                    await workflow.execute(input)
+                except Exception as e:
+                    logger.error(f"Workflow execution failed: {e}")
+                    try:
+                        status_client = get_status_client()
+                        status_client.update_state(
+                            workflow.workflow_id,
+                            WorkflowState.FAILED,
+                            error={"code": "EXECUTION_ERROR", "message": str(e)},
+                        )
+                    except Exception:
+                        pass
+
+            background_tasks.add_task(asyncio.create_task, run_workflow())
+
+            return PushResponse(
+                workflow_id=workflow.workflow_id,
+                status="queued",
+                estimated_duration_seconds=600,
+                message=f"Workflow started (standalone mode) for {request.role_name} at {request.company_id}",
+            )
 
     except HTTPException:
         raise
@@ -297,6 +418,13 @@ async def health_check() -> HealthResponse:
         "api": "healthy",
     }
 
+    # Check Temporal connection
+    temporal_connected, temporal_status = await is_temporal_connected()
+    if temporal_connected:
+        components["temporal"] = "healthy"
+    else:
+        components["temporal"] = f"unhealthy: {temporal_status}"
+
     # Check Redis
     try:
         status_client = get_status_client()
@@ -311,10 +439,15 @@ async def health_check() -> HealthResponse:
     else:
         components["mock_data"] = "disabled"
 
-    overall_status = "healthy" if all(
-        v == "healthy" or v == "enabled"
-        for v in components.values()
-    ) else "degraded"
+    # Service is healthy if Temporal is connected (Redis is optional for Temporal mode)
+    # In Temporal mode, Redis is only used for batch tracking, not for workflow execution
+    if temporal_connected:
+        overall_status = "healthy"
+    elif components.get("redis") == "healthy":
+        # Fallback: can run in standalone mode with Redis
+        overall_status = "degraded"
+    else:
+        overall_status = "unhealthy"
 
     return HealthResponse(
         status=overall_status,
@@ -424,8 +557,8 @@ async def push_batch(
     )
 
     try:
-        status_client = get_status_client()
         settings = get_settings()
+        temporal_client = await get_temporal_client()
 
         # Create batch record
         batch = BatchRecord(
@@ -435,6 +568,7 @@ async def push_batch(
         )
 
         workflow_ids = []
+        validation_failures = []
 
         # Spawn independent workflow for each role
         for role_input in request.roles:
@@ -490,47 +624,99 @@ async def push_batch(
                 logger.warning(
                     f"Validation failed for {role_input.role_name}: {validation_errors}"
                 )
-                # Continue with other roles, mark this as validation error
+                validation_failures.append({
+                    "role_name": role_input.role_name,
+                    "errors": validation_errors,
+                })
                 continue
 
-            # Create workflow
-            workflow = RoleOnboardingWorkflow(use_mock_assessment=use_mock)
-            workflow_ids.append(workflow.workflow_id)
-            batch.add_workflow(workflow.workflow_id)
+            # Generate workflow ID
+            workflow_id = str(uuid.uuid4())
+            workflow_ids.append(workflow_id)
+            batch.add_workflow(workflow_id)
 
-            # Create initial status
-            initial_status = RoleStatus(
-                workflow_id=workflow.workflow_id,
-                company_id=company_id,
-                role_name=role_input.role_name,
-                state=WorkflowState.QUEUED,
-                progress=workflow._create_progress_info(),
-                queued_at=datetime.utcnow(),
-                estimated_duration_seconds=600,
-                metadata={"batch_id": batch.batch_id},
-            )
-            status_client.set_status(initial_status)
-
-            # Execute workflow in background
-            async def run_workflow(wf=workflow, inp=input):
+            if temporal_client:
+                # Submit workflow to Temporal
                 try:
-                    await wf.execute(inp)
-                except Exception as e:
-                    logger.error(f"Workflow execution failed: {e}")
-                    status_client.update_state(
-                        wf.workflow_id,
-                        WorkflowState.FAILED,
-                        error={"code": "EXECUTION_ERROR", "message": str(e)},
+                    await temporal_client.start_workflow(
+                        RoleOnboardingWorkflow,
+                        input,
+                        id=workflow_id,
+                        task_queue=settings.temporal_task_queue,
+                        execution_timeout=timedelta(minutes=input.options.timeout_minutes),
                     )
+                    logger.info(f"Batch workflow {workflow_id} submitted to Temporal for {role_input.role_name}")
+                except Exception as e:
+                    logger.error(f"Failed to submit batch workflow to Temporal: {e}")
+                    # Remove from workflow_ids since submission failed
+                    workflow_ids.remove(workflow_id)
+                    batch.workflow_ids.remove(workflow_id)
+                    validation_failures.append({
+                        "role_name": role_input.role_name,
+                        "errors": [f"Temporal submission failed: {str(e)}"],
+                    })
+            else:
+                # Fallback to standalone mode
+                logger.warning(f"Temporal not available, running workflow {workflow_id} in standalone mode")
 
-            background_tasks.add_task(asyncio.create_task, run_workflow())
+                workflow = RoleOnboardingWorkflow(
+                    workflow_id=workflow_id,
+                    use_mock_assessment=use_mock,
+                )
 
-        # Store batch record
-        status_client.set_batch(batch)
+                # Try to create initial status in Redis
+                try:
+                    status_client = get_status_client()
+                    initial_status = RoleStatus(
+                        workflow_id=workflow_id,
+                        company_id=company_id,
+                        role_name=role_input.role_name,
+                        state=WorkflowState.QUEUED,
+                        progress=workflow._create_progress_info(),
+                        queued_at=datetime.utcnow(),
+                        estimated_duration_seconds=600,
+                        metadata={"batch_id": batch.batch_id},
+                    )
+                    status_client.set_status(initial_status)
+                except Exception as e:
+                    logger.warning(f"Failed to set initial status in Redis: {e}")
+
+                # Execute workflow in background
+                async def run_workflow(wf=workflow, inp=input):
+                    try:
+                        await wf.execute(inp)
+                    except Exception as e:
+                        logger.error(f"Workflow execution failed: {e}")
+                        try:
+                            status_client = get_status_client()
+                            status_client.update_state(
+                                wf.workflow_id,
+                                WorkflowState.FAILED,
+                                error={"code": "EXECUTION_ERROR", "message": str(e)},
+                            )
+                        except Exception:
+                            pass
+
+                background_tasks.add_task(asyncio.create_task, run_workflow())
+
+        # Try to store batch record in Redis
+        try:
+            status_client = get_status_client()
+            status_client.set_batch(batch)
+        except Exception as e:
+            logger.warning(f"Failed to store batch record in Redis: {e}")
 
         # Estimate total duration (assuming some parallelism)
         # With 3-5 concurrent workers, batch of N roles takes ~(N/4)*15 minutes
         estimated_seconds = max(600, (len(request.roles) // 4 + 1) * 600)
+
+        message = f"Batch submitted: {len(workflow_ids)} roles queued for processing"
+        if temporal_client:
+            message += " (via Temporal)"
+        else:
+            message += " (standalone mode)"
+        if validation_failures:
+            message += f", {len(validation_failures)} roles failed validation"
 
         return BatchPushResponse(
             batch_id=batch.batch_id,
@@ -538,7 +724,7 @@ async def push_batch(
             workflow_ids=workflow_ids,
             status="queued",
             estimated_duration_seconds=estimated_seconds,
-            message=f"Batch submitted: {len(workflow_ids)} roles queued for processing",
+            message=message,
         )
 
     except HTTPException:
