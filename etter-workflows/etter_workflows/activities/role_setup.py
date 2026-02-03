@@ -194,6 +194,27 @@ async def create_company_role(
     with ActivityContext("create_company_role", context or ExecutionContext(
         company_id=company_name, user_id="system"
     )) as ctx:
+        # Debug logging for environment and configuration
+        from etter_workflows.config.settings import get_settings
+        settings = get_settings()
+
+        logger.info("=" * 60)
+        logger.info("CREATE_COMPANY_ROLE Activity Starting")
+        logger.info("=" * 60)
+        logger.info(f"Input Parameters:")
+        logger.info(f"  - company_name: {company_name}")
+        logger.info(f"  - role_name: {role_name}")
+        logger.info(f"  - draup_role: {draup_role}")
+        logger.info(f"  - trace_id: {ctx.context.trace_id}")
+        logger.info(f"Environment Configuration:")
+        logger.info(f"  - etter_db_host: '{settings.etter_db_host}'")
+        logger.info(f"  - environment: '{settings.environment}'")
+        logger.info(f"  - is_qa_or_prod: {settings._is_qa_or_prod_environment()}")
+        logger.info(f"  - is_prod_db: {settings._is_prod_db()}")
+        logger.info(f"  - draup_world_api_url: '{settings.draup_world_api_url}'")
+        logger.info(f"  - effective_api_url: '{settings.get_automated_workflows_api_url()}'")
+        logger.info("=" * 60)
+
         api_client = get_automated_workflows_client()
 
         result = api_client.create_company_role(
@@ -205,6 +226,11 @@ async def create_company_role(
                 "trace_id": ctx.context.trace_id,
             },
         )
+
+        logger.info(f"API Response received:")
+        logger.info(f"  - company_role_id: {result.get('company_role_id')}")
+        logger.info(f"  - created: {result.get('created', False)}")
+        logger.info("=" * 60)
 
         return {
             "company_role_id": result.get("company_role_id"),

@@ -47,6 +47,16 @@ class AutomatedWorkflowsClient:
         self.retry_attempts = retry_attempts
         self._session = None
 
+        # Debug logging for configuration
+        logger.info(f"AutomatedWorkflowsClient initialized:")
+        logger.info(f"  Base URL: {self.base_url}")
+        logger.info(f"  Timeout: {self.timeout}s")
+        logger.info(f"  Environment detection:")
+        logger.info(f"    - etter_db_host: '{settings.etter_db_host}'")
+        logger.info(f"    - is_qa_or_prod: {settings._is_qa_or_prod_environment()}")
+        logger.info(f"    - is_prod_db: {settings._is_prod_db()}")
+        logger.info(f"    - draup_world_api_url: '{settings.draup_world_api_url}'")
+
     def _get_session(self):
         """Get or create HTTP session."""
         if self._session is None:
@@ -85,6 +95,12 @@ class AutomatedWorkflowsClient:
         """
         session = self._get_session()
         url = f"{self.base_url}{endpoint}"
+
+        logger.info(f"API Request: {method} {url}")
+        if data:
+            logger.debug(f"  Request data keys: {list(data.keys())}")
+        if params:
+            logger.debug(f"  Request params: {params}")
 
         last_error = None
         for attempt in range(self.retry_attempts + 1):
