@@ -13,7 +13,7 @@ API Endpoints (from implementation plan):
 - POST /api/v1/pipeline/batch - Start batch processing (P1)
 """
 
-from etter_workflows.api.routes import router, create_app
+from etter_workflows.api.routes import router, create_app, get_app
 from etter_workflows.api.schemas import (
     PushRequest,
     PushResponse,
@@ -24,6 +24,7 @@ from etter_workflows.api.schemas import (
 __all__ = [
     "router",
     "create_app",
+    "get_app",
     "PushRequest",
     "PushResponse",
     "StatusResponse",

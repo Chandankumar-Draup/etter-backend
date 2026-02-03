@@ -810,5 +810,14 @@ def create_app():
     return app
 
 
-# Create default app instance
-app = create_app()
+# Lazy app instance - only created when accessed directly (standalone mode)
+# When integrated with parent app, only the router is imported
+app = None
+
+
+def get_app():
+    """Get or create the FastAPI app instance (for standalone mode)."""
+    global app
+    if app is None:
+        app = create_app()
+    return app
