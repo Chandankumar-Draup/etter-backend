@@ -1,0 +1,208 @@
+# Default values for etter-backend.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+replicaCount: 1
+
+# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
+image:
+  repository: 774347290133.dkr.ecr.us-east-2.amazonaws.com/big-data
+  # This sets the pull policy for images.
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "qa-etter-backend"
+
+# This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+imagePullSecrets: []
+# This is to override the chart name.
+nameOverride: ""
+fullnameOverride: ""
+
+# This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::774347290133:role/qa-etter-backend
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+# This is for setting Kubernetes Annotations to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+podAnnotations:
+  ad.datadoghq.com/etter-backend.logs: |
+    [
+       {
+          "source": "python",
+          "service": "qa-etter-backend"
+        }
+    ]
+# This is for setting Kubernetes Labels to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+podLabels: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+# This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+service:
+  # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+  type: ClusterIP
+  # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
+  port: 80
+  targetPort: 7071
+
+containerPort: 7071
+
+# This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+ingress:
+  enabled: false
+  className: ""
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "120"
+    nginx.ingress.kubernetes.io/proxy-body-size: "500m"
+    # For AWS ALB (if using ALB ingress controller)
+    # alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/load-balancer-attributes: idle_timeout.timeout_seconds=600
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+   limits:
+     cpu: 4000m
+     memory: 4Gi
+   requests:
+     cpu: 1000m
+     memory: 1Gi
+
+# This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+livenessProbe:
+  httpGet:
+    path: /health
+    port: http
+  initialDelaySeconds: 60
+  periodSeconds: 60
+  timeoutSeconds: 120
+  failureThreshold: 3
+  successThreshold: 1
+readinessProbe:
+  httpGet:
+    path: /health
+    port: http
+  initialDelaySeconds: 10
+  periodSeconds: 15
+  timeoutSeconds: 120
+  failureThreshold: 3
+  successThreshold: 1
+
+# This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes: []
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts: []
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+env:
+  ETTER_DB_HOST: dev-gateway.cmfutgtnbkyw.us-east-2.rds.amazonaws.com
+  ETTER_DB_PORT: "5432"
+  ETTER_DB_NAME: gateway
+  ETTER_DB_USER: gateway_django
+  REDIS_RW_HOST: qa-geocoding-redis-master.location-geocoding.svc.cluster.local
+  REDIS_RO_HOST: qa-geocoding-redis-replicas.location-geocoding.svc.cluster.local
+  REDIS_DB: 14
+  SIMULATION_PROVIDER_TYPE: etter
+  ENV: qa
+
+
+datadogEnv:
+  # Datadog APM traces (ddtrace) - Direct API submission
+  # Setting DD_TRACE_AGENT_URL signals to use direct API submission
+  # The tracer will use HTTPWriter to send traces directly to Datadog API
+  - name: DD_APM_DD_URL
+    value: "https://trace.agent.datadoghq.com"
+  - name: DD_SITE
+    value: "datadoghq.com"
+  - name: DD_ENV
+    value: "qa"
+  - name: DD_SERVICE
+    value: "qa-etter-backend"
+  - name: DD_VERSION
+    value: "1.0.0"
+
+  - name: DD_LOGS_INJECTION
+    value: "true"  
+
+  - name: DD_TRACE_SAMPLE_RATE
+    value: "1.0"
+
+  - name: DD_RUNTIME_METRICS_ENABLED
+    value: "true"
+
+
+secrets:
+  ETTER_DB_PASSWORD: ""
+  ADMIN_SECRET: ""
+  SECRET_KEY: ""
+  REDIS_PASSWORD: ""
+  CLIENT_ID: ""
+  CLIENT_SECRET: ""
+  TEMP_AUTH_TOKEN: ""
+  DATADOG_API_KEY: ""
+  GATEWAY_TOKEN: ""
+  DRAUP_PLATFORM_TOKEN: ""
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/arch
+              operator: In
+              values:
+                - amd64

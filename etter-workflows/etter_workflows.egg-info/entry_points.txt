@@ -1,0 +1,2 @@
+[console_scripts]
+etter-worker = etter_workflows.worker:main

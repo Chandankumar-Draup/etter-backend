@@ -1,0 +1,40 @@
+select = [
+  "E",    # pycodestyle errors
+  "F",    # pyflakes
+  "W",    # pycodestyle warnings
+  "B",    # flake8-bugbear
+  "N",    # pep8-naming
+  "TCH",  # flake8-type-checking
+  "C90",  # Complexity
+  "Q",    # Quality
+  "NPY",  # NumPy-specific rules
+  "PD",   # pandas-specific rules
+  "RUF",  # Ruff-specific rules
+  "FAST", # FastAPI-specific rules (dependency annotation, etc.)
+  "ANN",  # flake8-annotations (enforce endpoint type hints)
+]
+
+exclude = [
+  "venv", ".venv", "env", ".env", "build", "dist",
+  "*/logs", "tests", "superset", "trino", "trino-gateway", "trino-gw-postgresql",
+]
+
+line-length = 100
+
+# Ignore rules (adjust as needed)
+ignore = [
+  "D100",  # Missing docstring in public module
+  "D104",  # Missing docstring in public package
+  "D401",  # First line should be imperative
+  "E501",  # Line too long (ignore line length)
+  "Q000",  # Ignore all quality checks related to PEP-8 if not needed for distributed systems
+]
+
+fix = true
+
+# Add formatting rules for Ruff formatter
+[format]
+quote-style = "double"
+indent-width = 4
+skip-magic-trailing-comma = false
+line-ending = "auto"

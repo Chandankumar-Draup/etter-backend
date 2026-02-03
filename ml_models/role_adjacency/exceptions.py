@@ -1,0 +1,2 @@
+class RoleAdjacencyException(Exception):
+    pass
