@@ -234,18 +234,19 @@ async def main_async():
         # Start worker with Temporal
         await manager.start_worker()
     else:
-        # Run in standalone mode for testing
-        logger.info("Running in standalone mode...")
-
-        # Run a sample workflow
-        if settings.enable_mock_data:
-            await run_standalone_workflow(
-                company_id="Liberty Mutual",
-                role_name="Claims Adjuster",
-                use_mock=True,
-            )
-        else:
-            logger.info("Enable mock data to run sample workflow in standalone mode")
+        # Failed to connect to Temporal - exit with error
+        logger.error("=" * 60)
+        logger.error("FAILED TO CONNECT TO TEMPORAL SERVER")
+        logger.error("=" * 60)
+        logger.error(f"  Address: {settings.temporal_address}")
+        logger.error(f"  Namespace: {settings.get_temporal_namespace()}")
+        logger.error("")
+        logger.error("Please ensure:")
+        logger.error("  1. Temporal server is running")
+        logger.error("  2. ETTER_TEMPORAL_HOST and ETTER_TEMPORAL_PORT are set correctly")
+        logger.error("  3. Network connectivity to Temporal server")
+        logger.error("=" * 60)
+        sys.exit(1)
 
 
 def main():
