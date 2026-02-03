@@ -148,7 +148,7 @@ class Settings(BaseSettings):
     # Automated Workflows API (localhost:8083)
     automated_workflows_api_base_url: str = Field(
         default="http://127.0.0.1:8083",
-        description="Base URL for automated workflows API (overridden by draup_world_api_url in qa/prod)"
+        description="http://127.0.0.1:8083, Base URL for automated workflows API (overridden by draup_world_api_url in qa/prod)"
     )
     automated_workflows_api_timeout: int = Field(
         default=600,
