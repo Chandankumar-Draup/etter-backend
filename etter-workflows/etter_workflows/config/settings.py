@@ -35,8 +35,12 @@ class Settings(BaseSettings):
     # SSH Tunnel: localhost:5445 (after SSH tunnel to qa-temporal-client)
     # Production: Direct connection to temporal server
     temporal_host: str = Field(
-        default="localhost:7233",
-        description="Temporal server host:port"
+        default="localhost",
+        description="Temporal server host"
+    )
+    temporal_port: int = Field(
+        default=7233,
+        description="Temporal server port"
     )
     temporal_namespace: str = Field(
         default="etter-dev",
@@ -244,6 +248,11 @@ class Settings(BaseSettings):
     def is_production(self) -> bool:
         """Check if running in production."""
         return self.environment == "production"
+
+    @property
+    def temporal_address(self) -> str:
+        """Get Temporal server address (host:port)."""
+        return f"{self.temporal_host}:{self.temporal_port}"
 
     @property
     def is_development(self) -> bool:
