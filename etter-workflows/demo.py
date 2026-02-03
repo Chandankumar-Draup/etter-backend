@@ -536,7 +536,7 @@ async def run_workflow_via_temporal(
 
     # Display configuration
     print(f"\n  Temporal Configuration:")
-    print(f"  - Host: {settings.temporal_host}")
+    print(f"  - Host: {settings.temporal_address}")
     print(f"  - Namespace: {settings.get_temporal_namespace()}")
     print(f"  - Task Queue: {settings.temporal_task_queue}")
     print()
@@ -550,7 +550,7 @@ async def run_workflow_via_temporal(
     print("  Connecting to Temporal server...")
     try:
         client = await Client.connect(
-            settings.temporal_host,
+            settings.temporal_address,
             namespace=settings.get_temporal_namespace(),
         )
         print(f"  [OK] Connected to Temporal")
@@ -1143,7 +1143,7 @@ async def run_batch_via_temporal(
 
     # Display Temporal configuration
     print(f"\n  Temporal Configuration:")
-    print(f"  - Host: {settings.temporal_host}")
+    print(f"  - Host: {settings.temporal_address}")
     print(f"  - Namespace: {settings.get_temporal_namespace()}")
     print(f"  - Task Queue: {settings.temporal_task_queue}")
     print()
@@ -1152,7 +1152,7 @@ async def run_batch_via_temporal(
     print("  Connecting to Temporal server...")
     try:
         client = await Client.connect(
-            settings.temporal_host,
+            settings.temporal_address,
             namespace=settings.get_temporal_namespace(),
         )
         print(f"  [OK] Connected to Temporal")

@@ -14,7 +14,7 @@ Usage:
     etter-worker
 
     # Run with specific configuration
-    ETTER_TEMPORAL_HOST=localhost:7233 etter-worker
+    ETTER_TEMPORAL_HOST=localhost ETTER_TEMPORAL_PORT=7233 etter-worker
 """
 
 import asyncio
@@ -63,10 +63,10 @@ class WorkerManager:
             from temporalio.client import Client
             from temporalio.worker import Worker
 
-            logger.info(f"Connecting to Temporal at {self.settings.temporal_host}")
+            logger.info(f"Connecting to Temporal at {self.settings.temporal_address}")
 
             self.client = await Client.connect(
-                self.settings.temporal_host,
+                self.settings.temporal_address,
                 namespace=self.settings.get_temporal_namespace(),
             )
 
@@ -220,7 +220,7 @@ async def main_async():
 
     logger.info("Etter Workflows Worker Starting")
     logger.info(f"  Environment: {settings.environment}")
-    logger.info(f"  Temporal Host: {settings.temporal_host}")
+    logger.info(f"  Temporal Address: {settings.temporal_address}")
     logger.info(f"  Namespace: {settings.get_temporal_namespace()}")
     logger.info(f"  Task Queue: {settings.temporal_task_queue}")
     logger.info(f"  Mock Data: {'enabled' if settings.enable_mock_data else 'disabled'}")
