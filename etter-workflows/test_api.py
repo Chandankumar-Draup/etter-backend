@@ -15,9 +15,27 @@ Usage:
 """
 
 import argparse
+import os
 import requests
 import time
 import sys
+
+# Load .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+    # Load from current directory or parent directory
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    if os.path.exists(env_path):
+        load_dotenv(env_path)
+        print(f"[INFO] Loaded .env from {env_path}")
+    else:
+        # Try parent directory
+        parent_env = os.path.join(os.path.dirname(__file__), '..', '.env')
+        if os.path.exists(parent_env):
+            load_dotenv(parent_env)
+            print(f"[INFO] Loaded .env from {parent_env}")
+except ImportError:
+    pass  # python-dotenv not installed, continue without it
 
 # =============================================================================
 # Configuration
@@ -27,12 +45,12 @@ import sys
 ENVIRONMENTS = {
     "local": {
         "base_url": "http://localhost:7071",
-        "pipeline_prefix": "/api/v1/pipeline",
+        "pipeline_prefix": "/v1/pipeline",  # No /api prefix for local (root_path handles it)
         "token": None,  # No auth for local
     },
     "qa": {
         "base_url": "https://qa-etter.draup.technology",
-        "pipeline_prefix": "/api/v1/pipeline",
+        "pipeline_prefix": "/api/v1/pipeline",  # QA has /api prefix via reverse proxy
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzcxMTQ4MDQ2LCJqdGkiOiI3NTc2NzYxNS1kZDk1LTQ4NmEtYjhjMy1kYzg2ZTMwN2ZhMjUifQ.BrP4aQ2P5ZF2x1jK10vgh015y4amcFyAFKv700roGLI",
     },
 }
@@ -255,6 +273,7 @@ class APITester:
                 print(f"  [{i+1}/{max_attempts}] Error: {e}")
 
         print("\nStatus polling completed (workflow may still be running)")
+        print("\nTip: Use --temporal-status to query Temporal directly")
         return None
 
     def test_companies(self) -> bool:
@@ -280,6 +299,63 @@ class APITester:
             return False
 
 
+async def query_temporal_status(workflow_id: str):
+    """Query workflow status directly from Temporal."""
+    print(f"\nQuerying Temporal for workflow: {workflow_id}")
+
+    try:
+        from temporalio.client import Client as TemporalClient
+
+        # Get Temporal settings from environment
+        host = os.environ.get("ETTER_TEMPORAL_HOST", "localhost")
+        port = os.environ.get("ETTER_TEMPORAL_PORT", "7233")
+        namespace = os.environ.get("ETTER_TEMPORAL_NAMESPACE", "etter-dev")
+
+        address = f"{host}:{port}"
+        print(f"  Connecting to: {address}")
+        print(f"  Namespace: {namespace}")
+
+        client = await TemporalClient.connect(address, namespace=namespace)
+        handle = client.get_workflow_handle(workflow_id)
+
+        # Get workflow description
+        desc = await handle.describe()
+
+        print(f"\n  Workflow Status from Temporal:")
+        print(f"    ID: {desc.id}")
+        print(f"    Run ID: {desc.run_id}")
+        print(f"    Status: {desc.status.name}")
+        print(f"    Type: {desc.workflow_type}")
+        print(f"    Task Queue: {desc.task_queue}")
+        print(f"    Start Time: {desc.start_time}")
+
+        if desc.close_time:
+            print(f"    Close Time: {desc.close_time}")
+
+        # Try to get result if completed
+        if desc.status.name == "COMPLETED":
+            try:
+                result = await handle.result()
+                print(f"\n  Workflow Result:")
+                print(f"    Success: {result.success if hasattr(result, 'success') else 'N/A'}")
+                if hasattr(result, 'role_id'):
+                    print(f"    Role ID: {result.role_id}")
+                if hasattr(result, 'dashboard_url'):
+                    print(f"    Dashboard: {result.dashboard_url}")
+            except Exception as e:
+                print(f"    Could not get result: {e}")
+
+        return desc
+
+    except ImportError:
+        print("  [!!] temporalio package not installed")
+        print("  Install with: pip install temporalio")
+        return None
+    except Exception as e:
+        print(f"  [!!] Error querying Temporal: {e}")
+        return None
+
+
 def main():
     parser = argparse.ArgumentParser(description="Test Etter Workflows API")
     parser.add_argument("--qa", action="store_true", help="Use QA environment")
@@ -287,13 +363,21 @@ def main():
     parser.add_argument("--no-mock", action="store_true", help="Run real workflows (not mock)")
     parser.add_argument("--health-only", action="store_true", help="Only run health check")
     parser.add_argument("--no-poll", action="store_true", help="Skip status polling")
+    parser.add_argument("--temporal-status", type=str, metavar="WORKFLOW_ID",
+                        help="Query workflow status directly from Temporal")
     args = parser.parse_args()
+
+    # Handle Temporal status query (standalone operation)
+    if args.temporal_status:
+        import asyncio
+        asyncio.run(query_temporal_status(args.temporal_status))
+        sys.exit(0)
 
     # Determine configuration
     if args.url:
         config = {
             "base_url": args.url,
-            "pipeline_prefix": "/api/v1/pipeline",
+            "pipeline_prefix": "/v1/pipeline",  # Default to local prefix
             "token": ENVIRONMENTS["qa"]["token"] if args.qa else None,
         }
         env_name = f"Custom ({args.url})"
@@ -358,7 +442,9 @@ def main():
     print("=" * 60)
 
     if workflow_id:
-        print("\nTo check workflow status in Temporal UI:")
+        print("\nTo check workflow status:")
+        print(f"  python test_api.py --temporal-status {workflow_id}")
+        print("\nOr via Temporal UI:")
         if args.qa:
             print("  kubectl port-forward svc/qa-etter-temporal-client-web -n etter-temporal 8080:8080")
         else:
