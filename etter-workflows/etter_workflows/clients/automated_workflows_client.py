@@ -42,7 +42,7 @@ class AutomatedWorkflowsClient:
             retry_attempts: Number of retry attempts
         """
         settings = get_settings()
-        self.base_url = base_url or settings.automated_workflows_api_base_url
+        self.base_url = base_url or settings.get_automated_workflows_api_url()
         self.timeout = timeout or settings.automated_workflows_api_timeout
         self.retry_attempts = retry_attempts
         self._session = None

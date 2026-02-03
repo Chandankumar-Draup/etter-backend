@@ -134,7 +134,7 @@ class Settings(BaseSettings):
     # Workflow API (existing Etter API)
     workflow_api_base_url: str = Field(
         default="http://127.0.0.1:8082",
-        description="Base URL for existing workflow API"
+        description="Base URL for existing workflow API (overridden by draup_world_api_url in qa/prod)"
     )
     workflow_api_timeout: int = Field(
         default=600,
@@ -144,11 +144,27 @@ class Settings(BaseSettings):
     # Automated Workflows API (localhost:8083)
     automated_workflows_api_base_url: str = Field(
         default="http://127.0.0.1:8083",
-        description="Base URL for automated workflows API"
+        description="Base URL for automated workflows API (overridden by draup_world_api_url in qa/prod)"
     )
     automated_workflows_api_timeout: int = Field(
         default=600,
         description="Automated workflows API timeout in seconds"
+    )
+
+    # Draup World API URLs (for qa/prod)
+    draup_world_api_prod: str = Field(
+        default="https://draup-world.draup.technology/api",
+        description="Draup World API URL for production"
+    )
+    draup_world_api_qa: str = Field(
+        default="https://qa-draup-world.draup.technology/api",
+        description="Draup World API URL for QA"
+    )
+
+    # Environment detection (used to determine which API URL to use)
+    etter_db_host: str = Field(
+        default="",
+        description="Database host (used for environment detection)"
     )
 
     # LLM Configuration
@@ -247,6 +263,36 @@ class Settings(BaseSettings):
         elif self.environment == "staging":
             return "etter-staging"
         return self.temporal_namespace
+
+    def _is_qa_or_prod_environment(self) -> bool:
+        """Check if running in QA or production based on DB host (matches getCurrentEnvironment logic)."""
+        return bool(self.etter_db_host and self.etter_db_host != "localhost")
+
+    def _is_prod_db(self) -> bool:
+        """Check if connected to production database."""
+        db_host = self.etter_db_host.lower()
+        return bool(db_host and 'dev-gateway' not in db_host and 'qa' not in db_host)
+
+    @property
+    def draup_world_api_url(self) -> str:
+        """Get Draup World API URL based on environment (matches get_draup_world_api logic)."""
+        if self._is_prod_db():
+            return self.draup_world_api_prod
+        elif self._is_qa_or_prod_environment():
+            return self.draup_world_api_qa
+        return ""  # Empty means use localhost defaults
+
+    def get_workflow_api_url(self) -> str:
+        """Get the effective workflow API URL (Draup World API in qa/prod, localhost in dev)."""
+        if self._is_qa_or_prod_environment():
+            return self.draup_world_api_url
+        return self.workflow_api_base_url
+
+    def get_automated_workflows_api_url(self) -> str:
+        """Get the effective automated workflows API URL (Draup World API in qa/prod, localhost in dev)."""
+        if self._is_qa_or_prod_environment():
+            return self.draup_world_api_url
+        return self.automated_workflows_api_base_url
 
 
 @lru_cache()
