@@ -9,7 +9,10 @@ import requests
 import time
 
 # QA Configuration
-BASE_URL = "https://qa-etter.draup.technology/api/v1/pipeline"
+# URL pattern matches other routers (e.g., /api/extraction/...)
+# Reverse proxy maps /api/* to the app
+BASE_URL = "https://qa-etter.draup.technology"
+PIPELINE_PREFIX = "/api/v1/pipeline"
 TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzcxMTQ4MDQ2LCJqdGkiOiI3NTc2NzYxNS1kZDk1LTQ4NmEtYjhjMy1kYzg2ZTMwN2ZhMjUifQ.BrP4aQ2P5ZF2x1jK10vgh015y4amcFyAFKv700roGLI"
 
 HEADERS = {
@@ -33,7 +36,7 @@ def test_health():
     print("HEALTH CHECK")
     print("=" * 60)
 
-    response = requests.get(f"{BASE_URL}/health", headers=HEADERS)
+    response = requests.get(f"{BASE_URL}{PIPELINE_PREFIX}/health", headers=HEADERS)
     print(f"Status: {response.status_code}")
     print(f"Response: {response.json()}")
     return response.status_code == 200
@@ -59,7 +62,7 @@ def test_single_role():
 
     print(f"\nPushing role: {payload['role_name']} at {payload['company_id']}")
     response = requests.post(
-        f"{BASE_URL}/push?use_mock=true",
+        f"{BASE_URL}{PIPELINE_PREFIX}/push?use_mock=true",
         headers=HEADERS,
         json=payload
     )
@@ -80,7 +83,7 @@ def test_single_role():
     for i in range(10):
         time.sleep(5)
         status_response = requests.get(
-            f"{BASE_URL}/status/{workflow_id}",
+            f"{BASE_URL}{PIPELINE_PREFIX}/status/{workflow_id}",
             headers=HEADERS
         )
         status = status_response.json()
@@ -129,7 +132,7 @@ def test_batch():
         print(f"  - {role['role_name']} ({role['company_id']})")
 
     response = requests.post(
-        f"{BASE_URL}/push-batch?use_mock=true",
+        f"{BASE_URL}{PIPELINE_PREFIX}/push-batch?use_mock=true",
         headers=HEADERS,
         json=payload
     )
@@ -151,7 +154,7 @@ def test_batch():
     for i in range(20):
         time.sleep(10)
         status_response = requests.get(
-            f"{BASE_URL}/batch-status/{batch_id}",
+            f"{BASE_URL}{PIPELINE_PREFIX}/batch-status/{batch_id}",
             headers=HEADERS
         )
 
@@ -189,7 +192,7 @@ def main():
     print("=" * 60)
     print("ETTER WORKFLOWS QA API TEST")
     print("=" * 60)
-    print(f"Base URL: {BASE_URL}")
+    print(f"Base URL: {BASE_URL}{PIPELINE_PREFIX}")
     print(f"Company: {TEST_COMPANY}")
     print("=" * 60)
 

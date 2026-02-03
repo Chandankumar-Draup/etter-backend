@@ -4,7 +4,7 @@ API routes for Etter Workflows.
 FastAPI routes for the self-service pipeline.
 Based on the API design in the implementation plan.
 
-Endpoints:
+Endpoints (via reverse proxy at /api):
 - POST /api/v1/pipeline/push - Start role onboarding workflow
 - GET /api/v1/pipeline/status/{workflow_id} - Get workflow status
 - GET /api/v1/pipeline/health - Health check
@@ -61,7 +61,8 @@ from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/api/v1/pipeline", tags=["pipeline"])
+# Router prefix: /v1/pipeline (accessed via /api/v1/pipeline through reverse proxy)
+router = APIRouter(prefix="/v1/pipeline", tags=["pipeline"])
 
 
 @router.post("/push", response_model=PushResponse)
