@@ -4,11 +4,12 @@
 
 The Etter Self-Service Pipeline API provides endpoints for role onboarding and AI assessment workflows. It supports both single-role and batch processing.
 
-**Base URL:** `/api/v1/pipeline`
+**Base URL:** `/api/v1/pipeline` (via reverse proxy)
 
 **Integration:** When integrated with the parent etter-backend, endpoints are available at:
-- Development: `http://localhost:7071/api/v1/pipeline/*`
-- QA/Production: Via the main Etter API gateway
+- Development: `http://localhost:7071/v1/pipeline/*` (direct) or `http://localhost:7071/api/v1/pipeline/*` (via proxy)
+- QA: `https://qa-etter.draup.technology/api/v1/pipeline/*`
+- Production: `https://etter.draup.technology/api/v1/pipeline/*`
 
 ---
 
