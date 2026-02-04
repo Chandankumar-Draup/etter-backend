@@ -7,7 +7,7 @@ They implement the same interfaces as the mock providers.
 APIs used:
 - GET /api/documents/ - List documents
 - GET /api/documents/{id}?generate_download_url=true - Get document with download URL
-- GET /api/taxonomy/roles?company_id=<id> - List role taxonomy
+- GET /api/taxonomy/roles?company_id=<company_name> - List role taxonomy (company_id accepts company name)
 """
 
 import logging
@@ -20,45 +20,6 @@ from etter_workflows.models.inputs import RoleTaxonomyEntry, DocumentRef, Docume
 from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
-
-# =============================================================================
-# Company Name to ID Mapping
-# =============================================================================
-# Maps company names to their API company IDs
-# Add new companies here as needed
-
-COMPANY_NAME_TO_ID: Dict[str, int] = {
-    # Format: "Company Name": company_id
-    "Liberty Mutual": 1,
-    "Walmart Inc.": 2,
-    "Acme Corporation": 3,
-    "TestCorp": 4,
-    # Add more companies as needed
-}
-
-
-def get_company_id(company_name: str) -> Optional[int]:
-    """
-    Get company ID from company name.
-
-    Args:
-        company_name: Company name (case-insensitive)
-
-    Returns:
-        Company ID or None if not found
-    """
-    # Try exact match first
-    if company_name in COMPANY_NAME_TO_ID:
-        return COMPANY_NAME_TO_ID[company_name]
-
-    # Try case-insensitive match
-    lower_name = company_name.lower()
-    for name, cid in COMPANY_NAME_TO_ID.items():
-        if name.lower() == lower_name:
-            return cid
-
-    logger.warning(f"Company '{company_name}' not found in mapping")
-    return None
 
 
 class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
@@ -93,25 +54,24 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Fetch roles from API.
 
         Args:
-            company_name: Company name (will be mapped to company_id)
+            company_name: Company name (passed as company_id to API)
             status_filter: Optional approval_status filter
 
         Returns:
             List of role dicts from API
         """
-        # Get company ID from name mapping
-        company_id = get_company_id(company_name)
-        if not company_id:
-            logger.warning(f"No company_id found for '{company_name}'")
+        if not company_name:
+            logger.warning("No company_name provided")
             return []
 
         url = f"{self.base_url}/api/taxonomy/roles"
-        params = {"company_id": company_id, "page_size": 200}
+        # API accepts company_name as company_id parameter
+        params = {"company_id": company_name, "page_size": 200}
         if status_filter:
             params["approval_status"] = status_filter
 
         try:
-            logger.info(f"Fetching roles from {url} for {company_name} (id={company_id})")
+            logger.info(f"Fetching roles from {url} for company: {company_name}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
@@ -176,17 +136,17 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         return None
 
     def get_role_by_id(self, job_id: str) -> Optional[RoleTaxonomyEntry]:
-        """Get a role by job ID (searches all companies)."""
-        for company_name in COMPANY_NAME_TO_ID.keys():
-            roles = self.get_roles_for_company(company_name)
-            for role in roles:
-                if role.job_id == job_id:
-                    return role
+        """Get a role by job ID (requires company context - not supported without it)."""
+        # Note: This requires knowing which company to search
+        # In practice, job_id queries should include company context
+        logger.warning("get_role_by_id called without company context - not supported by API")
         return None
 
     def get_companies(self) -> List[str]:
-        """Get list of companies from the mapping."""
-        return list(COMPANY_NAME_TO_ID.keys())
+        """Get list of companies (not supported by this API - returns empty)."""
+        # The taxonomy API doesn't have a companies list endpoint
+        # Companies are determined by the authenticated user's context
+        return []
 
 
 class APIDocumentProvider(DocumentProvider):
