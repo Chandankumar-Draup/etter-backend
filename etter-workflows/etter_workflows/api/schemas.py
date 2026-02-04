@@ -13,9 +13,13 @@ from pydantic import BaseModel, Field
 class DocumentInput(BaseModel):
     """Document input for push request."""
     type: str = Field(description="Document type (job_description, process_map)")
-    uri: Optional[str] = Field(default=None, description="URI to the document")
+    uri: Optional[str] = Field(default=None, description="URI to the document (S3 presigned URL or content URI)")
     content: Optional[str] = Field(default=None, description="Inline document content")
-    name: Optional[str] = Field(default=None, description="Document name")
+    name: Optional[str] = Field(default=None, description="Document name/filename")
+    metadata: Optional[Dict[str, Any]] = Field(
+        default=None,
+        description="Additional metadata (document_id, download_url, roles, status, etc.)"
+    )
 
 
 class PushOptions(BaseModel):

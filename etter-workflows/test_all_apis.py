@@ -12,6 +12,7 @@ Usage:
     python test_all_apis.py --workflow-only     # Test workflow endpoints only
     python test_all_apis.py --data-only         # Test QA data APIs only
     python test_all_apis.py --validation-only   # Test document validation only
+    python test_all_apis.py --qa-doc-test       # Test push with real QA document (with download URL)
 
 Prerequisites:
     - Local server running at http://localhost:7071
@@ -268,6 +269,139 @@ def test_push_with_docs() -> Tuple[bool, Optional[str], Dict]:
         return False, None, {}
     except Exception as e:
         print_result(False, f"Error: {e}")
+        return False, None, {}
+
+
+def test_push_with_qa_document() -> Tuple[bool, Optional[str], Dict]:
+    """Test POST /push with a real document from QA API (includes download URL and metadata)."""
+    print_section("LOCAL: Push with QA Document (Real Data)")
+    print(f"URL: {local_url('/push')}")
+    print("Expected: 200 with workflow_id, using real document from QA API")
+
+    # First, fetch a document from QA API
+    print(f"\n1. Fetching document from QA API for role: {TEST_ROLE}")
+    from urllib.parse import quote
+    role_encoded = quote(TEST_ROLE)
+    doc_list_url = qa_url(f"/api/documents/?roles={role_encoded}&limit=5")
+
+    try:
+        # Get document list
+        response = requests.get(doc_list_url, headers=get_qa_headers(), timeout=30)
+        if response.status_code != 200:
+            print_result(False, f"Failed to fetch documents from QA: {response.status_code}")
+            return False, None, {}
+
+        docs = response.json().get("data", {}).get("documents", [])
+        if not docs:
+            print(f"[WARN] No documents found for role '{TEST_ROLE}' in QA")
+            print("[INFO] Using inline content instead")
+            # Fall back to inline content
+            return test_push_with_docs()
+
+        # Filter to exact role match (roles == [TEST_ROLE])
+        exact_match_docs = [d for d in docs if d.get("roles") == [TEST_ROLE]]
+        if exact_match_docs:
+            selected_doc = exact_match_docs[0]
+            print(f"   Found exact role match: {selected_doc.get('original_filename')}")
+        else:
+            selected_doc = docs[0]
+            print(f"   Using first available: {selected_doc.get('original_filename')}")
+
+        doc_id = selected_doc.get("id")
+        print(f"   Document ID: {doc_id}")
+
+        # Get document detail with download URL
+        print(f"\n2. Fetching document detail with download URL")
+        detail_url = qa_url(f"/api/documents/{doc_id}?generate_download_url=true")
+        response = requests.get(detail_url, headers=get_qa_headers(), timeout=30)
+
+        if response.status_code != 200:
+            print_result(False, f"Failed to fetch document detail: {response.status_code}")
+            return False, None, {}
+
+        doc_detail = response.json()
+        download_info = doc_detail.get("download", {})
+        download_url = download_info.get("url")
+
+        print(f"   Filename: {doc_detail.get('original_filename')}")
+        print(f"   Status: {doc_detail.get('status')}")
+        print(f"   Roles: {doc_detail.get('roles')}")
+        print(f"   Content Type: {doc_detail.get('observed_content_type')}")
+        print(f"   Download URL: {'Available' if download_url else 'Not available'}")
+        if download_url:
+            print(f"   URL preview: {download_url[:80]}...")
+
+        # Build payload with full metadata
+        print(f"\n3. Submitting workflow with document metadata")
+        payload = {
+            "company_id": TEST_COMPANY,
+            "role_name": TEST_ROLE,
+            "draup_role_name": "Clinical Pharmacist",
+            "documents": [
+                {
+                    "type": "job_description",
+                    "uri": download_url,  # S3 presigned URL
+                    "name": doc_detail.get("original_filename"),
+                    "metadata": {
+                        "document_id": doc_id,
+                        "download_url": download_url,
+                        "status": doc_detail.get("status"),
+                        "roles": doc_detail.get("roles", []),
+                        "content_type": doc_detail.get("observed_content_type"),
+                        "created_at": doc_detail.get("created_at"),
+                        "updated_at": doc_detail.get("updated_at"),
+                        "expires_at": download_info.get("expires_at"),
+                    }
+                }
+            ],
+            "options": {
+                "skip_enhancement_workflows": False,
+                "force_rerun": False,
+            }
+        }
+
+        print(f"   Payload:")
+        print(f"     company_id: {payload['company_id']}")
+        print(f"     role_name: {payload['role_name']}")
+        print(f"     document.name: {payload['documents'][0]['name']}")
+        print(f"     document.uri: {'Set (presigned URL)' if payload['documents'][0]['uri'] else 'None'}")
+        print(f"     document.metadata: {list(payload['documents'][0]['metadata'].keys())}")
+
+        response = requests.post(
+            local_url("/push"),
+            headers=get_local_headers(),
+            json=payload,
+            timeout=30
+        )
+
+        print(f"\nStatus: {response.status_code}")
+        data = safe_json(response)
+
+        if response.status_code != 200:
+            print(f"Error: {json.dumps(data, indent=2)}")
+            print_result(False, "Failed to push workflow with QA document")
+            return False, None, data
+
+        workflow_id = data.get("workflow_id")
+        message = data.get("message", "")
+
+        print(f"Workflow ID: {workflow_id}")
+        print(f"Message: {message}")
+
+        if workflow_id:
+            print_result(True, f"Workflow created with QA document: {workflow_id}")
+            return True, workflow_id, data
+        else:
+            print_result(False, "No workflow_id in response")
+            return False, None, data
+
+    except requests.exceptions.ConnectionError as e:
+        print_result(False, f"Cannot connect: {e}")
+        return False, None, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        import traceback
+        traceback.print_exc()
         return False, None, {}
 
 
@@ -782,6 +916,7 @@ Examples:
   python test_all_apis.py --workflow-only     # Local workflow tests only
   python test_all_apis.py --data-only         # QA data API tests only
   python test_all_apis.py --validation-only   # Document validation tests only
+  python test_all_apis.py --qa-doc-test       # Test push with real QA document (download URL + metadata)
 
 Configuration:
   LOCAL API: http://localhost:7071/api/v1/pipeline
@@ -792,6 +927,7 @@ Configuration:
     parser.add_argument("--workflow-only", action="store_true", help="Only run local workflow tests")
     parser.add_argument("--data-only", action="store_true", help="Only run QA data API tests")
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
+    parser.add_argument("--qa-doc-test", action="store_true", help="Test push with real document from QA (with download URL)")
     args = parser.parse_args()
 
     # Print header
@@ -849,6 +985,18 @@ Configuration:
             results["local"]["push_validation_no_docs"] = success
             success, _ = test_push_batch_validation()
             results["local"]["push_batch_validation"] = success
+
+    elif args.qa_doc_test:
+        # Test pushing with real document from QA (with download URL and metadata)
+        success, _ = test_local_health()
+        results["local"]["health"] = success
+        if success:
+            success, workflow_id, _ = test_push_with_qa_document()
+            results["local"]["push_with_qa_document"] = success
+            if workflow_id:
+                time.sleep(1)
+                success, _ = test_workflow_status(workflow_id)
+                results["local"]["workflow_status"] = success
 
     else:
         results = run_all_tests()
