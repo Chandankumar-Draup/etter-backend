@@ -67,7 +67,7 @@ from etter_workflows.workflows.role_onboarding import (
 )
 from etter_workflows.clients.status_client import get_status_client
 from etter_workflows.mock_data.role_taxonomy import get_role_taxonomy_provider
-from etter_workflows.mock_data.documents import get_document_provider
+# Note: get_document_provider removed - documents must be provided in request
 from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
@@ -189,31 +189,31 @@ async def push_role(
             ),
         )
 
-        # Check if we need to load documents from mock data
+        # Validate that documents are provided in the request
         if not input.has_documents():
-            settings = get_settings()
-            if settings.enable_mock_data:
-                doc_provider = get_document_provider()
+            raise HTTPException(
+                status_code=400,
+                detail={
+                    "error": "VALIDATION_ERROR",
+                    "message": "At least one document (job_description) is required in the request",
+                    "recoverable": False,
+                },
+            )
+
+        # Optionally load taxonomy data for role mapping (does not replace documents)
+        settings = get_settings()
+        if not input.draup_role_name:
+            try:
                 taxonomy_provider = get_role_taxonomy_provider()
-
-                # Try to get JD from mock data
-                jd_doc = doc_provider.get_document(
-                    company_name=request.company_id,
-                    role_name=request.role_name,
-                    doc_type=DocumentType.JOB_DESCRIPTION,
-                )
-                if jd_doc:
-                    input.documents.append(jd_doc)
-
-                # Try to get taxonomy entry
                 taxonomy_entry = taxonomy_provider.get_role(
                     request.company_id,
                     request.role_name,
                 )
                 if taxonomy_entry:
                     input.taxonomy_entry = taxonomy_entry
-                    if not input.draup_role_name:
-                        input.draup_role_name = taxonomy_entry.get_draup_role()
+                    input.draup_role_name = taxonomy_entry.get_draup_role()
+            except Exception as e:
+                logger.warning(f"Failed to fetch taxonomy data: {e}")
 
         # Validate input
         validation_errors = input.validate_for_processing()
@@ -599,24 +599,25 @@ async def push_batch(
                 ),
             )
 
-            # Load mock documents if needed
-            if not input.has_documents() and settings.enable_mock_data:
-                doc_provider = get_document_provider()
-                taxonomy_provider = get_role_taxonomy_provider()
+            # Validate that documents are provided in the request
+            if not input.has_documents():
+                logger.warning(f"No documents provided for {role_input.role_name}")
+                validation_failures.append({
+                    "role_name": role_input.role_name,
+                    "errors": ["At least one document (job_description) is required"],
+                })
+                continue
 
-                jd_doc = doc_provider.get_document(
-                    company_name=company_id,
-                    role_name=role_input.role_name,
-                    doc_type=DocumentType.JOB_DESCRIPTION,
-                )
-                if jd_doc:
-                    input.documents.append(jd_doc)
-
-                taxonomy_entry = taxonomy_provider.get_role(company_id, role_input.role_name)
-                if taxonomy_entry:
-                    input.taxonomy_entry = taxonomy_entry
-                    if not input.draup_role_name:
+            # Optionally load taxonomy data for role mapping
+            if not input.draup_role_name:
+                try:
+                    taxonomy_provider = get_role_taxonomy_provider()
+                    taxonomy_entry = taxonomy_provider.get_role(company_id, role_input.role_name)
+                    if taxonomy_entry:
+                        input.taxonomy_entry = taxonomy_entry
                         input.draup_role_name = taxonomy_entry.get_draup_role()
+                except Exception as e:
+                    logger.warning(f"Failed to fetch taxonomy data for {role_input.role_name}: {e}")
 
             # Validate input
             validation_errors = input.validate_for_processing()
@@ -884,27 +885,22 @@ async def retry_failed_roles(
                 ),
             )
 
-            # Load mock documents if enabled
-            settings = get_settings()
-            if settings.enable_mock_data:
-                doc_provider = get_document_provider()
-                taxonomy_provider = get_role_taxonomy_provider()
+            # Note: Retry does not have access to original documents
+            # The workflow will fail validation if documents are required
+            # Consider re-submitting via /push endpoint with documents instead
 
-                jd_doc = doc_provider.get_document(
-                    company_name=old_status.company_id,
-                    role_name=old_status.role_name,
-                    doc_type=DocumentType.JOB_DESCRIPTION,
-                )
-                if jd_doc:
-                    input.documents.append(jd_doc)
-
-                taxonomy_entry = taxonomy_provider.get_role(
-                    old_status.company_id, old_status.role_name
-                )
-                if taxonomy_entry:
-                    input.taxonomy_entry = taxonomy_entry
-                    if not input.draup_role_name:
+            # Optionally load taxonomy data for role mapping
+            if not input.draup_role_name:
+                try:
+                    taxonomy_provider = get_role_taxonomy_provider()
+                    taxonomy_entry = taxonomy_provider.get_role(
+                        old_status.company_id, old_status.role_name
+                    )
+                    if taxonomy_entry:
+                        input.taxonomy_entry = taxonomy_entry
                         input.draup_role_name = taxonomy_entry.get_draup_role()
+                except Exception as e:
+                    logger.warning(f"Failed to fetch taxonomy data for retry: {e}")
 
             # Create initial status
             initial_status = RoleStatus(
