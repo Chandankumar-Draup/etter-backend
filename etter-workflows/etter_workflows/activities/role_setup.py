@@ -245,21 +245,25 @@ async def create_company_role(
 @activity_with_retry(retry_config=get_db_retry_policy(), timeout_seconds=300)
 async def link_job_description(
     company_role_id: str,
-    jd_content: str,
+    jd_content: Optional[str] = None,
+    jd_uri: Optional[str] = None,
     jd_title: Optional[str] = None,
+    jd_metadata: Optional[Dict[str, Any]] = None,
     format_with_llm: bool = True,
     context: Optional[ExecutionContext] = None,
 ) -> Dict[str, Any]:
     """
     Link a job description to a CompanyRole via Automated Workflows API.
 
-    This is a standalone activity function that can be registered
-    with the Temporal worker.
+    Either jd_content (inline text) or jd_uri (download URL) must be provided.
+    The API endpoint handles downloading and PDF extraction if URI is provided.
 
     Args:
         company_role_id: CompanyRole ID
-        jd_content: Job description content
+        jd_content: Job description content (inline text)
+        jd_uri: Job description URL (S3 presigned URL for download)
         jd_title: Optional title
+        jd_metadata: Optional document metadata (document_id, roles, etc.)
         format_with_llm: Whether to format JD with LLM
         context: Execution context
 
@@ -269,20 +273,39 @@ async def link_job_description(
     with ActivityContext("link_job_description", context or ExecutionContext(
         company_id="unknown", user_id="system"
     )) as ctx:
+        logger.info("=" * 60)
+        logger.info("LINK_JD_DESCRIPTION Activity Starting")
+        logger.info("=" * 60)
+        logger.info(f"  - company_role_id: {company_role_id}")
+        logger.info(f"  - jd_content: {'Yes (' + str(len(jd_content)) + ' chars)' if jd_content else 'No'}")
+        logger.info(f"  - jd_uri: {'Yes' if jd_uri else 'No'}")
+        if jd_uri:
+            logger.info(f"  - jd_uri preview: {jd_uri[:80]}...")
+        logger.info(f"  - jd_title: {jd_title}")
+        logger.info(f"  - jd_metadata keys: {list(jd_metadata.keys()) if jd_metadata else 'None'}")
+        logger.info("=" * 60)
+
         api_client = get_automated_workflows_client()
 
         result = api_client.link_job_description(
             company_role_id=company_role_id,
             jd_content=jd_content,
+            jd_uri=jd_uri,
             jd_title=jd_title,
+            jd_metadata=jd_metadata,
             format_with_llm=format_with_llm,
             source="self_service_pipeline",
         )
 
+        logger.info(f"API Response:")
+        logger.info(f"  - jd_linked: {result.get('jd_linked', False)}")
+        logger.info(f"  - jd_content_length: {result.get('jd_content_length', 0)}")
+        logger.info("=" * 60)
+
         return {
             "company_role_id": company_role_id,
             "jd_linked": result.get("jd_linked", False),
-            "jd_content_length": result.get("jd_content_length", len(jd_content)),
+            "jd_content_length": result.get("jd_content_length", 0),
             "formatted": result.get("formatted", format_with_llm),
             "duration_ms": ctx.metrics.duration_ms,
         }

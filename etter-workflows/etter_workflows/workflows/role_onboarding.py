@@ -334,27 +334,36 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             company_role_id = result_dict.get("company_role_id")
 
             # Step 2: Link job description if we have one
+            # Check both content and uri (for documents from QA API with download URLs)
             jd_content = None
+            jd_uri = None
+            jd_metadata = None
             for doc in input.documents:
                 if doc.type == DocumentType.JOB_DESCRIPTION:
                     jd_content = doc.content
+                    jd_uri = doc.uri
+                    jd_metadata = doc.metadata if hasattr(doc, 'metadata') else None
                     break
 
-            # Try taxonomy entry if no JD in documents
-            if not jd_content and input.taxonomy_entry:
+            # Try taxonomy entry if no JD in documents (no content and no uri)
+            if not jd_content and not jd_uri and input.taxonomy_entry:
                 taxonomy_dict = input.taxonomy_entry.model_dump() if hasattr(input.taxonomy_entry, 'model_dump') else input.taxonomy_entry
                 general_summary = taxonomy_dict.get("general_summary", "")
                 duties = taxonomy_dict.get("duties_responsibilities", "")
                 if general_summary or duties:
                     jd_content = f"{general_summary}\n\n{duties}".strip()
 
-            if jd_content and company_role_id:
+            # Call link_job_description if we have content OR uri
+            # The API endpoint handles downloading and PDF extraction
+            if company_role_id and (jd_content or jd_uri):
                 jd_result = await workflow.execute_activity(
                     link_job_description,
                     args=[
                         company_role_id,  # company_role_id
-                        jd_content,       # jd_content
+                        jd_content,       # jd_content (may be None if using URI)
+                        jd_uri,           # jd_uri (S3 presigned URL)
                         input.role_name,  # jd_title
+                        jd_metadata,      # jd_metadata
                         True,             # format_with_llm
                         None,             # context
                     ],
