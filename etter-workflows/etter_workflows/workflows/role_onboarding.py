@@ -369,9 +369,9 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                     ],
                     start_to_close_timeout=timedelta(seconds=300),
                     retry_policy=RetryPolicy(
-                        maximum_attempts=3,
-                        initial_interval=timedelta(seconds=1),
-                        maximum_interval=timedelta(seconds=30),
+                        maximum_attempts=2,
+                        initial_interval=timedelta(seconds=2),
+                        maximum_interval=timedelta(seconds=10),
                         backoff_coefficient=2.0,
                     ),
                 )
