@@ -429,15 +429,10 @@ async def health_check() -> HealthResponse:
     else:
         components["temporal"] = f"unhealthy: {temporal_status}"
 
-    # Add Temporal debug info to components for visibility
+    # Add Temporal debug info to components for visibility (must be strings)
     components["temporal_address"] = settings.temporal_address
-    components["temporal_env_detection"] = {
-        "environment": settings.environment,
-        "etter_db_host": settings.etter_db_host or "(not set)",
-        "is_qa": settings._is_qa_environment(),
-        "is_prod": settings._is_prod_db(),
-        "effective_host": settings.get_effective_temporal_host(),
-    }
+    env_info = f"env={settings.environment}, db_host={settings.etter_db_host or '(not set)'}, is_qa={settings._is_qa_environment()}, is_prod={settings._is_prod_db()}"
+    components["temporal_env_detection"] = env_info
 
     # Check Redis
     try:
