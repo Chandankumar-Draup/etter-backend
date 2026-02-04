@@ -178,13 +178,21 @@ def test_push_validation_no_docs() -> Tuple[bool, Dict]:
         print(f"Response: {json.dumps(data, indent=2)}")
 
         # Should return 400 with VALIDATION_ERROR
+        # Response structure: {"status": "failure", "errors": [{"error": "VALIDATION_ERROR", ...}]}
         if response.status_code == 400:
-            error = data.get("detail", {})
-            if error.get("error") == "VALIDATION_ERROR":
+            # Check for errors array (new format) or detail dict (old format)
+            errors = data.get("errors", [])
+            detail = data.get("detail", {})
+
+            if errors and any(e.get("error") == "VALIDATION_ERROR" for e in errors):
+                print_result(True, "Correctly rejected request without documents")
+                return True, data
+            elif isinstance(detail, dict) and detail.get("error") == "VALIDATION_ERROR":
                 print_result(True, "Correctly rejected request without documents")
                 return True, data
             else:
-                print_result(False, f"Got 400 but unexpected error type: {error}")
+                print(f"\nDebug: errors={errors}, detail={detail}")
+                print_result(False, f"Got 400 but unexpected error structure")
                 return False, data
         else:
             print_result(False, f"Expected 400, got {response.status_code}")
@@ -273,6 +281,7 @@ def test_push_batch_validation() -> Tuple[bool, Dict]:
         "company_id": TEST_COMPANY,
         "roles": [
             {
+                "company_id": TEST_COMPANY,
                 "role_name": "Pharmacist",
                 "draup_role_name": "Clinical Pharmacist",
                 "documents": [
@@ -284,11 +293,13 @@ def test_push_batch_validation() -> Tuple[bool, Dict]:
                 ]
             },
             {
+                "company_id": TEST_COMPANY,
                 "role_name": "Nurse",
                 "draup_role_name": "Registered Nurse",
                 # No documents - should fail validation
             },
             {
+                "company_id": TEST_COMPANY,
                 "role_name": "Doctor",
                 "draup_role_name": "Physician",
                 "documents": []  # Empty documents - should also fail
