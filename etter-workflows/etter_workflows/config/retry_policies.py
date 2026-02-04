@@ -79,15 +79,17 @@ LLM_RETRY_CONFIG = RetryConfig(
 
 
 # Database retry policy (handle connection issues)
+# Note: Keep attempts low since Temporal also has retry policy
 DB_RETRY_CONFIG = RetryConfig(
     initial_interval=timedelta(seconds=2),
     backoff_coefficient=1.5,  # Slower backoff for DB
-    maximum_interval=timedelta(minutes=2),
-    maximum_attempts=4,
+    maximum_interval=timedelta(seconds=30),
+    maximum_attempts=2,  # Reduced: Temporal workflow also retries
     non_retryable_errors=[
         "ConstraintViolationError",
         "SchemaError",
         "AuthenticationError",
+        "HTTPError",  # Don't retry HTTP 4xx errors
     ],
 )
 
