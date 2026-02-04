@@ -541,6 +541,56 @@ def test_qa_documents_list() -> Tuple[bool, Dict]:
         return False, {}
 
 
+def test_qa_documents_for_role() -> Tuple[bool, Dict]:
+    """Test QA GET /api/documents/ filtered by role."""
+    print_section("QA: Documents for Role API")
+    from urllib.parse import quote
+    role_encoded = quote(TEST_ROLE)
+    url = qa_url(f"/api/documents/?roles={role_encoded}&limit=10")
+    print(f"URL: {url}")
+    print(f"Searching for documents with role: {TEST_ROLE}")
+
+    try:
+        response = requests.get(url, headers=get_qa_headers(), timeout=30)
+        print(f"Status: {response.status_code}")
+
+        data = safe_json(response)
+
+        if response.status_code != 200:
+            print(f"Error: {data}")
+            print_result(False, "Failed to fetch documents for role")
+            return False, data
+
+        docs = data.get("data", {}).get("documents", [])
+        total = data.get("data", {}).get("total", len(docs))
+
+        print(f"\nTotal documents for {TEST_ROLE}: {total}")
+        print(f"Returned: {len(docs)}")
+
+        if docs:
+            print(f"\nDocuments for {TEST_ROLE}:")
+            for doc in docs:
+                filename = doc.get('original_filename', 'N/A')
+                doc_id = doc.get('id', 'N/A')
+                roles = doc.get('roles', [])
+                status = doc.get('status', 'N/A')
+                print(f"  - {filename}")
+                print(f"    ID: {doc_id}")
+                print(f"    Roles: {roles}")
+                print(f"    Status: {status}")
+            print_result(True, f"Found {len(docs)} documents for {TEST_ROLE}")
+            return True, data
+        else:
+            print(f"\n[INFO] No documents found for role '{TEST_ROLE}'")
+            print("[INFO] Make sure documents are uploaded and tagged with this role in QA")
+            print_result(False, f"No documents found for {TEST_ROLE}")
+            return False, data
+
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        return False, {}
+
+
 def test_qa_document_detail(doc_id: str = None) -> Tuple[bool, Dict]:
     """Test QA GET /api/documents/{id}."""
     print_section("QA: Document Detail API")
@@ -679,6 +729,9 @@ def run_all_tests():
     success, _ = test_qa_documents_list()
     results["qa"]["documents_list"] = success
 
+    success, _ = test_qa_documents_for_role()
+    results["qa"]["documents_for_role"] = success
+
     success, _ = test_qa_document_detail()
     results["qa"]["document_detail"] = success
 
@@ -782,6 +835,8 @@ Configuration:
         results["qa"]["role_taxonomy"] = success
         success, _ = test_qa_documents_list()
         results["qa"]["documents_list"] = success
+        success, _ = test_qa_documents_for_role()
+        results["qa"]["documents_for_role"] = success
         success, _ = test_qa_document_detail()
         results["qa"]["document_detail"] = success
 
