@@ -12,6 +12,12 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
+# Temporal host constants for different environments
+TEMPORAL_HOST_QA = "qa-etter-temporal-client-frontend.etter-temporal.svc.cluster.local"
+TEMPORAL_HOST_PROD = "prod-etter-temporal-client-frontend.etter-temporal.svc.cluster.local"
+TEMPORAL_HOST_LOCAL = "localhost"
+
+
 class Settings(BaseSettings):
     """
     Application settings loaded from environment variables.
@@ -23,7 +29,7 @@ class Settings(BaseSettings):
     # Environment
     environment: str = Field(
         default="development",
-        description="Environment name (development, staging, production)"
+        description="Environment name (development, qa, production)"
     )
     debug: bool = Field(
         default=True,
@@ -257,8 +263,8 @@ class Settings(BaseSettings):
 
     @property
     def temporal_address(self) -> str:
-        """Get Temporal server address (host:port)."""
-        return f"{self.temporal_host}:{self.temporal_port}"
+        """Get Temporal server address (host:port) using effective host."""
+        return f"{self.get_effective_temporal_host()}:{self.temporal_port}"
 
     @property
     def is_development(self) -> bool:
@@ -275,8 +281,8 @@ class Settings(BaseSettings):
         """Get Temporal namespace based on environment."""
         if self.is_production:
             return "etter-prod"
-        elif self.environment == "staging":
-            return "etter-staging"
+        elif self.environment == "qa" or self._is_qa_environment():
+            return "etter-dev"  # QA uses etter-dev namespace
         return self.temporal_namespace
 
     def _is_qa_or_prod_environment(self) -> bool:
@@ -287,6 +293,47 @@ class Settings(BaseSettings):
         """Check if connected to production database."""
         db_host = self.etter_db_host.lower()
         return bool(db_host and 'dev-gateway' not in db_host and 'qa' not in db_host)
+
+    def _is_qa_environment(self) -> bool:
+        """Check if running in QA environment based on DB host."""
+        db_host = self.etter_db_host.lower()
+        return bool(db_host and ('qa' in db_host or 'dev-gateway' in db_host))
+
+    def get_effective_temporal_host(self) -> str:
+        """
+        Get the effective Temporal host based on environment.
+
+        Logic:
+        - If temporal_host is localhost -> keep localhost (local development)
+        - If temporal_host is not localhost (env override) -> use environment-based host
+        - If production environment -> use prod temporal host
+        - If QA environment -> use QA temporal host
+        - Otherwise -> localhost (development)
+
+        Returns:
+            Temporal host string
+        """
+        # Check if explicitly set to localhost (local development)
+        if self.temporal_host == TEMPORAL_HOST_LOCAL:
+            return TEMPORAL_HOST_LOCAL
+
+        # If temporal_host is set to something other than localhost,
+        # we're in a deployed environment - use the correct host based on environment
+        if self.temporal_host != TEMPORAL_HOST_LOCAL:
+            # Determine environment and return appropriate host
+            if self._is_prod_db() or self.environment == "production":
+                return TEMPORAL_HOST_PROD
+            elif self._is_qa_environment() or self.environment == "qa":
+                return TEMPORAL_HOST_QA
+
+        # Fallback: check environment explicitly
+        if self.environment == "production":
+            return TEMPORAL_HOST_PROD
+        elif self.environment == "qa":
+            return TEMPORAL_HOST_QA
+
+        # Default to localhost for development
+        return TEMPORAL_HOST_LOCAL
 
     @property
     def draup_world_api_url(self) -> str:
