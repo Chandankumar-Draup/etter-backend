@@ -414,6 +414,10 @@ async def health_check() -> HealthResponse:
     """
     settings = get_settings()
 
+    # Log Temporal configuration for debugging
+    temporal_debug = settings.get_temporal_debug_info()
+    logger.info(f"Temporal config debug: {temporal_debug}")
+
     components = {
         "api": "healthy",
     }
@@ -424,6 +428,16 @@ async def health_check() -> HealthResponse:
         components["temporal"] = "healthy"
     else:
         components["temporal"] = f"unhealthy: {temporal_status}"
+
+    # Add Temporal debug info to components for visibility
+    components["temporal_address"] = settings.temporal_address
+    components["temporal_env_detection"] = {
+        "environment": settings.environment,
+        "etter_db_host": settings.etter_db_host or "(not set)",
+        "is_qa": settings._is_qa_environment(),
+        "is_prod": settings._is_prod_db(),
+        "effective_host": settings.get_effective_temporal_host(),
+    }
 
     # Check Redis
     try:
