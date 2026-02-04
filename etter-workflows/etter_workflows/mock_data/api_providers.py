@@ -7,7 +7,7 @@ They implement the same interfaces as the mock providers.
 APIs used:
 - GET /api/documents/ - List documents
 - GET /api/documents/{id}?generate_download_url=true - Get document with download URL
-- GET /api/taxonomy/roles?company_id=<company_name> - List role taxonomy (company_id accepts company name)
+- GET /api/taxonomy/roles?company_name=<company_name> - List role taxonomy
 """
 
 import logging
@@ -54,7 +54,7 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Fetch roles from API.
 
         Args:
-            company_name: Company name (passed as company_id to API)
+            company_name: Company name
             status_filter: Optional approval_status filter
 
         Returns:
@@ -65,8 +65,8 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             return []
 
         url = f"{self.base_url}/api/taxonomy/roles"
-        # API accepts company_name as company_id parameter
-        params = {"company_id": company_name, "page_size": 200}
+        # API uses company_name parameter
+        params = {"company_name": company_name, "page_size": 200}
         if status_filter:
             params["approval_status"] = status_filter
 
