@@ -287,17 +287,26 @@ class Settings(BaseSettings):
 
     def _is_qa_or_prod_environment(self) -> bool:
         """Check if running in QA or production based on DB host (matches getCurrentEnvironment logic)."""
-        return bool(self.etter_db_host and self.etter_db_host != "localhost")
+        db_host = self.etter_db_host.lower() if self.etter_db_host else ""
+        # Must have a db_host that is not empty and not localhost
+        return bool(db_host and db_host != "localhost" and "127.0.0.1" not in db_host)
 
     def _is_prod_db(self) -> bool:
         """Check if connected to production database."""
+        # First check we're in a deployed environment (not local)
+        if not self._is_qa_or_prod_environment():
+            return False
+        # Then check it's not QA
         db_host = self.etter_db_host.lower()
-        return bool(db_host and 'dev-gateway' not in db_host and 'qa' not in db_host)
+        return 'dev-gateway' not in db_host and 'qa' not in db_host
 
     def _is_qa_environment(self) -> bool:
         """Check if running in QA environment based on DB host."""
+        # First check we're in a deployed environment (not local)
+        if not self._is_qa_or_prod_environment():
+            return False
         db_host = self.etter_db_host.lower()
-        return bool(db_host and ('qa' in db_host or 'dev-gateway' in db_host))
+        return 'qa' in db_host or 'dev-gateway' in db_host
 
     def get_effective_temporal_host(self) -> str:
         """
