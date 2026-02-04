@@ -174,6 +174,7 @@ async def push_role(
                 uri=doc.uri,
                 content=doc.content,
                 name=doc.name,
+                metadata=doc.metadata,
             ))
 
         # Create workflow input
@@ -669,6 +670,7 @@ async def push_batch(
                     uri=doc.uri,
                     content=doc.content,
                     name=doc.name,
+                    metadata=doc.metadata,
                 ))
 
             # Create workflow input
