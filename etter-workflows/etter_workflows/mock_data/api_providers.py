@@ -21,6 +21,45 @@ from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
 
+# =============================================================================
+# Company Name to ID Mapping
+# =============================================================================
+# Maps company names to their API company IDs
+# Add new companies here as needed
+
+COMPANY_NAME_TO_ID: Dict[str, int] = {
+    # Format: "Company Name": company_id
+    "Liberty Mutual": 1,
+    "Walmart Inc.": 2,
+    "Acme Corporation": 3,
+    "TestCorp": 4,
+    # Add more companies as needed
+}
+
+
+def get_company_id(company_name: str) -> Optional[int]:
+    """
+    Get company ID from company name.
+
+    Args:
+        company_name: Company name (case-insensitive)
+
+    Returns:
+        Company ID or None if not found
+    """
+    # Try exact match first
+    if company_name in COMPANY_NAME_TO_ID:
+        return COMPANY_NAME_TO_ID[company_name]
+
+    # Try case-insensitive match
+    lower_name = company_name.lower()
+    for name, cid in COMPANY_NAME_TO_ID.items():
+        if name.lower() == lower_name:
+            return cid
+
+    logger.warning(f"Company '{company_name}' not found in mapping")
+    return None
+
 
 class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
     """
@@ -29,19 +68,17 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
     Calls GET /api/taxonomy/roles to fetch role data.
     """
 
-    def __init__(self, base_url: str = None, auth_token: str = None, company_id: int = None):
+    def __init__(self, base_url: str = None, auth_token: str = None):
         """
         Initialize the API provider.
 
         Args:
             base_url: API base URL (defaults to settings)
             auth_token: Bearer token for auth (defaults to settings)
-            company_id: Company ID for taxonomy queries (defaults to settings)
         """
         settings = get_settings()
         self.base_url = base_url or settings.get_automated_workflows_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
-        self.company_id = company_id or getattr(settings, 'company_id', None)
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
     def _get_headers(self) -> Dict[str, str]:
@@ -51,29 +88,30 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             headers["Authorization"] = f"Bearer {self.auth_token}"
         return headers
 
-    def _fetch_roles(self, company_id: int = None, status_filter: str = None) -> List[Dict]:
+    def _fetch_roles(self, company_name: str, status_filter: str = None) -> List[Dict]:
         """
         Fetch roles from API.
 
         Args:
-            company_id: Company ID (uses self.company_id if not provided)
+            company_name: Company name (will be mapped to company_id)
             status_filter: Optional approval_status filter
 
         Returns:
             List of role dicts from API
         """
-        cid = company_id or self.company_id
-        if not cid:
-            logger.warning("No company_id configured for taxonomy API")
+        # Get company ID from name mapping
+        company_id = get_company_id(company_name)
+        if not company_id:
+            logger.warning(f"No company_id found for '{company_name}'")
             return []
 
         url = f"{self.base_url}/api/taxonomy/roles"
-        params = {"company_id": cid, "page_size": 200}
+        params = {"company_id": company_id, "page_size": 200}
         if status_filter:
             params["approval_status"] = status_filter
 
         try:
-            logger.info(f"Fetching roles from {url} for company_id={cid}")
+            logger.info(f"Fetching roles from {url} for {company_name} (id={company_id})")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
@@ -111,10 +149,17 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         status_filter: Optional[str] = None,
     ) -> List[RoleTaxonomyEntry]:
         """Get all roles for a company."""
-        # Note: API uses company_id, not company_name
-        # For now, we use the configured company_id
-        roles_data = self._fetch_roles(status_filter=status_filter)
-        return [self._convert_to_entry(r) for r in roles_data]
+        # Use cache if available
+        cache_key = f"{company_name}:{status_filter or 'all'}"
+        if cache_key in self._cache:
+            return self._cache[cache_key]
+
+        roles_data = self._fetch_roles(company_name, status_filter=status_filter)
+        roles = [self._convert_to_entry(r) for r in roles_data]
+
+        # Cache the results
+        self._cache[cache_key] = roles
+        return roles
 
     def get_role(
         self,
@@ -131,18 +176,17 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         return None
 
     def get_role_by_id(self, job_id: str) -> Optional[RoleTaxonomyEntry]:
-        """Get a role by job ID."""
-        # Would need to fetch all and filter, or have a dedicated endpoint
-        roles = self.get_roles_for_company("")
-        for role in roles:
-            if role.job_id == job_id:
-                return role
+        """Get a role by job ID (searches all companies)."""
+        for company_name in COMPANY_NAME_TO_ID.keys():
+            roles = self.get_roles_for_company(company_name)
+            for role in roles:
+                if role.job_id == job_id:
+                    return role
         return None
 
     def get_companies(self) -> List[str]:
-        """Get list of companies (not directly supported by API)."""
-        # This would need a separate endpoint or configuration
-        return []
+        """Get list of companies from the mapping."""
+        return list(COMPANY_NAME_TO_ID.keys())
 
 
 class APIDocumentProvider(DocumentProvider):

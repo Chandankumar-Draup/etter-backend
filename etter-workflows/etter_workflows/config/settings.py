@@ -170,10 +170,6 @@ class Settings(BaseSettings):
         default=None,
         description="Bearer token for API authentication (ETTER_AUTH_TOKEN)"
     )
-    company_id: Optional[int] = Field(
-        default=None,
-        description="Company ID for taxonomy API queries"
-    )
 
     # Environment detection (used to determine which API URL to use)
     etter_db_host: str = Field(
@@ -225,8 +221,8 @@ class Settings(BaseSettings):
 
     # Feature Flags
     enable_mock_data: bool = Field(
-        default=True,
-        description="Use mock data providers instead of real APIs"
+        default=False,
+        description="Use mock data providers instead of real APIs (default: False - use real APIs)"
     )
     enable_status_polling: bool = Field(
         default=True,
