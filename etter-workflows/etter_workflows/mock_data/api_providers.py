@@ -12,7 +12,8 @@ APIs used:
 
 import logging
 import requests
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional
+from datetime import datetime
 
 from etter_workflows.mock_data.role_taxonomy import RoleTaxonomyProvider
 from etter_workflows.mock_data.documents import DocumentProvider
@@ -155,7 +156,8 @@ class APIDocumentProvider(DocumentProvider):
     """
     API-based document provider.
 
-    Calls GET /api/documents/ to fetch documents.
+    Calls GET /api/documents/ to fetch document metadata.
+    Content extraction is handled downstream by the workflow API.
     """
 
     def __init__(self, base_url: str = None, auth_token: str = None):
@@ -218,40 +220,30 @@ class APIDocumentProvider(DocumentProvider):
             logger.error(f"Failed to fetch documents from API: {e}")
             return []
 
-    def _fetch_document_content(self, document_id: str) -> Optional[str]:
+    def _fetch_document_detail(self, document_id: str) -> Optional[Dict]:
         """
-        Fetch document content via download URL.
+        Fetch document details including download URL.
 
         Args:
             document_id: Document UUID
 
         Returns:
-            Document content as string, or None
+            Document dict with download info, or None
         """
         url = f"{self.base_url}/api/documents/{document_id}"
         params = {"generate_download_url": "true"}
 
         try:
-            logger.info(f"Fetching document {document_id} with download URL")
+            logger.info(f"Fetching document detail for {document_id}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
-
-            data = response.json()
-            download_info = data.get("download")
-
-            if download_info and download_info.get("url"):
-                # Fetch content from presigned URL
-                content_response = requests.get(download_info["url"], timeout=60)
-                content_response.raise_for_status()
-                return content_response.text
-
-            return None
+            return response.json()
 
         except Exception as e:
-            logger.error(f"Failed to fetch document content: {e}")
+            logger.error(f"Failed to fetch document detail: {e}")
             return None
 
-    def _convert_to_ref(self, doc_data: Dict, content: str = None) -> DocumentRef:
+    def _convert_to_ref(self, doc_data: Dict) -> DocumentRef:
         """Convert API response to DocumentRef."""
         # Determine document type from filename or content type
         filename = doc_data.get("original_filename", "").lower()
@@ -265,16 +257,25 @@ class APIDocumentProvider(DocumentProvider):
         elif "sop" in filename:
             doc_type = DocumentType.SOP
 
+        # Get download URL if available
+        download_url = None
+        download_info = doc_data.get("download")
+        if download_info and download_info.get("url"):
+            download_url = download_info["url"]
+
         return DocumentRef(
             type=doc_type,
-            uri=f"api://documents/{doc_data.get('id')}",
+            uri=download_url or f"api://documents/{doc_data.get('id')}",
             name=doc_data.get("original_filename"),
-            content=content,
+            content=None,  # Content extraction handled downstream
             metadata={
                 "id": doc_data.get("id"),
                 "status": doc_data.get("status"),
                 "roles": doc_data.get("roles", []),
                 "content_type": content_type,
+                "download_url": download_url,
+                "updated_at": doc_data.get("updated_at"),
+                "created_at": doc_data.get("created_at"),
             }
         )
 
@@ -291,11 +292,11 @@ class APIDocumentProvider(DocumentProvider):
         for doc in docs:
             ref = self._convert_to_ref(doc)
             if ref.type == doc_type:
-                # Fetch content
-                content = self._fetch_document_content(doc.get("id"))
-                if content:
-                    ref.content = content
-                    return ref
+                # Fetch detail to get download URL
+                detail = self._fetch_document_detail(doc.get("id"))
+                if detail:
+                    return self._convert_to_ref(detail)
+                return ref
 
         return None
 
@@ -306,31 +307,90 @@ class APIDocumentProvider(DocumentProvider):
     ) -> List[DocumentRef]:
         """Get all documents for a role."""
         docs = self._fetch_documents(roles=[role_name], company_instance_name=company_name)
+        return [self._convert_to_ref(doc) for doc in docs]
 
-        result = []
+    def get_best_document_for_role(
+        self,
+        role_name: str,
+        company_name: str = None,
+    ) -> Optional[DocumentRef]:
+        """
+        Get the best document for a role with intelligent filtering.
+
+        Logic:
+        1. Filter to documents where roles == [role_name] exactly (not mixed with other roles)
+        2. Sort by date (latest first based on updated_at or created_at)
+        3. Deduplicate by filename (take the latest if duplicates exist)
+        4. Return the best document with download URL
+
+        Args:
+            role_name: Role name to filter by
+            company_name: Optional company name to filter
+
+        Returns:
+            Best matching DocumentRef with download URL, or None
+        """
+        # Fetch documents filtered by role
+        docs = self._fetch_documents(roles=[role_name], company_instance_name=company_name)
+
+        if not docs:
+            logger.warning(f"No documents found for role: {role_name}")
+            return None
+
+        logger.info(f"Found {len(docs)} documents for role {role_name}")
+
+        # Filter to documents where roles is exactly [role_name]
+        exact_match_docs = []
         for doc in docs:
-            ref = self._convert_to_ref(doc)
-            # Optionally fetch content for each
-            content = self._fetch_document_content(doc.get("id"))
-            if content:
-                ref.content = content
-            result.append(ref)
+            doc_roles = doc.get("roles", [])
+            if doc_roles == [role_name]:
+                exact_match_docs.append(doc)
+                logger.debug(f"Exact match: {doc.get('original_filename')} - roles: {doc_roles}")
+            else:
+                logger.debug(f"Skipped (mixed roles): {doc.get('original_filename')} - roles: {doc_roles}")
 
-        return result
+        if not exact_match_docs:
+            logger.warning(f"No documents with exact role match [{role_name}], using all documents")
+            exact_match_docs = docs
 
-    def get_document_content(self, doc_ref: DocumentRef) -> Optional[str]:
-        """Get the content of a document."""
-        if doc_ref.content:
-            return doc_ref.content
+        logger.info(f"Exact match documents: {len(exact_match_docs)}")
 
-        # Extract document ID from metadata or URI
-        doc_id = None
-        if doc_ref.metadata and "id" in doc_ref.metadata:
-            doc_id = doc_ref.metadata["id"]
-        elif doc_ref.uri and doc_ref.uri.startswith("api://documents/"):
-            doc_id = doc_ref.uri.replace("api://documents/", "")
+        # Sort by date (latest first)
+        def get_date_key(doc):
+            for field in ["updated_at", "created_at", "uploaded_at"]:
+                if doc.get(field):
+                    try:
+                        return datetime.fromisoformat(doc[field].replace("Z", "+00:00"))
+                    except (ValueError, TypeError):
+                        pass
+            return datetime.min
 
-        if doc_id:
-            return self._fetch_document_content(doc_id)
+        exact_match_docs.sort(key=get_date_key, reverse=True)
 
-        return None
+        # Deduplicate by filename (keep the latest)
+        seen_filenames = {}
+        deduped_docs = []
+        for doc in exact_match_docs:
+            filename = doc.get("original_filename", "")
+            if filename not in seen_filenames:
+                seen_filenames[filename] = True
+                deduped_docs.append(doc)
+                logger.debug(f"Keeping (latest): {filename}")
+            else:
+                logger.debug(f"Skipped (duplicate): {filename}")
+
+        logger.info(f"After deduplication: {len(deduped_docs)} documents")
+
+        if not deduped_docs:
+            return None
+
+        # Take the first (latest) document
+        best_doc = deduped_docs[0]
+        logger.info(f"Selected best document: {best_doc.get('original_filename')} (id: {best_doc.get('id')})")
+
+        # Fetch document detail to get download URL
+        detail = self._fetch_document_detail(best_doc.get("id"))
+        if detail:
+            return self._convert_to_ref(detail)
+
+        return self._convert_to_ref(best_doc)
