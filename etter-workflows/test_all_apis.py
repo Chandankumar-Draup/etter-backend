@@ -14,7 +14,7 @@ Usage:
     python test_all_apis.py --validation-only   # Test document validation only
 
 Prerequisites:
-    - Local server running at http://localhost:8000
+    - Local server running at http://localhost:7071
     - QA API accessible at https://qa-etter.draup.technology
 """
 
@@ -30,7 +30,7 @@ from typing import Any, Dict, Optional, Tuple
 # =============================================================================
 
 # LOCAL API Configuration (for workflow operations)
-LOCAL_API_BASE_URL = "http://localhost:8000"
+LOCAL_API_BASE_URL = "http://localhost:7071"
 LOCAL_API_PREFIX = "/api/v1/pipeline"
 
 # QA API Configuration (for data APIs)
@@ -702,7 +702,7 @@ Examples:
   python test_all_apis.py --validation-only   # Document validation tests only
 
 Configuration:
-  LOCAL API: http://localhost:8000/api/v1/pipeline
+  LOCAL API: http://localhost:7071/api/v1/pipeline
   QA API:    https://qa-etter.draup.technology
         """
     )
