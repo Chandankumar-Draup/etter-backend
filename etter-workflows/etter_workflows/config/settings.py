@@ -303,37 +303,38 @@ class Settings(BaseSettings):
         """
         Get the effective Temporal host based on environment.
 
-        Logic:
-        - If temporal_host is localhost -> keep localhost (local development)
-        - If temporal_host is not localhost (env override) -> use environment-based host
-        - If production environment -> use prod temporal host
-        - If QA environment -> use QA temporal host
-        - Otherwise -> localhost (development)
+        Priority:
+        1. If in production environment (detected via db_host or environment) -> use prod temporal host
+        2. If in QA environment (detected via db_host or environment) -> use QA temporal host
+        3. Otherwise (local development) -> use temporal_host setting (default: localhost)
 
         Returns:
             Temporal host string
         """
-        # Check if explicitly set to localhost (local development)
-        if self.temporal_host == TEMPORAL_HOST_LOCAL:
-            return TEMPORAL_HOST_LOCAL
-
-        # If temporal_host is set to something other than localhost,
-        # we're in a deployed environment - use the correct host based on environment
-        if self.temporal_host != TEMPORAL_HOST_LOCAL:
-            # Determine environment and return appropriate host
-            if self._is_prod_db() or self.environment == "production":
-                return TEMPORAL_HOST_PROD
-            elif self._is_qa_environment() or self.environment == "qa":
-                return TEMPORAL_HOST_QA
-
-        # Fallback: check environment explicitly
-        if self.environment == "production":
+        # Priority 1: Check for production environment
+        if self._is_prod_db() or self.environment == "production":
             return TEMPORAL_HOST_PROD
-        elif self.environment == "qa":
+
+        # Priority 2: Check for QA environment
+        if self._is_qa_environment() or self.environment == "qa":
             return TEMPORAL_HOST_QA
 
-        # Default to localhost for development
-        return TEMPORAL_HOST_LOCAL
+        # Priority 3: Local development - use configured host (default: localhost)
+        return self.temporal_host
+
+    def get_temporal_debug_info(self) -> dict:
+        """Get debug info about Temporal configuration for logging."""
+        return {
+            "temporal_host_setting": self.temporal_host,
+            "temporal_port": self.temporal_port,
+            "effective_temporal_host": self.get_effective_temporal_host(),
+            "temporal_address": self.temporal_address,
+            "environment": self.environment,
+            "etter_db_host": self.etter_db_host,
+            "is_qa_environment": self._is_qa_environment(),
+            "is_prod_db": self._is_prod_db(),
+            "is_qa_or_prod_environment": self._is_qa_or_prod_environment(),
+        }
 
     @property
     def draup_world_api_url(self) -> str:
