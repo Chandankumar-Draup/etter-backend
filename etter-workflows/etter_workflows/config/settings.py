@@ -165,6 +165,16 @@ class Settings(BaseSettings):
         description="Draup World API URL for QA"
     )
 
+    # Authentication for API calls
+    etter_auth_token: Optional[str] = Field(
+        default=None,
+        description="Bearer token for API authentication (ETTER_AUTH_TOKEN)"
+    )
+    company_id: Optional[int] = Field(
+        default=None,
+        description="Company ID for taxonomy API queries"
+    )
+
     # Environment detection (used to determine which API URL to use)
     etter_db_host: str = Field(
         default="",

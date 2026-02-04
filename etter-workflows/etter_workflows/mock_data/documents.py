@@ -441,7 +441,7 @@ def get_document_provider() -> DocumentProvider:
     Get the document provider.
 
     Returns MockDocumentProvider when enable_mock_data is True,
-    otherwise would return a real storage provider (to be implemented).
+    otherwise returns APIDocumentProvider for real API calls.
 
     Returns:
         DocumentProvider instance
@@ -453,9 +453,9 @@ def get_document_provider() -> DocumentProvider:
             _document_provider = MockDocumentProvider()
             logger.info("Using MockDocumentProvider")
         else:
-            # TODO: Implement real storage provider (S3, etc.)
-            logger.warning("Real storage provider not implemented, using mock")
-            _document_provider = MockDocumentProvider()
+            from etter_workflows.mock_data.api_providers import APIDocumentProvider
+            _document_provider = APIDocumentProvider()
+            logger.info("Using APIDocumentProvider")
 
     return _document_provider
 

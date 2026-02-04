@@ -391,7 +391,7 @@ def get_role_taxonomy_provider() -> RoleTaxonomyProvider:
     Get the role taxonomy provider.
 
     Returns MockRoleTaxonomyProvider when enable_mock_data is True,
-    otherwise would return a real API provider (to be implemented).
+    otherwise returns APIRoleTaxonomyProvider for real API calls.
 
     Returns:
         RoleTaxonomyProvider instance
@@ -403,9 +403,9 @@ def get_role_taxonomy_provider() -> RoleTaxonomyProvider:
             _role_taxonomy_provider = MockRoleTaxonomyProvider()
             logger.info("Using MockRoleTaxonomyProvider")
         else:
-            # TODO: Implement real API provider
-            logger.warning("Real API provider not implemented, using mock")
-            _role_taxonomy_provider = MockRoleTaxonomyProvider()
+            from etter_workflows.mock_data.api_providers import APIRoleTaxonomyProvider
+            _role_taxonomy_provider = APIRoleTaxonomyProvider()
+            logger.info("Using APIRoleTaxonomyProvider")
 
     return _role_taxonomy_provider
 
