@@ -31,7 +31,7 @@ QA_AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNz
 
 # QA Temporal Configuration (via port-forward)
 QA_TEMPORAL_HOST = "localhost"  # Port-forwarded from QA
-QA_TEMPORAL_PORT = "7233"
+QA_TEMPORAL_PORT = "8080"
 QA_TEMPORAL_NAMESPACE = "etter-dev"
 
 # Test Data
