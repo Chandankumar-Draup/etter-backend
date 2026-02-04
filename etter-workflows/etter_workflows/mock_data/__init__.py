@@ -1,12 +1,13 @@
 """
-Mock data providers for Etter Workflows.
+Data providers for Etter Workflows.
 
-Provides mock data for development and testing:
-- role_taxonomy: Mock role taxonomy data (mirrors platform API format)
-- documents: Mock document data (JDs, process maps)
+Provides data for development, testing, and production:
+- role_taxonomy: Role taxonomy data (mock or API)
+- documents: Document data (mock or API)
 
-These providers are designed to be easily replaced with real API calls
-by implementing the same interface.
+Provider selection:
+- enable_mock_data=True: Uses MockRoleTaxonomyProvider/MockDocumentProvider
+- enable_mock_data=False: Uses APIRoleTaxonomyProvider/APIDocumentProvider
 """
 
 from etter_workflows.mock_data.role_taxonomy import (
@@ -19,12 +20,18 @@ from etter_workflows.mock_data.documents import (
     MockDocumentProvider,
     get_document_provider,
 )
+from etter_workflows.mock_data.api_providers import (
+    APIRoleTaxonomyProvider,
+    APIDocumentProvider,
+)
 
 __all__ = [
     "RoleTaxonomyProvider",
     "MockRoleTaxonomyProvider",
+    "APIRoleTaxonomyProvider",
     "get_role_taxonomy_provider",
     "DocumentProvider",
     "MockDocumentProvider",
+    "APIDocumentProvider",
     "get_document_provider",
 ]

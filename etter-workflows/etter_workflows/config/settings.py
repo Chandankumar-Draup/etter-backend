@@ -165,6 +165,12 @@ class Settings(BaseSettings):
         description="Draup World API URL for QA"
     )
 
+    # Authentication for API calls
+    etter_auth_token: Optional[str] = Field(
+        default=None,
+        description="Bearer token for API authentication (ETTER_AUTH_TOKEN)"
+    )
+
     # Environment detection (used to determine which API URL to use)
     etter_db_host: str = Field(
         default="",
@@ -215,8 +221,8 @@ class Settings(BaseSettings):
 
     # Feature Flags
     enable_mock_data: bool = Field(
-        default=True,
-        description="Use mock data providers instead of real APIs"
+        default=False,
+        description="Use mock data providers instead of real APIs (default: False - use real APIs)"
     )
     enable_status_polling: bool = Field(
         default=True,
