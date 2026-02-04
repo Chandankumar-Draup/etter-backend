@@ -65,8 +65,8 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             return []
 
         url = f"{self.base_url}/api/taxonomy/roles"
-        # API uses company_name parameter
-        params = {"company_name": company_name, "page_size": 200}
+        # API uses company_name parameter - no page_size to keep latency low
+        params = {"company_name": company_name}
         if status_filter:
             params["approval_status"] = status_filter
 
