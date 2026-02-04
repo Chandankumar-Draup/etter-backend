@@ -27,7 +27,6 @@ from etter_workflows.config.settings import get_settings, load_settings_from_env
 from etter_workflows.activities.role_setup import (
     create_company_role,
     link_job_description,
-    download_document_from_url,
 )
 from etter_workflows.activities.ai_assessment import run_ai_assessment
 from etter_workflows.workflows.role_onboarding import RoleOnboardingWorkflow
@@ -105,7 +104,6 @@ class WorkerManager:
             activities = [
                 create_company_role,
                 link_job_description,
-                download_document_from_url,
                 run_ai_assessment,
             ]
 

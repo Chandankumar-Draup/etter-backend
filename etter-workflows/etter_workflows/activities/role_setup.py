@@ -242,123 +242,28 @@ async def create_company_role(
         }
 
 
-@activity_with_retry(retry_config=get_db_retry_policy(), timeout_seconds=120)
-async def download_document_from_url(
-    url: str,
-    metadata: Optional[Dict[str, Any]] = None,
-) -> Dict[str, Any]:
-    """
-    Download document content from a URL (e.g., S3 presigned URL).
-
-    Handles PDF files by extracting text content.
-
-    Args:
-        url: Document URL (presigned S3 URL)
-        metadata: Optional document metadata
-
-    Returns:
-        Dict with content and metadata
-    """
-    import requests
-    import io
-
-    logger.info(f"Downloading document from URL")
-    logger.info(f"  - URL preview: {url[:80]}...")
-    if metadata:
-        logger.info(f"  - Document ID: {metadata.get('document_id', 'N/A')}")
-        logger.info(f"  - Content Type: {metadata.get('content_type', 'N/A')}")
-
-    try:
-        response = requests.get(url, timeout=60)
-        response.raise_for_status()
-
-        content_type = response.headers.get("Content-Type", "")
-        is_pdf = "pdf" in content_type.lower() or url.lower().endswith(".pdf")
-
-        logger.info(f"  - Response Content-Type: {content_type}")
-        logger.info(f"  - Is PDF: {is_pdf}")
-        logger.info(f"  - Content Length: {len(response.content)} bytes")
-
-        if is_pdf:
-            # Extract text from PDF
-            try:
-                import PyPDF2
-                pdf_file = io.BytesIO(response.content)
-                pdf_reader = PyPDF2.PdfReader(pdf_file)
-
-                text_parts = []
-                for i, page in enumerate(pdf_reader.pages):
-                    text = page.extract_text()
-                    if text:
-                        text_parts.append(text)
-                        logger.debug(f"  - Page {i+1}: {len(text)} chars")
-
-                if text_parts:
-                    content = "\n\n".join(text_parts)
-                    logger.info(f"  - Extracted {len(content)} chars from {len(pdf_reader.pages)} pages")
-                    return {
-                        "content": content,
-                        "content_length": len(content),
-                        "pages": len(pdf_reader.pages),
-                        "content_type": "application/pdf",
-                        "extracted": True,
-                    }
-                else:
-                    logger.warning("  - No text extracted from PDF (may be image-based)")
-                    return {
-                        "content": None,
-                        "content_length": 0,
-                        "error": "No text extracted from PDF",
-                    }
-            except ImportError:
-                logger.error("PyPDF2 not installed. Install with: pip install PyPDF2")
-                return {
-                    "content": None,
-                    "error": "PyPDF2 not installed",
-                }
-            except Exception as e:
-                logger.error(f"PDF extraction failed: {e}")
-                return {
-                    "content": None,
-                    "error": str(e),
-                }
-        else:
-            # Return text content directly
-            content = response.text
-            logger.info(f"  - Text content: {len(content)} chars")
-            return {
-                "content": content,
-                "content_length": len(content),
-                "content_type": content_type,
-                "extracted": False,
-            }
-
-    except requests.exceptions.RequestException as e:
-        logger.error(f"Download failed: {e}")
-        return {
-            "content": None,
-            "error": str(e),
-        }
-
-
 @activity_with_retry(retry_config=get_db_retry_policy(), timeout_seconds=300)
 async def link_job_description(
     company_role_id: str,
-    jd_content: str,
+    jd_content: Optional[str] = None,
+    jd_uri: Optional[str] = None,
     jd_title: Optional[str] = None,
+    jd_metadata: Optional[Dict[str, Any]] = None,
     format_with_llm: bool = True,
     context: Optional[ExecutionContext] = None,
 ) -> Dict[str, Any]:
     """
     Link a job description to a CompanyRole via Automated Workflows API.
 
-    This is a standalone activity function that can be registered
-    with the Temporal worker.
+    Either jd_content (inline text) or jd_uri (download URL) must be provided.
+    The API endpoint handles downloading and PDF extraction if URI is provided.
 
     Args:
         company_role_id: CompanyRole ID
-        jd_content: Job description content
+        jd_content: Job description content (inline text)
+        jd_uri: Job description URL (S3 presigned URL for download)
         jd_title: Optional title
+        jd_metadata: Optional document metadata (document_id, roles, etc.)
         format_with_llm: Whether to format JD with LLM
         context: Execution context
 
@@ -368,20 +273,39 @@ async def link_job_description(
     with ActivityContext("link_job_description", context or ExecutionContext(
         company_id="unknown", user_id="system"
     )) as ctx:
+        logger.info("=" * 60)
+        logger.info("LINK_JD_DESCRIPTION Activity Starting")
+        logger.info("=" * 60)
+        logger.info(f"  - company_role_id: {company_role_id}")
+        logger.info(f"  - jd_content: {'Yes (' + str(len(jd_content)) + ' chars)' if jd_content else 'No'}")
+        logger.info(f"  - jd_uri: {'Yes' if jd_uri else 'No'}")
+        if jd_uri:
+            logger.info(f"  - jd_uri preview: {jd_uri[:80]}...")
+        logger.info(f"  - jd_title: {jd_title}")
+        logger.info(f"  - jd_metadata keys: {list(jd_metadata.keys()) if jd_metadata else 'None'}")
+        logger.info("=" * 60)
+
         api_client = get_automated_workflows_client()
 
         result = api_client.link_job_description(
             company_role_id=company_role_id,
             jd_content=jd_content,
+            jd_uri=jd_uri,
             jd_title=jd_title,
+            jd_metadata=jd_metadata,
             format_with_llm=format_with_llm,
             source="self_service_pipeline",
         )
 
+        logger.info(f"API Response:")
+        logger.info(f"  - jd_linked: {result.get('jd_linked', False)}")
+        logger.info(f"  - jd_content_length: {result.get('jd_content_length', 0)}")
+        logger.info("=" * 60)
+
         return {
             "company_role_id": company_role_id,
             "jd_linked": result.get("jd_linked", False),
-            "jd_content_length": result.get("jd_content_length", len(jd_content)),
+            "jd_content_length": result.get("jd_content_length", 0),
             "formatted": result.get("formatted", format_with_llm),
             "duration_ms": ctx.metrics.duration_ms,
         }

@@ -184,18 +184,25 @@ class AutomatedWorkflowsClient:
     def link_job_description(
         self,
         company_role_id: str,
-        jd_content: str,
+        jd_content: Optional[str] = None,
+        jd_uri: Optional[str] = None,
         jd_title: Optional[str] = None,
+        jd_metadata: Optional[Dict[str, Any]] = None,
         format_with_llm: bool = True,
         source: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Link a job description to a CompanyRole via API.
 
+        Either jd_content (inline text) or jd_uri (download URL) must be provided.
+        The API endpoint handles downloading and PDF extraction if URI is provided.
+
         Args:
             company_role_id: CompanyRole ID
-            jd_content: Job description content
+            jd_content: Job description content (inline text)
+            jd_uri: Job description URL (S3 presigned URL for download)
             jd_title: Optional JD title
+            jd_metadata: Optional document metadata (document_id, roles, etc.)
             format_with_llm: Whether to format JD with LLM
             source: Source identifier
 
@@ -203,14 +210,21 @@ class AutomatedWorkflowsClient:
             Dict with linking status
         """
         logger.info(f"Linking JD to CompanyRole via API: {company_role_id}")
+        logger.info(f"  - jd_content: {'Yes (' + str(len(jd_content)) + ' chars)' if jd_content else 'No'}")
+        logger.info(f"  - jd_uri: {'Yes' if jd_uri else 'No'}")
 
         payload = {
             "company_role_id": company_role_id,
-            "jd_content": jd_content,
             "format_with_llm": format_with_llm,
         }
+        if jd_content:
+            payload["jd_content"] = jd_content
+        if jd_uri:
+            payload["jd_uri"] = jd_uri
         if jd_title:
             payload["jd_title"] = jd_title
+        if jd_metadata:
+            payload["jd_metadata"] = jd_metadata
         if source:
             payload["source"] = source
 

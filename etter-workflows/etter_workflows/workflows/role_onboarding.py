@@ -342,29 +342,28 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                 if doc.type == DocumentType.JOB_DESCRIPTION:
                     jd_content = doc.content
                     jd_uri = doc.uri
-                    jd_metadata = doc.metadata
+                    jd_metadata = doc.metadata if hasattr(doc, 'metadata') else None
                     break
 
-            # If no inline content but URI is available, download the content
-            if not jd_content and jd_uri:
-                # Download content from presigned URL
-                jd_content = await self._download_document_content(jd_uri, jd_metadata)
-
-            # Try taxonomy entry if no JD in documents
-            if not jd_content and input.taxonomy_entry:
+            # Try taxonomy entry if no JD in documents (no content and no uri)
+            if not jd_content and not jd_uri and input.taxonomy_entry:
                 taxonomy_dict = input.taxonomy_entry.model_dump() if hasattr(input.taxonomy_entry, 'model_dump') else input.taxonomy_entry
                 general_summary = taxonomy_dict.get("general_summary", "")
                 duties = taxonomy_dict.get("duties_responsibilities", "")
                 if general_summary or duties:
                     jd_content = f"{general_summary}\n\n{duties}".strip()
 
-            if jd_content and company_role_id:
+            # Call link_job_description if we have content OR uri
+            # The API endpoint handles downloading and PDF extraction
+            if company_role_id and (jd_content or jd_uri):
                 jd_result = await workflow.execute_activity(
                     link_job_description,
                     args=[
                         company_role_id,  # company_role_id
-                        jd_content,       # jd_content
+                        jd_content,       # jd_content (may be None if using URI)
+                        jd_uri,           # jd_uri (S3 presigned URL)
                         input.role_name,  # jd_title
+                        jd_metadata,      # jd_metadata
                         True,             # format_with_llm
                         None,             # context
                     ],
@@ -481,72 +480,6 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             workflow_state["assessment_outputs"] = result.result.get("assessment_outputs")
 
         return result
-
-    async def _download_document_content(
-        self,
-        uri: str,
-        metadata: Optional[Dict[str, Any]] = None,
-    ) -> Optional[str]:
-        """
-        Download document content from URI (e.g., S3 presigned URL).
-
-        Args:
-            uri: Document URI (presigned S3 URL)
-            metadata: Optional document metadata
-
-        Returns:
-            Document content as string, or None if download fails
-        """
-        if is_temporal_workflow_context() and workflow:
-            # In Temporal context: use activity for I/O
-            from etter_workflows.activities.role_setup import download_document_from_url
-
-            try:
-                result = await workflow.execute_activity(
-                    download_document_from_url,
-                    args=[uri, metadata],
-                    start_to_close_timeout=timedelta(seconds=120),
-                    retry_policy=RetryPolicy(
-                        maximum_attempts=3,
-                        initial_interval=timedelta(seconds=2),
-                        maximum_interval=timedelta(seconds=30),
-                        backoff_coefficient=2.0,
-                    ),
-                )
-                return result.get("content")
-            except Exception as e:
-                # Log will happen in activity, just return None here
-                return None
-        else:
-            # Standalone mode: download directly
-            try:
-                import requests
-                response = requests.get(uri, timeout=60)
-                response.raise_for_status()
-
-                # Check if PDF
-                content_type = response.headers.get("Content-Type", "")
-                if "pdf" in content_type.lower() or uri.lower().endswith(".pdf"):
-                    # Try to extract PDF content
-                    try:
-                        import io
-                        import PyPDF2
-                        pdf_file = io.BytesIO(response.content)
-                        pdf_reader = PyPDF2.PdfReader(pdf_file)
-                        text_parts = []
-                        for page in pdf_reader.pages:
-                            text = page.extract_text()
-                            if text:
-                                text_parts.append(text)
-                        if text_parts:
-                            return "\n\n".join(text_parts)
-                    except Exception:
-                        pass
-                    return None
-                else:
-                    return response.text
-            except Exception:
-                return None
 
     def _generate_dashboard_url(
         self,
