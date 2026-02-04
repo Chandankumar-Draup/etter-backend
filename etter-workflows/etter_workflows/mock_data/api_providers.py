@@ -10,9 +10,11 @@ APIs used:
 - GET /api/taxonomy/roles?company_name=<company_name>&job_title=<job_title> - List role taxonomy
 """
 
+import io
 import logging
 import requests
 from typing import Dict, List, Optional, Any
+from datetime import datetime
 
 from etter_workflows.mock_data.role_taxonomy import RoleTaxonomyProvider
 from etter_workflows.mock_data.documents import DocumentProvider
@@ -218,12 +220,13 @@ class APIDocumentProvider(DocumentProvider):
             logger.error(f"Failed to fetch documents from API: {e}")
             return []
 
-    def _fetch_document_content(self, document_id: str) -> Optional[str]:
+    def _fetch_document_content(self, document_id: str, convert_to_markdown: bool = False) -> Optional[str]:
         """
         Fetch document content via download URL.
 
         Args:
             document_id: Document UUID
+            convert_to_markdown: If True, convert PDF content to Markdown using LLM
 
         Returns:
             Document content as string, or None
@@ -238,18 +241,205 @@ class APIDocumentProvider(DocumentProvider):
 
             data = response.json()
             download_info = data.get("download")
+            filename = data.get("original_filename", "").lower()
+            content_type = data.get("observed_content_type", "")
 
             if download_info and download_info.get("url"):
+                download_url = download_info["url"]
+                logger.info(f"Downloading content from presigned URL for {filename}")
+
                 # Fetch content from presigned URL
-                content_response = requests.get(download_info["url"], timeout=60)
+                content_response = requests.get(download_url, timeout=60)
                 content_response.raise_for_status()
-                return content_response.text
+
+                # Check if it's a PDF file
+                is_pdf = filename.endswith('.pdf') or 'pdf' in content_type.lower()
+
+                if is_pdf:
+                    # Parse PDF content
+                    raw_text = self._extract_pdf_content(content_response.content)
+                    if raw_text and convert_to_markdown:
+                        # Convert to Markdown using LLM
+                        return self._convert_to_markdown_with_llm(raw_text, filename)
+                    return raw_text
+                else:
+                    # Return text content directly
+                    return content_response.text
 
             return None
 
         except Exception as e:
             logger.error(f"Failed to fetch document content: {e}")
             return None
+
+    def _extract_pdf_content(self, pdf_bytes: bytes) -> Optional[str]:
+        """
+        Extract text content from PDF bytes.
+
+        Args:
+            pdf_bytes: Raw PDF file bytes
+
+        Returns:
+            Extracted text content, or None
+        """
+        try:
+            # Try PyPDF2 first
+            try:
+                import PyPDF2
+                pdf_file = io.BytesIO(pdf_bytes)
+                pdf_reader = PyPDF2.PdfReader(pdf_file)
+
+                text_parts = []
+                for page in pdf_reader.pages:
+                    text = page.extract_text()
+                    if text:
+                        text_parts.append(text)
+
+                if text_parts:
+                    content = "\n\n".join(text_parts)
+                    logger.info(f"Extracted {len(content)} chars from PDF using PyPDF2")
+                    return content
+            except ImportError:
+                logger.warning("PyPDF2 not installed, trying pdfplumber")
+
+            # Try pdfplumber as fallback
+            try:
+                import pdfplumber
+                pdf_file = io.BytesIO(pdf_bytes)
+                with pdfplumber.open(pdf_file) as pdf:
+                    text_parts = []
+                    for page in pdf.pages:
+                        text = page.extract_text()
+                        if text:
+                            text_parts.append(text)
+
+                    if text_parts:
+                        content = "\n\n".join(text_parts)
+                        logger.info(f"Extracted {len(content)} chars from PDF using pdfplumber")
+                        return content
+            except ImportError:
+                logger.warning("pdfplumber not installed")
+
+            logger.error("No PDF parser available. Install PyPDF2 or pdfplumber: pip install PyPDF2")
+            return None
+
+        except Exception as e:
+            logger.error(f"Failed to extract PDF content: {e}")
+            return None
+
+    def _convert_to_markdown_with_llm(self, raw_text: str, filename: str = "") -> str:
+        """
+        Convert raw document text to formatted Markdown using LLM.
+
+        Args:
+            raw_text: Raw extracted text from document
+            filename: Original filename for context
+
+        Returns:
+            Formatted Markdown content
+        """
+        try:
+            settings = get_settings()
+
+            # Check for Gemini API (default LLM)
+            if settings.llm_provider == "gemini" and settings.llm_api_key:
+                return self._convert_with_gemini(raw_text, filename, settings)
+
+            # Check for OpenAI API
+            elif settings.llm_provider == "openai" and settings.llm_api_key:
+                return self._convert_with_openai(raw_text, filename, settings)
+
+            else:
+                logger.warning("No LLM API key configured, returning raw text")
+                return raw_text
+
+        except Exception as e:
+            logger.error(f"Failed to convert to Markdown with LLM: {e}")
+            return raw_text
+
+    def _convert_with_gemini(self, raw_text: str, filename: str, settings) -> str:
+        """Convert text to Markdown using Google Gemini API."""
+        try:
+            import google.generativeai as genai
+
+            genai.configure(api_key=settings.llm_api_key)
+            model = genai.GenerativeModel(settings.llm_model or "gemini-2.0-flash")
+
+            prompt = f"""Convert the following job description document to well-formatted Markdown.
+
+Document: {filename}
+
+Instructions:
+- Preserve all important information
+- Use proper Markdown headings (##, ###)
+- Use bullet points for lists
+- Format requirements, responsibilities, qualifications as separate sections
+- Clean up any OCR artifacts or formatting issues
+- Keep the content professional and readable
+
+Raw Content:
+{raw_text}
+
+Formatted Markdown:"""
+
+            response = model.generate_content(prompt)
+            if response.text:
+                logger.info(f"Converted to Markdown using Gemini ({len(response.text)} chars)")
+                return response.text
+
+            return raw_text
+
+        except ImportError:
+            logger.error("google-generativeai not installed: pip install google-generativeai")
+            return raw_text
+        except Exception as e:
+            logger.error(f"Gemini conversion failed: {e}")
+            return raw_text
+
+    def _convert_with_openai(self, raw_text: str, filename: str, settings) -> str:
+        """Convert text to Markdown using OpenAI API."""
+        try:
+            from openai import OpenAI
+
+            client = OpenAI(api_key=settings.llm_api_key)
+
+            prompt = f"""Convert the following job description document to well-formatted Markdown.
+
+Document: {filename}
+
+Instructions:
+- Preserve all important information
+- Use proper Markdown headings (##, ###)
+- Use bullet points for lists
+- Format requirements, responsibilities, qualifications as separate sections
+- Clean up any OCR artifacts or formatting issues
+- Keep the content professional and readable
+
+Raw Content:
+{raw_text}"""
+
+            response = client.chat.completions.create(
+                model=settings.llm_model or "gpt-4o-mini",
+                messages=[
+                    {"role": "system", "content": "You are a document formatter. Convert raw text to clean Markdown."},
+                    {"role": "user", "content": prompt}
+                ],
+                max_tokens=4000,
+            )
+
+            if response.choices and response.choices[0].message.content:
+                content = response.choices[0].message.content
+                logger.info(f"Converted to Markdown using OpenAI ({len(content)} chars)")
+                return content
+
+            return raw_text
+
+        except ImportError:
+            logger.error("openai not installed: pip install openai")
+            return raw_text
+        except Exception as e:
+            logger.error(f"OpenAI conversion failed: {e}")
+            return raw_text
 
     def _convert_to_ref(self, doc_data: Dict, content: str = None) -> DocumentRef:
         """Convert API response to DocumentRef."""
@@ -317,6 +507,98 @@ class APIDocumentProvider(DocumentProvider):
             result.append(ref)
 
         return result
+
+    def get_best_document_for_role(
+        self,
+        role_name: str,
+        company_name: str = None,
+        convert_to_markdown: bool = False,
+    ) -> Optional[DocumentRef]:
+        """
+        Get the best document for a role with intelligent filtering.
+
+        Logic:
+        1. Filter to documents where roles == [role_name] exactly (not mixed with other roles)
+        2. Sort by date (latest first based on updated_at or created_at)
+        3. Deduplicate by filename (take the latest if duplicates exist)
+        4. Return the best document with content extracted
+
+        Args:
+            role_name: Role name to filter by
+            company_name: Optional company name to filter
+            convert_to_markdown: If True, convert PDF content to Markdown using LLM
+
+        Returns:
+            Best matching DocumentRef with content, or None
+        """
+        # Fetch documents filtered by role
+        docs = self._fetch_documents(roles=[role_name], company_instance_name=company_name)
+
+        if not docs:
+            logger.warning(f"No documents found for role: {role_name}")
+            return None
+
+        logger.info(f"Found {len(docs)} documents for role {role_name}")
+
+        # Filter to documents where roles is exactly [role_name]
+        exact_match_docs = []
+        for doc in docs:
+            doc_roles = doc.get("roles", [])
+            if doc_roles == [role_name]:
+                exact_match_docs.append(doc)
+                logger.debug(f"Exact match: {doc.get('original_filename')} - roles: {doc_roles}")
+            else:
+                logger.debug(f"Skipped (mixed roles): {doc.get('original_filename')} - roles: {doc_roles}")
+
+        if not exact_match_docs:
+            logger.warning(f"No documents with exact role match [{role_name}], using all documents")
+            exact_match_docs = docs
+
+        logger.info(f"Exact match documents: {len(exact_match_docs)}")
+
+        # Sort by date (latest first)
+        # Try updated_at, then created_at, then id as fallback
+        def get_date_key(doc):
+            for field in ["updated_at", "created_at", "uploaded_at"]:
+                if doc.get(field):
+                    try:
+                        return datetime.fromisoformat(doc[field].replace("Z", "+00:00"))
+                    except (ValueError, TypeError):
+                        pass
+            return datetime.min
+
+        exact_match_docs.sort(key=get_date_key, reverse=True)
+
+        # Deduplicate by filename (keep the latest)
+        seen_filenames = {}
+        deduped_docs = []
+        for doc in exact_match_docs:
+            filename = doc.get("original_filename", "")
+            if filename not in seen_filenames:
+                seen_filenames[filename] = True
+                deduped_docs.append(doc)
+                logger.debug(f"Keeping (latest): {filename}")
+            else:
+                logger.debug(f"Skipped (duplicate): {filename}")
+
+        logger.info(f"After deduplication: {len(deduped_docs)} documents")
+
+        if not deduped_docs:
+            return None
+
+        # Take the first (latest) document
+        best_doc = deduped_docs[0]
+        logger.info(f"Selected best document: {best_doc.get('original_filename')} (id: {best_doc.get('id')})")
+
+        # Fetch content
+        content = self._fetch_document_content(
+            best_doc.get("id"),
+            convert_to_markdown=convert_to_markdown
+        )
+
+        # Create DocumentRef
+        ref = self._convert_to_ref(best_doc, content=content)
+        return ref
 
     def get_document_content(self, doc_ref: DocumentRef) -> Optional[str]:
         """Get the content of a document."""

@@ -12,10 +12,12 @@ Usage:
     python test_all_apis.py --workflow-only     # Test workflow endpoints only
     python test_all_apis.py --data-only         # Test QA data APIs only
     python test_all_apis.py --validation-only   # Test document validation only
+    python test_all_apis.py --content-only      # Test document content extraction
 
 Prerequisites:
     - Local server running at http://localhost:7071
     - QA API accessible at https://qa-etter.draup.technology
+    - For content extraction: pip install PyPDF2 (or pdfplumber)
 """
 
 import argparse
@@ -591,6 +593,91 @@ def test_qa_documents_for_role() -> Tuple[bool, Dict]:
         return False, {}
 
 
+def test_qa_document_content_extraction() -> Tuple[bool, Dict]:
+    """Test document content extraction with PDF parsing and optional LLM conversion."""
+    print_section("QA: Document Content Extraction")
+    print("Testing: PDF download, content extraction, and best document selection")
+    print(f"Role: {TEST_ROLE}")
+
+    try:
+        # Import the API provider
+        import sys
+        import os
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'etter_workflows'))
+
+        from etter_workflows.mock_data.api_providers import APIDocumentProvider
+
+        # Initialize provider with QA settings
+        provider = APIDocumentProvider(
+            base_url=QA_API_BASE_URL,
+            auth_token=QA_AUTH_TOKEN
+        )
+
+        print(f"\nUsing APIDocumentProvider:")
+        print(f"  Base URL: {QA_API_BASE_URL}")
+        print(f"  Method: get_best_document_for_role('{TEST_ROLE}')")
+        print(f"  Filters: exact role match [{TEST_ROLE}], dedup by filename, latest first")
+
+        # Get best document for role (raw text only, no LLM conversion)
+        print("\n--- Fetching best document (raw text) ---")
+        doc_ref = provider.get_best_document_for_role(
+            role_name=TEST_ROLE,
+            convert_to_markdown=False  # Raw text only
+        )
+
+        if not doc_ref:
+            print(f"\n[WARN] No document found for role '{TEST_ROLE}' with exact match")
+            print("[INFO] Make sure documents exist in QA with roles = ['{TEST_ROLE}'] (exact match)")
+            print_result(False, f"No document found for {TEST_ROLE}")
+            return False, {}
+
+        print(f"\nBest Document Selected:")
+        print(f"  Name: {doc_ref.name}")
+        print(f"  Type: {doc_ref.type}")
+        print(f"  URI: {doc_ref.uri}")
+        if doc_ref.metadata:
+            print(f"  ID: {doc_ref.metadata.get('id', 'N/A')}")
+            print(f"  Roles: {doc_ref.metadata.get('roles', [])}")
+            print(f"  Status: {doc_ref.metadata.get('status', 'N/A')}")
+
+        if doc_ref.content:
+            content_length = len(doc_ref.content)
+            print(f"\n--- Extracted Content ({content_length} chars) ---")
+            # Show first 2000 chars or less
+            preview = doc_ref.content[:2000]
+            print(preview)
+            if content_length > 2000:
+                print(f"\n... (truncated, {content_length - 2000} more chars)")
+
+            print_result(True, f"Extracted {content_length} chars from {doc_ref.name}")
+
+            # Return the result
+            return True, {
+                "document_name": doc_ref.name,
+                "document_type": str(doc_ref.type),
+                "content_length": content_length,
+                "content_preview": preview[:500],
+                "metadata": doc_ref.metadata
+            }
+        else:
+            print("\n[WARN] Document found but no content extracted")
+            print("[INFO] Check if document is a supported format (PDF, text)")
+            print_result(False, "No content extracted from document")
+            return False, {"document_name": doc_ref.name}
+
+    except ImportError as e:
+        print(f"\n[ERROR] Import error: {e}")
+        print("[INFO] Make sure PyPDF2 is installed: pip install PyPDF2")
+        print_result(False, f"Import error: {e}")
+        return False, {}
+    except Exception as e:
+        print(f"\n[ERROR] {e}")
+        import traceback
+        traceback.print_exc()
+        print_result(False, f"Error: {e}")
+        return False, {}
+
+
 def test_qa_document_detail(doc_id: str = None) -> Tuple[bool, Dict]:
     """Test QA GET /api/documents/{id}."""
     print_section("QA: Document Detail API")
@@ -735,6 +822,9 @@ def run_all_tests():
     success, _ = test_qa_document_detail()
     results["qa"]["document_detail"] = success
 
+    success, _ = test_qa_document_content_extraction()
+    results["qa"]["document_content_extraction"] = success
+
     return results
 
 
@@ -781,6 +871,7 @@ Examples:
   python test_all_apis.py --workflow-only     # Local workflow tests only
   python test_all_apis.py --data-only         # QA data API tests only
   python test_all_apis.py --validation-only   # Document validation tests only
+  python test_all_apis.py --content-only      # Document content extraction test only
 
 Configuration:
   LOCAL API: http://localhost:7071/api/v1/pipeline
@@ -791,6 +882,7 @@ Configuration:
     parser.add_argument("--workflow-only", action="store_true", help="Only run local workflow tests")
     parser.add_argument("--data-only", action="store_true", help="Only run QA data API tests")
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
+    parser.add_argument("--content-only", action="store_true", help="Only run document content extraction test")
     args = parser.parse_args()
 
     # Print header
@@ -839,6 +931,13 @@ Configuration:
         results["qa"]["documents_for_role"] = success
         success, _ = test_qa_document_detail()
         results["qa"]["document_detail"] = success
+        success, _ = test_qa_document_content_extraction()
+        results["qa"]["document_content_extraction"] = success
+
+    elif args.content_only:
+        # Test just the document content extraction with PDF parsing
+        success, _ = test_qa_document_content_extraction()
+        results["qa"]["document_content_extraction"] = success
 
     elif args.validation_only:
         success, _ = test_local_health()
