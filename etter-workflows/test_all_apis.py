@@ -430,7 +430,8 @@ def test_qa_role_taxonomy() -> Tuple[bool, Dict]:
     # Use company_name parameter (URL encoded)
     from urllib.parse import quote
     company_name_encoded = quote(TEST_COMPANY)
-    url = qa_url(f"/api/taxonomy/roles?company_name={company_name_encoded}&page_size=10")
+    # API requires company_id, pass company_name as company_id value
+    url = qa_url(f"/api/taxonomy/roles?company_id={company_name_encoded}&page_size=10")
     print(f"URL: {url}")
 
     try:
