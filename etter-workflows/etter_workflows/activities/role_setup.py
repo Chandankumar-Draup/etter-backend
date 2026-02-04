@@ -242,6 +242,105 @@ async def create_company_role(
         }
 
 
+@activity_with_retry(retry_config=get_db_retry_policy(), timeout_seconds=120)
+async def download_document_from_url(
+    url: str,
+    metadata: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """
+    Download document content from a URL (e.g., S3 presigned URL).
+
+    Handles PDF files by extracting text content.
+
+    Args:
+        url: Document URL (presigned S3 URL)
+        metadata: Optional document metadata
+
+    Returns:
+        Dict with content and metadata
+    """
+    import requests
+    import io
+
+    logger.info(f"Downloading document from URL")
+    logger.info(f"  - URL preview: {url[:80]}...")
+    if metadata:
+        logger.info(f"  - Document ID: {metadata.get('document_id', 'N/A')}")
+        logger.info(f"  - Content Type: {metadata.get('content_type', 'N/A')}")
+
+    try:
+        response = requests.get(url, timeout=60)
+        response.raise_for_status()
+
+        content_type = response.headers.get("Content-Type", "")
+        is_pdf = "pdf" in content_type.lower() or url.lower().endswith(".pdf")
+
+        logger.info(f"  - Response Content-Type: {content_type}")
+        logger.info(f"  - Is PDF: {is_pdf}")
+        logger.info(f"  - Content Length: {len(response.content)} bytes")
+
+        if is_pdf:
+            # Extract text from PDF
+            try:
+                import PyPDF2
+                pdf_file = io.BytesIO(response.content)
+                pdf_reader = PyPDF2.PdfReader(pdf_file)
+
+                text_parts = []
+                for i, page in enumerate(pdf_reader.pages):
+                    text = page.extract_text()
+                    if text:
+                        text_parts.append(text)
+                        logger.debug(f"  - Page {i+1}: {len(text)} chars")
+
+                if text_parts:
+                    content = "\n\n".join(text_parts)
+                    logger.info(f"  - Extracted {len(content)} chars from {len(pdf_reader.pages)} pages")
+                    return {
+                        "content": content,
+                        "content_length": len(content),
+                        "pages": len(pdf_reader.pages),
+                        "content_type": "application/pdf",
+                        "extracted": True,
+                    }
+                else:
+                    logger.warning("  - No text extracted from PDF (may be image-based)")
+                    return {
+                        "content": None,
+                        "content_length": 0,
+                        "error": "No text extracted from PDF",
+                    }
+            except ImportError:
+                logger.error("PyPDF2 not installed. Install with: pip install PyPDF2")
+                return {
+                    "content": None,
+                    "error": "PyPDF2 not installed",
+                }
+            except Exception as e:
+                logger.error(f"PDF extraction failed: {e}")
+                return {
+                    "content": None,
+                    "error": str(e),
+                }
+        else:
+            # Return text content directly
+            content = response.text
+            logger.info(f"  - Text content: {len(content)} chars")
+            return {
+                "content": content,
+                "content_length": len(content),
+                "content_type": content_type,
+                "extracted": False,
+            }
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Download failed: {e}")
+        return {
+            "content": None,
+            "error": str(e),
+        }
+
+
 @activity_with_retry(retry_config=get_db_retry_policy(), timeout_seconds=300)
 async def link_job_description(
     company_role_id: str,

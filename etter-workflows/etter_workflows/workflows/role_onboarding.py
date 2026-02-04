@@ -334,11 +334,21 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             company_role_id = result_dict.get("company_role_id")
 
             # Step 2: Link job description if we have one
+            # Check both content and uri (for documents from QA API with download URLs)
             jd_content = None
+            jd_uri = None
+            jd_metadata = None
             for doc in input.documents:
                 if doc.type == DocumentType.JOB_DESCRIPTION:
                     jd_content = doc.content
+                    jd_uri = doc.uri
+                    jd_metadata = doc.metadata
                     break
+
+            # If no inline content but URI is available, download the content
+            if not jd_content and jd_uri:
+                # Download content from presigned URL
+                jd_content = await self._download_document_content(jd_uri, jd_metadata)
 
             # Try taxonomy entry if no JD in documents
             if not jd_content and input.taxonomy_entry:
@@ -471,6 +481,72 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             workflow_state["assessment_outputs"] = result.result.get("assessment_outputs")
 
         return result
+
+    async def _download_document_content(
+        self,
+        uri: str,
+        metadata: Optional[Dict[str, Any]] = None,
+    ) -> Optional[str]:
+        """
+        Download document content from URI (e.g., S3 presigned URL).
+
+        Args:
+            uri: Document URI (presigned S3 URL)
+            metadata: Optional document metadata
+
+        Returns:
+            Document content as string, or None if download fails
+        """
+        if is_temporal_workflow_context() and workflow:
+            # In Temporal context: use activity for I/O
+            from etter_workflows.activities.role_setup import download_document_from_url
+
+            try:
+                result = await workflow.execute_activity(
+                    download_document_from_url,
+                    args=[uri, metadata],
+                    start_to_close_timeout=timedelta(seconds=120),
+                    retry_policy=RetryPolicy(
+                        maximum_attempts=3,
+                        initial_interval=timedelta(seconds=2),
+                        maximum_interval=timedelta(seconds=30),
+                        backoff_coefficient=2.0,
+                    ),
+                )
+                return result.get("content")
+            except Exception as e:
+                # Log will happen in activity, just return None here
+                return None
+        else:
+            # Standalone mode: download directly
+            try:
+                import requests
+                response = requests.get(uri, timeout=60)
+                response.raise_for_status()
+
+                # Check if PDF
+                content_type = response.headers.get("Content-Type", "")
+                if "pdf" in content_type.lower() or uri.lower().endswith(".pdf"):
+                    # Try to extract PDF content
+                    try:
+                        import io
+                        import PyPDF2
+                        pdf_file = io.BytesIO(response.content)
+                        pdf_reader = PyPDF2.PdfReader(pdf_file)
+                        text_parts = []
+                        for page in pdf_reader.pages:
+                            text = page.extract_text()
+                            if text:
+                                text_parts.append(text)
+                        if text_parts:
+                            return "\n\n".join(text_parts)
+                    except Exception:
+                        pass
+                    return None
+                else:
+                    return response.text
+            except Exception:
+                return None
 
     def _generate_dashboard_url(
         self,
