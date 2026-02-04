@@ -7,7 +7,7 @@ They implement the same interfaces as the mock providers.
 APIs used:
 - GET /api/documents/ - List documents
 - GET /api/documents/{id}?generate_download_url=true - Get document with download URL
-- GET /api/taxonomy/roles?company_name=<company_name> - List role taxonomy
+- GET /api/taxonomy/roles?company_name=<company_name>&job_title=<job_title> - List role taxonomy
 """
 
 import logging
@@ -49,12 +49,13 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             headers["Authorization"] = f"Bearer {self.auth_token}"
         return headers
 
-    def _fetch_roles(self, company_name: str, status_filter: str = None) -> List[Dict]:
+    def _fetch_roles(self, company_name: str, job_title: str = None, status_filter: str = None) -> List[Dict]:
         """
         Fetch roles from API.
 
         Args:
             company_name: Company name
+            job_title: Optional job title to filter
             status_filter: Optional approval_status filter
 
         Returns:
@@ -65,13 +66,15 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             return []
 
         url = f"{self.base_url}/api/taxonomy/roles"
-        # API uses company_name parameter - no page_size to keep latency low
+        # API uses company_name and job_title parameters for filtering
         params = {"company_name": company_name}
+        if job_title:
+            params["job_title"] = job_title
         if status_filter:
             params["approval_status"] = status_filter
 
         try:
-            logger.info(f"Fetching roles from {url} for company: {company_name}")
+            logger.info(f"Fetching roles from {url} for company: {company_name}, job_title: {job_title}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
@@ -127,12 +130,11 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         job_title: str,
     ) -> Optional[RoleTaxonomyEntry]:
         """Get a specific role by job title."""
-        roles = self.get_roles_for_company(company_name)
-        for role in roles:
-            if role.job_title.lower() == job_title.lower():
-                return role
-            if role.job_role.lower() == job_title.lower():
-                return role
+        # Use API-level filtering with job_title parameter for lower latency
+        roles_data = self._fetch_roles(company_name, job_title=job_title)
+        if roles_data:
+            # Return first matching role
+            return self._convert_to_entry(roles_data[0])
         return None
 
     def get_role_by_id(self, job_id: str) -> Optional[RoleTaxonomyEntry]:
