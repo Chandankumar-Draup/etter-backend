@@ -39,7 +39,8 @@ QA_API_PREFIX = "/api/v1/pipeline"
 QA_AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzcxMTQ4MDQ2LCJqdGkiOiI3NTc2NzYxNS1kZDk1LTQ4NmEtYjhjMy1kYzg2ZTMwN2ZhMjUifQ.BrP4aQ2P5ZF2x1jK10vgh015y4amcFyAFKv700roGLI"
 
 # Test Data
-TEST_COMPANY = "Acme Corporation"
+TEST_COMPANY = "Acme Corporation"  # For documents API (company_instance_name)
+TEST_COMPANY_ID = None  # Integer company_id for taxonomy API (will be auto-detected)
 TEST_ROLE = "Pharmacist"
 TEST_JD = """
 # Pharmacist
@@ -423,17 +424,58 @@ def test_retry_failed() -> Tuple[bool, Dict]:
 # QA API TESTS (Data APIs)
 # =============================================================================
 
+def get_company_id_from_documents() -> Optional[int]:
+    """Try to get a company_id from documents API."""
+    try:
+        # Fetch documents to find company_id
+        response = requests.get(
+            qa_url("/api/documents/?limit=1"),
+            headers=get_qa_headers(),
+            timeout=30
+        )
+        if response.status_code == 200:
+            docs = response.json().get("data", {}).get("documents", [])
+            if docs:
+                # Documents may have company_id in their data
+                company_id = docs[0].get("company_id") or docs[0].get("company_instance_id")
+                if company_id and isinstance(company_id, int):
+                    return company_id
+    except:
+        pass
+    return None
+
+
 def test_qa_role_taxonomy() -> Tuple[bool, Dict]:
     """Test QA GET /api/taxonomy/roles."""
     print_section("QA: Role Taxonomy API")
-    url = qa_url(f"/api/taxonomy/roles?company_id={TEST_COMPANY}&page_size=10")
-    print(f"URL: {url}")
+
+    # Taxonomy API requires integer company_id, not company name
+    # Try to get company_id from documents or use a known ID
+    company_id = TEST_COMPANY_ID or get_company_id_from_documents()
+
+    if company_id:
+        url = qa_url(f"/api/taxonomy/roles?company_id={company_id}&page_size=10")
+        print(f"URL: {url}")
+        print(f"Note: Using company_id={company_id} (taxonomy API requires integer)")
+    else:
+        # Try without company_id to see all roles
+        url = qa_url("/api/taxonomy/roles?page_size=10")
+        print(f"URL: {url}")
+        print("Note: No company_id specified (taxonomy API requires integer, not company name)")
 
     try:
         response = requests.get(url, headers=get_qa_headers(), timeout=30)
         print(f"Status: {response.status_code}")
 
         data = safe_json(response)
+
+        if response.status_code == 422:
+            # Expected if company_id format is wrong
+            print(f"Error: {data}")
+            print("\nNote: Taxonomy API requires integer company_id, not company name")
+            print("      To test this API, set TEST_COMPANY_ID in the script")
+            print_result(False, "Taxonomy API requires integer company_id")
+            return False, data
 
         if response.status_code != 200:
             print(f"Error: {data}")
@@ -449,7 +491,10 @@ def test_qa_role_taxonomy() -> Tuple[bool, Dict]:
         if roles:
             print("\nSample roles:")
             for role in roles[:5]:
-                print(f"  - {role.get('job_title', 'N/A')} (draup: {role.get('draup_role', 'N/A')})")
+                job_title = role.get('job_title', 'N/A')
+                draup_role = role.get('draup_role', 'N/A')
+                role_company_id = role.get('company_id', 'N/A')
+                print(f"  - {job_title} (draup: {draup_role}, company_id: {role_company_id})")
 
         print_result(True, f"Fetched {len(roles)} roles from taxonomy API")
         return True, data
@@ -686,13 +731,23 @@ Examples:
 Configuration:
   LOCAL API: http://localhost:8000/api/v1/pipeline
   QA API:    https://qa-etter.draup.technology
+
+Note:
+  The taxonomy API requires integer company_id, not company name.
+  Use --company-id to specify: python test_all_apis.py --data-only --company-id 123
         """
     )
     parser.add_argument("--health-only", action="store_true", help="Only run health checks")
     parser.add_argument("--workflow-only", action="store_true", help="Only run local workflow tests")
     parser.add_argument("--data-only", action="store_true", help="Only run QA data API tests")
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
+    parser.add_argument("--company-id", type=int, help="Integer company_id for taxonomy API")
     args = parser.parse_args()
+
+    # Allow command line override of company_id
+    global TEST_COMPANY_ID
+    if args.company_id:
+        TEST_COMPANY_ID = args.company_id
 
     # Print header
     print("=" * 70)
@@ -700,7 +755,8 @@ Configuration:
     print("=" * 70)
     print(f"LOCAL API:  {LOCAL_API_BASE_URL}{LOCAL_API_PREFIX}")
     print(f"QA API:     {QA_API_BASE_URL}")
-    print(f"Company:    {TEST_COMPANY}")
+    print(f"Company:    {TEST_COMPANY} (for documents API)")
+    print(f"Company ID: {TEST_COMPANY_ID or 'auto-detect'} (for taxonomy API - requires integer)")
     print(f"Role:       {TEST_ROLE}")
     print("=" * 70)
 
