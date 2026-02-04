@@ -427,10 +427,11 @@ def test_qa_role_taxonomy() -> Tuple[bool, Dict]:
     """Test QA GET /api/taxonomy/roles."""
     print_section("QA: Role Taxonomy API")
 
-    # Use company_name parameter (URL encoded)
+    # Use company_name and job_title parameters (URL encoded)
     from urllib.parse import quote
     company_name_encoded = quote(TEST_COMPANY)
-    url = qa_url(f"/api/taxonomy/roles?company_name={company_name_encoded}")
+    job_title_encoded = quote(TEST_ROLE)
+    url = qa_url(f"/api/taxonomy/roles?company_name={company_name_encoded}&job_title={job_title_encoded}")
     print(f"URL: {url}")
 
     try:
