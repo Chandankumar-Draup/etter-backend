@@ -336,6 +336,9 @@ async def get_workflow_status(workflow_id: str) -> StatusResponse:
     """
     Get workflow status.
 
+    Queries Temporal directly for workflow state. Falls back to Redis
+    for detailed progress information if available.
+
     Args:
         workflow_id: Workflow ID to query
 
@@ -345,50 +348,123 @@ async def get_workflow_status(workflow_id: str) -> StatusResponse:
     logger.info(f"Status request for workflow: {workflow_id}")
 
     try:
-        status_client = get_status_client()
-        status = status_client.get_status(workflow_id)
+        # First try to get detailed status from Redis (if available)
+        redis_status = None
+        try:
+            status_client = get_status_client()
+            redis_status = status_client.get_status(workflow_id)
+        except Exception as e:
+            logger.debug(f"Redis status not available: {e}")
 
-        if not status:
-            raise HTTPException(
-                status_code=404,
-                detail={
-                    "error": "NOT_FOUND",
-                    "message": f"Workflow {workflow_id} not found",
-                },
+        # Query Temporal directly for authoritative workflow state
+        temporal_client = await get_temporal_client()
+        if temporal_client:
+            try:
+                handle = temporal_client.get_workflow_handle(workflow_id)
+                description = await handle.describe()
+
+                # Map Temporal status to our status
+                temporal_status = description.status.name  # RUNNING, COMPLETED, FAILED, etc.
+                status_map = {
+                    "RUNNING": "processing",
+                    "COMPLETED": "ready",
+                    "FAILED": "failed",
+                    "CANCELED": "failed",
+                    "TERMINATED": "failed",
+                    "CONTINUED_AS_NEW": "processing",
+                    "TIMED_OUT": "failed",
+                }
+                workflow_status = status_map.get(temporal_status, "queued")
+
+                # Use Redis data if available for detailed progress
+                if redis_status:
+                    steps = [
+                        StepProgress(
+                            name=s.name,
+                            status=s.status.value,
+                            duration_ms=s.duration_ms,
+                            started_at=s.started_at,
+                            completed_at=s.completed_at,
+                            error_message=s.error_message,
+                        )
+                        for s in redis_status.progress.steps
+                    ]
+                    progress = ProgressInfo(
+                        current=redis_status.progress.current,
+                        total=redis_status.progress.total,
+                        steps=steps,
+                    )
+                    error = redis_status.error
+                else:
+                    # Minimal progress info from Temporal only
+                    progress = ProgressInfo(current=0, total=0, steps=[])
+                    error = None
+                    if temporal_status == "FAILED":
+                        error = {"error": "WORKFLOW_FAILED", "message": "Workflow failed in Temporal"}
+
+                return StatusResponse(
+                    workflow_id=workflow_id,
+                    role_id=redis_status.role_id if redis_status else None,
+                    company_id=redis_status.company_id if redis_status else "unknown",
+                    role_name=redis_status.role_name if redis_status else "unknown",
+                    status=workflow_status,
+                    current_step=redis_status.sub_state.value if redis_status and redis_status.sub_state else None,
+                    progress=progress,
+                    queued_at=redis_status.queued_at if redis_status else None,
+                    started_at=description.start_time,
+                    completed_at=description.close_time,
+                    position_in_queue=None,
+                    estimated_duration_seconds=redis_status.estimated_duration_seconds if redis_status else None,
+                    dashboard_url=redis_status.dashboard_url if redis_status else None,
+                    error=error,
+                )
+
+            except Exception as e:
+                # Workflow not found in Temporal
+                logger.debug(f"Workflow not found in Temporal: {e}")
+
+        # If we have Redis status but no Temporal, return Redis status
+        if redis_status:
+            steps = [
+                StepProgress(
+                    name=s.name,
+                    status=s.status.value,
+                    duration_ms=s.duration_ms,
+                    started_at=s.started_at,
+                    completed_at=s.completed_at,
+                    error_message=s.error_message,
+                )
+                for s in redis_status.progress.steps
+            ]
+
+            return StatusResponse(
+                workflow_id=redis_status.workflow_id,
+                role_id=redis_status.role_id,
+                company_id=redis_status.company_id,
+                role_name=redis_status.role_name,
+                status=redis_status.state.value,
+                current_step=redis_status.sub_state.value if redis_status.sub_state else None,
+                progress=ProgressInfo(
+                    current=redis_status.progress.current,
+                    total=redis_status.progress.total,
+                    steps=steps,
+                ),
+                queued_at=redis_status.queued_at,
+                started_at=redis_status.started_at,
+                completed_at=redis_status.completed_at,
+                position_in_queue=redis_status.position_in_queue,
+                estimated_duration_seconds=redis_status.estimated_duration_seconds,
+                dashboard_url=redis_status.dashboard_url,
+                error=redis_status.error,
             )
 
-        # Convert to response model
-        steps = [
-            StepProgress(
-                name=s.name,
-                status=s.status.value,
-                duration_ms=s.duration_ms,
-                started_at=s.started_at,
-                completed_at=s.completed_at,
-                error_message=s.error_message,
-            )
-            for s in status.progress.steps
-        ]
-
-        return StatusResponse(
-            workflow_id=status.workflow_id,
-            role_id=status.role_id,
-            company_id=status.company_id,
-            role_name=status.role_name,
-            status=status.state.value,
-            current_step=status.sub_state.value if status.sub_state else None,
-            progress=ProgressInfo(
-                current=status.progress.current,
-                total=status.progress.total,
-                steps=steps,
-            ),
-            queued_at=status.queued_at,
-            started_at=status.started_at,
-            completed_at=status.completed_at,
-            position_in_queue=status.position_in_queue,
-            estimated_duration_seconds=status.estimated_duration_seconds,
-            dashboard_url=status.dashboard_url,
-            error=status.error,
+        # Neither Temporal nor Redis has the workflow
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "NOT_FOUND",
+                "message": f"Workflow {workflow_id} not found",
+            },
         )
 
     except HTTPException:
