@@ -67,7 +67,7 @@ from etter_workflows.workflows.role_onboarding import (
 )
 from etter_workflows.clients.status_client import get_status_client
 from etter_workflows.mock_data.role_taxonomy import get_role_taxonomy_provider
-# Note: get_document_provider removed - documents must be provided in request
+from etter_workflows.mock_data.documents import get_document_provider
 from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
@@ -190,13 +190,30 @@ async def push_role(
             ),
         )
 
-        # Validate that documents are provided in the request
+        # Auto-fetch documents if not provided in request
+        if not input.has_documents():
+            logger.info(f"No documents in request, auto-fetching for role: {request.role_name}")
+            try:
+                doc_provider = get_document_provider()
+                best_doc = doc_provider.get_best_document_for_role(
+                    role_name=request.role_name,
+                    company_name=request.company_id,
+                )
+                if best_doc:
+                    logger.info(f"Auto-fetched document: {best_doc.name} (uri: {best_doc.uri})")
+                    input.documents = [best_doc]
+                else:
+                    logger.warning(f"No documents found for role: {request.role_name}")
+            except Exception as e:
+                logger.warning(f"Failed to auto-fetch documents: {e}")
+
+        # Validate that we have documents (either from request or auto-fetched)
         if not input.has_documents():
             raise HTTPException(
                 status_code=400,
                 detail={
                     "error": "VALIDATION_ERROR",
-                    "message": "At least one document (job_description) is required in the request",
+                    "message": f"No documents found for role '{request.role_name}'. Provide documents in request or ensure documents are uploaded for this role.",
                     "recoverable": False,
                 },
             )
@@ -686,12 +703,27 @@ async def push_batch(
                 ),
             )
 
-            # Validate that documents are provided in the request
+            # Auto-fetch documents if not provided in request
             if not input.has_documents():
-                logger.warning(f"No documents provided for {role_input.role_name}")
+                logger.info(f"No documents in request for {role_input.role_name}, auto-fetching...")
+                try:
+                    doc_provider = get_document_provider()
+                    best_doc = doc_provider.get_best_document_for_role(
+                        role_name=role_input.role_name,
+                        company_name=company_id,
+                    )
+                    if best_doc:
+                        logger.info(f"Auto-fetched document for {role_input.role_name}: {best_doc.name}")
+                        input.documents = [best_doc]
+                except Exception as e:
+                    logger.warning(f"Failed to auto-fetch documents for {role_input.role_name}: {e}")
+
+            # Validate that we have documents (either from request or auto-fetched)
+            if not input.has_documents():
+                logger.warning(f"No documents found for {role_input.role_name}")
                 validation_failures.append({
                     "role_name": role_input.role_name,
-                    "errors": ["At least one document (job_description) is required"],
+                    "errors": [f"No documents found. Provide documents in request or ensure documents are uploaded for this role."],
                 })
                 continue
 

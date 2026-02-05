@@ -9,7 +9,7 @@ The Etter Self-Service Pipeline API provides endpoints for role onboarding and A
 **Integration:** When integrated with the parent etter-backend, endpoints are available at:
 - Development: `http://localhost:7071/api/v1/pipeline/*`
 - QA: `https://qa-etter.draup.technology/api/v1/pipeline/*`
-- Production: `https://etter.draup.technology/api/v1/pipeline/*`
+- Production: `https://etter.draup.com/api/v1/pipeline/*`
 
 ---
 
@@ -79,7 +79,16 @@ Start a role onboarding workflow for a single role. Submits workflow to Temporal
 |-----------|------|---------|-------------|
 | `use_mock` | boolean | `false` | Use mock assessment for testing (standalone mode only) |
 
-**Request Body:**
+**Request Body (Minimal):**
+
+```json
+{
+  "company_id": "liberty-mutual",
+  "role_name": "Claims Adjuster"
+}
+```
+
+**Request Body (With Documents):**
 
 ```json
 {
@@ -89,13 +98,9 @@ Start a role onboarding workflow for a single role. Submits workflow to Temporal
     {
       "type": "job_description",
       "uri": "https://s3.amazonaws.com/bucket/jd.pdf?presigned...",
-      "content": null,
       "name": "Claims_Adjuster_JD.pdf",
       "metadata": {
         "document_id": "dec3ac7e-a0b7-4721-b30d-7827684154b1",
-        "download_url": "https://s3.amazonaws.com/bucket/jd.pdf?presigned...",
-        "status": "ready",
-        "roles": ["Claims Adjuster"],
         "content_type": "application/pdf"
       }
     }
@@ -115,7 +120,7 @@ Start a role onboarding workflow for a single role. Submits workflow to Temporal
 |-------|------|----------|-------------|
 | `company_id` | string | Yes | Company identifier (instance name) |
 | `role_name` | string | Yes | Role name to onboard |
-| `documents` | array | **Yes** | At least one job_description document required |
+| `documents` | array | No | Documents to use (auto-fetched if not provided) |
 | `documents[].type` | string | Yes | `job_description`, `process_map`, `sop`, `other` |
 | `documents[].uri` | string | No* | S3 presigned URL or content URI |
 | `documents[].content` | string | No* | Inline document content |
@@ -125,12 +130,23 @@ Start a role onboarding workflow for a single role. Submits workflow to Temporal
 | `draup_role_name` | string | No | Draup role name for mapping |
 | `options` | object | No | Workflow options |
 
-*Either `uri` or `content` must be provided for job_description documents.
+*Either `uri` or `content` must be provided when documents are specified.
 
 **Document Handling:**
-- If `uri` is provided (S3 presigned URL), the downstream API downloads and extracts content
-- If `content` is provided, it's used directly as the job description text
-- `metadata` is passed through to the link-job-description API for tracking
+
+1. **Auto-fetch (documents not provided):**
+   - System calls `/api/documents/?roles={role_name}` to find documents
+   - Selects best document using priority: **PDF > DOCX > Images > Other**
+   - Within same type, picks the latest by updated_at date
+   - Prefers exact role match (document tagged only with this role)
+
+2. **Explicit documents (documents provided):**
+   - If `uri` is provided (S3 presigned URL), downstream API downloads and extracts content
+   - If `content` is provided, it's used directly as the job description text
+   - `metadata` is passed through to the link-job-description API for tracking
+
+3. **Validation:**
+   - If no documents provided AND no documents found for the role, returns 400 error
 
 **Response (200 OK):**
 
@@ -322,14 +338,26 @@ Get available roles for a company.
 
 Submit multiple roles for batch processing. Each role spawns an independent Temporal workflow.
 
-**Request Body:**
+**Request Body (Minimal - documents auto-fetched):**
+
+```json
+{
+  "company_id": "liberty-mutual",
+  "roles": [
+    {"role_name": "Claims Adjuster"},
+    {"role_name": "Underwriter"},
+    {"role_name": "Risk Analyst"}
+  ]
+}
+```
+
+**Request Body (With explicit documents):**
 
 ```json
 {
   "company_id": "liberty-mutual",
   "roles": [
     {
-      "company_id": "liberty-mutual",
       "role_name": "Claims Adjuster",
       "documents": [
         {"type": "job_description", "content": "...JD content..."}
@@ -337,7 +365,6 @@ Submit multiple roles for batch processing. Each role spawns an independent Temp
       "draup_role_name": "Claims Handler"
     },
     {
-      "company_id": "liberty-mutual",
       "role_name": "Underwriter",
       "documents": [
         {"type": "job_description", "uri": "https://s3..."}
@@ -356,17 +383,23 @@ Submit multiple roles for batch processing. Each role spawns an independent Temp
 ```json
 {
   "batch_id": "batch-abc123def456",
-  "total_roles": 2,
-  "workflow_ids": ["wf-1", "wf-2"],
+  "total_roles": 3,
+  "workflow_ids": ["wf-1", "wf-2", "wf-3"],
   "status": "queued",
   "estimated_duration_seconds": 1200,
-  "message": "Batch submitted: 2 roles queued for processing (via Temporal)"
+  "message": "Batch submitted: 3 roles queued for processing (via Temporal)"
 }
 ```
 
+**Document Handling:**
+- Documents are optional for each role
+- If not provided, system auto-fetches from `/api/documents/` using role name
+- Selects best document: PDF > DOCX > Images > Other (latest first)
+- Roles with no documents found are added to validation failures
+
 **Validation:**
-- Roles without documents are rejected with validation failures
-- Partial success is possible (some roles succeed, others fail validation)
+- Partial success is possible (some roles succeed, others fail)
+- Validation failures are reported in the response message
 
 ---
 
