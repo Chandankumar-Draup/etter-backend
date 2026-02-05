@@ -327,19 +327,22 @@ class APIDocumentProvider(DocumentProvider):
         if download_info and download_info.get("url"):
             download_url = download_info["url"]
 
+        doc_id = doc_data.get("id")
+        uri = download_url or f"api://documents/{doc_id}"
+
         logger.info(f"[DOC_CONVERT] Converting document to ref:")
         logger.info(f"[DOC_CONVERT]   - filename: {doc_data.get('original_filename')}")
         logger.info(f"[DOC_CONVERT]   - detected_type: {doc_type} (from filename pattern)")
         logger.info(f"[DOC_CONVERT]   - has_download_url: {bool(download_url)}")
-        logger.info(f"[DOC_CONVERT]   - uri: {download_url or f'api://documents/{doc_data.get(\"id\")}'}")
+        logger.info(f"[DOC_CONVERT]   - uri: {uri}")
 
         return DocumentRef(
             type=doc_type,
-            uri=download_url or f"api://documents/{doc_data.get('id')}",
+            uri=uri,
             name=doc_data.get("original_filename"),
             content=None,
             metadata={
-                "id": doc_data.get("id"),
+                "id": doc_id,
                 "status": doc_data.get("status"),
                 "roles": doc_data.get("roles", []),
                 "content_type": content_type,
