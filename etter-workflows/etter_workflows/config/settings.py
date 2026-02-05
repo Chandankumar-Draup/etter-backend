@@ -171,14 +171,11 @@ class Settings(BaseSettings):
         description="Draup World API URL for QA"
     )
 
-    # Etter Backend API URLs (for documents, taxonomy endpoints)
-    etter_api_prod: str = Field(
-        default="https://etter.draup.technology",
-        description="Etter Backend API URL for production"
-    )
-    etter_api_qa: str = Field(
-        default="https://qa-etter.draup.technology",
-        description="Etter Backend API URL for QA"
+    # Etter Backend API URL (for documents, taxonomy endpoints - same server)
+    # Since api_providers.py runs inside etter-backend, it calls localhost
+    etter_backend_api_url: str = Field(
+        default="http://localhost:7071",
+        description="Etter Backend API URL for documents/taxonomy (localhost since same server)"
     )
 
     # Authentication for API calls
@@ -376,19 +373,6 @@ class Settings(BaseSettings):
             return self.draup_world_api_url
         return self.automated_workflows_api_base_url
 
-    def get_etter_api_url(self) -> str:
-        """
-        Get the Etter Backend API URL (for documents, taxonomy endpoints).
-
-        Returns:
-            - Production: https://etter.draup.technology
-            - QA: https://qa-etter.draup.technology
-            - Local: https://qa-etter.draup.technology (use QA for local dev)
-        """
-        if self._is_prod_db():
-            return self.etter_api_prod
-        # Use QA for both QA environment and local development
-        return self.etter_api_qa
 
 
 @lru_cache()
