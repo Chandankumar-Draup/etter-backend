@@ -292,7 +292,17 @@ async def push_role(
 
         if temporal_client:
             # Submit workflow to Temporal
-            logger.info(f"Submitting workflow {workflow_id} to Temporal")
+            # CRITICAL: Log document details before submission for debugging
+            logger.info(f"[TEMPORAL_SUBMIT] Submitting workflow {workflow_id} to Temporal")
+            logger.info(f"[TEMPORAL_SUBMIT] Input summary:")
+            logger.info(f"[TEMPORAL_SUBMIT]   - company_id: {input.company_id}")
+            logger.info(f"[TEMPORAL_SUBMIT]   - role_name: {input.role_name}")
+            logger.info(f"[TEMPORAL_SUBMIT]   - documents count: {len(input.documents)}")
+            for idx, doc in enumerate(input.documents):
+                logger.info(f"[TEMPORAL_SUBMIT]   - doc[{idx}].type: {doc.type}")
+                logger.info(f"[TEMPORAL_SUBMIT]   - doc[{idx}].name: {doc.name}")
+                logger.info(f"[TEMPORAL_SUBMIT]   - doc[{idx}].uri: {doc.uri[:100] if doc.uri and len(doc.uri) > 100 else doc.uri}")
+                logger.info(f"[TEMPORAL_SUBMIT]   - doc[{idx}].has_content: {bool(doc.content)}")
 
             try:
                 await temporal_client.start_workflow(

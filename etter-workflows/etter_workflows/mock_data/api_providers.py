@@ -307,7 +307,7 @@ class APIDocumentProvider(DocumentProvider):
             return detail
 
         except Exception as e:
-            logger.error(f"[DOC_DETAIL] Failed to fetch document detail: {e}")
+            logger.error(f"[DOC_DETAIL] Failed to fetch document detail: {e}", exc_info=True)
             return None
 
     def _convert_to_ref(self, doc_data: Dict) -> DocumentRef:
@@ -463,7 +463,12 @@ class APIDocumentProvider(DocumentProvider):
         logger.info(f"[BEST_DOC] Selected best document: {best_doc.get('original_filename')} (id={best_doc.get('id')})")
 
         detail = self._fetch_document_detail(best_doc.get("id"))
-        doc_ref = self._convert_to_ref(detail) if detail else self._convert_to_ref(best_doc)
+        if detail:
+            logger.info(f"[BEST_DOC] Successfully fetched document detail with download URL")
+            doc_ref = self._convert_to_ref(detail)
+        else:
+            logger.warning(f"[BEST_DOC] Failed to fetch document detail - using basic doc info without download URL")
+            doc_ref = self._convert_to_ref(best_doc)
 
         # Force type to JOB_DESCRIPTION when auto-fetching for role processing
         # This is the primary use case - the best document for a role IS the job description
