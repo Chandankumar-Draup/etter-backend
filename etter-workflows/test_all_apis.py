@@ -1052,6 +1052,266 @@ def test_qa_workflow_status(workflow_id: str) -> Tuple[bool, Dict]:
 
 
 # =============================================================================
+# DATABASE FALLBACK TESTS (Direct DB access without HTTP APIs)
+# =============================================================================
+
+def test_db_fallback_documents(company_name: str = None, role_name: str = None) -> Tuple[bool, Dict]:
+    """
+    Test direct database fetch for documents (bypassing HTTP APIs).
+
+    This tests the _fetch_documents_via_db fallback in APIDocumentProvider.
+    """
+    print_section("DB FALLBACK: Documents Fetch")
+
+    company = company_name or TEST_COMPANY
+    role = role_name or TEST_ROLE
+
+    print(f"Company: {company}")
+    print(f"Role: {role}")
+    print("\nTesting direct database access (no HTTP API calls)...")
+
+    try:
+        # Import the provider and helper functions
+        import sys
+        sys.path.insert(0, '/home/user/etter-backend')
+
+        from etter_workflows.mock_data.api_providers import (
+            _get_db_session,
+            _get_company_id_from_name,
+            APIDocumentProvider,
+        )
+
+        # Step 1: Test database session
+        print("\n1. Testing database session...")
+        db = _get_db_session()
+        if not db:
+            print_result(False, "Database session not available")
+            print("[HINT] Make sure you're running from etter-backend directory")
+            print("[HINT] The parent package models must be importable")
+            return False, {}
+
+        print_result(True, "Database session obtained")
+
+        # Step 2: Test company ID lookup
+        print(f"\n2. Looking up company ID for '{company}'...")
+        company_id = _get_company_id_from_name(db, company)
+        db.close()
+
+        if not company_id:
+            print_result(False, f"Company not found: {company}")
+            print("[HINT] Make sure the company exists in the database")
+            return False, {}
+
+        print_result(True, f"Company ID: {company_id}")
+
+        # Step 3: Test document fetch via database
+        print(f"\n3. Fetching documents for role '{role}' via database...")
+        provider = APIDocumentProvider()
+        # Call the internal method directly
+        docs = provider._fetch_documents_via_db(
+            roles=[role],
+            company_instance_name=company,
+            tenant_id=str(company_id)
+        )
+
+        if not docs:
+            print_result(False, f"No documents found for role '{role}'")
+            print("[HINT] Make sure documents are uploaded and extracted for this role")
+            return False, {"documents": []}
+
+        print_result(True, f"Fetched {len(docs)} documents from database")
+
+        # Print document details
+        print(f"\nDocuments found:")
+        for i, doc in enumerate(docs[:5], 1):  # Show first 5
+            filename = doc.get("original_filename", "Unknown")
+            doc_id = doc.get("id", "N/A")
+            roles = doc.get("roles", [])
+            content_type = doc.get("observed_content_type", "N/A")
+            print(f"  {i}. {filename}")
+            print(f"     ID: {doc_id}")
+            print(f"     Roles: {roles}")
+            print(f"     Type: {content_type}")
+
+        if len(docs) > 5:
+            print(f"  ... and {len(docs) - 5} more")
+
+        return True, {"documents": docs, "count": len(docs)}
+
+    except ImportError as e:
+        print_result(False, f"Import error: {e}")
+        print("[HINT] Make sure you're running from etter-backend directory")
+        return False, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        import traceback
+        traceback.print_exc()
+        return False, {}
+
+
+def test_db_fallback_taxonomy(company_name: str = None, job_title: str = None) -> Tuple[bool, Dict]:
+    """
+    Test direct database fetch for role taxonomy (bypassing HTTP APIs).
+
+    This tests the _fetch_roles_via_db fallback in APIRoleTaxonomyProvider.
+    """
+    print_section("DB FALLBACK: Role Taxonomy Fetch")
+
+    company = company_name or TEST_COMPANY
+    role = job_title or TEST_ROLE
+
+    print(f"Company: {company}")
+    print(f"Job Title (filter): {role}")
+    print("\nTesting direct database access (no HTTP API calls)...")
+
+    try:
+        # Import the provider and helper functions
+        import sys
+        sys.path.insert(0, '/home/user/etter-backend')
+
+        from etter_workflows.mock_data.api_providers import (
+            _get_db_session,
+            _get_company_id_from_name,
+            APIRoleTaxonomyProvider,
+        )
+
+        # Step 1: Test database session
+        print("\n1. Testing database session...")
+        db = _get_db_session()
+        if not db:
+            print_result(False, "Database session not available")
+            print("[HINT] Make sure you're running from etter-backend directory")
+            return False, {}
+
+        print_result(True, "Database session obtained")
+
+        # Step 2: Test company ID lookup
+        print(f"\n2. Looking up company ID for '{company}'...")
+        company_id = _get_company_id_from_name(db, company)
+        db.close()
+
+        if not company_id:
+            print_result(False, f"Company not found: {company}")
+            print("[HINT] Make sure the company exists in the database")
+            return False, {}
+
+        print_result(True, f"Company ID: {company_id}")
+
+        # Step 3: Test taxonomy fetch via database
+        print(f"\n3. Fetching role taxonomy via database...")
+        provider = APIRoleTaxonomyProvider()
+        # Call the internal method directly
+        roles = provider._fetch_roles_via_db(
+            company_name=company,
+            job_title=role,  # Filter by job title
+        )
+
+        if not roles:
+            print(f"\n[INFO] No roles found matching '{role}'")
+            print("[INFO] Trying without job_title filter...")
+
+            # Try without filter
+            roles = provider._fetch_roles_via_db(company_name=company)
+
+            if not roles:
+                print_result(False, f"No roles found for company '{company}'")
+                return False, {"roles": []}
+
+        print_result(True, f"Fetched {len(roles)} roles from database")
+
+        # Print role details
+        print(f"\nRoles found:")
+        for i, r in enumerate(roles[:10], 1):  # Show first 10
+            job_title_val = r.get("job_title", "Unknown")
+            draup_role = r.get("draup_role", "N/A")
+            job_family = r.get("job_family", "N/A")
+            status = r.get("approval_status", "N/A")
+            print(f"  {i}. {job_title_val}")
+            print(f"     Draup Role: {draup_role}")
+            print(f"     Job Family: {job_family}")
+            print(f"     Status: {status}")
+
+        if len(roles) > 10:
+            print(f"  ... and {len(roles) - 10} more")
+
+        return True, {"roles": roles, "count": len(roles)}
+
+    except ImportError as e:
+        print_result(False, f"Import error: {e}")
+        print("[HINT] Make sure you're running from etter-backend directory")
+        return False, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        import traceback
+        traceback.print_exc()
+        return False, {}
+
+
+def test_db_fallback_best_document(company_name: str = None, role_name: str = None) -> Tuple[bool, Dict]:
+    """
+    Test the full get_best_document_for_role flow using database fallback.
+
+    This simulates what happens during /push when documents are auto-fetched.
+    """
+    print_section("DB FALLBACK: Best Document Selection")
+
+    company = company_name or TEST_COMPANY
+    role = role_name or TEST_ROLE
+
+    print(f"Company: {company}")
+    print(f"Role: {role}")
+    print("\nTesting best document selection (PDF > DOCX > Images)...")
+
+    try:
+        import sys
+        sys.path.insert(0, '/home/user/etter-backend')
+
+        from etter_workflows.mock_data.api_providers import APIDocumentProvider
+
+        # Get the provider
+        provider = APIDocumentProvider()
+
+        # Test get_best_document_for_role which internally uses the fallback
+        print("\n1. Calling get_best_document_for_role()...")
+        best_doc = provider.get_best_document_for_role(
+            role_name=role,
+            company_name=company
+        )
+
+        if not best_doc:
+            print_result(False, f"No document found for role '{role}'")
+            print("[HINT] Make sure documents exist for this role")
+            return False, {}
+
+        print_result(True, "Best document found!")
+
+        print(f"\nBest Document:")
+        print(f"  Name: {best_doc.name}")
+        print(f"  Type: {best_doc.type.value}")
+        print(f"  URI: {best_doc.uri[:80]}..." if best_doc.uri and len(best_doc.uri) > 80 else f"  URI: {best_doc.uri}")
+
+        if best_doc.metadata:
+            print(f"  Metadata keys: {list(best_doc.metadata.keys())}")
+
+        return True, {
+            "document": {
+                "name": best_doc.name,
+                "type": best_doc.type.value,
+                "uri": best_doc.uri,
+            }
+        }
+
+    except ImportError as e:
+        print_result(False, f"Import error: {e}")
+        return False, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        import traceback
+        traceback.print_exc()
+        return False, {}
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -1155,6 +1415,8 @@ Examples:
   python test_all_apis.py --qa-doc-test       # Test LOCAL push with real QA document
   python test_all_apis.py --qa-push-test      # Test QA /push and /push-batch (auto-fetch)
   python test_all_apis.py --qa-push-test --company "Acme Corp" --role "Pharmacist"
+  python test_all_apis.py --db-fallback-test  # Test direct DB fetch (no HTTP APIs)
+  python test_all_apis.py --db-fallback-test --company "Acme Corp" --role "Pharmacist"
 
 Configuration:
   LOCAL API: http://localhost:7071/api/v1/pipeline
@@ -1167,8 +1429,9 @@ Configuration:
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
     parser.add_argument("--qa-doc-test", action="store_true", help="Test push with real document from QA (with download URL)")
     parser.add_argument("--qa-push-test", action="store_true", help="Test /push and /push-batch on QA (documents auto-fetched)")
-    parser.add_argument("--company", type=str, help="Company ID for QA push test")
-    parser.add_argument("--role", type=str, help="Role name for QA push test")
+    parser.add_argument("--db-fallback-test", action="store_true", help="Test direct database fetch (no HTTP APIs)")
+    parser.add_argument("--company", type=str, help="Company name for tests")
+    parser.add_argument("--role", type=str, help="Role name for tests")
     args = parser.parse_args()
 
     # Print header
@@ -1266,6 +1529,30 @@ Configuration:
             # Test batch push (documents auto-fetched)
             success, _ = test_qa_push_batch(company_id=company, roles=[role])
             results["qa"]["push_batch"] = success
+
+    elif args.db_fallback_test:
+        # Test direct database fetch (no HTTP APIs)
+        company = args.company or TEST_COMPANY
+        role = args.role or TEST_ROLE
+
+        print(f"\nTesting Database Fallback with:")
+        print(f"  Company: {company}")
+        print(f"  Role: {role}")
+        print("\n[INFO] These tests bypass HTTP APIs and query the database directly.")
+        print("[INFO] Run from etter-backend directory for parent models to be available.")
+        print("")
+
+        # Test database fallback for documents
+        success, _ = test_db_fallback_documents(company_name=company, role_name=role)
+        results["local"]["db_documents"] = success
+
+        # Test database fallback for taxonomy
+        success, _ = test_db_fallback_taxonomy(company_name=company, job_title=role)
+        results["local"]["db_taxonomy"] = success
+
+        # Test best document selection (uses fallback internally)
+        success, _ = test_db_fallback_best_document(company_name=company, role_name=role)
+        results["local"]["db_best_document"] = success
 
     else:
         results = run_all_tests()
