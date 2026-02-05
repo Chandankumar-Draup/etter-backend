@@ -280,103 +280,7 @@ class APIDocumentProvider(DocumentProvider):
 
         except Exception as e:
             logger.error(f"[DOC_FETCH] Failed to fetch documents from API: {e}")
-
-        # Local-only fallback: query DB directly (same process, no auth needed)
-        settings = get_settings()
-        if not settings._is_qa_or_prod_environment():
-            logger.info("[DOC_FETCH] Local mode: trying direct DB query (bypasses HTTP auth)...")
-            return self._fetch_documents_from_db(roles, company_instance_name)
-
-        return []
-
-    def _fetch_documents_from_db(
-        self,
-        roles: List[str] = None,
-        company_instance_name: str = None,
-    ) -> List[Dict]:
-        """
-        Local-only fallback: query documents directly from database.
-
-        This bypasses the HTTP auth layer that doesn't work in local dev.
-        Only called when HTTP-based fetch fails in local environment.
-        """
-        try:
-            from settings.database import SessionLocal
-            from models.s3 import Document, DocumentStatus
-
-            db = SessionLocal()
-            try:
-                query = db.query(Document).filter(
-                    Document.status == DocumentStatus.READY
-                )
-                if roles:
-                    query = query.filter(Document.role.in_(roles))
-                if company_instance_name:
-                    query = query.filter(Document.company_instance_name == company_instance_name)
-
-                documents = query.order_by(Document.created_at.desc()).limit(100).all()
-                logger.info(f"[DOC_FETCH] Local DB query returned {len(documents)} documents")
-
-                return [
-                    {
-                        "id": str(doc.id),
-                        "original_filename": doc.original_filename,
-                        "status": doc.status.value if doc.status else None,
-                        "observed_content_type": doc.observed_content_type,
-                        "roles": [doc.role] if doc.role else [],
-                        "created_at": doc.created_at.isoformat() if doc.created_at else None,
-                    }
-                    for doc in documents
-                ]
-            finally:
-                db.close()
-        except Exception as e:
-            logger.warning(f"[DOC_FETCH] Local DB fallback failed: {e}")
             return []
-
-    def _fetch_document_detail_from_db(self, document_id: str) -> Optional[Dict]:
-        """
-        Local-only fallback: get document detail with presigned URL from database.
-
-        Only called when HTTP-based fetch fails in local environment.
-        """
-        try:
-            from uuid import UUID as _UUID
-            from settings.database import SessionLocal
-            from models.s3 import Document
-            from api.s3.infra.s3.s3_management_service import S3ManagementService
-
-            db = SessionLocal()
-            try:
-                doc_uuid = _UUID(document_id) if isinstance(document_id, str) else document_id
-                doc = db.query(Document).filter(Document.id == doc_uuid).first()
-                if not doc:
-                    return None
-
-                # Generate presigned download URL
-                download_url = None
-                try:
-                    s3_service = S3ManagementService()
-                    download_url = s3_service.generate_presigned_get_url(doc.key)
-                except Exception as e:
-                    logger.warning(f"[DOC_DETAIL] Failed to generate presigned URL: {e}")
-
-                logger.info(f"[DOC_DETAIL] Local DB: {doc.original_filename}, has_url={bool(download_url)}")
-
-                return {
-                    "id": str(doc.id),
-                    "original_filename": doc.original_filename,
-                    "status": doc.status.value if doc.status else None,
-                    "observed_content_type": doc.observed_content_type,
-                    "roles": [doc.role] if doc.role else [],
-                    "created_at": doc.created_at.isoformat() if doc.created_at else None,
-                    "download": {"url": download_url} if download_url else None,
-                }
-            finally:
-                db.close()
-        except Exception as e:
-            logger.warning(f"[DOC_DETAIL] Local DB fallback failed: {e}")
-            return None
 
     def _fetch_document_detail(self, document_id: str) -> Optional[Dict]:
         """
@@ -404,14 +308,7 @@ class APIDocumentProvider(DocumentProvider):
 
         except Exception as e:
             logger.error(f"[DOC_DETAIL] Failed to fetch document detail: {e}", exc_info=True)
-
-        # Local-only fallback: query DB directly
-        settings = get_settings()
-        if not settings._is_qa_or_prod_environment():
-            logger.info("[DOC_DETAIL] Local mode: trying direct DB query...")
-            return self._fetch_document_detail_from_db(document_id)
-
-        return None
+            return None
 
     def _convert_to_ref(self, doc_data: Dict) -> DocumentRef:
         """Convert API response to DocumentRef."""
