@@ -339,10 +339,13 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             jd_uri = None
             jd_metadata = None
             for doc in input.documents:
-                if doc.type == DocumentType.JOB_DESCRIPTION:
+                # Handle both enum and string comparison (Temporal serialization may convert enum to string)
+                doc_type = doc.type.value if hasattr(doc.type, 'value') else str(doc.type)
+                if doc_type == DocumentType.JOB_DESCRIPTION.value or doc_type == "job_description":
                     jd_content = doc.content
                     jd_uri = doc.uri
                     jd_metadata = doc.metadata if hasattr(doc, 'metadata') else None
+                    workflow.logger.info(f"Found JD document: content={bool(jd_content)}, uri={bool(jd_uri)}")
                     break
 
             # Try taxonomy entry if no JD in documents (no content and no uri)
@@ -355,7 +358,9 @@ class RoleOnboardingWorkflow(BaseWorkflow):
 
             # Call link_job_description if we have content OR uri
             # The API endpoint handles downloading and PDF extraction
+            workflow.logger.info(f"link_job_description check: company_role_id={company_role_id}, jd_content={bool(jd_content)}, jd_uri={bool(jd_uri)}")
             if company_role_id and (jd_content or jd_uri):
+                workflow.logger.info(f"Calling link_job_description with uri: {jd_uri[:100] if jd_uri else None}...")
                 jd_result = await workflow.execute_activity(
                     link_job_description,
                     args=[
