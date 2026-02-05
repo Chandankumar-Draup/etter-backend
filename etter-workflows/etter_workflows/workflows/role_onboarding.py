@@ -339,29 +339,84 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             jd_uri = None
             jd_metadata = None
 
-            workflow.logger.info(f"Processing {len(input.documents)} documents")
-            for i, doc in enumerate(input.documents):
-                # Handle both dict and object (Temporal serialization may convert to dict)
+            # Get documents - handle both list and other iterables
+            docs_list = list(input.documents) if input.documents else []
+            workflow.logger.info(f"Processing {len(docs_list)} documents")
+
+            # Log document details for debugging
+            for idx, doc in enumerate(docs_list):
                 if isinstance(doc, dict):
-                    doc_type = doc.get("type", "")
-                    doc_content = doc.get("content")
-                    doc_uri = doc.get("uri")
-                    doc_metadata = doc.get("metadata")
+                    doc_type = doc.get("type", "unknown")
+                    doc_uri = doc.get("uri", "")
+                    workflow.logger.info(f"[DOC_LIST] doc[{idx}] (dict): type={doc_type}, has_uri={bool(doc_uri)}")
                 else:
-                    doc_type = doc.type.value if hasattr(doc.type, 'value') else str(doc.type)
-                    doc_content = doc.content
-                    doc_uri = doc.uri
-                    doc_metadata = doc.metadata if hasattr(doc, 'metadata') else None
+                    doc_type = getattr(doc, 'type', 'unknown')
+                    doc_uri = getattr(doc, 'uri', '')
+                    workflow.logger.info(f"[DOC_LIST] doc[{idx}] (object): type={doc_type}, has_uri={bool(doc_uri)}")
 
-                workflow.logger.info(f"Doc {i}: type={doc_type}, has_content={bool(doc_content)}, has_uri={bool(doc_uri)}")
+            # First, try to get JD from the input model's method (handles Pydantic correctly)
+            try:
+                jd_doc = input.get_job_description()
+                if jd_doc:
+                    workflow.logger.info(f"Found JD via get_job_description(): type={jd_doc.type}, uri={bool(jd_doc.uri)}")
+                    jd_content = jd_doc.content
+                    jd_uri = jd_doc.uri
+                    jd_metadata = jd_doc.metadata if hasattr(jd_doc, 'metadata') else None
+                else:
+                    workflow.logger.info("get_job_description() returned None")
+            except Exception as e:
+                workflow.logger.warning(f"get_job_description() raised exception: {e}")
 
-                # Compare as string (handle both enum value and string)
-                if str(doc_type) == "job_description" or doc_type == DocumentType.JOB_DESCRIPTION.value:
-                    jd_content = doc_content
-                    jd_uri = doc_uri
-                    jd_metadata = doc_metadata
-                    workflow.logger.info(f"Found JD document: content={bool(jd_content)}, uri={bool(jd_uri)}")
-                    break
+            # If no JD found via model method, iterate manually
+            if not jd_content and not jd_uri and docs_list:
+                workflow.logger.info("No JD from model method, iterating documents manually")
+                for i, doc in enumerate(docs_list):
+                    # Handle both dict and object (Temporal serialization may convert to dict)
+                    if isinstance(doc, dict):
+                        doc_type = doc.get("type", "")
+                        doc_content = doc.get("content")
+                        doc_uri = doc.get("uri")
+                        doc_metadata = doc.get("metadata")
+                        workflow.logger.info(f"Doc {i} (dict): type={doc_type}, uri={bool(doc_uri)}, keys={list(doc.keys())}")
+                    else:
+                        doc_type = getattr(doc, 'type', None)
+                        doc_type_str = doc_type.value if hasattr(doc_type, 'value') else str(doc_type) if doc_type else ""
+                        doc_content = getattr(doc, 'content', None)
+                        doc_uri = getattr(doc, 'uri', None)
+                        doc_metadata = getattr(doc, 'metadata', None)
+                        workflow.logger.info(f"Doc {i} (object): type={doc_type_str}, uri={bool(doc_uri)}")
+                        doc_type = doc_type_str
+
+                    # Check for job_description type
+                    type_lower = str(doc_type).lower() if doc_type else ""
+                    is_jd = "job_description" in type_lower
+
+                    if is_jd and (doc_content or doc_uri):
+                        jd_content = doc_content
+                        jd_uri = doc_uri
+                        jd_metadata = doc_metadata
+                        workflow.logger.info(f"Found JD in loop: uri={bool(jd_uri)}")
+                        break
+
+                # If still no JD, use the first document with a URI (fallback)
+                if not jd_content and not jd_uri:
+                    workflow.logger.info("No JD type found, using first document with URI as fallback")
+                    for doc in docs_list:
+                        if isinstance(doc, dict):
+                            doc_uri = doc.get("uri")
+                            doc_content = doc.get("content")
+                            doc_metadata = doc.get("metadata")
+                        else:
+                            doc_uri = getattr(doc, 'uri', None)
+                            doc_content = getattr(doc, 'content', None)
+                            doc_metadata = getattr(doc, 'metadata', None)
+
+                        if doc_uri or doc_content:
+                            jd_uri = doc_uri
+                            jd_content = doc_content
+                            jd_metadata = doc_metadata
+                            workflow.logger.info(f"Using fallback document: uri={bool(jd_uri)}")
+                            break
 
             # Try taxonomy entry if no JD in documents (no content and no uri)
             if not jd_content and not jd_uri and input.taxonomy_entry:

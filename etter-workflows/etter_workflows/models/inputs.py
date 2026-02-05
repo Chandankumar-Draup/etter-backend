@@ -191,10 +191,31 @@ class RoleOnboardingInput(BaseModel):
         return len(self.documents) > 0 and any(d.has_content() for d in self.documents)
 
     def get_job_description(self) -> Optional[DocumentRef]:
-        """Get the job description document if available."""
+        """Get the job description document if available.
+
+        Handles both DocumentRef objects and dicts (after Temporal serialization).
+        """
         for doc in self.documents:
-            if doc.type == DocumentType.JOB_DESCRIPTION:
-                return doc
+            try:
+                # Handle dict case (after Temporal deserialization)
+                if isinstance(doc, dict):
+                    doc_type = doc.get("type", "")
+                    type_lower = str(doc_type).lower() if doc_type else ""
+                    if "job_description" in type_lower:
+                        # Convert dict back to DocumentRef
+                        return DocumentRef(**doc)
+                else:
+                    # Handle DocumentRef object case
+                    doc_type = getattr(doc, 'type', None)
+                    if doc_type is None:
+                        continue
+                    # Compare as strings to handle both enum and string cases
+                    type_str = doc_type.value if hasattr(doc_type, 'value') else str(doc_type)
+                    if "job_description" in type_str.lower():
+                        return doc
+            except Exception:
+                # Skip any malformed document entries
+                continue
         return None
 
     def get_process_maps(self) -> List[DocumentRef]:
