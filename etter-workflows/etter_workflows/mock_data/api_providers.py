@@ -35,11 +35,12 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to settings)
+            base_url: API base URL (defaults to localhost:7071 - same server as etter-backend)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_automated_workflows_api_url()
+        # Use localhost since this code runs inside etter-backend (same server)
+        self.base_url = base_url or settings.etter_backend_api_url
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
@@ -165,11 +166,12 @@ class APIDocumentProvider(DocumentProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to settings)
+            base_url: API base URL (defaults to localhost:7071 - same server as etter-backend)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_automated_workflows_api_url()
+        # Use localhost since this code runs inside etter-backend (same server)
+        self.base_url = base_url or settings.etter_backend_api_url
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, DocumentRef] = {}
 
@@ -309,6 +311,41 @@ class APIDocumentProvider(DocumentProvider):
         docs = self._fetch_documents(roles=[role_name], company_instance_name=company_name)
         return [self._convert_to_ref(doc) for doc in docs]
 
+    def _get_file_type_priority(self, doc: Dict) -> int:
+        """
+        Get file type priority for sorting.
+
+        Priority order (lower number = higher priority):
+        1. PDF (priority 1)
+        2. DOCX/DOC (priority 2)
+        3. Images - PNG, JPG, JPEG (priority 3)
+        4. Other (priority 99)
+
+        Args:
+            doc: Document dict with original_filename and/or observed_content_type
+
+        Returns:
+            Priority number (lower = better)
+        """
+        filename = doc.get("original_filename", "").lower()
+        content_type = doc.get("observed_content_type", "").lower()
+
+        # PDF - highest priority
+        if filename.endswith(".pdf") or "pdf" in content_type:
+            return 1
+
+        # DOCX/DOC - second priority
+        if filename.endswith((".docx", ".doc")) or "word" in content_type or "document" in content_type:
+            return 2
+
+        # Images - third priority
+        image_extensions = (".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp")
+        if filename.endswith(image_extensions) or content_type.startswith("image/"):
+            return 3
+
+        # Other - lowest priority
+        return 99
+
     def get_best_document_for_role(
         self,
         role_name: str,
@@ -319,9 +356,10 @@ class APIDocumentProvider(DocumentProvider):
 
         Logic:
         1. Filter to documents where roles == [role_name] exactly (not mixed with other roles)
-        2. Sort by date (latest first based on updated_at or created_at)
-        3. Deduplicate by filename (take the latest if duplicates exist)
-        4. Return the best document with download URL
+        2. Sort by file type priority (PDF > DOCX > images > other)
+        3. Within same file type, sort by date (latest first)
+        4. Deduplicate by filename (take the latest if duplicates exist)
+        5. Return the best document with download URL
 
         Args:
             role_name: Role name to filter by
@@ -355,7 +393,7 @@ class APIDocumentProvider(DocumentProvider):
 
         logger.info(f"Exact match documents: {len(exact_match_docs)}")
 
-        # Sort by date (latest first)
+        # Helper to get date for sorting
         def get_date_key(doc):
             for field in ["updated_at", "created_at", "uploaded_at"]:
                 if doc.get(field):
@@ -365,9 +403,15 @@ class APIDocumentProvider(DocumentProvider):
                         pass
             return datetime.min
 
-        exact_match_docs.sort(key=get_date_key, reverse=True)
+        # Sort by: 1) file type priority (lower = better), 2) date (latest first)
+        exact_match_docs.sort(key=lambda doc: (self._get_file_type_priority(doc), -get_date_key(doc).timestamp()))
 
-        # Deduplicate by filename (keep the latest)
+        # Log the sorted order with priorities
+        for doc in exact_match_docs[:5]:  # Log top 5
+            priority = self._get_file_type_priority(doc)
+            logger.debug(f"Sorted: {doc.get('original_filename')} - priority: {priority}, date: {get_date_key(doc)}")
+
+        # Deduplicate by filename (keep the first/best)
         seen_filenames = {}
         deduped_docs = []
         for doc in exact_match_docs:
@@ -375,7 +419,7 @@ class APIDocumentProvider(DocumentProvider):
             if filename not in seen_filenames:
                 seen_filenames[filename] = True
                 deduped_docs.append(doc)
-                logger.debug(f"Keeping (latest): {filename}")
+                logger.debug(f"Keeping: {filename} (priority: {self._get_file_type_priority(doc)})")
             else:
                 logger.debug(f"Skipped (duplicate): {filename}")
 
@@ -384,9 +428,10 @@ class APIDocumentProvider(DocumentProvider):
         if not deduped_docs:
             return None
 
-        # Take the first (latest) document
+        # Take the first (best priority, latest) document
         best_doc = deduped_docs[0]
-        logger.info(f"Selected best document: {best_doc.get('original_filename')} (id: {best_doc.get('id')})")
+        priority = self._get_file_type_priority(best_doc)
+        logger.info(f"Selected best document: {best_doc.get('original_filename')} (id: {best_doc.get('id')}, priority: {priority})")
 
         # Fetch document detail to get download URL
         detail = self._fetch_document_detail(best_doc.get("id"))
