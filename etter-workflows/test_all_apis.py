@@ -639,6 +639,78 @@ def test_retry_failed() -> Tuple[bool, Dict]:
         return False, {}
 
 
+def test_local_push_batch_autofetch(company_id: str = None, roles: list = None) -> Tuple[bool, Dict]:
+    """
+    Test POST /push-batch on LOCAL server with auto-fetch documents.
+
+    Simple test: sends company + roles, server fetches documents automatically.
+
+    Usage:
+        python test_all_apis.py --local-batch-test
+        python test_all_apis.py --local-batch-test --company "Acme Corporation" --role "Pharmacist"
+    """
+    print_section("LOCAL: Push Batch (Auto-fetch Documents)")
+
+    company = company_id or TEST_COMPANY
+    role_list = roles or [TEST_ROLE]
+
+    url = local_url("/push-batch")
+    print(f"URL: {url}")
+    print(f"Company: {company}")
+    print(f"Roles: {role_list}")
+    print("Documents: Auto-fetch for each role")
+
+    payload = {
+        "company_id": company,
+        "roles": [{"role_name": r, "company_id": company} for r in role_list],
+        # No documents - server will auto-fetch
+    }
+
+    print(f"\nPayload:")
+    print(json.dumps(payload, indent=2))
+
+    try:
+        print(f"\nSending request...")
+        response = requests.post(
+            url,
+            headers=get_local_headers(),
+            json=payload,
+            timeout=60
+        )
+
+        print(f"Status: {response.status_code}")
+        data = safe_json(response)
+        print(f"\nResponse:")
+        print(json.dumps(data, indent=2))
+
+        if response.status_code == 200:
+            batch_id = data.get("batch_id")
+            workflow_ids = data.get("workflow_ids", [])
+            message = data.get("message", "")
+            print(f"\n--- Results ---")
+            print(f"Batch ID: {batch_id}")
+            print(f"Workflows Started: {len(workflow_ids)}")
+            if workflow_ids:
+                for wid in workflow_ids:
+                    print(f"  - {wid}")
+            print(f"Message: {message}")
+            print_result(True, f"Local batch push successful: {len(workflow_ids)} workflows")
+            return True, data
+        else:
+            print_result(False, f"Local batch push failed: {response.status_code}")
+            return False, data
+
+    except requests.exceptions.ConnectionError:
+        print_result(False, "Cannot connect to local server. Is it running at localhost:7071?")
+        return False, {}
+    except requests.exceptions.Timeout:
+        print_result(False, "Request timeout (60s)")
+        return False, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        return False, {}
+
+
 # =============================================================================
 # QA API TESTS (Data APIs)
 # =============================================================================
@@ -1160,7 +1232,8 @@ Examples:
   python test_all_apis.py --validation-only   # Document validation tests only
   python test_all_apis.py --qa-doc-test       # Test LOCAL push with real QA document
   python test_all_apis.py --qa-push-test      # Test QA /push and /push-batch (auto-fetch)
-  python test_all_apis.py --qa-push-test --company "Acme Corp" --role "Pharmacist"
+  python test_all_apis.py --local-batch-test  # Test LOCAL /push-batch (auto-fetch)
+  python test_all_apis.py --local-batch-test --company "Acme Corporation" --role "Pharmacist"
 
 Configuration:
   LOCAL API: http://localhost:7071/api/v1/pipeline
@@ -1173,6 +1246,7 @@ Configuration:
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
     parser.add_argument("--qa-doc-test", action="store_true", help="Test push with real document from QA (with download URL)")
     parser.add_argument("--qa-push-test", action="store_true", help="Test /push and /push-batch on QA (documents auto-fetched)")
+    parser.add_argument("--local-batch-test", action="store_true", help="Test /push-batch on LOCAL (documents auto-fetched)")
     parser.add_argument("--company", type=str, help="Company name for tests")
     parser.add_argument("--role", type=str, help="Role name for tests")
     args = parser.parse_args()
@@ -1244,6 +1318,32 @@ Configuration:
                 time.sleep(1)
                 success, _ = test_workflow_status(workflow_id)
                 results["local"]["workflow_status"] = success
+
+    elif args.local_batch_test:
+        # Test LOCAL push-batch with auto-fetch documents
+        company = args.company or TEST_COMPANY
+        role = args.role or TEST_ROLE
+
+        print(f"\nTesting LOCAL Push-Batch with:")
+        print(f"  Company: {company}")
+        print(f"  Role: {role}")
+        print("")
+
+        # Local health check first
+        success, _ = test_local_health()
+        results["local"]["health"] = success
+
+        if success:
+            # Test batch push (documents auto-fetched)
+            success, data = test_local_push_batch_autofetch(company_id=company, roles=[role])
+            results["local"]["push_batch_autofetch"] = success
+
+            # If successful, check workflow status
+            if success and data.get("workflow_ids"):
+                time.sleep(2)
+                for wid in data.get("workflow_ids", []):
+                    success, _ = test_workflow_status(wid)
+                    results["local"][f"workflow_status_{wid[:8]}"] = success
 
     elif args.qa_push_test:
         # Test complete QA pipeline (push and push-batch with auto-fetch)

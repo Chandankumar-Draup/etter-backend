@@ -426,11 +426,19 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                 if general_summary or duties:
                     jd_content = f"{general_summary}\n\n{duties}".strip()
 
-            # Call link_job_description if we have content OR uri
-            # The API endpoint handles downloading and PDF extraction
-            workflow.logger.info(f"link_job_description check: company_role_id={company_role_id}, jd_content={bool(jd_content)}, jd_uri={bool(jd_uri)}")
-            if company_role_id and (jd_content or jd_uri):
-                workflow.logger.info(f"Calling link_job_description with uri: {jd_uri[:100] if jd_uri else None}...")
+            # MANDATORY: Call link_job_description if we have documents
+            # The user explicitly requested this activity to NOT be optional
+            # If documents were passed to the workflow, we MUST call this activity
+            workflow.logger.info(f"link_job_description check: company_role_id={company_role_id}, docs_list={len(docs_list)}, jd_content={bool(jd_content)}, jd_uri={bool(jd_uri)}")
+
+            # FORCE: If documents exist but we couldn't extract content/uri, use placeholder
+            if docs_list and not jd_content and not jd_uri:
+                workflow.logger.warning(f"Documents exist ({len(docs_list)}) but no content/uri extracted - using role name as placeholder")
+                jd_content = f"Job Description for: {input.role_name}"
+
+            # Call link_job_description if we have company_role_id AND (content OR uri OR documents exist)
+            if company_role_id and (jd_content or jd_uri or docs_list):
+                workflow.logger.info(f"Calling link_job_description with uri: {jd_uri[:100] if jd_uri else 'None'}, content_len: {len(jd_content) if jd_content else 0}")
                 jd_result = await workflow.execute_activity(
                     link_job_description,
                     args=[
