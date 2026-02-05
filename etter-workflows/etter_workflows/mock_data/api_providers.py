@@ -219,7 +219,32 @@ class APIDocumentProvider(DocumentProvider):
         Returns:
             List of document dicts from API
         """
-        # Try the extraction/files endpoint first (has roles filter)
+        # Try the S3 documents endpoint first (has proper roles filtering and returns roles field)
+        url = f"{self.base_url}/api/documents/"
+        params = {"limit": 1000}
+        if roles:
+            params["roles"] = ",".join(roles)
+        if status:
+            params["status"] = status
+
+        try:
+            logger.info(f"[DOC_FETCH] Fetching documents from documents API: {url}")
+            logger.info(f"[DOC_FETCH] Request params: {params}")
+            response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
+            response.raise_for_status()
+
+            data = response.json()
+            docs = data.get("data", {}).get("documents", [])
+            logger.info(f"[DOC_FETCH] Documents API response: {len(docs)} documents found")
+            if docs:
+                for doc in docs[:5]:  # Log first 5 docs
+                    logger.info(f"[DOC_FETCH]   - {doc.get('original_filename')} (id={doc.get('id')}, roles={doc.get('roles')}, status={doc.get('status')})")
+                return docs
+
+        except Exception as e:
+            logger.warning(f"[DOC_FETCH] Documents API failed: {e}, trying extraction API...")
+
+        # Fallback to extraction/files endpoint
         url = f"{self.base_url}/api/extraction/files"
         params = {"page_size": 1000}
         if roles:
@@ -247,35 +272,11 @@ class APIDocumentProvider(DocumentProvider):
                         "original_filename": f.get("original_filename"),
                         "status": f.get("document_status"),
                         "observed_content_type": f.get("content_type"),
-                        "roles": [],
+                        "roles": f.get("roles", []),  # Try to get roles from response
                         "created_at": f.get("created_at"),
                     }
                     for f in files
                 ]
-
-        except Exception as e:
-            logger.warning(f"[DOC_FETCH] Extraction API failed: {e}, trying documents API...")
-
-        # Fallback to S3 documents endpoint
-        url = f"{self.base_url}/api/documents/"
-        params = {"limit": 1000}
-        if roles:
-            params["roles"] = ",".join(roles)
-        if status:
-            params["status"] = status
-
-        try:
-            logger.info(f"[DOC_FETCH] Fetching documents from documents API: {url}")
-            logger.info(f"[DOC_FETCH] Request params: {params}")
-            response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
-            response.raise_for_status()
-
-            data = response.json()
-            docs = data.get("data", {}).get("documents", [])
-            logger.info(f"[DOC_FETCH] Documents API response: {len(docs)} documents found")
-            for doc in docs[:5]:  # Log first 5 docs
-                logger.info(f"[DOC_FETCH]   - {doc.get('original_filename')} (id={doc.get('id')}, status={doc.get('status')})")
-            return docs
 
         except Exception as e:
             logger.error(f"[DOC_FETCH] Failed to fetch documents from API: {e}")
