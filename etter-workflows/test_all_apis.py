@@ -272,6 +272,27 @@ def test_push_with_docs() -> Tuple[bool, Optional[str], Dict]:
         return False, None, {}
 
 
+def _get_file_priority(filename: str) -> int:
+    """
+    Get file type priority for document selection.
+
+    Priority (lower = better):
+    1 = PDF
+    2 = DOCX/DOC
+    3 = Images (PNG, JPG, etc.)
+    99 = Other
+    """
+    filename_lower = filename.lower() if filename else ""
+
+    if filename_lower.endswith(".pdf"):
+        return 1
+    if filename_lower.endswith((".docx", ".doc")):
+        return 2
+    if filename_lower.endswith((".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff", ".webp")):
+        return 3
+    return 99
+
+
 def test_push_with_qa_document() -> Tuple[bool, Optional[str], Dict]:
     """Test POST /push with a real document from QA API (includes download URL and metadata)."""
     print_section("LOCAL: Push with QA Document (Real Data)")
@@ -279,10 +300,10 @@ def test_push_with_qa_document() -> Tuple[bool, Optional[str], Dict]:
     print("Expected: 200 with workflow_id, using real document from QA API")
 
     # First, fetch a document from QA API
-    print(f"\n1. Fetching document from QA API for role: {TEST_ROLE}")
+    print(f"\n1. Fetching documents from QA API for role: {TEST_ROLE}")
     from urllib.parse import quote
     role_encoded = quote(TEST_ROLE)
-    doc_list_url = qa_url(f"/api/documents/?roles={role_encoded}&limit=5")
+    doc_list_url = qa_url(f"/api/documents/?roles={role_encoded}&limit=50")
 
     try:
         # Get document list
@@ -298,17 +319,39 @@ def test_push_with_qa_document() -> Tuple[bool, Optional[str], Dict]:
             # Fall back to inline content
             return test_push_with_docs()
 
+        print(f"   Fetched {len(docs)} documents")
+
         # Filter to exact role match (roles == [TEST_ROLE])
         exact_match_docs = [d for d in docs if d.get("roles") == [TEST_ROLE]]
-        if exact_match_docs:
-            selected_doc = exact_match_docs[0]
-            print(f"   Found exact role match: {selected_doc.get('original_filename')}")
-        else:
-            selected_doc = docs[0]
-            print(f"   Using first available: {selected_doc.get('original_filename')}")
+        print(f"   Exact role matches: {len(exact_match_docs)}")
+
+        # Log all documents with their priorities
+        print(f"\n   All documents (with priority):")
+        for doc in docs:
+            filename = doc.get("original_filename", "")
+            roles = doc.get("roles", [])
+            priority = _get_file_priority(filename)
+            is_exact = roles == [TEST_ROLE]
+            print(f"     [{priority}] {filename}")
+            print(f"         roles: {roles} {'(EXACT MATCH)' if is_exact else ''}")
+
+        # Select document with priority: exact match > file type (PDF > DOCX > images)
+        candidates = exact_match_docs if exact_match_docs else docs
+
+        # Sort by file type priority (lower = better)
+        candidates_sorted = sorted(candidates, key=lambda d: _get_file_priority(d.get("original_filename", "")))
+
+        selected_doc = candidates_sorted[0]
+        selected_priority = _get_file_priority(selected_doc.get("original_filename", ""))
+
+        print(f"\n   SELECTED DOCUMENT:")
+        print(f"     Filename: {selected_doc.get('original_filename')}")
+        print(f"     Priority: {selected_priority} (1=PDF, 2=DOCX, 3=Image, 99=Other)")
+        print(f"     Roles: {selected_doc.get('roles')}")
+        print(f"     Is exact match: {selected_doc.get('roles') == [TEST_ROLE]}")
 
         doc_id = selected_doc.get("id")
-        print(f"   Document ID: {doc_id}")
+        print(f"     Document ID: {doc_id}")
 
         # Get document detail with download URL
         print(f"\n2. Fetching document detail with download URL")
