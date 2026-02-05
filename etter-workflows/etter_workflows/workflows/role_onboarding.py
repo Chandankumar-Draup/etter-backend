@@ -338,13 +338,28 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             jd_content = None
             jd_uri = None
             jd_metadata = None
-            for doc in input.documents:
-                # Handle both enum and string comparison (Temporal serialization may convert enum to string)
-                doc_type = doc.type.value if hasattr(doc.type, 'value') else str(doc.type)
-                if doc_type == DocumentType.JOB_DESCRIPTION.value or doc_type == "job_description":
-                    jd_content = doc.content
-                    jd_uri = doc.uri
-                    jd_metadata = doc.metadata if hasattr(doc, 'metadata') else None
+
+            workflow.logger.info(f"Processing {len(input.documents)} documents")
+            for i, doc in enumerate(input.documents):
+                # Handle both dict and object (Temporal serialization may convert to dict)
+                if isinstance(doc, dict):
+                    doc_type = doc.get("type", "")
+                    doc_content = doc.get("content")
+                    doc_uri = doc.get("uri")
+                    doc_metadata = doc.get("metadata")
+                else:
+                    doc_type = doc.type.value if hasattr(doc.type, 'value') else str(doc.type)
+                    doc_content = doc.content
+                    doc_uri = doc.uri
+                    doc_metadata = doc.metadata if hasattr(doc, 'metadata') else None
+
+                workflow.logger.info(f"Doc {i}: type={doc_type}, has_content={bool(doc_content)}, has_uri={bool(doc_uri)}")
+
+                # Compare as string (handle both enum value and string)
+                if str(doc_type) == "job_description" or doc_type == DocumentType.JOB_DESCRIPTION.value:
+                    jd_content = doc_content
+                    jd_uri = doc_uri
+                    jd_metadata = doc_metadata
                     workflow.logger.info(f"Found JD document: content={bool(jd_content)}, uri={bool(jd_uri)}")
                     break
 
