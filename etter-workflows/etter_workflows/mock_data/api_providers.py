@@ -46,16 +46,20 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         settings = get_settings()
         self.base_url = base_url or settings.get_etter_backend_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
+        self._is_local = not settings._is_qa_or_prod_environment()
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
     def _get_headers(self) -> Dict[str, str]:
         """Get request headers with auth.
 
-        Uses auth token from context (propagated from incoming request) if available,
-        otherwise falls back to configured auth token.
+        In local development, skips auth headers so internal API calls
+        use the local auth bypass. In QA/prod, propagates the auth token
+        from the incoming request context.
         """
         headers = {"Content-Type": "application/json"}
-        # First check context for propagated auth token from incoming request
+        if self._is_local:
+            return headers
+        # QA/Prod: propagate auth token from incoming request
         context_token = auth_token_context.get()
         if context_token:
             headers["Authorization"] = context_token
@@ -185,16 +189,20 @@ class APIDocumentProvider(DocumentProvider):
         settings = get_settings()
         self.base_url = base_url or settings.get_etter_backend_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
+        self._is_local = not settings._is_qa_or_prod_environment()
         self._cache: Dict[str, DocumentRef] = {}
 
     def _get_headers(self) -> Dict[str, str]:
         """Get request headers with auth.
 
-        Uses auth token from context (propagated from incoming request) if available,
-        otherwise falls back to configured auth token.
+        In local development, skips auth headers so internal API calls
+        use the local auth bypass. In QA/prod, propagates the auth token
+        from the incoming request context.
         """
         headers = {"Content-Type": "application/json"}
-        # First check context for propagated auth token from incoming request
+        if self._is_local:
+            return headers
+        # QA/Prod: propagate auth token from incoming request
         context_token = auth_token_context.get()
         if context_token:
             headers["Authorization"] = context_token
