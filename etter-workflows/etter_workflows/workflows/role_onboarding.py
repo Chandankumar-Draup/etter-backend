@@ -343,13 +343,29 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             docs_list = list(input.documents) if input.documents else []
             workflow.logger.info(f"Processing {len(docs_list)} documents")
 
+            # Log document details for debugging
+            for idx, doc in enumerate(docs_list):
+                if isinstance(doc, dict):
+                    doc_type = doc.get("type", "unknown")
+                    doc_uri = doc.get("uri", "")
+                    workflow.logger.info(f"[DOC_LIST] doc[{idx}] (dict): type={doc_type}, has_uri={bool(doc_uri)}")
+                else:
+                    doc_type = getattr(doc, 'type', 'unknown')
+                    doc_uri = getattr(doc, 'uri', '')
+                    workflow.logger.info(f"[DOC_LIST] doc[{idx}] (object): type={doc_type}, has_uri={bool(doc_uri)}")
+
             # First, try to get JD from the input model's method (handles Pydantic correctly)
-            jd_doc = input.get_job_description()
-            if jd_doc:
-                workflow.logger.info(f"Found JD via get_job_description(): type={jd_doc.type}, uri={bool(jd_doc.uri)}")
-                jd_content = jd_doc.content
-                jd_uri = jd_doc.uri
-                jd_metadata = jd_doc.metadata if hasattr(jd_doc, 'metadata') else None
+            try:
+                jd_doc = input.get_job_description()
+                if jd_doc:
+                    workflow.logger.info(f"Found JD via get_job_description(): type={jd_doc.type}, uri={bool(jd_doc.uri)}")
+                    jd_content = jd_doc.content
+                    jd_uri = jd_doc.uri
+                    jd_metadata = jd_doc.metadata if hasattr(jd_doc, 'metadata') else None
+                else:
+                    workflow.logger.info("get_job_description() returned None")
+            except Exception as e:
+                workflow.logger.warning(f"get_job_description() raised exception: {e}")
 
             # If no JD found via model method, iterate manually
             if not jd_content and not jd_uri and docs_list:
