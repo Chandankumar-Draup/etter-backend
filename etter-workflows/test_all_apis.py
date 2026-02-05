@@ -5,6 +5,7 @@ Comprehensive API Test Script
 Tests all API endpoints with:
 - LOCAL endpoints for workflow operations (push, push-batch, retry-failed)
 - QA endpoints for data APIs (role taxonomy, documents)
+- QA endpoints for pipeline operations (push, push-batch with auto-fetch)
 
 Usage:
     python test_all_apis.py                     # Run all tests
@@ -12,10 +13,12 @@ Usage:
     python test_all_apis.py --workflow-only     # Test workflow endpoints only
     python test_all_apis.py --data-only         # Test QA data APIs only
     python test_all_apis.py --validation-only   # Test document validation only
-    python test_all_apis.py --qa-doc-test       # Test push with real QA document (with download URL)
+    python test_all_apis.py --qa-doc-test       # Test LOCAL push with real QA document
+    python test_all_apis.py --qa-push-test      # Test QA /push and /push-batch (auto-fetch)
+    python test_all_apis.py --qa-push-test --company "Acme" --role "Pharmacist"
 
 Prerequisites:
-    - Local server running at http://localhost:7071
+    - Local server running at http://localhost:7071 (for local tests)
     - QA API accessible at https://qa-etter.draup.technology
 """
 
@@ -859,6 +862,165 @@ def test_qa_health() -> Tuple[bool, Dict]:
 
 
 # =============================================================================
+# QA PUSH TESTS (Test complete QA pipeline)
+# =============================================================================
+
+def test_qa_push(company_id: str = None, role_name: str = None) -> Tuple[bool, Optional[str], Dict]:
+    """
+    Test POST /push on QA API.
+
+    Documents will be auto-fetched by the QA server from its documents API.
+    This tests the complete QA pipeline end-to-end.
+    """
+    print_section("QA: Push (Auto-fetch Documents)")
+
+    company = company_id or TEST_COMPANY
+    role = role_name or TEST_ROLE
+
+    url = qa_url(f"{QA_API_PREFIX}/push")
+    print(f"URL: {url}")
+    print(f"Company: {company}")
+    print(f"Role: {role}")
+    print("Documents: Auto-fetch (not provided)")
+
+    payload = {
+        "company_id": company,
+        "role_name": role,
+        # No documents - will be auto-fetched by QA server
+    }
+
+    try:
+        print(f"\nSending request...")
+        response = requests.post(
+            url,
+            headers=get_qa_headers(),
+            json=payload,
+            timeout=60
+        )
+
+        print(f"Status: {response.status_code}")
+        data = safe_json(response)
+
+        if response.status_code == 200:
+            workflow_id = data.get("workflow_id")
+            message = data.get("message", "")
+            print(f"\nWorkflow ID: {workflow_id}")
+            print(f"Status: {data.get('status')}")
+            print(f"Message: {message}")
+            print_result(True, f"QA push successful: {workflow_id}")
+            return True, workflow_id, data
+        else:
+            error = data.get("detail", {})
+            print(f"\nError: {error.get('error', 'Unknown')}")
+            print(f"Message: {error.get('message', str(data))}")
+            print_result(False, f"QA push failed: {response.status_code}")
+            return False, None, data
+
+    except requests.exceptions.Timeout:
+        print_result(False, "Request timeout (60s)")
+        return False, None, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        return False, None, {}
+
+
+def test_qa_push_batch(company_id: str = None, roles: list = None) -> Tuple[bool, Dict]:
+    """
+    Test POST /push-batch on QA API.
+
+    Documents will be auto-fetched for each role.
+    """
+    print_section("QA: Push Batch (Auto-fetch Documents)")
+
+    company = company_id or TEST_COMPANY
+    role_list = roles or [TEST_ROLE]
+
+    url = qa_url(f"{QA_API_PREFIX}/push-batch")
+    print(f"URL: {url}")
+    print(f"Company: {company}")
+    print(f"Roles: {role_list}")
+    print("Documents: Auto-fetch for each role")
+
+    payload = {
+        "company_id": company,
+        "roles": [{"role_name": r} for r in role_list],
+        # No documents - will be auto-fetched by QA server
+    }
+
+    try:
+        print(f"\nSending request...")
+        response = requests.post(
+            url,
+            headers=get_qa_headers(),
+            json=payload,
+            timeout=60
+        )
+
+        print(f"Status: {response.status_code}")
+        data = safe_json(response)
+
+        if response.status_code == 200:
+            batch_id = data.get("batch_id")
+            workflow_ids = data.get("workflow_ids", [])
+            message = data.get("message", "")
+            print(f"\nBatch ID: {batch_id}")
+            print(f"Workflow IDs: {workflow_ids}")
+            print(f"Total: {data.get('total_roles')}")
+            print(f"Message: {message}")
+            print_result(True, f"QA batch push successful: {len(workflow_ids)} workflows")
+            return True, data
+        else:
+            error = data.get("detail", {})
+            print(f"\nError: {error.get('error', 'Unknown')}")
+            print(f"Message: {error.get('message', str(data))}")
+            print_result(False, f"QA batch push failed: {response.status_code}")
+            return False, data
+
+    except requests.exceptions.Timeout:
+        print_result(False, "Request timeout (60s)")
+        return False, {}
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        return False, {}
+
+
+def test_qa_workflow_status(workflow_id: str) -> Tuple[bool, Dict]:
+    """Test GET /status/{workflow_id} on QA API."""
+    print_section("QA: Workflow Status")
+
+    url = qa_url(f"{QA_API_PREFIX}/status/{workflow_id}")
+    print(f"URL: {url}")
+    print(f"Workflow ID: {workflow_id}")
+
+    try:
+        response = requests.get(url, headers=get_qa_headers(), timeout=30)
+        print(f"Status: {response.status_code}")
+
+        data = safe_json(response)
+
+        if response.status_code == 200:
+            print(f"\nWorkflow Status:")
+            print(f"  Status: {data.get('status')}")
+            print(f"  Role: {data.get('role_name')}")
+            print(f"  Company: {data.get('company_id')}")
+            print(f"  Current Step: {data.get('current_step')}")
+
+            progress = data.get("progress", {})
+            print(f"  Progress: {progress.get('current', 0)}/{progress.get('total', 0)}")
+
+            print_result(True, f"QA status: {data.get('status')}")
+            return True, data
+        else:
+            print(f"Error: {data}")
+            print_result(False, "Failed to get QA workflow status")
+            return False, data
+
+    except Exception as e:
+        print_result(False, f"Error: {e}")
+        return False, {}
+
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
@@ -959,7 +1121,9 @@ Examples:
   python test_all_apis.py --workflow-only     # Local workflow tests only
   python test_all_apis.py --data-only         # QA data API tests only
   python test_all_apis.py --validation-only   # Document validation tests only
-  python test_all_apis.py --qa-doc-test       # Test push with real QA document (download URL + metadata)
+  python test_all_apis.py --qa-doc-test       # Test LOCAL push with real QA document
+  python test_all_apis.py --qa-push-test      # Test QA /push and /push-batch (auto-fetch)
+  python test_all_apis.py --qa-push-test --company "Acme Corp" --role "Pharmacist"
 
 Configuration:
   LOCAL API: http://localhost:7071/api/v1/pipeline
@@ -971,6 +1135,9 @@ Configuration:
     parser.add_argument("--data-only", action="store_true", help="Only run QA data API tests")
     parser.add_argument("--validation-only", action="store_true", help="Only run document validation tests")
     parser.add_argument("--qa-doc-test", action="store_true", help="Test push with real document from QA (with download URL)")
+    parser.add_argument("--qa-push-test", action="store_true", help="Test /push and /push-batch on QA (documents auto-fetched)")
+    parser.add_argument("--company", type=str, help="Company ID for QA push test")
+    parser.add_argument("--role", type=str, help="Role name for QA push test")
     args = parser.parse_args()
 
     # Print header
@@ -1040,6 +1207,34 @@ Configuration:
                 time.sleep(1)
                 success, _ = test_workflow_status(workflow_id)
                 results["local"]["workflow_status"] = success
+
+    elif args.qa_push_test:
+        # Test complete QA pipeline (push and push-batch with auto-fetch)
+        company = args.company or TEST_COMPANY
+        role = args.role or TEST_ROLE
+
+        print(f"\nTesting QA Pipeline with:")
+        print(f"  Company: {company}")
+        print(f"  Role: {role}")
+        print("")
+
+        # QA Health check first
+        success, _ = test_qa_health()
+        results["qa"]["health"] = success
+
+        if success:
+            # Test single push (documents auto-fetched)
+            success, workflow_id, _ = test_qa_push(company_id=company, role_name=role)
+            results["qa"]["push"] = success
+
+            if workflow_id:
+                time.sleep(2)
+                success, _ = test_qa_workflow_status(workflow_id)
+                results["qa"]["workflow_status"] = success
+
+            # Test batch push (documents auto-fetched)
+            success, _ = test_qa_push_batch(company_id=company, roles=[role])
+            results["qa"]["push_batch"] = success
 
     else:
         results = run_all_tests()
