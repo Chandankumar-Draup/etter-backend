@@ -35,11 +35,12 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to settings)
+            base_url: API base URL (defaults to etter backend API - qa-etter.draup.technology)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_automated_workflows_api_url()
+        # Use etter backend API URL for documents/taxonomy (not automated_workflows)
+        self.base_url = base_url or settings.get_etter_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
@@ -165,11 +166,12 @@ class APIDocumentProvider(DocumentProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to settings)
+            base_url: API base URL (defaults to etter backend API - qa-etter.draup.technology)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_automated_workflows_api_url()
+        # Use etter backend API URL for documents/taxonomy (not automated_workflows)
+        self.base_url = base_url or settings.get_etter_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, DocumentRef] = {}
 
