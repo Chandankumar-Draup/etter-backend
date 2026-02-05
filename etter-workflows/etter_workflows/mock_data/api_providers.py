@@ -37,12 +37,38 @@ def _get_db_session() -> Optional["Session"]:
 
     Returns None if parent package is not available.
     This is used as a fallback when HTTP API calls fail.
+
+    Tries multiple import paths to work from different contexts:
+    1. Direct import (when running inside etter-backend)
+    2. After adding etter-backend to path (when running tests)
     """
+    # Try 1: Direct import (running from etter-backend)
     try:
         from settings.database import SessionLocal
         return SessionLocal()
     except ImportError:
-        logger.debug("Parent database module not available")
+        pass
+    except Exception as e:
+        logger.debug(f"Direct import failed: {e}")
+
+    # Try 2: Add parent path and try again
+    try:
+        import sys
+        import os
+
+        # Get etter-backend path (parent of etter-workflows)
+        current_file = os.path.abspath(__file__)
+        etter_workflows_root = os.path.dirname(os.path.dirname(os.path.dirname(current_file)))
+        etter_backend_root = os.path.dirname(etter_workflows_root)
+
+        if etter_backend_root not in sys.path:
+            sys.path.insert(0, etter_backend_root)
+            logger.debug(f"Added to sys.path: {etter_backend_root}")
+
+        from settings.database import SessionLocal
+        return SessionLocal()
+    except ImportError as e:
+        logger.debug(f"Parent database module not available: {e}")
         return None
     except Exception as e:
         logger.debug(f"Failed to get database session: {e}")
@@ -763,3 +789,53 @@ class APIDocumentProvider(DocumentProvider):
             return self._convert_to_ref(detail)
 
         return self._convert_to_ref(best_doc)
+
+    def get_document_content(
+        self,
+        doc_ref: DocumentRef,
+    ) -> Optional[str]:
+        """
+        Get the content of a document.
+
+        For API-based provider, content is typically fetched via the download URL.
+        This method downloads the content if a URI is available.
+
+        Args:
+            doc_ref: Document reference with URI
+
+        Returns:
+            Document content as string, or None if not available
+        """
+        # If content is already available, return it
+        if doc_ref.content:
+            return doc_ref.content
+
+        # If no URI, we can't fetch content
+        if not doc_ref.uri:
+            logger.warning(f"No URI available for document: {doc_ref.name}")
+            return None
+
+        # Skip API-style URIs (these need special handling downstream)
+        if doc_ref.uri.startswith("api://"):
+            logger.debug(f"Document has API URI, content will be fetched downstream: {doc_ref.uri}")
+            return None
+
+        # Try to download content from URI (presigned URL)
+        try:
+            logger.info(f"Fetching document content from URI: {doc_ref.uri[:80]}...")
+            response = requests.get(doc_ref.uri, timeout=60)
+            response.raise_for_status()
+
+            # For text-based content, return as string
+            content_type = response.headers.get("Content-Type", "")
+            if "text" in content_type or "json" in content_type:
+                return response.text
+
+            # For binary content (PDF, DOCX), return as base64 or None
+            # (downstream processors handle binary formats)
+            logger.debug(f"Document is binary ({content_type}), content extraction handled downstream")
+            return None
+
+        except Exception as e:
+            logger.warning(f"Failed to fetch document content: {e}")
+            return None
