@@ -12,6 +12,7 @@ APIs used:
 
 import logging
 import requests
+from contextvars import ContextVar
 from typing import Dict, List, Optional
 from datetime import datetime
 
@@ -21,6 +22,10 @@ from etter_workflows.models.inputs import RoleTaxonomyEntry, DocumentRef, Docume
 from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
+
+# Context variable for propagating auth token from incoming requests to internal API calls
+# This allows internal HTTP calls to use the same auth as the original request
+auth_token_context: ContextVar[Optional[str]] = ContextVar('auth_token', default=None)
 
 
 class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
@@ -44,9 +49,17 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
     def _get_headers(self) -> Dict[str, str]:
-        """Get request headers with auth."""
+        """Get request headers with auth.
+
+        Uses auth token from context (propagated from incoming request) if available,
+        otherwise falls back to configured auth token.
+        """
         headers = {"Content-Type": "application/json"}
-        if self.auth_token:
+        # First check context for propagated auth token from incoming request
+        context_token = auth_token_context.get()
+        if context_token:
+            headers["Authorization"] = context_token
+        elif self.auth_token:
             headers["Authorization"] = f"Bearer {self.auth_token}"
         return headers
 
@@ -175,9 +188,17 @@ class APIDocumentProvider(DocumentProvider):
         self._cache: Dict[str, DocumentRef] = {}
 
     def _get_headers(self) -> Dict[str, str]:
-        """Get request headers with auth."""
+        """Get request headers with auth.
+
+        Uses auth token from context (propagated from incoming request) if available,
+        otherwise falls back to configured auth token.
+        """
         headers = {"Content-Type": "application/json"}
-        if self.auth_token:
+        # First check context for propagated auth token from incoming request
+        context_token = auth_token_context.get()
+        if context_token:
+            headers["Authorization"] = context_token
+        elif self.auth_token:
             headers["Authorization"] = f"Bearer {self.auth_token}"
         return headers
 

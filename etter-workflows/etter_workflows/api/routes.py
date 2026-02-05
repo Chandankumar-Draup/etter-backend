@@ -18,7 +18,7 @@ from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
 import uuid
 
-from fastapi import APIRouter, BackgroundTasks, HTTPException, Query
+from fastapi import APIRouter, BackgroundTasks, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
 
 # Temporal client imports
@@ -68,6 +68,7 @@ from etter_workflows.workflows.role_onboarding import (
 from etter_workflows.clients.status_client import get_status_client
 from etter_workflows.mock_data.role_taxonomy import get_role_taxonomy_provider
 from etter_workflows.mock_data.documents import get_document_provider
+from etter_workflows.mock_data.api_providers import auth_token_context
 from etter_workflows.config.settings import get_settings
 
 logger = logging.getLogger(__name__)
@@ -137,6 +138,7 @@ async def is_temporal_connected() -> tuple[bool, str]:
 @router.post("/push", response_model=PushResponse)
 async def push_role(
     request: PushRequest,
+    http_request: Request,
     background_tasks: BackgroundTasks,
     use_mock: bool = Query(default=False, description="Use mock assessment for testing"),
 ) -> PushResponse:
@@ -150,6 +152,7 @@ async def push_role(
 
     Args:
         request: Push request with company_id, role_name, documents
+        http_request: FastAPI Request object for accessing headers
         background_tasks: FastAPI background tasks
         use_mock: Use mock assessment for testing
 
@@ -165,6 +168,10 @@ async def push_role(
     )
 
     try:
+        # Propagate auth token to internal API calls
+        auth_header = http_request.headers.get("Authorization")
+        if auth_header:
+            auth_token_context.set(auth_header)
         # Convert documents
         documents = []
         for doc in request.documents:
@@ -642,6 +649,7 @@ async def get_company_roles(company_name: str) -> CompanyRolesResponse:
 @router.post("/push-batch", response_model=BatchPushResponse)
 async def push_batch(
     request: BatchPushRequest,
+    http_request: Request,
     background_tasks: BackgroundTasks,
     use_mock: bool = Query(default=False, description="Use mock assessment for testing"),
 ) -> BatchPushResponse:
@@ -655,6 +663,7 @@ async def push_batch(
 
     Args:
         request: Batch push request with list of roles
+        http_request: FastAPI Request object for accessing headers
         background_tasks: FastAPI background tasks
         use_mock: Use mock assessment for testing
 
@@ -670,6 +679,11 @@ async def push_batch(
     )
 
     try:
+        # Propagate auth token to internal API calls
+        auth_header = http_request.headers.get("Authorization")
+        if auth_header:
+            auth_token_context.set(auth_header)
+
         settings = get_settings()
         temporal_client = await get_temporal_client()
 
