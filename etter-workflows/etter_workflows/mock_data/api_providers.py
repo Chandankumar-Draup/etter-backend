@@ -84,8 +84,16 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             logger.info(f"Fetched {len(roles)} roles from API")
             return roles
 
+        except requests.exceptions.HTTPError as e:
+            # Log as warning since taxonomy is optional - workflow can proceed without it
+            logger.warning(
+                f"Role taxonomy API returned error (taxonomy data is optional, workflow will continue): "
+                f"status={e.response.status_code if e.response else 'unknown'}, error={e}"
+            )
+            return []
         except Exception as e:
-            logger.error(f"Failed to fetch roles from API: {e}")
+            # Log as warning since taxonomy is optional
+            logger.warning(f"Failed to fetch role taxonomy (optional, workflow will continue): {e}")
             return []
 
     def _convert_to_entry(self, role_data: Dict) -> RoleTaxonomyEntry:
