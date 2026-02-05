@@ -219,6 +219,7 @@ async def push_role(
             )
 
         # Optionally load taxonomy data for role mapping (does not replace documents)
+        # NOTE: Taxonomy is optional - if lookup fails, workflow continues without it
         settings = get_settings()
         if not input.draup_role_name:
             try:
@@ -230,8 +231,17 @@ async def push_role(
                 if taxonomy_entry:
                     input.taxonomy_entry = taxonomy_entry
                     input.draup_role_name = taxonomy_entry.get_draup_role()
+                    logger.info(f"Taxonomy data loaded for role: {request.role_name}")
+                else:
+                    logger.warning(
+                        f"No taxonomy entry found for role '{request.role_name}' "
+                        f"(optional - workflow will proceed without taxonomy mapping)"
+                    )
             except Exception as e:
-                logger.warning(f"Failed to fetch taxonomy data: {e}")
+                logger.warning(
+                    f"Failed to fetch taxonomy data for role '{request.role_name}' "
+                    f"(optional - workflow will proceed without taxonomy mapping): {e}"
+                )
 
         # Validate input
         validation_errors = input.validate_for_processing()
