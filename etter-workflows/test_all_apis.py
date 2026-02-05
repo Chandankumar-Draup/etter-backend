@@ -871,6 +871,9 @@ def test_qa_push(company_id: str = None, role_name: str = None) -> Tuple[bool, O
 
     Documents will be auto-fetched by the QA server from its documents API.
     This tests the complete QA pipeline end-to-end.
+
+    Note: Use --company and --role flags to specify a valid company/role
+    combination that has documents uploaded in QA.
     """
     print_section("QA: Push (Auto-fetch Documents)")
 
@@ -882,6 +885,8 @@ def test_qa_push(company_id: str = None, role_name: str = None) -> Tuple[bool, O
     print(f"Company: {company}")
     print(f"Role: {role}")
     print("Documents: Auto-fetch (not provided)")
+    print("\nNote: Ensure documents exist for this company/role in QA.")
+    print("      Use --company and --role flags to specify valid values.")
 
     payload = {
         "company_id": company,
@@ -910,9 +915,21 @@ def test_qa_push(company_id: str = None, role_name: str = None) -> Tuple[bool, O
             print_result(True, f"QA push successful: {workflow_id}")
             return True, workflow_id, data
         else:
-            error = data.get("detail", {})
-            print(f"\nError: {error.get('error', 'Unknown')}")
-            print(f"Message: {error.get('message', str(data))}")
+            # Handle both dict and list error responses
+            error = data.get("detail", data.get("errors", [{}]))
+            if isinstance(error, list) and error:
+                error = error[0]
+            if isinstance(error, dict):
+                print(f"\nError: {error.get('error', 'Unknown')}")
+                print(f"Message: {error.get('message', str(data))}")
+            else:
+                print(f"\nError: {data}")
+
+            # Hint for common issues
+            if "No documents found" in str(data):
+                print(f"\n[HINT] No documents found for role '{role}' at company '{company}'.")
+                print("       Try: python test_all_apis.py --qa-push-test --company <valid_company> --role <valid_role>")
+
             print_result(False, f"QA push failed: {response.status_code}")
             return False, None, data
 
@@ -941,9 +958,10 @@ def test_qa_push_batch(company_id: str = None, roles: list = None) -> Tuple[bool
     print(f"Roles: {role_list}")
     print("Documents: Auto-fetch for each role")
 
+    # Note: BatchRoleInput requires company_id for each role
     payload = {
         "company_id": company,
-        "roles": [{"role_name": r} for r in role_list],
+        "roles": [{"role_name": r, "company_id": company} for r in role_list],
         # No documents - will be auto-fetched by QA server
     }
 
@@ -970,9 +988,22 @@ def test_qa_push_batch(company_id: str = None, roles: list = None) -> Tuple[bool
             print_result(True, f"QA batch push successful: {len(workflow_ids)} workflows")
             return True, data
         else:
-            error = data.get("detail", {})
-            print(f"\nError: {error.get('error', 'Unknown')}")
-            print(f"Message: {error.get('message', str(data))}")
+            # Handle both dict and list error responses (422 returns list)
+            if isinstance(data, list):
+                print(f"\nValidation Errors:")
+                for err in data[:3]:  # Show first 3 errors
+                    loc = err.get("loc", [])
+                    msg = err.get("msg", str(err))
+                    print(f"  - {'.'.join(str(l) for l in loc)}: {msg}")
+            else:
+                error = data.get("detail", data.get("errors", [{}]))
+                if isinstance(error, list) and error:
+                    error = error[0]
+                if isinstance(error, dict):
+                    print(f"\nError: {error.get('error', 'Unknown')}")
+                    print(f"Message: {error.get('message', str(data))}")
+                else:
+                    print(f"\nError: {data}")
             print_result(False, f"QA batch push failed: {response.status_code}")
             return False, data
 

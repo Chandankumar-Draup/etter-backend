@@ -373,6 +373,17 @@ class Settings(BaseSettings):
             return self.draup_world_api_url
         return self.automated_workflows_api_base_url
 
+    def get_etter_backend_api_url(self) -> str:
+        """
+        Get Etter Backend API URL for documents/taxonomy endpoints.
+
+        This is called from within etter-backend itself, so it uses localhost:7071.
+        All environments (local, QA, prod) run on the same port.
+
+        Can be overridden via ETTER_BACKEND_API_URL environment variable.
+        """
+        return self.etter_backend_api_url
+
 
 
 @lru_cache()
