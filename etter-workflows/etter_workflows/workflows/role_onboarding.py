@@ -339,7 +339,7 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             jd_uri = None
             jd_metadata = None
 
-            workflow.logger.info(f"Processing {len(input.documents)} documents")
+            workflow.logger.info(f"Processing {len(input.documents)} documents, types: {[type(d).__name__ for d in input.documents]}")
             for i, doc in enumerate(input.documents):
                 # Handle both dict and object (Temporal serialization may convert to dict)
                 if isinstance(doc, dict):
@@ -347,20 +347,31 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                     doc_content = doc.get("content")
                     doc_uri = doc.get("uri")
                     doc_metadata = doc.get("metadata")
+                    workflow.logger.info(f"Doc {i} is dict: type={doc_type}, keys={list(doc.keys())}")
                 else:
                     doc_type = doc.type.value if hasattr(doc.type, 'value') else str(doc.type)
                     doc_content = doc.content
                     doc_uri = doc.uri
                     doc_metadata = doc.metadata if hasattr(doc, 'metadata') else None
+                    workflow.logger.info(f"Doc {i} is object: type attr={doc.type}, extracted type={doc_type}")
 
                 workflow.logger.info(f"Doc {i}: type={doc_type}, has_content={bool(doc_content)}, has_uri={bool(doc_uri)}")
 
-                # Compare as string (handle both enum value and string)
-                if str(doc_type) == "job_description" or doc_type == DocumentType.JOB_DESCRIPTION.value:
+                # Check for job_description type - handle all possible serialization formats
+                type_str = str(doc_type).lower()
+                is_jd = (
+                    type_str == "job_description" or
+                    type_str == "documenttype.job_description" or
+                    "job_description" in type_str or
+                    doc_type == DocumentType.JOB_DESCRIPTION.value
+                )
+                workflow.logger.info(f"Doc {i}: type_str={type_str}, is_jd={is_jd}")
+
+                if is_jd:
                     jd_content = doc_content
                     jd_uri = doc_uri
                     jd_metadata = doc_metadata
-                    workflow.logger.info(f"Found JD document: content={bool(jd_content)}, uri={bool(jd_uri)}")
+                    workflow.logger.info(f"Found JD document: content={bool(jd_content)}, uri={bool(jd_uri)}, uri_preview={str(jd_uri)[:100] if jd_uri else None}")
                     break
 
             # Try taxonomy entry if no JD in documents (no content and no uri)
