@@ -377,22 +377,11 @@ class Settings(BaseSettings):
         """
         Get Etter Backend API URL for documents/taxonomy endpoints.
 
-        This is called from within etter-backend itself, so it uses localhost.
-        The port varies by environment:
-        - Local dev: 7071 (parent etter-backend)
-        - QA/Prod: 8000 (internal uvicorn port)
+        This is called from within etter-backend itself, so it uses localhost:7071.
+        All environments (local, QA, prod) run on the same port.
 
         Can be overridden via ETTER_BACKEND_API_URL environment variable.
         """
-        # If explicitly set via env var, use it
-        if self.etter_backend_api_url != "http://localhost:7071":
-            return self.etter_backend_api_url
-
-        # QA/Prod: use internal port (typically 8000 for uvicorn)
-        if self._is_qa_or_prod_environment():
-            return "http://localhost:8000"
-
-        # Local dev: use 7071
         return self.etter_backend_api_url
 
 
