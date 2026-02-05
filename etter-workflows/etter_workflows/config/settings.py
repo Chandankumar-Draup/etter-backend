@@ -373,6 +373,28 @@ class Settings(BaseSettings):
             return self.draup_world_api_url
         return self.automated_workflows_api_base_url
 
+    def get_etter_backend_api_url(self) -> str:
+        """
+        Get Etter Backend API URL for documents/taxonomy endpoints.
+
+        This is called from within etter-backend itself, so it uses localhost.
+        The port varies by environment:
+        - Local dev: 7071 (parent etter-backend)
+        - QA/Prod: 8000 (internal uvicorn port)
+
+        Can be overridden via ETTER_BACKEND_API_URL environment variable.
+        """
+        # If explicitly set via env var, use it
+        if self.etter_backend_api_url != "http://localhost:7071":
+            return self.etter_backend_api_url
+
+        # QA/Prod: use internal port (typically 8000 for uvicorn)
+        if self._is_qa_or_prod_environment():
+            return "http://localhost:8000"
+
+        # Local dev: use 7071
+        return self.etter_backend_api_url
+
 
 
 @lru_cache()

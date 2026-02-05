@@ -35,12 +35,12 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to localhost:7071 - same server as etter-backend)
+            base_url: API base URL (auto-detected: localhost:7071 local, localhost:8000 QA/prod)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        # Use localhost since this code runs inside etter-backend (same server)
-        self.base_url = base_url or settings.etter_backend_api_url
+        # Use localhost - port varies by environment (7071 local, 8000 QA/prod)
+        self.base_url = base_url or settings.get_etter_backend_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
@@ -166,12 +166,12 @@ class APIDocumentProvider(DocumentProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to localhost:7071 - same server as etter-backend)
+            base_url: API base URL (auto-detected: localhost:7071 local, localhost:8000 QA/prod)
             auth_token: Bearer token for auth (defaults to settings)
         """
         settings = get_settings()
-        # Use localhost since this code runs inside etter-backend (same server)
-        self.base_url = base_url or settings.etter_backend_api_url
+        # Use localhost - port varies by environment (7071 local, 8000 QA/prod)
+        self.base_url = base_url or settings.get_etter_backend_api_url()
         self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, DocumentRef] = {}
 
