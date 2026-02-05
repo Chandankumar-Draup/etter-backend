@@ -144,29 +144,9 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Security(security))
                 logger.warning(f"Failed to cache user response: {str(cache_error)}")
     else:
         logger.info(f"Error occurred while fetching user details from draup api")
-        # Local development: skip external auth when Draup API is unreachable
-        if _is_local_environment():
-            logger.info("Local dev mode: skipping Draup auth, using fallback credentials")
-            response.data = {
-                "user_id": 1,
-                "company_id": os.environ.get("ETTER_LOCAL_TENANT_ID", "1"),
-                "email": "local@dev",
-                "group": "Admin",
-            }
-            return response
         raise credentials_exception
 
     return response
-
-
-def _is_local_environment() -> bool:
-    """Check if running in local development (not QA/prod).
-
-    Uses ETTER_DB_HOST: empty or localhost means local.
-    QA/prod always have a real DB host set.
-    """
-    db_host = os.environ.get("ETTER_DB_HOST", "").lower()
-    return not db_host or db_host == "localhost" or "127.0.0.1" in db_host
 
 
 def create_jwt_token(
