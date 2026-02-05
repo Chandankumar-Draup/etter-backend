@@ -230,14 +230,17 @@ class APIDocumentProvider(DocumentProvider):
             params["status"] = "COMPLETED"  # Extraction status
 
         try:
-            logger.info(f"Fetching documents from {url}")
+            logger.info(f"[DOC_FETCH] Fetching documents from extraction API: {url}")
+            logger.info(f"[DOC_FETCH] Request params: {params}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
             data = response.json()
             files = data.get("files", [])
+            logger.info(f"[DOC_FETCH] Extraction API response: {len(files)} files found")
             if files:
-                logger.info(f"Fetched {len(files)} documents from extraction API")
+                for f in files[:5]:  # Log first 5 files
+                    logger.info(f"[DOC_FETCH]   - {f.get('original_filename')} (id={f.get('document_id')}, status={f.get('document_status')})")
                 return [
                     {
                         "id": f.get("document_id"),
@@ -251,7 +254,7 @@ class APIDocumentProvider(DocumentProvider):
                 ]
 
         except Exception as e:
-            logger.warning(f"Extraction API failed: {e}, trying documents API...")
+            logger.warning(f"[DOC_FETCH] Extraction API failed: {e}, trying documents API...")
 
         # Fallback to S3 documents endpoint
         url = f"{self.base_url}/api/documents/"
@@ -262,17 +265,20 @@ class APIDocumentProvider(DocumentProvider):
             params["status"] = status
 
         try:
-            logger.info(f"Fetching documents from {url}")
+            logger.info(f"[DOC_FETCH] Fetching documents from documents API: {url}")
+            logger.info(f"[DOC_FETCH] Request params: {params}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
             data = response.json()
             docs = data.get("data", {}).get("documents", [])
-            logger.info(f"Fetched {len(docs)} documents from documents API")
+            logger.info(f"[DOC_FETCH] Documents API response: {len(docs)} documents found")
+            for doc in docs[:5]:  # Log first 5 docs
+                logger.info(f"[DOC_FETCH]   - {doc.get('original_filename')} (id={doc.get('id')}, status={doc.get('status')})")
             return docs
 
         except Exception as e:
-            logger.error(f"Failed to fetch documents from API: {e}")
+            logger.error(f"[DOC_FETCH] Failed to fetch documents from API: {e}")
             return []
 
     def _fetch_document_detail(self, document_id: str) -> Optional[Dict]:
@@ -289,13 +295,18 @@ class APIDocumentProvider(DocumentProvider):
         params = {"generate_download_url": "true"}
 
         try:
-            logger.info(f"Fetching document detail for {document_id}")
+            logger.info(f"[DOC_DETAIL] Fetching document detail: {url}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
-            return response.json()
+            detail = response.json()
+            logger.info(f"[DOC_DETAIL] Document detail retrieved:")
+            logger.info(f"[DOC_DETAIL]   - filename: {detail.get('original_filename')}")
+            logger.info(f"[DOC_DETAIL]   - content_type: {detail.get('observed_content_type')}")
+            logger.info(f"[DOC_DETAIL]   - has_download_url: {bool(detail.get('download', {}).get('url'))}")
+            return detail
 
         except Exception as e:
-            logger.error(f"Failed to fetch document detail: {e}")
+            logger.error(f"[DOC_DETAIL] Failed to fetch document detail: {e}")
             return None
 
     def _convert_to_ref(self, doc_data: Dict) -> DocumentRef:
@@ -315,6 +326,12 @@ class APIDocumentProvider(DocumentProvider):
         download_info = doc_data.get("download")
         if download_info and download_info.get("url"):
             download_url = download_info["url"]
+
+        logger.info(f"[DOC_CONVERT] Converting document to ref:")
+        logger.info(f"[DOC_CONVERT]   - filename: {doc_data.get('original_filename')}")
+        logger.info(f"[DOC_CONVERT]   - detected_type: {doc_type} (from filename pattern)")
+        logger.info(f"[DOC_CONVERT]   - has_download_url: {bool(download_url)}")
+        logger.info(f"[DOC_CONVERT]   - uri: {download_url or f'api://documents/{doc_data.get(\"id\")}'}")
 
         return DocumentRef(
             type=doc_type,
@@ -390,18 +407,22 @@ class APIDocumentProvider(DocumentProvider):
         2. Sort by file type priority (PDF > DOCX > images)
         3. Return best document with download URL
         """
+        logger.info(f"[BEST_DOC] ========== Getting best document for role ==========")
+        logger.info(f"[BEST_DOC] Role: {role_name}, Company: {company_name}")
+
         docs = self._fetch_documents(roles=[role_name], company_instance_name=company_name)
 
         if not docs:
-            logger.warning(f"No documents found for role: {role_name}")
+            logger.warning(f"[BEST_DOC] No documents found for role: {role_name}")
             return None
 
-        logger.info(f"Found {len(docs)} documents for role {role_name}")
+        logger.info(f"[BEST_DOC] Found {len(docs)} documents for role {role_name}")
 
         # Filter to exact role match
         exact_match_docs = [d for d in docs if d.get("roles") == [role_name]]
+        logger.info(f"[BEST_DOC] Exact role matches: {len(exact_match_docs)}")
         if not exact_match_docs:
-            logger.warning(f"No exact role match [{role_name}], using all documents")
+            logger.warning(f"[BEST_DOC] No exact role match [{role_name}], using all documents")
             exact_match_docs = docs
 
         # Sort by priority
@@ -415,6 +436,9 @@ class APIDocumentProvider(DocumentProvider):
             return datetime.min
 
         exact_match_docs.sort(key=lambda d: (self._get_file_type_priority(d), -get_date_key(d).timestamp()))
+        logger.info(f"[BEST_DOC] After sorting by priority (PDF>DOCX>Image>Other):")
+        for i, doc in enumerate(exact_match_docs[:3]):
+            logger.info(f"[BEST_DOC]   {i+1}. {doc.get('original_filename')} (priority={self._get_file_type_priority(doc)})")
 
         # Deduplicate by filename
         seen = set()
@@ -425,17 +449,37 @@ class APIDocumentProvider(DocumentProvider):
                 seen.add(fn)
                 deduped.append(doc)
 
+        logger.info(f"[BEST_DOC] After deduplication: {len(deduped)} unique documents")
+
         if not deduped:
+            logger.warning(f"[BEST_DOC] No documents after deduplication")
             return None
 
         best_doc = deduped[0]
-        logger.info(f"Selected best document: {best_doc.get('original_filename')}")
+        logger.info(f"[BEST_DOC] Selected best document: {best_doc.get('original_filename')} (id={best_doc.get('id')})")
 
         detail = self._fetch_document_detail(best_doc.get("id"))
-        if detail:
-            return self._convert_to_ref(detail)
+        doc_ref = self._convert_to_ref(detail) if detail else self._convert_to_ref(best_doc)
 
-        return self._convert_to_ref(best_doc)
+        # Force type to JOB_DESCRIPTION when auto-fetching for role processing
+        # This is the primary use case - the best document for a role IS the job description
+        if doc_ref.type != DocumentType.JOB_DESCRIPTION:
+            logger.info(f"[BEST_DOC] Forcing document type to JOB_DESCRIPTION (was {doc_ref.type})")
+            doc_ref = DocumentRef(
+                type=DocumentType.JOB_DESCRIPTION,
+                uri=doc_ref.uri,
+                name=doc_ref.name,
+                content=doc_ref.content,
+                metadata=doc_ref.metadata,
+            )
+
+        logger.info(f"[BEST_DOC] Final document ref:")
+        logger.info(f"[BEST_DOC]   - name: {doc_ref.name}")
+        logger.info(f"[BEST_DOC]   - type: {doc_ref.type}")
+        logger.info(f"[BEST_DOC]   - uri: {doc_ref.uri[:100]}..." if len(doc_ref.uri or '') > 100 else f"[BEST_DOC]   - uri: {doc_ref.uri}")
+        logger.info(f"[BEST_DOC] ========== End getting best document ==========")
+
+        return doc_ref
 
     def get_document_content(
         self,
