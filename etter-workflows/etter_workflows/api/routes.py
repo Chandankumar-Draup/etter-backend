@@ -198,8 +198,10 @@ async def push_role(
         )
 
         # Auto-fetch documents if not provided in request
+        logger.info(f"[PUSH] Documents in request: {len(input.documents)}")
+        logger.info(f"[PUSH] has_documents(): {input.has_documents()}")
         if not input.has_documents():
-            logger.info(f"No documents in request, auto-fetching for role: {request.role_name}")
+            logger.info(f"[PUSH] No documents in request, auto-fetching for role: {request.role_name}")
             try:
                 doc_provider = get_document_provider()
                 best_doc = doc_provider.get_best_document_for_role(
@@ -207,15 +209,20 @@ async def push_role(
                     company_name=request.company_id,
                 )
                 if best_doc:
-                    logger.info(f"Auto-fetched document: {best_doc.name} (uri: {best_doc.uri})")
+                    logger.info(f"[PUSH] Auto-fetched document successfully:")
+                    logger.info(f"[PUSH]   - name: {best_doc.name}")
+                    logger.info(f"[PUSH]   - type: {best_doc.type}")
+                    logger.info(f"[PUSH]   - uri: {best_doc.uri[:100] if best_doc.uri and len(best_doc.uri) > 100 else best_doc.uri}")
                     input.documents = [best_doc]
                 else:
-                    logger.warning(f"No documents found for role: {request.role_name}")
+                    logger.warning(f"[PUSH] No documents found for role: {request.role_name}")
             except Exception as e:
-                logger.warning(f"Failed to auto-fetch documents: {e}")
+                logger.warning(f"[PUSH] Failed to auto-fetch documents: {e}", exc_info=True)
 
         # Validate that we have documents (either from request or auto-fetched)
+        logger.info(f"[PUSH] After auto-fetch - has_documents(): {input.has_documents()}")
         if not input.has_documents():
+            logger.error(f"[PUSH] No documents available - returning 400")
             raise HTTPException(
                 status_code=400,
                 detail={
@@ -228,6 +235,7 @@ async def push_role(
         # Optionally load taxonomy data for role mapping (does not replace documents)
         # NOTE: Taxonomy is optional - if lookup fails, workflow continues without it
         settings = get_settings()
+        logger.info(f"[PUSH] Checking taxonomy - draup_role_name provided: {bool(input.draup_role_name)}")
         if not input.draup_role_name:
             try:
                 taxonomy_provider = get_role_taxonomy_provider()
@@ -238,21 +246,33 @@ async def push_role(
                 if taxonomy_entry:
                     input.taxonomy_entry = taxonomy_entry
                     input.draup_role_name = taxonomy_entry.get_draup_role()
-                    logger.info(f"Taxonomy data loaded for role: {request.role_name}")
+                    logger.info(f"[PUSH] Taxonomy data loaded for role: {request.role_name}")
+                    logger.info(f"[PUSH]   - draup_role_name: {input.draup_role_name}")
+                    logger.info(f"[PUSH]   - has_job_description: {taxonomy_entry.has_job_description()}")
                 else:
                     logger.warning(
-                        f"No taxonomy entry found for role '{request.role_name}' "
+                        f"[PUSH] No taxonomy entry found for role '{request.role_name}' "
                         f"(optional - workflow will proceed without taxonomy mapping)"
                     )
             except Exception as e:
                 logger.warning(
-                    f"Failed to fetch taxonomy data for role '{request.role_name}' "
+                    f"[PUSH] Failed to fetch taxonomy data for role '{request.role_name}' "
                     f"(optional - workflow will proceed without taxonomy mapping): {e}"
                 )
 
         # Validate input
+        logger.info(f"[PUSH] Running validation...")
+        logger.info(f"[PUSH]   - company_id: {input.company_id}")
+        logger.info(f"[PUSH]   - role_name: {input.role_name}")
+        logger.info(f"[PUSH]   - documents: {len(input.documents)}")
+        for i, doc in enumerate(input.documents):
+            logger.info(f"[PUSH]     Doc {i+1}: type={doc.type}, name={doc.name}")
+        logger.info(f"[PUSH]   - taxonomy_entry: {input.taxonomy_entry is not None}")
+        logger.info(f"[PUSH]   - get_job_description(): {input.get_job_description() is not None}")
+
         validation_errors = input.validate_for_processing()
         if validation_errors:
+            logger.error(f"[PUSH] Validation failed: {validation_errors}")
             raise HTTPException(
                 status_code=400,
                 detail={
@@ -261,6 +281,7 @@ async def push_role(
                     "recoverable": False,
                 },
             )
+        logger.info(f"[PUSH] Validation passed")
 
         # Generate workflow ID
         workflow_id = str(uuid.uuid4())
