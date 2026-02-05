@@ -432,10 +432,21 @@ class APIDocumentProvider(DocumentProvider):
         logger.info(f"Selected best document: {best_doc.get('original_filename')}")
 
         detail = self._fetch_document_detail(best_doc.get("id"))
-        if detail:
-            return self._convert_to_ref(detail)
+        doc_ref = self._convert_to_ref(detail) if detail else self._convert_to_ref(best_doc)
 
-        return self._convert_to_ref(best_doc)
+        # Force type to JOB_DESCRIPTION when auto-fetching for role processing
+        # This is the primary use case - the best document for a role IS the job description
+        if doc_ref.type != DocumentType.JOB_DESCRIPTION:
+            logger.info(f"Setting document type to JOB_DESCRIPTION (was {doc_ref.type})")
+            doc_ref = DocumentRef(
+                type=DocumentType.JOB_DESCRIPTION,
+                uri=doc_ref.uri,
+                name=doc_ref.name,
+                content=doc_ref.content,
+                metadata=doc_ref.metadata,
+            )
+
+        return doc_ref
 
     def get_document_content(
         self,
