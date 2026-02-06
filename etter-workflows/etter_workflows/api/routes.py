@@ -71,7 +71,7 @@ from etter_workflows.mock_data.documents import get_document_provider
 from etter_workflows.mock_data.api_providers import auth_token_context
 from etter_workflows.config.settings import get_settings
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("etter_app")
 
 # Router prefix: /v1/pipeline (accessed via /api/v1/pipeline through reverse proxy)
 router = APIRouter(prefix="/v1/pipeline", tags=["pipeline"])
@@ -702,21 +702,22 @@ async def push_batch(
         BatchPushResponse with batch_id and workflow_ids
     """
     logger.info(
-        f"Batch push request received",
-        extra={
-            "company_id": request.company_id,
-            "role_count": len(request.roles),
-        },
+        f"[BATCH] ========== Batch push request received ==========",
     )
+    logger.info(f"[BATCH] Company: {request.company_id}, Roles: {len(request.roles)}")
+    for i, r in enumerate(request.roles):
+        logger.info(f"[BATCH]   Role {i+1}: {r.role_name} (docs_provided={len(r.documents)})")
 
     try:
         # Propagate auth token to internal API calls
         auth_header = http_request.headers.get("Authorization")
         if auth_header:
             auth_token_context.set(auth_header)
+            logger.info(f"[BATCH] Auth token propagated from request")
 
         settings = get_settings()
         temporal_client = await get_temporal_client()
+        logger.info(f"[BATCH] Temporal client: {'connected' if temporal_client else 'NOT available (standalone mode)'}")
 
         # Create batch record
         batch = BatchRecord(
@@ -724,14 +725,17 @@ async def push_batch(
             role_count=len(request.roles),
             created_by=request.created_by,
         )
+        logger.info(f"[BATCH] Batch ID: {batch.batch_id}")
 
         workflow_ids = []
         validation_failures = []
 
         # Spawn independent workflow for each role
-        for role_input in request.roles:
+        for role_idx, role_input in enumerate(request.roles):
+            role_num = role_idx + 1
             # Use company_id from role or default from request
             company_id = role_input.company_id or request.company_id
+            logger.info(f"[BATCH] ---------- Processing role {role_num}/{len(request.roles)}: {role_input.role_name} ----------")
 
             # Convert documents
             documents = []
@@ -744,6 +748,8 @@ async def push_batch(
                     name=doc.name,
                     metadata=doc.metadata,
                 ))
+
+            logger.info(f"[BATCH] [{role_input.role_name}] Documents in request: {len(documents)}")
 
             # Create workflow input
             input = RoleOnboardingInput(
@@ -760,22 +766,28 @@ async def push_batch(
 
             # Auto-fetch documents if not provided in request
             if not input.has_documents():
-                logger.info(f"No documents in request for {role_input.role_name}, auto-fetching...")
+                logger.info(f"[BATCH] [{role_input.role_name}] No documents provided, auto-fetching from API...")
                 try:
                     doc_provider = get_document_provider()
+                    logger.info(f"[BATCH] [{role_input.role_name}] Document provider base_url: {doc_provider.base_url}")
                     best_doc = doc_provider.get_best_document_for_role(
                         role_name=role_input.role_name,
                         company_name=company_id,
                     )
                     if best_doc:
-                        logger.info(f"Auto-fetched document for {role_input.role_name}: {best_doc.name}")
+                        logger.info(f"[BATCH] [{role_input.role_name}] Auto-fetched document:")
+                        logger.info(f"[BATCH] [{role_input.role_name}]   name: {best_doc.name}")
+                        logger.info(f"[BATCH] [{role_input.role_name}]   type: {best_doc.type}")
+                        logger.info(f"[BATCH] [{role_input.role_name}]   uri: {best_doc.uri[:100] if best_doc.uri and len(best_doc.uri) > 100 else best_doc.uri}")
                         input.documents = [best_doc]
+                    else:
+                        logger.warning(f"[BATCH] [{role_input.role_name}] No documents found via auto-fetch")
                 except Exception as e:
-                    logger.warning(f"Failed to auto-fetch documents for {role_input.role_name}: {e}")
+                    logger.warning(f"[BATCH] [{role_input.role_name}] Auto-fetch failed: {e}", exc_info=True)
 
             # Validate that we have documents (either from request or auto-fetched)
             if not input.has_documents():
-                logger.warning(f"No documents found for {role_input.role_name}")
+                logger.warning(f"[BATCH] [{role_input.role_name}] SKIPPED - no documents available")
                 validation_failures.append({
                     "role_name": role_input.role_name,
                     "errors": [f"No documents found. Provide documents in request or ensure documents are uploaded for this role."],
@@ -783,6 +795,7 @@ async def push_batch(
                 continue
 
             # Optionally load taxonomy data for role mapping
+            logger.info(f"[BATCH] [{role_input.role_name}] Checking taxonomy - draup_role_name: {input.draup_role_name or 'not provided'}")
             if not input.draup_role_name:
                 try:
                     taxonomy_provider = get_role_taxonomy_provider()
@@ -790,28 +803,36 @@ async def push_batch(
                     if taxonomy_entry:
                         input.taxonomy_entry = taxonomy_entry
                         input.draup_role_name = taxonomy_entry.get_draup_role()
+                        logger.info(f"[BATCH] [{role_input.role_name}] Taxonomy loaded - draup_role: {input.draup_role_name}")
+                    else:
+                        logger.info(f"[BATCH] [{role_input.role_name}] No taxonomy entry found (optional, continuing)")
                 except Exception as e:
-                    logger.warning(f"Failed to fetch taxonomy data for {role_input.role_name}: {e}")
+                    logger.warning(f"[BATCH] [{role_input.role_name}] Taxonomy fetch failed (optional): {e}")
 
             # Validate input
             validation_errors = input.validate_for_processing()
             if validation_errors:
-                logger.warning(
-                    f"Validation failed for {role_input.role_name}: {validation_errors}"
-                )
+                logger.warning(f"[BATCH] [{role_input.role_name}] Validation FAILED: {validation_errors}")
                 validation_failures.append({
                     "role_name": role_input.role_name,
                     "errors": validation_errors,
                 })
                 continue
 
+            logger.info(f"[BATCH] [{role_input.role_name}] Validation passed")
+
             # Generate workflow ID
             workflow_id = str(uuid.uuid4())
             workflow_ids.append(workflow_id)
             batch.add_workflow(workflow_id)
+            logger.info(f"[BATCH] [{role_input.role_name}] Workflow ID: {workflow_id}")
 
             if temporal_client:
                 # Submit workflow to Temporal
+                logger.info(f"[BATCH] [{role_input.role_name}] Submitting to Temporal...")
+                logger.info(f"[BATCH] [{role_input.role_name}]   documents: {len(input.documents)}")
+                for idx, doc in enumerate(input.documents):
+                    logger.info(f"[BATCH] [{role_input.role_name}]   doc[{idx}]: type={doc.type}, name={doc.name}, has_uri={bool(doc.uri)}, has_content={bool(doc.content)}")
                 try:
                     await temporal_client.start_workflow(
                         RoleOnboardingWorkflow,
@@ -820,9 +841,9 @@ async def push_batch(
                         task_queue=settings.temporal_task_queue,
                         execution_timeout=timedelta(minutes=input.options.timeout_minutes),
                     )
-                    logger.info(f"Batch workflow {workflow_id} submitted to Temporal for {role_input.role_name}")
+                    logger.info(f"[BATCH] [{role_input.role_name}] Submitted to Temporal successfully")
                 except Exception as e:
-                    logger.error(f"Failed to submit batch workflow to Temporal: {e}")
+                    logger.error(f"[BATCH] [{role_input.role_name}] Temporal submission FAILED: {e}")
                     # Remove from workflow_ids since submission failed
                     workflow_ids.remove(workflow_id)
                     batch.workflow_ids.remove(workflow_id)
@@ -832,7 +853,7 @@ async def push_batch(
                     })
             else:
                 # Fallback to standalone mode
-                logger.warning(f"Temporal not available, running workflow {workflow_id} in standalone mode")
+                logger.info(f"[BATCH] [{role_input.role_name}] Running in standalone mode (no Temporal)")
 
                 workflow = RoleOnboardingWorkflow(
                     workflow_id=workflow_id,
@@ -853,15 +874,18 @@ async def push_batch(
                         metadata={"batch_id": batch.batch_id},
                     )
                     status_client.set_status(initial_status)
+                    logger.info(f"[BATCH] [{role_input.role_name}] Initial status set in Redis")
                 except Exception as e:
-                    logger.warning(f"Failed to set initial status in Redis: {e}")
+                    logger.warning(f"[BATCH] [{role_input.role_name}] Failed to set initial status in Redis: {e}")
 
                 # Execute workflow in background
                 async def run_workflow(wf=workflow, inp=input):
                     try:
+                        logger.info(f"[BATCH] Starting background execution for workflow {wf.workflow_id}")
                         await wf.execute(inp)
+                        logger.info(f"[BATCH] Workflow {wf.workflow_id} completed successfully")
                     except Exception as e:
-                        logger.error(f"Workflow execution failed: {e}")
+                        logger.error(f"[BATCH] Workflow {wf.workflow_id} execution failed: {e}")
                         try:
                             status_client = get_status_client()
                             status_client.update_state(
@@ -878,8 +902,9 @@ async def push_batch(
         try:
             status_client = get_status_client()
             status_client.set_batch(batch)
+            logger.info(f"[BATCH] Batch record stored in Redis")
         except Exception as e:
-            logger.warning(f"Failed to store batch record in Redis: {e}")
+            logger.warning(f"[BATCH] Failed to store batch record in Redis: {e}")
 
         # Estimate total duration (assuming some parallelism)
         # With 3-5 concurrent workers, batch of N roles takes ~(N/4)*15 minutes
@@ -893,6 +918,12 @@ async def push_batch(
         if validation_failures:
             message += f", {len(validation_failures)} roles failed validation"
 
+        logger.info(f"[BATCH] ========== Batch complete: {len(workflow_ids)} queued, {len(validation_failures)} failed ==========")
+        logger.info(f"[BATCH] Workflow IDs: {workflow_ids}")
+        if validation_failures:
+            for vf in validation_failures:
+                logger.info(f"[BATCH] Failed: {vf['role_name']} - {vf['errors']}")
+
         return BatchPushResponse(
             batch_id=batch.batch_id,
             total_roles=len(request.roles),
@@ -905,7 +936,7 @@ async def push_batch(
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Batch push request failed: {e}")
+        logger.error(f"[BATCH] Batch push request failed: {e}", exc_info=True)
         raise HTTPException(
             status_code=500,
             detail={
