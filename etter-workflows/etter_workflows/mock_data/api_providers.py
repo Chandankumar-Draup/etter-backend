@@ -283,7 +283,7 @@ class APIDocumentProvider(DocumentProvider):
             document_id: Document UUID
 
         Returns:
-            Document dict with download info, or None
+            Flat document dict with download info merged in, or None
         """
         url = f"{self.base_url}/api/documents/{document_id}"
         params = {"generate_download_url": "true"}
@@ -293,11 +293,19 @@ class APIDocumentProvider(DocumentProvider):
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
             detail = response.json()
+
+            # Detail endpoint wraps data: {"document": {...}, "download": {...}}
+            # Unwrap to flat dict so _convert_to_ref() works uniformly
+            doc = detail.get("document", detail)
+            if not isinstance(doc, dict):
+                doc = detail
+            doc["download"] = detail.get("download")
+
             logger.info(f"[DOC_DETAIL] Document detail retrieved:")
-            logger.info(f"[DOC_DETAIL]   - filename: {detail.get('original_filename')}")
-            logger.info(f"[DOC_DETAIL]   - content_type: {detail.get('observed_content_type')}")
-            logger.info(f"[DOC_DETAIL]   - has_download_url: {bool(detail.get('download', {}).get('url'))}")
-            return detail
+            logger.info(f"[DOC_DETAIL]   - filename: {doc.get('original_filename')}")
+            logger.info(f"[DOC_DETAIL]   - content_type: {doc.get('observed_content_type')}")
+            logger.info(f"[DOC_DETAIL]   - has_download_url: {bool(doc.get('download', {}).get('url') if doc.get('download') else False)}")
+            return doc
 
         except Exception as e:
             logger.error(f"[DOC_DETAIL] Failed to fetch document detail: {e}", exc_info=True)
