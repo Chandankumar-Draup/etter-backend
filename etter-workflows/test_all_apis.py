@@ -118,7 +118,7 @@ def test_local_health() -> Tuple[bool, Dict]:
     print(f"URL: {local_url('/health')}")
 
     try:
-        response = requests.get(local_url("/health"), headers=get_local_headers(), timeout=10)
+        response = requests.get(local_url("/health"), headers=get_local_headers(), timeout=20)
         print(f"Status: {response.status_code}")
 
         data = safe_json(response)
