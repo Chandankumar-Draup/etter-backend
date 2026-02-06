@@ -7,7 +7,8 @@ They implement the same interfaces as the mock providers.
 APIs used:
 - GET /api/documents/ - List documents
 - GET /api/documents/{id}?generate_download_url=true - Get document with download URL
-- GET /api/extraction/files - List extracted files with roles filter
+- GET /api/taxonomy/roles - Role taxonomy (QA, used in local dev)
+- GET /api/extraction/role_taxonomy/company/0 - Role taxonomy (same server, QA/prod)
 """
 
 import logging
@@ -21,7 +22,7 @@ from etter_workflows.mock_data.documents import DocumentProvider
 from etter_workflows.models.inputs import RoleTaxonomyEntry, DocumentRef, DocumentType
 from etter_workflows.config.settings import get_settings
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("etter_app")
 
 # Context variable for propagating auth token from incoming requests to internal API calls
 # This allows internal HTTP calls to use the same auth as the original request
@@ -190,7 +191,7 @@ class APIDocumentProvider(DocumentProvider):
     """
     API-based document provider.
 
-    Calls GET /api/documents/ and /api/extraction/files to fetch document metadata.
+    Calls GET /api/documents/ to fetch document metadata.
     """
 
     def __init__(self, base_url: str = None, auth_token: str = None):
@@ -240,7 +241,7 @@ class APIDocumentProvider(DocumentProvider):
         status: str = "ready",
     ) -> List[Dict]:
         """
-        Fetch documents from API.
+        Fetch documents from GET /api/documents/ endpoint.
 
         Args:
             roles: Filter by role names
@@ -250,7 +251,6 @@ class APIDocumentProvider(DocumentProvider):
         Returns:
             List of document dicts from API
         """
-        # Try the S3 documents endpoint first (has proper roles filtering and returns roles field)
         url = f"{self.base_url}/api/documents/"
         params = {"limit": 1000}
         if roles:
@@ -259,58 +259,20 @@ class APIDocumentProvider(DocumentProvider):
             params["status"] = status
 
         try:
-            logger.info(f"[DOC_FETCH] Fetching documents from documents API: {url}")
-            logger.info(f"[DOC_FETCH] Request params: {params}")
+            logger.info(f"[DOC_FETCH] Fetching documents from: {url}")
+            logger.info(f"[DOC_FETCH] Params: {params}")
             response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
             response.raise_for_status()
 
             data = response.json()
             docs = data.get("data", {}).get("documents", [])
-            logger.info(f"[DOC_FETCH] Documents API response: {len(docs)} documents found")
-            if docs:
-                for doc in docs[:5]:  # Log first 5 docs
-                    logger.info(f"[DOC_FETCH]   - {doc.get('original_filename')} (id={doc.get('id')}, roles={doc.get('roles')}, status={doc.get('status')})")
-                return docs
+            logger.info(f"[DOC_FETCH] Found {len(docs)} documents")
+            for doc in docs[:5]:
+                logger.info(f"[DOC_FETCH]   - {doc.get('original_filename')} (id={doc.get('id')}, roles={doc.get('roles')}, status={doc.get('status')})")
+            return docs
 
         except Exception as e:
-            logger.warning(f"[DOC_FETCH] Documents API failed: {e}, trying extraction API...")
-
-        # Fallback to extraction/files endpoint
-        url = f"{self.base_url}/api/extraction/files"
-        params = {"page_size": 1000}
-        if roles:
-            params["roles"] = roles[0]  # API takes single role
-        if company_instance_name:
-            params["company_instance_name"] = company_instance_name
-        if status:
-            params["status"] = "COMPLETED"  # Extraction status
-
-        try:
-            logger.info(f"[DOC_FETCH] Fetching documents from extraction API: {url}")
-            logger.info(f"[DOC_FETCH] Request params: {params}")
-            response = requests.get(url, headers=self._get_headers(), params=params, timeout=30)
-            response.raise_for_status()
-
-            data = response.json()
-            files = data.get("files", [])
-            logger.info(f"[DOC_FETCH] Extraction API response: {len(files)} files found")
-            if files:
-                for f in files[:5]:  # Log first 5 files
-                    logger.info(f"[DOC_FETCH]   - {f.get('original_filename')} (id={f.get('document_id')}, status={f.get('document_status')})")
-                return [
-                    {
-                        "id": f.get("document_id"),
-                        "original_filename": f.get("original_filename"),
-                        "status": f.get("document_status"),
-                        "observed_content_type": f.get("content_type"),
-                        "roles": f.get("roles", []),  # Try to get roles from response
-                        "created_at": f.get("created_at"),
-                    }
-                    for f in files
-                ]
-
-        except Exception as e:
-            logger.error(f"[DOC_FETCH] Failed to fetch documents from API: {e}")
+            logger.error(f"[DOC_FETCH] Failed to fetch documents: {e}")
             return []
 
     def _fetch_document_detail(self, document_id: str) -> Optional[Dict]:
