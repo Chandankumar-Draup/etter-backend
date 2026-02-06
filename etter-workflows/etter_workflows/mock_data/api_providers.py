@@ -40,24 +40,32 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to localhost:7071)
-            auth_token: Bearer token for auth (defaults to settings)
+            base_url: API base URL (defaults to QA in local dev, localhost in QA/prod)
+            auth_token: Bearer token for auth
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_etter_backend_api_url()
-        self.auth_token = auth_token or settings.etter_auth_token
         self._is_local = not settings._is_qa_or_prod_environment()
+        if self._is_local:
+            # Local dev: fetch taxonomy from QA Etter API
+            self.base_url = base_url or settings.qa_etter_api_url
+            self.auth_token = auth_token or settings.qa_auth_token
+        else:
+            # QA/Prod: fetch from same server (localhost)
+            self.base_url = base_url or settings.get_etter_backend_api_url()
+            self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, List[RoleTaxonomyEntry]] = {}
 
     def _get_headers(self) -> Dict[str, str]:
         """Get request headers with auth.
 
-        In local development, skips auth headers so internal API calls
-        use the local auth bypass. In QA/prod, propagates the auth token
-        from the incoming request context.
+        In local dev, uses QA auth token for external QA API calls.
+        In QA/prod, propagates the auth token from the incoming request context.
         """
         headers = {"Content-Type": "application/json"}
         if self._is_local:
+            # Local: use QA auth token
+            if self.auth_token:
+                headers["Authorization"] = f"Bearer {self.auth_token}"
             return headers
         # QA/Prod: propagate auth token from incoming request
         context_token = auth_token_context.get()
@@ -72,7 +80,7 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
         Fetch roles from API.
 
         Args:
-            company_name: Company name (used for logging, API uses auth token for tenant)
+            company_name: Company name
             job_title: Optional job title to filter
             status_filter: Optional approval_status filter
 
@@ -83,13 +91,20 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             logger.warning("No company_name provided")
             return []
 
-        # Use extraction/role_taxonomy endpoint
-        url = f"{self.base_url}/api/extraction/role_taxonomy/company/0"  # company_id from auth
-        params = {}
-        if job_title:
-            params["job_title"] = job_title
-        if status_filter:
-            params["status"] = status_filter
+        if self._is_local:
+            # Local dev: use QA taxonomy endpoint (same as test_all_apis.py --data-only)
+            url = f"{self.base_url}/api/taxonomy/roles"
+            params = {"company_name": company_name}
+            if job_title:
+                params["job_title"] = job_title
+        else:
+            # QA/Prod: use extraction endpoint on same server
+            url = f"{self.base_url}/api/extraction/role_taxonomy/company/0"
+            params = {}
+            if job_title:
+                params["job_title"] = job_title
+            if status_filter:
+                params["status"] = status_filter
 
         try:
             logger.info(f"Fetching roles from {url}")
@@ -183,24 +198,32 @@ class APIDocumentProvider(DocumentProvider):
         Initialize the API provider.
 
         Args:
-            base_url: API base URL (defaults to localhost:7071)
-            auth_token: Bearer token for auth (defaults to settings)
+            base_url: API base URL (defaults to QA in local dev, localhost in QA/prod)
+            auth_token: Bearer token for auth
         """
         settings = get_settings()
-        self.base_url = base_url or settings.get_etter_backend_api_url()
-        self.auth_token = auth_token or settings.etter_auth_token
         self._is_local = not settings._is_qa_or_prod_environment()
+        if self._is_local:
+            # Local dev: fetch documents from QA Etter API
+            self.base_url = base_url or settings.qa_etter_api_url
+            self.auth_token = auth_token or settings.qa_auth_token
+        else:
+            # QA/Prod: fetch from same server (localhost)
+            self.base_url = base_url or settings.get_etter_backend_api_url()
+            self.auth_token = auth_token or settings.etter_auth_token
         self._cache: Dict[str, DocumentRef] = {}
 
     def _get_headers(self) -> Dict[str, str]:
         """Get request headers with auth.
 
-        In local development, skips auth headers so internal API calls
-        use the local auth bypass. In QA/prod, propagates the auth token
-        from the incoming request context.
+        In local dev, uses QA auth token for external QA API calls.
+        In QA/prod, propagates the auth token from the incoming request context.
         """
         headers = {"Content-Type": "application/json"}
         if self._is_local:
+            # Local: use QA auth token
+            if self.auth_token:
+                headers["Authorization"] = f"Bearer {self.auth_token}"
             return headers
         # QA/Prod: propagate auth token from incoming request
         context_token = auth_token_context.get()

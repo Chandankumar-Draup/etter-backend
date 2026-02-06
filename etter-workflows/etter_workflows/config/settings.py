@@ -184,6 +184,17 @@ class Settings(BaseSettings):
         description="Bearer token for API authentication (ETTER_AUTH_TOKEN)"
     )
 
+    # QA API Configuration (used by api_providers when running locally)
+    # In local dev, documents and taxonomy are fetched from QA Etter API
+    qa_etter_api_url: str = Field(
+        default="https://qa-etter.draup.technology",
+        description="QA Etter API URL for documents/taxonomy in local dev"
+    )
+    qa_auth_token: Optional[str] = Field(
+        default=None,
+        description="QA auth token for local dev API calls (QA_AUTH_TOKEN)"
+    )
+
     # Environment detection (used to determine which API URL to use)
     etter_db_host: str = Field(
         default="",
