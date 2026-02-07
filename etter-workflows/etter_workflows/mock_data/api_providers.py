@@ -344,6 +344,7 @@ class APIDocumentProvider(DocumentProvider):
             name=doc_data.get("original_filename"),
             content=None,
             metadata={
+                # Existing fields (backward compatible)
                 "id": doc_id,
                 "status": doc_data.get("status"),
                 "roles": doc_data.get("roles", []),
@@ -351,6 +352,19 @@ class APIDocumentProvider(DocumentProvider):
                 "download_url": download_url,
                 "updated_at": doc_data.get("updated_at"),
                 "created_at": doc_data.get("created_at"),
+                # Additional fields from API response
+                "tenant_id": doc_data.get("tenant_id"),
+                "declared_size_bytes": doc_data.get("declared_size_bytes"),
+                "observed_size_bytes": doc_data.get("observed_size_bytes"),
+                "declared_content_type": doc_data.get("declared_content_type"),
+                "observed_content_type": doc_data.get("observed_content_type"),
+                "created_by": doc_data.get("created_by"),
+                "completed_at": doc_data.get("completed_at"),
+                "custom_metadata": doc_data.get("custom_metadata"),
+                "legal_hold": doc_data.get("legal_hold"),
+                "upload_mode": doc_data.get("upload_mode"),
+                "folder_path": doc_data.get("folder_path"),
+                "download_expires_in": download_info.get("expires_in") if download_info else None,
             }
         )
 
