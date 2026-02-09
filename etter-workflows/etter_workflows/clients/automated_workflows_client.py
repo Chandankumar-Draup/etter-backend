@@ -190,6 +190,7 @@ class AutomatedWorkflowsClient:
         jd_metadata: Optional[Dict[str, Any]] = None,
         format_with_llm: bool = True,
         source: Optional[str] = None,
+        filename: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Link a job description to a CompanyRole via API.
@@ -205,6 +206,7 @@ class AutomatedWorkflowsClient:
             jd_metadata: Optional document metadata (document_id, roles, etc.)
             format_with_llm: Whether to format JD with LLM
             source: Source identifier
+            filename: Original filename of the document (e.g. "Pharmacist_JD.pdf")
 
         Returns:
             Dict with linking status
@@ -212,6 +214,7 @@ class AutomatedWorkflowsClient:
         logger.info(f"Linking JD to CompanyRole via API: {company_role_id}")
         logger.info(f"  - jd_content: {'Yes (' + str(len(jd_content)) + ' chars)' if jd_content else 'No'}")
         logger.info(f"  - jd_uri: {'Yes' if jd_uri else 'No'}")
+        logger.info(f"  - filename: {filename}")
 
         payload = {
             "company_role_id": company_role_id,
@@ -227,6 +230,8 @@ class AutomatedWorkflowsClient:
             payload["jd_metadata"] = jd_metadata
         if source:
             payload["source"] = source
+        if filename:
+            payload["filename"] = filename
 
         result = self._request(
             "POST",

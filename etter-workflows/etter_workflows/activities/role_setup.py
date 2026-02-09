@@ -103,6 +103,7 @@ class RoleSetupActivity(BaseActivity):
 
             # Step 2: Get and link job description
             jd_content = None
+            jd_filename = None
             jd_linked = False
 
             # Try to get JD from documents
@@ -114,6 +115,7 @@ class RoleSetupActivity(BaseActivity):
 
                 if doc.type == DocumentType.JOB_DESCRIPTION:
                     jd_content = doc.content
+                    jd_filename = doc.name
                     break
 
             # Try to get JD from taxonomy entry
@@ -132,6 +134,7 @@ class RoleSetupActivity(BaseActivity):
                 )
                 if doc_ref:
                     jd_content = self.doc_provider.get_document_content(doc_ref)
+                    jd_filename = jd_filename or doc_ref.name
 
             # Link JD if we have content via API
             if jd_content:
@@ -141,6 +144,7 @@ class RoleSetupActivity(BaseActivity):
                     jd_title=role_name,
                     format_with_llm=True,
                     source="self_service_pipeline",
+                    filename=jd_filename,
                 )
                 jd_linked = link_result.get("jd_linked", False)
                 logger.info(f"Linked JD to CompanyRole via API: {company_role_id}")
@@ -251,6 +255,7 @@ async def link_job_description(
     jd_metadata: Optional[Dict[str, Any]] = None,
     format_with_llm: bool = True,
     context: Optional[ExecutionContext] = None,
+    filename: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
     Link a job description to a CompanyRole via Automated Workflows API.
@@ -266,6 +271,7 @@ async def link_job_description(
         jd_metadata: Optional document metadata (document_id, roles, etc.)
         format_with_llm: Whether to format JD with LLM
         context: Execution context
+        filename: Original filename of the document (e.g. "Pharmacist_JD.pdf")
 
     Returns:
         Dict with linking status
@@ -282,6 +288,7 @@ async def link_job_description(
         if jd_uri:
             logger.info(f"  - jd_uri preview: {jd_uri[:80]}...")
         logger.info(f"  - jd_title: {jd_title}")
+        logger.info(f"  - filename: {filename}")
         logger.info(f"  - jd_metadata keys: {list(jd_metadata.keys()) if jd_metadata else 'None'}")
         logger.info("=" * 60)
 
@@ -295,6 +302,7 @@ async def link_job_description(
             jd_metadata=jd_metadata,
             format_with_llm=format_with_llm,
             source="self_service_pipeline",
+            filename=filename,
         )
 
         logger.info(f"API Response:")
