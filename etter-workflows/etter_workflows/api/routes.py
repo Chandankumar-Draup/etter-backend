@@ -219,18 +219,10 @@ async def push_role(
             except Exception as e:
                 logger.warning(f"[PUSH] Failed to auto-fetch documents: {e}", exc_info=True)
 
-        # Validate that we have documents (either from request or auto-fetched)
+        # Log document status - proceed even without documents (create_company_role still runs)
         logger.info(f"[PUSH] After auto-fetch - has_documents(): {input.has_documents()}")
         if not input.has_documents():
-            logger.error(f"[PUSH] No documents available - returning 400")
-            raise HTTPException(
-                status_code=400,
-                detail={
-                    "error": "VALIDATION_ERROR",
-                    "message": f"No documents found for role '{request.role_name}'. Provide documents in request or ensure documents are uploaded for this role.",
-                    "recoverable": False,
-                },
-            )
+            logger.warning(f"[PUSH] No documents available for role '{request.role_name}' - workflow will still create company role")
 
         # Optionally load taxonomy data for role mapping (does not replace documents)
         # NOTE: Taxonomy is optional - if lookup fails, workflow continues without it
@@ -785,14 +777,9 @@ async def push_batch(
                 except Exception as e:
                     logger.warning(f"[BATCH] [{role_input.role_name}] Auto-fetch failed: {e}", exc_info=True)
 
-            # Validate that we have documents (either from request or auto-fetched)
+            # Log document status - proceed even without documents (create_company_role still runs)
             if not input.has_documents():
-                logger.warning(f"[BATCH] [{role_input.role_name}] SKIPPED - no documents available")
-                validation_failures.append({
-                    "role_name": role_input.role_name,
-                    "errors": [f"No documents found. Provide documents in request or ensure documents are uploaded for this role."],
-                })
-                continue
+                logger.warning(f"[BATCH] [{role_input.role_name}] No documents available - workflow will still create company role")
 
             # Optionally load taxonomy data for role mapping
             logger.info(f"[BATCH] [{role_input.role_name}] Checking taxonomy - draup_role_name: {input.draup_role_name or 'not provided'}")

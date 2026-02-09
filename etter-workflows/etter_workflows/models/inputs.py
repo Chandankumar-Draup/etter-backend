@@ -226,6 +226,9 @@ class RoleOnboardingInput(BaseModel):
         """
         Validate that the input is ready for processing.
 
+        Only company_id and role_name are required. Documents are optional -
+        the workflow will still call create_company_role without them.
+
         Returns:
             List of validation error messages (empty if valid)
         """
@@ -236,19 +239,6 @@ class RoleOnboardingInput(BaseModel):
 
         if not self.role_name:
             errors.append("role_name is required")
-
-        # Must have at least a JD or taxonomy entry with description
-        has_jd = self.get_job_description() is not None
-        has_taxonomy_jd = (
-            self.taxonomy_entry is not None
-            and self.taxonomy_entry.has_job_description()
-        )
-
-        if not has_jd and not has_taxonomy_jd:
-            errors.append(
-                "At least one document (job_description) or taxonomy entry "
-                "with general_summary is required"
-            )
 
         return errors
 
