@@ -510,6 +510,17 @@ class RoleOnboardingWorkflow(BaseWorkflow):
         if not company_role_id:
             raise ValueError("company_role_id not available from role_setup step")
 
+        # Skip AI assessment if no documents were provided
+        if not input.has_documents():
+            if not is_temporal_workflow_context():
+                logger.info(f"Skipping AI assessment - no documents available")
+            elif workflow:
+                workflow.logger.info("Skipping AI assessment - no documents available")
+            return ActivityResult.create_success(
+                id=self.workflow_id,
+                result={"assessment_outputs": None, "skipped": True, "reason": "no_documents"},
+            )
+
         # Prepare activity inputs
         activity_inputs = {
             "company_role_id": company_role_id,
