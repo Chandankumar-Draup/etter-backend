@@ -338,6 +338,7 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             jd_content = None
             jd_uri = None
             jd_metadata = None
+            filename = None
 
             # Get documents - handle both list and other iterables
             docs_list = list(input.documents) if input.documents else []
@@ -358,10 +359,11 @@ class RoleOnboardingWorkflow(BaseWorkflow):
             try:
                 jd_doc = input.get_job_description()
                 if jd_doc:
-                    workflow.logger.info(f"Found JD via get_job_description(): type={jd_doc.type}, uri={bool(jd_doc.uri)}")
+                    workflow.logger.info(f"Found JD via get_job_description(): type={jd_doc.type}, uri={bool(jd_doc.uri)}, name={getattr(jd_doc, 'name', None)}")
                     jd_content = jd_doc.content
                     jd_uri = jd_doc.uri
                     jd_metadata = jd_doc.metadata if hasattr(jd_doc, 'metadata') else None
+                    filename = getattr(jd_doc, 'name', None)
                 else:
                     workflow.logger.info("get_job_description() returned None")
             except Exception as e:
@@ -395,7 +397,8 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                         jd_content = doc_content
                         jd_uri = doc_uri
                         jd_metadata = doc_metadata
-                        workflow.logger.info(f"Found JD in loop: uri={bool(jd_uri)}")
+                        filename = doc.get("name") if isinstance(doc, dict) else getattr(doc, 'name', None)
+                        workflow.logger.info(f"Found JD in loop: uri={bool(jd_uri)}, filename={filename}")
                         break
 
                 # If still no JD, use the first document with a URI (fallback)
@@ -406,16 +409,19 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                             doc_uri = doc.get("uri")
                             doc_content = doc.get("content")
                             doc_metadata = doc.get("metadata")
+                            doc_name = doc.get("name")
                         else:
                             doc_uri = getattr(doc, 'uri', None)
                             doc_content = getattr(doc, 'content', None)
                             doc_metadata = getattr(doc, 'metadata', None)
+                            doc_name = getattr(doc, 'name', None)
 
                         if doc_uri or doc_content:
                             jd_uri = doc_uri
                             jd_content = doc_content
                             jd_metadata = doc_metadata
-                            workflow.logger.info(f"Using fallback document: uri={bool(jd_uri)}")
+                            filename = doc_name
+                            workflow.logger.info(f"Using fallback document: uri={bool(jd_uri)}, filename={filename}")
                             break
 
             # Try taxonomy entry if no JD in documents (no content and no uri)
@@ -438,7 +444,7 @@ class RoleOnboardingWorkflow(BaseWorkflow):
 
             # Call link_job_description if we have company_role_id AND (content OR uri OR documents exist)
             if company_role_id and (jd_content or jd_uri or docs_list):
-                workflow.logger.info(f"Calling link_job_description with uri: {jd_uri[:100] if jd_uri else 'None'}, content_len: {len(jd_content) if jd_content else 0}")
+                workflow.logger.info(f"Calling link_job_description with uri: {jd_uri[:100] if jd_uri else 'None'}, content_len: {len(jd_content) if jd_content else 0}, filename: {filename}")
                 jd_result = await workflow.execute_activity(
                     link_job_description,
                     args=[
@@ -449,6 +455,7 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                         jd_metadata,      # jd_metadata
                         True,             # format_with_llm
                         None,             # context
+                        filename,      # filename (original document filename)
                     ],
                     start_to_close_timeout=timedelta(seconds=300),
                     retry_policy=RetryPolicy(
@@ -502,6 +509,17 @@ class RoleOnboardingWorkflow(BaseWorkflow):
         company_role_id = workflow_state.get("company_role_id")
         if not company_role_id:
             raise ValueError("company_role_id not available from role_setup step")
+
+        # Skip AI assessment if no documents were provided
+        if not input.has_documents():
+            if not is_temporal_workflow_context():
+                logger.info(f"Skipping AI assessment - no documents available")
+            elif workflow:
+                workflow.logger.info("Skipping AI assessment - no documents available")
+            return ActivityResult.create_success(
+                id=self.workflow_id,
+                result={"assessment_outputs": None, "skipped": True, "reason": "no_documents"},
+            )
 
         # Prepare activity inputs
         activity_inputs = {
