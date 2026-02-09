@@ -103,7 +103,7 @@ class RoleSetupActivity(BaseActivity):
 
             # Step 2: Get and link job description
             jd_content = None
-            jd_filename = None
+            filename = None
             jd_linked = False
 
             # Try to get JD from documents
@@ -115,7 +115,7 @@ class RoleSetupActivity(BaseActivity):
 
                 if doc.type == DocumentType.JOB_DESCRIPTION:
                     jd_content = doc.content
-                    jd_filename = doc.name
+                    filename = doc.name
                     break
 
             # Try to get JD from taxonomy entry
@@ -134,7 +134,7 @@ class RoleSetupActivity(BaseActivity):
                 )
                 if doc_ref:
                     jd_content = self.doc_provider.get_document_content(doc_ref)
-                    jd_filename = jd_filename or doc_ref.name
+                    filename = filename or doc_ref.name
 
             # Link JD if we have content via API
             if jd_content:
@@ -144,7 +144,7 @@ class RoleSetupActivity(BaseActivity):
                     jd_title=role_name,
                     format_with_llm=True,
                     source="self_service_pipeline",
-                    filename=jd_filename,
+                    filename=filename,
                 )
                 jd_linked = link_result.get("jd_linked", False)
                 logger.info(f"Linked JD to CompanyRole via API: {company_role_id}")
