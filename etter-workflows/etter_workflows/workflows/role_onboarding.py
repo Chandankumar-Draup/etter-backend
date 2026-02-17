@@ -432,6 +432,9 @@ class RoleOnboardingWorkflow(BaseWorkflow):
                 if general_summary or duties:
                     jd_content = f"{general_summary}\n\n{duties}".strip()
 
+            # Track whether real JD content was resolved (for downstream steps)
+            workflow_state["has_jd_content"] = bool(jd_content or jd_uri)
+
             # MANDATORY: Call link_job_description if we have documents
             # The user explicitly requested this activity to NOT be optional
             # If documents were passed to the workflow, we MUST call this activity
@@ -485,6 +488,7 @@ class RoleOnboardingWorkflow(BaseWorkflow):
         # Store company_role_id in workflow state
         if result.success and result.result:
             workflow_state["company_role_id"] = result.result.get("company_role_id")
+            workflow_state.setdefault("has_jd_content", result.result.get("jd_linked", False))
 
         return result
 
@@ -510,15 +514,16 @@ class RoleOnboardingWorkflow(BaseWorkflow):
         if not company_role_id:
             raise ValueError("company_role_id not available from role_setup step")
 
-        # Skip AI assessment if no documents were provided
-        if not input.has_documents():
+        # Skip AI assessment if no documents and no JD content was resolved by role_setup
+        has_jd_content = workflow_state.get("has_jd_content", False)
+        if not input.has_documents() and not has_jd_content:
             if not is_temporal_workflow_context():
-                logger.info(f"Skipping AI assessment - no documents available")
+                logger.info(f"Skipping AI assessment - no documents and no JD content available")
             elif workflow:
-                workflow.logger.info("Skipping AI assessment - no documents available")
+                workflow.logger.info("Skipping AI assessment - no documents and no JD content available")
             return ActivityResult.create_success(
                 id=self.workflow_id,
-                result={"assessment_outputs": None, "skipped": True, "reason": "no_documents"},
+                result={"assessment_outputs": None, "skipped": True, "reason": "no_jd_content"},
             )
 
         # Prepare activity inputs
