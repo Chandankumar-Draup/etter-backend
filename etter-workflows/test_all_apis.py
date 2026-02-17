@@ -16,6 +16,8 @@ Usage:
     python test_all_apis.py --qa-doc-test       # Test LOCAL push with real QA document
     python test_all_apis.py --qa-push-test      # Test QA /push and /push-batch (auto-fetch)
     python test_all_apis.py --qa-push-test --company "Acme" --role "Pharmacist"
+    python test_all_apis.py --local-batch-test  # Test LOCAL /push-batch (auto-fetch)
+    python test_all_apis.py --local-batch-test --company "Acme Corporation" --role "Pharmacist"
 
 Prerequisites:
     - Local server running at http://localhost:7071 (for local tests)
@@ -40,11 +42,12 @@ LOCAL_API_PREFIX = "/api/v1/pipeline"
 # QA API Configuration (for data APIs)
 QA_API_BASE_URL = "https://qa-etter.draup.technology"
 QA_API_PREFIX = "/api/v1/pipeline"
-QA_AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzcxMTQ4MDQ2LCJqdGkiOiI3NTc2NzYxNS1kZDk1LTQ4NmEtYjhjMy1kYzg2ZTMwN2ZhMjUifQ.BrP4aQ2P5ZF2x1jK10vgh015y4amcFyAFKv700roGLI"
+QA_AUTH_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzczODMwMTQwLCJqdGkiOiIwOTEwMTU2OS05NjNiLTQxOTUtOWMzYi00ZGY3OWMwYWQzMTIifQ.Gtg168kAcxiKrIUpy8GqWxI609tf9pzfrLVGwduxvpY"
 
 # Test Data
 TEST_COMPANY = "Acme Corporation"
 TEST_ROLE = "Pharmacist"
+# TEST_ROLE = "Data Analyst Sample Test"
 TEST_JD = """
 # Pharmacist
 
@@ -118,7 +121,7 @@ def test_local_health() -> Tuple[bool, Dict]:
     print(f"URL: {local_url('/health')}")
 
     try:
-        response = requests.get(local_url("/health"), headers=get_local_headers(), timeout=10)
+        response = requests.get(local_url("/health"), headers=get_local_headers(), timeout=20)
         print(f"Status: {response.status_code}")
 
         data = safe_json(response)
@@ -236,7 +239,7 @@ def test_push_with_docs() -> Tuple[bool, Optional[str], Dict]:
     print(f"\nPayload:")
     print(f"  company_id: {payload['company_id']}")
     print(f"  role_name: {payload['role_name']}")
-    print(f"  documents: 1 (job_description, {len(TEST_JD)} chars)")
+    # print(f"  documents: 1 (job_description, {len(TEST_JD)} chars)")
 
     try:
         response = requests.post(
@@ -736,6 +739,9 @@ def test_qa_role_taxonomy() -> Tuple[bool, Dict]:
 
         data = safe_json(response)
 
+        print("data, response")
+        print(json.dumps(data, indent=4))
+
         if response.status_code != 200:
             print(f"Error: {data}")
             # Taxonomy is optional - warn but don't fail
@@ -815,6 +821,9 @@ def test_qa_documents_for_role() -> Tuple[bool, Dict]:
 
         data = safe_json(response)
 
+        print("data documents")
+        print(json.dumps(data, indent=2))
+
         if response.status_code != 200:
             print(f"Error: {data}")
             print_result(False, "Failed to fetch documents for role")
@@ -879,6 +888,8 @@ def test_qa_document_detail(doc_id: str = None) -> Tuple[bool, Dict]:
         print(f"Status: {response.status_code}")
 
         data = safe_json(response)
+
+        print(json.dumps(data, indent=2))
 
         if response.status_code != 200:
             print(f"Error: {data}")

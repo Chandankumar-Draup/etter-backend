@@ -191,7 +191,7 @@ class Settings(BaseSettings):
         description="QA Etter API URL for documents/taxonomy in local dev"
     )
     qa_auth_token: Optional[str] = Field(
-        default=None,
+        default="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzczODMwMTQwLCJqdGkiOiIwOTEwMTU2OS05NjNiLTQxOTUtOWMzYi00ZGY3OWMwYWQzMTIifQ.Gtg168kAcxiKrIUpy8GqWxI609tf9pzfrLVGwduxvpY",
         description="QA auth token for local dev API calls (QA_AUTH_TOKEN)"
     )
 
@@ -297,11 +297,12 @@ class Settings(BaseSettings):
 
     def get_temporal_namespace(self) -> str:
         """Get Temporal namespace based on environment."""
-        if self.is_production:
-            return "etter-prod"
-        elif self.environment == "qa" or self._is_qa_environment():
-            return "etter-dev"  # QA uses etter-dev namespace
-        return self.temporal_namespace
+        return "etter-dev"
+        # if self.is_production:
+        #     return "etter-prod"
+        # elif self.environment == "qa" or self._is_qa_environment():
+        #     return "etter-dev"  # QA uses etter-dev namespace
+        # return self.temporal_namespace
 
     def _is_qa_or_prod_environment(self) -> bool:
         """Check if running in QA or production based on DB host (matches getCurrentEnvironment logic)."""

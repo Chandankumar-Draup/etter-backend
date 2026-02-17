@@ -3,8 +3,9 @@ from draup_packages.draup_email import DraupEmail
 from common.common_utils import TEAM_NAME, PURPOSE
 
 email_handler = DraupEmail(
-    team_name=TEAM_NAME, purpose=PURPOSE,
+team_name=TEAM_NAME, purpose=PURPOSE,
 )
+
 logger = logging.getLogger('iris-logger')
 
 
