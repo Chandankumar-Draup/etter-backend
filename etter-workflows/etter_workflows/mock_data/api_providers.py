@@ -92,20 +92,25 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             logger.warning("No company_name provided")
             return []
 
-        if self._is_local:
-            # Local dev: use QA taxonomy endpoint (same as test_all_apis.py --data-only)
-            url = f"{self.base_url}/api/taxonomy/roles"
-            params = {"company_name": company_name}
-            if job_title:
-                params["job_title"] = job_title
-        else:
-            # QA/Prod: use extraction endpoint on same server
-            url = f"{self.base_url}/api/extraction/role_taxonomy/company/0"
-            params = {}
-            if job_title:
-                params["job_title"] = job_title
-            if status_filter:
-                params["status"] = status_filter
+        url = f"{self.base_url}/api/taxonomy/roles"
+        params = {"company_name": company_name}
+        if job_title:
+            params["job_title"] = job_title
+
+        # if self._is_local:
+        #     # Local dev: use QA taxonomy endpoint (same as test_all_apis.py --data-only)
+        #     url = f"{self.base_url}/api/taxonomy/roles"
+        #     params = {"company_name": company_name}
+        #     if job_title:
+        #         params["job_title"] = job_title
+        # else:
+        #     # QA/Prod: use extraction endpoint on same server
+        #     url = f"{self.base_url}/api/extraction/role_taxonomy/company/0"
+        #     params = {}
+        #     if job_title:
+        #         params["job_title"] = job_title
+        #     if status_filter:
+        #         params["status"] = status_filter
 
         try:
             logger.info(f"Fetching roles from {url}")
