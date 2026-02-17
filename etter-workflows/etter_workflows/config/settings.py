@@ -191,7 +191,7 @@ class Settings(BaseSettings):
         description="QA Etter API URL for documents/taxonomy in local dev"
     )
     qa_auth_token: Optional[str] = Field(
-        default="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzcxMTQ4MDQ2LCJqdGkiOiI3NTc2NzYxNS1kZDk1LTQ4NmEtYjhjMy1kYzg2ZTMwN2ZhMjUifQ.BrP4aQ2P5ZF2x1jK10vgh015y4amcFyAFKv700roGLI",
+        default="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mzk2MywiZXhwIjoxNzczODMwMTQwLCJqdGkiOiIwOTEwMTU2OS05NjNiLTQxOTUtOWMzYi00ZGY3OWMwYWQzMTIifQ.Gtg168kAcxiKrIUpy8GqWxI609tf9pzfrLVGwduxvpY",
         description="QA auth token for local dev API calls (QA_AUTH_TOKEN)"
     )
 

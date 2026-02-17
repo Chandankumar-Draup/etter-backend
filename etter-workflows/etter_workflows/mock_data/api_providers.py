@@ -131,6 +131,9 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
 
     def _convert_to_entry(self, role_data: Dict) -> RoleTaxonomyEntry:
         """Convert API response to RoleTaxonomyEntry."""
+        description = role_data.get("job_description") if role_data.get("job_description") else role_data.get("general_summary", "")
+        general_summary = description if description and len(description) > 50 else None
+        logger.info("general summary", general_summary)
         return RoleTaxonomyEntry(
             job_id=str(role_data.get("job_id", role_data.get("id", ""))),
             job_role=role_data.get("job_role", ""),
@@ -142,7 +145,7 @@ class APIRoleTaxonomyProvider(RoleTaxonomyProvider):
             management_level=role_data.get("management_level"),
             pay_grade=role_data.get("pay_grade"),
             draup_role=role_data.get("draup_role"),
-            general_summary=role_data.get("general_summary"),
+            general_summary=general_summary,
             duties_responsibilities=role_data.get("duties_responsibilities"),
             source=role_data.get("source", "api"),
             status=role_data.get("approval_status", "pending"),
@@ -207,11 +210,14 @@ class APIDocumentProvider(DocumentProvider):
         if self._is_local:
             # Local dev: fetch documents from QA Etter API
             self.base_url = base_url or settings.qa_etter_api_url
+            logger.info(f"auth token, {auth_token}")
             self.auth_token = auth_token or settings.qa_auth_token
+            logger.info(f"self auth token, {self.auth_token}")
         else:
             # QA/Prod: fetch from same server (localhost)
             self.base_url = base_url or settings.get_etter_backend_api_url()
             self.auth_token = auth_token or settings.etter_auth_token
+            logger.info(f"auth token, {self.auth_token}")
         self._cache: Dict[str, DocumentRef] = {}
 
     def _get_headers(self) -> Dict[str, str]:
