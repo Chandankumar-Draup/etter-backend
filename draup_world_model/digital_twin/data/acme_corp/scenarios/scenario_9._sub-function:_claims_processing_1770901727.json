@@ -1,0 +1,3523 @@
+{
+  "_metadata": {
+    "config": {
+      "name": "9. Sub-Function: Claims Processing",
+      "simulation_type": "role_redesign",
+      "scope_type": "sub_function",
+      "scope_name": "Claims Processing",
+      "parameters": {
+        "automation_factor": 0.5
+      },
+      "constraints": {},
+      "timeline_months": 36
+    },
+    "created_at": 1770901727.164505,
+    "completed_at": 1770901727.767139
+  },
+  "result": {
+    "engine": "v2_time_stepped",
+    "simulation_type": "role_redesign",
+    "trajectory_summary": {
+      "engine": "v2_time_stepped",
+      "timeline_months": 36,
+      "theoretical_max": {
+        "freed_headcount": 295.0,
+        "gross_savings": 39052635.0
+      },
+      "actual_at_end": {
+        "adoption_level": 0.999,
+        "effective_freed_hc": 258.3,
+        "cumulative_savings": 19351072.12,
+        "cumulative_costs": 5829773.44,
+        "cumulative_net": 13521298.68,
+        "npv": 10515304.35,
+        "roi_pct": 231.9
+      },
+      "human_factors_final": {
+        "resistance": 0.0,
+        "morale": 1.0,
+        "proficiency": 0.7675,
+        "culture_readiness": 0.692,
+        "composite_multiplier": 0.8649
+      },
+      "payback_month": 21,
+      "breakeven_month": 21
+    },
+    "milestones": [
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0259,
+          "delta": 0.0102
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 4.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 17977.27,
+          "monthly_costs": 356701.57,
+          "monthly_net": -338724.29,
+          "cumulative_savings": 33778.7,
+          "cumulative_costs": 1250380.16,
+          "cumulative_net": -1216601.46,
+          "npv_to_date": -1198496.01
+        },
+        "human_factors": {
+          "resistance": 0.5142,
+          "morale": 0.7167,
+          "proficiency": 0.1184,
+          "culture_readiness": 0.3599,
+          "composite_multiplier": 0.4087
+        },
+        "productivity_multiplier": 0.9,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.0694,
+          "delta": 0.017
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 11.6,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 0.7,
+          "redeployed_cumulative": 0.9,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 49029.82,
+          "monthly_costs": 179825.42,
+          "monthly_net": -130795.6,
+          "cumulative_savings": 146078.84,
+          "cumulative_costs": 1965582.25,
+          "cumulative_net": -1819503.41,
+          "npv_to_date": -1779004.23
+        },
+        "human_factors": {
+          "resistance": 0.4449,
+          "morale": 0.7379,
+          "proficiency": 0.1417,
+          "culture_readiness": 0.4127,
+          "composite_multiplier": 0.4527
+        },
+        "productivity_multiplier": 0.975,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.2535,
+          "delta": 0.0427
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 44.9,
+          "separated_this_month": 0.8,
+          "separated_cumulative": 3.9,
+          "redeployed_cumulative": 6.1,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 189600.13,
+          "monthly_costs": 160492.9,
+          "monthly_net": 29107.22,
+          "cumulative_savings": 865267.99,
+          "cumulative_costs": 2802469.9,
+          "cumulative_net": -1937201.91,
+          "npv_to_date": -1890404.37
+        },
+        "human_factors": {
+          "resistance": 0.3553,
+          "morale": 0.7993,
+          "proficiency": 0.2153,
+          "culture_readiness": 0.5,
+          "composite_multiplier": 0.5321
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.6057,
+          "delta": 0.0652
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 118.0,
+          "separated_this_month": 2.0,
+          "separated_cumulative": 12.7,
+          "redeployed_cumulative": 20.6,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 498906.5,
+          "monthly_costs": 222852.91,
+          "monthly_net": 276053.58,
+          "cumulative_savings": 3003398.64,
+          "cumulative_costs": 3919640.1,
+          "cumulative_net": -916241.46,
+          "npv_to_date": -992528.95
+        },
+        "human_factors": {
+          "resistance": 0.3075,
+          "morale": 0.9018,
+          "proficiency": 0.3474,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6169
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel"
+        ]
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9053,
+          "delta": 0.0329
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 198.9,
+          "separated_this_month": 3.0,
+          "separated_cumulative": 28.4,
+          "redeployed_cumulative": 46.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 840753.82,
+          "monthly_costs": 159043.79,
+          "monthly_net": 681710.02,
+          "cumulative_savings": 7255423.12,
+          "cumulative_costs": 4819085.52,
+          "cumulative_net": 2436337.6,
+          "npv_to_date": 1827948.2
+        },
+        "human_factors": {
+          "resistance": 0.22,
+          "morale": 0.9967,
+          "proficiency": 0.5177,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.7177
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9992,
+          "delta": 0.0005
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 258.3,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 67.0,
+          "redeployed_cumulative": 109.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1091761.63,
+          "monthly_costs": 85739.79,
+          "monthly_net": 1006021.85,
+          "cumulative_savings": 19351072.12,
+          "cumulative_costs": 5829773.44,
+          "cumulative_net": 13521298.68,
+          "npv_to_date": 10515304.35
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.7675,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8649
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "monthly_snapshots": [
+      {
+        "month": 1,
+        "adoption": {
+          "level": 0.0072,
+          "delta": 0.0072
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 1.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 4937.55,
+          "monthly_costs": 477011.01,
+          "monthly_net": -472073.46,
+          "cumulative_savings": 4937.55,
+          "cumulative_costs": 477011.01,
+          "cumulative_net": -472073.46,
+          "npv_to_date": -468338.86
+        },
+        "human_factors": {
+          "resistance": 0.5695,
+          "morale": 0.7051,
+          "proficiency": 0.1057,
+          "culture_readiness": 0.3208,
+          "composite_multiplier": 0.3768
+        },
+        "productivity_multiplier": 0.85,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 2,
+        "adoption": {
+          "level": 0.0158,
+          "delta": 0.0086
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 2.6,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 10863.87,
+          "monthly_costs": 416667.58,
+          "monthly_net": -405803.71,
+          "cumulative_savings": 15801.42,
+          "cumulative_costs": 893678.59,
+          "cumulative_net": -877877.17,
+          "npv_to_date": -867747.29
+        },
+        "human_factors": {
+          "resistance": 0.5409,
+          "morale": 0.7107,
+          "proficiency": 0.1119,
+          "culture_readiness": 0.3408,
+          "composite_multiplier": 0.393
+        },
+        "productivity_multiplier": 0.875,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0259,
+          "delta": 0.0102
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 4.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 17977.27,
+          "monthly_costs": 356701.57,
+          "monthly_net": -338724.29,
+          "cumulative_savings": 33778.7,
+          "cumulative_costs": 1250380.16,
+          "cumulative_net": -1216601.46,
+          "npv_to_date": -1198496.01
+        },
+        "human_factors": {
+          "resistance": 0.5142,
+          "morale": 0.7167,
+          "proficiency": 0.1184,
+          "culture_readiness": 0.3599,
+          "composite_multiplier": 0.4087
+        },
+        "productivity_multiplier": 0.9,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 4,
+        "adoption": {
+          "level": 0.038,
+          "delta": 0.0121
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 6.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.3,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 26514.49,
+          "monthly_costs": 297183.14,
+          "monthly_net": -270668.65,
+          "cumulative_savings": 60293.18,
+          "cumulative_costs": 1547563.3,
+          "cumulative_net": -1487270.11,
+          "npv_to_date": -1460700.67
+        },
+        "human_factors": {
+          "resistance": 0.4893,
+          "morale": 0.7232,
+          "proficiency": 0.1255,
+          "culture_readiness": 0.3783,
+          "composite_multiplier": 0.4238
+        },
+        "productivity_multiplier": 0.925,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 5,
+        "adoption": {
+          "level": 0.0524,
+          "delta": 0.0144
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 8.7,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 0.5,
+          "redeployed_cumulative": 0.5,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 36755.84,
+          "monthly_costs": 238193.54,
+          "monthly_net": -201437.7,
+          "cumulative_savings": 97049.02,
+          "cumulative_costs": 1785756.83,
+          "cumulative_net": -1688707.81,
+          "npv_to_date": -1654295.52
+        },
+        "human_factors": {
+          "resistance": 0.4662,
+          "morale": 0.7302,
+          "proficiency": 0.1333,
+          "culture_readiness": 0.3958,
+          "composite_multiplier": 0.4385
+        },
+        "productivity_multiplier": 0.95,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.0694,
+          "delta": 0.017
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 11.6,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 0.7,
+          "redeployed_cumulative": 0.9,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 49029.82,
+          "monthly_costs": 179825.42,
+          "monthly_net": -130795.6,
+          "cumulative_savings": 146078.84,
+          "cumulative_costs": 1965582.25,
+          "cumulative_net": -1819503.41,
+          "npv_to_date": -1779004.23
+        },
+        "human_factors": {
+          "resistance": 0.4449,
+          "morale": 0.7379,
+          "proficiency": 0.1417,
+          "culture_readiness": 0.4127,
+          "composite_multiplier": 0.4527
+        },
+        "productivity_multiplier": 0.975,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 7,
+        "adoption": {
+          "level": 0.0895,
+          "delta": 0.0201
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 15.1,
+          "separated_this_month": 0.3,
+          "separated_cumulative": 1.0,
+          "redeployed_cumulative": 1.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 63715.99,
+          "monthly_costs": 122182.3,
+          "monthly_net": -58466.31,
+          "cumulative_savings": 209794.83,
+          "cumulative_costs": 2087764.55,
+          "cumulative_net": -1877969.72,
+          "npv_to_date": -1834308.66
+        },
+        "human_factors": {
+          "resistance": 0.4255,
+          "morale": 0.7461,
+          "proficiency": 0.151,
+          "culture_readiness": 0.4288,
+          "composite_multiplier": 0.4665
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 8,
+        "adoption": {
+          "level": 0.1132,
+          "delta": 0.0237
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 19.2,
+          "separated_this_month": 0.4,
+          "separated_cumulative": 1.3,
+          "redeployed_cumulative": 1.9,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 81244.71,
+          "monthly_costs": 127719.43,
+          "monthly_net": -46474.72,
+          "cumulative_savings": 291039.55,
+          "cumulative_costs": 2215483.99,
+          "cumulative_net": -1924444.44,
+          "npv_to_date": -1877922.24
+        },
+        "human_factors": {
+          "resistance": 0.4079,
+          "morale": 0.7551,
+          "proficiency": 0.1613,
+          "culture_readiness": 0.4443,
+          "composite_multiplier": 0.48
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 9,
+        "adoption": {
+          "level": 0.141,
+          "delta": 0.0278
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 24.2,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 1.8,
+          "redeployed_cumulative": 2.7,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 102091.53,
+          "monthly_costs": 134211.3,
+          "monthly_net": -32119.77,
+          "cumulative_savings": 393131.07,
+          "cumulative_costs": 2349695.29,
+          "cumulative_net": -1956564.22,
+          "npv_to_date": -1907826.15
+        },
+        "human_factors": {
+          "resistance": 0.3922,
+          "morale": 0.7648,
+          "proficiency": 0.1727,
+          "culture_readiness": 0.4591,
+          "composite_multiplier": 0.4933
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 10,
+        "adoption": {
+          "level": 0.1734,
+          "delta": 0.0324
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 30.0,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 2.4,
+          "redeployed_cumulative": 3.6,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 126763.41,
+          "monthly_costs": 141773.28,
+          "monthly_net": -15009.88,
+          "cumulative_savings": 519894.48,
+          "cumulative_costs": 2491468.57,
+          "cumulative_net": -1971574.09,
+          "npv_to_date": -1921689.97
+        },
+        "human_factors": {
+          "resistance": 0.3782,
+          "morale": 0.7753,
+          "proficiency": 0.1854,
+          "culture_readiness": 0.4733,
+          "composite_multiplier": 0.5063
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 11,
+        "adoption": {
+          "level": 0.2108,
+          "delta": 0.0374
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 36.9,
+          "separated_this_month": 0.7,
+          "separated_cumulative": 3.1,
+          "redeployed_cumulative": 4.8,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 155773.38,
+          "monthly_costs": 150508.42,
+          "monthly_net": 5264.96,
+          "cumulative_savings": 675667.86,
+          "cumulative_costs": 2641976.99,
+          "cumulative_net": -1966309.13,
+          "npv_to_date": -1916865.48
+        },
+        "human_factors": {
+          "resistance": 0.3659,
+          "morale": 0.7868,
+          "proficiency": 0.1996,
+          "culture_readiness": 0.4869,
+          "composite_multiplier": 0.5192
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.2535,
+          "delta": 0.0427
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 44.9,
+          "separated_this_month": 0.8,
+          "separated_cumulative": 3.9,
+          "redeployed_cumulative": 6.1,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 189600.13,
+          "monthly_costs": 160492.9,
+          "monthly_net": 29107.22,
+          "cumulative_savings": 865267.99,
+          "cumulative_costs": 2802469.9,
+          "cumulative_net": -1937201.91,
+          "npv_to_date": -1890404.37
+        },
+        "human_factors": {
+          "resistance": 0.3553,
+          "morale": 0.7993,
+          "proficiency": 0.2153,
+          "culture_readiness": 0.5,
+          "composite_multiplier": 0.5321
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 13,
+        "adoption": {
+          "level": 0.3017,
+          "delta": 0.0482
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 54.1,
+          "separated_this_month": 1.0,
+          "separated_cumulative": 4.9,
+          "redeployed_cumulative": 7.7,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 228630.04,
+          "monthly_costs": 151845.17,
+          "monthly_net": 76784.87,
+          "cumulative_savings": 1093898.03,
+          "cumulative_costs": 2954315.07,
+          "cumulative_net": -1860417.04,
+          "npv_to_date": -1821152.17
+        },
+        "human_factors": {
+          "resistance": 0.346,
+          "morale": 0.813,
+          "proficiency": 0.2328,
+          "culture_readiness": 0.5125,
+          "composite_multiplier": 0.5451
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 14,
+        "adoption": {
+          "level": 0.3553,
+          "delta": 0.0536
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 64.6,
+          "separated_this_month": 1.2,
+          "separated_cumulative": 6.1,
+          "redeployed_cumulative": 9.6,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 273081.84,
+          "monthly_costs": 164354.83,
+          "monthly_net": 108727.01,
+          "cumulative_savings": 1366979.87,
+          "cumulative_costs": 3118669.9,
+          "cumulative_net": -1751690.03,
+          "npv_to_date": -1723867.15
+        },
+        "human_factors": {
+          "resistance": 0.3379,
+          "morale": 0.8279,
+          "proficiency": 0.2522,
+          "culture_readiness": 0.5244,
+          "composite_multiplier": 0.5584
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 15,
+        "adoption": {
+          "level": 0.4137,
+          "delta": 0.0584
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 76.4,
+          "separated_this_month": 1.4,
+          "separated_cumulative": 7.4,
+          "redeployed_cumulative": 11.9,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 322919.17,
+          "monthly_costs": 177987.0,
+          "monthly_net": 144932.16,
+          "cumulative_savings": 1689899.04,
+          "cumulative_costs": 3296656.9,
+          "cumulative_net": -1606757.86,
+          "npv_to_date": -1595212.96
+        },
+        "human_factors": {
+          "resistance": 0.3305,
+          "morale": 0.8442,
+          "proficiency": 0.2734,
+          "culture_readiness": 0.5359,
+          "composite_multiplier": 0.572
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 16,
+        "adoption": {
+          "level": 0.4759,
+          "delta": 0.0622
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 89.4,
+          "separated_this_month": 1.6,
+          "separated_cumulative": 9.0,
+          "redeployed_cumulative": 14.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 377763.63,
+          "monthly_costs": 192516.89,
+          "monthly_net": 185246.74,
+          "cumulative_savings": 2067662.67,
+          "cumulative_costs": 3489173.79,
+          "cumulative_net": -1421511.12,
+          "npv_to_date": -1432073.01
+        },
+        "human_factors": {
+          "resistance": 0.3234,
+          "morale": 0.8619,
+          "proficiency": 0.2964,
+          "culture_readiness": 0.5469,
+          "composite_multiplier": 0.5862
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 17,
+        "adoption": {
+          "level": 0.5405,
+          "delta": 0.0646
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 103.4,
+          "separated_this_month": 1.8,
+          "separated_cumulative": 10.7,
+          "redeployed_cumulative": 17.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 436829.48,
+          "monthly_costs": 207613.4,
+          "monthly_net": 229216.08,
+          "cumulative_savings": 2504492.15,
+          "cumulative_costs": 3696787.19,
+          "cumulative_net": -1192295.05,
+          "npv_to_date": -1231807.83
+        },
+        "human_factors": {
+          "resistance": 0.3159,
+          "morale": 0.8811,
+          "proficiency": 0.3211,
+          "culture_readiness": 0.5575,
+          "composite_multiplier": 0.6011
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel"
+        ]
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.6057,
+          "delta": 0.0652
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 118.0,
+          "separated_this_month": 2.0,
+          "separated_cumulative": 12.7,
+          "redeployed_cumulative": 20.6,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 498906.5,
+          "monthly_costs": 222852.91,
+          "monthly_net": 276053.58,
+          "cumulative_savings": 3003398.64,
+          "cumulative_costs": 3919640.1,
+          "cumulative_net": -916241.46,
+          "npv_to_date": -992528.95
+        },
+        "human_factors": {
+          "resistance": 0.3075,
+          "morale": 0.9018,
+          "proficiency": 0.3474,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6169
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel"
+        ]
+      },
+      {
+        "month": 19,
+        "adoption": {
+          "level": 0.6695,
+          "delta": 0.0638
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 133.1,
+          "separated_this_month": 2.2,
+          "separated_cumulative": 14.9,
+          "redeployed_cumulative": 24.2,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 562415.94,
+          "monthly_costs": 138812.89,
+          "monthly_net": 423603.04,
+          "cumulative_savings": 3565814.58,
+          "cumulative_costs": 4058453.0,
+          "cumulative_net": -492638.42,
+          "npv_to_date": -628261.26
+        },
+        "human_factors": {
+          "resistance": 0.2978,
+          "morale": 0.9141,
+          "proficiency": 0.3749,
+          "culture_readiness": 0.5773,
+          "composite_multiplier": 0.6315
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel"
+        ]
+      },
+      {
+        "month": 20,
+        "adoption": {
+          "level": 0.7296,
+          "delta": 0.0601
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 148.0,
+          "separated_this_month": 2.4,
+          "separated_cumulative": 17.3,
+          "redeployed_cumulative": 28.1,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 625387.1,
+          "monthly_costs": 143967.47,
+          "monthly_net": 481419.63,
+          "cumulative_savings": 4191201.68,
+          "cumulative_costs": 4202420.47,
+          "cumulative_net": -11218.79,
+          "npv_to_date": -217550.59
+        },
+        "human_factors": {
+          "resistance": 0.2862,
+          "morale": 0.9279,
+          "proficiency": 0.4033,
+          "culture_readiness": 0.5865,
+          "composite_multiplier": 0.6472
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 21,
+        "adoption": {
+          "level": 0.7842,
+          "delta": 0.0546
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 162.3,
+          "separated_this_month": 2.6,
+          "separated_cumulative": 19.9,
+          "redeployed_cumulative": 32.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 686039.2,
+          "monthly_costs": 148650.58,
+          "monthly_net": 537388.61,
+          "cumulative_savings": 4877240.88,
+          "cumulative_costs": 4351071.05,
+          "cumulative_net": 526169.83,
+          "npv_to_date": 237281.67
+        },
+        "human_factors": {
+          "resistance": 0.2725,
+          "morale": 0.9432,
+          "proficiency": 0.4322,
+          "culture_readiness": 0.5954,
+          "composite_multiplier": 0.6638
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 22,
+        "adoption": {
+          "level": 0.832,
+          "delta": 0.0478
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 175.7,
+          "separated_this_month": 2.7,
+          "separated_cumulative": 22.6,
+          "redeployed_cumulative": 36.7,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 742823.63,
+          "monthly_costs": 152752.76,
+          "monthly_net": 590070.87,
+          "cumulative_savings": 5620064.51,
+          "cumulative_costs": 4503823.81,
+          "cumulative_net": 1116240.7,
+          "npv_to_date": 732751.92
+        },
+        "human_factors": {
+          "resistance": 0.2567,
+          "morale": 0.9598,
+          "proficiency": 0.4611,
+          "culture_readiness": 0.604,
+          "composite_multiplier": 0.6812
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 23,
+        "adoption": {
+          "level": 0.8724,
+          "delta": 0.0404
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 188.0,
+          "separated_this_month": 2.9,
+          "separated_cumulative": 25.5,
+          "redeployed_cumulative": 41.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 794604.8,
+          "monthly_costs": 156217.92,
+          "monthly_net": 638386.88,
+          "cumulative_savings": 6414669.31,
+          "cumulative_costs": 4660041.73,
+          "cumulative_net": 1754627.58,
+          "npv_to_date": 1264551.48
+        },
+        "human_factors": {
+          "resistance": 0.2391,
+          "morale": 0.9777,
+          "proficiency": 0.4897,
+          "culture_readiness": 0.6121,
+          "composite_multiplier": 0.6993
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9053,
+          "delta": 0.0329
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 198.9,
+          "separated_this_month": 3.0,
+          "separated_cumulative": 28.4,
+          "redeployed_cumulative": 46.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 840753.82,
+          "monthly_costs": 159043.79,
+          "monthly_net": 681710.02,
+          "cumulative_savings": 7255423.12,
+          "cumulative_costs": 4819085.52,
+          "cumulative_net": 2436337.6,
+          "npv_to_date": 1827948.2
+        },
+        "human_factors": {
+          "resistance": 0.22,
+          "morale": 0.9967,
+          "proficiency": 0.5177,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.7177
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 25,
+        "adoption": {
+          "level": 0.9313,
+          "delta": 0.026
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 208.5,
+          "separated_this_month": 3.1,
+          "separated_cumulative": 31.5,
+          "redeployed_cumulative": 51.3,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 881139.82,
+          "monthly_costs": 79913.26,
+          "monthly_net": 801226.56,
+          "cumulative_savings": 8136562.94,
+          "cumulative_costs": 4898998.78,
+          "cumulative_net": 3237564.17,
+          "npv_to_date": 2484880.44
+        },
+        "human_factors": {
+          "resistance": 0.1999,
+          "morale": 1.0,
+          "proficiency": 0.5449,
+          "culture_readiness": 0.6275,
+          "composite_multiplier": 0.7331
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 26,
+        "adoption": {
+          "level": 0.951,
+          "delta": 0.0198
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 216.7,
+          "separated_this_month": 3.1,
+          "separated_cumulative": 34.6,
+          "redeployed_cumulative": 56.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 915951.12,
+          "monthly_costs": 81610.61,
+          "monthly_net": 834340.51,
+          "cumulative_savings": 9052514.06,
+          "cumulative_costs": 4980609.39,
+          "cumulative_net": 4071904.67,
+          "npv_to_date": 3163551.26
+        },
+        "human_factors": {
+          "resistance": 0.1791,
+          "morale": 1.0,
+          "proficiency": 0.571,
+          "culture_readiness": 0.6347,
+          "composite_multiplier": 0.7477
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 27,
+        "adoption": {
+          "level": 0.9657,
+          "delta": 0.0147
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 223.8,
+          "separated_this_month": 3.2,
+          "separated_cumulative": 37.8,
+          "redeployed_cumulative": 61.5,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 945784.73,
+          "monthly_costs": 82868.41,
+          "monthly_net": 862916.32,
+          "cumulative_savings": 9998298.79,
+          "cumulative_costs": 5063477.8,
+          "cumulative_net": 4934820.99,
+          "npv_to_date": 3859913.39
+        },
+        "human_factors": {
+          "resistance": 0.158,
+          "morale": 1.0,
+          "proficiency": 0.5959,
+          "culture_readiness": 0.6415,
+          "composite_multiplier": 0.762
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 28,
+        "adoption": {
+          "level": 0.9763,
+          "delta": 0.0106
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 229.8,
+          "separated_this_month": 3.2,
+          "separated_cumulative": 41.0,
+          "redeployed_cumulative": 66.8,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 971369.23,
+          "monthly_costs": 83779.61,
+          "monthly_net": 887589.61,
+          "cumulative_savings": 10969668.02,
+          "cumulative_costs": 5147257.41,
+          "cumulative_net": 5822410.61,
+          "npv_to_date": 4570520.06
+        },
+        "human_factors": {
+          "resistance": 0.1371,
+          "morale": 1.0,
+          "proficiency": 0.6196,
+          "culture_readiness": 0.6481,
+          "composite_multiplier": 0.7758
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 29,
+        "adoption": {
+          "level": 0.9839,
+          "delta": 0.0075
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 235.0,
+          "separated_this_month": 3.2,
+          "separated_cumulative": 44.2,
+          "redeployed_cumulative": 72.1,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 993428.29,
+          "monthly_costs": 84426.87,
+          "monthly_net": 909001.42,
+          "cumulative_savings": 11963096.31,
+          "cumulative_costs": 5231684.29,
+          "cumulative_net": 6731412.02,
+          "npv_to_date": 5292511.81
+        },
+        "human_factors": {
+          "resistance": 0.1166,
+          "morale": 1.0,
+          "proficiency": 0.6421,
+          "culture_readiness": 0.6545,
+          "composite_multiplier": 0.7892
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 30,
+        "adoption": {
+          "level": 0.9891,
+          "delta": 0.0053
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 239.6,
+          "separated_this_month": 3.2,
+          "separated_cumulative": 47.4,
+          "redeployed_cumulative": 77.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1012615.69,
+          "monthly_costs": 84878.88,
+          "monthly_net": 927736.81,
+          "cumulative_savings": 12975712.0,
+          "cumulative_costs": 5316563.17,
+          "cumulative_net": 7659148.83,
+          "npv_to_date": 6023555.06
+        },
+        "human_factors": {
+          "resistance": 0.0967,
+          "morale": 1.0,
+          "proficiency": 0.6634,
+          "culture_readiness": 0.6605,
+          "composite_multiplier": 0.802
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 31,
+        "adoption": {
+          "level": 0.9928,
+          "delta": 0.0036
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 243.6,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 50.7,
+          "redeployed_cumulative": 82.7,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1029485.65,
+          "monthly_costs": 85189.89,
+          "monthly_net": 944295.75,
+          "cumulative_savings": 14005197.64,
+          "cumulative_costs": 5401753.06,
+          "cumulative_net": 8603444.58,
+          "npv_to_date": 6761759.98
+        },
+        "human_factors": {
+          "resistance": 0.0774,
+          "morale": 1.0,
+          "proficiency": 0.6835,
+          "culture_readiness": 0.6663,
+          "composite_multiplier": 0.8142
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 32,
+        "adoption": {
+          "level": 0.9952,
+          "delta": 0.0025
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 247.1,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 54.0,
+          "redeployed_cumulative": 88.0,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1044487.64,
+          "monthly_costs": 85401.13,
+          "monthly_net": 959086.51,
+          "cumulative_savings": 15049685.28,
+          "cumulative_costs": 5487154.19,
+          "cumulative_net": 9562531.09,
+          "npv_to_date": 7505596.14
+        },
+        "human_factors": {
+          "resistance": 0.0589,
+          "morale": 1.0,
+          "proficiency": 0.7024,
+          "culture_readiness": 0.6719,
+          "composite_multiplier": 0.8259
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 33,
+        "adoption": {
+          "level": 0.9969,
+          "delta": 0.0017
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 250.3,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 57.2,
+          "redeployed_cumulative": 93.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1057975.07,
+          "monthly_costs": 85542.97,
+          "monthly_net": 972432.11,
+          "cumulative_savings": 16107660.36,
+          "cumulative_costs": 5572697.16,
+          "cumulative_net": 10534963.2,
+          "npv_to_date": 8253816.3
+        },
+        "human_factors": {
+          "resistance": 0.0412,
+          "morale": 1.0,
+          "proficiency": 0.7202,
+          "culture_readiness": 0.6773,
+          "composite_multiplier": 0.837
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 34,
+        "adoption": {
+          "level": 0.998,
+          "delta": 0.0011
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 253.2,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 60.5,
+          "redeployed_cumulative": 98.7,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1070220.14,
+          "monthly_costs": 85637.22,
+          "monthly_net": 984582.92,
+          "cumulative_savings": 17177880.49,
+          "cumulative_costs": 5658334.38,
+          "cumulative_net": 11519546.12,
+          "npv_to_date": 9005392.51
+        },
+        "human_factors": {
+          "resistance": 0.0243,
+          "morale": 1.0,
+          "proficiency": 0.7369,
+          "culture_readiness": 0.6824,
+          "composite_multiplier": 0.8475
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 35,
+        "adoption": {
+          "level": 0.9987,
+          "delta": 0.0007
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 255.9,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 63.8,
+          "redeployed_cumulative": 104.1,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1081429.99,
+          "monthly_costs": 85699.28,
+          "monthly_net": 995730.72,
+          "cumulative_savings": 18259310.49,
+          "cumulative_costs": 5744033.65,
+          "cumulative_net": 12515276.84,
+          "npv_to_date": 9759465.25
+        },
+        "human_factors": {
+          "resistance": 0.0082,
+          "morale": 1.0,
+          "proficiency": 0.7527,
+          "culture_readiness": 0.6873,
+          "composite_multiplier": 0.8575
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9992,
+          "delta": 0.0005
+        },
+        "workforce": {
+          "current_headcount": 1776,
+          "effective_freed_hc": 258.3,
+          "separated_this_month": 3.3,
+          "separated_cumulative": 67.0,
+          "redeployed_cumulative": 109.4,
+          "attrited_this_month": 17.8
+        },
+        "financial": {
+          "monthly_savings": 1091761.63,
+          "monthly_costs": 85739.79,
+          "monthly_net": 1006021.85,
+          "cumulative_savings": 19351072.12,
+          "cumulative_costs": 5829773.44,
+          "cumulative_net": 13521298.68,
+          "npv_to_date": 10515304.35
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.7675,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8649
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "cascade": {
+      "task_changes": {
+        "tasks_affected": 68,
+        "changes": [
+          {
+            "task_id": "task_coverage_verification_and_eligibility_determination_benefit_limitation_and_deductible_calculation",
+            "task_name": "Benefit Limitation and Deductible Calculation",
+            "workload_id": "wl_claims_adjuster__health_insurance_coverage_verification_and_eligibility_determination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_coverage_verification_and_eligibility_determination_member_eligibility_verification",
+            "task_name": "Member Eligibility Verification",
+            "workload_id": "wl_claims_adjuster__health_insurance_coverage_verification_and_eligibility_determination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_coverage_verification_and_eligibility_determination_pre_authorization_and_network_provider_verification",
+            "task_name": "Pre-Authorization and Network Provider Verification",
+            "workload_id": "wl_claims_adjuster__health_insurance_coverage_verification_and_eligibility_determination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_routine_claim_adjudication_and_processing_automated_claim_adjudication_and_decision_generation",
+            "task_name": "Automated Claim Adjudication and Decision Generation",
+            "workload_id": "wl_claims_adjuster__health_insurance_routine_claim_adjudication_and_processing",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_routine_claim_adjudication_and_processing_claim_data_entry_and_initial_processing",
+            "task_name": "Claim Data Entry and Initial Processing",
+            "workload_id": "wl_claims_adjuster__health_insurance_routine_claim_adjudication_and_processing",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_routine_claim_adjudication_and_processing_benefit_payment_authorization_and_confirmation",
+            "task_name": "Benefit Payment Authorization and Confirmation",
+            "workload_id": "wl_claims_adjuster__health_insurance_routine_claim_adjudication_and_processing",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_regulatory_compliance_and_audit_support_regulatory_reporting_and_submission",
+            "task_name": "Regulatory Reporting and Submission",
+            "workload_id": "wl_claims_adjuster__health_insurance_regulatory_compliance_and_audit_support",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claim_documentation_and_settlement_administration_payment_processing_and_fund_disbursement",
+            "task_name": "Payment Processing and Fund Disbursement",
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_claim_documentation_and_settlement_administration_claims_file_organization_and_documentation_compilation",
+            "task_name": "Claims File Organization and Documentation Compilation",
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_documentation_request_processing_and_fulfillment_process_documentation_requests_from_claimants",
+            "task_name": "Process Documentation Requests from Claimants",
+            "workload_id": "wl_claims_support_specialist__customer_service_documentation_request_processing_and_fulfillment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_documentation_request_processing_and_fulfillment_deliver_documents_and_confirm_receipt",
+            "task_name": "Deliver Documents and Confirm Receipt",
+            "workload_id": "wl_claims_support_specialist__customer_service_documentation_request_processing_and_fulfillment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_documentation_request_processing_and_fulfillment_retrieve_and_compile_requested_documents",
+            "task_name": "Retrieve and Compile Requested Documents",
+            "workload_id": "wl_claims_support_specialist__customer_service_documentation_request_processing_and_fulfillment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_customer_satisfaction_management_and_feedback_analyze_satisfaction_trends_and_identify_improvement_areas",
+            "task_name": "Analyze Satisfaction Trends and Identify Improvement Areas",
+            "workload_id": "wl_claims_support_specialist__customer_service_customer_satisfaction_management_and_feedback",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_customer_satisfaction_management_and_feedback_collect_customer_satisfaction_feedback",
+            "task_name": "Collect Customer Satisfaction Feedback",
+            "workload_id": "wl_claims_support_specialist__customer_service_customer_satisfaction_management_and_feedback",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_customer_satisfaction_management_and_feedback_report_satisfaction_metrics_to_management",
+            "task_name": "Report Satisfaction Metrics to Management",
+            "workload_id": "wl_claims_support_specialist__customer_service_customer_satisfaction_management_and_feedback",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_frontline_claims_inquiry_support_log_and_track_customer_inquiries_and_resolutions",
+            "task_name": "Log and Track Customer Inquiries and Resolutions",
+            "workload_id": "wl_claims_support_specialist__customer_service_frontline_claims_inquiry_support",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_frontline_claims_inquiry_support_answer_routine_claims_inquiries_via_phone_and_email",
+            "task_name": "Answer Routine Claims Inquiries via Phone and Email",
+            "workload_id": "wl_claims_support_specialist__customer_service_frontline_claims_inquiry_support",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 45.0
+          },
+          {
+            "task_id": "task_administrative_support_and_claims_coordination_track_claim_deadlines_and_compliance_dates",
+            "task_name": "Track Claim Deadlines and Compliance Dates",
+            "workload_id": "wl_claims_support_specialist__documentation_administrative_support_and_claims_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_administrative_support_and_claims_coordination_prepare_administrative_reports_and_status_updates",
+            "task_name": "Prepare Administrative Reports and Status Updates",
+            "workload_id": "wl_claims_support_specialist__documentation_administrative_support_and_claims_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_administrative_support_and_claims_coordination_schedule_appointments_and_manage_calendars",
+            "task_name": "Schedule Appointments and Manage Calendars",
+            "workload_id": "wl_claims_support_specialist__documentation_administrative_support_and_claims_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_digital_file_conversion_and_scanning_perform_ocr_and_text_recognition_on_scanned_documents",
+            "task_name": "Perform OCR and Text Recognition on Scanned Documents",
+            "workload_id": "wl_claims_support_specialist__documentation_digital_file_conversion_and_scanning",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_digital_file_conversion_and_scanning_scan_and_convert_physical_documents_to_digital_format",
+            "task_name": "Scan and Convert Physical Documents to Digital Format",
+            "workload_id": "wl_claims_support_specialist__documentation_digital_file_conversion_and_scanning",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 50.0
+          },
+          {
+            "task_id": "task_document_retention_compliance_and_records_destruction_prepare_records_for_destruction_and_obtain_approvals",
+            "task_name": "Prepare Records for Destruction and Obtain Approvals",
+            "workload_id": "wl_claims_support_specialist__documentation_document_retention_compliance_and_records_destruction",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_document_retention_compliance_and_records_destruction_execute_secure_records_destruction_and_document_disposal",
+            "task_name": "Execute Secure Records Destruction and Document Disposal",
+            "workload_id": "wl_claims_support_specialist__documentation_document_retention_compliance_and_records_destruction",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_document_retention_compliance_and_records_destruction_monitor_compliance_with_retention_policies",
+            "task_name": "Monitor Compliance with Retention Policies",
+            "workload_id": "wl_claims_support_specialist__documentation_document_retention_compliance_and_records_destruction",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_claims_file_organization_and_records_management_manage_file_access_and_retrieval_requests",
+            "task_name": "Manage File Access and Retrieval Requests",
+            "workload_id": "wl_claims_support_specialist__documentation_claims_file_organization_and_records_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_claims_file_organization_and_records_management_organize_and_index_claim_files",
+            "task_name": "Organize and Index Claim Files",
+            "workload_id": "wl_claims_support_specialist__documentation_claims_file_organization_and_records_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claims_file_organization_and_records_management_maintain_claims_file_metadata_and_tracking",
+            "task_name": "Maintain Claims File Metadata and Tracking",
+            "workload_id": "wl_claims_support_specialist__documentation_claims_file_organization_and_records_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_vocational_assessment_and_return_to_work_evaluation_return_to_work_monitoring_and_progress_tracking",
+            "task_name": "Return-to-Work Monitoring and Progress Tracking",
+            "workload_id": "wl_claims_examiner__disability_benefits_vocational_assessment_and_return_to_work_evaluation",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_ongoing_claims_monitoring_and_benefit_continuation_benefit_continuation_decision_and_claim_adjustment",
+            "task_name": "Benefit Continuation Decision and Claim Adjustment",
+            "workload_id": "wl_claims_examiner__disability_benefits_ongoing_claims_monitoring_and_benefit_continuation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_ongoing_claims_monitoring_and_benefit_continuation_claims_closure_and_termination_processing",
+            "task_name": "Claims Closure and Termination Processing",
+            "workload_id": "wl_claims_examiner__disability_benefits_ongoing_claims_monitoring_and_benefit_continuation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_underwriting_review_and_documentation_claim_documentation_compilation_and_archival",
+            "task_name": "Claim Documentation Compilation and Archival",
+            "workload_id": "wl_senior_claims_examiner__life_insurance_underwriting_review_and_documentation",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 50.0
+          },
+          {
+            "task_id": "task_mobile_command_center_operations_coordinate_field_team_logistics_and_scheduling",
+            "task_name": "Coordinate Field Team Logistics and Scheduling",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_mobile_command_center_operations",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_mobile_command_center_operations_monitor_real_time_claim_processing_status",
+            "task_name": "Monitor Real-Time Claim Processing Status",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_mobile_command_center_operations",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_disaster_area_claims_intake_and_loss_documentation_capture_photographic_and_video_evidence",
+            "task_name": "Capture Photographic and Video Evidence",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_disaster_area_claims_intake_and_loss_documentation",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_disaster_area_claims_intake_and_loss_documentation_compile_disaster_claim_documentation_packages",
+            "task_name": "Compile Disaster Claim Documentation Packages",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_disaster_area_claims_intake_and_loss_documentation",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_catastrophe_claims_coordination_and_escalation_track_catastrophe_claim_metrics_and_reporting",
+            "task_name": "Track Catastrophe Claim Metrics and Reporting",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_catastrophe_claims_coordination_and_escalation",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_emergency_customer_assistance_and_support_coordinate_advance_claim_payments",
+            "task_name": "Coordinate Advance Claim Payments",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_emergency_customer_assistance_and_support",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_emergency_customer_assistance_and_support_document_customer_assistance_interactions",
+            "task_name": "Document Customer Assistance Interactions",
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_emergency_customer_assistance_and_support",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 5.0
+          },
+          {
+            "task_id": "task_24_7_hotline_claims_intake_and_initial_investigation_answer_incoming_hotline_calls_and_initiate_claims",
+            "task_name": "Answer Incoming Hotline Calls and Initiate Claims",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_24_7_hotline_claims_intake_and_initial_investigation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_24_7_hotline_claims_intake_and_initial_investigation_document_initial_claim_assessment",
+            "task_name": "Document Initial Claim Assessment",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_24_7_hotline_claims_intake_and_initial_investigation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_hotline_operations_and_customer_communication_document_customer_interactions_and_feedback",
+            "task_name": "Document Customer Interactions and Feedback",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_hotline_operations_and_customer_communication",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_hotline_operations_and_customer_communication_manage_hotline_call_queue_and_wait_times",
+            "task_name": "Manage Hotline Call Queue and Wait Times",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_hotline_operations_and_customer_communication",
+            "old_level": "human_only",
+            "new_level": "human_led",
+            "automation_delta": 0.15,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_adjuster_dispatch_and_emergency_services_coordination_manage_adjuster_scheduling_and_conflicts",
+            "task_name": "Manage Adjuster Scheduling and Conflicts",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_adjuster_dispatch_and_emergency_services_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_adjuster_dispatch_and_emergency_services_coordination_dispatch_field_adjusters_to_loss_sites",
+            "task_name": "Dispatch Field Adjusters to Loss Sites",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_adjuster_dispatch_and_emergency_services_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_adjuster_dispatch_and_emergency_services_coordination_monitor_adjuster_arrival_and_status_updates",
+            "task_name": "Monitor Adjuster Arrival and Status Updates",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_adjuster_dispatch_and_emergency_services_coordination",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_urgent_claims_triage_and_escalation_route_claims_to_appropriate_departments",
+            "task_name": "Route Claims to Appropriate Departments",
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_urgent_claims_triage_and_escalation",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_commercial_claims_intake_and_initial_processing_extract_and_validate_commercial_claims_data",
+            "task_name": "Extract and Validate Commercial Claims Data",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_intake_and_initial_processing",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_commercial_claims_intake_and_initial_processing_generate_claims_intake_documentation_and_summaries",
+            "task_name": "Generate Claims Intake Documentation and Summaries",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_intake_and_initial_processing",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_commercial_claims_data_quality_and_validation_request_missing_information_and_corrections",
+            "task_name": "Request Missing Information and Corrections",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_data_quality_and_validation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_commercial_claims_data_quality_and_validation_validate_commercial_claims_data_completeness",
+            "task_name": "Validate Commercial Claims Data Completeness",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_data_quality_and_validation",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claims_routing_and_assignment_route_claims_to_appropriate_handlers_and_departments",
+            "task_name": "Route Claims to Appropriate Handlers and Departments",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claims_routing_and_assignment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 50.0
+          },
+          {
+            "task_id": "task_claims_routing_and_assignment_track_claim_assignment_and_monitor_handler_workload",
+            "task_name": "Track Claim Assignment and Monitor Handler Workload",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claims_routing_and_assignment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_claims_routing_and_assignment_assign_claims_based_on_adjuster_availability_and_expertise",
+            "task_name": "Assign Claims Based on Adjuster Availability and Expertise",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claims_routing_and_assignment",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_claim_acknowledgment_and_timeline_management_send_claim_acknowledgment_to_claimants_and_insureds",
+            "task_name": "Send Claim Acknowledgment to Claimants and Insureds",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claim_acknowledgment_and_timeline_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claim_acknowledgment_and_timeline_management_track_regulatory_deadlines_and_compliance_dates",
+            "task_name": "Track Regulatory Deadlines and Compliance Dates",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claim_acknowledgment_and_timeline_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_claim_acknowledgment_and_timeline_management_establish_and_monitor_claim_processing_timelines",
+            "task_name": "Establish and Monitor Claim Processing Timelines",
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claim_acknowledgment_and_timeline_management",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_adjuster_appointment_scheduling_and_claim_routing_communicate_appointment_details_to_claimants",
+            "task_name": "Communicate Appointment Details to Claimants",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_adjuster_appointment_scheduling_and_claim_routing_monitor_adjuster_assignment_and_claim_progress",
+            "task_name": "Monitor Adjuster Assignment and Claim Progress",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_adjuster_appointment_scheduling_and_claim_routing_route_personal_lines_claims_to_appropriate_adjusters",
+            "task_name": "Route Personal Lines Claims to Appropriate Adjusters",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_adjuster_appointment_scheduling_and_claim_routing_schedule_adjuster_appointments_and_site_inspections",
+            "task_name": "Schedule Adjuster Appointments and Site Inspections",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_personal_lines_intake_quality_and_compliance_generate_compliance_reports",
+            "task_name": "Generate Compliance Reports",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_intake_quality_and_compliance",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_personal_lines_intake_quality_and_compliance_perform_quality_assurance_reviews",
+            "task_name": "Perform Quality Assurance Reviews",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_intake_quality_and_compliance",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_personal_lines_claims_intake_and_documentation_extract_and_validate_personal_lines_claims_data",
+            "task_name": "Extract and Validate Personal Lines Claims Data",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_claims_intake_and_documentation",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_personal_lines_claims_intake_and_documentation_generate_personal_lines_intake_documentation",
+            "task_name": "Generate Personal Lines Intake Documentation",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_claims_intake_and_documentation",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_emergency_assistance_and_rapid_response_establish_follow_up_communication_schedule",
+            "task_name": "Establish Follow-up Communication Schedule",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_emergency_assistance_and_rapid_response",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_emergency_assistance_and_rapid_response_receive_and_log_emergency_claims",
+            "task_name": "Receive and Log Emergency Claims",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_emergency_assistance_and_rapid_response",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_emergency_assistance_and_rapid_response_document_initial_loss_information",
+            "task_name": "Document Initial Loss Information",
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_emergency_assistance_and_rapid_response",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          }
+        ]
+      },
+      "workload_changes": {
+        "workloads_affected": 30,
+        "changes": [
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_24_7_hotline_claims_intake_and_initial_investigation",
+            "workload_name": "24/7 Hotline Claims Intake and Initial Investigation",
+            "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 53.5
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__documentation_claims_file_organization_and_records_management",
+            "workload_name": "Claims File Organization and Records Management",
+            "role_id": "role_claims_support_specialist__documentation",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 64.0
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claims_routing_and_assignment",
+            "workload_name": "Claims Routing and Assignment",
+            "role_id": "role_claims_intake_coordinator__commercial_lines",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 70.0
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__customer_service_customer_satisfaction_management_and_feedback",
+            "workload_name": "Customer Satisfaction Management and Feedback",
+            "role_id": "role_claims_support_specialist__customer_service",
+            "old_level": "human_only",
+            "new_level": "human_only",
+            "old_automation_score": 0.0,
+            "automation_score": 11.2
+          },
+          {
+            "workload_id": "wl_claims_adjuster__health_insurance_routine_claim_adjudication_and_processing",
+            "workload_name": "Routine Claim Adjudication and Processing",
+            "role_id": "role_claims_adjuster__health_insurance",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 90.0
+          },
+          {
+            "workload_id": "wl_claims_examiner__disability_benefits_vocational_assessment_and_return_to_work_evaluation",
+            "workload_name": "Vocational Assessment and Return-to-Work Evaluation",
+            "role_id": "role_claims_examiner__disability_benefits",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 21.2
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_catastrophe_claims_coordination_and_escalation",
+            "workload_name": "Catastrophe Claims Coordination and Escalation",
+            "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 21.2
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_adjuster_dispatch_and_emergency_services_coordination",
+            "workload_name": "Adjuster Dispatch and Emergency Services Coordination",
+            "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 59.5
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__documentation_document_retention_compliance_and_records_destruction",
+            "workload_name": "Document Retention Compliance and Records Destruction",
+            "role_id": "role_claims_support_specialist__documentation",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 30.0
+          },
+          {
+            "workload_id": "wl_claims_adjuster__health_insurance_coverage_verification_and_eligibility_determination",
+            "workload_name": "Coverage Verification and Eligibility Determination",
+            "role_id": "role_claims_adjuster__health_insurance",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 70.0
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_emergency_customer_assistance_and_support",
+            "workload_name": "Emergency Customer Assistance and Support",
+            "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+            "old_level": "human_only",
+            "new_level": "human_only",
+            "old_automation_score": 0.0,
+            "automation_score": 2.2
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_intake_quality_and_compliance",
+            "workload_name": "Personal Lines Intake Quality and Compliance",
+            "role_id": "role_claims_intake_coordinator__personal_lines",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 50.5
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_emergency_assistance_and_rapid_response",
+            "workload_name": "Emergency Assistance and Rapid Response",
+            "role_id": "role_claims_intake_coordinator__personal_lines",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 24.4
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__documentation_digital_file_conversion_and_scanning",
+            "workload_name": "Digital File Conversion and Scanning",
+            "role_id": "role_claims_support_specialist__documentation",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 90.0
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_personal_lines_claims_intake_and_documentation",
+            "workload_name": "Personal Lines Claims Intake and Documentation",
+            "role_id": "role_claims_intake_coordinator__personal_lines",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 83.8
+          },
+          {
+            "workload_id": "wl_claims_adjuster__health_insurance_regulatory_compliance_and_audit_support",
+            "workload_name": "Regulatory Compliance and Audit Support",
+            "role_id": "role_claims_adjuster__health_insurance",
+            "old_level": "human_only",
+            "new_level": "human_only",
+            "old_automation_score": 0.0,
+            "automation_score": 6.0
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_claim_acknowledgment_and_timeline_management",
+            "workload_name": "Claim Acknowledgment and Timeline Management",
+            "role_id": "role_claims_intake_coordinator__commercial_lines",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 70.0
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_hotline_operations_and_customer_communication",
+            "workload_name": "Hotline Operations and Customer Communication",
+            "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+            "old_level": "human_only",
+            "new_level": "human_only",
+            "old_automation_score": 0.0,
+            "automation_score": 9.0
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_intake_and_initial_processing",
+            "workload_name": "Commercial Claims Intake and Initial Processing",
+            "role_id": "role_claims_intake_coordinator__commercial_lines",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 83.8
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__24_7_hotline_urgent_claims_triage_and_escalation",
+            "workload_name": "Urgent Claims Triage and Escalation",
+            "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 22.5
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__customer_service_documentation_request_processing_and_fulfillment",
+            "workload_name": "Documentation Request Processing and Fulfillment",
+            "role_id": "role_claims_support_specialist__customer_service",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 64.0
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_disaster_area_claims_intake_and_loss_documentation",
+            "workload_name": "Disaster Area Claims Intake and Loss Documentation",
+            "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+            "old_level": "human_only",
+            "new_level": "human_only",
+            "old_automation_score": 0.0,
+            "automation_score": 3.8
+          },
+          {
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "workload_name": "Claim Documentation and Settlement Administration",
+            "role_id": "role_senior_claims_adjuster__property_and_casualty",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 58.0
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__documentation_administrative_support_and_claims_coordination",
+            "workload_name": "Administrative Support and Claims Coordination",
+            "role_id": "role_claims_support_specialist__documentation",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 58.0
+          },
+          {
+            "workload_id": "wl_senior_claims_examiner__life_insurance_underwriting_review_and_documentation",
+            "workload_name": "Underwriting Review and Documentation",
+            "role_id": "role_senior_claims_examiner__life_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 27.5
+          },
+          {
+            "workload_id": "wl_claims_examiner__disability_benefits_ongoing_claims_monitoring_and_benefit_continuation",
+            "workload_name": "Ongoing Claims Monitoring and Benefit Continuation",
+            "role_id": "role_claims_examiner__disability_benefits",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 58.0
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_data_quality_and_validation",
+            "workload_name": "Commercial Claims Data Quality and Validation",
+            "role_id": "role_claims_intake_coordinator__commercial_lines",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 58.3
+          },
+          {
+            "workload_id": "wl_claims_support_specialist__customer_service_frontline_claims_inquiry_support",
+            "workload_name": "Frontline Claims Inquiry Support",
+            "role_id": "role_claims_support_specialist__customer_service",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 85.0
+          },
+          {
+            "workload_id": "wl_first_notice_of_loss_agent__catastrophe_response_mobile_command_center_operations",
+            "workload_name": "Mobile Command Center Operations",
+            "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 27.5
+          },
+          {
+            "workload_id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+            "workload_name": "Adjuster Appointment Scheduling and Claim Routing",
+            "role_id": "role_claims_intake_coordinator__personal_lines",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 70.0
+          }
+        ]
+      },
+      "role_impacts": {
+        "roles_affected": 10,
+        "impacts": [
+          {
+            "role_id": "role_claims_examiner__disability_benefits",
+            "role_name": "Claims Examiner - Disability Benefits",
+            "freed_capacity_pct": 6.0,
+            "title_impacts": [
+              {
+                "name": "Claims Examiner II - Disability Benefits",
+                "career_band": "mid",
+                "headcount": 40,
+                "avg_salary": 65000,
+                "freed_capacity_pct": 7.3
+              },
+              {
+                "name": "Claims Examiner I - Disability Benefits",
+                "career_band": "entry",
+                "headcount": 45,
+                "avg_salary": 55000,
+                "freed_capacity_pct": 8.5
+              },
+              {
+                "name": "Senior Claims Examiner - Disability Benefits",
+                "career_band": "senior",
+                "headcount": 25,
+                "avg_salary": 80000,
+                "freed_capacity_pct": 6.0
+              }
+            ],
+            "transformation_index": 9.1
+          },
+          {
+            "role_id": "role_claims_support_specialist__documentation",
+            "role_name": "Claims Support Specialist - Documentation",
+            "freed_capacity_pct": 20.1,
+            "title_impacts": [
+              {
+                "name": "Claims Support Specialist I - Documentation",
+                "career_band": "entry",
+                "headcount": 110,
+                "avg_salary": 33000,
+                "freed_capacity_pct": 28.1
+              },
+              {
+                "name": "Senior Claims Support Specialist - Documentation",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 20.1
+              },
+              {
+                "name": "Claims Support Specialist II - Documentation",
+                "career_band": "mid",
+                "headcount": 70,
+                "avg_salary": 40000,
+                "freed_capacity_pct": 24.1
+              }
+            ],
+            "transformation_index": 30.1
+          },
+          {
+            "role_id": "role_claims_intake_coordinator__personal_lines",
+            "role_name": "Claims Intake Coordinator - Personal Lines",
+            "freed_capacity_pct": 16.9,
+            "title_impacts": [
+              {
+                "name": "Claims Intake Coordinator II - Personal Lines",
+                "career_band": "mid",
+                "headcount": 80,
+                "avg_salary": 45000,
+                "freed_capacity_pct": 20.2
+              },
+              {
+                "name": "Senior Claims Intake Coordinator - Personal Lines",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 16.9
+              },
+              {
+                "name": "Claims Intake Coordinator I - Personal Lines",
+                "career_band": "entry",
+                "headcount": 85,
+                "avg_salary": 35000,
+                "freed_capacity_pct": 23.6
+              }
+            ],
+            "transformation_index": 25.3
+          },
+          {
+            "role_id": "role_senior_claims_examiner__life_insurance",
+            "role_name": "Senior Claims Examiner - Life Insurance",
+            "freed_capacity_pct": 1.2,
+            "title_impacts": [
+              {
+                "name": "Claims Examiner I - Life Insurance",
+                "career_band": "entry",
+                "headcount": 25,
+                "avg_salary": 58000,
+                "freed_capacity_pct": 1.8
+              },
+              {
+                "name": "Senior Claims Examiner - Life Insurance",
+                "career_band": "senior",
+                "headcount": 35,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 1.2
+              },
+              {
+                "name": "Claims Examiner II - Life Insurance",
+                "career_band": "mid",
+                "headcount": 35,
+                "avg_salary": 72000,
+                "freed_capacity_pct": 1.5
+              }
+            ],
+            "transformation_index": 1.9
+          },
+          {
+            "role_id": "role_claims_support_specialist__customer_service",
+            "role_name": "Claims Support Specialist - Customer Service",
+            "freed_capacity_pct": 13.7,
+            "title_impacts": [
+              {
+                "name": "Claims Support Specialist II - Customer Service",
+                "career_band": "mid",
+                "headcount": 90,
+                "avg_salary": 40000,
+                "freed_capacity_pct": 16.4
+              },
+              {
+                "name": "Senior Claims Support Specialist - Customer Service",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 13.7
+              },
+              {
+                "name": "Claims Support Specialist I - Customer Service",
+                "career_band": "entry",
+                "headcount": 130,
+                "avg_salary": 32000,
+                "freed_capacity_pct": 19.2
+              }
+            ],
+            "transformation_index": 20.5
+          },
+          {
+            "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+            "role_name": "First Notice of Loss Agent - 24/7 Hotline",
+            "freed_capacity_pct": 13.7,
+            "title_impacts": [
+              {
+                "name": "First Notice of Loss Agent - 24/7 Hotline",
+                "career_band": "entry",
+                "headcount": 50,
+                "avg_salary": 43000,
+                "freed_capacity_pct": 19.1
+              },
+              {
+                "name": "Lead First Notice of Loss Agent - 24/7 Hotline",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 13.7
+              },
+              {
+                "name": "Senior First Notice of Loss Agent - 24/7 Hotline",
+                "career_band": "mid",
+                "headcount": 35,
+                "avg_salary": 53000,
+                "freed_capacity_pct": 16.4
+              }
+            ],
+            "transformation_index": 20.5
+          },
+          {
+            "role_id": "role_claims_adjuster__health_insurance",
+            "role_name": "Claims Adjuster - Health Insurance",
+            "freed_capacity_pct": 18.3,
+            "title_impacts": [
+              {
+                "name": "Claims Adjuster I - Health Insurance",
+                "career_band": "entry",
+                "headcount": 180,
+                "avg_salary": 44000,
+                "freed_capacity_pct": 25.6
+              },
+              {
+                "name": "Claims Adjuster II - Health Insurance",
+                "career_band": "mid",
+                "headcount": 160,
+                "avg_salary": 52000,
+                "freed_capacity_pct": 22.0
+              },
+              {
+                "name": "Senior Claims Adjuster - Health Insurance",
+                "career_band": "senior",
+                "headcount": 80,
+                "avg_salary": 65000,
+                "freed_capacity_pct": 18.3
+              }
+            ],
+            "transformation_index": 27.5
+          },
+          {
+            "role_id": "role_claims_intake_coordinator__commercial_lines",
+            "role_name": "Claims Intake Coordinator - Commercial Lines",
+            "freed_capacity_pct": 20.7,
+            "title_impacts": [
+              {
+                "name": "Claims Intake Coordinator II - Commercial Lines",
+                "career_band": "mid",
+                "headcount": 70,
+                "avg_salary": 47000,
+                "freed_capacity_pct": 24.9
+              },
+              {
+                "name": "Senior Claims Intake Coordinator - Commercial Lines",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 20.7
+              },
+              {
+                "name": "Claims Intake Coordinator I - Commercial Lines",
+                "career_band": "entry",
+                "headcount": 75,
+                "avg_salary": 37000,
+                "freed_capacity_pct": 29.0
+              }
+            ],
+            "transformation_index": 31.1
+          },
+          {
+            "role_id": "role_senior_claims_adjuster__property_and_casualty",
+            "role_name": "Senior Claims Adjuster - Property & Casualty",
+            "freed_capacity_pct": 1.8,
+            "title_impacts": [
+              {
+                "name": "Claims Adjuster II - Property & Casualty",
+                "career_band": "mid",
+                "headcount": 120,
+                "avg_salary": 68000,
+                "freed_capacity_pct": 2.2
+              },
+              {
+                "name": "Senior Claims Adjuster - Property & Casualty",
+                "career_band": "senior",
+                "headcount": 70,
+                "avg_salary": 82000,
+                "freed_capacity_pct": 1.8
+              },
+              {
+                "name": "Claims Adjuster I - Property & Casualty",
+                "career_band": "entry",
+                "headcount": 95,
+                "avg_salary": 58000,
+                "freed_capacity_pct": 2.5
+              }
+            ],
+            "transformation_index": 2.7
+          },
+          {
+            "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+            "role_name": "First Notice of Loss Agent - Catastrophe Response",
+            "freed_capacity_pct": 4.9,
+            "title_impacts": [
+              {
+                "name": "First Notice of Loss Agent - Catastrophe Response",
+                "career_band": "entry",
+                "headcount": 35,
+                "avg_salary": 52000,
+                "freed_capacity_pct": 6.8
+              },
+              {
+                "name": "Lead First Notice of Loss Agent - Catastrophe Response",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 4.9
+              },
+              {
+                "name": "Senior First Notice of Loss Agent - Catastrophe Response",
+                "career_band": "mid",
+                "headcount": 30,
+                "avg_salary": 64000,
+                "freed_capacity_pct": 5.8
+              }
+            ],
+            "transformation_index": 7.3
+          }
+        ]
+      },
+      "skill_shifts": {
+        "sunset_skills": [
+          {
+            "skill_id": "skill_digital_literacy",
+            "name": "Digital Literacy",
+            "reason": "PRIMARY skill for 38 automated tasks",
+            "source": "task_mapping"
+          },
+          {
+            "skill_id": "skill_claims_processing",
+            "name": "Claims Processing",
+            "reason": "PRIMARY skill for 34 automated tasks",
+            "source": "task_mapping"
+          }
+        ],
+        "sunrise_skills": [
+          {
+            "skill_id": "skill_ai_literacy",
+            "name": "AI Literacy & Prompt Engineering",
+            "reason": "Required for effective human-AI collaboration",
+            "source": "universal"
+          },
+          {
+            "skill_id": "skill_ai_oversight",
+            "name": "AI Output Validation",
+            "reason": "Quality assurance for AI-generated outputs",
+            "source": "universal"
+          }
+        ],
+        "net_skill_shift": 0
+      },
+      "workforce": {
+        "current_headcount": 1776,
+        "freed_headcount": 295.0,
+        "reduction_pct": 16.6,
+        "redeployable": 177.0,
+        "redeployable_pct": 60.0
+      },
+      "financial": {
+        "timeline_months": 36,
+        "gross_savings": 39052635.0,
+        "technology_licensing": 1593000.0,
+        "implementation_cost": 238950.0,
+        "reskilling_cost": 2660000.0,
+        "change_management_cost": 1952631.75,
+        "severance_cost": 1496456.28,
+        "j_curve_cost": 6755850.0,
+        "total_cost": 14696888.03,
+        "net_impact": 24355746.97,
+        "roi_pct": 165.7,
+        "payback_months": 13,
+        "title_details": [
+          {
+            "title": "Claims Examiner II - Disability Benefits",
+            "headcount": 40,
+            "avg_salary": 65000,
+            "freed_capacity_pct": 7.3,
+            "savings": 569400.0
+          },
+          {
+            "title": "Claims Examiner I - Disability Benefits",
+            "headcount": 45,
+            "avg_salary": 55000,
+            "freed_capacity_pct": 8.5,
+            "savings": 631125.0
+          },
+          {
+            "title": "Senior Claims Examiner - Disability Benefits",
+            "headcount": 25,
+            "avg_salary": 80000,
+            "freed_capacity_pct": 6.0,
+            "savings": 360000.0
+          },
+          {
+            "title": "Claims Support Specialist I - Documentation",
+            "headcount": 110,
+            "avg_salary": 33000,
+            "freed_capacity_pct": 28.1,
+            "savings": 3060090.0
+          },
+          {
+            "title": "Senior Claims Support Specialist - Documentation",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 20.1,
+            "savings": 53064.0
+          },
+          {
+            "title": "Claims Support Specialist II - Documentation",
+            "headcount": 70,
+            "avg_salary": 40000,
+            "freed_capacity_pct": 24.1,
+            "savings": 2024400.0
+          },
+          {
+            "title": "Claims Intake Coordinator II - Personal Lines",
+            "headcount": 80,
+            "avg_salary": 45000,
+            "freed_capacity_pct": 20.2,
+            "savings": 2181600.0
+          },
+          {
+            "title": "Senior Claims Intake Coordinator - Personal Lines",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 16.9,
+            "savings": 44616.0
+          },
+          {
+            "title": "Claims Intake Coordinator I - Personal Lines",
+            "headcount": 85,
+            "avg_salary": 35000,
+            "freed_capacity_pct": 23.6,
+            "savings": 2106300.0
+          },
+          {
+            "title": "Claims Examiner I - Life Insurance",
+            "headcount": 25,
+            "avg_salary": 58000,
+            "freed_capacity_pct": 1.8,
+            "savings": 78300.0
+          },
+          {
+            "title": "Senior Claims Examiner - Life Insurance",
+            "headcount": 35,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 1.2,
+            "savings": 110880.0
+          },
+          {
+            "title": "Claims Examiner II - Life Insurance",
+            "headcount": 35,
+            "avg_salary": 72000,
+            "freed_capacity_pct": 1.5,
+            "savings": 113400.0
+          },
+          {
+            "title": "Claims Support Specialist II - Customer Service",
+            "headcount": 90,
+            "avg_salary": 40000,
+            "freed_capacity_pct": 16.4,
+            "savings": 1771200.0
+          },
+          {
+            "title": "Senior Claims Support Specialist - Customer Service",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 13.7,
+            "savings": 36168.0
+          },
+          {
+            "title": "Claims Support Specialist I - Customer Service",
+            "headcount": 130,
+            "avg_salary": 32000,
+            "freed_capacity_pct": 19.2,
+            "savings": 2396160.0
+          },
+          {
+            "title": "First Notice of Loss Agent - 24/7 Hotline",
+            "headcount": 50,
+            "avg_salary": 43000,
+            "freed_capacity_pct": 19.1,
+            "savings": 1231950.0
+          },
+          {
+            "title": "Lead First Notice of Loss Agent - 24/7 Hotline",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 13.7,
+            "savings": 36168.0
+          },
+          {
+            "title": "Senior First Notice of Loss Agent - 24/7 Hotline",
+            "headcount": 35,
+            "avg_salary": 53000,
+            "freed_capacity_pct": 16.4,
+            "savings": 912660.0
+          },
+          {
+            "title": "Claims Adjuster I - Health Insurance",
+            "headcount": 180,
+            "avg_salary": 44000,
+            "freed_capacity_pct": 25.6,
+            "savings": 6082560.0
+          },
+          {
+            "title": "Claims Adjuster II - Health Insurance",
+            "headcount": 160,
+            "avg_salary": 52000,
+            "freed_capacity_pct": 22.0,
+            "savings": 5491200.0
+          },
+          {
+            "title": "Senior Claims Adjuster - Health Insurance",
+            "headcount": 80,
+            "avg_salary": 65000,
+            "freed_capacity_pct": 18.3,
+            "savings": 2854800.0
+          },
+          {
+            "title": "Claims Intake Coordinator II - Commercial Lines",
+            "headcount": 70,
+            "avg_salary": 47000,
+            "freed_capacity_pct": 24.9,
+            "savings": 2457630.0
+          },
+          {
+            "title": "Senior Claims Intake Coordinator - Commercial Lines",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 20.7,
+            "savings": 54648.0
+          },
+          {
+            "title": "Claims Intake Coordinator I - Commercial Lines",
+            "headcount": 75,
+            "avg_salary": 37000,
+            "freed_capacity_pct": 29.0,
+            "savings": 2414250.0
+          },
+          {
+            "title": "Claims Adjuster II - Property & Casualty",
+            "headcount": 120,
+            "avg_salary": 68000,
+            "freed_capacity_pct": 2.2,
+            "savings": 538560.0
+          },
+          {
+            "title": "Senior Claims Adjuster - Property & Casualty",
+            "headcount": 70,
+            "avg_salary": 82000,
+            "freed_capacity_pct": 1.8,
+            "savings": 309960.0
+          },
+          {
+            "title": "Claims Adjuster I - Property & Casualty",
+            "headcount": 95,
+            "avg_salary": 58000,
+            "freed_capacity_pct": 2.5,
+            "savings": 413250.0
+          },
+          {
+            "title": "First Notice of Loss Agent - Catastrophe Response",
+            "headcount": 35,
+            "avg_salary": 52000,
+            "freed_capacity_pct": 6.8,
+            "savings": 371280.0
+          },
+          {
+            "title": "Lead First Notice of Loss Agent - Catastrophe Response",
+            "headcount": 1,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 4.9,
+            "savings": 12936.0
+          },
+          {
+            "title": "Senior First Notice of Loss Agent - Catastrophe Response",
+            "headcount": 30,
+            "avg_salary": 64000,
+            "freed_capacity_pct": 5.8,
+            "savings": 334080.0
+          }
+        ]
+      },
+      "risks": {
+        "risk_count": 1,
+        "high_risks": 0,
+        "flags": [
+          {
+            "type": "broad_change",
+            "severity": "medium",
+            "entity": "tasks",
+            "detail": "68 tasks affected - phased rollout recommended"
+          }
+        ]
+      },
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "check": "headcount_non_negative",
+            "passed": true
+          },
+          {
+            "check": "freed_capacity_bounded",
+            "passed": true
+          },
+          {
+            "check": "has_impact",
+            "passed": true
+          }
+        ]
+      },
+      "summary": {
+        "tasks_affected": 68,
+        "roles_affected": 10,
+        "freed_headcount": 295.0,
+        "reduction_pct": 16.6,
+        "gross_savings": 39052635.0,
+        "net_impact": 24355746.97,
+        "roi_pct": 165.7
+      }
+    },
+    "skills_strategy": {
+      "simulation_type": "skills_strategy",
+      "demand_analysis": {
+        "sunrise": [
+          {
+            "name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "AI Output Validation",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          }
+        ],
+        "sunset": [
+          {
+            "name": "Claims Processing",
+            "category": "domain",
+            "trend": "falling",
+            "action": "phase_out"
+          },
+          {
+            "name": "Digital Literacy",
+            "category": "domain",
+            "trend": "falling",
+            "action": "phase_out"
+          }
+        ],
+        "stable": [
+          {
+            "name": "Communication Skills",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Medical Terminology",
+            "category": "communication",
+            "trend": "stable"
+          },
+          {
+            "name": "Data Privacy & Protection",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Problem Solving",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Insurance Compliance",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Policy Administration",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Critical Thinking",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Health Insurance Products",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "HIPAA Compliance",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Customer Service Excellence",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Medical Underwriting",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Leadership & Management",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Negotiation",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Claims Handling Regulations",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Fraud Detection",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Loss Adjustment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Risk Assessment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Property & Casualty Insurance",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Coaching & Mentoring",
+            "category": "leadership",
+            "trend": "stable"
+          },
+          {
+            "name": "Policy Explanation & Education",
+            "category": "communication",
+            "trend": "stable"
+          },
+          {
+            "name": "Omnichannel Customer Experience",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Emotional Intelligence",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Customer Relationship Management (CRM)",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Collaboration & Teamwork",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Active Listening",
+            "category": "communication",
+            "trend": "stable"
+          },
+          {
+            "name": "Adaptability",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Document Management Systems",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Optical Character Recognition (OCR)",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Process Improvement",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Quality Assurance",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Data Analysis",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Decision Making & Problem Solving",
+            "category": "leadership",
+            "trend": "stable"
+          },
+          {
+            "name": "Life Insurance Products",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Insurance Fraud Laws",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Underwriting",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Business Continuity Planning",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Crisis Communication",
+            "category": "communication",
+            "trend": "stable"
+          },
+          {
+            "name": "Continuous Learning",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Workflow Automation",
+            "category": "domain",
+            "trend": "stable"
+          }
+        ]
+      },
+      "concentration_risk": {
+        "total_roles_in_scope": 10,
+        "concentration_threshold": 2,
+        "high_risk_count": 27,
+        "high_risk_skills": [
+          {
+            "skill_name": "Medical Terminology",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Data Privacy & Protection",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Policy Administration",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Health Insurance Products",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "HIPAA Compliance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Medical Underwriting",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Leadership & Management",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Negotiation",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Fraud Detection",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Loss Adjustment",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Coaching & Mentoring",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Policy Explanation & Education",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Omnichannel Customer Experience",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Customer Relationship Management (CRM)",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Document Management Systems",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Optical Character Recognition (OCR)",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Process Improvement",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Quality Assurance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Data Analysis",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Decision Making & Problem Solving",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Life Insurance Products",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Insurance Fraud Laws",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Underwriting",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Business Continuity Planning",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Crisis Communication",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Continuous Learning",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Workflow Automation",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          }
+        ]
+      },
+      "reskilling_plan": {
+        "skills": [
+          {
+            "skill_name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 365,
+            "cost": 789500.0
+          },
+          {
+            "skill_name": "AI Output Validation",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 365,
+            "cost": 789500.0
+          }
+        ],
+        "total_cost": 1579000.0,
+        "avg_months": 5.0,
+        "headcount_impacted": 365,
+        "band_breakdown": {
+          "entry": {
+            "headcount": 189,
+            "multiplier": 0.7
+          },
+          "senior": {
+            "headcount": 25,
+            "multiplier": 1.3
+          },
+          "mid": {
+            "headcount": 151,
+            "multiplier": 1.0
+          }
+        }
+      },
+      "build_vs_buy": {
+        "recommendations": [
+          {
+            "skill": "AI Literacy & Prompt Engineering",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "AI Output Validation",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          }
+        ]
+      },
+      "summary": {
+        "sunrise_count": 2,
+        "sunset_count": 2,
+        "stable_count": 39,
+        "high_risk_skills": 27,
+        "total_reskilling_cost": 1579000.0,
+        "avg_reskilling_months": 5.0
+      }
+    }
+  }
+}

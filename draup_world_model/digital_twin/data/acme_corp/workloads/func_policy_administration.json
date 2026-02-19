@@ -1,0 +1,512 @@
+[
+  {
+    "id": "wl_senior_policy_administrator_complex_policy_lifecycle_management",
+    "name": "Complex Policy Lifecycle Management",
+    "role_id": "role_senior_policy_administrator",
+    "function_id": "func_policy_administration",
+    "description": "Manages intricate policy renewals, endorsements, and complex customer inquiries requiring expert judgment and regulatory compliance oversight. Serves as escalation point for non-standard policy situations and provides guidance on compliance requirements.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_policy_administrator_staff_mentoring_and_knowledge_transfer",
+    "name": "Staff Mentoring and Knowledge Transfer",
+    "role_id": "role_senior_policy_administrator",
+    "function_id": "func_policy_administration",
+    "description": "Provides training, guidance, and performance feedback to junior policy administration staff while establishing best practices and standard operating procedures. Develops training materials and conducts quality reviews of junior staff work.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_policy_administrator_policy_exception_handling_and_underwriting_coordination",
+    "name": "Policy Exception Handling and Underwriting Coordination",
+    "role_id": "role_senior_policy_administrator",
+    "function_id": "func_policy_administration",
+    "description": "Reviews and resolves policy exceptions, coordinates with underwriting teams on complex cases, and ensures adherence to regulatory requirements across multiple insurance lines. Manages escalations from junior staff requiring expert decision-making.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_policy_administrator_regulatory_compliance_and_audit_support",
+    "name": "Regulatory Compliance and Audit Support",
+    "role_id": "role_senior_policy_administrator",
+    "function_id": "func_policy_administration",
+    "description": "Ensures all policy administration activities comply with regulatory requirements and maintains documentation for audit purposes. Participates in compliance reviews and updates procedures based on regulatory changes.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_administrator_i_routine_policy_maintenance_processing",
+    "name": "Routine Policy Maintenance Processing",
+    "role_id": "role_policy_administrator_i",
+    "function_id": "func_policy_administration",
+    "description": "Processes standard policy maintenance requests including customer information updates, address changes, and routine inquiries across life, health, and P&C products using established workflows.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_administrator_i_policy_record_accuracy_and_system_management",
+    "name": "Policy Record Accuracy and System Management",
+    "role_id": "role_policy_administrator_i",
+    "function_id": "func_policy_administration",
+    "description": "Updates and maintains accurate customer and policy records in policy management systems, performs data entry verification, and ensures system data integrity for all processed transactions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_administrator_i_customer_inquiry_resolution",
+    "name": "Customer Inquiry Resolution",
+    "role_id": "role_policy_administrator_i",
+    "function_id": "func_policy_administration",
+    "description": "Responds to standard customer inquiries regarding policy details, coverage information, and account status, providing accurate information and directing complex issues to senior staff.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__complex_cases_complex_coverage_modifications_and_beneficiary_updates",
+    "name": "Complex Coverage Modifications and Beneficiary Updates",
+    "role_id": "role_policy_change_processor__complex_cases",
+    "function_id": "func_policy_administration",
+    "description": "Processes intricate policy modifications including multi-product coverage changes, complex beneficiary updates, and non-standard requests requiring detailed manual review and analysis.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__complex_cases_underwriting_and_compliance_coordination",
+    "name": "Underwriting and Compliance Coordination",
+    "role_id": "role_policy_change_processor__complex_cases",
+    "function_id": "func_policy_administration",
+    "description": "Coordinates with underwriting and compliance teams to obtain approvals for non-standard policy changes, manages documentation requirements, and ensures all regulatory requirements are met.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__complex_cases_complex_case_documentation_and_quality_assurance",
+    "name": "Complex Case Documentation and Quality Assurance",
+    "role_id": "role_policy_change_processor__complex_cases",
+    "function_id": "func_policy_administration",
+    "description": "Prepares comprehensive documentation for complex policy changes, performs quality assurance reviews, and maintains detailed records of all modifications and approvals.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__standard_transactions_routine_address_and_name_change_processing",
+    "name": "Routine Address and Name Change Processing",
+    "role_id": "role_policy_change_processor__standard_transactions",
+    "function_id": "func_policy_administration",
+    "description": "Processes high-volume routine policy changes such as address updates and name changes using automated workflows and policy management systems with minimal manual intervention.",
+    "effort_allocation_pct": 55.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__standard_transactions_standard_coverage_modification_processing",
+    "name": "Standard Coverage Modification Processing",
+    "role_id": "role_policy_change_processor__standard_transactions",
+    "function_id": "func_policy_administration",
+    "description": "Handles standard coverage modifications and routine policy adjustments that follow established procedures and automated workflows, ensuring timely processing and system updates.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_change_processor__standard_transactions_customer_communication_and_confirmation",
+    "name": "Customer Communication and Confirmation",
+    "role_id": "role_policy_change_processor__standard_transactions",
+    "function_id": "func_policy_administration",
+    "description": "Sends automated and manual confirmations to customers regarding processed policy changes, manages communication templates, and ensures customers receive timely notification of modifications.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__new_business_new_business_policy_document_generation_and_qa",
+    "name": "New Business Policy Document Generation and QA",
+    "role_id": "role_policy_issuance_specialist__new_business",
+    "function_id": "func_policy_administration",
+    "description": "Coordinates final policy document generation for new business applications, performs quality assurance reviews to ensure accuracy and compliance, and prepares documents for delivery.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__new_business_new_business_delivery_coordination",
+    "name": "New Business Delivery Coordination",
+    "role_id": "role_policy_issuance_specialist__new_business",
+    "function_id": "func_policy_administration",
+    "description": "Manages policy delivery logistics across all product lines, coordinates with agents and customers regarding delivery timelines, and tracks delivery confirmation for new policies.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__new_business_agent_and_customer_communication_for_new_business",
+    "name": "Agent and Customer Communication for New Business",
+    "role_id": "role_policy_issuance_specialist__new_business",
+    "function_id": "func_policy_administration",
+    "description": "Communicates with agents and customers regarding policy issuance status, delivery schedules, and any outstanding documentation requirements for new business applications.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__renewals_and_conversions_renewal_policy_issuance_and_documentation",
+    "name": "Renewal Policy Issuance and Documentation",
+    "role_id": "role_policy_issuance_specialist__renewals_and_conversions",
+    "function_id": "func_policy_administration",
+    "description": "Manages issuance of renewal policies ensuring all documentation is accurate, compliant, and properly formatted for timely delivery to customers and agents.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__renewals_and_conversions_policy_conversion_processing",
+    "name": "Policy Conversion Processing",
+    "role_id": "role_policy_issuance_specialist__renewals_and_conversions",
+    "function_id": "func_policy_administration",
+    "description": "Handles policy conversion issuance including term conversions and product upgrades, ensuring proper documentation and compliance with conversion requirements.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_policy_issuance_specialist__renewals_and_conversions_expedited_renewal_and_conditional_approval_coordination",
+    "name": "Expedited Renewal and Conditional Approval Coordination",
+    "role_id": "role_policy_issuance_specialist__renewals_and_conversions",
+    "function_id": "func_policy_administration",
+    "description": "Manages expedited issuance for time-sensitive renewals and coordinates with underwriting on conditional approvals, ensuring rapid processing while maintaining compliance.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_document_specialist_document_management_operations_oversight",
+    "name": "Document Management Operations Oversight",
+    "role_id": "role_senior_document_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Oversees all document management operations including scanning, indexing, and quality control processes for policy files and customer records across the organization.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_document_specialist_document_retention_and_regulatory_compliance",
+    "name": "Document Retention and Regulatory Compliance",
+    "role_id": "role_senior_document_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Manages document retention policies, ensures compliance with regulatory requirements for document storage and destruction, and maintains audit trails for all document management activities.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_document_specialist_document_management_system_optimization",
+    "name": "Document Management System Optimization",
+    "role_id": "role_senior_document_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Optimizes document management system performance, identifies process improvements, and implements enhancements to increase efficiency and accuracy of document operations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_document_specialist_quality_control_and_staff_supervision",
+    "name": "Quality Control and Staff Supervision",
+    "role_id": "role_senior_document_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Performs quality assurance reviews of document processing work, provides feedback to document specialists, and ensures adherence to quality standards and procedures.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_document_specialist__processing_and_imaging_document_scanning_and_indexing",
+    "name": "Document Scanning and Indexing",
+    "role_id": "role_document_specialist__processing_and_imaging",
+    "function_id": "func_policy_administration",
+    "description": "Scans policy documents and customer correspondence into the document management system and performs accurate indexing with appropriate metadata and filing classifications.",
+    "effort_allocation_pct": 55.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_document_specialist__processing_and_imaging_document_quality_assurance_and_verification",
+    "name": "Document Quality Assurance and Verification",
+    "role_id": "role_document_specialist__processing_and_imaging",
+    "function_id": "func_policy_administration",
+    "description": "Performs quality assurance checks on scanned documents to ensure clarity, completeness, and proper indexing, identifying and correcting errors before final filing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_document_specialist__processing_and_imaging_filing_system_organization_and_maintenance",
+    "name": "Filing System Organization and Maintenance",
+    "role_id": "role_document_specialist__processing_and_imaging",
+    "function_id": "func_policy_administration",
+    "description": "Maintains accurate and organized filing systems within the document management system, ensures proper document retrieval capabilities, and updates filing structures as needed.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_billing_specialist_complex_billing_scenario_management",
+    "name": "Complex Billing Scenario Management",
+    "role_id": "role_senior_billing_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Manages complex billing situations including multi-policy accounts, custom payment plan arrangements, and specialized billing scenarios requiring expert judgment and analysis.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_billing_specialist_billing_dispute_resolution_and_escalation",
+    "name": "Billing Dispute Resolution and Escalation",
+    "role_id": "role_senior_billing_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Serves as escalation point for complex billing disputes, investigates discrepancies, and resolves customer billing issues requiring detailed analysis and negotiation.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_billing_specialist_billing_operations_oversight_and_process_improvement",
+    "name": "Billing Operations Oversight and Process Improvement",
+    "role_id": "role_senior_billing_specialist",
+    "function_id": "func_policy_administration",
+    "description": "Provides oversight of billing operations, identifies process improvements, and implements enhancements to billing accuracy and efficiency across the department.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_billing_specialist__transactions_premium_billing_and_payment_application_processing",
+    "name": "Premium Billing and Payment Application Processing",
+    "role_id": "role_billing_specialist__transactions",
+    "function_id": "func_policy_administration",
+    "description": "Processes premium billings for individual and group policies and applies customer payments to appropriate policy accounts, maintaining accurate transaction records.",
+    "effort_allocation_pct": 55.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_billing_specialist__transactions_billing_adjustments_and_corrections",
+    "name": "Billing Adjustments and Corrections",
+    "role_id": "role_billing_specialist__transactions",
+    "function_id": "func_policy_administration",
+    "description": "Processes billing adjustments, credits, and corrections for individual policies, ensuring accuracy and proper documentation of all billing modifications.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_billing_specialist__transactions_routine_billing_inquiry_resolution",
+    "name": "Routine Billing Inquiry Resolution",
+    "role_id": "role_billing_specialist__transactions",
+    "function_id": "func_policy_administration",
+    "description": "Responds to routine billing inquiries from customers and agents regarding premium amounts, payment status, and billing details, providing accurate information and guidance.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__field_audits_on_site_audit_execution",
+    "name": "On-Site Audit Execution",
+    "role_id": "role_premium_auditor__field_audits",
+    "function_id": "func_policy_administration",
+    "description": "Conducts in-person visits to customer locations to review payroll records, sales data, and operational metrics for premium verification. Includes document collection, data analysis, and physical inspection of business operations.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__field_audits_audit_report_preparation_and_communication",
+    "name": "Audit Report Preparation and Communication",
+    "role_id": "role_premium_auditor__field_audits",
+    "function_id": "func_policy_administration",
+    "description": "Compiles audit findings into formal reports and communicates results to customers and underwriting teams. Includes documentation of discrepancies, premium adjustments, and recommendations.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__field_audits_audit_planning_and_scheduling",
+    "name": "Audit Planning and Scheduling",
+    "role_id": "role_premium_auditor__field_audits",
+    "function_id": "func_policy_administration",
+    "description": "Schedules on-site audits, prepares audit plans, and gathers preliminary policy information. Coordinates with customers and internal teams to arrange audit logistics.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__desk_audits_remote_policy_reconciliation",
+    "name": "Remote Policy Reconciliation",
+    "role_id": "role_premium_auditor__desk_audits",
+    "function_id": "func_policy_administration",
+    "description": "Reviews policy records, billing data, and claims information remotely to identify discrepancies and ensure compliance. Performs detailed data matching and analysis without on-site visits.",
+    "effort_allocation_pct": 55.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__desk_audits_audit_adjustment_processing",
+    "name": "Audit Adjustment Processing",
+    "role_id": "role_premium_auditor__desk_audits",
+    "function_id": "func_policy_administration",
+    "description": "Processes premium corrections and adjustments identified during audits, including billing modifications and policy updates. Ensures accurate recording of audit findings in system.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_premium_auditor__desk_audits_compliance_verification_and_documentation",
+    "name": "Compliance Verification and Documentation",
+    "role_id": "role_premium_auditor__desk_audits",
+    "function_id": "func_policy_administration",
+    "description": "Verifies policy compliance with regulatory requirements and internal standards. Maintains audit documentation and prepares compliance reports.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__high_priority_accounts_high_value_account_negotiation",
+    "name": "High-Value Account Negotiation",
+    "role_id": "role_collections_specialist__high_priority_accounts",
+    "function_id": "func_policy_administration",
+    "description": "Negotiates payment arrangements and settlement terms with customers on high-value delinquent accounts. Develops customized payment plans and addresses complex financial situations.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__high_priority_accounts_policy_reinstatement_and_legal_escalation",
+    "name": "Policy Reinstatement and Legal Escalation",
+    "role_id": "role_collections_specialist__high_priority_accounts",
+    "function_id": "func_policy_administration",
+    "description": "Processes policy reinstatements for high-priority accounts and escalates cases requiring legal action or policy cancellation. Coordinates with legal and underwriting teams.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__high_priority_accounts_high_priority_account_analysis_and_strategy",
+    "name": "High-Priority Account Analysis and Strategy",
+    "role_id": "role_collections_specialist__high_priority_accounts",
+    "function_id": "func_policy_administration",
+    "description": "Analyzes account history, payment patterns, and customer circumstances to develop collection strategies. Identifies accounts requiring specialized handling or intervention.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__standard_collections_policyholder_outreach_and_contact",
+    "name": "Policyholder Outreach and Contact",
+    "role_id": "role_collections_specialist__standard_collections",
+    "function_id": "func_policy_administration",
+    "description": "Contacts policyholders with overdue premiums via phone, email, or mail to request payment. Documents all outreach attempts and customer responses in collection management systems.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__standard_collections_payment_arrangement_processing",
+    "name": "Payment Arrangement Processing",
+    "role_id": "role_collections_specialist__standard_collections",
+    "function_id": "func_policy_administration",
+    "description": "Processes payment arrangements for policyholders, sets up payment plans, and records agreements in collection systems. Monitors payment compliance and follows up on missed payments.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_collections_specialist__standard_collections_policy_cancellation_management",
+    "name": "Policy Cancellation Management",
+    "role_id": "role_collections_specialist__standard_collections",
+    "function_id": "func_policy_administration",
+    "description": "Manages policy cancellations for non-payment, including notification to customers, documentation, and system updates. Ensures compliance with cancellation procedures and regulatory requirements.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accounts_receivable_analyst_accounts_receivable_trend_analysis",
+    "name": "Accounts Receivable Trend Analysis",
+    "role_id": "role_senior_accounts_receivable_analyst",
+    "function_id": "func_policy_administration",
+    "description": "Analyzes aging reports and delinquency trends to identify patterns and root causes. Develops insights on collection performance and cash flow impacts.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accounts_receivable_analyst_cash_flow_and_collection_strategy_development",
+    "name": "Cash Flow and Collection Strategy Development",
+    "role_id": "role_senior_accounts_receivable_analyst",
+    "function_id": "func_policy_administration",
+    "description": "Develops and recommends strategies to improve collection rates and optimize cash flow. Evaluates collection processes and identifies opportunities for enhancement.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accounts_receivable_analyst_ar_subsidiary_ledger_reconciliation",
+    "name": "AR Subsidiary Ledger Reconciliation",
+    "role_id": "role_senior_accounts_receivable_analyst",
+    "function_id": "func_policy_administration",
+    "description": "Reconciles accounts receivable subsidiary ledgers with general ledger accounts to ensure accuracy. Investigates and resolves reconciliation variances.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accounts_receivable_analyst_financial_reporting_and_analysis",
+    "name": "Financial Reporting and Analysis",
+    "role_id": "role_senior_accounts_receivable_analyst",
+    "function_id": "func_policy_administration",
+    "description": "Prepares AR financial reports and analysis for management and stakeholders. Provides metrics on collection performance, aging, and cash flow status.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_receivable_analyst__reconciliation_billing_system_and_general_ledger_reconciliation",
+    "name": "Billing System and General Ledger Reconciliation",
+    "role_id": "role_accounts_receivable_analyst__reconciliation",
+    "function_id": "func_policy_administration",
+    "description": "Reconciles billing system records with general ledger accounts to identify and document discrepancies. Performs detailed transaction matching and variance analysis.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_receivable_analyst__reconciliation_billing_error_investigation_and_adjustment_processing",
+    "name": "Billing Error Investigation and Adjustment Processing",
+    "role_id": "role_accounts_receivable_analyst__reconciliation",
+    "function_id": "func_policy_administration",
+    "description": "Investigates billing errors and discrepancies, processes adjustments and credits in the billing system. Ensures accurate correction of account records.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_receivable_analyst__reconciliation_ar_records_maintenance_and_month_end_close_support",
+    "name": "AR Records Maintenance and Month-End Close Support",
+    "role_id": "role_accounts_receivable_analyst__reconciliation",
+    "function_id": "func_policy_administration",
+    "description": "Maintains accurate and current AR records, supports month-end and year-end close processes. Ensures all adjustments and corrections are properly documented and recorded.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "ai_only",
+    "skill_ids": []
+  }
+]

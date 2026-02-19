@@ -1,0 +1,802 @@
+[
+  {
+    "id": "wl_regional_agency_manager_agent_portfolio_management_and_performance_monitoring",
+    "name": "Agent Portfolio Management and Performance Monitoring",
+    "role_id": "role_regional_agency_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Oversees performance metrics, KPIs, and strategic health of agent portfolio across the region. Conducts regular performance reviews, identifies underperforming agents, and develops targeted improvement plans.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regional_agency_manager_agent_recruitment_and_onboarding",
+    "name": "Agent Recruitment and Onboarding",
+    "role_id": "role_regional_agency_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Identifies, recruits, and onboards new independent insurance agents to expand regional coverage. Manages initial training, relationship establishment, and integration into Acme's systems and standards.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regional_agency_manager_compliance_and_standards_enforcement",
+    "name": "Compliance and Standards Enforcement",
+    "role_id": "role_regional_agency_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Ensures all agents maintain compliance with company policies, regulatory requirements, and quality standards. Conducts audits, addresses violations, and implements corrective actions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regional_agency_manager_strategic_growth_and_relationship_development",
+    "name": "Strategic Growth and Relationship Development",
+    "role_id": "role_regional_agency_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops and executes strategic initiatives to grow agency revenue and market share. Builds and maintains strong relationships with key agents through regular communication and support.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_development_manager_new_agency_partner_identification_and_recruitment",
+    "name": "New Agency Partner Identification and Recruitment",
+    "role_id": "role_agency_development_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Identifies prospective agency partners through market research and networking, evaluates fit with Acme's strategy, and manages recruitment and contracting process.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_development_manager_agency_training_program_development_and_delivery",
+    "name": "Agency Training Program Development and Delivery",
+    "role_id": "role_agency_development_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Designs and delivers training programs to build agent capabilities in product knowledge, sales techniques, and digital tool adoption. Tracks training completion and effectiveness.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_development_manager_agency_performance_dashboard_management",
+    "name": "Agency Performance Dashboard Management",
+    "role_id": "role_agency_development_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Creates, maintains, and analyzes agency performance dashboards tracking sales, retention, and operational metrics. Provides data-driven insights to guide agency development strategies.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_development_manager_product_positioning_and_strategic_guidance",
+    "name": "Product Positioning and Strategic Guidance",
+    "role_id": "role_agency_development_manager",
+    "function_id": "func_sales_and_distribution",
+    "description": "Advises agencies on competitive positioning, product mix optimization, and market opportunities. Develops customized growth strategies based on agency capabilities and market conditions.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__technical_technical_platform_support_and_troubleshooting",
+    "name": "Technical Platform Support and Troubleshooting",
+    "role_id": "role_agent_support_specialist__technical",
+    "function_id": "func_sales_and_distribution",
+    "description": "Provides frontline technical support to agents experiencing issues with CRM systems, digital platforms, and AI-powered underwriting tools. Diagnoses problems and implements solutions or escalates to IT.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__technical_agent_technical_training_and_onboarding",
+    "name": "Agent Technical Training and Onboarding",
+    "role_id": "role_agent_support_specialist__technical",
+    "function_id": "func_sales_and_distribution",
+    "description": "Conducts training sessions on Acme's digital platforms and technical tools for new and existing agents. Creates training materials and documentation to support agent self-service learning.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__technical_system_issue_escalation_and_resolution_tracking",
+    "name": "System Issue Escalation and Resolution Tracking",
+    "role_id": "role_agent_support_specialist__technical",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages escalation of complex technical issues to IT department and tracks resolution status. Maintains ticket system and ensures timely communication with agents on issue status.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__technical_technical_documentation_and_knowledge_management",
+    "name": "Technical Documentation and Knowledge Management",
+    "role_id": "role_agent_support_specialist__technical",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops and maintains technical documentation, FAQs, and knowledge base articles for agent self-service support. Updates documentation as systems and processes change.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__product_product_knowledge_support_and_consultation",
+    "name": "Product Knowledge Support and Consultation",
+    "role_id": "role_agent_support_specialist__product",
+    "function_id": "func_sales_and_distribution",
+    "description": "Answers agent inquiries about life, health, and P&C insurance products, coverage details, and policy features. Provides expert guidance to help agents accurately represent products to customers.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__product_underwriting_inquiry_support",
+    "name": "Underwriting Inquiry Support",
+    "role_id": "role_agent_support_specialist__product",
+    "function_id": "func_sales_and_distribution",
+    "description": "Assists agents with underwriting questions, policy illustrations, and coverage scenarios. Coordinates with underwriting team to clarify requirements and expedite agent requests.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__product_competitive_positioning_and_sales_strategy",
+    "name": "Competitive Positioning and Sales Strategy",
+    "role_id": "role_agent_support_specialist__product",
+    "function_id": "func_sales_and_distribution",
+    "description": "Provides competitive intelligence and positioning strategies to help agents differentiate Acme products in the market. Develops comparison materials and talking points for common competitive scenarios.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agent_support_specialist__product_product_training_and_certification_support",
+    "name": "Product Training and Certification Support",
+    "role_id": "role_agent_support_specialist__product",
+    "function_id": "func_sales_and_distribution",
+    "description": "Delivers product training sessions and supports agent certification programs. Tracks training completion and assesses agent product knowledge proficiency.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_coordinator_agency_contract_management_and_documentation",
+    "name": "Agency Contract Management and Documentation",
+    "role_id": "role_agency_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages agency contracts, amendments, and related legal documentation. Ensures contracts are properly executed, filed, and tracked throughout the agency relationship lifecycle.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_coordinator_agent_licensing_verification_and_compliance",
+    "name": "Agent Licensing Verification and Compliance",
+    "role_id": "role_agency_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Verifies and tracks agent licenses, appointments, and regulatory compliance status. Maintains licensing records and alerts agencies to renewal requirements and compliance issues.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_coordinator_policy_appointment_processing_and_coordination",
+    "name": "Policy Appointment Processing and Coordination",
+    "role_id": "role_agency_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Processes new policy appointments and coordinates between agents and internal departments to ensure smooth policy issuance. Tracks appointment status and resolves processing delays.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_coordinator_inter_departmental_coordination_and_issue_resolution",
+    "name": "Inter-departmental Coordination and Issue Resolution",
+    "role_id": "role_agency_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Serves as liaison between agencies and internal departments (underwriting, claims, billing) to resolve operational issues and expedite service delivery. Tracks issues to resolution.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_operations_coordinator_commission_tracking_and_reconciliation",
+    "name": "Commission Tracking and Reconciliation",
+    "role_id": "role_agency_operations_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Tracks agent commissions, reconciles commission statements, and investigates discrepancies. Maintains accurate commission records and supports timely payment processing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_operations_coordinator_policy_file_management_and_documentation",
+    "name": "Policy File Management and Documentation",
+    "role_id": "role_agency_operations_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages policy files, maintains documentation, and ensures proper filing and organization of agency records. Retrieves files for audits and compliance reviews.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_operations_coordinator_compliance_documentation_and_reporting",
+    "name": "Compliance Documentation and Reporting",
+    "role_id": "role_agency_operations_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Prepares and maintains compliance documentation, regulatory filings, and audit-ready records for assigned agencies. Tracks compliance deadlines and alerts agencies to requirements.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_agency_operations_coordinator_agency_administrative_inquiry_support",
+    "name": "Agency Administrative Inquiry Support",
+    "role_id": "role_agency_operations_coordinator",
+    "function_id": "func_sales_and_distribution",
+    "description": "Serves as primary point of contact for agency administrative inquiries and operational issues. Resolves routine administrative problems and escalates complex issues appropriately.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_analyst_commission_calculation_and_processing",
+    "name": "Commission Calculation and Processing",
+    "role_id": "role_commission_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Calculates agent commissions based on policy sales, renewals, and performance metrics using established formulas and systems. Processes commission payments and maintains calculation records.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_analyst_commission_statement_reconciliation",
+    "name": "Commission Statement Reconciliation",
+    "role_id": "role_commission_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Reconciles commission statements against source data, identifies discrepancies, and investigates variances. Corrects errors and ensures accuracy before payment processing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_analyst_commission_discrepancy_investigation_and_resolution",
+    "name": "Commission Discrepancy Investigation and Resolution",
+    "role_id": "role_commission_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Investigates commission calculation errors, policy adjustments, and agent disputes. Works with agents and internal teams to resolve discrepancies and process corrections.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_analyst_commission_payment_verification_and_reporting",
+    "name": "Commission Payment Verification and Reporting",
+    "role_id": "role_commission_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Verifies commission payments are accurate and timely, generates payment reports, and maintains audit trail documentation. Responds to agent payment inquiries.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_and_incentive_analyst_commission_structure_analysis_and_optimization",
+    "name": "Commission Structure Analysis and Optimization",
+    "role_id": "role_commission_and_incentive_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes current commission structures and identifies opportunities for optimization. Evaluates effectiveness of commission tiers and adjustments in driving desired agent behaviors.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_and_incentive_analyst_incentive_program_design_and_modeling",
+    "name": "Incentive Program Design and Modeling",
+    "role_id": "role_commission_and_incentive_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Designs new incentive programs and models compensation scenarios to optimize agent motivation and retention. Tests program variations and forecasts financial impact.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_and_incentive_analyst_performance_dashboard_development_and_reporting",
+    "name": "Performance Dashboard Development and Reporting",
+    "role_id": "role_commission_and_incentive_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops and maintains reporting dashboards tracking commission payouts, incentive performance, and agent compensation metrics. Provides data visualizations for stakeholder decision-making.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commission_and_incentive_analyst_compensation_program_recommendations_and_strategy",
+    "name": "Compensation Program Recommendations and Strategy",
+    "role_id": "role_commission_and_incentive_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes sales performance data and agent retention metrics to recommend program adjustments and strategic changes. Presents findings and recommendations to leadership.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__life_insurance_outbound_sales_calls_and_lead_qualification",
+    "name": "Outbound Sales Calls and Lead Qualification",
+    "role_id": "role_inside_sales_representative__life_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Conducts outbound calls to prospective customers for life insurance products. Qualifies leads, assesses customer needs, and determines fit for Acme's product offerings.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__life_insurance_product_presentation_and_sales_pitch",
+    "name": "Product Presentation and Sales Pitch",
+    "role_id": "role_inside_sales_representative__life_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Presents life insurance product benefits, coverage options, and pricing to qualified prospects. Addresses customer objections and builds value proposition for Acme products.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__life_insurance_application_processing_and_digital_sales_platform_management",
+    "name": "Application Processing and Digital Sales Platform Management",
+    "role_id": "role_inside_sales_representative__life_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Processes life insurance applications through Acme's digital sales platform. Collects customer information, submits applications, and tracks status through underwriting.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__life_insurance_inbound_customer_support_and_follow_up",
+    "name": "Inbound Customer Support and Follow-up",
+    "role_id": "role_inside_sales_representative__life_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Handles inbound customer inquiries about life insurance products and provides support throughout the sales process. Follows up with prospects and customers to close sales and address concerns.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__health_insurance_health_insurance_sales_calls_and_needs_assessment",
+    "name": "Health Insurance Sales Calls and Needs Assessment",
+    "role_id": "role_inside_sales_representative__health_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Conducts inbound and outbound calls to prospective customers for health insurance products. Assesses customer needs, explains coverage options, and determines appropriate plan recommendations.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__health_insurance_coverage_explanation_and_plan_comparison",
+    "name": "Coverage Explanation and Plan Comparison",
+    "role_id": "role_inside_sales_representative__health_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Explains health insurance coverage details, benefits, deductibles, and plan differences to customers. Provides comparative analysis to help customers select appropriate coverage levels.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__health_insurance_enrollment_processing_and_digital_platform_management",
+    "name": "Enrollment Processing and Digital Platform Management",
+    "role_id": "role_inside_sales_representative__health_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Processes health insurance enrollments through digital channels and Acme's sales platform. Collects enrollment information, manages effective dates, and tracks enrollment status.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_inside_sales_representative__health_insurance_customer_service_and_post_sale_support",
+    "name": "Customer Service and Post-Sale Support",
+    "role_id": "role_inside_sales_representative__health_insurance",
+    "function_id": "func_sales_and_distribution",
+    "description": "Provides ongoing customer support throughout the sales process and after enrollment. Addresses customer questions, resolves issues, and supports customer retention.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__commercial_lines_account_portfolio_management_and_planning",
+    "name": "Account Portfolio Management and Planning",
+    "role_id": "role_sales_account_executive__commercial_lines",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops and maintains comprehensive account plans for small to mid-sized commercial clients, including annual reviews, growth strategies, and risk assessments. Identifies cross-sell and upsell opportunities across P&C, workers' compensation, and specialty lines.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__commercial_lines_client_relationship_development_and_maintenance",
+    "name": "Client Relationship Development and Maintenance",
+    "role_id": "role_sales_account_executive__commercial_lines",
+    "function_id": "func_sales_and_distribution",
+    "description": "Builds and nurtures long-term relationships with existing clients through regular communication, business reviews, and proactive service delivery. Manages client satisfaction and retention through personalized engagement.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__commercial_lines_sales_opportunity_pursuit_and_closing",
+    "name": "Sales Opportunity Pursuit and Closing",
+    "role_id": "role_sales_account_executive__commercial_lines",
+    "function_id": "func_sales_and_distribution",
+    "description": "Pursues identified cross-sell and upsell opportunities by preparing proposals, conducting product presentations, and negotiating terms with clients. Manages the sales cycle from opportunity identification through policy implementation.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__commercial_lines_market_intelligence_and_competitive_analysis",
+    "name": "Market Intelligence and Competitive Analysis",
+    "role_id": "role_sales_account_executive__commercial_lines",
+    "function_id": "func_sales_and_distribution",
+    "description": "Monitors market trends, competitive activities, and client industry developments to inform account strategy and identify emerging opportunities. Stays current on product offerings and industry best practices.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__employee_benefits_employer_needs_analysis_and_solution_design",
+    "name": "Employer Needs Analysis and Solution Design",
+    "role_id": "role_sales_account_executive__employee_benefits",
+    "function_id": "func_sales_and_distribution",
+    "description": "Conducts comprehensive needs assessments with employer prospects to understand workforce demographics, benefit preferences, and budget constraints. Designs customized group health and benefits packages that align with client objectives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__employee_benefits_proposal_development_and_presentation",
+    "name": "Proposal Development and Presentation",
+    "role_id": "role_sales_account_executive__employee_benefits",
+    "function_id": "func_sales_and_distribution",
+    "description": "Prepares detailed benefit proposals with pricing, coverage options, and implementation timelines tailored to employer needs. Presents proposals to decision-makers and addresses questions or concerns.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__employee_benefits_sales_cycle_management_and_negotiation",
+    "name": "Sales Cycle Management and Negotiation",
+    "role_id": "role_sales_account_executive__employee_benefits",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages the complete sales cycle from initial contact through contract negotiation and policy implementation. Coordinates with underwriting, enrollment services, and other departments to ensure smooth onboarding.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_sales_account_executive__employee_benefits_client_relationship_and_account_growth",
+    "name": "Client Relationship and Account Growth",
+    "role_id": "role_sales_account_executive__employee_benefits",
+    "function_id": "func_sales_and_distribution",
+    "description": "Maintains ongoing relationships with implemented clients, manages renewals, and identifies opportunities for plan enhancements or additional product offerings. Ensures client satisfaction and retention.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__national_accounts_strategic_account_planning_and_executive_engagement",
+    "name": "Strategic Account Planning and Executive Engagement",
+    "role_id": "role_enterprise_account_manager__national_accounts",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops comprehensive multi-year account strategies for large, multi-location corporate clients and serves as primary executive-level contact. Coordinates cross-functional teams to deliver customized insurance solutions across multiple product lines.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__national_accounts_complex_solution_development_and_customization",
+    "name": "Complex Solution Development and Customization",
+    "role_id": "role_enterprise_account_manager__national_accounts",
+    "function_id": "func_sales_and_distribution",
+    "description": "Designs and implements complex, customized insurance solutions addressing unique needs of multi-location enterprises. Collaborates with underwriting, claims, and product teams to develop tailored coverage structures.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__national_accounts_account_performance_management_and_optimization",
+    "name": "Account Performance Management and Optimization",
+    "role_id": "role_enterprise_account_manager__national_accounts",
+    "function_id": "func_sales_and_distribution",
+    "description": "Monitors account performance, claims experience, and risk profiles to identify optimization opportunities and cost savings. Conducts regular business reviews with client executives to demonstrate value and identify expansion opportunities.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__national_accounts_relationship_maintenance_and_strategic_partnership",
+    "name": "Relationship Maintenance and Strategic Partnership",
+    "role_id": "role_enterprise_account_manager__national_accounts",
+    "function_id": "func_sales_and_distribution",
+    "description": "Maintains strong relationships with key client stakeholders and serves as strategic partner for emerging business needs. Proactively communicates market insights and industry trends relevant to client operations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__strategic_partnerships_partner_recruitment_and_onboarding",
+    "name": "Partner Recruitment and Onboarding",
+    "role_id": "role_enterprise_account_manager__strategic_partnerships",
+    "function_id": "func_sales_and_distribution",
+    "description": "Identifies and recruits strategic partners including brokers, consultants, and affinity groups aligned with Acme's growth objectives. Develops onboarding programs and provides initial training on products and systems.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__strategic_partnerships_partnership_agreement_negotiation_and_management",
+    "name": "Partnership Agreement Negotiation and Management",
+    "role_id": "role_enterprise_account_manager__strategic_partnerships",
+    "function_id": "func_sales_and_distribution",
+    "description": "Negotiates partnership agreements including commission structures, service level expectations, and performance metrics. Manages contract terms and ensures compliance with partnership obligations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__strategic_partnerships_partner_support_and_enablement",
+    "name": "Partner Support and Enablement",
+    "role_id": "role_enterprise_account_manager__strategic_partnerships",
+    "function_id": "func_sales_and_distribution",
+    "description": "Provides ongoing support to partners through training, marketing materials, product updates, and technical assistance. Serves as primary point of contact for partner questions and escalations.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_enterprise_account_manager__strategic_partnerships_joint_business_development_and_growth_initiatives",
+    "name": "Joint Business Development and Growth Initiatives",
+    "role_id": "role_enterprise_account_manager__strategic_partnerships",
+    "function_id": "func_sales_and_distribution",
+    "description": "Collaborates with partners to identify joint business development opportunities and co-market solutions. Drives revenue growth through partner channels and monitors partner performance against targets.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__fortune_500_executive_relationship_management_and_strategic_planning",
+    "name": "Executive Relationship Management and Strategic Planning",
+    "role_id": "role_key_account_executive__fortune_500",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages relationships with C-suite executives at Acme's largest accounts and develops long-term strategic plans aligned with client business objectives. Serves as senior-level strategic advisor and trusted business partner.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__fortune_500_enterprise_wide_opportunity_identification_and_development",
+    "name": "Enterprise-Wide Opportunity Identification and Development",
+    "role_id": "role_key_account_executive__fortune_500",
+    "function_id": "func_sales_and_distribution",
+    "description": "Identifies and develops enterprise-wide opportunities across multiple business units, geographies, and product lines within Fortune 500 accounts. Coordinates complex, multi-stakeholder sales initiatives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__fortune_500_cross_functional_team_coordination_and_delivery",
+    "name": "Cross-Functional Team Coordination and Delivery",
+    "role_id": "role_key_account_executive__fortune_500",
+    "function_id": "func_sales_and_distribution",
+    "description": "Coordinates internal cross-functional teams including underwriting, claims, product, and operations to ensure exceptional service delivery and account satisfaction. Manages escalations and ensures timely resolution of complex issues.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__fortune_500_account_performance_and_value_demonstration",
+    "name": "Account Performance and Value Demonstration",
+    "role_id": "role_key_account_executive__fortune_500",
+    "function_id": "func_sales_and_distribution",
+    "description": "Monitors account performance, claims experience, and risk metrics to demonstrate ongoing value and ROI. Conducts executive-level business reviews and presents strategic insights to client leadership.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__growth_markets_high_growth_market_segment_analysis_and_strategy",
+    "name": "High-Growth Market Segment Analysis and Strategy",
+    "role_id": "role_key_account_executive__growth_markets",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes high-growth market segments and emerging opportunities within key accounts to identify expansion potential. Develops market-specific strategies and identifies vertical-specific solutions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__growth_markets_innovative_solution_development_and_implementation",
+    "name": "Innovative Solution Development and Implementation",
+    "role_id": "role_key_account_executive__growth_markets",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops innovative, customized insurance solutions tailored to emerging market needs and client-specific challenges. Collaborates with product and underwriting teams to create differentiated offerings.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__growth_markets_complex_negotiation_and_deal_structuring",
+    "name": "Complex Negotiation and Deal Structuring",
+    "role_id": "role_key_account_executive__growth_markets",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages complex negotiations with sophisticated clients in growth markets, structuring deals that balance client needs with profitability. Develops creative solutions to overcome objections and close high-value opportunities.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_key_account_executive__growth_markets_revenue_expansion_and_account_growth_management",
+    "name": "Revenue Expansion and Account Growth Management",
+    "role_id": "role_key_account_executive__growth_markets",
+    "function_id": "func_sales_and_distribution",
+    "description": "Drives revenue expansion within strategic verticals through cross-sell, upsell, and new market penetration initiatives. Monitors growth metrics and adjusts strategies to achieve revenue targets.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_specialist_digital_lead_conversion_and_sales_closure",
+    "name": "Digital Lead Conversion and Sales Closure",
+    "role_id": "role_digital_sales_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Converts online leads generated through Acme's digital channels into completed policy sales. Engages prospects through chat, email, and phone to address questions and guide them through the purchase process.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_specialist_digital_customer_journey_optimization",
+    "name": "Digital Customer Journey Optimization",
+    "role_id": "role_digital_sales_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes customer behavior throughout the digital sales journey and identifies friction points or drop-off opportunities. Recommends and implements improvements to streamline the online purchase experience.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_specialist_digital_campaign_management_and_promotion",
+    "name": "Digital Campaign Management and Promotion",
+    "role_id": "role_digital_sales_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages digital marketing campaigns, promotional offers, and content across Acme's online channels. Monitors campaign performance and adjusts messaging and targeting to maximize conversion rates.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_specialist_digital_channel_performance_monitoring_and_reporting",
+    "name": "Digital Channel Performance Monitoring and Reporting",
+    "role_id": "role_digital_sales_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Tracks key performance metrics across digital sales channels including conversion rates, customer acquisition costs, and policy volumes. Provides regular reporting and insights to support strategic decision-making.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_operations_specialist_digital_sales_system_administration_and_optimization",
+    "name": "Digital Sales System Administration and Optimization",
+    "role_id": "role_digital_sales_operations_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages technical infrastructure supporting digital sales including lead management systems, chatbots, and AI-powered recommendation engines. Ensures systems are functioning properly and continuously optimized for performance.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_operations_specialist_lead_management_and_routing",
+    "name": "Lead Management and Routing",
+    "role_id": "role_digital_sales_operations_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Manages lead capture, qualification, and routing processes across digital channels to ensure timely follow-up and appropriate assignment. Monitors lead quality and works to improve lead generation sources.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_operations_specialist_conversion_funnel_analysis_and_optimization",
+    "name": "Conversion Funnel Analysis and Optimization",
+    "role_id": "role_digital_sales_operations_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes digital sales conversion funnels to identify bottlenecks and optimization opportunities. Tests improvements to website flows, forms, and processes to increase conversion rates.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_digital_sales_operations_specialist_digital_sales_performance_reporting_and_analytics",
+    "name": "Digital Sales Performance Reporting and Analytics",
+    "role_id": "role_digital_sales_operations_specialist",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops and maintains dashboards and reports tracking digital sales performance metrics including volume, conversion rates, and revenue. Provides insights and recommendations to support continuous improvement.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_analyst_e_commerce_performance_metrics_analysis",
+    "name": "E-Commerce Performance Metrics Analysis",
+    "role_id": "role_e_commerce_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes comprehensive e-commerce performance metrics including traffic, conversion rates, customer acquisition costs, and revenue by product and channel. Identifies trends and performance drivers.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_analyst_customer_behavior_and_journey_analysis",
+    "name": "Customer Behavior and Journey Analysis",
+    "role_id": "role_e_commerce_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes customer behavior data and journey patterns to understand how customers interact with Acme's online platforms. Identifies drop-off points, friction areas, and opportunities to improve customer experience.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_analyst_user_experience_and_conversion_optimization_recommendations",
+    "name": "User Experience and Conversion Optimization Recommendations",
+    "role_id": "role_e_commerce_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Recommends enhancements to website design, navigation, checkout processes, and content to improve user experience and conversion rates. Prioritizes recommendations based on impact and feasibility.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_analyst_pricing_strategy_and_product_offering_analysis",
+    "name": "Pricing Strategy and Product Offering Analysis",
+    "role_id": "role_e_commerce_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Analyzes pricing effectiveness, product mix, and promotional strategies to optimize revenue and competitiveness. Recommends pricing adjustments and product bundling strategies based on market analysis.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_product_analyst_market_research_and_competitive_analysis",
+    "name": "Market Research and Competitive Analysis",
+    "role_id": "role_e_commerce_product_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Conducts market research to understand customer needs, competitive offerings, and emerging trends in digital insurance sales. Identifies opportunities for new features, products, or service enhancements.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_product_analyst_digital_product_feature_development_and_testing",
+    "name": "Digital Product Feature Development and Testing",
+    "role_id": "role_e_commerce_product_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Collaborates with product and technology teams to develop and test new digital sales features and enhancements. Conducts user testing and gathers feedback to validate product concepts.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_product_analyst_e_commerce_platform_requirements_and_specifications",
+    "name": "E-Commerce Platform Requirements and Specifications",
+    "role_id": "role_e_commerce_product_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Develops detailed requirements and specifications for e-commerce platform enhancements based on customer needs and business objectives. Works with technology teams to ensure requirements are clearly understood and implemented.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_e_commerce_product_analyst_customer_needs_validation_and_feedback_integration",
+    "name": "Customer Needs Validation and Feedback Integration",
+    "role_id": "role_e_commerce_product_analyst",
+    "function_id": "func_sales_and_distribution",
+    "description": "Gathers and analyzes customer feedback through surveys, user testing, and support interactions to validate product decisions. Ensures e-commerce offerings meet customer needs and expectations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  }
+]

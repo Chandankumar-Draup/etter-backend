@@ -1,0 +1,977 @@
+[
+  {
+    "id": "tech_openai_gpt_4",
+    "name": "OpenAI GPT-4",
+    "category": "ai_ml",
+    "vendor": "OpenAI",
+    "description": "Large language model for claims summarization, policy document analysis, and customer service chatbots",
+    "capabilities": [
+      "Natural language understanding",
+      "Document summarization",
+      "Chatbot development",
+      "Content generation"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_microsoft_copilot_for_insurance",
+    "name": "Microsoft Copilot for Insurance",
+    "category": "ai_ml",
+    "vendor": "Microsoft",
+    "description": "AI-powered assistant integrated with Dynamics 365 for claims processing and underwriting support",
+    "capabilities": [
+      "Claims triage automation",
+      "Underwriting recommendations",
+      "Document analysis",
+      "Agent productivity enhancement"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_custom_fraud_detection_ml_model",
+    "name": "Custom Fraud Detection ML Model",
+    "category": "ai_ml",
+    "vendor": "Acme Internal",
+    "description": "Proprietary machine learning model for identifying fraudulent claims across all product lines",
+    "capabilities": [
+      "Anomaly detection",
+      "Pattern recognition",
+      "Risk scoring",
+      "Real-time prediction"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_tensorflow",
+    "name": "TensorFlow",
+    "category": "ai_ml",
+    "vendor": "Google",
+    "description": "Open-source machine learning framework for building and training custom models for underwriting and claims prediction",
+    "capabilities": [
+      "Neural network development",
+      "Model training",
+      "Predictive analytics",
+      "Computer vision"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_aws_sagemaker",
+    "name": "AWS SageMaker",
+    "category": "ai_ml",
+    "vendor": "Amazon Web Services",
+    "description": "Managed machine learning service for building, training, and deploying ML models at scale",
+    "capabilities": [
+      "Model development",
+      "Automated model tuning",
+      "Real-time inference",
+      "Batch predictions"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_azure_machine_learning",
+    "name": "Azure Machine Learning",
+    "category": "ai_ml",
+    "vendor": "Microsoft",
+    "description": "Cloud-based ML platform for developing and deploying models with enterprise governance",
+    "capabilities": [
+      "Automated ML",
+      "Model management",
+      "MLOps pipeline",
+      "Responsible AI tools"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_ibm_watson_for_insurance",
+    "name": "IBM Watson for Insurance",
+    "category": "ai_ml",
+    "vendor": "IBM",
+    "description": "AI platform specifically designed for insurance underwriting, claims, and customer service applications",
+    "capabilities": [
+      "Underwriting automation",
+      "Claims prediction",
+      "Customer insights",
+      "Risk assessment"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_guidewire_claimcenter_ai",
+    "name": "Guidewire ClaimCenter AI",
+    "category": "ai_ml",
+    "vendor": "Guidewire",
+    "description": "AI-enhanced claims management platform with intelligent routing and reserve recommendations",
+    "capabilities": [
+      "Intelligent claims routing",
+      "Reserve estimation",
+      "Fraud detection",
+      "Outcome prediction"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_duck_creek_policy_administration_ai",
+    "name": "Duck Creek Policy Administration AI",
+    "category": "ai_ml",
+    "vendor": "Duck Creek",
+    "description": "AI-powered policy administration system for underwriting automation and risk assessment",
+    "capabilities": [
+      "Underwriting automation",
+      "Risk scoring",
+      "Policy recommendations",
+      "Compliance checking"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_uipath_robotic_process_automation",
+    "name": "UiPath Robotic Process Automation",
+    "category": "automation_rpa",
+    "vendor": "UiPath",
+    "description": "Enterprise RPA platform for automating repetitive claims processing, policy issuance, and data entry tasks",
+    "capabilities": [
+      "Process automation",
+      "Bot development",
+      "Process mining",
+      "Attended/unattended automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_automation_anywhere_enterprise",
+    "name": "Automation Anywhere Enterprise",
+    "category": "automation_rpa",
+    "vendor": "Automation Anywhere",
+    "description": "Cloud-native RPA platform for automating claims adjudication and underwriting workflows",
+    "capabilities": [
+      "Intelligent automation",
+      "Cloud-native bots",
+      "Process optimization",
+      "Cognitive automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_power_automate",
+    "name": "Microsoft Power Automate",
+    "category": "automation_rpa",
+    "vendor": "Microsoft",
+    "description": "Low-code automation platform for integrating Dynamics 365, Teams, and other Microsoft services",
+    "capabilities": [
+      "Workflow automation",
+      "Cloud flows",
+      "Desktop automation",
+      "Integration"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_blue_prism",
+    "name": "Blue Prism",
+    "category": "automation_rpa",
+    "vendor": "Blue Prism",
+    "description": "Enterprise RPA platform for intelligent automation of complex claims and underwriting processes",
+    "capabilities": [
+      "Process automation",
+      "Intelligent automation",
+      "Process analytics",
+      "Governance"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_majesco_digital_platform",
+    "name": "Majesco Digital Platform",
+    "category": "automation_rpa",
+    "vendor": "Majesco",
+    "description": "Insurance-specific digital platform with workflow automation for policy and claims management",
+    "capabilities": [
+      "Workflow automation",
+      "Digital customer experience",
+      "Process orchestration",
+      "Integration"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_servicenow_workflow_automation",
+    "name": "ServiceNow Workflow Automation",
+    "category": "automation_rpa",
+    "vendor": "ServiceNow",
+    "description": "Workflow automation within ServiceNow for IT service management and business process automation",
+    "capabilities": [
+      "Workflow design",
+      "Task automation",
+      "Approval workflows",
+      "Integration"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_tableau",
+    "name": "Tableau",
+    "category": "analytics_bi",
+    "vendor": "Salesforce",
+    "description": "Visual analytics and business intelligence platform for claims, underwriting, and operational dashboards",
+    "capabilities": [
+      "Interactive dashboards",
+      "Data visualization",
+      "Self-service analytics",
+      "Real-time reporting"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_power_bi",
+    "name": "Microsoft Power BI",
+    "category": "analytics_bi",
+    "vendor": "Microsoft",
+    "description": "Business intelligence tool integrated with Microsoft ecosystem for reporting and analytics",
+    "capabilities": [
+      "Interactive reports",
+      "Real-time dashboards",
+      "Data modeling",
+      "AI-powered insights"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_sas_viya",
+    "name": "SAS Viya",
+    "category": "analytics_bi",
+    "vendor": "SAS",
+    "description": "Advanced analytics platform for predictive modeling, risk assessment, and customer analytics",
+    "capabilities": [
+      "Predictive analytics",
+      "Risk modeling",
+      "Customer segmentation",
+      "Regulatory reporting"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_looker",
+    "name": "Looker",
+    "category": "analytics_bi",
+    "vendor": "Google",
+    "description": "Modern BI platform for embedded analytics and data exploration across insurance operations",
+    "capabilities": [
+      "Data exploration",
+      "Embedded analytics",
+      "Real-time dashboards",
+      "Data governance"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_qlik_sense",
+    "name": "Qlik Sense",
+    "category": "analytics_bi",
+    "vendor": "Qlik",
+    "description": "Associative analytics platform for exploring claims data and identifying patterns",
+    "capabilities": [
+      "Associative analytics",
+      "Data discovery",
+      "Interactive dashboards",
+      "Mobile analytics"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_guidewire_analytics",
+    "name": "Guidewire Analytics",
+    "category": "analytics_bi",
+    "vendor": "Guidewire",
+    "description": "Analytics solution built into Guidewire ClaimCenter for claims performance metrics",
+    "capabilities": [
+      "Claims analytics",
+      "Performance dashboards",
+      "Trend analysis",
+      "Benchmarking"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_aws_quicksight",
+    "name": "AWS QuickSight",
+    "category": "analytics_bi",
+    "vendor": "Amazon Web Services",
+    "description": "Cloud-native BI service for creating dashboards and visualizations on AWS data",
+    "capabilities": [
+      "Cloud-native dashboards",
+      "ML-powered insights",
+      "Embedded analytics",
+      "Scalability"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_salesforce_einstein_analytics",
+    "name": "Salesforce Einstein Analytics",
+    "category": "analytics_bi",
+    "vendor": "Salesforce",
+    "description": "AI-powered analytics within Salesforce for customer and sales insights",
+    "capabilities": [
+      "AI-powered insights",
+      "Predictive analytics",
+      "Embedded dashboards",
+      "Mobile analytics"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_salesforce_service_cloud",
+    "name": "Salesforce Service Cloud",
+    "category": "automation_rpa",
+    "vendor": "Salesforce",
+    "description": "Customer service platform for managing claims inquiries, policy questions, and customer interactions",
+    "capabilities": [
+      "Case management",
+      "Omnichannel support",
+      "Knowledge management",
+      "AI-powered routing"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_servicenow_it_service_management",
+    "name": "ServiceNow IT Service Management",
+    "category": "automation_rpa",
+    "vendor": "ServiceNow",
+    "description": "IT service management platform for managing internal IT operations and business services",
+    "capabilities": [
+      "Incident management",
+      "Change management",
+      "Asset management",
+      "Service catalog"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_sap_s_4hana",
+    "name": "SAP S/4HANA",
+    "category": "automation_rpa",
+    "vendor": "SAP",
+    "description": "Enterprise resource planning system for financial management, HR, and supply chain",
+    "capabilities": [
+      "Financial management",
+      "HR management",
+      "Supply chain",
+      "Real-time analytics"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_oracle_netsuite",
+    "name": "Oracle NetSuite",
+    "category": "automation_rpa",
+    "vendor": "Oracle",
+    "description": "Cloud ERP system for financial management and operational visibility",
+    "capabilities": [
+      "Financial management",
+      "Inventory management",
+      "Multi-subsidiary support",
+      "Real-time reporting"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_teams",
+    "name": "Microsoft Teams",
+    "category": "automation_rpa",
+    "vendor": "Microsoft",
+    "description": "Unified communication platform for collaboration among claims adjusters, underwriters, and support teams",
+    "capabilities": [
+      "Team collaboration",
+      "Video conferencing",
+      "Chat",
+      "Integration with business apps"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_slack",
+    "name": "Slack",
+    "category": "automation_rpa",
+    "vendor": "Slack",
+    "description": "Team messaging platform for internal communication and bot integrations",
+    "capabilities": [
+      "Team messaging",
+      "Workflow automation",
+      "App integration",
+      "Search and archiving"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_zoom",
+    "name": "Zoom",
+    "category": "automation_rpa",
+    "vendor": "Zoom",
+    "description": "Video conferencing platform for virtual meetings with customers and internal teams",
+    "capabilities": [
+      "Video conferencing",
+      "Screen sharing",
+      "Recording",
+      "Webinar hosting"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_github_enterprise",
+    "name": "GitHub Enterprise",
+    "category": "automation_rpa",
+    "vendor": "GitHub",
+    "description": "Version control and collaboration platform for development teams building insurance applications",
+    "capabilities": [
+      "Version control",
+      "Code collaboration",
+      "CI/CD integration",
+      "Security scanning"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_jira",
+    "name": "Jira",
+    "category": "automation_rpa",
+    "vendor": "Atlassian",
+    "description": "Project management and issue tracking tool for agile development and digital transformation initiatives",
+    "capabilities": [
+      "Issue tracking",
+      "Agile boards",
+      "Sprint planning",
+      "Reporting"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_jenkins",
+    "name": "Jenkins",
+    "category": "automation_rpa",
+    "vendor": "CloudBees",
+    "description": "Continuous integration and deployment platform for automating software builds and deployments",
+    "capabilities": [
+      "CI/CD automation",
+      "Pipeline orchestration",
+      "Plugin ecosystem",
+      "Distributed builds"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_aws_ec2",
+    "name": "AWS EC2",
+    "category": "cloud_infrastructure",
+    "vendor": "Amazon Web Services",
+    "description": "Scalable compute capacity for hosting insurance applications and workloads",
+    "capabilities": [
+      "Auto-scaling",
+      "Multi-region deployment",
+      "Instance optimization",
+      "Cost management"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_azure_synapse_analytics",
+    "name": "Azure Synapse Analytics",
+    "category": "cloud_infrastructure",
+    "vendor": "Microsoft",
+    "description": "Unified analytics platform for big data and data warehouse processing",
+    "capabilities": [
+      "Data integration",
+      "SQL analytics",
+      "Spark processing",
+      "Real-time analytics"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_google_cloud_storage",
+    "name": "Google Cloud Storage",
+    "category": "cloud_infrastructure",
+    "vendor": "Google Cloud",
+    "description": "Secure, scalable object storage for insurance documents and data",
+    "capabilities": [
+      "Multi-region replication",
+      "Lifecycle management",
+      "Access controls",
+      "Compliance certifications"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_aws_lambda",
+    "name": "AWS Lambda",
+    "category": "cloud_infrastructure",
+    "vendor": "Amazon Web Services",
+    "description": "Serverless compute for event-driven insurance workflows and microservices",
+    "capabilities": [
+      "Event-driven execution",
+      "Auto-scaling",
+      "Pay-per-use pricing",
+      "Integration with AWS services"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_azure_kubernetes_service_aks",
+    "name": "Azure Kubernetes Service (AKS)",
+    "category": "cloud_infrastructure",
+    "vendor": "Microsoft",
+    "description": "Managed Kubernetes for containerized insurance applications",
+    "capabilities": [
+      "Container orchestration",
+      "Auto-scaling",
+      "Integrated monitoring",
+      "Multi-cluster management"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_aws_rds",
+    "name": "AWS RDS",
+    "category": "cloud_infrastructure",
+    "vendor": "Amazon Web Services",
+    "description": "Managed relational database service for core insurance systems",
+    "capabilities": [
+      "Multi-AZ deployment",
+      "Automated backups",
+      "Read replicas",
+      "Performance insights"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_guidewire_insurancesuite",
+    "name": "Guidewire InsuranceSuite",
+    "category": "erp_enterprise",
+    "vendor": "Guidewire Software",
+    "description": "Comprehensive insurance platform for policy, billing, and claims management",
+    "capabilities": [
+      "Policy administration",
+      "Claims management",
+      "Billing and collections",
+      "Integration hub"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_duck_creek_policy",
+    "name": "Duck Creek Policy",
+    "category": "erp_enterprise",
+    "vendor": "Duck Creek Technologies",
+    "description": "Cloud-native policy administration system for multi-line insurance",
+    "capabilities": [
+      "Policy lifecycle management",
+      "Real-time underwriting",
+      "Digital distribution",
+      "API-first architecture"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_majesco_digital_insurance_platform",
+    "name": "Majesco Digital Insurance Platform",
+    "category": "erp_enterprise",
+    "vendor": "Majesco",
+    "description": "Digital-first insurance platform for policy and claims operations",
+    "capabilities": [
+      "Omnichannel distribution",
+      "Straight-through processing",
+      "Advanced analytics",
+      "Microservices architecture"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_oracle_insurance",
+    "name": "Oracle Insurance",
+    "category": "erp_enterprise",
+    "vendor": "Oracle",
+    "description": "Integrated insurance management suite for policy and claims",
+    "capabilities": [
+      "Policy management",
+      "Claims processing",
+      "Billing",
+      "Customer management"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mature"
+  },
+  {
+    "id": "tech_salesforce_insurance_cloud",
+    "name": "Salesforce Insurance Cloud",
+    "category": "crm_customer",
+    "vendor": "Salesforce",
+    "description": "Customer relationship management platform tailored for insurance",
+    "capabilities": [
+      "Customer 360 view",
+      "Sales automation",
+      "Service cloud",
+      "Einstein AI"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_servicenow_itsm",
+    "name": "ServiceNow ITSM",
+    "category": "crm_customer",
+    "vendor": "ServiceNow",
+    "description": "IT service management and workflow automation platform",
+    "capabilities": [
+      "Incident management",
+      "Change management",
+      "Asset management",
+      "Workflow automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_dynamics_365",
+    "name": "Microsoft Dynamics 365",
+    "category": "crm_customer",
+    "vendor": "Microsoft",
+    "description": "Cloud-based CRM and ERP solution for customer engagement",
+    "capabilities": [
+      "Sales automation",
+      "Customer service",
+      "Field service",
+      "Marketing automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_copilot_for_microsoft_365",
+    "name": "Microsoft Copilot for Microsoft 365",
+    "category": "crm_customer",
+    "vendor": "Microsoft",
+    "description": "AI assistant integrated into Microsoft 365 for productivity and automation",
+    "capabilities": [
+      "Document generation",
+      "Email assistance",
+      "Meeting summaries",
+      "Data analysis"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_uipath_automation_suite",
+    "name": "UiPath Automation Suite",
+    "category": "erp_enterprise",
+    "vendor": "UiPath",
+    "description": "Robotic process automation platform for claims and underwriting workflows",
+    "capabilities": [
+      "RPA development",
+      "Process mining",
+      "Task mining",
+      "Attended automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_automation_anywhere",
+    "name": "Automation Anywhere",
+    "category": "erp_enterprise",
+    "vendor": "Automation Anywhere",
+    "description": "Intelligent automation platform for enterprise process automation",
+    "capabilities": [
+      "Bot development",
+      "Cloud RPA",
+      "Process optimization",
+      "AI-powered automation"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_okta",
+    "name": "Okta",
+    "category": "cloud_infrastructure",
+    "vendor": "Okta",
+    "description": "Identity and access management platform",
+    "capabilities": [
+      "Single sign-on",
+      "Multi-factor authentication",
+      "User lifecycle management",
+      "API access management"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_crowdstrike_falcon",
+    "name": "CrowdStrike Falcon",
+    "category": "cloud_infrastructure",
+    "vendor": "CrowdStrike",
+    "description": "Cloud-native endpoint protection and threat intelligence",
+    "capabilities": [
+      "Endpoint detection",
+      "Threat intelligence",
+      "Incident response",
+      "Vulnerability management"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_splunk_enterprise",
+    "name": "Splunk Enterprise",
+    "category": "cloud_infrastructure",
+    "vendor": "Splunk",
+    "description": "Security information and event management platform",
+    "capabilities": [
+      "Log aggregation",
+      "Security monitoring",
+      "Threat detection",
+      "Compliance reporting"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_custom_ml_models_tensorflow_pytorch",
+    "name": "Custom ML Models (TensorFlow/PyTorch)",
+    "category": "cloud_infrastructure",
+    "vendor": "Internal Development",
+    "description": "Custom machine learning models for claims fraud detection and risk assessment",
+    "capabilities": [
+      "Fraud detection",
+      "Risk scoring",
+      "Predictive analytics",
+      "Model training and deployment"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_servicenow",
+    "name": "ServiceNow",
+    "category": "communication_collaboration",
+    "vendor": "ServiceNow",
+    "description": "Enterprise workflow platform for IT service management and business operations",
+    "capabilities": [
+      "Incident management",
+      "Change management",
+      "Asset management",
+      "Workflow automation"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_palo_alto_networks_prisma_cloud",
+    "name": "Palo Alto Networks Prisma Cloud",
+    "category": "security_compliance",
+    "vendor": "Palo Alto Networks",
+    "description": "Cloud security platform for protecting cloud infrastructure and applications",
+    "capabilities": [
+      "Cloud workload protection",
+      "Compliance monitoring",
+      "Vulnerability scanning",
+      "Runtime defense"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_splunk_enterprise_security",
+    "name": "Splunk Enterprise Security",
+    "category": "security_compliance",
+    "vendor": "Splunk",
+    "description": "Security information and event management (SIEM) platform for threat detection and investigation",
+    "capabilities": [
+      "Log aggregation and analysis",
+      "Threat detection",
+      "Incident investigation",
+      "Compliance reporting"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_varonis_data_security_platform",
+    "name": "Varonis Data Security Platform",
+    "category": "security_compliance",
+    "vendor": "Varonis",
+    "description": "Data security platform for protecting sensitive customer and claims data",
+    "capabilities": [
+      "Data classification",
+      "Threat detection",
+      "Insider threat detection",
+      "Data loss prevention"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_delinea_secret_server",
+    "name": "Delinea Secret Server",
+    "category": "security_compliance",
+    "vendor": "Delinea",
+    "description": "Privileged access management solution for securing credentials and secrets",
+    "capabilities": [
+      "Password management",
+      "Privileged session recording",
+      "API secret management",
+      "Compliance auditing"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_duck_creek_platform",
+    "name": "Duck Creek Platform",
+    "category": "industry_specific",
+    "vendor": "Duck Creek Technologies",
+    "description": "Cloud-native insurance platform for policy, claims, and billing operations",
+    "capabilities": [
+      "Policy lifecycle management",
+      "Claims processing",
+      "Billing automation",
+      "Integration platform"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_majesco_insurtech_platform",
+    "name": "Majesco InsurTech Platform",
+    "category": "industry_specific",
+    "vendor": "Majesco",
+    "description": "Digital insurance platform for policy administration and customer engagement",
+    "capabilities": [
+      "Policy administration",
+      "Digital distribution",
+      "Customer portal",
+      "Analytics and reporting"
+    ],
+    "license_cost_tier": "enterprise",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_openai_gpt_4_and_api",
+    "name": "OpenAI GPT-4 and API",
+    "category": "industry_specific",
+    "vendor": "OpenAI",
+    "description": "Large language model API for building AI-powered applications in claims, underwriting, and customer service",
+    "capabilities": [
+      "Natural language processing",
+      "Document analysis",
+      "Content generation",
+      "Conversational AI"
+    ],
+    "license_cost_tier": "low",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_aws_services_ec2_s3_lambda_rds",
+    "name": "AWS Services (EC2, S3, Lambda, RDS)",
+    "category": "development_tools",
+    "vendor": "Amazon Web Services",
+    "description": "Cloud infrastructure and services for hosting insurance applications and data",
+    "capabilities": [
+      "Compute resources",
+      "Storage solutions",
+      "Serverless computing",
+      "Database services"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_microsoft_azure",
+    "name": "Microsoft Azure",
+    "category": "development_tools",
+    "vendor": "Microsoft",
+    "description": "Cloud platform for hosting insurance applications and AI/ML workloads",
+    "capabilities": [
+      "Virtual machines",
+      "App services",
+      "AI and machine learning",
+      "Data analytics"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "mainstream"
+  },
+  {
+    "id": "tech_google_cloud_platform_gcp",
+    "name": "Google Cloud Platform (GCP)",
+    "category": "development_tools",
+    "vendor": "Google",
+    "description": "Cloud infrastructure for insurance data processing and analytics",
+    "capabilities": [
+      "Compute engine",
+      "BigQuery analytics",
+      "Machine learning services",
+      "Data storage"
+    ],
+    "license_cost_tier": "medium",
+    "adoption_stage": "early_adopter"
+  },
+  {
+    "id": "tech_databricks",
+    "name": "Databricks",
+    "category": "development_tools",
+    "vendor": "Databricks",
+    "description": "Unified analytics platform for big data processing and machine learning",
+    "capabilities": [
+      "Data engineering",
+      "Machine learning",
+      "SQL analytics",
+      "Collaborative notebooks"
+    ],
+    "license_cost_tier": "high",
+    "adoption_stage": "early_adopter"
+  }
+]

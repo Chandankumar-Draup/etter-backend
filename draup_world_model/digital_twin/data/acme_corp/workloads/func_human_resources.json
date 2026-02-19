@@ -1,0 +1,642 @@
+[
+  {
+    "id": "wl_senior_recruiter__claims_and_underwriting_full_cycle_recruitment_for_claims_and_underwriting",
+    "name": "Full-Cycle Recruitment for Claims & Underwriting",
+    "role_id": "role_senior_recruiter__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Manages end-to-end recruitment process for technical and specialized roles in claims processing and underwriting, including job requisition analysis, candidate sourcing, screening, interviewing, and offer negotiation.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_recruiter__claims_and_underwriting_ai_transformation_role_placement",
+    "name": "AI Transformation Role Placement",
+    "role_id": "role_senior_recruiter__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Focuses on identifying, recruiting, and placing candidates for new roles created by AI transformation initiatives, including upskilling requirements and transition planning for affected positions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_recruiter__claims_and_underwriting_candidate_pipeline_development",
+    "name": "Candidate Pipeline Development",
+    "role_id": "role_senior_recruiter__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Builds and maintains talent pipelines for claims and underwriting positions through networking, relationship management, and proactive outreach to passive candidates.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_recruiter__claims_and_underwriting_recruitment_analytics_and_reporting",
+    "name": "Recruitment Analytics & Reporting",
+    "role_id": "role_senior_recruiter__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Tracks recruitment metrics, time-to-fill, quality-of-hire, and provides insights on market trends and hiring challenges specific to claims and underwriting functions.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recruiter__customer_service_and_operations_high_volume_customer_service_recruitment",
+    "name": "High-Volume Customer Service Recruitment",
+    "role_id": "role_recruiter__customer_service_and_operations",
+    "function_id": "func_human_resources",
+    "description": "Manages high-volume hiring campaigns for customer service representatives, operations staff, and administrative positions across all product lines with rapid turnaround requirements.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recruiter__customer_service_and_operations_entry_and_mid_level_talent_pipeline_management",
+    "name": "Entry and Mid-Level Talent Pipeline Management",
+    "role_id": "role_recruiter__customer_service_and_operations",
+    "function_id": "func_human_resources",
+    "description": "Develops and maintains talent pipelines for entry and mid-level positions through job fairs, university partnerships, and ongoing candidate relationship management.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recruiter__customer_service_and_operations_multi_location_recruitment_coordination",
+    "name": "Multi-Location Recruitment Coordination",
+    "role_id": "role_recruiter__customer_service_and_operations",
+    "function_id": "func_human_resources",
+    "description": "Coordinates recruitment efforts across multiple customer service centers and operations locations, managing regional hiring needs and ensuring consistent hiring standards.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recruiter__customer_service_and_operations_recruitment_metrics_and_process_optimization",
+    "name": "Recruitment Metrics & Process Optimization",
+    "role_id": "role_recruiter__customer_service_and_operations",
+    "function_id": "func_human_resources",
+    "description": "Analyzes recruitment data, identifies process improvements, and implements efficiency measures to reduce time-to-fill and improve candidate experience for high-volume roles.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__digital_and_technical_passive_candidate_identification_and_engagement",
+    "name": "Passive Candidate Identification & Engagement",
+    "role_id": "role_talent_sourcing_specialist__digital_and_technical",
+    "function_id": "func_human_resources",
+    "description": "Identifies and engages passive candidates for AI, data science, and technology roles using advanced Boolean search, LinkedIn, GitHub, and professional networks.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__digital_and_technical_talent_community_building",
+    "name": "Talent Community Building",
+    "role_id": "role_talent_sourcing_specialist__digital_and_technical",
+    "function_id": "func_human_resources",
+    "description": "Builds and nurtures communities of AI, data science, and technology professionals through networking events, content sharing, and relationship development for future hiring needs.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__digital_and_technical_advanced_sourcing_tool_management",
+    "name": "Advanced Sourcing Tool Management",
+    "role_id": "role_talent_sourcing_specialist__digital_and_technical",
+    "function_id": "func_human_resources",
+    "description": "Manages and optimizes use of advanced sourcing tools, applicant tracking systems, and Boolean search strategies to maximize candidate discovery and engagement efficiency.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__digital_and_technical_market_research_and_competitive_intelligence",
+    "name": "Market Research & Competitive Intelligence",
+    "role_id": "role_talent_sourcing_specialist__digital_and_technical",
+    "function_id": "func_human_resources",
+    "description": "Conducts market research on AI and technology talent availability, compensation trends, and competitive sourcing strategies to inform recruitment strategy.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__field_operations_field_operations_candidate_sourcing",
+    "name": "Field Operations Candidate Sourcing",
+    "role_id": "role_talent_sourcing_specialist__field_operations",
+    "function_id": "func_human_resources",
+    "description": "Sources and identifies candidates for field-based roles including claims adjusters, agents, and regional operations staff through direct outreach and candidate databases.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__field_operations_staffing_partner_relationship_management",
+    "name": "Staffing Partner Relationship Management",
+    "role_id": "role_talent_sourcing_specialist__field_operations",
+    "function_id": "func_human_resources",
+    "description": "Manages relationships with external staffing partners and vendors to supplement field operations recruitment and ensure access to qualified candidate pools.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__field_operations_field_talent_market_research",
+    "name": "Field Talent Market Research",
+    "role_id": "role_talent_sourcing_specialist__field_operations",
+    "function_id": "func_human_resources",
+    "description": "Conducts market research on field operations talent availability, regional hiring trends, and competitive compensation to inform sourcing strategy.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_talent_sourcing_specialist__field_operations_candidate_pipeline_maintenance",
+    "name": "Candidate Pipeline Maintenance",
+    "role_id": "role_talent_sourcing_specialist__field_operations",
+    "function_id": "func_human_resources",
+    "description": "Maintains and nurtures pipelines of qualified field operations candidates through regular outreach, relationship building, and engagement activities.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_learning_designer__digital_transformation_ai_tool_adoption_learning_program_design",
+    "name": "AI Tool Adoption Learning Program Design",
+    "role_id": "role_senior_learning_designer__digital_transformation",
+    "function_id": "func_human_resources",
+    "description": "Designs comprehensive learning programs for AI tool adoption across claims, underwriting, and customer service functions, including curriculum development and instructional strategy.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_learning_designer__digital_transformation_process_change_and_digital_skill_development",
+    "name": "Process Change & Digital Skill Development",
+    "role_id": "role_senior_learning_designer__digital_transformation",
+    "function_id": "func_human_resources",
+    "description": "Develops learning initiatives to support process changes and build digital skills across the organization, addressing gaps created by digital transformation initiatives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_learning_designer__digital_transformation_business_stakeholder_partnership_and_needs_analysis",
+    "name": "Business Stakeholder Partnership & Needs Analysis",
+    "role_id": "role_senior_learning_designer__digital_transformation",
+    "function_id": "func_human_resources",
+    "description": "Partners with business leaders in claims, underwriting, and customer service to identify learning needs, assess skill gaps, and align learning programs with transformation objectives.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_learning_designer__digital_transformation_learning_program_evaluation_and_iteration",
+    "name": "Learning Program Evaluation & Iteration",
+    "role_id": "role_senior_learning_designer__digital_transformation",
+    "function_id": "func_human_resources",
+    "description": "Evaluates effectiveness of learning programs through assessments and feedback, iterating on content and delivery methods to maximize adoption and skill development.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_learning_designer__compliance_and_product_knowledge_compliance_training_course_development",
+    "name": "Compliance Training Course Development",
+    "role_id": "role_learning_designer__compliance_and_product_knowledge",
+    "function_id": "func_human_resources",
+    "description": "Creates instructor-led and e-learning courses for regulatory compliance requirements across life, health, and P&C product lines, ensuring content meets regulatory standards.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_learning_designer__compliance_and_product_knowledge_product_knowledge_and_customer_service_excellence_training",
+    "name": "Product Knowledge & Customer Service Excellence Training",
+    "role_id": "role_learning_designer__compliance_and_product_knowledge",
+    "function_id": "func_human_resources",
+    "description": "Develops comprehensive product knowledge and customer service excellence training programs for customer-facing teams across all product lines.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_learning_designer__compliance_and_product_knowledge_assessment_and_content_library_management",
+    "name": "Assessment & Content Library Management",
+    "role_id": "role_learning_designer__compliance_and_product_knowledge",
+    "function_id": "func_human_resources",
+    "description": "Develops assessments to measure learning effectiveness and maintains centralized learning content libraries, ensuring content is current and accessible across the organization.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_learning_designer__compliance_and_product_knowledge_instructional_design_and_multimedia_development",
+    "name": "Instructional Design & Multimedia Development",
+    "role_id": "role_learning_designer__compliance_and_product_knowledge",
+    "function_id": "func_human_resources",
+    "description": "Applies instructional design principles to create engaging learning experiences, incorporating multimedia elements and interactive components into courses.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__enterprise_programs_training_logistics_and_schedule_management",
+    "name": "Training Logistics & Schedule Management",
+    "role_id": "role_training_coordinator__enterprise_programs",
+    "function_id": "func_human_resources",
+    "description": "Coordinates logistics and scheduling for large-scale training initiatives including onboarding, compliance training, and leadership development programs across the enterprise.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__enterprise_programs_training_materials_and_resource_management",
+    "name": "Training Materials & Resource Management",
+    "role_id": "role_training_coordinator__enterprise_programs",
+    "function_id": "func_human_resources",
+    "description": "Manages creation, distribution, and maintenance of training materials, workbooks, and resources for enterprise-wide programs.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__enterprise_programs_participant_tracking_and_compliance_reporting",
+    "name": "Participant Tracking & Compliance Reporting",
+    "role_id": "role_training_coordinator__enterprise_programs",
+    "function_id": "func_human_resources",
+    "description": "Tracks participant attendance, completion, and compliance with mandatory training requirements, generating reports for management and regulatory purposes.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__enterprise_programs_training_venue_and_vendor_coordination",
+    "name": "Training Venue & Vendor Coordination",
+    "role_id": "role_training_coordinator__enterprise_programs",
+    "function_id": "func_human_resources",
+    "description": "Coordinates with training venues, vendors, and instructors to ensure all logistical requirements are met for in-person and virtual training events.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__systems_and_tools_system_implementation_training_support",
+    "name": "System Implementation Training Support",
+    "role_id": "role_training_coordinator__systems_and_tools",
+    "function_id": "func_human_resources",
+    "description": "Supports end-user training for new systems including HRIS, claims management systems, underwriting platforms, and AI tools through training delivery and technical support.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__systems_and_tools_training_environment_and_technical_setup",
+    "name": "Training Environment & Technical Setup",
+    "role_id": "role_training_coordinator__systems_and_tools",
+    "function_id": "func_human_resources",
+    "description": "Manages training environments, test systems, and technical infrastructure to support system implementation training and hands-on practice.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__systems_and_tools_quick_reference_guide_and_documentation_creation",
+    "name": "Quick-Reference Guide & Documentation Creation",
+    "role_id": "role_training_coordinator__systems_and_tools",
+    "function_id": "func_human_resources",
+    "description": "Creates quick-reference guides, job aids, and technical documentation to support user adoption of new systems and tools.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_coordinator__systems_and_tools_technical_support_during_system_rollout",
+    "name": "Technical Support During System Rollout",
+    "role_id": "role_training_coordinator__systems_and_tools",
+    "function_id": "func_human_resources",
+    "description": "Provides technical support and troubleshooting assistance to end-users during system implementations and rollouts, escalating complex issues as needed.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__claims_and_underwriting_employee_relations_and_conflict_resolution",
+    "name": "Employee Relations & Conflict Resolution",
+    "role_id": "role_hr_generalist__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Manages employee relations issues, handles grievances, and provides conflict resolution support for claims and underwriting department staff.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__claims_and_underwriting_performance_management_and_development",
+    "name": "Performance Management & Development",
+    "role_id": "role_hr_generalist__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Supports performance management processes including goal setting, feedback, performance reviews, and development planning for claims and underwriting employees.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__claims_and_underwriting_ai_transformation_change_management",
+    "name": "AI Transformation Change Management",
+    "role_id": "role_hr_generalist__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Provides change management support during AI implementation, addressing employee concerns, managing transitions, and supporting upskilling initiatives.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__claims_and_underwriting_compensation_guidance_and_policy_administration",
+    "name": "Compensation Guidance & Policy Administration",
+    "role_id": "role_hr_generalist__claims_and_underwriting",
+    "function_id": "func_human_resources",
+    "description": "Provides compensation guidance, administers HR policies, and handles benefits and payroll-related inquiries for claims and underwriting staff.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__customer_service_and_sales_recruitment_support_and_hiring_coordination",
+    "name": "Recruitment Support & Hiring Coordination",
+    "role_id": "role_hr_generalist__customer_service_and_sales",
+    "function_id": "func_human_resources",
+    "description": "Provides recruitment support to customer service centers and sales teams, coordinating with recruiters and managing hiring processes across multiple locations.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__customer_service_and_sales_employee_engagement_and_retention",
+    "name": "Employee Engagement & Retention",
+    "role_id": "role_hr_generalist__customer_service_and_sales",
+    "function_id": "func_human_resources",
+    "description": "Develops and implements employee engagement initiatives, manages retention programs, and addresses turnover challenges in customer service and sales functions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__customer_service_and_sales_performance_management_and_coaching",
+    "name": "Performance Management & Coaching",
+    "role_id": "role_hr_generalist__customer_service_and_sales",
+    "function_id": "func_human_resources",
+    "description": "Supports performance management processes, provides coaching to managers, and manages performance improvement plans for customer service and sales teams.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hr_generalist__customer_service_and_sales_policy_administration_and_compliance",
+    "name": "Policy Administration & Compliance",
+    "role_id": "role_hr_generalist__customer_service_and_sales",
+    "function_id": "func_human_resources",
+    "description": "Administers HR policies, manages benefits and payroll inquiries, and ensures compliance with employment regulations across customer service and sales locations.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_hris_analyst_hris_system_infrastructure_and_integration_management",
+    "name": "HRIS System Infrastructure & Integration Management",
+    "role_id": "role_senior_hris_analyst",
+    "function_id": "func_human_resources",
+    "description": "Manages HRIS platform architecture, system integrations with payroll and benefits platforms, and oversees technical infrastructure upgrades and maintenance. Ensures seamless data flow across connected systems and resolves complex technical issues.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_hris_analyst_data_governance_and_quality_assurance",
+    "name": "Data Governance & Quality Assurance",
+    "role_id": "role_senior_hris_analyst",
+    "function_id": "func_human_resources",
+    "description": "Establishes and enforces data governance policies, conducts data quality audits, and ensures accuracy and consistency across payroll, benefits, and talent management data. Develops data validation protocols and remediation procedures.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_hris_analyst_system_troubleshooting_and_technical_support",
+    "name": "System Troubleshooting & Technical Support",
+    "role_id": "role_senior_hris_analyst",
+    "function_id": "func_human_resources",
+    "description": "Diagnoses and resolves technical issues reported by HR staff and end-users, performs system testing during upgrades, and maintains system documentation. Provides escalation support for complex technical problems.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_hris_analyst_hris_roadmap_planning_and_vendor_management",
+    "name": "HRIS Roadmap Planning & Vendor Management",
+    "role_id": "role_senior_hris_analyst",
+    "function_id": "func_human_resources",
+    "description": "Plans system upgrades and enhancements, evaluates new HRIS technologies, and manages relationships with system vendors. Leads implementation projects and ensures alignment with HR business requirements.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hris_analyst__reporting_and_analytics_workforce_reporting_and_dashboard_development",
+    "name": "Workforce Reporting & Dashboard Development",
+    "role_id": "role_hris_analyst__reporting_and_analytics",
+    "function_id": "func_human_resources",
+    "description": "Designs and develops HRIS reports and interactive dashboards that provide HR leadership with key workforce metrics and insights. Creates ad-hoc reports to support specific business questions and decision-making.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hris_analyst__reporting_and_analytics_data_extraction_and_preparation",
+    "name": "Data Extraction & Preparation",
+    "role_id": "role_hris_analyst__reporting_and_analytics",
+    "function_id": "func_human_resources",
+    "description": "Extracts data from HRIS systems, performs data cleaning and transformation, and prepares datasets for analysis and reporting. Ensures data accuracy and completeness for all reporting activities.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hris_analyst__reporting_and_analytics_compliance_and_regulatory_reporting",
+    "name": "Compliance & Regulatory Reporting",
+    "role_id": "role_hris_analyst__reporting_and_analytics",
+    "function_id": "func_human_resources",
+    "description": "Develops and maintains reports required for regulatory compliance including EEO-1, VETS-4212, and other government filings. Ensures accuracy and timeliness of compliance submissions.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_hris_analyst__reporting_and_analytics_workforce_metrics_and_analytics_support",
+    "name": "Workforce Metrics & Analytics Support",
+    "role_id": "role_hris_analyst__reporting_and_analytics",
+    "function_id": "func_human_resources",
+    "description": "Calculates and tracks key workforce metrics such as turnover, headcount, and hiring analytics. Provides analytical support to HR business partners for strategic workforce planning initiatives.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_compensation_analyst_market_analysis_and_competitive_positioning",
+    "name": "Market Analysis & Competitive Positioning",
+    "role_id": "role_senior_compensation_analyst",
+    "function_id": "func_human_resources",
+    "description": "Conducts market salary surveys and benchmarking studies to understand competitive compensation positioning. Analyzes market data to inform salary structure decisions and ensure Acme remains competitive.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_compensation_analyst_salary_structure_development_and_management",
+    "name": "Salary Structure Development & Management",
+    "role_id": "role_senior_compensation_analyst",
+    "function_id": "func_human_resources",
+    "description": "Designs and maintains salary structures, pay grades, and compensation bands aligned with business strategy. Reviews and updates structures to reflect market changes and organizational needs.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_compensation_analyst_executive_compensation_and_equity_program_management",
+    "name": "Executive Compensation & Equity Program Management",
+    "role_id": "role_senior_compensation_analyst",
+    "function_id": "func_human_resources",
+    "description": "Develops and manages executive compensation strategies, equity programs, and incentive plans. Ensures alignment with board governance requirements and competitive market practices.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_compensation_analyst_compensation_strategy_and_business_alignment",
+    "name": "Compensation Strategy & Business Alignment",
+    "role_id": "role_senior_compensation_analyst",
+    "function_id": "func_human_resources",
+    "description": "Partners with business leaders to develop compensation strategies that support organizational objectives and talent retention. Provides strategic recommendations on compensation investments and ROI.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_compensation_analyst__job_evaluation_and_equity_job_evaluation_and_role_classification",
+    "name": "Job Evaluation & Role Classification",
+    "role_id": "role_compensation_analyst__job_evaluation_and_equity",
+    "function_id": "func_human_resources",
+    "description": "Evaluates job roles using established job evaluation methodologies to determine appropriate pay grades and compensation levels. Classifies new and existing positions within the compensation structure.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_compensation_analyst__job_evaluation_and_equity_job_description_maintenance_and_documentation",
+    "name": "Job Description Maintenance & Documentation",
+    "role_id": "role_compensation_analyst__job_evaluation_and_equity",
+    "function_id": "func_human_resources",
+    "description": "Develops, updates, and maintains accurate job descriptions for all positions at Acme. Ensures job descriptions reflect current responsibilities and are used for compensation and recruitment purposes.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_compensation_analyst__job_evaluation_and_equity_pay_equity_analysis_and_audit_support",
+    "name": "Pay Equity Analysis & Audit Support",
+    "role_id": "role_compensation_analyst__job_evaluation_and_equity",
+    "function_id": "func_human_resources",
+    "description": "Analyzes compensation data to identify pay equity gaps and disparities across demographic groups. Supports pay equity audits and develops recommendations for addressing identified inequities.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_compensation_analyst__job_evaluation_and_equity_compensation_recommendations_and_adjustments",
+    "name": "Compensation Recommendations & Adjustments",
+    "role_id": "role_compensation_analyst__job_evaluation_and_equity",
+    "function_id": "func_human_resources",
+    "description": "Analyzes compensation data for new and existing positions and recommends appropriate salary ranges and adjustments. Supports hiring managers with compensation guidance for open positions.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_benefits_administrator_benefits_program_administration_and_compliance",
+    "name": "Benefits Program Administration & Compliance",
+    "role_id": "role_senior_benefits_administrator",
+    "function_id": "func_human_resources",
+    "description": "Oversees administration of health insurance, retirement plans, wellness programs, and other employee benefits. Ensures compliance with ERISA, ACA, and other regulatory requirements.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_benefits_administrator_vendor_relationship_and_contract_management",
+    "name": "Vendor Relationship & Contract Management",
+    "role_id": "role_senior_benefits_administrator",
+    "function_id": "func_human_resources",
+    "description": "Manages relationships with benefits carriers and vendors, negotiates contracts, and ensures service level agreements are met. Coordinates annual renewals and evaluates vendor performance.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_benefits_administrator_complex_benefits_inquiries_and_problem_resolution",
+    "name": "Complex Benefits Inquiries & Problem Resolution",
+    "role_id": "role_senior_benefits_administrator",
+    "function_id": "func_human_resources",
+    "description": "Handles complex employee benefits questions and escalated issues that require deep knowledge of plan documents and regulations. Provides guidance to benefits staff on difficult situations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_benefits_administrator_benefits_strategy_and_program_development",
+    "name": "Benefits Strategy & Program Development",
+    "role_id": "role_senior_benefits_administrator",
+    "function_id": "func_human_resources",
+    "description": "Develops and recommends benefits program enhancements and new initiatives aligned with employee needs and business objectives. Evaluates program effectiveness and ROI.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_benefits_administrator__enrollment_and_support_open_enrollment_management_and_execution",
+    "name": "Open Enrollment Management & Execution",
+    "role_id": "role_benefits_administrator__enrollment_and_support",
+    "function_id": "func_human_resources",
+    "description": "Plans and executes annual open enrollment processes including communications, education sessions, and enrollment system management. Ensures timely and accurate processing of employee elections.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_benefits_administrator__enrollment_and_support_benefits_changes_and_life_event_processing",
+    "name": "Benefits Changes & Life Event Processing",
+    "role_id": "role_benefits_administrator__enrollment_and_support",
+    "function_id": "func_human_resources",
+    "description": "Processes benefits changes due to life events, employment status changes, and plan updates. Ensures changes are accurately reflected in benefits systems and communicated to employees and carriers.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_benefits_administrator__enrollment_and_support_employee_benefits_support_and_communication",
+    "name": "Employee Benefits Support & Communication",
+    "role_id": "role_benefits_administrator__enrollment_and_support",
+    "function_id": "func_human_resources",
+    "description": "Provides first-line support to employees regarding health insurance, 401(k), and other benefit programs. Answers questions, troubleshoots issues, and directs employees to appropriate resources.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_benefits_administrator__enrollment_and_support_benefits_documentation_and_carrier_coordination",
+    "name": "Benefits Documentation & Carrier Coordination",
+    "role_id": "role_benefits_administrator__enrollment_and_support",
+    "function_id": "func_human_resources",
+    "description": "Maintains benefits documentation, processes carrier submissions, and coordinates with insurance carriers on claims, eligibility, and administrative matters. Ensures accurate records and timely communication.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  }
+]

@@ -1,0 +1,882 @@
+[
+  {
+    "id": "wl_senior_claims_adjuster__property_and_casualty_complex_claim_investigation_and_valuation",
+    "name": "Complex Claim Investigation and Valuation",
+    "role_id": "role_senior_claims_adjuster__property_and_casualty",
+    "function_id": "func_claims_management",
+    "description": "Investigates complex multi-party property and casualty claims, conducting site inspections, reviewing evidence, and determining coverage applicability and settlement amounts. Handles catastrophe situations and establishes claim valuations for high-value or disputed losses.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_adjuster__property_and_casualty_junior_adjuster_mentoring_and_subject_matter_expertise",
+    "name": "Junior Adjuster Mentoring and Subject Matter Expertise",
+    "role_id": "role_senior_claims_adjuster__property_and_casualty",
+    "function_id": "func_claims_management",
+    "description": "Provides guidance and training to junior adjusters on claim evaluation methodologies, policy interpretation, and complex claim handling. Serves as escalation point for technical questions and establishes best practices for claim valuation.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_adjuster__property_and_casualty_coverage_analysis_and_policy_interpretation",
+    "name": "Coverage Analysis and Policy Interpretation",
+    "role_id": "role_senior_claims_adjuster__property_and_casualty",
+    "function_id": "func_claims_management",
+    "description": "Reviews policy language, coverage exclusions, and endorsements to determine claim eligibility and coverage limits. Interprets ambiguous policy terms and applies precedent to claim decisions.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+    "name": "Claim Documentation and Settlement Administration",
+    "role_id": "role_senior_claims_adjuster__property_and_casualty",
+    "function_id": "func_claims_management",
+    "description": "Prepares detailed claim files, settlement documentation, and payment authorizations. Manages claim closure procedures and maintains compliance with regulatory documentation requirements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_adjuster__health_insurance_routine_claim_adjudication_and_processing",
+    "name": "Routine Claim Adjudication and Processing",
+    "role_id": "role_claims_adjuster__health_insurance",
+    "function_id": "func_claims_management",
+    "description": "Processes high-volume health insurance claims by verifying coverage eligibility, reviewing medical necessity, and calculating benefit payments according to policy terms. Handles straightforward claims with standard documentation.",
+    "effort_allocation_pct": 60.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_adjuster__health_insurance_coverage_verification_and_eligibility_determination",
+    "name": "Coverage Verification and Eligibility Determination",
+    "role_id": "role_claims_adjuster__health_insurance",
+    "function_id": "func_claims_management",
+    "description": "Verifies patient coverage status, policy effective dates, and benefit limitations before claim adjudication. Confirms eligibility for specific services and identifies coverage gaps or exclusions.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_adjuster__health_insurance_moderately_complex_claim_resolution",
+    "name": "Moderately Complex Claim Resolution",
+    "role_id": "role_claims_adjuster__health_insurance",
+    "function_id": "func_claims_management",
+    "description": "Handles claims with missing information, coordination of benefits issues, or policy interpretation questions. Conducts follow-up investigations and communicates with providers to resolve claim discrepancies.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_adjuster__health_insurance_regulatory_compliance_and_audit_support",
+    "name": "Regulatory Compliance and Audit Support",
+    "role_id": "role_claims_adjuster__health_insurance",
+    "function_id": "func_claims_management",
+    "description": "Ensures claims processing adheres to regulatory requirements including HIPAA, state insurance regulations, and medical necessity guidelines. Supports internal audits and compliance reviews.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_examiner__life_insurance_high_value_life_claim_review_and_approval",
+    "name": "High-Value Life Claim Review and Approval",
+    "role_id": "role_senior_claims_examiner__life_insurance",
+    "function_id": "func_claims_management",
+    "description": "Reviews and approves high-value life insurance claims for payment, conducting thorough underwriting reviews and verifying policy validity. Makes final settlement decisions on complex or contested claims.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_examiner__life_insurance_fraud_investigation_and_risk_assessment",
+    "name": "Fraud Investigation and Risk Assessment",
+    "role_id": "role_senior_claims_examiner__life_insurance",
+    "function_id": "func_claims_management",
+    "description": "Investigates potential fraud indicators, policy violations, and suspicious claim circumstances. Conducts interviews, reviews medical records, and coordinates with external investigators to assess claim legitimacy.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_examiner__life_insurance_policy_interpretation_and_precedent_setting",
+    "name": "Policy Interpretation and Precedent Setting",
+    "role_id": "role_senior_claims_examiner__life_insurance",
+    "function_id": "func_claims_management",
+    "description": "Interprets complex policy language, coverage provisions, and exclusions to establish claim settlement precedent. Provides guidance on ambiguous policy terms and develops claim handling standards.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_examiner__life_insurance_underwriting_review_and_documentation",
+    "name": "Underwriting Review and Documentation",
+    "role_id": "role_senior_claims_examiner__life_insurance",
+    "function_id": "func_claims_management",
+    "description": "Conducts underwriting reviews of original policy applications and medical underwriting files to verify coverage validity. Prepares detailed claim examination reports and settlement documentation.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_examiner__disability_benefits_medical_documentation_review_and_eligibility_assessment",
+    "name": "Medical Documentation Review and Eligibility Assessment",
+    "role_id": "role_claims_examiner__disability_benefits",
+    "function_id": "func_claims_management",
+    "description": "Reviews medical records, physician statements, and diagnostic reports to assess disability claim eligibility and benefit duration. Evaluates medical necessity and functional limitations against policy definitions.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_examiner__disability_benefits_vocational_assessment_and_return_to_work_evaluation",
+    "name": "Vocational Assessment and Return-to-Work Evaluation",
+    "role_id": "role_claims_examiner__disability_benefits",
+    "function_id": "func_claims_management",
+    "description": "Reviews vocational assessments and rehabilitation reports to determine work capacity and return-to-work potential. Evaluates claimant's ability to perform job duties and identifies suitable alternative employment.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_examiner__disability_benefits_ongoing_claims_monitoring_and_benefit_continuation",
+    "name": "Ongoing Claims Monitoring and Benefit Continuation",
+    "role_id": "role_claims_examiner__disability_benefits",
+    "function_id": "func_claims_management",
+    "description": "Conducts periodic reviews of active disability claims to determine continued benefit eligibility. Monitors medical status changes, employment activities, and policy compliance for ongoing benefit payments.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_examiner__disability_benefits_workers'_compensation_claim_examination",
+    "name": "Workers' Compensation Claim Examination",
+    "role_id": "role_claims_examiner__disability_benefits",
+    "function_id": "func_claims_management",
+    "description": "Examines workers' compensation claims by reviewing injury documentation, medical treatment records, and wage loss information. Determines benefit eligibility and calculates compensation amounts according to state regulations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__documentation_claims_file_organization_and_records_management",
+    "name": "Claims File Organization and Records Management",
+    "role_id": "role_claims_support_specialist__documentation",
+    "function_id": "func_claims_management",
+    "description": "Organizes and maintains claims documentation in both physical and digital formats, ensuring proper file structure and accessibility. Manages document indexing, filing systems, and retrieval processes.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__documentation_digital_file_conversion_and_scanning",
+    "name": "Digital File Conversion and Scanning",
+    "role_id": "role_claims_support_specialist__documentation",
+    "function_id": "func_claims_management",
+    "description": "Converts paper claims documents to digital format through scanning and OCR processes. Ensures document quality, proper naming conventions, and integration into electronic claims management systems.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__documentation_document_retention_compliance_and_records_destruction",
+    "name": "Document Retention Compliance and Records Destruction",
+    "role_id": "role_claims_support_specialist__documentation",
+    "function_id": "func_claims_management",
+    "description": "Manages compliance with document retention policies and regulatory requirements for claims records. Coordinates records destruction activities and maintains audit trails for document lifecycle management.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__documentation_administrative_support_and_claims_coordination",
+    "name": "Administrative Support and Claims Coordination",
+    "role_id": "role_claims_support_specialist__documentation",
+    "function_id": "func_claims_management",
+    "description": "Provides administrative support to claims adjusters and examiners including document preparation, file assembly, and claim status tracking. Coordinates information flow between departments and external parties.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__customer_service_frontline_claims_inquiry_support",
+    "name": "Frontline Claims Inquiry Support",
+    "role_id": "role_claims_support_specialist__customer_service",
+    "function_id": "func_claims_management",
+    "description": "Responds to customer inquiries regarding claim status, coverage questions, and claim procedures via phone, email, and chat. Provides accurate information and resolves routine customer concerns.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__customer_service_documentation_request_processing_and_fulfillment",
+    "name": "Documentation Request Processing and Fulfillment",
+    "role_id": "role_claims_support_specialist__customer_service",
+    "function_id": "func_claims_management",
+    "description": "Processes customer requests for claim documentation, explanation of benefits, and claim-related records. Coordinates document retrieval and delivery while maintaining customer confidentiality.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__customer_service_complex_issue_escalation_and_problem_resolution",
+    "name": "Complex Issue Escalation and Problem Resolution",
+    "role_id": "role_claims_support_specialist__customer_service",
+    "function_id": "func_claims_management",
+    "description": "Identifies complex or escalated customer issues that require adjuster or examiner intervention. Documents escalation details and coordinates resolution with appropriate claims professionals.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_support_specialist__customer_service_customer_satisfaction_management_and_feedback",
+    "name": "Customer Satisfaction Management and Feedback",
+    "role_id": "role_claims_support_specialist__customer_service",
+    "function_id": "func_claims_management",
+    "description": "Maintains high customer satisfaction through professional communication and timely issue resolution. Collects customer feedback and identifies process improvement opportunities.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_intake_and_initial_processing",
+    "name": "Commercial Claims Intake and Initial Processing",
+    "role_id": "role_claims_intake_coordinator__commercial_lines",
+    "function_id": "func_claims_management",
+    "description": "Receives and documents initial claim notifications for commercial property and liability policies, gathering preliminary loss information and policy details. Ensures complete and accurate intake documentation.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__commercial_lines_claims_routing_and_assignment",
+    "name": "Claims Routing and Assignment",
+    "role_id": "role_claims_intake_coordinator__commercial_lines",
+    "function_id": "func_claims_management",
+    "description": "Routes claims to appropriate adjusters based on claim type, complexity, coverage, and adjuster availability. Manages claim assignment workflows and tracks routing accuracy.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__commercial_lines_claim_acknowledgment_and_timeline_management",
+    "name": "Claim Acknowledgment and Timeline Management",
+    "role_id": "role_claims_intake_coordinator__commercial_lines",
+    "function_id": "func_claims_management",
+    "description": "Ensures timely claim acknowledgment to customers and manages intake-to-assignment timelines. Tracks claim processing metrics and identifies bottlenecks in intake workflow.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__commercial_lines_commercial_claims_data_quality_and_validation",
+    "name": "Commercial Claims Data Quality and Validation",
+    "role_id": "role_claims_intake_coordinator__commercial_lines",
+    "function_id": "func_claims_management",
+    "description": "Validates intake information for completeness and accuracy, identifying missing details or inconsistencies. Follows up with customers or agents to obtain necessary claim information.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__personal_lines_personal_lines_claims_intake_and_documentation",
+    "name": "Personal Lines Claims Intake and Documentation",
+    "role_id": "role_claims_intake_coordinator__personal_lines",
+    "function_id": "func_claims_management",
+    "description": "Handles first contact for personal auto, home, and umbrella policy claims, documenting loss information, policyholder details, and incident circumstances. Prioritizes rapid intake processing for high-volume claims.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__personal_lines_adjuster_appointment_scheduling_and_claim_routing",
+    "name": "Adjuster Appointment Scheduling and Claim Routing",
+    "role_id": "role_claims_intake_coordinator__personal_lines",
+    "function_id": "func_claims_management",
+    "description": "Schedules adjuster appointments for claim inspections and directs claims to appropriate channels based on claim type and complexity. Manages appointment calendars and coordinates with adjuster teams.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__personal_lines_emergency_assistance_and_rapid_response",
+    "name": "Emergency Assistance and Rapid Response",
+    "role_id": "role_claims_intake_coordinator__personal_lines",
+    "function_id": "func_claims_management",
+    "description": "Identifies urgent or emergency situations requiring immediate assistance and directs customers to emergency services or emergency claim procedures. Prioritizes high-severity claims for expedited processing.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_intake_coordinator__personal_lines_personal_lines_intake_quality_and_compliance",
+    "name": "Personal Lines Intake Quality and Compliance",
+    "role_id": "role_claims_intake_coordinator__personal_lines",
+    "function_id": "func_claims_management",
+    "description": "Ensures intake information meets quality standards and regulatory requirements for personal lines claims. Validates policy information and identifies coverage-related issues during intake.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__catastrophe_response_disaster_area_claims_intake_and_loss_documentation",
+    "name": "Disaster Area Claims Intake and Loss Documentation",
+    "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+    "function_id": "func_claims_management",
+    "description": "Deploys to disaster areas to conduct on-site claims intake, documenting detailed loss information and photographing property damage. Gathers comprehensive loss details to initiate rapid claim processing.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__catastrophe_response_emergency_customer_assistance_and_support",
+    "name": "Emergency Customer Assistance and Support",
+    "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+    "function_id": "func_claims_management",
+    "description": "Provides immediate assistance to disaster-affected customers including emergency housing information, emergency fund advances, and referrals to disaster relief resources. Offers emotional support and guidance during crisis situations.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__catastrophe_response_mobile_command_center_operations",
+    "name": "Mobile Command Center Operations",
+    "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+    "function_id": "func_claims_management",
+    "description": "Operates from mobile command centers in disaster areas, managing intake workflows and coordinating with adjusters and emergency services. Maintains communication with home office and manages claim prioritization.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__catastrophe_response_catastrophe_claims_coordination_and_escalation",
+    "name": "Catastrophe Claims Coordination and Escalation",
+    "role_id": "role_first_notice_of_loss_agent__catastrophe_response",
+    "function_id": "func_claims_management",
+    "description": "Escalates complex or high-value claims to senior adjusters and coordinates with catastrophe response teams. Manages claim volume during major events and ensures appropriate resource allocation.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__24_7_hotline_24_7_hotline_claims_intake_and_initial_investigation",
+    "name": "24/7 Hotline Claims Intake and Initial Investigation",
+    "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+    "function_id": "func_claims_management",
+    "description": "Staffs round-the-clock claims hotline to receive initial loss notifications and conduct preliminary investigations. Gathers essential claim information and assesses claim urgency and complexity.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__24_7_hotline_adjuster_dispatch_and_emergency_services_coordination",
+    "name": "Adjuster Dispatch and Emergency Services Coordination",
+    "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+    "function_id": "func_claims_management",
+    "description": "Dispatches adjusters to claim locations based on claim type and urgency. Coordinates with emergency services for urgent situations and manages dispatch scheduling.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__24_7_hotline_urgent_claims_triage_and_escalation",
+    "name": "Urgent Claims Triage and Escalation",
+    "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+    "function_id": "func_claims_management",
+    "description": "Identifies urgent or high-priority claims requiring immediate attention and escalates to senior adjusters or emergency response teams. Assesses claim severity and determines appropriate response level.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_first_notice_of_loss_agent__24_7_hotline_hotline_operations_and_customer_communication",
+    "name": "Hotline Operations and Customer Communication",
+    "role_id": "role_first_notice_of_loss_agent__24_7_hotline",
+    "function_id": "func_claims_management",
+    "description": "Manages hotline operations including call routing, customer communication, and claim status updates. Provides professional customer service during high-stress claim situations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_fraud_investigator_complex_fraud_investigation_execution",
+    "name": "Complex Fraud Investigation Execution",
+    "role_id": "role_senior_fraud_investigator",
+    "function_id": "func_claims_management",
+    "description": "Conducts in-depth investigations into high-value and sophisticated fraud cases, including surveillance operations, witness interviews, evidence collection, and case documentation to support legal proceedings.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_fraud_investigator_investigation_strategy_development",
+    "name": "Investigation Strategy Development",
+    "role_id": "role_senior_fraud_investigator",
+    "function_id": "func_claims_management",
+    "description": "Designs investigation approaches for complex fraud schemes, determines resource allocation, and establishes investigation timelines and methodologies for assigned cases.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_fraud_investigator_junior_investigator_mentoring_and_training",
+    "name": "Junior Investigator Mentoring and Training",
+    "role_id": "role_senior_fraud_investigator",
+    "function_id": "func_claims_management",
+    "description": "Provides coaching, guidance, and training to junior investigators on fraud detection techniques, investigation best practices, and handling of sophisticated fraud schemes.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_fraud_investigator_legal_support_and_case_documentation",
+    "name": "Legal Support and Case Documentation",
+    "role_id": "role_senior_fraud_investigator",
+    "function_id": "func_claims_management",
+    "description": "Prepares investigation reports, evidence summaries, and case documentation to support legal proceedings and regulatory compliance requirements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fraud_investigator__digital_and_analytics_ai_powered_fraud_detection_analysis",
+    "name": "AI-Powered Fraud Detection Analysis",
+    "role_id": "role_fraud_investigator__digital_and_analytics",
+    "function_id": "func_claims_management",
+    "description": "Utilizes AI-powered fraud detection tools to analyze claims data, identify suspicious patterns, and flag high-risk claims for further investigation.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fraud_investigator__digital_and_analytics_fraud_indicator_development_and_validation",
+    "name": "Fraud Indicator Development and Validation",
+    "role_id": "role_fraud_investigator__digital_and_analytics",
+    "function_id": "func_claims_management",
+    "description": "Creates and refines fraud indicators and detection rules based on historical fraud patterns, validates algorithm performance, and updates detection models with new fraud schemes.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fraud_investigator__digital_and_analytics_predictive_fraud_prevention_initiative_support",
+    "name": "Predictive Fraud Prevention Initiative Support",
+    "role_id": "role_fraud_investigator__digital_and_analytics",
+    "function_id": "func_claims_management",
+    "description": "Supports development and implementation of predictive fraud prevention programs, analyzes model effectiveness, and provides recommendations for proactive fraud mitigation.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fraud_investigator__digital_and_analytics_data_quality_and_algorithm_optimization",
+    "name": "Data Quality and Algorithm Optimization",
+    "role_id": "role_fraud_investigator__digital_and_analytics",
+    "function_id": "func_claims_management",
+    "description": "Monitors data quality in fraud detection systems, identifies algorithm performance issues, and collaborates with data science teams to optimize detection accuracy.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_analyst__predictive_analytics_predictive_model_development_and_maintenance",
+    "name": "Predictive Model Development and Maintenance",
+    "role_id": "role_senior_claims_analyst__predictive_analytics",
+    "function_id": "func_claims_management",
+    "description": "Builds and maintains predictive models to forecast claims trends, identify reserve adequacy issues, and predict operational inefficiencies using statistical and machine learning techniques.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_analyst__predictive_analytics_analytics_dashboard_creation_and_reporting",
+    "name": "Analytics Dashboard Creation and Reporting",
+    "role_id": "role_senior_claims_analyst__predictive_analytics",
+    "function_id": "func_claims_management",
+    "description": "Develops and maintains interactive analytics dashboards that track claims metrics, trends, and performance indicators for stakeholder reporting and decision-making.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_analyst__predictive_analytics_cost_reduction_and_process_optimization_recommendations",
+    "name": "Cost Reduction and Process Optimization Recommendations",
+    "role_id": "role_senior_claims_analyst__predictive_analytics",
+    "function_id": "func_claims_management",
+    "description": "Analyzes claims processing data to identify cost reduction opportunities and operational inefficiencies, providing data-driven recommendations to leadership for process improvements.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_claims_analyst__predictive_analytics_stakeholder_communication_and_insights_delivery",
+    "name": "Stakeholder Communication and Insights Delivery",
+    "role_id": "role_senior_claims_analyst__predictive_analytics",
+    "function_id": "func_claims_management",
+    "description": "Presents analytical findings and predictive insights to claims leadership and operational teams, translating complex data into actionable business recommendations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_analyst__process_improvement_claims_workflow_analysis_and_mapping",
+    "name": "Claims Workflow Analysis and Mapping",
+    "role_id": "role_claims_analyst__process_improvement",
+    "function_id": "func_claims_management",
+    "description": "Analyzes current claims workflows and processes to identify bottlenecks, redundancies, and automation opportunities aligned with digital transformation initiatives.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_analyst__process_improvement_automation_opportunity_identification_and_evaluation",
+    "name": "Automation Opportunity Identification and Evaluation",
+    "role_id": "role_claims_analyst__process_improvement",
+    "function_id": "func_claims_management",
+    "description": "Identifies potential automation opportunities using AI and RPA technologies, evaluates feasibility and ROI, and recommends automation solutions for claims processes.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_analyst__process_improvement_ai_tool_implementation_support",
+    "name": "AI Tool Implementation Support",
+    "role_id": "role_claims_analyst__process_improvement",
+    "function_id": "func_claims_management",
+    "description": "Supports implementation of AI tools and automation solutions, including testing, user training, and change management activities to ensure successful adoption.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_analyst__process_improvement_process_performance_metrics_and_monitoring",
+    "name": "Process Performance Metrics and Monitoring",
+    "role_id": "role_claims_analyst__process_improvement",
+    "function_id": "func_claims_management",
+    "description": "Establishes and monitors process performance metrics to measure efficiency gains, tracks KPIs before and after automation implementation, and reports on improvement outcomes.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__recovery_management_subrogation_opportunity_identification",
+    "name": "Subrogation Opportunity Identification",
+    "role_id": "role_subrogation_specialist__recovery_management",
+    "function_id": "func_claims_management",
+    "description": "Identifies and evaluates subrogation and recovery opportunities against third parties responsible for insured losses, assessing liability and recovery potential for each case.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__recovery_management_subrogation_case_management_and_pursuit",
+    "name": "Subrogation Case Management and Pursuit",
+    "role_id": "role_subrogation_specialist__recovery_management",
+    "function_id": "func_claims_management",
+    "description": "Manages subrogation cases from initial identification through settlement, including documentation, correspondence with third parties, and negotiation of recovery amounts.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__recovery_management_legal_coordination_and_complex_matter_support",
+    "name": "Legal Coordination and Complex Matter Support",
+    "role_id": "role_subrogation_specialist__recovery_management",
+    "function_id": "func_claims_management",
+    "description": "Coordinates with legal counsel on complex subrogation matters, provides case information and evidence, and supports litigation activities when necessary.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__recovery_management_recovery_tracking_and_reporting",
+    "name": "Recovery Tracking and Reporting",
+    "role_id": "role_subrogation_specialist__recovery_management",
+    "function_id": "func_claims_management",
+    "description": "Maintains recovery tracking systems, documents case status and outcomes, and provides reporting on subrogation performance metrics and recovery rates.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__salvage_and_disposal_salvage_vendor_and_auction_coordination",
+    "name": "Salvage Vendor and Auction Coordination",
+    "role_id": "role_subrogation_specialist__salvage_and_disposal",
+    "function_id": "func_claims_management",
+    "description": "Coordinates with salvage vendors and auction services to manage disposal of damaged property, negotiates pricing, and schedules pickups and sales.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__salvage_and_disposal_salvage_valuation_and_recovery_maximization",
+    "name": "Salvage Valuation and Recovery Maximization",
+    "role_id": "role_subrogation_specialist__salvage_and_disposal",
+    "function_id": "func_claims_management",
+    "description": "Evaluates damaged property for salvage value, identifies optimal disposal methods and sales channels to maximize recovery proceeds from settled claims.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__salvage_and_disposal_salvage_proceeds_tracking_and_accounting",
+    "name": "Salvage Proceeds Tracking and Accounting",
+    "role_id": "role_subrogation_specialist__salvage_and_disposal",
+    "function_id": "func_claims_management",
+    "description": "Tracks salvage proceeds, reconciles payments from vendors and auction services, and ensures proper accounting and documentation of all salvage transactions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_subrogation_specialist__salvage_and_disposal_property_documentation_and_compliance",
+    "name": "Property Documentation and Compliance",
+    "role_id": "role_subrogation_specialist__salvage_and_disposal",
+    "function_id": "func_claims_management",
+    "description": "Maintains comprehensive documentation of salvaged property, disposal methods, and recovery activities to ensure compliance with company policies and regulatory requirements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__collections_subrogation_receivables_collection",
+    "name": "Subrogation Receivables Collection",
+    "role_id": "role_recovery_analyst__collections",
+    "function_id": "func_claims_management",
+    "description": "Pursues collection of subrogation receivables from third parties through phone contact, correspondence, and negotiation to recover amounts owed to the company.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__collections_claimant_overpayment_recovery",
+    "name": "Claimant Overpayment Recovery",
+    "role_id": "role_recovery_analyst__collections",
+    "function_id": "func_claims_management",
+    "description": "Identifies and pursues recovery of overpayments made to claimants, negotiates repayment arrangements, and establishes payment plans for recovery of excess claim payments.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__collections_legal_action_and_enforcement",
+    "name": "Legal Action and Enforcement",
+    "role_id": "role_recovery_analyst__collections",
+    "function_id": "func_claims_management",
+    "description": "Initiates legal action when necessary to enforce collection of outstanding receivables, coordinates with legal counsel, and supports collection litigation activities.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__collections_recovery_tracking_and_metrics_reporting",
+    "name": "Recovery Tracking and Metrics Reporting",
+    "role_id": "role_recovery_analyst__collections",
+    "function_id": "func_claims_management",
+    "description": "Maintains recovery tracking systems, documents collection activities and outcomes, and reports on collection metrics including recovery rates and aging receivables.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__coordination_cross_department_recovery_coordination",
+    "name": "Cross-Department Recovery Coordination",
+    "role_id": "role_recovery_analyst__coordination",
+    "function_id": "func_claims_management",
+    "description": "Coordinates recovery efforts across claims, subrogation, legal, and other departments to ensure aligned strategies and efficient case management for complex recovery matters.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__coordination_recovery_case_timeline_and_milestone_management",
+    "name": "Recovery Case Timeline and Milestone Management",
+    "role_id": "role_recovery_analyst__coordination",
+    "function_id": "func_claims_management",
+    "description": "Manages recovery case timelines, establishes milestones, tracks progress, and ensures cases move through each stage efficiently from identification to resolution.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__coordination_recovery_documentation_and_compliance",
+    "name": "Recovery Documentation and Compliance",
+    "role_id": "role_recovery_analyst__coordination",
+    "function_id": "func_claims_management",
+    "description": "Maintains comprehensive recovery case documentation, ensures compliance with recovery procedures and regulatory requirements, and supports audit and compliance activities.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_recovery_analyst__coordination_legal_proceeding_support_and_coordination",
+    "name": "Legal Proceeding Support and Coordination",
+    "role_id": "role_recovery_analyst__coordination",
+    "function_id": "func_claims_management",
+    "description": "Supports legal proceedings related to recovery cases, coordinates with legal counsel, prepares case materials, and ensures proper documentation for litigation activities.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__adjudication_claims_adjuster_and_examiner_supervision",
+    "name": "Claims Adjuster and Examiner Supervision",
+    "role_id": "role_claims_team_lead__adjudication",
+    "function_id": "func_claims_management",
+    "description": "Supervises team of claims adjusters and examiners, manages workload distribution, assigns cases, and monitors team productivity and case processing timelines.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__adjudication_quality_assurance_and_claims_review",
+    "name": "Quality Assurance and Claims Review",
+    "role_id": "role_claims_team_lead__adjudication",
+    "function_id": "func_claims_management",
+    "description": "Conducts quality assurance reviews of claim decisions, ensures accuracy and consistency in claim adjudication, and identifies training needs based on quality findings.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__adjudication_complex_claim_issue_resolution",
+    "name": "Complex Claim Issue Resolution",
+    "role_id": "role_claims_team_lead__adjudication",
+    "function_id": "func_claims_management",
+    "description": "Resolves complex and escalated claim issues that exceed adjuster authority, provides guidance on difficult coverage questions, and ensures appropriate claim handling.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__adjudication_team_coaching_and_regulatory_compliance",
+    "name": "Team Coaching and Regulatory Compliance",
+    "role_id": "role_claims_team_lead__adjudication",
+    "function_id": "func_claims_management",
+    "description": "Provides coaching and performance feedback to team members, ensures compliance with regulatory requirements and company policies, and maintains audit readiness.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__intake_and_triage_claims_intake_and_triage_operations_management",
+    "name": "Claims Intake and Triage Operations Management",
+    "role_id": "role_claims_team_lead__intake_and_triage",
+    "function_id": "func_claims_management",
+    "description": "Leads claims intake and triage operations, manages coordinator teams, oversees claim receipt and initial processing, and ensures smooth claim initiation workflows.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__intake_and_triage_claim_routing_and_assignment_optimization",
+    "name": "Claim Routing and Assignment Optimization",
+    "role_id": "role_claims_team_lead__intake_and_triage",
+    "function_id": "func_claims_management",
+    "description": "Optimizes claim routing and assignment processes to ensure appropriate claim distribution, considers claim complexity and adjuster expertise, and maximizes processing efficiency.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__intake_and_triage_service_level_agreement_monitoring",
+    "name": "Service Level Agreement Monitoring",
+    "role_id": "role_claims_team_lead__intake_and_triage",
+    "function_id": "func_claims_management",
+    "description": "Monitors service level agreements for claim intake and triage operations, tracks response times and processing metrics, and identifies bottlenecks affecting SLA compliance.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_team_lead__intake_and_triage_process_improvement_implementation",
+    "name": "Process Improvement Implementation",
+    "role_id": "role_claims_team_lead__intake_and_triage",
+    "function_id": "func_claims_management",
+    "description": "Implements process improvements for faster claim initiation, evaluates new tools and technologies, and drives continuous improvement initiatives within intake and triage operations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__regional_regional_operations_oversight_and_performance_management",
+    "name": "Regional Operations Oversight and Performance Management",
+    "role_id": "role_claims_operations_manager__regional",
+    "function_id": "func_claims_management",
+    "description": "Supervises adjusters, examiners, and support staff across the region; monitors team performance metrics, conducts reviews, and ensures adherence to company standards and regulatory requirements.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__regional_claims_budget_and_resource_planning",
+    "name": "Claims Budget and Resource Planning",
+    "role_id": "role_claims_operations_manager__regional",
+    "function_id": "func_claims_management",
+    "description": "Develops and manages regional claims operations budget, allocates resources across claim types and locations, and tracks expenditures against targets.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__regional_claims_quality_assurance_and_compliance",
+    "name": "Claims Quality Assurance and Compliance",
+    "role_id": "role_claims_operations_manager__regional",
+    "function_id": "func_claims_management",
+    "description": "Conducts audits of claim handling processes, ensures compliance with regulations and company policies, and implements corrective actions to maintain quality standards.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__regional_stakeholder_communication_and_reporting",
+    "name": "Stakeholder Communication and Reporting",
+    "role_id": "role_claims_operations_manager__regional",
+    "function_id": "func_claims_management",
+    "description": "Prepares regional performance reports, communicates with senior leadership and external stakeholders, and addresses escalated claims issues.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__digital_transformation_digital_transformation_strategy_and_roadmap_development",
+    "name": "Digital Transformation Strategy and Roadmap Development",
+    "role_id": "role_claims_operations_manager__digital_transformation",
+    "function_id": "func_claims_management",
+    "description": "Defines digital transformation vision and strategy for claims operations, identifies automation opportunities, and develops implementation roadmaps aligned with business objectives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__digital_transformation_ai_tool_implementation_and_deployment",
+    "name": "AI Tool Implementation and Deployment",
+    "role_id": "role_claims_operations_manager__digital_transformation",
+    "function_id": "func_claims_management",
+    "description": "Oversees selection, configuration, and deployment of AI tools and automation solutions across claims operations; manages vendor relationships and technical integration.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__digital_transformation_change_management_and_organizational_adoption",
+    "name": "Change Management and Organizational Adoption",
+    "role_id": "role_claims_operations_manager__digital_transformation",
+    "function_id": "func_claims_management",
+    "description": "Develops and executes change management plans, conducts training programs, and drives user adoption of new digital tools and automated processes.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_claims_operations_manager__digital_transformation_impact_measurement_and_performance_analytics",
+    "name": "Impact Measurement and Performance Analytics",
+    "role_id": "role_claims_operations_manager__digital_transformation",
+    "function_id": "func_claims_management",
+    "description": "Measures and analyzes the impact of automation initiatives on efficiency, quality, and cost metrics; prepares business case analyses and ROI reports.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  }
+]
