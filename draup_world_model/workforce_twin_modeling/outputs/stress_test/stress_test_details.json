@@ -1,0 +1,650 @@
+{
+  "stress_tests": [
+    {
+      "test_id": "TF-01",
+      "test_name": "HC reduction monotonically decreases with shorter timeframe",
+      "category": "timeframe",
+      "status": "PASS",
+      "message": "HC reductions: {36: 44, 24: 40, 18: 35, 12: 33, 6: 0}",
+      "metrics": {
+        "36": 44,
+        "24": 40,
+        "18": 35,
+        "12": 33,
+        "6": 0
+      }
+    },
+    {
+      "test_id": "TF-02",
+      "test_name": "12-month timeframe does not reach positive net savings",
+      "category": "timeframe",
+      "status": "PASS",
+      "message": "12mo net savings: $-1.13M (negative as expected)",
+      "metrics": {
+        "net_savings_12mo": -1133296.8858176004
+      }
+    },
+    {
+      "test_id": "TF-03",
+      "test_name": "6-month timeframe has minimal HC impact (<5%)",
+      "category": "timeframe",
+      "status": "PASS",
+      "message": "6mo reduction: 0 (0.0%)",
+      "metrics": {
+        "hc_reduced_6mo": 0,
+        "pct": 0.0
+      }
+    },
+    {
+      "test_id": "TF-04",
+      "test_name": "24-month adoption reaches 70%+ of 36-month adoption",
+      "category": "timeframe",
+      "status": "PASS",
+      "message": "24mo adoption: 26.5%, 36mo: 27.8%, ratio: 95.1%",
+      "metrics": {
+        "adopt_24": 0.26470733133312035,
+        "adopt_36": 0.2784430510829741,
+        "ratio": 0.9506695545231595
+      }
+    },
+    {
+      "test_id": "TF-00",
+      "test_name": "Compressed Timeframe Summary",
+      "category": "timeframe",
+      "status": "INFO",
+      "message": "{\n  \"36mo\": {\n    \"hc_reduced\": 44,\n    \"net_savings_M\": 2.97,\n    \"final_adoption\": 0.278,\n    \"payback_month\": 20,\n    \"final_proficiency\": 33.4\n  },\n  \"24mo\": {\n    \"hc_reduced\": 40,\n    \"net_savings_M\": 0.73,\n    \"final_adoption\": 0.265,\n    \"payback_month\": 20,\n    \"final_proficiency\": 27.8\n  },\n  \"18mo\": {\n    \"hc_reduced\": 35,\n    \"net_savings_M\": -0.25,\n    \"final_adoption\": 0.236,\n    \"payback_month\": 0,\n    \"final_proficiency\": 28.1\n  },\n  \"12mo\": {\n    \"hc_reduced\": 33,\n    \"net_savings_M\": -1.13,\n    \"final_adoption\": 0.222,\n    \"payback_month\": 0,\n    \"final_proficiency\": 25.6\n  },\n  \"6mo\": {\n    \"hc_reduced\": 0,\n    \"net_savings_M\": -1.63,\n    \"final_adoption\": 0.109,\n    \"payback_month\": 0,\n    \"final_proficiency\": 26.7\n  }\n}",
+      "metrics": {
+        "36mo": {
+          "hc_reduced": 44,
+          "net_savings_M": 2.97,
+          "final_adoption": 0.278,
+          "payback_month": 20,
+          "final_proficiency": 33.4
+        },
+        "24mo": {
+          "hc_reduced": 40,
+          "net_savings_M": 0.73,
+          "final_adoption": 0.265,
+          "payback_month": 20,
+          "final_proficiency": 27.8
+        },
+        "18mo": {
+          "hc_reduced": 35,
+          "net_savings_M": -0.25,
+          "final_adoption": 0.236,
+          "payback_month": 0,
+          "final_proficiency": 28.1
+        },
+        "12mo": {
+          "hc_reduced": 33,
+          "net_savings_M": -1.13,
+          "final_adoption": 0.222,
+          "payback_month": 0,
+          "final_proficiency": 25.6
+        },
+        "6mo": {
+          "hc_reduced": 0,
+          "net_savings_M": -1.63,
+          "final_adoption": 0.109,
+          "payback_month": 0,
+          "final_proficiency": 26.7
+        }
+      }
+    },
+    {
+      "test_id": "AR-01",
+      "test_name": "Extreme adoption rate dampened by feedback",
+      "category": "automation_rate",
+      "status": "PASS",
+      "message": "Extreme HC: 42, Normal HC: 44 (feedback limits impact)",
+      "metrics": {
+        "extreme_hc": 42,
+        "normal_hc": 44
+      }
+    },
+    {
+      "test_id": "AR-02",
+      "test_name": "Glacial adoption produces substantially less HC reduction",
+      "category": "automation_rate",
+      "status": "PASS",
+      "message": "Glacial HC: 39, Normal HC: 44",
+      "metrics": {
+        "glacial_hc": 39,
+        "normal_hc": 44
+      }
+    },
+    {
+      "test_id": "AR-03",
+      "test_name": "Faster adoption correlates with readiness impact at M6",
+      "category": "automation_rate",
+      "status": "PASS",
+      "message": "Fast readiness M6: 45.9, Normal: 46.0",
+      "metrics": {
+        "fast_readiness": 45.933193162093126,
+        "normal_readiness": 45.977690354377216
+      }
+    },
+    {
+      "test_id": "AR-00",
+      "test_name": "Automation Rate Sweep Summary",
+      "category": "automation_rate",
+      "status": "INFO",
+      "message": "{\n  \"glacial\": {\n    \"k\": 0.1,\n    \"hc_reduced\": 39,\n    \"net_savings_M\": 2.1,\n    \"final_adoption\": 0.26,\n    \"payback_month\": 23\n  },\n  \"slow\": {\n    \"k\": 0.15,\n    \"hc_reduced\": 43,\n    \"net_savings_M\": 2.55,\n    \"final_adoption\": 0.271,\n    \"payback_month\": 22\n  },\n  \"normal\": {\n    \"k\": 0.3,\n    \"hc_reduced\": 44,\n    \"net_savings_M\": 2.97,\n    \"final_adoption\": 0.278,\n    \"payback_month\": 20\n  },\n  \"fast\": {\n    \"k\": 0.6,\n    \"hc_reduced\": 44,\n    \"net_savings_M\": 3.07,\n    \"final_adoption\": 0.276,\n    \"payback_month\": 19\n  },\n  \"instant\": {\n    \"k\": 1.0,\n    \"hc_reduced\": 43,\n    \"net_savings_M\": 2.96,\n    \"final_adoption\": 0.273,\n    \"payback_month\": 19\n  },\n  \"extreme\": {\n    \"k\": 2.0,\n    \"hc_reduced\": 42,\n    \"net_savings_M\": 2.84,\n    \"final_adoption\": 0.268,\n    \"payback_month\": 20\n  }\n}",
+      "metrics": {
+        "glacial": {
+          "k": 0.1,
+          "hc_reduced": 39,
+          "net_savings_M": 2.1,
+          "final_adoption": 0.26,
+          "payback_month": 23
+        },
+        "slow": {
+          "k": 0.15,
+          "hc_reduced": 43,
+          "net_savings_M": 2.55,
+          "final_adoption": 0.271,
+          "payback_month": 22
+        },
+        "normal": {
+          "k": 0.3,
+          "hc_reduced": 44,
+          "net_savings_M": 2.97,
+          "final_adoption": 0.278,
+          "payback_month": 20
+        },
+        "fast": {
+          "k": 0.6,
+          "hc_reduced": 44,
+          "net_savings_M": 3.07,
+          "final_adoption": 0.276,
+          "payback_month": 19
+        },
+        "instant": {
+          "k": 1.0,
+          "hc_reduced": 43,
+          "net_savings_M": 2.96,
+          "final_adoption": 0.273,
+          "payback_month": 19
+        },
+        "extreme": {
+          "k": 2.0,
+          "hc_reduced": 42,
+          "net_savings_M": 2.84,
+          "final_adoption": 0.268,
+          "payback_month": 20
+        }
+      }
+    },
+    {
+      "test_id": "HC-01",
+      "test_name": "50% HC reduction achievability with aggressive params",
+      "category": "headcount",
+      "status": "INFO",
+      "message": "Achieved: 136/1370 (9.9%). Net savings: $16.4M, Payback: M12",
+      "metrics": {
+        "hc_reduced": 136,
+        "pct": 9.927007299270073,
+        "net_savings": 16434733.635419006,
+        "payback": 12
+      }
+    },
+    {
+      "test_id": "HC-02",
+      "test_name": "HC reduction does not exceed automation ceiling",
+      "category": "headcount",
+      "status": "PASS",
+      "message": "Reduced: 9.9%, Ceiling: 43.4%",
+      "metrics": {
+        "actual_pct": 9.927007299270073,
+        "ceiling_pct": 43.43065693430657
+      }
+    },
+    {
+      "test_id": "HC-03",
+      "test_name": "Progressive reduction target comparison",
+      "category": "headcount",
+      "status": "INFO",
+      "message": "HC reduced: 20%=44, 30%=56, 40%=59, 50%=60. Trust: 20%=31, 30%=30, 40%=30, 50%=30",
+      "metrics": {
+        "20%": {
+          "hc": 44,
+          "savings": 2.97,
+          "trust": 30.6
+        },
+        "30%": {
+          "hc": 56,
+          "savings": 4.9,
+          "trust": 30.0
+        },
+        "40%": {
+          "hc": 59,
+          "savings": 5.8,
+          "trust": 30.1
+        },
+        "50%": {
+          "hc": 60,
+          "savings": 6.23,
+          "trust": 30.1
+        }
+      }
+    },
+    {
+      "test_id": "HC-04",
+      "test_name": "50% reduction \u2014 remaining staff absorption rate check",
+      "category": "headcount",
+      "status": "PASS",
+      "message": "Final absorption rate: 0.344 (within capacity)",
+      "metrics": {
+        "absorption": 0.34444444444444444
+      }
+    },
+    {
+      "test_id": "HF-01",
+      "test_name": "Zero human factors still allows minimum adoption (early adopters)",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "Zero-everything adoption at M12: 0.3%",
+      "metrics": {
+        "adoption_m12": 0.003250481910518233
+      }
+    },
+    {
+      "test_id": "HF-02",
+      "test_name": "Max human factors allows adoption close to raw S-curve",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "Max adoption at M36: 77.6% vs raw 60.0% (dampening=129.3%)",
+      "metrics": {
+        "effective": 0.7756751774498141,
+        "raw": 0.5999593655102282,
+        "dampening": 1.2928795215825166
+      }
+    },
+    {
+      "test_id": "HF-03",
+      "test_name": "Zero trust severely dampens adoption despite high readiness",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "Zero-trust adoption M12: 1.6%, Baseline: 22.2%",
+      "metrics": {
+        "zero_trust": 0.016252409552591163,
+        "baseline": 0.2218794770109928
+      }
+    },
+    {
+      "test_id": "HF-04",
+      "test_name": "Low political capital constrains HC reduction",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "Low capital HC at M6: 540, Baseline: 540",
+      "metrics": {
+        "low_cap_hc": 540,
+        "baseline_hc": 540
+      }
+    },
+    {
+      "test_id": "HF-05",
+      "test_name": "Human factor extremes produce >5x outcome divergence",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "Max savings: $14.0M, Zero savings: $-1.7M, Range: $15.7M",
+      "metrics": {
+        "max_savings": 13998129.53776983,
+        "zero_savings": -1678320.0,
+        "range": 15676449.53776983
+      }
+    },
+    {
+      "test_id": "HF-06",
+      "test_name": "High initial fatigue reduces HC reduction",
+      "category": "human_factors",
+      "status": "PASS",
+      "message": "High fatigue HC reduced: 43, Baseline: 44",
+      "metrics": {
+        "fatigue_hc": 43,
+        "baseline_hc": 44
+      }
+    },
+    {
+      "test_id": "HF-00",
+      "test_name": "Human Factor Extremes Summary",
+      "category": "human_factors",
+      "status": "INFO",
+      "message": "{\n  \"baseline\": {\n    \"hc_reduced\": 44,\n    \"net_savings_M\": 2.97,\n    \"final_adoption\": 0.278,\n    \"final_trust\": 30.6,\n    \"final_readiness\": 52.6,\n    \"final_proficiency\": 33.4\n  },\n  \"zero_everything\": {\n    \"hc_reduced\": 0,\n    \"net_savings_M\": -1.68,\n    \"final_adoption\": 0.004,\n    \"final_trust\": 0.0,\n    \"final_readiness\": 8.1,\n    \"final_proficiency\": 0.2\n  },\n  \"max_everything\": {\n    \"hc_reduced\": 136,\n    \"net_savings_M\": 14.0,\n    \"final_adoption\": 0.776,\n    \"final_trust\": 84.7,\n    \"final_readiness\": 99.4,\n    \"final_proficiency\": 93.4\n  },\n  \"zero_trust_high_rest\": {\n    \"hc_reduced\": 1,\n    \"net_savings_M\": -1.63,\n    \"final_adoption\": 0.028,\n    \"final_trust\": 0.0,\n    \"final_readiness\": 83.0,\n    \"final_proficiency\": 74.3\n  },\n  \"high_trust_zero_rest\": {\n    \"hc_reduced\": 79,\n    \"net_savings_M\": -0.98,\n    \"final_adoption\": 0.423,\n    \"final_trust\": 80.1,\n    \"final_readiness\": 10.0,\n    \"final_proficiency\": 74.7\n  },\n  \"high_fatigue\": {\n    \"hc_reduced\": 43,\n    \"net_savings_M\": 2.85,\n    \"final_adoption\": 0.273,\n    \"final_trust\": 30.7,\n    \"final_readiness\": 50.1,\n    \"final_proficiency\": 33.2\n  },\n  \"zero_capital\": {\n    \"hc_reduced\": 0,\n    \"net_savings_M\": -1.68,\n    \"final_adoption\": 0.077,\n    \"final_trust\": 40.8,\n    \"final_readiness\": 64.1,\n    \"final_proficiency\": 47.5\n  }\n}",
+      "metrics": {
+        "baseline": {
+          "hc_reduced": 44,
+          "net_savings_M": 2.97,
+          "final_adoption": 0.278,
+          "final_trust": 30.6,
+          "final_readiness": 52.6,
+          "final_proficiency": 33.4
+        },
+        "zero_everything": {
+          "hc_reduced": 0,
+          "net_savings_M": -1.68,
+          "final_adoption": 0.004,
+          "final_trust": 0.0,
+          "final_readiness": 8.1,
+          "final_proficiency": 0.2
+        },
+        "max_everything": {
+          "hc_reduced": 136,
+          "net_savings_M": 14.0,
+          "final_adoption": 0.776,
+          "final_trust": 84.7,
+          "final_readiness": 99.4,
+          "final_proficiency": 93.4
+        },
+        "zero_trust_high_rest": {
+          "hc_reduced": 1,
+          "net_savings_M": -1.63,
+          "final_adoption": 0.028,
+          "final_trust": 0.0,
+          "final_readiness": 83.0,
+          "final_proficiency": 74.3
+        },
+        "high_trust_zero_rest": {
+          "hc_reduced": 79,
+          "net_savings_M": -0.98,
+          "final_adoption": 0.423,
+          "final_trust": 80.1,
+          "final_readiness": 10.0,
+          "final_proficiency": 74.7
+        },
+        "high_fatigue": {
+          "hc_reduced": 43,
+          "net_savings_M": 2.85,
+          "final_adoption": 0.273,
+          "final_trust": 30.7,
+          "final_readiness": 50.1,
+          "final_proficiency": 33.2
+        },
+        "zero_capital": {
+          "hc_reduced": 0,
+          "net_savings_M": -1.68,
+          "final_adoption": 0.077,
+          "final_trust": 40.8,
+          "final_readiness": 64.1,
+          "final_proficiency": 47.5
+        }
+      }
+    },
+    {
+      "test_id": "SAN-01",
+      "test_name": "Headcount never goes negative",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "Min HC: 480",
+      "metrics": {
+        "min_hc": 480
+      }
+    },
+    {
+      "test_id": "SAN-02",
+      "test_name": "Effective adoption never exceeds raw adoption",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "No violations",
+      "metrics": {
+        "violation_count": 0
+      }
+    },
+    {
+      "test_id": "SAN-03",
+      "test_name": "Financial savings consistency (sum of monthly = total)",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "Manual sum: $7.961M, Reported: $7.961M, Diff: 0.00%",
+      "metrics": {
+        "manual": 7960916.666666668,
+        "reported": 7960916.666666668,
+        "diff_pct": 0.0
+      }
+    },
+    {
+      "test_id": "SAN-04",
+      "test_name": "Human system values stay in [0, 100] range",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "All values in range",
+      "metrics": {
+        "violations": []
+      }
+    },
+    {
+      "test_id": "SAN-05",
+      "test_name": "Productivity index in reasonable range [50, 200]",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "Range: [98.2, 103.6]",
+      "metrics": {
+        "min": 98.24679679726003,
+        "max": 103.61042111595859
+      }
+    },
+    {
+      "test_id": "SAN-06",
+      "test_name": "Adoption dampening ratio \u2264 1.0 (feedback dampens, not amplifies)",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "No amplification",
+      "metrics": {
+        "amp_months": 0
+      }
+    },
+    {
+      "test_id": "SAN-07",
+      "test_name": "Cumulative HC reduction is monotonically non-decreasing",
+      "category": "sanity",
+      "status": "PASS",
+      "message": "Monotonic",
+      "metrics": {
+        "violations": []
+      }
+    },
+    {
+      "test_id": "PV-01",
+      "test_name": "Productivity valley dips below 100 (expected 85-95)",
+      "category": "productivity",
+      "status": "PASS",
+      "message": "Min productivity: 97.8 at M0. Dip exists",
+      "metrics": {
+        "min_prod": 97.79172079609819,
+        "min_month": 0
+      }
+    },
+    {
+      "test_id": "PV-02",
+      "test_name": "Productivity formula component analysis at valley",
+      "category": "productivity",
+      "status": "INFO",
+      "message": "At M0: adoption=4.0%, lift=+0.6%, skill_drag=-0.2%, fatigue_drag=-0.019%. NET: 100.4%",
+      "metrics": {
+        "adoption": 0.06104950460248427,
+        "lift": 0.915742569037264,
+        "skill_drag": 0.2083333333333326,
+        "fatigue_drag": 0.018739695792594897
+      }
+    },
+    {
+      "test_id": "PV-03",
+      "test_name": "Aggressive scenario has comparable or deeper productivity valley",
+      "category": "productivity",
+      "status": "PASS",
+      "message": "Aggressive min: 98.2, Baseline min: 97.8",
+      "metrics": {
+        "aggressive_min": 98.24679679726003,
+        "baseline_min": 97.79172079609819
+      }
+    },
+    {
+      "test_id": "FT-01",
+      "test_name": "Fatigue accumulates to measurable level (>1.0 by M36)",
+      "category": "fatigue",
+      "status": "PASS",
+      "message": "Final fatigue: 13.874. Measurable",
+      "metrics": {
+        "final_fatigue": 13.873616943770307
+      }
+    },
+    {
+      "test_id": "FT-02",
+      "test_name": "Aggressive scenario produces more fatigue than baseline",
+      "category": "fatigue",
+      "status": "PASS",
+      "message": "Aggressive fatigue: 17.012, Baseline: 13.874",
+      "metrics": {
+        "aggressive": 17.011932129198172,
+        "baseline": 13.873616943770307
+      }
+    },
+    {
+      "test_id": "FT-03",
+      "test_name": "Disruption signal trace (quarterly)",
+      "category": "fatigue",
+      "status": "INFO",
+      "message": "[\n  {\n    \"month\": 3,\n    \"hc_reduced\": 0,\n    \"total_hc\": 540,\n    \"disruption\": 0.0,\n    \"fatigue_delta\": 0.0\n  },\n  {\n    \"month\": 6,\n    \"hc_reduced\": 0,\n    \"total_hc\": 540,\n    \"disruption\": 0.0,\n    \"fatigue_delta\": 0.0\n  },\n  {\n    \"month\": 9,\n    \"hc_reduced\": 27,\n    \"total_hc\": 513,\n    \"disruption\": 0.5263,\n    \"fatigue_delta\": 0.263158\n  },\n  {\n    \"month\": 12,\n    \"hc_reduced\": 6,\n    \"total_hc\": 507,\n    \"disruption\": 0.1183,\n    \"fatigue_delta\": 0.059172\n  },\n  {\n    \"month\": 15,\n    \"hc_reduced\": 0,\n    \"total_hc\": 507,\n    \"disruption\": 0.0,\n    \"fatigue_delta\": 0.0\n  },\n  {\n    \"month\": 18,\n    \"hc_reduced\": 2,\n    \"total_hc\": 505,\n    \"disruption\": 0.0396,\n    \"fatigue_delta\": 0.019802\n  }\n]",
+      "metrics": {
+        "trace": [
+          {
+            "month": 3,
+            "hc_reduced": 0,
+            "total_hc": 540,
+            "disruption": 0.0,
+            "fatigue_delta": 0.0
+          },
+          {
+            "month": 6,
+            "hc_reduced": 0,
+            "total_hc": 540,
+            "disruption": 0.0,
+            "fatigue_delta": 0.0
+          },
+          {
+            "month": 9,
+            "hc_reduced": 27,
+            "total_hc": 513,
+            "disruption": 0.5263,
+            "fatigue_delta": 0.263158
+          },
+          {
+            "month": 12,
+            "hc_reduced": 6,
+            "total_hc": 507,
+            "disruption": 0.1183,
+            "fatigue_delta": 0.059172
+          },
+          {
+            "month": 15,
+            "hc_reduced": 0,
+            "total_hc": 507,
+            "disruption": 0.0,
+            "fatigue_delta": 0.0
+          },
+          {
+            "month": 18,
+            "hc_reduced": 2,
+            "total_hc": 505,
+            "disruption": 0.0396,
+            "fatigue_delta": 0.019802
+          },
+          {
+            "month": 21,
+            "hc_reduced": 2,
+            "total_hc": 503,
+            "disruption": 0.0398,
+            "fatigue_delta": 0.019881
+          },
+          {
+            "month": 24,
+            "hc_reduced": 3,
+            "total_hc": 500,
+            "disruption": 0.06,
+            "fatigue_delta": 0.03
+          },
+          {
+            "month": 27,
+            "hc_reduced": 0,
+            "total_hc": 500,
+            "disruption": 0.0,
+            "fatigue_delta": 0.0
+          },
+          {
+            "month": 30,
+            "hc_reduced": 3,
+            "total_hc": 497,
+            "disruption": 0.0604,
+            "fatigue_delta": 0.030181
+          },
+          {
+            "month": 33,
+            "hc_reduced": 1,
+            "total_hc": 496,
+            "disruption": 0.0202,
+            "fatigue_delta": 0.010081
+          },
+          {
+            "month": 36,
+            "hc_reduced": 0,
+            "total_hc": 496,
+            "disruption": 0.0,
+            "fatigue_delta": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "test_id": "TE-01",
+      "test_name": "Trust destruction follows multiplicative formula",
+      "category": "trust",
+      "status": "PASS",
+      "message": "Pre: 33.9, Post: 23.8, Expected: 23.7",
+      "metrics": {
+        "pre": 33.89374430654669,
+        "post": 23.818862149725007,
+        "expected": 23.72562101458268
+      }
+    },
+    {
+      "test_id": "TE-02",
+      "test_name": "Early AI error (M3) produces worse outcome than late error (M18)",
+      "category": "trust",
+      "status": "PASS",
+      "message": "Early error savings: $1.2M, Late error: $2.5M",
+      "metrics": {
+        "early_savings": 1216473.8506896736,
+        "late_savings": 2531473.581831581
+      }
+    },
+    {
+      "test_id": "TE-03",
+      "test_name": "AI error reduces total HC reduction",
+      "category": "trust",
+      "status": "PASS",
+      "message": "No error: 44 FTEs, With error: 27 FTEs",
+      "metrics": {
+        "no_error_hc": 44,
+        "error_hc": 27
+      }
+    },
+    {
+      "test_id": "TE-04",
+      "test_name": "Trust recovery takes significant time (>6 months)",
+      "category": "trust",
+      "status": "PASS",
+      "message": "Recovery time: Never within 36mo",
+      "metrics": {
+        "recovery_months": null
+      }
+    },
+    {
+      "test_id": "F-00",
+      "test_name": "MODEL HEALTH: Good",
+      "category": "findings",
+      "status": "PASS",
+      "message": "Model passes 30 tests with 0 warnings and 0 failures. All conservation laws hold. Human factors differentiate scenarios meaningfully.",
+      "metrics": {}
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+<svg viewBox="0 0 1100 870" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#555"/>
+    </marker>
+    <marker id="arL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#aaa"/>
+    </marker>
+    <marker id="arN" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#48a"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="870" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="550" y="30" text-anchor="middle" fill="#222" font-size="17" font-weight="bold">CAUSAL LOOP DIAGRAM — Workforce Twin v2.1 (9 Loops)</text>
+  <text x="550" y="50" text-anchor="middle" fill="#888" font-size="12" font-style="italic">4 balancing + 5 reinforcing loops — how every variable connects to every other</text>
+  <text x="550" y="66" text-anchor="middle" fill="#aaa" font-size="10">CLD Rules: nouns not verbs · S and O as you go · keep going · no diagram is ever "finished"</text>
+
+  <!-- ════ CENTRAL HUB ════ -->
+  <rect x="425" y="225" width="190" height="55" rx="8" fill="#fff" stroke="#222" stroke-width="2.8"/>
+  <text x="520" y="250" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI automation</text>
+  <text x="520" y="270" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">level</text>
+
+  <!-- ════ TOP-LEFT: HUMAN DYNAMICS ════ -->
+  <rect x="20" y="78" width="370" height="240" rx="10" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="205" y="96" text-anchor="middle" fill="#999" font-size="11" letter-spacing="1.5">HUMAN DYNAMICS</text>
+
+  <text x="90" y="145" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Resistance</text>
+  <text x="280" y="145" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Trust in AI</text>
+  <text x="180" y="225" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Adoption rate</text>
+  <text x="90" y="290" text-anchor="middle" fill="#222" font-size="13">Disruption level</text>
+
+  <!-- Readiness (v2.1 addition) -->
+  <rect x="260" y="205" width="95" height="28" rx="4" fill="#e8f0ff" stroke="#48a" stroke-width="1.5"/>
+  <text x="307" y="224" text-anchor="middle" fill="#48a" font-size="12" font-weight="bold">Readiness</text>
+
+  <!-- Resistance → Adoption (O) -->
+  <path d="M 110,155 Q 140,188 160,212" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="118" y="192" fill="#555" font-size="13" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Trust → Adoption (S) -->
+  <path d="M 260,155 Q 230,188 205,212" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="242" y="190" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Readiness → Adoption (S) -->
+  <path d="M 260,222 Q 228,222 210,222" fill="none" stroke="#48a" stroke-width="2" marker-end="url(#arN)"/>
+  <text x="238" y="240" fill="#48a" font-size="12" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Adoption → AI automation (S) -->
+  <path d="M 225,225 Q 330,238 425,248" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="330" y="232" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- AI automation → Disruption (S) -->
+  <path d="M 430,268 Q 260,298 138,290" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="290" y="298" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Disruption → Resistance (S) -->
+  <path d="M 90,278 L 90,158" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="73" y="218" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- R5: AI success → builds Readiness (new loop) -->
+  <path d="M 430,265 Q 365,310 335,290 Q 320,270 315,236" fill="none" stroke="#48a" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arN)"/>
+  <text x="365" y="318" fill="#48a" font-size="9.5" font-style="italic">success builds readiness (R5 — NEW)</text>
+
+  <!-- B3 loop label -->
+  <circle cx="138" cy="180" r="13" fill="#f0f5ff" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="138" y="184" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold">B3</text>
+
+  <!-- R1 loop label -->
+  <circle cx="300" cy="180" r="13" fill="#fff0f0" stroke="#a03030" stroke-width="1.5"/>
+  <text x="300" y="184" text-anchor="middle" fill="#a03030" font-size="10" font-weight="bold">R1</text>
+
+  <!-- R5 loop label -->
+  <circle cx="345" cy="265" r="14" fill="#e8f0ff" stroke="#48a" stroke-width="1.5"/>
+  <text x="345" y="269" text-anchor="middle" fill="#48a" font-size="9.5" font-weight="bold">R5</text>
+  <text x="362" y="283" fill="#48a" font-size="7" font-weight="bold">NEW</text>
+
+  <!-- ════ TOP-RIGHT: CAPABILITY ════ -->
+  <rect x="690" y="78" width="310" height="210" rx="10" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="845" y="96" text-anchor="middle" fill="#999" font-size="11" letter-spacing="1.5">CAPABILITY BUILDING</text>
+
+  <text x="750" y="145" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">AI proficiency</text>
+  <text x="940" y="145" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Effective AI use</text>
+  <text x="845" y="240" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Results quality</text>
+
+  <!-- Proficiency → Effective (S) -->
+  <path d="M 810,142 Q 865,130 898,138" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="858" y="128" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Effective → Results (S) -->
+  <path d="M 925,155 Q 900,195 870,228" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="908" y="195" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Results → Proficiency (S) -->
+  <path d="M 815,235 Q 780,195 758,160" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="778" y="200" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- R2 label -->
+  <circle cx="845" cy="182" r="13" fill="#fff0f0" stroke="#a03030" stroke-width="1.5"/>
+  <text x="845" y="186" text-anchor="middle" fill="#a03030" font-size="10" font-weight="bold">R2</text>
+
+  <!-- Results → Trust (cross-link) -->
+  <path d="M 808,248 Q 540,135 320,140" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arL)"/>
+  <text x="565" y="168" fill="#aaa" font-size="10" font-style="italic">S (builds trust → R1)</text>
+
+  <!-- Effective → Automation (S) -->
+  <path d="M 900,157 Q 790,205 615,245" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="760" y="212" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- ════ CENTER-RIGHT: SKILL GAP ════ -->
+  <text x="810" y="340" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Skill gap</text>
+  <text x="960" y="398" text-anchor="middle" fill="#222" font-size="12" font-weight="bold">Training</text>
+  <text x="960" y="413" text-anchor="middle" fill="#222" font-size="12" font-weight="bold">investment</text>
+
+  <path d="M 610,275 Q 720,305 780,332" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="700" y="305" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 835,330 Q 915,280 940,165" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="900" y="270" fill="#555" font-size="14" font-weight="bold" font-style="italic">O</text>
+
+  <path d="M 928,393 Q 878,372 842,352" fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="892" y="372" fill="#222" font-size="13" font-weight="bold" font-style="italic">O</text>
+  <rect x="870" y="358" width="36" height="12" rx="2" fill="#fff5f5" stroke="#c44" stroke-width="0.5"/>
+  <text x="888" y="367" text-anchor="middle" fill="#c44" font-size="7" font-weight="bold">DELAY</text>
+
+  <circle cx="880" cy="312" r="13" fill="#f0f5ff" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="880" y="316" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold">B2</text>
+
+  <!-- ════ BOTTOM-CENTER: CAPACITY ════ -->
+  <rect x="295" y="345" width="320" height="185" rx="10" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="455" y="363" text-anchor="middle" fill="#999" font-size="11" letter-spacing="1.5">OPERATIONAL CAPACITY</text>
+
+  <text x="370" y="400" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Freed capacity</text>
+  <text x="550" y="395" text-anchor="middle" fill="#222" font-size="12" font-weight="bold">Workload</text>
+  <text x="550" y="410" text-anchor="middle" fill="#222" font-size="12" font-weight="bold">per person</text>
+  <text x="370" y="470" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">HC reduction</text>
+  <text x="550" y="470" text-anchor="middle" fill="#222" font-size="12" font-weight="bold">Redistribution</text>
+
+  <path d="M 480,280 Q 430,340 388,386" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="430" y="335" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 370,412 L 370,455" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="356" y="438" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 410,470 Q 475,475 515,470" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="470" y="485" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 550,458 L 550,422" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="565" y="443" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Workload → Freed capacity dampening (O) -->
+  <path d="M 515,395 Q 455,390 410,396" fill="none" stroke="#2060a0" stroke-width="1.5" marker-end="url(#ar)"/>
+  <text x="460" y="386" fill="#2060a0" font-size="12" font-weight="bold" font-style="italic">O</text>
+
+  <circle cx="460" cy="428" r="13" fill="#f0f5ff" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="460" y="432" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold">B1</text>
+
+  <!-- Workload → Resistance -->
+  <path d="M 515,390 Q 310,318 120,158" fill="none" stroke="#aaa" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#arL)"/>
+  <text x="302" y="310" fill="#aaa" font-size="9.5" font-style="italic">S (feeds resistance)</text>
+
+  <!-- ════ BOTTOM-LEFT: FINANCIAL ════ -->
+  <rect x="45" y="560" width="310" height="130" rx="10" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="200" y="578" text-anchor="middle" fill="#999" font-size="11" letter-spacing="1.5">FINANCIAL ENGINE</text>
+
+  <text x="130" y="618" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Cost savings</text>
+  <text x="290" y="618" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Budget</text>
+  <text x="130" y="670" text-anchor="middle" fill="#222" font-size="12">Average seniority</text>
+
+  <path d="M 340,485 Q 225,535 158,603" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="240" y="545" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 175,618 Q 225,615 250,618" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="218" y="612" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 330,610 Q 440,530 520,285" fill="none" stroke="#555" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="440" y="470" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <circle cx="310" cy="555" r="13" fill="#fff0f0" stroke="#a03030" stroke-width="1.5"/>
+  <text x="310" y="559" text-anchor="middle" fill="#a03030" font-size="10" font-weight="bold">R3</text>
+
+  <!-- Seniority path -->
+  <path d="M 320,490 Q 195,580 145,655" fill="none" stroke="#555" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="220" y="590" fill="#555" font-size="11" font-weight="bold" font-style="italic">S</text>
+  <path d="M 105,665 Q 45,530 45,350 Q 45,290 430,255" fill="none" stroke="#555" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="38" y="420" fill="#555" font-size="14" font-weight="bold" font-style="italic">O</text>
+  <circle cx="72" cy="470" r="13" fill="#f0f5ff" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="72" y="474" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold">B4</text>
+
+  <!-- ════ BOTTOM-RIGHT: POLITICAL CAPITAL ════ -->
+  <rect x="570" y="560" width="350" height="130" rx="10" fill="none" stroke="#ddd" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="745" y="578" text-anchor="middle" fill="#999" font-size="11" letter-spacing="1.5">POLITICAL CAPITAL</text>
+
+  <text x="650" y="623" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Transformation</text>
+  <text x="650" y="640" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">success</text>
+  <text x="850" y="623" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Political</text>
+  <text x="850" y="640" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">capital</text>
+
+  <path d="M 840,250 Q 760,440 672,608" fill="none" stroke="#555" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="755" y="445" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 705,630 Q 770,628 810,630" fill="none" stroke="#555" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="762" y="622" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <path d="M 850,612 Q 680,565 340,615" fill="none" stroke="#555" stroke-width="1.3" marker-end="url(#ar)"/>
+  <text x="600" y="580" fill="#555" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <circle cx="780" cy="605" r="13" fill="#fff0f0" stroke="#a03030" stroke-width="1.5"/>
+  <text x="780" y="609" text-anchor="middle" fill="#a03030" font-size="10" font-weight="bold">R4</text>
+
+  <!-- ════ LEGEND ════ -->
+  <rect x="25" y="715" width="1050" height="145" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="550" y="738" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">LOOP INVENTORY — 9 Feedback Loops Determining System Behavior</text>
+
+  <text x="50" y="762" fill="#2060a0" font-size="11" font-weight="bold">BALANCING (4 — dampen change):</text>
+  <text x="50" y="779" fill="#555" font-size="9.5">B1: Capacity Absorption — freed hours redistributed to remaining workers (30→37% absorbed)</text>
+  <text x="50" y="794" fill="#555" font-size="9.5">B2: Skill Valley — automation opens skill gaps → reduces effective AI use until reskilling catches up</text>
+  <text x="50" y="809" fill="#555" font-size="9.5">B3: Change Resistance — disruption → resistance ↑ → readiness ↓ → adoption slows (counterbalanced by R5)</text>
+  <text x="50" y="824" fill="#555" font-size="9.5">B4: Seniority Offset — entry-level roles automated first → remaining pool more senior → harder to automate</text>
+
+  <text x="580" y="762" fill="#a03030" font-size="11" font-weight="bold">REINFORCING (5 — amplify change):</text>
+  <text x="580" y="779" fill="#555" font-size="9.5">R1: Trust-Adoption — success → trust ↑ → willingness ↑ → more adoption</text>
+  <text x="580" y="794" fill="#555" font-size="9.5">R2: Proficiency — practice → proficiency ↑ → effective use ↑ → better results</text>
+  <text x="580" y="809" fill="#555" font-size="9.5">R3: Savings — savings → budget → reinvestment → more automation</text>
+  <text x="580" y="824" fill="#555" font-size="9.5">R4: Political Capital — success → capital → resources → more capability</text>
+  <text x="580" y="842" fill="#48a" font-size="10" font-weight="bold">R5: Readiness Boost — adoption success → readiness ↑ → faster adoption (NEW in v2.1)</text>
+</svg>

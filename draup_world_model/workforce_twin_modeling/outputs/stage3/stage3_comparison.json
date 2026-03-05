@@ -1,0 +1,66 @@
+{
+  "stage": 3,
+  "comparison": {
+    "open_loop": {
+      "name": "Stage 2 Open-Loop",
+      "hc_reduced": 141,
+      "final_hc": 399,
+      "net_savings": 15748467.0,
+      "payback_month": 9,
+      "peak_skill_gap": 15,
+      "productivity_valley": 100.2
+    },
+    "feedback_baseline": {
+      "name": "Feedback Baseline",
+      "hc_reduced": 76,
+      "final_hc": 464,
+      "net_savings": 6420161.0,
+      "payback_month": 15,
+      "peak_skill_gap": 2,
+      "productivity_valley": 99.8,
+      "final_proficiency": 42.3,
+      "final_trust": 46.3,
+      "final_readiness": 54.7,
+      "avg_dampening": 0.348
+    },
+    "feedback_ai_error": {
+      "name": "Feedback + AI Error M7",
+      "hc_reduced": 59,
+      "final_hc": 481,
+      "net_savings": 4014235.0,
+      "payback_month": 18,
+      "peak_skill_gap": 2,
+      "productivity_valley": 99.8,
+      "final_proficiency": 38.9,
+      "final_trust": 34.4,
+      "final_readiness": 53.1,
+      "avg_dampening": 0.266
+    },
+    "feedback_high_readiness": {
+      "name": "Feedback High Readiness",
+      "hc_reduced": 127,
+      "final_hc": 413,
+      "net_savings": 13832027.0,
+      "payback_month": 10,
+      "peak_skill_gap": 9,
+      "productivity_valley": 98.9,
+      "final_proficiency": 66.1,
+      "final_trust": 78.8,
+      "final_readiness": 86.5,
+      "avg_dampening": 0.682
+    },
+    "feedback_low_readiness": {
+      "name": "Feedback Low Readiness",
+      "hc_reduced": 13,
+      "final_hc": 527,
+      "net_savings": -630487.0,
+      "payback_month": 0,
+      "peak_skill_gap": 0,
+      "productivity_valley": 100.0,
+      "final_proficiency": 21.3,
+      "final_trust": 24.1,
+      "final_readiness": 31.0,
+      "avg_dampening": 0.072
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "total_scenarios": 40,
+  "families": {
+    "technology_injection": 3,
+    "output_target": 2,
+    "function_transformation": 3,
+    "baseline": 1,
+    "role_transformation": 4,
+    "skill_intervention": 2,
+    "headcount_target": 3,
+    "automation_target": 2,
+    "budget_constraint": 2,
+    "composite": 3,
+    "sequencing": 6,
+    "sensitivity": 2,
+    "stress_test": 3,
+    "regulatory": 2,
+    "competitive": 1,
+    "org_restructure": 1
+  },
+  "directions": {
+    "forward": 25,
+    "inverse": 8,
+    "optimization": 1,
+    "comparison": 3,
+    "sensitivity": 3
+  },
+  "priority_breakdown": {
+    "P1_core_forward": 8,
+    "P2_inverse_optimization": 8,
+    "P3_comparison_sequencing": 8,
+    "P4_sensitivity_stress": 8,
+    "P5_composite_advanced": 8
+  }
+}

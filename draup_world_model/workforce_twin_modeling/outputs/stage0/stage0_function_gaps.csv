@@ -1,0 +1,5 @@
+function,headcount,annual_cost,avg_automation_score,l1_etter_ceiling,l2_achievable,l3_realized,adoption_gap_pct,capability_gap_pct,adoption_gap_savings,full_gap_savings,adoption_gap_fte,ai_proficiency,change_readiness,trust_level,effective_multiplier,compliance_tasks,total_tasks
+Claims,540,29505000.0,34.22,63.5,59.91,9.17,50.74,3.59,14966916.0,15984544.0,273.9,25.0,45.0,35.0,0.36,32,183
+Finance,239,15405000.0,33.56,56.64,50.31,10.49,39.82,6.32,6023605.0,6987861.0,95.1,30.0,50.0,40.0,0.41,23,117
+People,186,10750000.0,31.83,55.81,52.93,13.63,39.3,2.88,4214968.0,4530141.0,73.1,20.0,55.0,45.0,0.407,26,117
+Technology,405,35425000.0,24.91,47.17,39.67,7.51,32.16,7.5,11382597.0,14040215.0,130.5,60.0,70.0,65.0,0.655,6,164

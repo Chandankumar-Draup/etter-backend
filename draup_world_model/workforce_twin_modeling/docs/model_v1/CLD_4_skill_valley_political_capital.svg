@@ -1,0 +1,156 @@
+<svg viewBox="0 0 950 650" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#555"/>
+    </marker>
+    <marker id="m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="950" height="650" fill="#fafafa"/>
+
+  <text x="475" y="35" text-anchor="middle" fill="#222" font-size="18" font-weight="bold">DIAGRAM 4: The Skill Valley &amp; The Political Capital Engine</text>
+  <text x="475" y="55" text-anchor="middle" fill="#777" font-size="13" font-style="italic">"Productivity dips before it rises — and the first pilot defines the next three years"</text>
+
+  <!-- Divider -->
+  <line x1="475" y1="80" x2="475" y2="530" stroke="#ddd" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- ============ LEFT: SKILL VALLEY (B1) ============ -->
+
+  <text x="235" y="85" text-anchor="middle" fill="#0055aa" font-size="14" font-weight="bold" letter-spacing="1">THE SKILL VALLEY</text>
+
+  <!-- AI automation level (top) -->
+  <text x="230" y="140" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI automation</text>
+  <text x="230" y="158" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">level</text>
+
+  <!-- Skill gap (right) -->
+  <text x="390" y="250" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Skill gap</text>
+
+  <!-- Effective AI use (bottom) -->
+  <text x="230" y="370" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Effective</text>
+  <text x="230" y="388" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI use</text>
+
+  <!-- Productivity (left) -->
+  <text x="80" y="250" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Productivity</text>
+
+  <!-- Arrows for skill valley -->
+  <!-- AI automation → Skill gap (S) -->
+  <path d="M 295,150 Q 350,185 380,232" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="355" y="188" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Skill gap → Effective AI use (O) - KEY opposite -->
+  <path d="M 375,265 Q 330,320 275,365" fill="none" stroke="#555" stroke-width="3" marker-end="url(#m1)"/>
+  <text x="345" y="315" fill="#555" font-size="16" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Effective AI use → Productivity (S) -->
+  <path d="M 180,370 Q 130,325 100,268" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="125" y="325" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Productivity → AI automation level (S) -->
+  <path d="M 100,235 Q 140,185 195,158" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="130" y="190" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- B1 label -->
+  <text x="235" y="260" text-anchor="middle" fill="#0055aa" font-size="16" font-weight="bold">B1</text>
+
+  <!-- External inputs -->
+  <!-- Training investment -->
+  <text x="390" y="420" text-anchor="middle" fill="#222" font-size="14" font-weight="bold">Training</text>
+  <text x="390" y="438" text-anchor="middle" fill="#222" font-size="14" font-weight="bold">investment</text>
+
+  <!-- Skill acquisition -->
+  <text x="400" y="340" text-anchor="middle" fill="#222" font-size="13">Skill</text>
+  <text x="400" y="355" text-anchor="middle" fill="#222" font-size="13">acquisition</text>
+
+  <!-- Training → Skill acquisition (S) -->
+  <path d="M 392,410 Q 398,385 400,365" fill="none" stroke="#222" stroke-width="2" marker-end="url(#m2)"/>
+  <text x="410" y="390" fill="#222" font-size="14" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Skill acquisition → Skill gap (O) -->
+  <path d="M 398,330 Q 395,295 393,268" fill="none" stroke="#222" stroke-width="2" marker-end="url(#m2)"/>
+  <text x="412" y="300" fill="#222" font-size="14" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Delay annotation -->
+  <rect x="410" y="285" width="50" height="20" rx="3" fill="#fff5f5" stroke="#cc0000" stroke-width="1"/>
+  <text x="435" y="299" text-anchor="middle" fill="#cc0000" font-size="9" font-weight="bold">DELAY</text>
+  <text x="435" y="318" fill="#cc0000" font-size="8">3-12 months</text>
+
+  <!-- Valley shape illustration -->
+  <text x="80" y="450" fill="#888" font-size="10">Productivity</text>
+  <path d="M 60,475 L 120,475 Q 160,475 180,490 Q 200,510 230,490 Q 280,460 350,460" fill="none" stroke="#888" stroke-width="1.5"/>
+  <text x="155" y="520" fill="#888" font-size="9">← the valley</text>
+  <text x="310" y="455" fill="#888" font-size="9">recovery →</text>
+  <text x="340" y="488" fill="#888" font-size="9">Time →</text>
+
+  <!-- ============ RIGHT: POLITICAL CAPITAL (R1) ============ -->
+
+  <text x="710" y="85" text-anchor="middle" fill="#aa0000" font-size="14" font-weight="bold" letter-spacing="1">THE POLITICAL CAPITAL ENGINE</text>
+
+  <!-- Transformation success (top) -->
+  <text x="710" y="140" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Transformation</text>
+  <text x="710" y="158" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">success</text>
+
+  <!-- Political capital (right) -->
+  <text x="870" y="260" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Political</text>
+  <text x="870" y="278" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">capital</text>
+
+  <!-- Resource allocation (bottom) -->
+  <text x="710" y="380" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Resource</text>
+  <text x="710" y="398" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">allocation</text>
+
+  <!-- Transformation capability (left) -->
+  <text x="560" y="260" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Transformation</text>
+  <text x="560" y="278" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">capability</text>
+
+  <!-- Arrows for R1 -->
+  <!-- Success → Political capital (S) -->
+  <path d="M 770,148 Q 825,190 860,242" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="830" y="195" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Political capital → Resource allocation (S) -->
+  <path d="M 862,290 Q 820,340 750,372" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="825" y="338" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Resource allocation → Transformation capability (S) -->
+  <path d="M 660,388 Q 610,350 585,290" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="610" y="345" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Transformation capability → Success (S) -->
+  <path d="M 580,248 Q 625,195 670,162" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#m1)"/>
+  <text x="610" y="205" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- R1 label -->
+  <text x="710" y="270" text-anchor="middle" fill="#aa0000" font-size="16" font-weight="bold">R1</text>
+
+  <!-- External: Sequencing strategy -->
+  <text x="560" y="155" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">Sequencing</text>
+  <text x="560" y="170" text-anchor="middle" fill="#222" font-size="13" font-weight="bold">strategy</text>
+
+  <path d="M 590,170 Q 635,160 665,155" fill="none" stroke="#222" stroke-width="2" marker-end="url(#m2)"/>
+  <text x="625" y="158" fill="#222" font-size="14" font-weight="bold" font-style="italic">S</text>
+
+  <!-- ALTERNATIVE: Failure trap annotation -->
+  <!-- Caution -->
+  <text x="870" y="400" text-anchor="middle" fill="#888" font-size="13">Caution</text>
+
+  <!-- Failure → Caution (S) -->
+  <text x="830" y="152" text-anchor="middle" fill="#888" font-size="11">(or: failure</text>
+  <text x="830" y="164" text-anchor="middle" fill="#888" font-size="11">→ caution)</text>
+
+  <!-- Caution → Resource allocation (O) -->
+  <path d="M 868,410 Q 830,410 760,400" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#m1)"/>
+  <text x="820" y="415" fill="#999" font-size="14" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Connection annotation -->
+  <text x="870" y="430" fill="#999" font-size="9">(same loop, reversed:</text>
+  <text x="870" y="442" fill="#999" font-size="9">failure → caution → less</text>
+  <text x="870" y="454" fill="#999" font-size="9">resources → less capability</text>
+  <text x="870" y="466" fill="#999" font-size="9">→ more failure)</text>
+
+  <!-- Annotation box -->
+  <rect x="30" y="555" width="890" height="75" rx="4" fill="#f0f0f0" stroke="none"/>
+  <text x="475" y="575" text-anchor="middle" fill="#555" font-size="11">B1 (Skill Valley): S,O,S,S = 1 O = BALANCING — New skills needed → gap → productivity dip → until reskilling closes gap (with 3-12 month DELAY)</text>
+  <text x="475" y="593" text-anchor="middle" fill="#555" font-size="11">R1 (Political Capital): S,S,S,S = 0 O = REINFORCING — Success → capital → resources → capability → success (virtuous cycle)</text>
+  <text x="475" y="615" text-anchor="middle" fill="#0055aa" font-size="11" font-weight="bold">Key insight: Sequencing strategy is the LEVER that determines whether R1 runs as a virtuous cycle (start easy → build capital) or a vicious trap (start hard → fail → lose capital).</text>
+</svg>

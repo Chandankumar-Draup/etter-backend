@@ -1,0 +1,94 @@
+{
+  "stimulus": {
+    "name": "Deploy Microsoft Copilot to Claims function",
+    "tools": [
+      "Microsoft Copilot"
+    ],
+    "scope": [
+      "Claims"
+    ],
+    "policy": "moderate_reduction",
+    "absorption_factor": 0.35
+  },
+  "step1_scope": {
+    "roles": 12,
+    "tasks_total": 183,
+    "tasks_addressable": 127,
+    "compliance_protected": 32,
+    "headcount": 540
+  },
+  "step2_reclassification": {
+    "tasks_to_ai": 106,
+    "tasks_to_human_ai": 21,
+    "tasks_unchanged": 56,
+    "freed_hours_per_person": 883.2
+  },
+  "step3_capacity": {
+    "gross_freed_hours_month": 40186.0,
+    "redistributed_hours_month": 14065.0,
+    "net_freed_hours_month": 26121.0,
+    "dampening_ratio": 0.65
+  },
+  "step4_skills": {
+    "sunset_count": 155,
+    "sunrise_count": 48,
+    "net_gap": -107,
+    "critical_sunset": 11
+  },
+  "step5_workforce": {
+    "current_hc": 540,
+    "reducible_ftes": 207,
+    "projected_hc": 333,
+    "reduction_pct": 38.3,
+    "policy": "moderate_reduction"
+  },
+  "step6_financial": {
+    "total_investment": 1814400.0,
+    "salary_savings_annual": 11523000.0,
+    "productivity_savings_annual": 146904.0,
+    "total_savings_annual": 11669904.0,
+    "net_annual": 9855504.0,
+    "payback_months": 1.9,
+    "roi_pct": 543.0
+  },
+  "step7_structural": {
+    "redesign_candidates": 11,
+    "elimination_candidates": 0
+  },
+  "step8_human_system": {
+    "change_burden": 100,
+    "readiness_direction": "down",
+    "narrative": "Headcount reduction of 207 FTEs will create disruption. Readiness is likely to decline initially. Change burden is HIGH (100/100). Consider phased deployment to reduce resistance. Average readiness (45) is below the 50-point threshold. Readiness intervention recommended BEFORE deployment."
+  },
+  "step9_risk": {
+    "overall_level": "high",
+    "risk_count": 5,
+    "risks": [
+      {
+        "type": "compliance",
+        "severity": "medium",
+        "description": "32 compliance-mandated tasks in scope. Automation must NOT touch these. Verify boundary enforcement."
+      },
+      {
+        "type": "concentration",
+        "severity": "high",
+        "description": "11 high-proficiency skills are being sunset: manual report generation, routine document classification, manual data entry, manual data entry, manual report generation. Knowledge may be lost."
+      },
+      {
+        "type": "change_burden",
+        "severity": "high",
+        "description": "Change burden score is 100/100. Risk of change fatigue and resistance."
+      },
+      {
+        "type": "quality",
+        "severity": "high",
+        "description": "Headcount reduction of 38.3% may impact service quality. Remaining staff absorb more work."
+      },
+      {
+        "type": "concentration",
+        "severity": "medium",
+        "description": "All 207 FTE reductions concentrated in Claims. Political and operational risk."
+      }
+    ]
+  }
+}

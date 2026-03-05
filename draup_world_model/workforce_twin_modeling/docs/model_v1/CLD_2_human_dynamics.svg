@@ -1,0 +1,182 @@
+<svg viewBox="0 0 950 720" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#555"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#222"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <rect width="950" height="720" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="475" y="35" text-anchor="middle" fill="#222" font-size="18" font-weight="bold">DIAGRAM 2: Human Dynamics — Resistance, Trust, and Proficiency</text>
+  <text x="475" y="55" text-anchor="middle" fill="#777" font-size="13" font-style="italic">"The organizational immune system, the flywheel, and the asymmetric trap"</text>
+
+  <!-- ============ LOOP A: RESISTANCE (left side) ============ -->
+
+  <!-- Transformation speed -->
+  <text x="150" y="165" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Transformation</text>
+  <text x="150" y="183" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">speed</text>
+
+  <!-- Disruption level -->
+  <text x="370" y="130" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Disruption</text>
+  <text x="370" y="148" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">level</text>
+
+  <!-- Resistance -->
+  <text x="370" y="290" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Resistance</text>
+
+  <!-- Adoption rate -->
+  <text x="150" y="290" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Adoption</text>
+  <text x="150" y="308" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">rate</text>
+
+  <!-- Arrows for resistance loop -->
+  <!-- Transform speed → Disruption (S) -->
+  <path d="M 210,165 Q 280,130 320,135" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="265" y="132" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Disruption → Resistance (S) -->
+  <path d="M 375,160 Q 385,215 378,272" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="395" y="220" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Resistance → Adoption rate (O) -->
+  <path d="M 320,290 Q 245,295 200,295" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="260" y="285" fill="#555" font-size="16" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Adoption rate → Transform speed (S) -->
+  <path d="M 148,275 Q 140,230 148,195" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="125" y="240" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Loop label B1 -->
+  <text x="260" y="225" text-anchor="middle" fill="#0055aa" font-size="14" font-weight="bold">B1</text>
+
+  <!-- ============ LOOP B: TRUST FLYWHEEL (right side) ============ -->
+
+  <!-- AI adoption level -->
+  <text x="650" y="130" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI adoption</text>
+  <text x="650" y="148" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">level</text>
+
+  <!-- Positive outcomes -->
+  <text x="860" y="235" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Positive</text>
+  <text x="860" y="253" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">outcomes</text>
+
+  <!-- Trust in AI -->
+  <text x="770" y="390" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Trust</text>
+  <text x="770" y="408" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">in AI</text>
+
+  <!-- Willingness to adopt -->
+  <text x="560" y="320" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Willingness</text>
+  <text x="560" y="338" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">to adopt</text>
+
+  <!-- Arrows for trust flywheel -->
+  <!-- AI adoption → Positive outcomes (S) -->
+  <path d="M 710,140 Q 790,165 840,220" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="790" y="178" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Positive outcomes → Trust (S) -->
+  <path d="M 855,265 Q 830,325 790,375" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="840" y="325" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Trust → Willingness (S) -->
+  <path d="M 720,395 Q 650,375 600,345" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="660" y="370" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Willingness → AI adoption (S) -->
+  <path d="M 575,308 Q 600,230 640,162" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="590" y="240" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Loop label R1 -->
+  <text x="720" y="275" text-anchor="middle" fill="#aa0000" font-size="14" font-weight="bold">R1</text>
+
+  <!-- ============ TRUST DESTRUCTION PATH (dashed) ============ -->
+
+  <!-- AI error frequency -->
+  <text x="830" y="130" text-anchor="middle" fill="#222" font-size="14">AI error</text>
+  <text x="830" y="148" text-anchor="middle" fill="#222" font-size="14">frequency</text>
+
+  <!-- AI adoption → AI error frequency (S) -->
+  <path d="M 710,130 Q 760,120 790,128" fill="none" stroke="#999" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arrR)"/>
+  <text x="752" y="118" fill="#999" font-size="13" font-weight="bold" font-style="italic">S</text>
+
+  <!-- AI error frequency → Trust in AI (O) - long dashed path -->
+  <path d="M 850,158 Q 900,290 800,378" fill="none" stroke="#999" stroke-width="1.8" stroke-dasharray="6,3" marker-end="url(#arrR)"/>
+  <text x="892" y="280" fill="#999" font-size="15" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Asymmetry annotation -->
+  <rect x="860" y="340" width="80" height="40" rx="4" fill="#fff5f5" stroke="#cc0000" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="900" y="356" text-anchor="middle" fill="#cc0000" font-size="9" font-weight="bold">FAST</text>
+  <text x="900" y="370" text-anchor="middle" fill="#cc0000" font-size="8">(days, not months)</text>
+
+  <!-- ============ LOOP D: PROFICIENCY FLYWHEEL (bottom) ============ -->
+
+  <!-- AI proficiency -->
+  <text x="180" y="480" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI</text>
+  <text x="180" y="498" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">proficiency</text>
+
+  <!-- Effective AI use -->
+  <text x="420" y="440" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Effective</text>
+  <text x="420" y="458" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI use</text>
+
+  <!-- Results quality -->
+  <text x="580" y="530" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Results</text>
+  <text x="580" y="548" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">quality</text>
+
+  <!-- Confidence -->
+  <text x="400" y="600" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Confidence</text>
+
+  <!-- Practice with AI -->
+  <text x="180" y="600" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Practice</text>
+  <text x="180" y="618" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">with AI</text>
+
+  <!-- Proficiency → Effective use (S) -->
+  <path d="M 230,480 Q 320,450 370,448" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="300" y="455" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Effective use → Results (S) -->
+  <path d="M 470,455 Q 525,480 550,518" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="520" y="485" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Results → Confidence (S) -->
+  <path d="M 540,545 Q 480,575 445,590" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="500" y="575" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Confidence → Practice (S) -->
+  <path d="M 355,598 Q 280,605 230,605" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="290" y="595" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Practice → Proficiency (S) -->
+  <path d="M 178,588 Q 170,550 178,510" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="158" y="555" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Loop label R2 -->
+  <text x="350" y="540" text-anchor="middle" fill="#aa0000" font-size="14" font-weight="bold">R2</text>
+
+  <!-- ============ EXTERNAL INPUT ============ -->
+
+  <!-- Training investment -->
+  <text x="55" y="440" text-anchor="middle" fill="#222" font-size="14" font-weight="bold">Training</text>
+  <text x="55" y="458" text-anchor="middle" fill="#222" font-size="14" font-weight="bold">investment</text>
+
+  <!-- Training → Proficiency (S) -->
+  <path d="M 100,448 Q 130,470 148,480" fill="none" stroke="#222" stroke-width="2" marker-end="url(#arrB)"/>
+  <text x="110" y="473" fill="#222" font-size="14" font-weight="bold" font-style="italic">S</text>
+
+  <!-- === CONNECTION between loops === -->
+  <!-- Proficiency feeds up to Adoption rate via Effective use -->
+  <!-- Effective AI use → AI adoption level (S) - connecting to trust loop -->
+  <path d="M 450,430 Q 540,300 600,165" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+  <text x="530" y="290" fill="#aaa" font-size="12" font-style="italic">feeds R1</text>
+
+  <!-- Adoption rate feeds into AI adoption -->
+  <path d="M 190,280 Q 400,80 600,122" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrR)"/>
+  <text x="380" y="85" fill="#aaa" font-size="12" font-style="italic">feeds R1</text>
+
+  <!-- Annotation -->
+  <rect x="25" y="665" width="900" height="40" rx="4" fill="#f0f0f0" stroke="none"/>
+  <text x="475" y="682" text-anchor="middle" fill="#555" font-size="11">B1 (Resistance): S,S,O,S = 1 O = BALANCING | R1 (Trust): S,S,S,S = 0 O = REINFORCING | R2 (Proficiency): S,S,S,S,S = 0 O = REINFORCING</text>
+  <text x="475" y="698" text-anchor="middle" fill="#cc0000" font-size="11" font-weight="bold">Critical asymmetry: Trust builds in months (R1 cycle), Trust destroys in days (error path). One high-profile AI error can stall adoption for quarters.</text>
+</svg>

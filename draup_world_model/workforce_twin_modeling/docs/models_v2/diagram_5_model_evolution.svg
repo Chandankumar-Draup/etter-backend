@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1100 800" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="1100" height="800" fill="#fafafa"/>
+
+  <text x="550" y="28" text-anchor="middle" fill="#222" font-size="17" font-weight="bold">MODEL EVOLUTION — From Broken to Realistic in 5 Fixes</text>
+  <text x="550" y="48" text-anchor="middle" fill="#888" font-size="12" font-style="italic">Each fix traces to a specific first-principles error in how human factors translate to adoption rates</text>
+  <text x="550" y="64" text-anchor="middle" fill="#aaa" font-size="10">"The least obvious part of the system, its purpose, is often the most crucial determinant" — Meadows</text>
+
+  <!-- Version columns -->
+  <rect x="55" y="82" width="290" height="50" rx="6" fill="#fff5f5" stroke="#c44" stroke-width="2"/>
+  <text x="200" y="104" text-anchor="middle" fill="#c44" font-size="14" font-weight="bold">v1 ORIGINAL</text>
+  <text x="200" y="122" text-anchor="middle" fill="#c44" font-size="11">1/40 profitable · -$214M total</text>
+
+  <path d="M 350,107 L 400,107" fill="none" stroke="#886622" stroke-width="2.5"/>
+  <polygon points="395,102 405,107 395,112" fill="#886622"/>
+
+  <rect x="405" y="82" width="290" height="50" rx="6" fill="#fff8f0" stroke="#886622" stroke-width="2"/>
+  <text x="550" y="104" text-anchor="middle" fill="#886622" font-size="14" font-weight="bold">v2 MULTIPLIER FIX</text>
+  <text x="550" y="122" text-anchor="middle" fill="#886622" font-size="11">16/40 profitable · +$28M total</text>
+
+  <path d="M 700,107 L 750,107" fill="none" stroke="#2a7a2a" stroke-width="2.5"/>
+  <polygon points="745,102 755,107 745,112" fill="#2a7a2a"/>
+
+  <rect x="755" y="82" width="290" height="50" rx="6" fill="#f0fff0" stroke="#2a7a2a" stroke-width="2"/>
+  <text x="900" y="104" text-anchor="middle" fill="#2a7a2a" font-size="14" font-weight="bold">v2.1 ALL FIXES</text>
+  <text x="900" y="122" text-anchor="middle" fill="#2a7a2a" font-size="11">25/40 profitable · +$114M total</text>
+
+  <!-- ═══ Fix 1 ═══ -->
+  <rect x="50" y="152" width="1000" height="90" rx="5" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <text x="68" y="172" fill="#333" font-size="12" font-weight="bold">FIX 1: effective_multiplier — Product → Weighted Blend</text>
+  <text x="68" y="187" fill="#888" font-size="9.5" font-style="italic">First Principle: Proficiency, readiness, and trust are correlated contributing dimensions — not independent events.</text>
+
+  <rect x="68" y="196" width="280" height="22" rx="3" fill="#fff5f5"/>
+  <text x="78" y="211" fill="#c44" font-size="10" font-family="Courier New, monospace">(p/100) × (r/100) = 0.1125</text>
+  <text x="360" y="211" fill="#886622" font-size="14" font-weight="bold">→</text>
+  <rect x="380" y="196" width="320" height="22" rx="3" fill="#f0fff0"/>
+  <text x="390" y="211" fill="#2a7a2a" font-size="10" font-family="Courier New, monospace">(0.35p + 0.45r + 0.20t)/100 = 0.360</text>
+  <text x="720" y="175" fill="#555" font-size="9.5">Destroys 89% of value → preserves 36%. Impact: <tspan font-weight="bold">3.2× increase</tspan></text>
+  <text x="720" y="193" fill="#666" font-size="9">Joint probability assumes independence. Reality: people learn-by-doing.</text>
+  <text x="720" y="211" fill="#886622" font-size="9" font-weight="bold">This single fix flips 1→16 scenarios profitable.</text>
+
+  <!-- ═══ Fix 2 ═══ -->
+  <rect x="50" y="260" width="1000" height="90" rx="5" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <text x="68" y="280" fill="#333" font-size="12" font-weight="bold">FIX 2: trust_multiplier — Linear → Smooth Threshold</text>
+  <text x="68" y="295" fill="#888" font-size="9.5" font-style="italic">Second-Order: Trust=35 doesn't mean 42% of people refuse to work. It means they proceed cautiously.</text>
+
+  <rect x="68" y="304" width="280" height="22" rx="3" fill="#fff5f5"/>
+  <text x="78" y="319" fill="#c44" font-size="10" font-family="Courier New, monospace">min(1.0, trust/60) = 0.583</text>
+  <text x="360" y="319" fill="#886622" font-size="14" font-weight="bold">→</text>
+  <rect x="380" y="304" width="320" height="22" rx="3" fill="#f0fff0"/>
+  <text x="390" y="319" fill="#2a7a2a" font-size="10" font-family="Courier New, monospace">smooth band interpolation = 0.800</text>
+  <text x="720" y="283" fill="#555" font-size="9.5">42% penalty for moderate skepticism → 20% penalty. Impact: <tspan font-weight="bold">1.4× increase</tspan></text>
+  <text x="720" y="301" fill="#666" font-size="9">Smooth transitions prevent artificial tipping points in simulation.</text>
+  <text x="720" y="319" fill="#886622" font-size="9" font-weight="bold">Removes M23 discontinuity from v2.</text>
+
+  <!-- ═══ Fix 3 ═══ -->
+  <rect x="50" y="368" width="1000" height="90" rx="5" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <text x="68" y="388" fill="#333" font-size="12" font-weight="bold">FIX 3: R5 Readiness Boost — Adding the Missing Reinforcing Loop</text>
+  <text x="68" y="403" fill="#48a" font-size="9.5" font-style="italic" font-weight="bold">Meadows: Every stock must have both inflows and outflows. Readiness had only outflow (resistance).</text>
+
+  <rect x="68" y="412" width="280" height="22" rx="3" fill="#fff5f5"/>
+  <text x="78" y="427" fill="#c44" font-size="10" font-family="Courier New, monospace">Δready = -resistance + 0.08</text>
+  <text x="360" y="427" fill="#886622" font-size="14" font-weight="bold">→</text>
+  <rect x="380" y="412" width="320" height="22" rx="3" fill="#f0fff0"/>
+  <text x="390" y="427" fill="#2a7a2a" font-size="10" font-family="Courier New, monospace">+ adoption_boost × (1 - r/100)</text>
+  <text x="720" y="391" fill="#555" font-size="9.5">Readiness stuck at 45→47 → grows to 45→55. Impact: <tspan font-weight="bold">5× faster growth</tspan></text>
+  <text x="720" y="409" fill="#666" font-size="9">Creates R5: adoption success → people see it working → more willing → more adoption.</text>
+  <text x="720" y="427" fill="#48a" font-size="9" font-weight="bold">Most structurally important fix — adds a whole new feedback loop.</text>
+
+  <!-- ═══ Fix 4 ═══ -->
+  <rect x="50" y="476" width="1000" height="90" rx="5" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <text x="68" y="496" fill="#333" font-size="12" font-weight="bold">FIX 4: B1 Absorption — Off-by-One Error in Overload Signal</text>
+  <text x="68" y="511" fill="#888" font-size="9.5" font-style="italic">First Principle: Zero HC reduction = zero additional workload. Not 43% absorption.</text>
+
+  <rect x="68" y="520" width="280" height="22" rx="3" fill="#fff5f5"/>
+  <text x="78" y="535" fill="#c44" font-size="10" font-family="Courier New, monospace">overload = 1.0 + ratio → 43.3%</text>
+  <text x="360" y="535" fill="#886622" font-size="14" font-weight="bold">→</text>
+  <rect x="380" y="520" width="320" height="22" rx="3" fill="#f0fff0"/>
+  <text x="390" y="535" fill="#2a7a2a" font-size="10" font-family="Courier New, monospace">overload = ratio → 30.0%</text>
+  <text x="720" y="499" fill="#555" font-size="9.5">13% points less absorption at start. Impact: <tspan font-weight="bold">13% more FTEs freed</tspan></text>
+  <text x="720" y="517" fill="#666" font-size="9">workload_increase variable included baseline workload (1.0), not just additional.</text>
+  <text x="720" y="535" fill="#886622" font-size="9" font-weight="bold">Classic off-by-one — the formula counted what was already there.</text>
+
+  <!-- ═══ Fix 5 ═══ -->
+  <rect x="50" y="584" width="1000" height="90" rx="5" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <text x="68" y="604" fill="#333" font-size="12" font-weight="bold">FIX 5: R3 Savings Reinvestment — Connecting the Dead Loop</text>
+  <text x="68" y="619" fill="#888" font-size="9.5" font-style="italic">Systems Thinking: An architected but disconnected loop is the same as no loop at all.</text>
+
+  <rect x="68" y="628" width="280" height="22" rx="3" fill="#fff5f5"/>
+  <text x="78" y="643" fill="#c44" font-size="10" font-family="Courier New, monospace">// (future iterations)</text>
+  <text x="360" y="643" fill="#886622" font-size="14" font-weight="bold">→</text>
+  <rect x="380" y="628" width="320" height="22" rx="3" fill="#f0fff0"/>
+  <text x="390" y="643" fill="#2a7a2a" font-size="10" font-family="Courier New, monospace">boost = r3_reinvestment(savings)</text>
+  <text x="720" y="607" fill="#555" font-size="9.5">Function existed but was never called. Impact: <tspan font-weight="bold">+1-2% late adoption boost</tspan></text>
+  <text x="720" y="625" fill="#666" font-size="9">After breakeven, accumulated savings feed back into more training/tooling.</text>
+  <text x="720" y="643" fill="#886622" font-size="9" font-weight="bold">Small but completes the savings flywheel. Dead code is dead architecture.</text>
+
+  <!-- ═══ COMBINED RESULT ═══ -->
+  <rect x="50" y="694" width="1000" height="90" rx="6" fill="#f0f5ff" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="550" y="715" text-anchor="middle" fill="#222" font-size="14" font-weight="bold">COMBINED EFFECT — 5 fixes, ~50 lines changed, 2 files touched</text>
+
+  <text x="150" y="738" text-anchor="middle" fill="#666" font-size="9">Profitable scenarios</text>
+  <text x="150" y="753" text-anchor="middle" fill="#c44" font-size="10">1/40 (2.5%)</text>
+  <text x="150" y="763" text-anchor="middle" fill="#555" font-size="8">↓</text>
+  <text x="150" y="776" text-anchor="middle" fill="#2a7a2a" font-size="11" font-weight="bold">25/40 (62%)</text>
+
+  <text x="330" y="738" text-anchor="middle" fill="#666" font-size="9">Net savings (baseline)</text>
+  <text x="330" y="753" text-anchor="middle" fill="#c44" font-size="10">-$1.75M</text>
+  <text x="330" y="763" text-anchor="middle" fill="#555" font-size="8">↓</text>
+  <text x="330" y="776" text-anchor="middle" fill="#2a7a2a" font-size="11" font-weight="bold">+$4.66M</text>
+
+  <text x="510" y="738" text-anchor="middle" fill="#666" font-size="9">Breakeven</text>
+  <text x="510" y="753" text-anchor="middle" fill="#c44" font-size="10">Never</text>
+  <text x="510" y="763" text-anchor="middle" fill="#555" font-size="8">↓</text>
+  <text x="510" y="776" text-anchor="middle" fill="#2a7a2a" font-size="11" font-weight="bold">Month 18</text>
+
+  <text x="690" y="738" text-anchor="middle" fill="#666" font-size="9">Year 3 adoption</text>
+  <text x="690" y="753" text-anchor="middle" fill="#c44" font-size="10">8%</text>
+  <text x="690" y="763" text-anchor="middle" fill="#555" font-size="8">↓</text>
+  <text x="690" y="776" text-anchor="middle" fill="#2a7a2a" font-size="11" font-weight="bold">45%</text>
+
+  <text x="870" y="738" text-anchor="middle" fill="#666" font-size="9">Readiness growth (36mo)</text>
+  <text x="870" y="753" text-anchor="middle" fill="#c44" font-size="10">+1.9 pts</text>
+  <text x="870" y="763" text-anchor="middle" fill="#555" font-size="8">↓</text>
+  <text x="870" y="776" text-anchor="middle" fill="#2a7a2a" font-size="11" font-weight="bold">+10.0 pts</text>
+</svg>

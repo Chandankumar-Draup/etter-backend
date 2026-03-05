@@ -1,0 +1,51 @@
+scenario_id,scenario_name,family,direction,status,error,hc_reduced,final_hc,net_savings,total_investment,total_savings,payback_month,final_proficiency,final_trust
+SC-1.1,Copilot → Claims Processing,technology_injection,forward,pass,,47,493,3547353.0,1728897.0,5276250.0,17,38.2,43.5
+SC-1.2,Copilot → All Functions,technology_injection,forward,pass,,144,1226,15208623.0,4486127.0,19694750.0,14,51.1,55.3
+SC-1.5,Adoption Gap Only (Free Money),technology_injection,forward,pass,,121,1249,9145391.0,6287609.0,15433000.0,18,48.9,54.0
+SC-5.2,"Maintain Output, -20% Claims HC",output_target,inverse,pass,,71,469,2350152.0,2224848.0,4575000.0,15,35.4,41.6
+SC-7.1,Claims Phased Transformation,function_transformation,forward,pass,,95,445,7959347.0,2482903.0,10442250.0,14,44.6,47.9
+SC-10.6,Do Nothing (Cost of Inaction),baseline,forward,pass,,0,1370,-4257960.0,4257960.0,0.0,0,33.8,46.2
+SC-6.1,Redesign Claims Adjuster,role_transformation,forward,pass,,44,496,1325172.0,1810328.0,3135500.0,17,33.2,40.1
+SC-8.1,Claims AI Academy,skill_intervention,forward,pass,,0,540,-1658880.0,1658880.0,0.0,0,25.0,35.0
+SC-2.1,Reduce 15% Org-Wide,headcount_target,inverse,pass,,209,1161,10034227.0,6217856.0,16252083.0,13,47.8,53.4
+SC-2.2,Differentiated Function Targets,headcount_target,inverse,pass,,209,1161,10034227.0,6217856.0,16252083.0,13,47.8,53.4
+SC-4.1,Reach 35% Automation,automation_target,inverse,pass,,269,1101,27521979.0,8564605.0,36086583.0,12,58.5,59.9
+SC-3.1,$2M Optimized Allocation,budget_constraint,optimization,pass,,209,1161,10034227.0,6217856.0,16252083.0,13,47.8,53.4
+SC-3.2,Budget Allocation Comparison (3-way),budget_constraint,comparison,pass,,233,1137,22702346.0,7922738.0,30625083.0,13,56.0,58.4
+SC-5.3,"+20% Output, -15% HC in Claims",output_target,inverse,pass,,83,457,3434073.0,2336094.0,5770167.0,13,36.9,42.6
+SC-12.2,$15M in 24 Months (What Does It Take?),composite,inverse,pass,,240,1130,15268380.0,6819870.0,22088250.0,10,50.8,55.2
+SC-4.3,Task Category Targets,automation_target,inverse,pass,,269,1101,27521979.0,8564605.0,36086583.0,12,58.5,59.9
+SC-9.1a,Sequence: Claims → Finance → People,sequencing,forward,pass,,155,810,12110848.0,5167986.0,17278833.0,15,46.3,51.8
+SC-9.1b,Sequence: People → Finance → Claims,sequencing,forward,pass,,155,810,12110848.0,5167986.0,17278833.0,15,46.3,51.8
+SC-9.1c,Sequence: Finance → Claims → People,sequencing,forward,pass,,155,810,12110848.0,5167986.0,17278833.0,15,46.3,51.8
+SC-9.3a,Phase: Reskill → Deploy → Reduce,sequencing,forward,pass,,81,459,6060746.0,2717837.0,8778583.0,15,42.3,46.3
+SC-9.3b,Phase: Deploy → Reskill → Reduce,sequencing,forward,pass,,81,459,6060746.0,2717837.0,8778583.0,15,42.3,46.3
+SC-9.3c,Phase: Deploy → Reduce → Reskill,sequencing,forward,pass,,51,489,3418540.0,2382044.0,5800583.0,17,38.3,43.5
+SC-7.2,Which Function First? (3-way comparison),function_transformation,comparison,pass,,119,846,1813037.0,3697129.0,5510167.0,15,33.8,44.6
+SC-8.2,Reskill vs. Hire vs. Contract (AI Ops),skill_intervention,comparison,pass,,0,945,-2903040.0,2903040.0,0.0,0,42.5,50.0
+SC-10.1,Readiness Sweep (20→90),sensitivity,sensitivity,pass,,81,459,6060746.0,2717837.0,8778583.0,15,42.3,46.3
+SC-10.2,Readiness × Proficiency Interaction,sensitivity,sensitivity,pass,,81,459,6060746.0,2717837.0,8778583.0,15,42.3,46.3
+SC-10.3,Trust Destruction (2 AI Errors),stress_test,forward,pass,,62,478,3966287.0,2452380.0,6418667.0,17,39.1,34.2
+SC-10.4,Attrition Shock (15% Tech Loss),stress_test,forward,pass,,71,334,10992595.0,2769571.0,13762167.0,10,75.4,75.1
+SC-10.5,Breakpoint: HC Reduction Limit,stress_test,sensitivity,pass,,97,443,8371499.0,2989918.0,11361417.0,12,45.5,48.6
+SC-11.1,New Compliance Requirements (+30 tasks),regulatory,forward,pass,,81,459,6060746.0,2717837.0,8778583.0,15,42.3,46.3
+SC-11.2,AI Now Permitted for Claims Triage,regulatory,forward,pass,,80,460,6461970.0,1934197.0,8396167.0,15,42.3,46.3
+SC-12.4,Competitor Match: 50% Claims Automation,competitive,inverse,pass,,84,456,2718251.0,2140333.0,4858583.0,10,34.1,40.8
+SC-12.1,Full 36-Month Transformation Program,composite,forward,pass,,269,1101,27521979.0,8564605.0,36086583.0,12,58.5,59.9
+SC-12.3,3-Year with Moving Ceiling (Annual Reassessment),composite,forward,pass,,268,1102,25828386.0,8362864.0,34191250.0,13,57.7,59.4
+SC-7.3,Claims-to-Payment Workflow Automation,function_transformation,forward,pass,,112,667,5153962.0,2931205.0,8085167.0,13,40.4,45.4
+SC-7.4,Merge Claims Processing + Review,org_restructure,forward,pass,,0,540,-1649160.0,1649160.0,0.0,0,25.0,35.0
+SC-6.2,Eliminate Claims Data Entry Clerk,role_transformation,forward,pass,,50,490,-207209.0,1744459.0,1537250.0,0,29.5,37.8
+SC-6.3,Create AI Operations Specialist Role,role_transformation,forward,pass,,0,945,-2869020.0,2869020.0,0.0,0,42.5,50.0
+SC-6.4,Role Vacancy: Claims Examiner Attrition,role_transformation,forward,pass,,0,540,-1639440.0,1639440.0,0.0,0,25.0,35.0
+SC-2.4,Flatten Management Layers,headcount_target,forward,pass,,96,1274,1374604.0,4235229.0,5609833.0,16,40.6,49.6
+SC-ST.1,Compressed Timeline: 24 Months,stress_test,forward,pass,,74,466,3827054.0,1723196.0,5550250.0,12,37.1,42.7
+SC-ST.2,Compressed Timeline: 12 Months,stress_test,forward,pass,,47,493,103206.0,1656794.0,1760000.0,12,29.9,38.0
+SC-ST.3,50% HC Reduction Target (Claims),stress_test,inverse,pass,,97,443,8517131.0,3012785.0,11529917.0,11,45.8,48.8
+SC-ST.4,50% HC Reduction Target (All Functions),stress_test,inverse,pass,,272,1098,30472010.0,8884740.0,39356750.0,9,59.6,60.7
+SC-ST.5,Rapid Automation: k=1.0 (Near-Instant),stress_test,forward,pass,,71,469,6805511.0,1782656.0,8588167.0,12,43.0,46.7
+SC-ST.6,Low Readiness + Fast Change,stress_test,forward,pass,,91,449,8832517.0,1816067.0,10648583.0,11,45.5,48.6
+SC-ST.7,Triple AI Error Sequence,stress_test,forward,pass,,62,478,4978942.0,2490725.0,7469667.0,15,39.6,33.9
+SC-ST.8,30% HC Reduction in 18 Months,stress_test,inverse,pass,,79,461,2043627.0,2139289.0,4182917.0,12,34.0,40.7
+SC-ST.9,Maximum Human System (Best Case),stress_test,forward,pass,,76,464,6420161.0,1777089.0,8197250.0,15,42.3,46.3
+SC-ST.10,Zero Budget Constraint,stress_test,forward,pass,,47,493,3321162.0,1728838.0,5050000.0,19,38.2,43.4

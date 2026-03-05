@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ─── Dark Theme (Default — Mission Control) ─── */
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+    --card: 222 47% 9%;
+    --card-foreground: 210 40% 96%;
+    --primary: 187 94% 43%;
+    --primary-foreground: 222 47% 6%;
+    --accent: 265 80% 60%;
+    --accent-foreground: 210 40% 96%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 55%;
+    --border: 222 30% 16%;
+    --success: 160 84% 39%;
+    --warning: 38 92% 50%;
+    --destructive: 0 72% 51%;
+    --chart-1: 187 94% 43%;
+    --chart-2: 265 80% 60%;
+    --chart-3: 160 84% 39%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 350 89% 60%;
+    --radius: 12px;
+    --surface: 222 40% 12%;
+  }
+
+  /* ─── Light Theme ─── */
+  .light {
+    --background: 220 20% 97%;
+    --foreground: 222 47% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+    --primary: 187 94% 33%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 265 80% 50%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 215 20% 42%;
+    --border: 220 13% 87%;
+    --success: 160 84% 32%;
+    --warning: 38 92% 42%;
+    --destructive: 0 72% 45%;
+    --chart-1: 187 94% 33%;
+    --chart-2: 265 80% 50%;
+    --chart-3: 160 84% 32%;
+    --chart-4: 38 92% 42%;
+    --chart-5: 350 89% 50%;
+    --surface: 220 14% 95%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  /* ─── Glass Card System ─── */
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-[12px];
+  }
+  .glass-strong {
+    @apply bg-card/80 backdrop-blur-2xl border border-border/60 rounded-[12px];
+  }
+  .glow-border {
+    box-shadow: 0 0 0 1px hsl(var(--primary) / 0.2),
+                0 0 20px -5px hsl(var(--primary) / 0.15);
+  }
+  .light .glass {
+    @apply bg-card/80 shadow-sm;
+  }
+
+  /* ─── Grid Pattern Background ─── */
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* ─── Scrollbar Styling ─── */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  /* ─── Label Style ─── */
+  .label-caps {
+    @apply text-[11px] font-medium uppercase tracking-widest text-muted-foreground;
+  }
+
+  /* ─── Stat Value ─── */
+  .stat-value {
+    @apply text-[30px] font-bold font-mono text-foreground leading-none;
+  }
+
+  /* ─── Section Header ─── */
+  .section-header {
+    @apply text-sm font-semibold text-foreground;
+  }
+}
+
+/* ─── Gradient Text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Stagger Entry Animations ─── */
+.stagger-1 { animation-delay: 0ms; }
+.stagger-2 { animation-delay: 60ms; }
+.stagger-3 { animation-delay: 120ms; }
+.stagger-4 { animation-delay: 180ms; }
+.stagger-5 { animation-delay: 240ms; }
+.stagger-6 { animation-delay: 300ms; }
+.stagger-7 { animation-delay: 360ms; }
+.stagger-8 { animation-delay: 420ms; }
+
+/* ─── Cascade View Animations ─── */
+.glass-inner {
+  @apply bg-muted/20 border border-border/30;
+}
+.label-xs {
+  @apply text-[10px] font-medium uppercase tracking-wider text-muted-foreground;
+}
+
+/* Detail panel entrance */
+.cascade-detail-enter {
+  animation: cascadeDetailIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes cascadeDetailIn {
+  0% { opacity: 0; transform: translateY(12px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Chip/item staggered entrance */
+.cascade-chip-enter {
+  animation: cascadeChipIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes cascadeChipIn {
+  0% { opacity: 0; transform: translateX(-8px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Bar fill animation */
+.cascade-bar-fill {
+  animation: cascadeBarFill 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 300ms;
+}
+@keyframes cascadeBarFill {
+  0% { width: 0%; }
+  100% { width: var(--bar-width, 0%); }
+}
+
+/* Pulse animations for risk badges */
+.cascade-pulse-red {
+  animation: cascadePulseRed 2s ease-in-out infinite;
+}
+@keyframes cascadePulseRed {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(0, 72%, 51%, 0.3); }
+  50% { box-shadow: 0 0 12px 4px hsl(0, 72%, 51%, 0.15); }
+}
+.cascade-pulse-amber {
+  animation: cascadePulseAmber 2s ease-in-out infinite;
+}
+@keyframes cascadePulseAmber {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(38, 92%, 50%, 0.3); }
+  50% { box-shadow: 0 0 12px 4px hsl(38, 92%, 50%, 0.15); }
+}
+
+/* Cascade card reveal animation */
+.cascade-card-reveal {
+  animation: cascadeCardReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes cascadeCardReveal {
+  0% { opacity: 0; transform: scale(0.75) translateY(8px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Step pill in the pipeline */
+.cascade-step-pill {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cascade-step-pill:hover {
+  transform: translateY(-1px);
+}
+
+/* ─── Info Tooltip ─── */
+.info-tooltip {
+  @apply absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2
+    px-3 py-2 rounded-lg text-[11px] leading-relaxed text-foreground
+    bg-card border border-border/60 shadow-xl
+    whitespace-normal w-[220px] pointer-events-none
+    opacity-0 scale-95 transition-all duration-200;
+}
+.group:hover .info-tooltip {
+  @apply opacity-100 scale-100;
+}
+
+/* Workforce transition flow */
+.wf-flow-node {
+  animation: wfNodeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes wfNodeIn {
+  0% { opacity: 0; transform: translateY(16px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.wf-flow-arrow {
+  animation: wfArrowIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes wfArrowIn {
+  0% { opacity: 0; transform: scaleX(0); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+.wf-bar-grow {
+  animation: wfBarGrow 1.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes wfBarGrow {
+  0% { height: 0%; }
+  100% { height: var(--bar-h, 0%); }
+}

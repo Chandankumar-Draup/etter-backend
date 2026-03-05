@@ -1,0 +1,98 @@
+[
+  {
+    "role": "Claims Intake Specialist",
+    "current_hc": 120,
+    "net_freed_ftes": 43.41674999999999,
+    "reducible": 43,
+    "projected_hc": 77,
+    "reduction_pct": 35.8
+  },
+  {
+    "role": "Claims Adjuster",
+    "current_hc": 95,
+    "net_freed_ftes": 31.106562500000003,
+    "reducible": 31,
+    "projected_hc": 64,
+    "reduction_pct": 32.6
+  },
+  {
+    "role": "Claims Data Entry Clerk",
+    "current_hc": 80,
+    "net_freed_ftes": 29.705000000000005,
+    "reducible": 29,
+    "projected_hc": 51,
+    "reduction_pct": 36.2
+  },
+  {
+    "role": "Claims Examiner",
+    "current_hc": 45,
+    "net_freed_ftes": 15.330656250000004,
+    "reducible": 15,
+    "projected_hc": 30,
+    "reduction_pct": 33.3
+  },
+  {
+    "role": "Claims Processor",
+    "current_hc": 60,
+    "net_freed_ftes": 14.483624999999995,
+    "reducible": 14,
+    "projected_hc": 46,
+    "reduction_pct": 23.3
+  },
+  {
+    "role": "Fraud Detection Analyst",
+    "current_hc": 20,
+    "net_freed_ftes": 6.098624999999999,
+    "reducible": 6,
+    "projected_hc": 14,
+    "reduction_pct": 30.0
+  },
+  {
+    "role": "Claims Team Lead",
+    "current_hc": 20,
+    "net_freed_ftes": 6.7396875,
+    "reducible": 6,
+    "projected_hc": 14,
+    "reduction_pct": 30.0
+  },
+  {
+    "role": "Claims Support Coordinator",
+    "current_hc": 10,
+    "net_freed_ftes": 3.2199374999999995,
+    "reducible": 3,
+    "projected_hc": 7,
+    "reduction_pct": 30.0
+  },
+  {
+    "role": "Claims Review Specialist",
+    "current_hc": 40,
+    "net_freed_ftes": 14.1375,
+    "reducible": 14,
+    "projected_hc": 26,
+    "reduction_pct": 35.0
+  },
+  {
+    "role": "Quality Assurance Auditor",
+    "current_hc": 30,
+    "net_freed_ftes": 9.7183125,
+    "reducible": 9,
+    "projected_hc": 21,
+    "reduction_pct": 30.0
+  },
+  {
+    "role": "Claims Review Manager",
+    "current_hc": 15,
+    "net_freed_ftes": 5.885343749999999,
+    "reducible": 5,
+    "projected_hc": 10,
+    "reduction_pct": 33.3
+  },
+  {
+    "role": "Sr. Director Claims",
+    "current_hc": 5,
+    "net_freed_ftes": 1.5522812499999998,
+    "reducible": 1,
+    "projected_hc": 4,
+    "reduction_pct": 20.0
+  }
+]

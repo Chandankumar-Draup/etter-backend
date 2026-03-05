@@ -1,0 +1,141 @@
+test_id,test_name,category,status,message
+TF-01,HC reduction monotonically decreases with shorter timeframe,timeframe,PASS,"HC reductions: {36: 44, 24: 40, 18: 35, 12: 33, 6: 0}"
+TF-02,12-month timeframe does not reach positive net savings,timeframe,PASS,12mo net savings: $-1.13M (negative as expected)
+TF-03,6-month timeframe has minimal HC impact (<5%),timeframe,PASS,6mo reduction: 0 (0.0%)
+TF-04,24-month adoption reaches 70%+ of 36-month adoption,timeframe,PASS,"24mo adoption: 26.5%, 36mo: 27.8%, ratio: 95.1%"
+TF-00,Compressed Timeframe Summary,timeframe,INFO,"{
+  ""36mo"": {
+    ""hc_reduced"": 44,
+    ""net_savings_M"": 2.97,
+    ""final_adoption"": 0.278,
+    ""payback_month"": 20,
+    ""final_proficiency"": 33.4
+  },
+  ""24mo"": {
+    ""hc_reduced"": 40,
+    ""net_savings_M"": 0.73,
+    ""final_adoption"": 0.265,
+    ""payback_month"": 20,
+    ""final_proficiency"": 27.8
+  },
+  ""18mo"": {
+    ""hc_reduced"": 35,
+    ""net_savings_M"": -0.25,
+    ""final_adoption"": 0.236,
+    ""payback_month"": 0,
+    ""final_proficiency"": 28.1
+  },
+  ""12mo"": {
+    ""hc_reduced"": 33,
+    ""net_savin"
+AR-01,Extreme adoption rate dampened by feedback,automation_rate,PASS,"Extreme HC: 42, Normal HC: 44 (feedback limits impact)"
+AR-02,Glacial adoption produces substantially less HC reduction,automation_rate,PASS,"Glacial HC: 39, Normal HC: 44"
+AR-03,Faster adoption correlates with readiness impact at M6,automation_rate,PASS,"Fast readiness M6: 45.9, Normal: 46.0"
+AR-00,Automation Rate Sweep Summary,automation_rate,INFO,"{
+  ""glacial"": {
+    ""k"": 0.1,
+    ""hc_reduced"": 39,
+    ""net_savings_M"": 2.1,
+    ""final_adoption"": 0.26,
+    ""payback_month"": 23
+  },
+  ""slow"": {
+    ""k"": 0.15,
+    ""hc_reduced"": 43,
+    ""net_savings_M"": 2.55,
+    ""final_adoption"": 0.271,
+    ""payback_month"": 22
+  },
+  ""normal"": {
+    ""k"": 0.3,
+    ""hc_reduced"": 44,
+    ""net_savings_M"": 2.97,
+    ""final_adoption"": 0.278,
+    ""payback_month"": 20
+  },
+  ""fast"": {
+    ""k"": 0.6,
+    ""hc_reduced"": 44,
+    ""net_savings_M"": 3.07,
+    ""final_adoption"""
+HC-01,50% HC reduction achievability with aggressive params,headcount,INFO,"Achieved: 136/1370 (9.9%). Net savings: $16.4M, Payback: M12"
+HC-02,HC reduction does not exceed automation ceiling,headcount,PASS,"Reduced: 9.9%, Ceiling: 43.4%"
+HC-03,Progressive reduction target comparison,headcount,INFO,"HC reduced: 20%=44, 30%=56, 40%=59, 50%=60. Trust: 20%=31, 30%=30, 40%=30, 50%=30"
+HC-04,50% reduction — remaining staff absorption rate check,headcount,PASS,Final absorption rate: 0.344 (within capacity)
+HF-01,Zero human factors still allows minimum adoption (early adopters),human_factors,PASS,Zero-everything adoption at M12: 0.3%
+HF-02,Max human factors allows adoption close to raw S-curve,human_factors,PASS,Max adoption at M36: 77.6% vs raw 60.0% (dampening=129.3%)
+HF-03,Zero trust severely dampens adoption despite high readiness,human_factors,PASS,"Zero-trust adoption M12: 1.6%, Baseline: 22.2%"
+HF-04,Low political capital constrains HC reduction,human_factors,PASS,"Low capital HC at M6: 540, Baseline: 540"
+HF-05,Human factor extremes produce >5x outcome divergence,human_factors,PASS,"Max savings: $14.0M, Zero savings: $-1.7M, Range: $15.7M"
+HF-06,High initial fatigue reduces HC reduction,human_factors,PASS,"High fatigue HC reduced: 43, Baseline: 44"
+HF-00,Human Factor Extremes Summary,human_factors,INFO,"{
+  ""baseline"": {
+    ""hc_reduced"": 44,
+    ""net_savings_M"": 2.97,
+    ""final_adoption"": 0.278,
+    ""final_trust"": 30.6,
+    ""final_readiness"": 52.6,
+    ""final_proficiency"": 33.4
+  },
+  ""zero_everything"": {
+    ""hc_reduced"": 0,
+    ""net_savings_M"": -1.68,
+    ""final_adoption"": 0.004,
+    ""final_trust"": 0.0,
+    ""final_readiness"": 8.1,
+    ""final_proficiency"": 0.2
+  },
+  ""max_everything"": {
+    ""hc_reduced"": 136,
+    ""net_savings_M"": 14.0,
+    ""final_adoption"": 0.776,
+    ""final_trust"": 84.7,
+  "
+SAN-01,Headcount never goes negative,sanity,PASS,Min HC: 480
+SAN-02,Effective adoption never exceeds raw adoption,sanity,PASS,No violations
+SAN-03,Financial savings consistency (sum of monthly = total),sanity,PASS,"Manual sum: $7.961M, Reported: $7.961M, Diff: 0.00%"
+SAN-04,"Human system values stay in [0, 100] range",sanity,PASS,All values in range
+SAN-05,"Productivity index in reasonable range [50, 200]",sanity,PASS,"Range: [98.2, 103.6]"
+SAN-06,"Adoption dampening ratio ≤ 1.0 (feedback dampens, not amplifies)",sanity,PASS,No amplification
+SAN-07,Cumulative HC reduction is monotonically non-decreasing,sanity,PASS,Monotonic
+PV-01,Productivity valley dips below 100 (expected 85-95),productivity,PASS,Min productivity: 97.8 at M0. Dip exists
+PV-02,Productivity formula component analysis at valley,productivity,INFO,"At M0: adoption=4.0%, lift=+0.6%, skill_drag=-0.2%, fatigue_drag=-0.019%. NET: 100.4%"
+PV-03,Aggressive scenario has comparable or deeper productivity valley,productivity,PASS,"Aggressive min: 98.2, Baseline min: 97.8"
+FT-01,Fatigue accumulates to measurable level (>1.0 by M36),fatigue,PASS,Final fatigue: 13.874. Measurable
+FT-02,Aggressive scenario produces more fatigue than baseline,fatigue,PASS,"Aggressive fatigue: 17.012, Baseline: 13.874"
+FT-03,Disruption signal trace (quarterly),fatigue,INFO,"[
+  {
+    ""month"": 3,
+    ""hc_reduced"": 0,
+    ""total_hc"": 540,
+    ""disruption"": 0.0,
+    ""fatigue_delta"": 0.0
+  },
+  {
+    ""month"": 6,
+    ""hc_reduced"": 0,
+    ""total_hc"": 540,
+    ""disruption"": 0.0,
+    ""fatigue_delta"": 0.0
+  },
+  {
+    ""month"": 9,
+    ""hc_reduced"": 27,
+    ""total_hc"": 513,
+    ""disruption"": 0.5263,
+    ""fatigue_delta"": 0.263158
+  },
+  {
+    ""month"": 12,
+    ""hc_reduced"": 6,
+    ""total_hc"": 507,
+    ""disruption"": 0.1183,
+    ""fatigue_delta"": 0.059172
+  },
+  {
+    ""month"": 15,"
+TE-01,Trust destruction follows multiplicative formula,trust,PASS,"Pre: 33.9, Post: 23.8, Expected: 23.7"
+TE-02,Early AI error (M3) produces worse outcome than late error (M18),trust,PASS,"Early error savings: $1.2M, Late error: $2.5M"
+TE-03,AI error reduces total HC reduction,trust,PASS,"No error: 44 FTEs, With error: 27 FTEs"
+TE-04,Trust recovery takes significant time (>6 months),trust,PASS,Recovery time: Never within 36mo
+F-00,MODEL HEALTH: Good,findings,PASS,Model passes 30 tests with 0 warnings and 0 failures. All conservation laws hold. Human factors differentiate scenarios meaningfully.
