@@ -50,13 +50,44 @@ def _available_companies() -> list:
     return [d for d in os.listdir(DATA_ROOT) if os.path.isdir(os.path.join(DATA_ROOT, d))]
 
 
+def _resolve_data_dir(company: str) -> str:
+    """
+    Find the data directory for a company.
+
+    Exact match first, then case-insensitive fallback. This prevents 404s
+    when the auth system returns a slightly different casing or name than
+    the folder on disk (e.g. "NTT Data" vs "NTT data").
+    """
+    exact = os.path.join(DATA_ROOT, company)
+    if os.path.isdir(exact):
+        return exact
+
+    # Case-insensitive fallback
+    available = _available_companies()
+    lower = company.lower()
+    for name in available:
+        if name.lower() == lower:
+            logger.info(f"Company '{company}' matched case-insensitively to '{name}'")
+            return os.path.join(DATA_ROOT, name)
+
+    # If only one company exists, use it (single-tenant deployment)
+    if len(available) == 1:
+        logger.warning(
+            f"Company '{company}' not found, but only one dataset exists: "
+            f"'{available[0]}'. Using it as fallback."
+        )
+        return os.path.join(DATA_ROOT, available[0])
+
+    return ""
+
+
 def get_org(company: str) -> OrganizationData:
     """Load and cache organization data for a company."""
     if company in _org_cache:
         return _org_cache[company]
 
-    data_dir = os.path.join(DATA_ROOT, company)
-    if not os.path.isdir(data_dir):
+    data_dir = _resolve_data_dir(company)
+    if not data_dir:
         available = _available_companies()
         logger.error(f"Company data not found: '{company}'. Available: {available}")
         raise HTTPException(
