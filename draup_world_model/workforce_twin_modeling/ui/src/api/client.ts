@@ -1,7 +1,7 @@
 /**
  * API Client — typed fetch wrappers for all backend endpoints.
  */
-const BASE = '/api'
+const BASE = (window as any).__WORKFORCE_TWIN_API_BASE__ || '/api'
 
 async function fetchJSON<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
