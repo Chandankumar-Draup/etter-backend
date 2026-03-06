@@ -1,10 +1,10 @@
 """Time-series simulation endpoints (with feedback loops)."""
 from typing import Dict, List, Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 
-from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.app import get_org, resolve_company
 from workforce_twin_modeling.api.serializers import serialize_fb_result, serialize_sim_params
 
 from workforce_twin_modeling.engine.cascade import Stimulus
@@ -96,7 +96,7 @@ class SimulationRequest(BaseModel):
 
 
 @router.post("/simulate")
-async def run_simulation(req: SimulationRequest):
+async def run_simulation(req: SimulationRequest, company: str = Depends(resolve_company)):
     """Run time-series simulation with feedback loops.
 
     For target-based stimulus types (headcount_target, budget_constraint,
@@ -105,7 +105,7 @@ async def run_simulation(req: SimulationRequest):
     target outcome. The response includes an 'inverse_solve' section with
     solver metadata alongside the standard simulation result.
     """
-    org = get_org()
+    org = get_org(company)
 
     target_fns = req.target_functions if req.target_functions else org.functions
 
@@ -256,9 +256,9 @@ def _rerun_with_trace(
 
 
 @router.post("/simulate/preset/{preset_id}")
-async def run_preset_simulation(preset_id: str, trace: bool = False):
+async def run_preset_simulation(preset_id: str, trace: bool = False, company: str = Depends(resolve_company)):
     """Run a preset scenario (P1-P5) with default parameters."""
-    org = get_org()
+    org = get_org(company)
     preset = ALL_SCENARIOS.get(preset_id.upper())
     if not preset:
         return {"error": f"Preset '{preset_id}' not found. Available: P1, P2, P3, P4, P5"}
@@ -278,7 +278,7 @@ async def run_preset_simulation(preset_id: str, trace: bool = False):
 
 
 @router.get("/simulate/presets")
-async def get_presets():
+async def get_presets(company: str = Depends(resolve_company)):
     """Available preset scenarios with their parameters."""
     return [
         {
