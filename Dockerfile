@@ -7,6 +7,7 @@ ARG GIT_TOKEN
 
 # Install dependencies
 COPY requirements.txt .
+COPY draup_world_model/ ./draup_world_model/
 
 RUN apt-get update && apt-get install -y git g++ && \
     pip install uv && \
