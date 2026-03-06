@@ -24,6 +24,10 @@ from workforce_twin_modeling.engine.gap_engine import compute_snapshot, classify
 # Package root — used for data/ and ui/ paths
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Skip auth in local dev: set WORKFORCE_TWIN_SKIP_AUTH=1
+_SKIP_AUTH = os.environ.get("WORKFORCE_TWIN_SKIP_AUTH", "").strip() in ("1", "true")
+_router_deps = [] if _SKIP_AUTH else [Depends(verify_token)]
+
 # Module-level state
 _org: Optional[OrganizationData] = None
 _snapshot = None
@@ -59,7 +63,7 @@ from workforce_twin_modeling.api.routes import (
 router = APIRouter(
     prefix="/v1/workforce-twin",
     tags=["workforce-twin"],
-    dependencies=[Depends(verify_token)],
+    dependencies=_router_deps,
 )
 
 router.include_router(organization.router)
