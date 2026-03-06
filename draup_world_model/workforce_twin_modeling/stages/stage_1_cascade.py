@@ -30,8 +30,8 @@ import csv
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine.loader import load_organization
-from engine.cascade import (
+from workforce_twin_modeling.engine.loader import load_organization
+from workforce_twin_modeling.engine.cascade import (
     Stimulus, run_cascade, CascadeResult,
     AUTOMATION_FREED_PCT,
 )

@@ -32,14 +32,14 @@ import csv
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine.loader import load_organization
-from engine.rates import SimulationParams, RateParams, P2_BALANCED
-from engine.simulator import simulate as simulate_open_loop, SimulationResult
-from engine.simulator_fb import (
+from workforce_twin_modeling.engine.loader import load_organization
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams, P2_BALANCED
+from workforce_twin_modeling.engine.simulator import simulate as simulate_open_loop, SimulationResult
+from workforce_twin_modeling.engine.simulator_fb import (
     simulate_with_feedback, FBSimulationResult, FBMonthlySnapshot,
 )
-from engine.feedback import HumanSystemState, FeedbackParams
-from engine.cascade import Stimulus
+from workforce_twin_modeling.engine.feedback import HumanSystemState, FeedbackParams
+from workforce_twin_modeling.engine.cascade import Stimulus
 
 
 # ============================================================

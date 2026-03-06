@@ -11,24 +11,24 @@ import math
 from dataclasses import asdict
 from typing import Any, Dict, List
 
-from engine.cascade import (
+from workforce_twin_modeling.engine.cascade import (
     CascadeResult, Stimulus, Step1_ScopeResult, Step2_ReclassificationResult,
     TaskReclassification, Step3_CapacityResult, RoleCapacity,
     Step4_SkillResult, SkillImpact, Step5_WorkforceResult, RoleWorkforceImpact,
     Step6_FinancialResult, Step7_StructuralResult, Step8_HumanSystemResult,
     Step9_RiskResult, RiskItem,
 )
-from engine.feedback import HumanSystemState, FeedbackParams
-from engine.gap_engine import (
+from workforce_twin_modeling.engine.feedback import HumanSystemState, FeedbackParams
+from workforce_twin_modeling.engine.gap_engine import (
     OrgGapResult, FunctionGapResult, RoleGapResult,
     WorkloadGapResult, TaskGapResult,
 )
-from engine.loader import OrganizationData
-from engine.rates import SimulationParams, RateParams
-from engine.simulator import SimulationResult, MonthlySnapshot
-from engine.simulator_fb import FBSimulationResult, FBMonthlySnapshot
-from engine.trace import SimulationTrace
-from models.organization import (
+from workforce_twin_modeling.engine.loader import OrganizationData
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams
+from workforce_twin_modeling.engine.simulator import SimulationResult, MonthlySnapshot
+from workforce_twin_modeling.engine.simulator_fb import FBSimulationResult, FBMonthlySnapshot
+from workforce_twin_modeling.engine.trace import SimulationTrace
+from workforce_twin_modeling.models.organization import (
     Task, Role, Workload, Skill, Tool, HumanSystem, OrgNode,
 )
 

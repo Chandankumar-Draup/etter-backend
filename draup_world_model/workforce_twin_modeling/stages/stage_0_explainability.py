@@ -24,8 +24,8 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine.loader import load_organization
-from engine.gap_engine import (
+from workforce_twin_modeling.engine.loader import load_organization
+from workforce_twin_modeling.engine.gap_engine import (
     CATEGORY_AUTOMATION_POTENTIAL,
     classify_task,
     compute_snapshot,

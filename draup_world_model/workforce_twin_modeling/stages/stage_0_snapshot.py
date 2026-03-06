@@ -20,8 +20,8 @@ import csv
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine.loader import load_organization
-from engine.gap_engine import compute_snapshot
+from workforce_twin_modeling.engine.loader import load_organization
+from workforce_twin_modeling.engine.gap_engine import compute_snapshot
 
 
 # ============================================================

@@ -15,11 +15,11 @@ Principle: Compute at the leaf (task), aggregate upward. Same pattern at every s
 """
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
-from models.organization import (
+from workforce_twin_modeling.models.organization import (
     Task, Role, Workload, Skill, Tool, HumanSystem,
     OrgNode, FinancialSnapshot,
 )
-from engine.loader import OrganizationData
+from workforce_twin_modeling.engine.loader import OrganizationData
 
 
 # ============================================================

@@ -3,10 +3,10 @@ import os
 
 from fastapi import APIRouter
 
-from api.app import get_org, PROJECT_ROOT
-from api.serializers import _r
+from workforce_twin_modeling.api.app import get_org, PROJECT_ROOT
+from workforce_twin_modeling.api.serializers import _r
 
-from stages.scenario_executor import load_catalog, run_scenario, run_batch
+from workforce_twin_modeling.stages.scenario_executor import load_catalog, run_scenario, run_batch
 
 router = APIRouter(tags=["scenarios"])
 

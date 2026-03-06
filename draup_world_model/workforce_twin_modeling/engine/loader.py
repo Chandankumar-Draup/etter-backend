@@ -7,7 +7,7 @@ import csv
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Dict, List
-from models.organization import (
+from workforce_twin_modeling.models.organization import (
     Task, Role, Workload, Skill, Tool, HumanSystem
 )
 
