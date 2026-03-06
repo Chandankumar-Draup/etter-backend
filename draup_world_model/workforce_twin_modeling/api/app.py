@@ -12,9 +12,11 @@ import os
 from contextlib import asynccontextmanager
 from typing import Optional
 
-from fastapi import APIRouter, FastAPI
+from fastapi import APIRouter, Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+
+from services.auth import verify_token
 
 from workforce_twin_modeling.engine.loader import load_organization, OrganizationData
 from workforce_twin_modeling.engine.gap_engine import compute_snapshot, classify_task
@@ -54,7 +56,11 @@ from workforce_twin_modeling.api.routes import (
     organization, snapshot, cascade, simulate, scenarios, compare,
 )
 
-router = APIRouter(prefix="/v1/workforce-twin", tags=["workforce-twin"])
+router = APIRouter(
+    prefix="/v1/workforce-twin",
+    tags=["workforce-twin"],
+    dependencies=[Depends(verify_token)],
+)
 
 router.include_router(organization.router)
 router.include_router(snapshot.router)
