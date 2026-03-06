@@ -4,13 +4,13 @@ from typing import List, Optional
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from api.app import get_org
-from api.serializers import serialize_fb_result, _r
+from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.serializers import serialize_fb_result, _r
 
-from engine.cascade import Stimulus
-from engine.feedback import FeedbackParams
-from engine.rates import SimulationParams, RateParams, ALL_SCENARIOS
-from engine.simulator_fb import simulate_with_feedback
+from workforce_twin_modeling.engine.cascade import Stimulus
+from workforce_twin_modeling.engine.feedback import FeedbackParams
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams, ALL_SCENARIOS
+from workforce_twin_modeling.engine.simulator_fb import simulate_with_feedback
 
 router = APIRouter(tags=["compare"])
 

@@ -19,4 +19,4 @@ if __name__ == "__main__":
     print(f"  Docs:    http://localhost:8000/docs")
     print(f"  UI Dev:  cd ui && npm run dev")
     print("  " + "=" * 50 + "\n")
-    uvicorn.run("api.app:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("workforce_twin_modeling.api.app:get_app", host="0.0.0.0", port=8000, reload=True, factory=True)

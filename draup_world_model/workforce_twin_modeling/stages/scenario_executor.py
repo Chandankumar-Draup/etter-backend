@@ -24,11 +24,11 @@ from typing import Dict, List, Optional, Tuple
 # Add project root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from engine.loader import load_organization, OrganizationData
-from engine.cascade import Stimulus
-from engine.rates import SimulationParams, RateParams
-from engine.feedback import HumanSystemState, FeedbackParams
-from engine.simulator_fb import simulate_with_feedback, FBSimulationResult
+from workforce_twin_modeling.engine.loader import load_organization, OrganizationData
+from workforce_twin_modeling.engine.cascade import Stimulus
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams
+from workforce_twin_modeling.engine.feedback import HumanSystemState, FeedbackParams
+from workforce_twin_modeling.engine.simulator_fb import simulate_with_feedback, FBSimulationResult
 
 
 # ============================================================

@@ -20,22 +20,22 @@ import math
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from engine.rates import SimulationParams, RateParams
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams
 from collections import deque
-from engine.cascade import (
+from workforce_twin_modeling.engine.cascade import (
     Stimulus, run_cascade, CascadeResult,
     AUTOMATION_FREED_PCT, AI_CATEGORIES, HUMAN_AI_CATEGORIES,
     productive_hours_month,
 )
-from engine.loader import OrganizationData
-from engine.feedback import (
+from workforce_twin_modeling.engine.loader import OrganizationData
+from workforce_twin_modeling.engine.feedback import (
     HumanSystemState, FeedbackParams,
     compute_effective_adoption, compute_dynamic_absorption,
     update_human_system, b2_skill_valley, b4_seniority_offset,
     r3_savings_reinvestment,
     r1_trust_adoption, r2_proficiency, b3_change_resistance, r4_political_capital,
 )
-from engine.trace import (
+from workforce_twin_modeling.engine.trace import (
     MonthTrace, SimulationTrace,
     trust_band, capital_band,
     determine_dominant_loop, compute_phase_summary, compute_improvement_summary,

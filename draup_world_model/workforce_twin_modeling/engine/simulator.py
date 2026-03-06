@@ -16,12 +16,12 @@ import math
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from engine.rates import SimulationParams, RateParams
-from engine.cascade import (
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams
+from workforce_twin_modeling.engine.cascade import (
     Stimulus, run_cascade, CascadeResult,
     AUTOMATION_FREED_PCT, AI_CATEGORIES, HUMAN_AI_CATEGORIES,
 )
-from engine.loader import OrganizationData
+from workforce_twin_modeling.engine.loader import OrganizationData
 
 
 # ============================================================

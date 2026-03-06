@@ -17,6 +17,7 @@ from api.chatbot import chatbot_router
 from api.extraction import extraction_router
 from api.gateway import gateway_router
 from etter_workflows.api import router as pipeline_router
+from workforce_twin_modeling.api import router as workforce_twin_router
 from middleware.cors_middleware import add_cors_middleware
 from middleware.datadog_logging_middleware import DatadogLoggingMiddleware
 
@@ -64,6 +65,7 @@ etter_app.include_router(chatbot_router)
 etter_app.include_router(extraction_router)
 etter_app.include_router(gateway_router)
 etter_app.include_router(pipeline_router)
+etter_app.include_router(workforce_twin_router)
 
 @etter_app.get('/')
 def read_root():

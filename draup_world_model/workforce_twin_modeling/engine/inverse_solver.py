@@ -18,11 +18,11 @@ import math
 from dataclasses import dataclass
 from typing import Callable, Optional, Tuple
 
-from engine.cascade import Stimulus
-from engine.loader import OrganizationData
-from engine.rates import SimulationParams, RateParams
-from engine.feedback import FeedbackParams, HumanSystemState
-from engine.simulator_fb import simulate_with_feedback, FBSimulationResult
+from workforce_twin_modeling.engine.cascade import Stimulus
+from workforce_twin_modeling.engine.loader import OrganizationData
+from workforce_twin_modeling.engine.rates import SimulationParams, RateParams
+from workforce_twin_modeling.engine.feedback import FeedbackParams, HumanSystemState
+from workforce_twin_modeling.engine.simulator_fb import simulate_with_feedback, FBSimulationResult
 
 
 # ============================================================

@@ -1,8 +1,8 @@
 """Static gap analysis (snapshot) endpoints."""
 from fastapi import APIRouter
 
-from api.app import get_snapshot
-from api.serializers import serialize_org_gap, serialize_function_gap, serialize_role_gap
+from workforce_twin_modeling.api.app import get_snapshot
+from workforce_twin_modeling.api.serializers import serialize_org_gap, serialize_function_gap, serialize_role_gap
 
 router = APIRouter(tags=["snapshot"])
 

@@ -16,9 +16,9 @@ Design principle: Each step is a pure function.
 import math
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple
-from models.organization import Task, Role, Workload, Skill, Tool, HumanSystem
-from engine.loader import OrganizationData
-from engine.gap_engine import CATEGORY_AUTOMATION_POTENTIAL, classify_task
+from workforce_twin_modeling.models.organization import Task, Role, Workload, Skill, Tool, HumanSystem
+from workforce_twin_modeling.engine.loader import OrganizationData
+from workforce_twin_modeling.engine.gap_engine import CATEGORY_AUTOMATION_POTENTIAL, classify_task
 
 
 # ============================================================

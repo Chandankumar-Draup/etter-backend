@@ -4,17 +4,17 @@ from typing import Dict, List, Optional
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-from api.app import get_org
-from api.serializers import serialize_fb_result, serialize_sim_params
+from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.serializers import serialize_fb_result, serialize_sim_params
 
-from engine.cascade import Stimulus
-from engine.feedback import FeedbackParams, HumanSystemState
-from engine.inverse_solver import solve_inverse
-from engine.rates import (
+from workforce_twin_modeling.engine.cascade import Stimulus
+from workforce_twin_modeling.engine.feedback import FeedbackParams, HumanSystemState
+from workforce_twin_modeling.engine.inverse_solver import solve_inverse
+from workforce_twin_modeling.engine.rates import (
     SimulationParams, RateParams, ALL_SCENARIOS,
     P1_CAUTIOUS, P2_BALANCED, P3_AGGRESSIVE, P4_CAPABILITY_FIRST, P5_ACCELERATED,
 )
-from engine.simulator_fb import simulate_with_feedback
+from workforce_twin_modeling.engine.simulator_fb import simulate_with_feedback
 
 router = APIRouter(tags=["simulation"])
 

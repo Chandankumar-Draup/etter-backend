@@ -1,9 +1,9 @@
 """Organization data endpoints."""
 from fastapi import APIRouter
 
-from api.app import get_org
-from api.serializers import serialize_org, serialize_org_hierarchy, serialize_role, serialize_role_gap
-from api.app import get_snapshot
+from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.serializers import serialize_org, serialize_org_hierarchy, serialize_role, serialize_role_gap
+from workforce_twin_modeling.api.app import get_snapshot
 
 router = APIRouter(tags=["organization"])
 
