@@ -1,0 +1,693 @@
+skill_id,workload_id,skill_name,skill_type,proficiency_required,is_sunrise,is_sunset
+SK-0001,WL-0001,insurance regulation,current,80,False,False
+SK-0002,WL-0001,claims processing,current,70,False,False
+SK-0003,WL-0001,investigation,current,70,False,False
+SK-0004,WL-0001,automation oversight,sunrise,60,True,False
+SK-0005,WL-0001,manual data entry,sunset,70,False,True
+SK-0006,WL-0002,insurance regulation,current,70,False,False
+SK-0007,WL-0002,attention to detail,current,70,False,False
+SK-0008,WL-0002,data entry,current,70,False,False
+SK-0009,WL-0002,AI-assisted triage,sunrise,60,True,False
+SK-0010,WL-0002,manual form processing,sunset,70,False,True
+SK-0011,WL-0003,customer service,current,80,False,False
+SK-0012,WL-0003,data entry,current,70,False,False
+SK-0013,WL-0003,investigation,current,60,False,False
+SK-0014,WL-0003,AI-assisted triage,sunrise,40,True,False
+SK-0015,WL-0003,manual form processing,sunset,60,False,True
+SK-0016,WL-0004,documentation,current,60,False,False
+SK-0017,WL-0004,data entry,current,70,False,False
+SK-0018,WL-0004,investigation,current,70,False,False
+SK-0019,WL-0004,automation oversight,sunrise,40,True,False
+SK-0020,WL-0005,documentation,current,60,False,False
+SK-0021,WL-0005,customer service,current,60,False,False
+SK-0022,WL-0005,data entry,current,60,False,False
+SK-0023,WL-0005,AI-assisted triage,sunrise,50,True,False
+SK-0024,WL-0006,insurance regulation,current,60,False,False
+SK-0025,WL-0006,attention to detail,current,80,False,False
+SK-0026,WL-0006,data entry,current,70,False,False
+SK-0027,WL-0006,AI output validation,sunrise,60,True,False
+SK-0028,WL-0006,manual data entry,sunset,70,False,True
+SK-0029,WL-0007,documentation,current,60,False,False
+SK-0030,WL-0007,customer service,current,80,False,False
+SK-0031,WL-0007,attention to detail,current,80,False,False
+SK-0032,WL-0007,prompt engineering,sunrise,50,True,False
+SK-0033,WL-0007,manual form processing,sunset,50,False,True
+SK-0034,WL-0008,insurance regulation,current,70,False,False
+SK-0035,WL-0008,investigation,current,60,False,False
+SK-0036,WL-0008,attention to detail,current,70,False,False
+SK-0037,WL-0008,digital workflow management,sunrise,60,True,False
+SK-0038,WL-0008,routine document classification,sunset,60,False,True
+SK-0039,WL-0009,investigation,current,80,False,False
+SK-0040,WL-0009,documentation,current,60,False,False
+SK-0041,WL-0009,insurance regulation,current,60,False,False
+SK-0042,WL-0009,AI output validation,sunrise,50,True,False
+SK-0043,WL-0009,manual report generation,sunset,70,False,True
+SK-0044,WL-0010,data entry,current,60,False,False
+SK-0045,WL-0010,investigation,current,60,False,False
+SK-0046,WL-0010,documentation,current,70,False,False
+SK-0047,WL-0010,AI-assisted triage,sunrise,50,True,False
+SK-0048,WL-0010,manual report generation,sunset,70,False,True
+SK-0049,WL-0011,documentation,current,80,False,False
+SK-0050,WL-0011,customer service,current,80,False,False
+SK-0051,WL-0011,insurance regulation,current,80,False,False
+SK-0052,WL-0011,prompt engineering,sunrise,40,True,False
+SK-0053,WL-0012,data entry,current,60,False,False
+SK-0054,WL-0012,documentation,current,80,False,False
+SK-0055,WL-0012,claims processing,current,60,False,False
+SK-0056,WL-0012,AI output validation,sunrise,40,True,False
+SK-0057,WL-0012,manual form processing,sunset,60,False,True
+SK-0058,WL-0013,attention to detail,current,80,False,False
+SK-0059,WL-0013,insurance regulation,current,70,False,False
+SK-0060,WL-0013,customer service,current,60,False,False
+SK-0061,WL-0013,AI output validation,sunrise,40,True,False
+SK-0062,WL-0013,routine document classification,sunset,50,False,True
+SK-0063,WL-0014,attention to detail,current,80,False,False
+SK-0064,WL-0014,customer service,current,60,False,False
+SK-0065,WL-0014,documentation,current,80,False,False
+SK-0066,WL-0014,prompt engineering,sunrise,60,True,False
+SK-0067,WL-0014,manual form processing,sunset,50,False,True
+SK-0068,WL-0015,attention to detail,current,70,False,False
+SK-0069,WL-0015,documentation,current,80,False,False
+SK-0070,WL-0015,investigation,current,60,False,False
+SK-0071,WL-0015,AI-assisted triage,sunrise,40,True,False
+SK-0072,WL-0016,claims processing,current,70,False,False
+SK-0073,WL-0016,attention to detail,current,80,False,False
+SK-0074,WL-0016,documentation,current,60,False,False
+SK-0075,WL-0016,digital workflow management,sunrise,50,True,False
+SK-0076,WL-0016,manual data entry,sunset,60,False,True
+SK-0077,WL-0017,attention to detail,current,80,False,False
+SK-0078,WL-0017,documentation,current,70,False,False
+SK-0079,WL-0017,customer service,current,70,False,False
+SK-0080,WL-0017,prompt engineering,sunrise,60,True,False
+SK-0081,WL-0018,data entry,current,60,False,False
+SK-0082,WL-0018,customer service,current,80,False,False
+SK-0083,WL-0018,investigation,current,60,False,False
+SK-0084,WL-0018,prompt engineering,sunrise,50,True,False
+SK-0085,WL-0018,manual report generation,sunset,60,False,True
+SK-0086,WL-0019,data entry,current,80,False,False
+SK-0087,WL-0019,insurance regulation,current,60,False,False
+SK-0088,WL-0019,customer service,current,70,False,False
+SK-0089,WL-0019,AI output validation,sunrise,60,True,False
+SK-0090,WL-0019,routine document classification,sunset,60,False,True
+SK-0091,WL-0020,insurance regulation,current,80,False,False
+SK-0092,WL-0020,customer service,current,60,False,False
+SK-0093,WL-0020,documentation,current,70,False,False
+SK-0094,WL-0020,prompt engineering,sunrise,50,True,False
+SK-0095,WL-0021,claims processing,current,60,False,False
+SK-0096,WL-0021,customer service,current,60,False,False
+SK-0097,WL-0021,data entry,current,60,False,False
+SK-0098,WL-0021,AI-assisted triage,sunrise,50,True,False
+SK-0099,WL-0021,manual report generation,sunset,70,False,True
+SK-0100,WL-0022,data entry,current,70,False,False
+SK-0101,WL-0022,insurance regulation,current,80,False,False
+SK-0102,WL-0022,attention to detail,current,80,False,False
+SK-0103,WL-0022,AI output validation,sunrise,40,True,False
+SK-0104,WL-0022,manual form processing,sunset,60,False,True
+SK-0105,WL-0023,documentation,current,70,False,False
+SK-0106,WL-0023,data entry,current,70,False,False
+SK-0107,WL-0023,attention to detail,current,60,False,False
+SK-0108,WL-0023,AI-assisted triage,sunrise,50,True,False
+SK-0109,WL-0024,documentation,current,60,False,False
+SK-0110,WL-0024,data entry,current,80,False,False
+SK-0111,WL-0024,insurance regulation,current,70,False,False
+SK-0112,WL-0024,AI-assisted triage,sunrise,40,True,False
+SK-0113,WL-0024,routine document classification,sunset,60,False,True
+SK-0114,WL-0025,documentation,current,70,False,False
+SK-0115,WL-0025,attention to detail,current,80,False,False
+SK-0116,WL-0025,data entry,current,60,False,False
+SK-0117,WL-0025,AI-assisted triage,sunrise,50,True,False
+SK-0118,WL-0025,manual form processing,sunset,60,False,True
+SK-0119,WL-0026,attention to detail,current,70,False,False
+SK-0120,WL-0026,customer service,current,60,False,False
+SK-0121,WL-0026,data entry,current,70,False,False
+SK-0122,WL-0026,AI-assisted triage,sunrise,60,True,False
+SK-0123,WL-0027,documentation,current,80,False,False
+SK-0124,WL-0027,insurance regulation,current,70,False,False
+SK-0125,WL-0027,customer service,current,60,False,False
+SK-0126,WL-0027,automation oversight,sunrise,60,True,False
+SK-0127,WL-0027,manual report generation,sunset,70,False,True
+SK-0128,WL-0028,customer service,current,60,False,False
+SK-0129,WL-0028,documentation,current,60,False,False
+SK-0130,WL-0028,attention to detail,current,60,False,False
+SK-0131,WL-0028,automation oversight,sunrise,50,True,False
+SK-0132,WL-0028,routine document classification,sunset,70,False,True
+SK-0133,WL-0029,customer service,current,80,False,False
+SK-0134,WL-0029,insurance regulation,current,80,False,False
+SK-0135,WL-0029,attention to detail,current,70,False,False
+SK-0136,WL-0029,digital workflow management,sunrise,40,True,False
+SK-0137,WL-0029,manual data entry,sunset,50,False,True
+SK-0138,WL-0030,insurance regulation,current,70,False,False
+SK-0139,WL-0030,attention to detail,current,80,False,False
+SK-0140,WL-0030,customer service,current,70,False,False
+SK-0141,WL-0030,prompt engineering,sunrise,60,True,False
+SK-0142,WL-0031,documentation,current,80,False,False
+SK-0143,WL-0031,insurance regulation,current,70,False,False
+SK-0144,WL-0031,customer service,current,60,False,False
+SK-0145,WL-0031,automation oversight,sunrise,60,True,False
+SK-0146,WL-0031,routine document classification,sunset,70,False,True
+SK-0147,WL-0032,customer service,current,80,False,False
+SK-0148,WL-0032,documentation,current,70,False,False
+SK-0149,WL-0032,attention to detail,current,80,False,False
+SK-0150,WL-0032,digital workflow management,sunrise,50,True,False
+SK-0151,WL-0032,manual report generation,sunset,50,False,True
+SK-0152,WL-0033,customer service,current,70,False,False
+SK-0153,WL-0033,investigation,current,80,False,False
+SK-0154,WL-0033,claims processing,current,70,False,False
+SK-0155,WL-0033,AI-assisted triage,sunrise,60,True,False
+SK-0156,WL-0034,data entry,current,80,False,False
+SK-0157,WL-0034,customer service,current,60,False,False
+SK-0158,WL-0034,documentation,current,80,False,False
+SK-0159,WL-0034,AI-assisted triage,sunrise,60,True,False
+SK-0160,WL-0035,data entry,current,80,False,False
+SK-0161,WL-0035,insurance regulation,current,80,False,False
+SK-0162,WL-0035,documentation,current,80,False,False
+SK-0163,WL-0035,automation oversight,sunrise,40,True,False
+SK-0164,WL-0035,manual form processing,sunset,50,False,True
+SK-0165,WL-0036,documentation,current,60,False,False
+SK-0166,WL-0036,attention to detail,current,60,False,False
+SK-0167,WL-0036,claims processing,current,70,False,False
+SK-0168,WL-0036,AI output validation,sunrise,50,True,False
+SK-0169,WL-0037,insurance regulation,current,70,False,False
+SK-0170,WL-0037,data entry,current,80,False,False
+SK-0171,WL-0037,investigation,current,80,False,False
+SK-0172,WL-0037,automation oversight,sunrise,60,True,False
+SK-0173,WL-0037,manual data entry,sunset,70,False,True
+SK-0174,WL-0038,insurance regulation,current,80,False,False
+SK-0175,WL-0038,documentation,current,70,False,False
+SK-0176,WL-0038,investigation,current,80,False,False
+SK-0177,WL-0038,automation oversight,sunrise,60,True,False
+SK-0178,WL-0038,manual report generation,sunset,60,False,True
+SK-0179,WL-0039,insurance regulation,current,70,False,False
+SK-0180,WL-0039,data entry,current,80,False,False
+SK-0181,WL-0039,documentation,current,70,False,False
+SK-0182,WL-0039,AI output validation,sunrise,60,True,False
+SK-0183,WL-0039,manual report generation,sunset,50,False,True
+SK-0184,WL-0040,insurance regulation,current,70,False,False
+SK-0185,WL-0040,customer service,current,60,False,False
+SK-0186,WL-0040,documentation,current,70,False,False
+SK-0187,WL-0040,AI output validation,sunrise,60,True,False
+SK-0188,WL-0041,insurance regulation,current,70,False,False
+SK-0189,WL-0041,attention to detail,current,70,False,False
+SK-0190,WL-0041,data entry,current,70,False,False
+SK-0191,WL-0041,digital workflow management,sunrise,60,True,False
+SK-0192,WL-0041,routine document classification,sunset,60,False,True
+SK-0193,WL-0042,claims processing,current,70,False,False
+SK-0194,WL-0042,documentation,current,70,False,False
+SK-0195,WL-0042,attention to detail,current,70,False,False
+SK-0196,WL-0042,prompt engineering,sunrise,50,True,False
+SK-0197,WL-0042,manual data entry,sunset,60,False,True
+SK-0198,WL-0043,attention to detail,current,70,False,False
+SK-0199,WL-0043,claims processing,current,80,False,False
+SK-0200,WL-0043,customer service,current,70,False,False
+SK-0201,WL-0043,automation oversight,sunrise,40,True,False
+SK-0202,WL-0044,insurance regulation,current,80,False,False
+SK-0203,WL-0044,documentation,current,80,False,False
+SK-0204,WL-0044,customer service,current,70,False,False
+SK-0205,WL-0044,prompt engineering,sunrise,40,True,False
+SK-0206,WL-0044,manual form processing,sunset,50,False,True
+SK-0207,WL-0045,claims processing,current,60,False,False
+SK-0208,WL-0045,attention to detail,current,80,False,False
+SK-0209,WL-0045,documentation,current,60,False,False
+SK-0210,WL-0045,AI-assisted triage,sunrise,40,True,False
+SK-0211,WL-0045,manual report generation,sunset,60,False,True
+SK-0212,WL-0046,attention to detail,current,80,False,False
+SK-0213,WL-0046,data entry,current,60,False,False
+SK-0214,WL-0046,claims processing,current,60,False,False
+SK-0215,WL-0046,digital workflow management,sunrise,40,True,False
+SK-0216,WL-0047,data entry,current,70,False,False
+SK-0217,WL-0047,attention to detail,current,80,False,False
+SK-0218,WL-0047,investigation,current,60,False,False
+SK-0219,WL-0047,AI output validation,sunrise,50,True,False
+SK-0220,WL-0047,routine document classification,sunset,70,False,True
+SK-0221,WL-0048,claims processing,current,60,False,False
+SK-0222,WL-0048,investigation,current,80,False,False
+SK-0223,WL-0048,documentation,current,80,False,False
+SK-0224,WL-0048,AI-assisted triage,sunrise,40,True,False
+SK-0225,WL-0049,CI/CD,current,70,False,False
+SK-0226,WL-0049,java,current,70,False,False
+SK-0227,WL-0049,python,current,60,False,False
+SK-0228,WL-0049,AI-assisted testing,sunrise,40,True,False
+SK-0229,WL-0050,python,current,80,False,False
+SK-0230,WL-0050,cloud architecture,current,60,False,False
+SK-0231,WL-0050,agile methodology,current,70,False,False
+SK-0232,WL-0050,AI-assisted testing,sunrise,50,True,False
+SK-0233,WL-0050,manual documentation,sunset,50,False,True
+SK-0234,WL-0051,networking,current,70,False,False
+SK-0235,WL-0051,agile methodology,current,60,False,False
+SK-0236,WL-0051,CI/CD,current,60,False,False
+SK-0237,WL-0051,AI-assisted testing,sunrise,40,True,False
+SK-0238,WL-0051,manual documentation,sunset,70,False,True
+SK-0239,WL-0052,cloud architecture,current,60,False,False
+SK-0240,WL-0052,system administration,current,80,False,False
+SK-0241,WL-0052,java,current,70,False,False
+SK-0242,WL-0052,AI-assisted testing,sunrise,60,True,False
+SK-0243,WL-0052,manual deployment,sunset,50,False,True
+SK-0244,WL-0053,agile methodology,current,70,False,False
+SK-0245,WL-0053,system administration,current,80,False,False
+SK-0246,WL-0053,CI/CD,current,70,False,False
+SK-0247,WL-0053,AI pair programming,sunrise,50,True,False
+SK-0248,WL-0053,manual testing,sunset,50,False,True
+SK-0249,WL-0054,java,current,60,False,False
+SK-0250,WL-0054,CI/CD,current,60,False,False
+SK-0251,WL-0054,cloud architecture,current,70,False,False
+SK-0252,WL-0054,AI ops,sunrise,40,True,False
+SK-0253,WL-0054,manual documentation,sunset,60,False,True
+SK-0254,WL-0055,cloud architecture,current,80,False,False
+SK-0255,WL-0055,networking,current,80,False,False
+SK-0256,WL-0055,agile methodology,current,60,False,False
+SK-0257,WL-0055,AI-assisted testing,sunrise,60,True,False
+SK-0258,WL-0055,manual log analysis,sunset,70,False,True
+SK-0259,WL-0056,java,current,70,False,False
+SK-0260,WL-0056,python,current,70,False,False
+SK-0261,WL-0056,system administration,current,60,False,False
+SK-0262,WL-0056,AI ops,sunrise,60,True,False
+SK-0263,WL-0056,manual log analysis,sunset,70,False,True
+SK-0264,WL-0057,python,current,70,False,False
+SK-0265,WL-0057,system administration,current,80,False,False
+SK-0266,WL-0057,cloud architecture,current,60,False,False
+SK-0267,WL-0057,LLM integration,sunrise,40,True,False
+SK-0268,WL-0058,CI/CD,current,80,False,False
+SK-0269,WL-0058,java,current,80,False,False
+SK-0270,WL-0058,networking,current,70,False,False
+SK-0271,WL-0058,AI ops,sunrise,60,True,False
+SK-0272,WL-0058,manual documentation,sunset,70,False,True
+SK-0273,WL-0059,networking,current,60,False,False
+SK-0274,WL-0059,system administration,current,80,False,False
+SK-0275,WL-0059,java,current,80,False,False
+SK-0276,WL-0059,AI pair programming,sunrise,60,True,False
+SK-0277,WL-0060,CI/CD,current,60,False,False
+SK-0278,WL-0060,agile methodology,current,80,False,False
+SK-0279,WL-0060,cloud architecture,current,60,False,False
+SK-0280,WL-0060,AI pair programming,sunrise,60,True,False
+SK-0281,WL-0061,agile methodology,current,80,False,False
+SK-0282,WL-0061,java,current,60,False,False
+SK-0283,WL-0061,networking,current,60,False,False
+SK-0284,WL-0061,AI-assisted testing,sunrise,60,True,False
+SK-0285,WL-0061,manual documentation,sunset,50,False,True
+SK-0286,WL-0062,system administration,current,70,False,False
+SK-0287,WL-0062,java,current,60,False,False
+SK-0288,WL-0062,agile methodology,current,80,False,False
+SK-0289,WL-0062,AI ops,sunrise,40,True,False
+SK-0290,WL-0062,manual documentation,sunset,50,False,True
+SK-0291,WL-0063,agile methodology,current,80,False,False
+SK-0292,WL-0063,CI/CD,current,60,False,False
+SK-0293,WL-0063,system administration,current,80,False,False
+SK-0294,WL-0063,AI ops,sunrise,60,True,False
+SK-0295,WL-0063,manual log analysis,sunset,70,False,True
+SK-0296,WL-0064,python,current,60,False,False
+SK-0297,WL-0064,CI/CD,current,80,False,False
+SK-0298,WL-0064,cloud architecture,current,60,False,False
+SK-0299,WL-0064,prompt engineering,sunrise,40,True,False
+SK-0300,WL-0065,python,current,80,False,False
+SK-0301,WL-0065,CI/CD,current,60,False,False
+SK-0302,WL-0065,cloud architecture,current,80,False,False
+SK-0303,WL-0065,AI pair programming,sunrise,40,True,False
+SK-0304,WL-0066,CI/CD,current,70,False,False
+SK-0305,WL-0066,python,current,60,False,False
+SK-0306,WL-0066,cloud architecture,current,60,False,False
+SK-0307,WL-0066,AI ops,sunrise,50,True,False
+SK-0308,WL-0066,manual documentation,sunset,60,False,True
+SK-0309,WL-0067,networking,current,60,False,False
+SK-0310,WL-0067,CI/CD,current,80,False,False
+SK-0311,WL-0067,system administration,current,80,False,False
+SK-0312,WL-0067,prompt engineering,sunrise,40,True,False
+SK-0313,WL-0068,system administration,current,60,False,False
+SK-0314,WL-0068,cloud architecture,current,80,False,False
+SK-0315,WL-0068,python,current,70,False,False
+SK-0316,WL-0068,prompt engineering,sunrise,40,True,False
+SK-0317,WL-0069,system administration,current,60,False,False
+SK-0318,WL-0069,java,current,70,False,False
+SK-0319,WL-0069,python,current,70,False,False
+SK-0320,WL-0069,prompt engineering,sunrise,50,True,False
+SK-0321,WL-0069,manual documentation,sunset,50,False,True
+SK-0322,WL-0070,java,current,60,False,False
+SK-0323,WL-0070,CI/CD,current,70,False,False
+SK-0324,WL-0070,cloud architecture,current,60,False,False
+SK-0325,WL-0070,AI pair programming,sunrise,40,True,False
+SK-0326,WL-0070,manual documentation,sunset,70,False,True
+SK-0327,WL-0071,networking,current,60,False,False
+SK-0328,WL-0071,python,current,60,False,False
+SK-0329,WL-0071,java,current,60,False,False
+SK-0330,WL-0071,prompt engineering,sunrise,40,True,False
+SK-0331,WL-0071,manual documentation,sunset,70,False,True
+SK-0332,WL-0072,system administration,current,60,False,False
+SK-0333,WL-0072,networking,current,80,False,False
+SK-0334,WL-0072,python,current,60,False,False
+SK-0335,WL-0072,AI ops,sunrise,50,True,False
+SK-0336,WL-0073,java,current,60,False,False
+SK-0337,WL-0073,agile methodology,current,60,False,False
+SK-0338,WL-0073,networking,current,80,False,False
+SK-0339,WL-0073,AI-assisted testing,sunrise,40,True,False
+SK-0340,WL-0073,manual log analysis,sunset,70,False,True
+SK-0341,WL-0074,agile methodology,current,60,False,False
+SK-0342,WL-0074,system administration,current,70,False,False
+SK-0343,WL-0074,cloud architecture,current,60,False,False
+SK-0344,WL-0074,prompt engineering,sunrise,40,True,False
+SK-0345,WL-0075,CI/CD,current,60,False,False
+SK-0346,WL-0075,cloud architecture,current,80,False,False
+SK-0347,WL-0075,system administration,current,80,False,False
+SK-0348,WL-0075,LLM integration,sunrise,60,True,False
+SK-0349,WL-0076,system administration,current,70,False,False
+SK-0350,WL-0076,CI/CD,current,60,False,False
+SK-0351,WL-0076,agile methodology,current,70,False,False
+SK-0352,WL-0076,AI ops,sunrise,60,True,False
+SK-0353,WL-0076,manual log analysis,sunset,70,False,True
+SK-0354,WL-0077,CI/CD,current,70,False,False
+SK-0355,WL-0077,networking,current,70,False,False
+SK-0356,WL-0077,java,current,60,False,False
+SK-0357,WL-0077,prompt engineering,sunrise,50,True,False
+SK-0358,WL-0078,java,current,80,False,False
+SK-0359,WL-0078,networking,current,60,False,False
+SK-0360,WL-0078,cloud architecture,current,70,False,False
+SK-0361,WL-0078,AI pair programming,sunrise,60,True,False
+SK-0362,WL-0079,CI/CD,current,80,False,False
+SK-0363,WL-0079,networking,current,60,False,False
+SK-0364,WL-0079,agile methodology,current,70,False,False
+SK-0365,WL-0079,LLM integration,sunrise,50,True,False
+SK-0366,WL-0079,manual deployment,sunset,60,False,True
+SK-0367,WL-0080,system administration,current,70,False,False
+SK-0368,WL-0080,python,current,60,False,False
+SK-0369,WL-0080,CI/CD,current,80,False,False
+SK-0370,WL-0080,LLM integration,sunrise,40,True,False
+SK-0371,WL-0080,manual log analysis,sunset,60,False,True
+SK-0372,WL-0081,system administration,current,60,False,False
+SK-0373,WL-0081,agile methodology,current,60,False,False
+SK-0374,WL-0081,networking,current,60,False,False
+SK-0375,WL-0081,prompt engineering,sunrise,60,True,False
+SK-0376,WL-0082,system administration,current,70,False,False
+SK-0377,WL-0082,agile methodology,current,60,False,False
+SK-0378,WL-0082,java,current,70,False,False
+SK-0379,WL-0082,AI-assisted testing,sunrise,40,True,False
+SK-0380,WL-0082,manual deployment,sunset,50,False,True
+SK-0381,WL-0083,system administration,current,60,False,False
+SK-0382,WL-0083,python,current,80,False,False
+SK-0383,WL-0083,CI/CD,current,80,False,False
+SK-0384,WL-0083,LLM integration,sunrise,50,True,False
+SK-0385,WL-0084,java,current,70,False,False
+SK-0386,WL-0084,agile methodology,current,70,False,False
+SK-0387,WL-0084,cloud architecture,current,70,False,False
+SK-0388,WL-0084,prompt engineering,sunrise,60,True,False
+SK-0389,WL-0084,manual log analysis,sunset,60,False,True
+SK-0390,WL-0085,cloud architecture,current,70,False,False
+SK-0391,WL-0085,networking,current,70,False,False
+SK-0392,WL-0085,agile methodology,current,60,False,False
+SK-0393,WL-0085,AI ops,sunrise,50,True,False
+SK-0394,WL-0086,java,current,70,False,False
+SK-0395,WL-0086,cloud architecture,current,60,False,False
+SK-0396,WL-0086,system administration,current,80,False,False
+SK-0397,WL-0086,LLM integration,sunrise,60,True,False
+SK-0398,WL-0086,manual deployment,sunset,50,False,True
+SK-0399,WL-0087,cloud architecture,current,80,False,False
+SK-0400,WL-0087,agile methodology,current,80,False,False
+SK-0401,WL-0087,system administration,current,70,False,False
+SK-0402,WL-0087,AI-assisted testing,sunrise,40,True,False
+SK-0403,WL-0088,java,current,70,False,False
+SK-0404,WL-0088,cloud architecture,current,80,False,False
+SK-0405,WL-0088,networking,current,60,False,False
+SK-0406,WL-0088,AI ops,sunrise,60,True,False
+SK-0407,WL-0089,system administration,current,70,False,False
+SK-0408,WL-0089,networking,current,70,False,False
+SK-0409,WL-0089,cloud architecture,current,80,False,False
+SK-0410,WL-0089,AI ops,sunrise,50,True,False
+SK-0411,WL-0090,java,current,60,False,False
+SK-0412,WL-0090,system administration,current,60,False,False
+SK-0413,WL-0090,cloud architecture,current,80,False,False
+SK-0414,WL-0090,prompt engineering,sunrise,50,True,False
+SK-0415,WL-0090,manual deployment,sunset,70,False,True
+SK-0416,WL-0091,audit,current,60,False,False
+SK-0417,WL-0091,accounting principles,current,80,False,False
+SK-0418,WL-0091,tax compliance,current,60,False,False
+SK-0419,WL-0091,AI-assisted analysis,sunrise,50,True,False
+SK-0420,WL-0091,manual reconciliation,sunset,70,False,True
+SK-0421,WL-0092,financial reporting,current,60,False,False
+SK-0422,WL-0092,accounting principles,current,60,False,False
+SK-0423,WL-0092,audit,current,80,False,False
+SK-0424,WL-0092,predictive analytics,sunrise,50,True,False
+SK-0425,WL-0093,accounting principles,current,80,False,False
+SK-0426,WL-0093,tax compliance,current,70,False,False
+SK-0427,WL-0093,ERP systems,current,60,False,False
+SK-0428,WL-0093,AI-assisted analysis,sunrise,60,True,False
+SK-0429,WL-0093,manual data consolidation,sunset,50,False,True
+SK-0430,WL-0094,accounting principles,current,80,False,False
+SK-0431,WL-0094,tax compliance,current,70,False,False
+SK-0432,WL-0094,excel,current,60,False,False
+SK-0433,WL-0094,predictive analytics,sunrise,40,True,False
+SK-0434,WL-0094,manual bookkeeping,sunset,50,False,True
+SK-0435,WL-0095,tax compliance,current,60,False,False
+SK-0436,WL-0095,financial reporting,current,80,False,False
+SK-0437,WL-0095,audit,current,80,False,False
+SK-0438,WL-0095,AI audit tools,sunrise,50,True,False
+SK-0439,WL-0096,excel,current,70,False,False
+SK-0440,WL-0096,ERP systems,current,70,False,False
+SK-0441,WL-0096,accounting principles,current,70,False,False
+SK-0442,WL-0096,automated reconciliation oversight,sunrise,60,True,False
+SK-0443,WL-0096,manual reconciliation,sunset,60,False,True
+SK-0444,WL-0097,audit,current,60,False,False
+SK-0445,WL-0097,accounting principles,current,70,False,False
+SK-0446,WL-0097,tax compliance,current,70,False,False
+SK-0447,WL-0097,predictive analytics,sunrise,60,True,False
+SK-0448,WL-0098,ERP systems,current,80,False,False
+SK-0449,WL-0098,accounting principles,current,60,False,False
+SK-0450,WL-0098,tax compliance,current,60,False,False
+SK-0451,WL-0098,predictive analytics,sunrise,50,True,False
+SK-0452,WL-0099,audit,current,80,False,False
+SK-0453,WL-0099,excel,current,60,False,False
+SK-0454,WL-0099,accounting principles,current,60,False,False
+SK-0455,WL-0099,automated reconciliation oversight,sunrise,60,True,False
+SK-0456,WL-0099,manual data consolidation,sunset,60,False,True
+SK-0457,WL-0100,accounting principles,current,80,False,False
+SK-0458,WL-0100,audit,current,80,False,False
+SK-0459,WL-0100,excel,current,80,False,False
+SK-0460,WL-0100,AI-assisted analysis,sunrise,40,True,False
+SK-0461,WL-0100,manual invoice processing,sunset,50,False,True
+SK-0462,WL-0101,financial reporting,current,80,False,False
+SK-0463,WL-0101,tax compliance,current,70,False,False
+SK-0464,WL-0101,audit,current,60,False,False
+SK-0465,WL-0101,AI audit tools,sunrise,40,True,False
+SK-0466,WL-0102,tax compliance,current,80,False,False
+SK-0467,WL-0102,financial reporting,current,80,False,False
+SK-0468,WL-0102,ERP systems,current,70,False,False
+SK-0469,WL-0102,predictive analytics,sunrise,60,True,False
+SK-0470,WL-0103,financial reporting,current,60,False,False
+SK-0471,WL-0103,accounting principles,current,60,False,False
+SK-0472,WL-0103,excel,current,70,False,False
+SK-0473,WL-0103,automated reconciliation oversight,sunrise,40,True,False
+SK-0474,WL-0103,manual invoice processing,sunset,70,False,True
+SK-0475,WL-0104,tax compliance,current,70,False,False
+SK-0476,WL-0104,audit,current,60,False,False
+SK-0477,WL-0104,ERP systems,current,80,False,False
+SK-0478,WL-0104,AI audit tools,sunrise,50,True,False
+SK-0479,WL-0105,ERP systems,current,80,False,False
+SK-0480,WL-0105,financial reporting,current,70,False,False
+SK-0481,WL-0105,excel,current,70,False,False
+SK-0482,WL-0105,automated reconciliation oversight,sunrise,60,True,False
+SK-0483,WL-0105,manual data consolidation,sunset,50,False,True
+SK-0484,WL-0106,tax compliance,current,80,False,False
+SK-0485,WL-0106,excel,current,60,False,False
+SK-0486,WL-0106,financial reporting,current,60,False,False
+SK-0487,WL-0106,AI audit tools,sunrise,40,True,False
+SK-0488,WL-0107,ERP systems,current,70,False,False
+SK-0489,WL-0107,financial reporting,current,70,False,False
+SK-0490,WL-0107,audit,current,60,False,False
+SK-0491,WL-0107,AI-assisted analysis,sunrise,40,True,False
+SK-0492,WL-0107,manual invoice processing,sunset,60,False,True
+SK-0493,WL-0108,excel,current,60,False,False
+SK-0494,WL-0108,audit,current,60,False,False
+SK-0495,WL-0108,accounting principles,current,60,False,False
+SK-0496,WL-0108,predictive analytics,sunrise,50,True,False
+SK-0497,WL-0108,manual data consolidation,sunset,50,False,True
+SK-0498,WL-0109,accounting principles,current,80,False,False
+SK-0499,WL-0109,audit,current,60,False,False
+SK-0500,WL-0109,excel,current,80,False,False
+SK-0501,WL-0109,AI audit tools,sunrise,50,True,False
+SK-0502,WL-0109,manual bookkeeping,sunset,60,False,True
+SK-0503,WL-0110,ERP systems,current,80,False,False
+SK-0504,WL-0110,audit,current,80,False,False
+SK-0505,WL-0110,accounting principles,current,60,False,False
+SK-0506,WL-0110,automated reconciliation oversight,sunrise,60,True,False
+SK-0507,WL-0111,ERP systems,current,70,False,False
+SK-0508,WL-0111,financial reporting,current,70,False,False
+SK-0509,WL-0111,tax compliance,current,70,False,False
+SK-0510,WL-0111,predictive analytics,sunrise,40,True,False
+SK-0511,WL-0112,accounting principles,current,70,False,False
+SK-0512,WL-0112,financial reporting,current,70,False,False
+SK-0513,WL-0112,ERP systems,current,70,False,False
+SK-0514,WL-0112,predictive analytics,sunrise,40,True,False
+SK-0515,WL-0113,excel,current,80,False,False
+SK-0516,WL-0113,audit,current,80,False,False
+SK-0517,WL-0113,financial reporting,current,70,False,False
+SK-0518,WL-0113,automated reconciliation oversight,sunrise,50,True,False
+SK-0519,WL-0113,manual bookkeeping,sunset,50,False,True
+SK-0520,WL-0114,excel,current,70,False,False
+SK-0521,WL-0114,accounting principles,current,80,False,False
+SK-0522,WL-0114,ERP systems,current,70,False,False
+SK-0523,WL-0114,AI audit tools,sunrise,50,True,False
+SK-0524,WL-0114,manual invoice processing,sunset,60,False,True
+SK-0525,WL-0115,audit,current,70,False,False
+SK-0526,WL-0115,tax compliance,current,70,False,False
+SK-0527,WL-0115,financial reporting,current,80,False,False
+SK-0528,WL-0115,automated reconciliation oversight,sunrise,50,True,False
+SK-0529,WL-0116,excel,current,70,False,False
+SK-0530,WL-0116,financial reporting,current,70,False,False
+SK-0531,WL-0116,ERP systems,current,80,False,False
+SK-0532,WL-0116,predictive analytics,sunrise,60,True,False
+SK-0533,WL-0116,manual reconciliation,sunset,60,False,True
+SK-0534,WL-0117,ERP systems,current,70,False,False
+SK-0535,WL-0117,excel,current,60,False,False
+SK-0536,WL-0117,audit,current,80,False,False
+SK-0537,WL-0117,automated reconciliation oversight,sunrise,60,True,False
+SK-0538,WL-0117,manual reconciliation,sunset,70,False,True
+SK-0539,WL-0118,tax compliance,current,80,False,False
+SK-0540,WL-0118,accounting principles,current,60,False,False
+SK-0541,WL-0118,ERP systems,current,70,False,False
+SK-0542,WL-0118,AI audit tools,sunrise,60,True,False
+SK-0543,WL-0118,manual bookkeeping,sunset,60,False,True
+SK-0544,WL-0119,audit,current,80,False,False
+SK-0545,WL-0119,ERP systems,current,70,False,False
+SK-0546,WL-0119,financial reporting,current,60,False,False
+SK-0547,WL-0119,AI audit tools,sunrise,60,True,False
+SK-0548,WL-0120,financial reporting,current,60,False,False
+SK-0549,WL-0120,ERP systems,current,70,False,False
+SK-0550,WL-0120,tax compliance,current,80,False,False
+SK-0551,WL-0120,predictive analytics,sunrise,60,True,False
+SK-0552,WL-0121,ERP systems,current,80,False,False
+SK-0553,WL-0121,tax compliance,current,60,False,False
+SK-0554,WL-0121,audit,current,70,False,False
+SK-0555,WL-0121,AI-assisted analysis,sunrise,40,True,False
+SK-0556,WL-0121,manual reconciliation,sunset,70,False,True
+SK-0557,WL-0122,audit,current,80,False,False
+SK-0558,WL-0122,excel,current,80,False,False
+SK-0559,WL-0122,financial reporting,current,60,False,False
+SK-0560,WL-0122,predictive analytics,sunrise,50,True,False
+SK-0561,WL-0123,benefits administration,current,60,False,False
+SK-0562,WL-0123,HR policy,current,70,False,False
+SK-0563,WL-0123,HRIS management,current,60,False,False
+SK-0564,WL-0123,people analytics,sunrise,50,True,False
+SK-0565,WL-0123,manual report generation,sunset,60,False,True
+SK-0566,WL-0124,benefits administration,current,70,False,False
+SK-0567,WL-0124,HRIS management,current,60,False,False
+SK-0568,WL-0124,employee relations,current,70,False,False
+SK-0569,WL-0124,AI-assisted screening,sunrise,50,True,False
+SK-0570,WL-0124,manual scheduling,sunset,50,False,True
+SK-0571,WL-0125,HR policy,current,70,False,False
+SK-0572,WL-0125,employee relations,current,70,False,False
+SK-0573,WL-0125,recruitment,current,70,False,False
+SK-0574,WL-0125,people analytics,sunrise,60,True,False
+SK-0575,WL-0126,benefits administration,current,60,False,False
+SK-0576,WL-0126,recruitment,current,70,False,False
+SK-0577,WL-0126,training delivery,current,80,False,False
+SK-0578,WL-0126,digital learning design,sunrise,50,True,False
+SK-0579,WL-0127,HR policy,current,80,False,False
+SK-0580,WL-0127,recruitment,current,60,False,False
+SK-0581,WL-0127,training delivery,current,60,False,False
+SK-0582,WL-0127,AI chatbot management,sunrise,60,True,False
+SK-0583,WL-0128,HR policy,current,80,False,False
+SK-0584,WL-0128,employee relations,current,60,False,False
+SK-0585,WL-0128,HRIS management,current,80,False,False
+SK-0586,WL-0128,people analytics,sunrise,50,True,False
+SK-0587,WL-0128,manual scheduling,sunset,60,False,True
+SK-0588,WL-0129,employee relations,current,60,False,False
+SK-0589,WL-0129,benefits administration,current,80,False,False
+SK-0590,WL-0129,training delivery,current,80,False,False
+SK-0591,WL-0129,digital learning design,sunrise,50,True,False
+SK-0592,WL-0130,HR policy,current,70,False,False
+SK-0593,WL-0130,HRIS management,current,80,False,False
+SK-0594,WL-0130,employee relations,current,70,False,False
+SK-0595,WL-0130,digital learning design,sunrise,40,True,False
+SK-0596,WL-0130,manual record keeping,sunset,50,False,True
+SK-0597,WL-0131,recruitment,current,80,False,False
+SK-0598,WL-0131,HR policy,current,60,False,False
+SK-0599,WL-0131,HRIS management,current,70,False,False
+SK-0600,WL-0131,AI chatbot management,sunrise,40,True,False
+SK-0601,WL-0132,benefits administration,current,80,False,False
+SK-0602,WL-0132,HR policy,current,70,False,False
+SK-0603,WL-0132,recruitment,current,80,False,False
+SK-0604,WL-0132,AI chatbot management,sunrise,60,True,False
+SK-0605,WL-0133,benefits administration,current,80,False,False
+SK-0606,WL-0133,HRIS management,current,60,False,False
+SK-0607,WL-0133,training delivery,current,70,False,False
+SK-0608,WL-0133,AI chatbot management,sunrise,50,True,False
+SK-0609,WL-0133,manual record keeping,sunset,70,False,True
+SK-0610,WL-0134,training delivery,current,80,False,False
+SK-0611,WL-0134,recruitment,current,60,False,False
+SK-0612,WL-0134,HR policy,current,70,False,False
+SK-0613,WL-0134,AI-assisted screening,sunrise,40,True,False
+SK-0614,WL-0134,manual report generation,sunset,50,False,True
+SK-0615,WL-0135,employee relations,current,80,False,False
+SK-0616,WL-0135,recruitment,current,70,False,False
+SK-0617,WL-0135,training delivery,current,70,False,False
+SK-0618,WL-0135,people analytics,sunrise,60,True,False
+SK-0619,WL-0136,benefits administration,current,70,False,False
+SK-0620,WL-0136,training delivery,current,80,False,False
+SK-0621,WL-0136,employee relations,current,80,False,False
+SK-0622,WL-0136,people analytics,sunrise,60,True,False
+SK-0623,WL-0136,manual record keeping,sunset,60,False,True
+SK-0624,WL-0137,recruitment,current,70,False,False
+SK-0625,WL-0137,employee relations,current,70,False,False
+SK-0626,WL-0137,HRIS management,current,80,False,False
+SK-0627,WL-0137,AI-assisted screening,sunrise,50,True,False
+SK-0628,WL-0138,HR policy,current,60,False,False
+SK-0629,WL-0138,benefits administration,current,70,False,False
+SK-0630,WL-0138,employee relations,current,80,False,False
+SK-0631,WL-0138,digital learning design,sunrise,50,True,False
+SK-0632,WL-0139,training delivery,current,80,False,False
+SK-0633,WL-0139,benefits administration,current,70,False,False
+SK-0634,WL-0139,HRIS management,current,70,False,False
+SK-0635,WL-0139,people analytics,sunrise,40,True,False
+SK-0636,WL-0140,HRIS management,current,70,False,False
+SK-0637,WL-0140,HR policy,current,60,False,False
+SK-0638,WL-0140,employee relations,current,70,False,False
+SK-0639,WL-0140,people analytics,sunrise,60,True,False
+SK-0640,WL-0140,manual report generation,sunset,50,False,True
+SK-0641,WL-0141,benefits administration,current,80,False,False
+SK-0642,WL-0141,HRIS management,current,80,False,False
+SK-0643,WL-0141,training delivery,current,60,False,False
+SK-0644,WL-0141,AI-assisted screening,sunrise,50,True,False
+SK-0645,WL-0142,HRIS management,current,80,False,False
+SK-0646,WL-0142,recruitment,current,70,False,False
+SK-0647,WL-0142,HR policy,current,80,False,False
+SK-0648,WL-0142,people analytics,sunrise,50,True,False
+SK-0649,WL-0143,HR policy,current,60,False,False
+SK-0650,WL-0143,employee relations,current,70,False,False
+SK-0651,WL-0143,recruitment,current,70,False,False
+SK-0652,WL-0143,AI chatbot management,sunrise,40,True,False
+SK-0653,WL-0144,benefits administration,current,60,False,False
+SK-0654,WL-0144,HR policy,current,80,False,False
+SK-0655,WL-0144,employee relations,current,80,False,False
+SK-0656,WL-0144,AI chatbot management,sunrise,60,True,False
+SK-0657,WL-0144,manual scheduling,sunset,50,False,True
+SK-0658,WL-0145,HRIS management,current,60,False,False
+SK-0659,WL-0145,employee relations,current,60,False,False
+SK-0660,WL-0145,training delivery,current,80,False,False
+SK-0661,WL-0145,AI chatbot management,sunrise,60,True,False
+SK-0662,WL-0146,recruitment,current,70,False,False
+SK-0663,WL-0146,HRIS management,current,80,False,False
+SK-0664,WL-0146,employee relations,current,70,False,False
+SK-0665,WL-0146,AI chatbot management,sunrise,60,True,False
+SK-0666,WL-0147,recruitment,current,60,False,False
+SK-0667,WL-0147,HRIS management,current,70,False,False
+SK-0668,WL-0147,HR policy,current,60,False,False
+SK-0669,WL-0147,AI chatbot management,sunrise,60,True,False
+SK-0670,WL-0147,manual record keeping,sunset,70,False,True
+SK-0671,WL-0148,employee relations,current,80,False,False
+SK-0672,WL-0148,training delivery,current,70,False,False
+SK-0673,WL-0148,HRIS management,current,60,False,False
+SK-0674,WL-0148,digital learning design,sunrise,50,True,False
+SK-0675,WL-0148,manual record keeping,sunset,70,False,True
+SK-0676,WL-0149,training delivery,current,70,False,False
+SK-0677,WL-0149,recruitment,current,70,False,False
+SK-0678,WL-0149,benefits administration,current,60,False,False
+SK-0679,WL-0149,AI-assisted screening,sunrise,50,True,False
+SK-0680,WL-0150,HRIS management,current,70,False,False
+SK-0681,WL-0150,recruitment,current,70,False,False
+SK-0682,WL-0150,training delivery,current,70,False,False
+SK-0683,WL-0150,AI-assisted screening,sunrise,60,True,False
+SK-0684,WL-0151,HR policy,current,60,False,False
+SK-0685,WL-0151,benefits administration,current,80,False,False
+SK-0686,WL-0151,recruitment,current,70,False,False
+SK-0687,WL-0151,people analytics,sunrise,50,True,False
+SK-0688,WL-0151,manual record keeping,sunset,60,False,True
+SK-0689,WL-0152,recruitment,current,70,False,False
+SK-0690,WL-0152,training delivery,current,80,False,False
+SK-0691,WL-0152,HRIS management,current,80,False,False
+SK-0692,WL-0152,people analytics,sunrise,60,True,False

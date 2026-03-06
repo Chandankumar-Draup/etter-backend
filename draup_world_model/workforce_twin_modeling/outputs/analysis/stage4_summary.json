@@ -1,0 +1,52 @@
+{
+  "P1": {
+    "hc_reduced": 3,
+    "final_hc": 537,
+    "net_savings": -2032700.0,
+    "payback": 0,
+    "final_prof": 27.380751250806586,
+    "final_trust": 36.25494491069589,
+    "final_ready": 47.89749099479617,
+    "avg_damp": 0.0716
+  },
+  "P2": {
+    "hc_reduced": 6,
+    "final_hc": 534,
+    "net_savings": -1750700.0,
+    "payback": 0,
+    "final_prof": 29.13064131179896,
+    "final_trust": 37.194014617717976,
+    "final_ready": 47.83505428089876,
+    "avg_damp": 0.074
+  },
+  "P3": {
+    "hc_reduced": 10,
+    "final_hc": 530,
+    "net_savings": -1310700.0,
+    "payback": 0,
+    "final_prof": 30.18672439740513,
+    "final_trust": 37.768039929406044,
+    "final_ready": 47.75129911857623,
+    "avg_damp": 0.0762
+  },
+  "P4": {
+    "hc_reduced": 0,
+    "final_hc": 540,
+    "net_savings": -2203200.0,
+    "payback": 0,
+    "final_prof": 29.141838845755707,
+    "final_trust": 37.200070525022134,
+    "final_ready": 47.95999999999994,
+    "avg_damp": 0.0742
+  },
+  "P5": {
+    "hc_reduced": 10,
+    "final_hc": 530,
+    "net_savings": -1310700.0,
+    "payback": 0,
+    "final_prof": 30.211194484921716,
+    "final_trust": 37.78140440034182,
+    "final_ready": 47.75133174039471,
+    "avg_damp": 0.0763
+  }
+}

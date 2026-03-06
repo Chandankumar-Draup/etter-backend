@@ -1,0 +1,38 @@
+role_id,role_name,function,sub_function,jfg,job_family,management_level,headcount,avg_salary,automation_score,augmentation_score,quantification_score
+CL-001,Claims Intake Specialist,Claims,Claims Processing,Claims Operations,Claims Intake,Individual Contributor,120,48000,42.5,18.2,62
+CL-002,Claims Adjuster,Claims,Claims Processing,Claims Operations,Claims Adjustment,Individual Contributor,95,55000,28.3,22.5,48
+CL-003,Claims Data Entry Clerk,Claims,Claims Processing,Claims Operations,Claims Support,Individual Contributor,80,38000,56.8,10.5,73
+CL-004,Claims Examiner,Claims,Claims Processing,Claims Operations,Claims Examination,Senior IC,45,62000,18.5,28.3,42
+CL-005,Claims Processor,Claims,Claims Processing,Claims Operations,Claims Processing,Individual Contributor,60,44000,48.2,15.8,65
+CL-006,Fraud Detection Analyst,Claims,Claims Processing,Claims Operations,Claims Analytics,Senior IC,20,72000,22.0,30.5,50
+CL-007,Claims Team Lead,Claims,Claims Processing,Claims Operations,Claims Management,Manager,20,68000,12.5,20.8,35
+CL-008,Claims Support Coordinator,Claims,Claims Processing,Claims Operations,Claims Support,Individual Contributor,10,42000,38.0,16.0,55
+CL-009,Claims Review Specialist,Claims,Claims Review,Claims Management,Claims Review,Senior IC,40,68000,15.0,28.0,40
+CL-010,Quality Assurance Auditor,Claims,Claims Review,Claims Management,Claims Quality,Senior IC,30,72000,20.5,25.0,44
+CL-011,Claims Review Manager,Claims,Claims Review,Claims Management,Claims Management,Manager,15,85000,8.0,18.5,28
+CL-012,Sr. Director Claims,Claims,Claims Review,Claims Management,Claims Leadership,Director,5,135000,3.5,12.0,15
+TE-001,Software Engineer,Technology,Software Development,Technology,Software Engineering,Individual Contributor,90,92000,18.0,32.5,45
+TE-002,Senior Software Engineer,Technology,Software Development,Technology,Software Engineering,Senior IC,60,115000,12.5,34.5,40
+TE-003,QA Engineer,Technology,Software Development,Technology,Quality Assurance,Individual Contributor,45,78000,35.0,22.0,55
+TE-004,DevOps Engineer,Technology,Software Development,Technology,Infrastructure,Senior IC,30,105000,28.0,25.0,50
+TE-005,Tech Lead,Technology,Software Development,Technology,Engineering Management,Manager,20,130000,8.0,22.0,30
+TE-006,Engineering Director,Technology,Software Development,Technology,Engineering Leadership,Director,5,165000,4.0,15.0,18
+TE-007,IT Support Specialist,Technology,IT Operations,Technology Support,IT Support,Individual Contributor,80,52000,40.0,18.0,58
+TE-008,Systems Administrator,Technology,IT Operations,Technology Support,Systems Admin,Senior IC,40,75000,30.0,22.0,48
+TE-009,Network Engineer,Technology,IT Operations,Technology Support,Network Ops,Senior IC,25,82000,25.0,20.0,42
+TE-010,IT Operations Manager,Technology,IT Operations,Technology Support,IT Management,Manager,10,95000,10.0,18.0,28
+FI-001,Accounts Payable Clerk,Finance,Accounting,Finance Operations,Accounts Payable,Individual Contributor,55,45000,52.0,12.0,68
+FI-002,Accounts Receivable Specialist,Finance,Accounting,Finance Operations,Accounts Receivable,Individual Contributor,45,48000,48.0,14.0,63
+FI-003,General Ledger Accountant,Finance,Accounting,Finance Operations,General Accounting,Senior IC,40,65000,32.0,20.0,50
+FI-004,Tax Specialist,Finance,Accounting,Finance Operations,Tax,Senior IC,25,78000,22.0,25.0,44
+FI-005,Accounting Manager,Finance,Accounting,Finance Operations,Finance Management,Manager,10,92000,10.0,18.0,28
+FI-006,Financial Analyst,Finance,Financial Planning,Finance Analytics,Financial Analysis,Individual Contributor,35,72000,20.0,28.0,45
+FI-007,Senior Financial Analyst,Finance,Financial Planning,Finance Analytics,Financial Analysis,Senior IC,25,88000,14.0,30.0,40
+FI-008,FP&A Director,Finance,Financial Planning,Finance Analytics,Finance Leadership,Director,4,145000,5.0,15.0,18
+PE-001,HR Coordinator,People,HR Operations,People Services,HR Administration,Individual Contributor,60,48000,42.0,16.0,58
+PE-002,Benefits Specialist,People,HR Operations,People Services,Benefits Admin,Individual Contributor,35,52000,38.0,18.0,54
+PE-003,HRIS Analyst,People,HR Operations,People Services,HR Technology,Senior IC,20,68000,30.0,22.0,48
+PE-004,HR Operations Manager,People,HR Operations,People Services,HR Management,Manager,8,85000,12.0,18.0,30
+PE-005,Recruiter,People,Talent & Learning,People Development,Talent Acquisition,Individual Contributor,40,58000,25.0,24.0,46
+PE-006,Learning & Development Specialist,People,Talent & Learning,People Development,Learning,Senior IC,20,65000,18.0,28.0,42
+PE-007,Talent Director,People,Talent & Learning,People Development,People Leadership,Director,3,130000,5.0,14.0,18

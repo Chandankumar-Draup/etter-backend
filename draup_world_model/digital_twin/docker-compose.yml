@@ -1,0 +1,74 @@
+# Digital Twin - Docker Compose
+#
+# Spins up all infrastructure needed for the Digital Twin prototype.
+# Currently: Neo4j graph database.
+# Extensible: add Redis, Elasticsearch, or other services below.
+#
+# Usage:
+#   cd draup_world_model/digital_twin
+#   docker compose up -d          # start in background
+#   docker compose logs -f neo4j  # watch logs
+#   docker compose down           # stop
+#   docker compose down -v        # stop + delete data
+#
+# Neo4j Browser: http://localhost:7474
+# Bolt endpoint:  bolt://localhost:7687
+# Credentials:    neo4j / kg123456
+# Database:       draup
+
+services:
+
+  # ── Neo4j Graph Database ──────────────────────────────────────────
+  neo4j:
+    image: neo4j:5.15
+    container_name: dt-neo4j
+    ports:
+      - "7474:7474"   # HTTP (Neo4j Browser)
+      - "7687:7687"   # Bolt (driver connections)
+    environment:
+      # Auth: username/password
+      - NEO4J_AUTH=neo4j/kg123456
+      # Create the "draup" database on first startup
+      - NEO4J_initial_dbms_default__database=draup
+      # Memory tuning (adjust for your machine)
+      - NEO4J_server_memory_pagecache_size=512M
+      - NEO4J_server_memory_heap_initial__size=512M
+      - NEO4J_server_memory_heap_max__size=1G
+      # APOC plugin (useful for graph operations)
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  # ── Add more services below as needed ─────────────────────────────
+  #
+  # Example: Redis for caching simulation results
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: dt-redis
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+  #
+  # Example: MinIO for file storage
+  # minio:
+  #   image: minio/minio
+  #   container_name: dt-minio
+  #   ports:
+  #     - "9000:9000"
+  #     - "9001:9001"
+  #   command: server /data --console-address ":9001"
+  #   restart: unless-stopped
+
+volumes:
+  neo4j_data:
+    name: dt_neo4j_data
+  neo4j_logs:
+    name: dt_neo4j_logs

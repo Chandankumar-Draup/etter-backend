@@ -1,0 +1,6 @@
+scenario_id,scenario_name,alpha_adopt,alpha_expand,alpha_extend,phases,policy,readiness_threshold,investment_budget,enable_workflow_automation,s_curve_k_adopt,s_curve_midpoint_adopt,absorption_factor,trust_build_rate,trust_destroy_factor,reskilling_delay_months
+P1,Cautious,0.5,0.0,0.0,adoption,natural_attrition,0,low,False,0.3,4,0.4,0.02,0.3,6
+P2,Balanced,0.6,0.3,0.0,"adoption,expansion",moderate_reduction,50,medium,False,0.3,4,0.35,0.025,0.3,5
+P3,Aggressive,0.8,0.5,0.3,"adoption,expansion,extension",active_reduction,70,high,False,0.35,3,0.3,0.03,0.35,4
+P4,Capability-First,0.6,0.3,0.0,"adoption,expansion",no_layoffs,40,medium,False,0.3,4,0.0,0.03,0.2,5
+P5,AI-Age Accelerated,0.8,0.5,0.3,"adoption,expansion,extension",rapid_redeployment,80,high,True,0.4,3,0.25,0.035,0.35,3

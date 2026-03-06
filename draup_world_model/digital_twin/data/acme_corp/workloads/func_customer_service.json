@@ -1,0 +1,642 @@
+[
+  {
+    "id": "wl_customer_service_representative__life_insurance_policy_information_and_premium_support",
+    "name": "Policy Information and Premium Support",
+    "role_id": "role_customer_service_representative__life_insurance",
+    "function_id": "func_customer_service",
+    "description": "Responds to customer inquiries about policy details, coverage options, and premium payment questions. Processes routine policy transactions such as payment updates and address changes.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__life_insurance_claims_triage_and_initial_processing",
+    "name": "Claims Triage and Initial Processing",
+    "role_id": "role_customer_service_representative__life_insurance",
+    "function_id": "func_customer_service",
+    "description": "Gathers initial claim information from customers, performs basic eligibility checks, and routes claims to appropriate specialized teams. Provides customers with claim status updates and next steps.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__life_insurance_outbound_customer_engagement",
+    "name": "Outbound Customer Engagement",
+    "role_id": "role_customer_service_representative__life_insurance",
+    "function_id": "func_customer_service",
+    "description": "Conducts outbound calls for policy renewals, premium collection follow-ups, and customer satisfaction checks. Documents interactions and identifies opportunities for policy adjustments or additional products.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__life_insurance_complex_issue_escalation",
+    "name": "Complex Issue Escalation",
+    "role_id": "role_customer_service_representative__life_insurance",
+    "function_id": "func_customer_service",
+    "description": "Identifies and documents complex customer issues that require specialized expertise, such as policy disputes or unusual claim circumstances. Prepares detailed case summaries for escalation to senior teams.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__claims_support_initial_claim_information_gathering",
+    "name": "Initial Claim Information Gathering",
+    "role_id": "role_customer_service_representative__claims_support",
+    "function_id": "func_customer_service",
+    "description": "Collects comprehensive claim information from customers including incident details, policy numbers, and supporting documentation. Verifies customer identity and policy status during initial claim intake.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__claims_support_claims_process_guidance_and_navigation",
+    "name": "Claims Process Guidance and Navigation",
+    "role_id": "role_customer_service_representative__claims_support",
+    "function_id": "func_customer_service",
+    "description": "Explains the claims process to customers, sets expectations for timelines, and guides them through required documentation steps. Answers frequently asked questions about coverage and claim procedures.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__claims_support_claims_adjuster_coordination",
+    "name": "Claims Adjuster Coordination",
+    "role_id": "role_customer_service_representative__claims_support",
+    "function_id": "func_customer_service",
+    "description": "Serves as liaison between customers and claims adjusters, relaying information requests and status updates. Schedules inspections and coordinates document exchanges between parties.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_service_representative__claims_support_customer_communication_throughout_claim_lifecycle",
+    "name": "Customer Communication Throughout Claim Lifecycle",
+    "role_id": "role_customer_service_representative__claims_support",
+    "function_id": "func_customer_service",
+    "description": "Maintains regular contact with customers to provide claim status updates, request additional information, and manage expectations. Documents all interactions and escalates concerns to supervisors as needed.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__health_insurance_complex_coverage_interpretation_and_benefit_explanation",
+    "name": "Complex Coverage Interpretation and Benefit Explanation",
+    "role_id": "role_senior_service_advisor__health_insurance",
+    "function_id": "func_customer_service",
+    "description": "Analyzes complex health insurance policies to interpret coverage details, explain benefit limitations, and clarify exclusions for high-value customers. Provides detailed written explanations of coverage scenarios.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__health_insurance_policy_modifications_and_account_management",
+    "name": "Policy Modifications and Account Management",
+    "role_id": "role_senior_service_advisor__health_insurance",
+    "function_id": "func_customer_service",
+    "description": "Manages policy changes including plan upgrades, dependent additions, and coverage adjustments for high-value accounts. Ensures modifications comply with regulations and documents all changes thoroughly.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__health_insurance_escalated_customer_concern_resolution",
+    "name": "Escalated Customer Concern Resolution",
+    "role_id": "role_senior_service_advisor__health_insurance",
+    "function_id": "func_customer_service",
+    "description": "Handles escalated customer complaints and concerns with empathy and expertise, investigating root causes and developing satisfactory resolutions. Coordinates with other departments to address systemic issues.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__health_insurance_team_mentoring_and_quality_assurance",
+    "name": "Team Mentoring and Quality Assurance",
+    "role_id": "role_senior_service_advisor__health_insurance",
+    "function_id": "func_customer_service",
+    "description": "Mentors junior representatives on complex health insurance concepts, customer service best practices, and policy interpretation. Reviews calls and interactions to provide coaching and ensure service quality.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__property_and_casualty_coverage_consultation_and_policy_recommendations",
+    "name": "Coverage Consultation and Policy Recommendations",
+    "role_id": "role_senior_service_advisor__property_and_casualty",
+    "function_id": "func_customer_service",
+    "description": "Advises customers on appropriate property and casualty insurance coverage options based on their risk profile and needs. Recommends policy adjustments to ensure adequate protection and identifies coverage gaps.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__property_and_casualty_complex_claims_guidance_and_support",
+    "name": "Complex Claims Guidance and Support",
+    "role_id": "role_senior_service_advisor__property_and_casualty",
+    "function_id": "func_customer_service",
+    "description": "Provides expert guidance on complex claims situations, helping customers understand coverage applicability and claim procedures. Coordinates with claims adjusters and advocates for customer interests.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__property_and_casualty_long_term_customer_relationship_building",
+    "name": "Long-Term Customer Relationship Building",
+    "role_id": "role_senior_service_advisor__property_and_casualty",
+    "function_id": "func_customer_service",
+    "description": "Develops and maintains long-term relationships with key customers through regular check-ins, proactive outreach, and personalized service. Identifies opportunities for cross-sell and policy expansion.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_service_advisor__property_and_casualty_regulatory_compliance_and_documentation",
+    "name": "Regulatory Compliance and Documentation",
+    "role_id": "role_senior_service_advisor__property_and_casualty",
+    "function_id": "func_customer_service",
+    "description": "Ensures all customer interactions and policy decisions comply with regulatory requirements and company policies. Maintains detailed documentation of recommendations and customer agreements.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__digital_platforms_login_and_account_access_troubleshooting",
+    "name": "Login and Account Access Troubleshooting",
+    "role_id": "role_technical_support_analyst__digital_platforms",
+    "function_id": "func_customer_service",
+    "description": "Resolves customer issues with account login, password resets, and account access across digital platforms and mobile apps. Guides customers through authentication processes and security verification.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__digital_platforms_system_error_diagnosis_and_resolution",
+    "name": "System Error Diagnosis and Resolution",
+    "role_id": "role_technical_support_analyst__digital_platforms",
+    "function_id": "func_customer_service",
+    "description": "Diagnoses and resolves system errors, page loading issues, and functionality problems within Acme's digital platforms. Tests workarounds and provides customers with alternative solutions when needed.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__digital_platforms_integration_and_data_sync_issues",
+    "name": "Integration and Data Sync Issues",
+    "role_id": "role_technical_support_analyst__digital_platforms",
+    "function_id": "func_customer_service",
+    "description": "Troubleshoots integration problems between digital platforms and backend systems, including data synchronization failures and API errors. Coordinates with development teams to resolve technical issues.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__digital_platforms_bug_documentation_and_development_coordination",
+    "name": "Bug Documentation and Development Coordination",
+    "role_id": "role_technical_support_analyst__digital_platforms",
+    "function_id": "func_customer_service",
+    "description": "Documents technical issues and bugs discovered during customer support interactions with detailed reproduction steps. Communicates findings to development teams and tracks resolution progress.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__ai_assisted_systems_ai_chatbot_interaction_troubleshooting",
+    "name": "AI Chatbot Interaction Troubleshooting",
+    "role_id": "role_technical_support_analyst__ai_assisted_systems",
+    "function_id": "func_customer_service",
+    "description": "Supports customers experiencing issues with AI chatbot interactions, including misunderstood requests and incorrect responses. Tests chatbot functionality and identifies conversation flow problems.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__ai_assisted_systems_ai_system_output_validation",
+    "name": "AI System Output Validation",
+    "role_id": "role_technical_support_analyst__ai_assisted_systems",
+    "function_id": "func_customer_service",
+    "description": "Validates outputs from AI-powered claims processing and underwriting systems to ensure accuracy and appropriateness. Flags suspicious or incorrect results for human review and escalation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__ai_assisted_systems_internal_team_ai_tool_support",
+    "name": "Internal Team AI Tool Support",
+    "role_id": "role_technical_support_analyst__ai_assisted_systems",
+    "function_id": "func_customer_service",
+    "description": "Provides technical support to internal teams using AI-powered tools for customer service automation, claims processing, and underwriting. Troubleshoots system access and functionality issues.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_technical_support_analyst__ai_assisted_systems_algorithmic_issue_escalation_and_data_science_coordination",
+    "name": "Algorithmic Issue Escalation and Data Science Coordination",
+    "role_id": "role_technical_support_analyst__ai_assisted_systems",
+    "function_id": "func_customer_service",
+    "description": "Identifies and escalates algorithmic issues, bias concerns, and model performance problems to data science teams. Documents patterns in AI system failures and recommends improvements.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__claims_claims_dispute_investigation",
+    "name": "Claims Dispute Investigation",
+    "role_id": "role_escalation_specialist__claims",
+    "function_id": "func_customer_service",
+    "description": "Thoroughly investigates escalated claims disputes including claim denials and coverage disputes. Reviews policy language, claim documentation, and relevant regulations to determine appropriate resolution.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__claims_claims_delay_and_complaint_resolution",
+    "name": "Claims Delay and Complaint Resolution",
+    "role_id": "role_escalation_specialist__claims",
+    "function_id": "func_customer_service",
+    "description": "Addresses customer complaints related to claim processing delays and service failures. Identifies root causes, coordinates expedited processing, and implements corrective actions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__claims_multi_team_coordination_and_negotiation",
+    "name": "Multi-Team Coordination and Negotiation",
+    "role_id": "role_escalation_specialist__claims",
+    "function_id": "func_customer_service",
+    "description": "Coordinates with claims adjusters, legal teams, and other departments to develop mutually acceptable resolutions for complex disputes. Negotiates settlements and manages competing interests.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__claims_customer_satisfaction_and_communication_management",
+    "name": "Customer Satisfaction and Communication Management",
+    "role_id": "role_escalation_specialist__claims",
+    "function_id": "func_customer_service",
+    "description": "Maintains regular communication with escalated customers, providing updates on investigation progress and managing expectations. Ensures customers feel heard and valued throughout the resolution process.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__policy_services_coverage_dispute_investigation_and_analysis",
+    "name": "Coverage Dispute Investigation and Analysis",
+    "role_id": "role_escalation_specialist__policy_services",
+    "function_id": "func_customer_service",
+    "description": "Investigates complex coverage disputes by analyzing policy language, claim circumstances, and regulatory requirements. Determines appropriate coverage interpretation and documents findings thoroughly.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__policy_services_billing_issue_resolution",
+    "name": "Billing Issue Resolution",
+    "role_id": "role_escalation_specialist__policy_services",
+    "function_id": "func_customer_service",
+    "description": "Resolves escalated billing disputes including premium calculation errors, payment application issues, and billing discrepancies. Coordinates with finance teams to correct accounts and process adjustments.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__policy_services_policy_cancellation_and_retention_management",
+    "name": "Policy Cancellation and Retention Management",
+    "role_id": "role_escalation_specialist__policy_services",
+    "function_id": "func_customer_service",
+    "description": "Handles escalated cancellation requests by investigating customer concerns and exploring retention options. Ensures cancellations comply with regulatory requirements and documents all interactions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_escalation_specialist__policy_services_root_cause_analysis_and_regulatory_compliance",
+    "name": "Root Cause Analysis and Regulatory Compliance",
+    "role_id": "role_escalation_specialist__policy_services",
+    "function_id": "func_customer_service",
+    "description": "Conducts root cause analysis of policy-related escalations and implements systemic solutions. Ensures all resolutions comply with insurance regulations and company policies.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst_customer_journey_mapping_and_pain_point_identification",
+    "name": "Customer Journey Mapping and Pain Point Identification",
+    "role_id": "role_customer_experience_analyst",
+    "function_id": "func_customer_service",
+    "description": "Analyzes customer journey data across all touchpoints to identify pain points, bottlenecks, and friction areas in service delivery. Creates visual journey maps highlighting areas for improvement.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst_survey_and_feedback_analysis",
+    "name": "Survey and Feedback Analysis",
+    "role_id": "role_customer_experience_analyst",
+    "function_id": "func_customer_service",
+    "description": "Analyzes customer satisfaction surveys, feedback forms, and Net Promoter Score data to identify trends and root causes of dissatisfaction. Synthesizes qualitative and quantitative insights.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst_call_recording_and_interaction_review",
+    "name": "Call Recording and Interaction Review",
+    "role_id": "role_customer_experience_analyst",
+    "function_id": "func_customer_service",
+    "description": "Reviews call recordings and digital interactions to assess service quality, identify best practices, and spot opportunities for improvement. Documents patterns and trends in customer interactions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst_process_optimization_and_digital_transformation_recommendations",
+    "name": "Process Optimization and Digital Transformation Recommendations",
+    "role_id": "role_customer_experience_analyst",
+    "function_id": "func_customer_service",
+    "description": "Develops actionable insights and recommendations for process optimization and digital transformation initiatives based on customer experience analysis. Presents findings to leadership and stakeholders.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst__digital_transformation_ai_and_automation_impact_measurement",
+    "name": "AI and Automation Impact Measurement",
+    "role_id": "role_customer_experience_analyst__digital_transformation",
+    "function_id": "func_customer_service",
+    "description": "Measures the impact of AI and automation tools on customer experience by tracking adoption rates, usage patterns, and customer satisfaction metrics. Compares metrics before and after implementation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst__digital_transformation_automation_adoption_and_effectiveness_analysis",
+    "name": "Automation Adoption and Effectiveness Analysis",
+    "role_id": "role_customer_experience_analyst__digital_transformation",
+    "function_id": "func_customer_service",
+    "description": "Analyzes adoption rates of AI-powered systems and automation tools across customer and internal user populations. Identifies barriers to adoption and success factors.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst__digital_transformation_human_automation_balance_assessment",
+    "name": "Human-Automation Balance Assessment",
+    "role_id": "role_customer_experience_analyst__digital_transformation",
+    "function_id": "func_customer_service",
+    "description": "Evaluates the balance between automated and human touchpoints in customer interactions to ensure optimal experience. Identifies situations where human interaction adds value and where automation improves efficiency.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_customer_experience_analyst__digital_transformation_ai_system_enhancement_recommendations",
+    "name": "AI System Enhancement Recommendations",
+    "role_id": "role_customer_experience_analyst__digital_transformation",
+    "function_id": "func_customer_service",
+    "description": "Recommends enhancements to AI-powered systems based on customer feedback, usage data, and satisfaction metrics. Identifies opportunities to improve accuracy, relevance, and user experience.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist_customer_feedback_collection_and_survey_administration",
+    "name": "Customer Feedback Collection and Survey Administration",
+    "role_id": "role_voice_of_customer_specialist",
+    "function_id": "func_customer_service",
+    "description": "Design, deploy, and manage customer surveys, focus groups, and interview programs to systematically gather feedback on products and services. Coordinate with customers, schedule sessions, and ensure representative sampling across customer segments.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist_feedback_analysis_and_insight_synthesis",
+    "name": "Feedback Analysis and Insight Synthesis",
+    "role_id": "role_voice_of_customer_specialist",
+    "function_id": "func_customer_service",
+    "description": "Analyze qualitative and quantitative customer feedback data to identify patterns, themes, and key insights about customer needs and expectations. Synthesize findings into coherent narratives and trend reports.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist_actionable_recommendations_development",
+    "name": "Actionable Recommendations Development",
+    "role_id": "role_voice_of_customer_specialist",
+    "function_id": "func_customer_service",
+    "description": "Translate customer insights into specific, prioritized recommendations for product development, service improvements, and operational changes. Present findings to cross-functional stakeholders and track implementation of recommendations.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist_stakeholder_communication_and_reporting",
+    "name": "Stakeholder Communication and Reporting",
+    "role_id": "role_voice_of_customer_specialist",
+    "function_id": "func_customer_service",
+    "description": "Create reports, dashboards, and presentations communicating customer feedback findings to product, operations, and executive teams. Facilitate discussions on customer needs and advocate for customer-centric improvements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist__ai_and_automation_impact_ai_feature_sentiment_monitoring",
+    "name": "AI Feature Sentiment Monitoring",
+    "role_id": "role_voice_of_customer_specialist__ai_and_automation_impact",
+    "function_id": "func_customer_service",
+    "description": "Systematically collect and analyze customer feedback specifically related to AI-powered features, chatbots, and automated processes through surveys, interviews, and feedback channels. Track sentiment trends and satisfaction metrics for technology-enabled services.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist__ai_and_automation_impact_automation_capability_preference_gap_analysis",
+    "name": "Automation Capability-Preference Gap Analysis",
+    "role_id": "role_voice_of_customer_specialist__ai_and_automation_impact",
+    "function_id": "func_customer_service",
+    "description": "Identify and document discrepancies between what automation systems can deliver and what customers actually prefer or expect. Analyze root causes of gaps and assess impact on customer satisfaction and adoption rates.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist__ai_and_automation_impact_ai_and_automation_improvement_recommendations",
+    "name": "AI and Automation Improvement Recommendations",
+    "role_id": "role_voice_of_customer_specialist__ai_and_automation_impact",
+    "function_id": "func_customer_service",
+    "description": "Develop specific recommendations for enhancing AI features, chatbot interactions, and automated processes based on customer feedback and identified gaps. Prioritize improvements and present business cases to technology and product teams.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_voice_of_customer_specialist__ai_and_automation_impact_technology_feedback_loop_management",
+    "name": "Technology Feedback Loop Management",
+    "role_id": "role_voice_of_customer_specialist__ai_and_automation_impact",
+    "function_id": "func_customer_service",
+    "description": "Establish and maintain feedback mechanisms for continuous monitoring of customer sentiment toward automation initiatives. Track implementation of recommendations and measure impact on customer satisfaction and technology adoption.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__call_center_operations_call_recording_review_and_quality_scoring",
+    "name": "Call Recording Review and Quality Scoring",
+    "role_id": "role_quality_analyst__call_center_operations",
+    "function_id": "func_customer_service",
+    "description": "Listen to and evaluate recorded customer service calls against quality standards, compliance requirements, and company policies. Assign quality scores and document findings for performance assessment and coaching purposes.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__call_center_operations_representative_performance_coaching_and_feedback",
+    "name": "Representative Performance Coaching and Feedback",
+    "role_id": "role_quality_analyst__call_center_operations",
+    "function_id": "func_customer_service",
+    "description": "Provide constructive, individualized coaching feedback to customer service representatives based on call quality reviews. Conduct coaching sessions, develop improvement plans, and track performance progress over time.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__call_center_operations_training_needs_identification_and_gap_analysis",
+    "name": "Training Needs Identification and Gap Analysis",
+    "role_id": "role_quality_analyst__call_center_operations",
+    "function_id": "func_customer_service",
+    "description": "Analyze quality review findings and performance data to identify systemic training gaps, skill deficiencies, and compliance issues across the call center team. Recommend targeted training interventions and skill development programs.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__call_center_operations_compliance_and_regulatory_monitoring",
+    "name": "Compliance and Regulatory Monitoring",
+    "role_id": "role_quality_analyst__call_center_operations",
+    "function_id": "func_customer_service",
+    "description": "Monitor customer service interactions for compliance with regulatory requirements, company policies, and industry standards. Flag violations, document issues, and escalate compliance concerns to management.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__ai_output_validation_ai_system_output_review_and_validation",
+    "name": "AI System Output Review and Validation",
+    "role_id": "role_quality_analyst__ai_output_validation",
+    "function_id": "func_customer_service",
+    "description": "Systematically review outputs from AI systems used in claims processing, underwriting, and customer service to verify accuracy, completeness, and adherence to business rules. Validate decision logic and assess output quality against established standards.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__ai_output_validation_algorithmic_error_and_bias_detection",
+    "name": "Algorithmic Error and Bias Detection",
+    "role_id": "role_quality_analyst__ai_output_validation",
+    "function_id": "func_customer_service",
+    "description": "Analyze AI system outputs to identify algorithmic errors, pattern anomalies, and potential bias issues that could impact fairness or compliance. Document findings and escalate critical issues for remediation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__ai_output_validation_compliance_and_fairness_assessment",
+    "name": "Compliance and Fairness Assessment",
+    "role_id": "role_quality_analyst__ai_output_validation",
+    "function_id": "func_customer_service",
+    "description": "Evaluate AI-driven decisions against regulatory requirements, fair lending standards, and anti-discrimination policies. Assess compliance risk and recommend controls or adjustments to ensure ethical and legally compliant automation.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_quality_analyst__ai_output_validation_quality_metrics_tracking_and_reporting",
+    "name": "Quality Metrics Tracking and Reporting",
+    "role_id": "role_quality_analyst__ai_output_validation",
+    "function_id": "func_customer_service",
+    "description": "Monitor and report on quality metrics for automated decision-making systems including accuracy rates, error frequencies, and compliance indicators. Maintain dashboards and provide insights on AI system performance trends.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__customer_service_customer_service_training_program_development",
+    "name": "Customer Service Training Program Development",
+    "role_id": "role_training_specialist__customer_service",
+    "function_id": "func_customer_service",
+    "description": "Design and develop comprehensive training curricula for customer service representatives covering product knowledge, communication techniques, and company policies. Create learning objectives, course outlines, and training schedules.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__customer_service_training_materials_creation_and_maintenance",
+    "name": "Training Materials Creation and Maintenance",
+    "role_id": "role_training_specialist__customer_service",
+    "function_id": "func_customer_service",
+    "description": "Develop and maintain training materials including manuals, job aids, videos, and e-learning modules for customer service training. Update content to reflect product changes, policy updates, and emerging best practices.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__customer_service_onboarding_and_instructor_led_training_delivery",
+    "name": "Onboarding and Instructor-Led Training Delivery",
+    "role_id": "role_training_specialist__customer_service",
+    "function_id": "func_customer_service",
+    "description": "Conduct new hire onboarding programs and instructor-led training sessions for customer service representatives. Deliver classroom and hands-on training, facilitate discussions, and ensure engagement and comprehension.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__customer_service_training_effectiveness_measurement_and_assessment",
+    "name": "Training Effectiveness Measurement and Assessment",
+    "role_id": "role_training_specialist__customer_service",
+    "function_id": "func_customer_service",
+    "description": "Develop and administer assessments, quizzes, and performance evaluations to measure training effectiveness and learner competency. Analyze results, identify knowledge gaps, and recommend remedial training or curriculum adjustments.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__digital_tools_and_ai_systems_digital_platform_and_ai_tool_training_program_design",
+    "name": "Digital Platform and AI Tool Training Program Design",
+    "role_id": "role_training_specialist__digital_tools_and_ai_systems",
+    "function_id": "func_customer_service",
+    "description": "Design comprehensive training programs for new digital platforms, AI-assisted tools, and automation systems. Develop learning strategies, identify key competencies, and create structured curricula for employee adoption.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__digital_tools_and_ai_systems_user_guides_and_technical_documentation_development",
+    "name": "User Guides and Technical Documentation Development",
+    "role_id": "role_training_specialist__digital_tools_and_ai_systems",
+    "function_id": "func_customer_service",
+    "description": "Create detailed user guides, quick reference materials, and technical documentation for digital tools and AI systems. Develop step-by-step instructions, troubleshooting guides, and best practice documentation.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__digital_tools_and_ai_systems_hands_on_workshops_and_system_training_delivery",
+    "name": "Hands-On Workshops and System Training Delivery",
+    "role_id": "role_training_specialist__digital_tools_and_ai_systems",
+    "function_id": "func_customer_service",
+    "description": "Conduct hands-on workshops and training sessions to teach employees how to use new digital platforms and AI-assisted tools effectively. Provide live demonstrations, practice exercises, and real-world application scenarios.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_training_specialist__digital_tools_and_ai_systems_ongoing_support_and_adoption_enablement",
+    "name": "Ongoing Support and Adoption Enablement",
+    "role_id": "role_training_specialist__digital_tools_and_ai_systems",
+    "function_id": "func_customer_service",
+    "description": "Provide continuous support to employees post-training including help desk assistance, refresher sessions, and advanced training modules. Monitor adoption rates and address barriers to proficiency with emerging technologies.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  }
+]

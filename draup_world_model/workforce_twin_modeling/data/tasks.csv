@@ -1,0 +1,582 @@
+task_id,workload_id,task_name,category,effort_hours_month,automatable_by_tool,compliance_mandated_human
+TK-0001,WL-0001,Flag missing information,feedback_loop,26.7,Custom Claims AI,False
+TK-0002,WL-0001,Verify document completeness,validation,26.7,Custom Claims AI,False
+TK-0003,WL-0001,Classify document type,directive,26.7,Custom Claims AI,False
+TK-0004,WL-0002,Enter claim data into system,directive,10.6,UiPath RPA,False
+TK-0005,WL-0002,Validate coverage amounts,validation,10.6,Custom Claims AI,False
+TK-0006,WL-0002,Flag data inconsistencies,directive,10.6,Custom Claims AI,False
+TK-0007,WL-0002,Cross-reference policy details,feedback_loop,10.6,UiPath RPA,False
+TK-0008,WL-0002,Reconcile multi-source data,task_iteration,10.6,UiPath RPA,False
+TK-0009,WL-0003,Generate compliance reports,directive,6.8,Microsoft Copilot,False
+TK-0010,WL-0003,Review reports for accuracy,validation,6.8,,True
+TK-0011,WL-0003,Update compliance checklists,feedback_loop,6.8,Microsoft Copilot,False
+TK-0012,WL-0003,Track regulatory deadlines,directive,6.8,ServiceNow AI,False
+TK-0013,WL-0004,Respond to customer inquiries,negligibility,10.0,,False
+TK-0014,WL-0004,Draft status update emails,directive,10.0,Microsoft Copilot,False
+TK-0015,WL-0004,Conduct empathy-driven interviews,negligibility,10.0,,True
+TK-0016,WL-0004,Schedule follow-up calls,directive,10.0,Microsoft Copilot,False
+TK-0017,WL-0005,Develop investigation strategy,negligibility,8.0,,True
+TK-0018,WL-0005,Research applicable regulations,learning,8.0,Microsoft Copilot,False
+TK-0019,WL-0005,Assess damage severity,negligibility,8.0,,True
+TK-0020,WL-0006,Enter claim data into system,directive,8.0,UiPath RPA,False
+TK-0021,WL-0006,Reconcile multi-source data,task_iteration,8.0,UiPath RPA,False
+TK-0022,WL-0006,Cross-reference policy details,feedback_loop,8.0,UiPath RPA,False
+TK-0023,WL-0006,Flag data inconsistencies,directive,8.0,Custom Claims AI,False
+TK-0024,WL-0007,Review reports for accuracy,validation,4.0,,True
+TK-0025,WL-0007,Track regulatory deadlines,directive,4.0,ServiceNow AI,False
+TK-0026,WL-0007,Update compliance checklists,feedback_loop,4.0,Microsoft Copilot,False
+TK-0027,WL-0007,Generate compliance reports,directive,4.0,Microsoft Copilot,False
+TK-0028,WL-0008,Route to appropriate handler,directive,12.0,ServiceNow AI,False
+TK-0029,WL-0008,Flag missing information,feedback_loop,12.0,Custom Claims AI,False
+TK-0030,WL-0008,Verify document completeness,validation,12.0,Custom Claims AI,False
+TK-0031,WL-0008,Extract data from claim forms,directive,12.0,UiPath RPA,False
+TK-0032,WL-0009,Cross-reference policy details,feedback_loop,10.8,UiPath RPA,False
+TK-0033,WL-0009,Enter claim data into system,directive,10.8,UiPath RPA,False
+TK-0034,WL-0009,Validate coverage amounts,validation,10.8,Custom Claims AI,False
+TK-0035,WL-0009,Reconcile multi-source data,task_iteration,10.8,UiPath RPA,False
+TK-0036,WL-0010,Flag missing information,feedback_loop,16.0,Custom Claims AI,False
+TK-0037,WL-0010,Classify document type,directive,16.0,Custom Claims AI,False
+TK-0038,WL-0010,Extract data from claim forms,directive,16.0,UiPath RPA,False
+TK-0039,WL-0010,Route to appropriate handler,directive,16.0,ServiceNow AI,False
+TK-0040,WL-0011,Develop investigation strategy,negligibility,8.0,,True
+TK-0041,WL-0011,Assess damage severity,negligibility,8.0,,True
+TK-0042,WL-0011,Compile evidence summary,task_iteration,8.0,Microsoft Copilot,False
+TK-0043,WL-0011,Analyze claim patterns,learning,8.0,Custom Claims AI,False
+TK-0044,WL-0012,Review reports for accuracy,validation,5.2,,True
+TK-0045,WL-0012,Update compliance checklists,feedback_loop,5.2,Microsoft Copilot,False
+TK-0046,WL-0012,Generate compliance reports,directive,5.2,Microsoft Copilot,False
+TK-0047,WL-0012,Track regulatory deadlines,directive,5.2,ServiceNow AI,False
+TK-0048,WL-0013,Validate coverage amounts,validation,8.6,Custom Claims AI,False
+TK-0049,WL-0013,Reconcile multi-source data,task_iteration,8.6,UiPath RPA,False
+TK-0050,WL-0013,Flag data inconsistencies,directive,8.6,Custom Claims AI,False
+TK-0051,WL-0013,Cross-reference policy details,feedback_loop,8.6,UiPath RPA,False
+TK-0052,WL-0013,Enter claim data into system,directive,8.6,UiPath RPA,False
+TK-0053,WL-0014,Verify document completeness,validation,12.8,Custom Claims AI,False
+TK-0054,WL-0014,Classify document type,directive,12.8,Custom Claims AI,False
+TK-0055,WL-0014,Flag missing information,feedback_loop,12.8,Custom Claims AI,False
+TK-0056,WL-0014,Route to appropriate handler,directive,12.8,ServiceNow AI,False
+TK-0057,WL-0014,Extract data from claim forms,directive,12.8,UiPath RPA,False
+TK-0058,WL-0015,Develop investigation strategy,negligibility,8.0,,True
+TK-0059,WL-0015,Assess damage severity,negligibility,8.0,,True
+TK-0060,WL-0015,Compile evidence summary,task_iteration,8.0,Microsoft Copilot,False
+TK-0061,WL-0015,Research applicable regulations,learning,8.0,Microsoft Copilot,False
+TK-0062,WL-0016,Generate compliance reports,directive,5.2,Microsoft Copilot,False
+TK-0063,WL-0016,Review reports for accuracy,validation,5.2,,True
+TK-0064,WL-0016,Track regulatory deadlines,directive,5.2,ServiceNow AI,False
+TK-0065,WL-0016,Update compliance checklists,feedback_loop,5.2,Microsoft Copilot,False
+TK-0066,WL-0017,Conduct empathy-driven interviews,negligibility,19.2,,True
+TK-0067,WL-0017,Draft status update emails,directive,19.2,Microsoft Copilot,False
+TK-0068,WL-0017,Negotiate settlement terms,negligibility,19.2,,True
+TK-0069,WL-0018,Review reports for accuracy,validation,5.6,,True
+TK-0070,WL-0018,Generate compliance reports,directive,5.6,Microsoft Copilot,False
+TK-0071,WL-0018,Track regulatory deadlines,directive,5.6,ServiceNow AI,False
+TK-0072,WL-0018,Update compliance checklists,feedback_loop,5.6,Microsoft Copilot,False
+TK-0073,WL-0019,Reconcile multi-source data,task_iteration,11.6,UiPath RPA,False
+TK-0074,WL-0019,Validate coverage amounts,validation,11.6,Custom Claims AI,False
+TK-0075,WL-0019,Flag data inconsistencies,directive,11.6,Custom Claims AI,False
+TK-0076,WL-0019,Enter claim data into system,directive,11.6,UiPath RPA,False
+TK-0077,WL-0020,Analyze claim patterns,learning,11.2,Custom Claims AI,False
+TK-0078,WL-0020,Assess damage severity,negligibility,11.2,,True
+TK-0079,WL-0020,Research applicable regulations,learning,11.2,Microsoft Copilot,False
+TK-0080,WL-0021,Route to appropriate handler,directive,18.7,ServiceNow AI,False
+TK-0081,WL-0021,Verify document completeness,validation,18.7,Custom Claims AI,False
+TK-0082,WL-0021,Flag missing information,feedback_loop,18.7,Custom Claims AI,False
+TK-0083,WL-0022,Enter claim data into system,directive,9.6,UiPath RPA,False
+TK-0084,WL-0022,Validate coverage amounts,validation,9.6,Custom Claims AI,False
+TK-0085,WL-0022,Cross-reference policy details,feedback_loop,9.6,UiPath RPA,False
+TK-0086,WL-0022,Flag data inconsistencies,directive,9.6,Custom Claims AI,False
+TK-0087,WL-0023,Respond to customer inquiries,negligibility,11.6,,False
+TK-0088,WL-0023,Conduct empathy-driven interviews,negligibility,11.6,,True
+TK-0089,WL-0023,Negotiate settlement terms,negligibility,11.6,,True
+TK-0090,WL-0023,Schedule follow-up calls,directive,11.6,Microsoft Copilot,False
+TK-0091,WL-0024,Track regulatory deadlines,directive,4.8,ServiceNow AI,False
+TK-0092,WL-0024,Update compliance checklists,feedback_loop,4.8,Microsoft Copilot,False
+TK-0093,WL-0024,Review reports for accuracy,validation,4.8,,True
+TK-0094,WL-0024,Generate compliance reports,directive,4.8,Microsoft Copilot,False
+TK-0095,WL-0025,Enter claim data into system,directive,9.6,UiPath RPA,False
+TK-0096,WL-0025,Flag data inconsistencies,directive,9.6,Custom Claims AI,False
+TK-0097,WL-0025,Reconcile multi-source data,task_iteration,9.6,UiPath RPA,False
+TK-0098,WL-0025,Validate coverage amounts,validation,9.6,Custom Claims AI,False
+TK-0099,WL-0026,Schedule follow-up calls,directive,11.6,Microsoft Copilot,False
+TK-0100,WL-0026,Negotiate settlement terms,negligibility,11.6,,True
+TK-0101,WL-0026,Draft status update emails,directive,11.6,Microsoft Copilot,False
+TK-0102,WL-0026,Respond to customer inquiries,negligibility,11.6,,False
+TK-0103,WL-0027,Verify document completeness,validation,18.7,Custom Claims AI,False
+TK-0104,WL-0027,Extract data from claim forms,directive,18.7,UiPath RPA,False
+TK-0105,WL-0027,Classify document type,directive,18.7,Custom Claims AI,False
+TK-0106,WL-0028,Review reports for accuracy,validation,4.8,,True
+TK-0107,WL-0028,Update compliance checklists,feedback_loop,4.8,Microsoft Copilot,False
+TK-0108,WL-0028,Track regulatory deadlines,directive,4.8,ServiceNow AI,False
+TK-0109,WL-0028,Generate compliance reports,directive,4.8,Microsoft Copilot,False
+TK-0110,WL-0029,Track regulatory deadlines,directive,5.3,ServiceNow AI,False
+TK-0111,WL-0029,Update compliance checklists,feedback_loop,5.3,Microsoft Copilot,False
+TK-0112,WL-0029,Generate compliance reports,directive,5.3,Microsoft Copilot,False
+TK-0113,WL-0030,Compile evidence summary,task_iteration,6.0,Microsoft Copilot,False
+TK-0114,WL-0030,Research applicable regulations,learning,6.0,Microsoft Copilot,False
+TK-0115,WL-0030,Assess damage severity,negligibility,6.0,,True
+TK-0116,WL-0030,Analyze claim patterns,learning,6.0,Custom Claims AI,False
+TK-0117,WL-0031,Verify document completeness,validation,9.6,Custom Claims AI,False
+TK-0118,WL-0031,Flag missing information,feedback_loop,9.6,Custom Claims AI,False
+TK-0119,WL-0031,Extract data from claim forms,directive,9.6,UiPath RPA,False
+TK-0120,WL-0031,Route to appropriate handler,directive,9.6,ServiceNow AI,False
+TK-0121,WL-0031,Classify document type,directive,9.6,Custom Claims AI,False
+TK-0122,WL-0032,Validate coverage amounts,validation,10.7,Custom Claims AI,False
+TK-0123,WL-0032,Flag data inconsistencies,directive,10.7,Custom Claims AI,False
+TK-0124,WL-0032,Enter claim data into system,directive,10.7,UiPath RPA,False
+TK-0125,WL-0033,Respond to customer inquiries,negligibility,13.3,,False
+TK-0126,WL-0033,Conduct empathy-driven interviews,negligibility,13.3,,True
+TK-0127,WL-0033,Schedule follow-up calls,directive,13.3,Microsoft Copilot,False
+TK-0128,WL-0034,Negotiate settlement terms,negligibility,8.0,,True
+TK-0129,WL-0034,Schedule follow-up calls,directive,8.0,Microsoft Copilot,False
+TK-0130,WL-0034,Conduct empathy-driven interviews,negligibility,8.0,,True
+TK-0131,WL-0034,Draft status update emails,directive,8.0,Microsoft Copilot,False
+TK-0132,WL-0034,Respond to customer inquiries,negligibility,8.0,,False
+TK-0133,WL-0035,Flag missing information,feedback_loop,16.0,Custom Claims AI,False
+TK-0134,WL-0035,Route to appropriate handler,directive,16.0,ServiceNow AI,False
+TK-0135,WL-0035,Classify document type,directive,16.0,Custom Claims AI,False
+TK-0136,WL-0036,Assess damage severity,negligibility,8.0,,True
+TK-0137,WL-0036,Research applicable regulations,learning,8.0,Microsoft Copilot,False
+TK-0138,WL-0036,Develop investigation strategy,negligibility,8.0,,True
+TK-0139,WL-0037,Track regulatory deadlines,directive,4.0,ServiceNow AI,False
+TK-0140,WL-0037,Update compliance checklists,feedback_loop,4.0,Microsoft Copilot,False
+TK-0141,WL-0037,Generate compliance reports,directive,4.0,Microsoft Copilot,False
+TK-0142,WL-0037,Review reports for accuracy,validation,4.0,,True
+TK-0143,WL-0038,Enter claim data into system,directive,8.0,UiPath RPA,False
+TK-0144,WL-0038,Flag data inconsistencies,directive,8.0,Custom Claims AI,False
+TK-0145,WL-0038,Cross-reference policy details,feedback_loop,8.0,UiPath RPA,False
+TK-0146,WL-0038,Reconcile multi-source data,task_iteration,8.0,UiPath RPA,False
+TK-0147,WL-0039,Flag missing information,feedback_loop,24.5,Custom Claims AI,False
+TK-0148,WL-0039,Extract data from claim forms,directive,24.5,UiPath RPA,False
+TK-0149,WL-0039,Verify document completeness,validation,24.5,Custom Claims AI,False
+TK-0150,WL-0040,Conduct empathy-driven interviews,negligibility,15.2,,True
+TK-0151,WL-0040,Draft status update emails,directive,15.2,Microsoft Copilot,False
+TK-0152,WL-0040,Schedule follow-up calls,directive,15.2,Microsoft Copilot,False
+TK-0153,WL-0040,Respond to customer inquiries,negligibility,15.2,,False
+TK-0154,WL-0041,Track regulatory deadlines,directive,6.0,ServiceNow AI,False
+TK-0155,WL-0041,Review reports for accuracy,validation,6.0,,True
+TK-0156,WL-0041,Generate compliance reports,directive,6.0,Microsoft Copilot,False
+TK-0157,WL-0041,Update compliance checklists,feedback_loop,6.0,Microsoft Copilot,False
+TK-0158,WL-0042,Reconcile multi-source data,task_iteration,9.6,UiPath RPA,False
+TK-0159,WL-0042,Cross-reference policy details,feedback_loop,9.6,UiPath RPA,False
+TK-0160,WL-0042,Enter claim data into system,directive,9.6,UiPath RPA,False
+TK-0161,WL-0042,Flag data inconsistencies,directive,9.6,Custom Claims AI,False
+TK-0162,WL-0043,Conduct empathy-driven interviews,negligibility,11.6,,True
+TK-0163,WL-0043,Draft status update emails,directive,11.6,Microsoft Copilot,False
+TK-0164,WL-0043,Respond to customer inquiries,negligibility,11.6,,False
+TK-0165,WL-0043,Schedule follow-up calls,directive,11.6,Microsoft Copilot,False
+TK-0166,WL-0044,Route to appropriate handler,directive,14.0,ServiceNow AI,False
+TK-0167,WL-0044,Verify document completeness,validation,14.0,Custom Claims AI,False
+TK-0168,WL-0044,Extract data from claim forms,directive,14.0,UiPath RPA,False
+TK-0169,WL-0044,Flag missing information,feedback_loop,14.0,Custom Claims AI,False
+TK-0170,WL-0045,Track regulatory deadlines,directive,6.4,ServiceNow AI,False
+TK-0171,WL-0045,Generate compliance reports,directive,6.4,Microsoft Copilot,False
+TK-0172,WL-0045,Update compliance checklists,feedback_loop,6.4,Microsoft Copilot,False
+TK-0173,WL-0046,Compile evidence summary,task_iteration,10.0,Microsoft Copilot,False
+TK-0174,WL-0046,Assess damage severity,negligibility,10.0,,True
+TK-0175,WL-0046,Analyze claim patterns,learning,10.0,Custom Claims AI,False
+TK-0176,WL-0046,Develop investigation strategy,negligibility,10.0,,True
+TK-0177,WL-0047,Enter claim data into system,directive,13.2,UiPath RPA,False
+TK-0178,WL-0047,Cross-reference policy details,feedback_loop,13.2,UiPath RPA,False
+TK-0179,WL-0047,Validate coverage amounts,validation,13.2,Custom Claims AI,False
+TK-0180,WL-0047,Flag data inconsistencies,directive,13.2,Custom Claims AI,False
+TK-0181,WL-0048,Draft status update emails,directive,22.4,Microsoft Copilot,False
+TK-0182,WL-0048,Schedule follow-up calls,directive,22.4,Microsoft Copilot,False
+TK-0183,WL-0048,Respond to customer inquiries,negligibility,22.4,,False
+TK-0184,WL-0049,Schedule and track tasks,directive,12.0,Microsoft Copilot,False
+TK-0185,WL-0049,Facilitate team retrospectives,negligibility,12.0,,False
+TK-0186,WL-0049,Stakeholder communication,negligibility,12.0,,False
+TK-0187,WL-0049,Mentor junior developers,negligibility,12.0,,True
+TK-0188,WL-0050,Investigate root causes,learning,16.0,,False
+TK-0189,WL-0050,Monitor system alerts,directive,16.0,ServiceNow AI,False
+TK-0190,WL-0050,Coordinate incident response,negligibility,16.0,,False
+TK-0191,WL-0050,Classify incident severity,directive,16.0,ServiceNow AI,False
+TK-0192,WL-0051,Create architecture diagrams,negligibility,12.0,,False
+TK-0193,WL-0051,Review documentation accuracy,validation,12.0,,False
+TK-0194,WL-0051,Generate API documentation,directive,12.0,Microsoft Copilot,False
+TK-0195,WL-0051,Update runbooks,task_iteration,12.0,Microsoft Copilot,False
+TK-0196,WL-0052,Monitor system alerts,directive,9.9,ServiceNow AI,False
+TK-0197,WL-0052,Coordinate incident response,negligibility,9.9,,False
+TK-0198,WL-0052,Classify incident severity,directive,9.9,ServiceNow AI,False
+TK-0199,WL-0052,Investigate root causes,learning,9.9,,False
+TK-0200,WL-0052,Tune alert thresholds,feedback_loop,9.9,ServiceNow AI,False
+TK-0201,WL-0053,Review documentation accuracy,validation,9.2,,False
+TK-0202,WL-0053,Create architecture diagrams,negligibility,9.2,,False
+TK-0203,WL-0053,Update runbooks,task_iteration,9.2,Microsoft Copilot,False
+TK-0204,WL-0053,Generate API documentation,directive,9.2,Microsoft Copilot,False
+TK-0205,WL-0054,Research new frameworks,learning,18.4,Microsoft Copilot,False
+TK-0206,WL-0054,Make architectural trade-offs,negligibility,18.4,,False
+TK-0207,WL-0054,Write boilerplate code,directive,18.4,Microsoft Copilot,False
+TK-0208,WL-0054,Refine code architecture,task_iteration,18.4,Microsoft Copilot,False
+TK-0209,WL-0055,Create architecture diagrams,negligibility,6.0,,False
+TK-0210,WL-0055,Update runbooks,task_iteration,6.0,Microsoft Copilot,False
+TK-0211,WL-0055,Generate API documentation,directive,6.0,Microsoft Copilot,False
+TK-0212,WL-0055,Review documentation accuracy,validation,6.0,,False
+TK-0213,WL-0056,Research new frameworks,learning,12.0,Microsoft Copilot,False
+TK-0214,WL-0056,Make architectural trade-offs,negligibility,12.0,,False
+TK-0215,WL-0056,Debug with AI assistance,feedback_loop,12.0,Microsoft Copilot,False
+TK-0216,WL-0056,Write boilerplate code,directive,12.0,Microsoft Copilot,False
+TK-0217,WL-0057,Define non-functional requirements,negligibility,8.0,,False
+TK-0218,WL-0057,Evaluate technology options,task_iteration,8.0,,False
+TK-0219,WL-0057,Design system interfaces,negligibility,8.0,,False
+TK-0220,WL-0057,Research design patterns,learning,8.0,Microsoft Copilot,False
+TK-0221,WL-0058,Investigate root causes,learning,8.0,,False
+TK-0222,WL-0058,Monitor system alerts,directive,8.0,ServiceNow AI,False
+TK-0223,WL-0058,Coordinate incident response,negligibility,8.0,,False
+TK-0224,WL-0058,Tune alert thresholds,feedback_loop,8.0,ServiceNow AI,False
+TK-0225,WL-0059,Stakeholder communication,negligibility,8.0,,False
+TK-0226,WL-0059,Schedule and track tasks,directive,8.0,Microsoft Copilot,False
+TK-0227,WL-0059,Facilitate team retrospectives,negligibility,8.0,,False
+TK-0228,WL-0060,Schedule and track tasks,directive,6.0,Microsoft Copilot,False
+TK-0229,WL-0060,Mentor junior developers,negligibility,6.0,,True
+TK-0230,WL-0060,Facilitate team retrospectives,negligibility,6.0,,False
+TK-0231,WL-0060,Stakeholder communication,negligibility,6.0,,False
+TK-0232,WL-0061,Tune alert thresholds,feedback_loop,6.4,ServiceNow AI,False
+TK-0233,WL-0061,Investigate root causes,learning,6.4,,False
+TK-0234,WL-0061,Coordinate incident response,negligibility,6.4,,False
+TK-0235,WL-0061,Monitor system alerts,directive,6.4,ServiceNow AI,False
+TK-0236,WL-0061,Classify incident severity,directive,6.4,ServiceNow AI,False
+TK-0237,WL-0062,Refine code architecture,task_iteration,12.0,Microsoft Copilot,False
+TK-0238,WL-0062,Write boilerplate code,directive,12.0,Microsoft Copilot,False
+TK-0239,WL-0062,Make architectural trade-offs,negligibility,12.0,,False
+TK-0240,WL-0062,Research new frameworks,learning,12.0,Microsoft Copilot,False
+TK-0241,WL-0063,Create architecture diagrams,negligibility,6.0,,False
+TK-0242,WL-0063,Generate API documentation,directive,6.0,Microsoft Copilot,False
+TK-0243,WL-0063,Review documentation accuracy,validation,6.0,,False
+TK-0244,WL-0063,Update runbooks,task_iteration,6.0,Microsoft Copilot,False
+TK-0245,WL-0064,Research design patterns,learning,8.0,Microsoft Copilot,False
+TK-0246,WL-0064,Evaluate technology options,task_iteration,8.0,,False
+TK-0247,WL-0064,Define non-functional requirements,negligibility,8.0,,False
+TK-0248,WL-0064,Design system interfaces,negligibility,8.0,,False
+TK-0249,WL-0065,Mentor junior developers,negligibility,8.0,,True
+TK-0250,WL-0065,Schedule and track tasks,directive,8.0,Microsoft Copilot,False
+TK-0251,WL-0065,Stakeholder communication,negligibility,8.0,,False
+TK-0252,WL-0066,Review documentation accuracy,validation,6.0,,False
+TK-0253,WL-0066,Update runbooks,task_iteration,6.0,Microsoft Copilot,False
+TK-0254,WL-0066,Create architecture diagrams,negligibility,6.0,,False
+TK-0255,WL-0066,Generate API documentation,directive,6.0,Microsoft Copilot,False
+TK-0256,WL-0067,Debug with AI assistance,feedback_loop,12.0,Microsoft Copilot,False
+TK-0257,WL-0067,Research new frameworks,learning,12.0,Microsoft Copilot,False
+TK-0258,WL-0067,Write boilerplate code,directive,12.0,Microsoft Copilot,False
+TK-0259,WL-0067,Refine code architecture,task_iteration,12.0,Microsoft Copilot,False
+TK-0260,WL-0068,Research design patterns,learning,10.7,Microsoft Copilot,False
+TK-0261,WL-0068,Design system interfaces,negligibility,10.7,,False
+TK-0262,WL-0068,Define non-functional requirements,negligibility,10.7,,False
+TK-0263,WL-0069,Investigate root causes,learning,6.4,,False
+TK-0264,WL-0069,Coordinate incident response,negligibility,6.4,,False
+TK-0265,WL-0069,Classify incident severity,directive,6.4,ServiceNow AI,False
+TK-0266,WL-0069,Monitor system alerts,directive,6.4,ServiceNow AI,False
+TK-0267,WL-0069,Tune alert thresholds,feedback_loop,6.4,ServiceNow AI,False
+TK-0268,WL-0070,Refine code architecture,task_iteration,14.0,Microsoft Copilot,False
+TK-0269,WL-0070,Write boilerplate code,directive,14.0,Microsoft Copilot,False
+TK-0270,WL-0070,Research new frameworks,learning,14.0,Microsoft Copilot,False
+TK-0271,WL-0070,Make architectural trade-offs,negligibility,14.0,,False
+TK-0272,WL-0071,Generate API documentation,directive,7.2,Microsoft Copilot,False
+TK-0273,WL-0071,Review documentation accuracy,validation,7.2,,False
+TK-0274,WL-0071,Create architecture diagrams,negligibility,7.2,,False
+TK-0275,WL-0071,Update runbooks,task_iteration,7.2,Microsoft Copilot,False
+TK-0276,WL-0072,Define non-functional requirements,negligibility,9.6,,False
+TK-0277,WL-0072,Evaluate technology options,task_iteration,9.6,,False
+TK-0278,WL-0072,Design system interfaces,negligibility,9.6,,False
+TK-0279,WL-0072,Research design patterns,learning,9.6,Microsoft Copilot,False
+TK-0280,WL-0073,Classify incident severity,directive,9.6,ServiceNow AI,False
+TK-0281,WL-0073,Monitor system alerts,directive,9.6,ServiceNow AI,False
+TK-0282,WL-0073,Coordinate incident response,negligibility,9.6,,False
+TK-0283,WL-0073,Tune alert thresholds,feedback_loop,9.6,ServiceNow AI,False
+TK-0284,WL-0074,Design system interfaces,negligibility,12.8,,False
+TK-0285,WL-0074,Define non-functional requirements,negligibility,12.8,,False
+TK-0286,WL-0074,Evaluate technology options,task_iteration,12.8,,False
+TK-0287,WL-0075,Schedule and track tasks,directive,7.2,Microsoft Copilot,False
+TK-0288,WL-0075,Stakeholder communication,negligibility,7.2,,False
+TK-0289,WL-0075,Facilitate team retrospectives,negligibility,7.2,,False
+TK-0290,WL-0075,Mentor junior developers,negligibility,7.2,,True
+TK-0291,WL-0076,Classify incident severity,directive,12.8,ServiceNow AI,False
+TK-0292,WL-0076,Tune alert thresholds,feedback_loop,12.8,ServiceNow AI,False
+TK-0293,WL-0076,Monitor system alerts,directive,12.8,ServiceNow AI,False
+TK-0294,WL-0077,Refine code architecture,task_iteration,14.0,Microsoft Copilot,False
+TK-0295,WL-0077,Make architectural trade-offs,negligibility,14.0,,False
+TK-0296,WL-0077,Debug with AI assistance,feedback_loop,14.0,Microsoft Copilot,False
+TK-0297,WL-0077,Write boilerplate code,directive,14.0,Microsoft Copilot,False
+TK-0298,WL-0078,Define non-functional requirements,negligibility,10.7,,False
+TK-0299,WL-0078,Design system interfaces,negligibility,10.7,,False
+TK-0300,WL-0078,Evaluate technology options,task_iteration,10.7,,False
+TK-0301,WL-0079,Classify incident severity,directive,8.0,ServiceNow AI,False
+TK-0302,WL-0079,Investigate root causes,learning,8.0,,False
+TK-0303,WL-0079,Tune alert thresholds,feedback_loop,8.0,ServiceNow AI,False
+TK-0304,WL-0079,Monitor system alerts,directive,8.0,ServiceNow AI,False
+TK-0305,WL-0080,Generate API documentation,directive,6.0,Microsoft Copilot,False
+TK-0306,WL-0080,Update runbooks,task_iteration,6.0,Microsoft Copilot,False
+TK-0307,WL-0080,Create architecture diagrams,negligibility,6.0,,False
+TK-0308,WL-0080,Review documentation accuracy,validation,6.0,,False
+TK-0309,WL-0081,Stakeholder communication,negligibility,8.0,,False
+TK-0310,WL-0081,Schedule and track tasks,directive,8.0,Microsoft Copilot,False
+TK-0311,WL-0081,Facilitate team retrospectives,negligibility,8.0,,False
+TK-0312,WL-0082,Make architectural trade-offs,negligibility,9.6,,False
+TK-0313,WL-0082,Research new frameworks,learning,9.6,Microsoft Copilot,False
+TK-0314,WL-0082,Refine code architecture,task_iteration,9.6,Microsoft Copilot,False
+TK-0315,WL-0082,Debug with AI assistance,feedback_loop,9.6,Microsoft Copilot,False
+TK-0316,WL-0082,Write boilerplate code,directive,9.6,Microsoft Copilot,False
+TK-0317,WL-0083,Define non-functional requirements,negligibility,10.7,,False
+TK-0318,WL-0083,Research design patterns,learning,10.7,Microsoft Copilot,False
+TK-0319,WL-0083,Evaluate technology options,task_iteration,10.7,,False
+TK-0320,WL-0084,Create architecture diagrams,negligibility,6.0,,False
+TK-0321,WL-0084,Review documentation accuracy,validation,6.0,,False
+TK-0322,WL-0084,Update runbooks,task_iteration,6.0,Microsoft Copilot,False
+TK-0323,WL-0084,Generate API documentation,directive,6.0,Microsoft Copilot,False
+TK-0324,WL-0085,Write boilerplate code,directive,9.6,Microsoft Copilot,False
+TK-0325,WL-0085,Debug with AI assistance,feedback_loop,9.6,Microsoft Copilot,False
+TK-0326,WL-0085,Research new frameworks,learning,9.6,Microsoft Copilot,False
+TK-0327,WL-0085,Refine code architecture,task_iteration,9.6,Microsoft Copilot,False
+TK-0328,WL-0085,Make architectural trade-offs,negligibility,9.6,,False
+TK-0329,WL-0086,Tune alert thresholds,feedback_loop,6.4,ServiceNow AI,False
+TK-0330,WL-0086,Coordinate incident response,negligibility,6.4,,False
+TK-0331,WL-0086,Monitor system alerts,directive,6.4,ServiceNow AI,False
+TK-0332,WL-0086,Classify incident severity,directive,6.4,ServiceNow AI,False
+TK-0333,WL-0086,Investigate root causes,learning,6.4,,False
+TK-0334,WL-0087,Schedule and track tasks,directive,8.0,Microsoft Copilot,False
+TK-0335,WL-0087,Mentor junior developers,negligibility,8.0,,True
+TK-0336,WL-0087,Stakeholder communication,negligibility,8.0,,False
+TK-0337,WL-0088,Mentor junior developers,negligibility,10.8,,True
+TK-0338,WL-0088,Stakeholder communication,negligibility,10.8,,False
+TK-0339,WL-0088,Schedule and track tasks,directive,10.8,Microsoft Copilot,False
+TK-0340,WL-0088,Facilitate team retrospectives,negligibility,10.8,,False
+TK-0341,WL-0089,Evaluate technology options,task_iteration,19.2,,False
+TK-0342,WL-0089,Define non-functional requirements,negligibility,19.2,,False
+TK-0343,WL-0089,Research design patterns,learning,19.2,Microsoft Copilot,False
+TK-0344,WL-0090,Coordinate incident response,negligibility,14.4,,False
+TK-0345,WL-0090,Classify incident severity,directive,14.4,ServiceNow AI,False
+TK-0346,WL-0090,Tune alert thresholds,feedback_loop,14.4,ServiceNow AI,False
+TK-0347,WL-0090,Monitor system alerts,directive,14.4,ServiceNow AI,False
+TK-0348,WL-0091,Document resolution,task_iteration,10.0,Microsoft Copilot,False
+TK-0349,WL-0091,Identify discrepancies,feedback_loop,10.0,UiPath RPA,False
+TK-0350,WL-0091,Investigate variances,learning,10.0,,False
+TK-0351,WL-0091,Match bank statements,directive,10.0,UiPath RPA,False
+TK-0352,WL-0092,Research market conditions,learning,6.0,Microsoft Copilot,False
+TK-0353,WL-0092,Present to leadership,negligibility,6.0,,False
+TK-0354,WL-0092,Build financial models,task_iteration,6.0,Microsoft Copilot,False
+TK-0355,WL-0092,Develop scenario projections,negligibility,6.0,,False
+TK-0356,WL-0093,Post journal entries,directive,9.6,Workday AI,False
+TK-0357,WL-0093,Approve routine payments,validation,9.6,,True
+TK-0358,WL-0093,Flag exceptions,feedback_loop,9.6,UiPath RPA,False
+TK-0359,WL-0093,Process invoices,directive,9.6,UiPath RPA,False
+TK-0360,WL-0093,Match PO to invoice,directive,9.6,UiPath RPA,False
+TK-0361,WL-0094,Analyze trends,task_iteration,10.7,Microsoft Copilot,False
+TK-0362,WL-0094,Consolidate departmental data,directive,10.7,Workday AI,False
+TK-0363,WL-0094,Review for accuracy,validation,10.7,,True
+TK-0364,WL-0095,Prepare audit documentation,directive,5.3,Microsoft Copilot,False
+TK-0365,WL-0095,Test internal controls,validation,5.3,,True
+TK-0366,WL-0095,Track compliance deadlines,directive,5.3,ServiceNow AI,False
+TK-0367,WL-0096,Process invoices,directive,29.3,UiPath RPA,False
+TK-0368,WL-0096,Flag exceptions,feedback_loop,29.3,UiPath RPA,False
+TK-0369,WL-0096,Match PO to invoice,directive,29.3,UiPath RPA,False
+TK-0370,WL-0097,Interpret regulatory changes,learning,9.6,,True
+TK-0371,WL-0097,Track compliance deadlines,directive,9.6,ServiceNow AI,False
+TK-0372,WL-0097,Prepare audit documentation,directive,9.6,Microsoft Copilot,False
+TK-0373,WL-0098,Present to leadership,negligibility,10.8,,False
+TK-0374,WL-0098,Develop scenario projections,negligibility,10.8,,False
+TK-0375,WL-0098,Build financial models,task_iteration,10.8,Microsoft Copilot,False
+TK-0376,WL-0098,Research market conditions,learning,10.8,Microsoft Copilot,False
+TK-0377,WL-0099,Generate financial reports,directive,10.8,Workday AI,False
+TK-0378,WL-0099,Consolidate departmental data,directive,10.8,Workday AI,False
+TK-0379,WL-0099,Review for accuracy,validation,10.8,,True
+TK-0380,WL-0099,Analyze trends,task_iteration,10.8,Microsoft Copilot,False
+TK-0381,WL-0100,Match PO to invoice,directive,21.3,UiPath RPA,False
+TK-0382,WL-0100,Flag exceptions,feedback_loop,21.3,UiPath RPA,False
+TK-0383,WL-0100,Approve routine payments,validation,21.3,,True
+TK-0384,WL-0101,Track compliance deadlines,directive,5.2,ServiceNow AI,False
+TK-0385,WL-0101,Test internal controls,validation,5.2,,True
+TK-0386,WL-0101,Interpret regulatory changes,learning,5.2,,True
+TK-0387,WL-0101,Prepare audit documentation,directive,5.2,Microsoft Copilot,False
+TK-0388,WL-0102,Develop scenario projections,negligibility,8.0,,False
+TK-0389,WL-0102,Present to leadership,negligibility,8.0,,False
+TK-0390,WL-0102,Build financial models,task_iteration,8.0,Microsoft Copilot,False
+TK-0391,WL-0102,Research market conditions,learning,8.0,Microsoft Copilot,False
+TK-0392,WL-0103,Post journal entries,directive,20.3,Workday AI,False
+TK-0393,WL-0103,Process invoices,directive,20.3,UiPath RPA,False
+TK-0394,WL-0103,Approve routine payments,validation,20.3,,True
+TK-0395,WL-0104,Develop scenario projections,negligibility,7.6,,False
+TK-0396,WL-0104,Research market conditions,learning,7.6,Microsoft Copilot,False
+TK-0397,WL-0104,Build financial models,task_iteration,7.6,Microsoft Copilot,False
+TK-0398,WL-0104,Present to leadership,negligibility,7.6,,False
+TK-0399,WL-0105,Identify discrepancies,feedback_loop,16.5,UiPath RPA,False
+TK-0400,WL-0105,Document resolution,task_iteration,16.5,Microsoft Copilot,False
+TK-0401,WL-0105,Investigate variances,learning,16.5,,False
+TK-0402,WL-0106,Test internal controls,validation,4.8,,True
+TK-0403,WL-0106,Track compliance deadlines,directive,4.8,ServiceNow AI,False
+TK-0404,WL-0106,Prepare audit documentation,directive,4.8,Microsoft Copilot,False
+TK-0405,WL-0106,Interpret regulatory changes,learning,4.8,,True
+TK-0406,WL-0107,Analyze trends,task_iteration,8.0,Microsoft Copilot,False
+TK-0407,WL-0107,Generate financial reports,directive,8.0,Workday AI,False
+TK-0408,WL-0107,Review for accuracy,validation,8.0,,True
+TK-0409,WL-0107,Consolidate departmental data,directive,8.0,Workday AI,False
+TK-0410,WL-0108,Process invoices,directive,12.0,UiPath RPA,False
+TK-0411,WL-0108,Post journal entries,directive,12.0,Workday AI,False
+TK-0412,WL-0108,Match PO to invoice,directive,12.0,UiPath RPA,False
+TK-0413,WL-0108,Approve routine payments,validation,12.0,,True
+TK-0414,WL-0109,Investigate variances,learning,10.0,,False
+TK-0415,WL-0109,Identify discrepancies,feedback_loop,10.0,UiPath RPA,False
+TK-0416,WL-0109,Match bank statements,directive,10.0,UiPath RPA,False
+TK-0417,WL-0109,Document resolution,task_iteration,10.0,Microsoft Copilot,False
+TK-0418,WL-0110,Test internal controls,validation,4.0,,True
+TK-0419,WL-0110,Prepare audit documentation,directive,4.0,Microsoft Copilot,False
+TK-0420,WL-0110,Interpret regulatory changes,learning,4.0,,True
+TK-0421,WL-0110,Track compliance deadlines,directive,4.0,ServiceNow AI,False
+TK-0422,WL-0111,Develop scenario projections,negligibility,8.0,,False
+TK-0423,WL-0111,Present to leadership,negligibility,8.0,,False
+TK-0424,WL-0111,Build financial models,task_iteration,8.0,Microsoft Copilot,False
+TK-0425,WL-0112,Research market conditions,learning,8.4,Microsoft Copilot,False
+TK-0426,WL-0112,Build financial models,task_iteration,8.4,Microsoft Copilot,False
+TK-0427,WL-0112,Develop scenario projections,negligibility,8.4,,False
+TK-0428,WL-0112,Present to leadership,negligibility,8.4,,False
+TK-0429,WL-0113,Generate financial reports,directive,11.6,Workday AI,False
+TK-0430,WL-0113,Consolidate departmental data,directive,11.6,Workday AI,False
+TK-0431,WL-0113,Analyze trends,task_iteration,11.6,Microsoft Copilot,False
+TK-0432,WL-0113,Review for accuracy,validation,11.6,,True
+TK-0433,WL-0114,Investigate variances,learning,14.4,,False
+TK-0434,WL-0114,Document resolution,task_iteration,14.4,Microsoft Copilot,False
+TK-0435,WL-0114,Identify discrepancies,feedback_loop,14.4,UiPath RPA,False
+TK-0436,WL-0114,Match bank statements,directive,14.4,UiPath RPA,False
+TK-0437,WL-0115,Track compliance deadlines,directive,5.6,ServiceNow AI,False
+TK-0438,WL-0115,Test internal controls,validation,5.6,,True
+TK-0439,WL-0115,Prepare audit documentation,directive,5.6,Microsoft Copilot,False
+TK-0440,WL-0115,Interpret regulatory changes,learning,5.6,,True
+TK-0441,WL-0116,Document resolution,task_iteration,11.2,Microsoft Copilot,False
+TK-0442,WL-0116,Identify discrepancies,feedback_loop,11.2,UiPath RPA,False
+TK-0443,WL-0116,Investigate variances,learning,11.2,,False
+TK-0444,WL-0116,Match bank statements,directive,11.2,UiPath RPA,False
+TK-0445,WL-0117,Consolidate departmental data,directive,8.8,Workday AI,False
+TK-0446,WL-0117,Analyze trends,task_iteration,8.8,Microsoft Copilot,False
+TK-0447,WL-0117,Generate financial reports,directive,8.8,Workday AI,False
+TK-0448,WL-0117,Review for accuracy,validation,8.8,,True
+TK-0449,WL-0118,Flag exceptions,feedback_loop,17.6,UiPath RPA,False
+TK-0450,WL-0118,Post journal entries,directive,17.6,Workday AI,False
+TK-0451,WL-0118,Approve routine payments,validation,17.6,,True
+TK-0452,WL-0119,Build financial models,task_iteration,9.1,Microsoft Copilot,False
+TK-0453,WL-0119,Research market conditions,learning,9.1,Microsoft Copilot,False
+TK-0454,WL-0119,Present to leadership,negligibility,9.1,,False
+TK-0455,WL-0120,Track compliance deadlines,directive,7.2,ServiceNow AI,False
+TK-0456,WL-0120,Test internal controls,validation,7.2,,True
+TK-0457,WL-0120,Prepare audit documentation,directive,7.2,Microsoft Copilot,False
+TK-0458,WL-0120,Interpret regulatory changes,learning,7.2,,True
+TK-0459,WL-0121,Match PO to invoice,directive,29.3,UiPath RPA,False
+TK-0460,WL-0121,Flag exceptions,feedback_loop,29.3,UiPath RPA,False
+TK-0461,WL-0121,Approve routine payments,validation,29.3,,True
+TK-0462,WL-0122,Present to leadership,negligibility,14.4,,False
+TK-0463,WL-0122,Build financial models,task_iteration,14.4,Microsoft Copilot,False
+TK-0464,WL-0122,Research market conditions,learning,14.4,Microsoft Copilot,False
+TK-0465,WL-0123,Generate workforce analytics,directive,8.0,Workday AI,False
+TK-0466,WL-0123,Build dashboards,task_iteration,8.0,Microsoft Copilot,False
+TK-0467,WL-0123,Clean HR data,directive,8.0,Workday AI,False
+TK-0468,WL-0123,Validate data accuracy,validation,8.0,Workday AI,False
+TK-0469,WL-0124,Process employee forms,directive,12.0,Workday AI,False
+TK-0470,WL-0124,Generate HR reports,directive,12.0,Workday AI,False
+TK-0471,WL-0124,Answer policy questions,feedback_loop,12.0,Microsoft Copilot,False
+TK-0472,WL-0124,Update employee records,directive,12.0,Workday AI,False
+TK-0473,WL-0125,Develop succession plans,negligibility,4.0,,True
+TK-0474,WL-0125,Analyze workforce trends,learning,4.0,Microsoft Copilot,False
+TK-0475,WL-0125,Benchmark against industry,learning,4.0,Microsoft Copilot,False
+TK-0476,WL-0125,Present to executive team,negligibility,4.0,,True
+TK-0477,WL-0126,Assess training effectiveness,learning,6.0,,False
+TK-0478,WL-0126,Create training materials,task_iteration,6.0,Microsoft Copilot,False
+TK-0479,WL-0126,Design training programs,negligibility,6.0,,False
+TK-0480,WL-0126,Track program completion,directive,6.0,Workday AI,False
+TK-0481,WL-0127,Draft communication plans,task_iteration,13.3,Microsoft Copilot,False
+TK-0482,WL-0127,Conduct 1-on-1 conversations,negligibility,13.3,,True
+TK-0483,WL-0127,Coach managers,negligibility,13.3,,True
+TK-0484,WL-0128,Process employee forms,directive,9.6,Workday AI,False
+TK-0485,WL-0128,Generate HR reports,directive,9.6,Workday AI,False
+TK-0486,WL-0128,Answer policy questions,feedback_loop,9.6,Microsoft Copilot,False
+TK-0487,WL-0128,Update employee records,directive,9.6,Workday AI,False
+TK-0488,WL-0128,Route approvals,directive,9.6,Workday AI,False
+TK-0489,WL-0129,Mediate workplace conflicts,negligibility,13.3,,True
+TK-0490,WL-0129,Coach managers,negligibility,13.3,,True
+TK-0491,WL-0129,Draft communication plans,task_iteration,13.3,Microsoft Copilot,False
+TK-0492,WL-0130,Clean HR data,directive,10.7,Workday AI,False
+TK-0493,WL-0130,Generate workforce analytics,directive,10.7,Workday AI,False
+TK-0494,WL-0130,Build dashboards,task_iteration,10.7,Microsoft Copilot,False
+TK-0495,WL-0131,Develop succession plans,negligibility,4.0,,True
+TK-0496,WL-0131,Benchmark against industry,learning,4.0,Microsoft Copilot,False
+TK-0497,WL-0131,Present to executive team,negligibility,4.0,,True
+TK-0498,WL-0131,Analyze workforce trends,learning,4.0,Microsoft Copilot,False
+TK-0499,WL-0132,Create training materials,task_iteration,6.0,Microsoft Copilot,False
+TK-0500,WL-0132,Track program completion,directive,6.0,Workday AI,False
+TK-0501,WL-0132,Assess training effectiveness,learning,6.0,,False
+TK-0502,WL-0132,Design training programs,negligibility,6.0,,False
+TK-0503,WL-0133,Validate data accuracy,validation,16.5,Workday AI,False
+TK-0504,WL-0133,Clean HR data,directive,16.5,Workday AI,False
+TK-0505,WL-0133,Build dashboards,task_iteration,16.5,Microsoft Copilot,False
+TK-0506,WL-0134,Route approvals,directive,14.7,Workday AI,False
+TK-0507,WL-0134,Process employee forms,directive,14.7,Workday AI,False
+TK-0508,WL-0134,Generate HR reports,directive,14.7,Workday AI,False
+TK-0509,WL-0134,Update employee records,directive,14.7,Workday AI,False
+TK-0510,WL-0134,Answer policy questions,feedback_loop,14.7,Microsoft Copilot,False
+TK-0511,WL-0135,Design training programs,negligibility,9.2,,False
+TK-0512,WL-0135,Create training materials,task_iteration,9.2,Microsoft Copilot,False
+TK-0513,WL-0135,Assess training effectiveness,learning,9.2,,False
+TK-0514,WL-0135,Track program completion,directive,9.2,Workday AI,False
+TK-0515,WL-0136,Clean HR data,directive,11.6,Workday AI,False
+TK-0516,WL-0136,Validate data accuracy,validation,11.6,Workday AI,False
+TK-0517,WL-0136,Generate workforce analytics,directive,11.6,Workday AI,False
+TK-0518,WL-0136,Build dashboards,task_iteration,11.6,Microsoft Copilot,False
+TK-0519,WL-0137,Track program completion,directive,11.2,Workday AI,False
+TK-0520,WL-0137,Assess training effectiveness,learning,11.2,,False
+TK-0521,WL-0137,Create training materials,task_iteration,11.2,Microsoft Copilot,False
+TK-0522,WL-0138,Benchmark against industry,learning,5.6,Microsoft Copilot,False
+TK-0523,WL-0138,Present to executive team,negligibility,5.6,,True
+TK-0524,WL-0138,Develop succession plans,negligibility,5.6,,True
+TK-0525,WL-0138,Analyze workforce trends,learning,5.6,Microsoft Copilot,False
+TK-0526,WL-0139,Conduct 1-on-1 conversations,negligibility,14.4,,True
+TK-0527,WL-0139,Draft communication plans,task_iteration,14.4,Microsoft Copilot,False
+TK-0528,WL-0139,Mediate workplace conflicts,negligibility,14.4,,True
+TK-0529,WL-0139,Coach managers,negligibility,14.4,,True
+TK-0530,WL-0140,Update employee records,directive,12.0,Workday AI,False
+TK-0531,WL-0140,Process employee forms,directive,12.0,Workday AI,False
+TK-0532,WL-0140,Route approvals,directive,12.0,Workday AI,False
+TK-0533,WL-0140,Generate HR reports,directive,12.0,Workday AI,False
+TK-0534,WL-0141,Draft communication plans,task_iteration,10.0,Microsoft Copilot,False
+TK-0535,WL-0141,Coach managers,negligibility,10.0,,True
+TK-0536,WL-0141,Mediate workplace conflicts,negligibility,10.0,,True
+TK-0537,WL-0141,Conduct 1-on-1 conversations,negligibility,10.0,,True
+TK-0538,WL-0142,Design training programs,negligibility,6.0,,False
+TK-0539,WL-0142,Track program completion,directive,6.0,Workday AI,False
+TK-0540,WL-0142,Assess training effectiveness,learning,6.0,,False
+TK-0541,WL-0142,Create training materials,task_iteration,6.0,Microsoft Copilot,False
+TK-0542,WL-0143,Analyze workforce trends,learning,4.0,Microsoft Copilot,False
+TK-0543,WL-0143,Present to executive team,negligibility,4.0,,True
+TK-0544,WL-0143,Develop succession plans,negligibility,4.0,,True
+TK-0545,WL-0143,Benchmark against industry,learning,4.0,Microsoft Copilot,False
+TK-0546,WL-0144,Validate data accuracy,validation,10.7,Workday AI,False
+TK-0547,WL-0144,Generate workforce analytics,directive,10.7,Workday AI,False
+TK-0548,WL-0144,Build dashboards,task_iteration,10.7,Microsoft Copilot,False
+TK-0549,WL-0145,Assess training effectiveness,learning,6.8,,False
+TK-0550,WL-0145,Create training materials,task_iteration,6.8,Microsoft Copilot,False
+TK-0551,WL-0145,Design training programs,negligibility,6.8,,False
+TK-0552,WL-0145,Track program completion,directive,6.8,Workday AI,False
+TK-0553,WL-0146,Draft communication plans,task_iteration,11.2,Microsoft Copilot,False
+TK-0554,WL-0146,Coach managers,negligibility,11.2,,True
+TK-0555,WL-0146,Mediate workplace conflicts,negligibility,11.2,,True
+TK-0556,WL-0146,Conduct 1-on-1 conversations,negligibility,11.2,,True
+TK-0557,WL-0147,Clean HR data,directive,8.8,Workday AI,False
+TK-0558,WL-0147,Generate workforce analytics,directive,8.8,Workday AI,False
+TK-0559,WL-0147,Build dashboards,task_iteration,8.8,Microsoft Copilot,False
+TK-0560,WL-0147,Validate data accuracy,validation,8.8,Workday AI,False
+TK-0561,WL-0148,Process employee forms,directive,13.2,Workday AI,False
+TK-0562,WL-0148,Answer policy questions,feedback_loop,13.2,Microsoft Copilot,False
+TK-0563,WL-0148,Update employee records,directive,13.2,Workday AI,False
+TK-0564,WL-0148,Generate HR reports,directive,13.2,Workday AI,False
+TK-0565,WL-0149,Coach managers,negligibility,12.4,,True
+TK-0566,WL-0149,Draft communication plans,task_iteration,12.4,Microsoft Copilot,False
+TK-0567,WL-0149,Mediate workplace conflicts,negligibility,12.4,,True
+TK-0568,WL-0149,Conduct 1-on-1 conversations,negligibility,12.4,,True
+TK-0569,WL-0150,Track program completion,directive,7.6,Workday AI,False
+TK-0570,WL-0150,Create training materials,task_iteration,7.6,Microsoft Copilot,False
+TK-0571,WL-0150,Design training programs,negligibility,7.6,,False
+TK-0572,WL-0150,Assess training effectiveness,learning,7.6,,False
+TK-0573,WL-0151,Generate HR reports,directive,12.2,Workday AI,False
+TK-0574,WL-0151,Process employee forms,directive,12.2,Workday AI,False
+TK-0575,WL-0151,Route approvals,directive,12.2,Workday AI,False
+TK-0576,WL-0151,Update employee records,directive,12.2,Workday AI,False
+TK-0577,WL-0151,Answer policy questions,feedback_loop,12.2,Microsoft Copilot,False
+TK-0578,WL-0152,Analyze workforce trends,learning,4.8,Microsoft Copilot,False
+TK-0579,WL-0152,Benchmark against industry,learning,4.8,Microsoft Copilot,False
+TK-0580,WL-0152,Develop succession plans,negligibility,4.8,,True
+TK-0581,WL-0152,Present to executive team,negligibility,4.8,,True

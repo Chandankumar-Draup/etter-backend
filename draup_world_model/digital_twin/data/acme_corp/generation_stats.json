@@ -1,0 +1,15 @@
+{
+  "taxonomy": {
+    "functions": 12,
+    "sub_functions": 33,
+    "job_family_groups": 56,
+    "job_families": 113
+  },
+  "roles": 32,
+  "job_titles": 342,
+  "workloads": 491,
+  "tasks": 1971,
+  "skills": 188,
+  "technologies": 65,
+  "workflows": 8
+}

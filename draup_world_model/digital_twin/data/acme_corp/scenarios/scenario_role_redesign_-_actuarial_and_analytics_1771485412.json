@@ -1,0 +1,4285 @@
+{
+  "_metadata": {
+    "config": {
+      "name": "role_redesign - Actuarial and Analytics",
+      "simulation_type": "role_redesign",
+      "scope_type": "function",
+      "scope_name": "Actuarial and Analytics",
+      "parameters": {
+        "automation_factor": 0.75
+      },
+      "constraints": {},
+      "timeline_months": 48
+    },
+    "created_at": 1771485412.456631,
+    "completed_at": 1771485412.515143
+  },
+  "result": {
+    "engine": "v2_time_stepped",
+    "simulation_type": "role_redesign",
+    "trajectory_summary": {
+      "engine": "v2_time_stepped",
+      "timeline_months": 36,
+      "theoretical_max": {
+        "freed_headcount": 23.6,
+        "gross_savings": 12238508.0
+      },
+      "actual_at_end": {
+        "adoption_level": 1.0,
+        "effective_freed_hc": 22.2,
+        "cumulative_savings": 5519616.64,
+        "cumulative_costs": 1414857.99,
+        "cumulative_net": 4104758.66,
+        "npv": 3310918.11,
+        "roi_pct": 290.1
+      },
+      "human_factors_final": {
+        "resistance": 0.0,
+        "morale": 1.0,
+        "proficiency": 0.8916,
+        "culture_readiness": 0.7352,
+        "composite_multiplier": 0.9067
+      },
+      "payback_month": 14,
+      "breakeven_month": 14
+    },
+    "milestones": [
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0382,
+          "delta": 0.0154
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 0.7,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 7704.44,
+          "monthly_costs": 29716.43,
+          "monthly_net": -22012.0,
+          "cumulative_savings": 14335.82,
+          "cumulative_costs": 86416.2,
+          "cumulative_net": -72080.38,
+          "npv_to_date": -70976.34
+        },
+        "human_factors": {
+          "resistance": 0.5123,
+          "morale": 0.7465,
+          "proficiency": 0.5108,
+          "culture_readiness": 0.536,
+          "composite_multiplier": 0.5573
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.1083,
+          "delta": 0.0281
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 1.9,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 22052.34,
+          "monthly_costs": 34133.61,
+          "monthly_net": -12081.27,
+          "cumulative_savings": 64216.0,
+          "cumulative_costs": 183820.91,
+          "cumulative_net": -119604.91,
+          "npv_to_date": -116707.02
+        },
+        "human_factors": {
+          "resistance": 0.4408,
+          "morale": 0.7972,
+          "proficiency": 0.526,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6006
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.418,
+          "delta": 0.0694
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 7.7,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 1.1,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 87880.29,
+          "monthly_costs": 53652.84,
+          "monthly_net": 34227.45,
+          "cumulative_savings": 398284.98,
+          "cumulative_costs": 448999.21,
+          "cumulative_net": -50714.23,
+          "npv_to_date": -53884.05
+        },
+        "human_factors": {
+          "resistance": 0.3408,
+          "morale": 0.92,
+          "proficiency": 0.5813,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.6821
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.8353,
+          "delta": 0.0546
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 16.4,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 3.3,
+          "redeployed_cumulative": 0.6,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 185761.0,
+          "monthly_costs": 78133.36,
+          "monthly_net": 107627.64,
+          "cumulative_savings": 1277015.15,
+          "cumulative_costs": 856493.11,
+          "cumulative_net": 420522.05,
+          "npv_to_date": 361322.91
+        },
+        "human_factors": {
+          "resistance": 0.2469,
+          "morale": 1.0,
+          "proficiency": 0.6771,
+          "culture_readiness": 0.6605,
+          "composite_multiplier": 0.7603
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9816,
+          "delta": 0.0093
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 20.4,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 6.5,
+          "redeployed_cumulative": 1.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 231290.76,
+          "monthly_costs": 48089.83,
+          "monthly_net": 183200.93,
+          "cumulative_savings": 2578279.29,
+          "cumulative_costs": 1139444.44,
+          "cumulative_net": 1438834.85,
+          "npv_to_date": 1219132.8
+        },
+        "human_factors": {
+          "resistance": 0.1201,
+          "morale": 1.0,
+          "proficiency": 0.7727,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8301
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9999,
+          "delta": 0.0
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 22.2,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 13.1,
+          "redeployed_cumulative": 2.5,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 252516.89,
+          "monthly_costs": 23013.96,
+          "monthly_net": 229502.93,
+          "cumulative_savings": 5519616.64,
+          "cumulative_costs": 1414857.99,
+          "cumulative_net": 4104758.66,
+          "npv_to_date": 3310918.11
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8916,
+          "culture_readiness": 0.7352,
+          "composite_multiplier": 0.9067
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "monthly_snapshots": [
+      {
+        "month": 1,
+        "adoption": {
+          "level": 0.0102,
+          "delta": 0.0102
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 0.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 2050.1,
+          "monthly_costs": 27954.65,
+          "monthly_net": -25904.55,
+          "cumulative_savings": 2050.1,
+          "cumulative_costs": 27954.65,
+          "cumulative_net": -25904.55,
+          "npv_to_date": -25699.62
+        },
+        "human_factors": {
+          "resistance": 0.5689,
+          "morale": 0.7151,
+          "proficiency": 0.5033,
+          "culture_readiness": 0.5125,
+          "composite_multiplier": 0.5263
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 2,
+        "adoption": {
+          "level": 0.0227,
+          "delta": 0.0125
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 0.4,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 4581.29,
+          "monthly_costs": 28745.12,
+          "monthly_net": -24163.83,
+          "cumulative_savings": 6631.39,
+          "cumulative_costs": 56699.77,
+          "cumulative_net": -50068.38,
+          "npv_to_date": -49482.64
+        },
+        "human_factors": {
+          "resistance": 0.5397,
+          "morale": 0.7306,
+          "proficiency": 0.5069,
+          "culture_readiness": 0.5245,
+          "composite_multiplier": 0.5421
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0382,
+          "delta": 0.0154
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 0.7,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 7704.44,
+          "monthly_costs": 29716.43,
+          "monthly_net": -22012.0,
+          "cumulative_savings": 14335.82,
+          "cumulative_costs": 86416.2,
+          "cumulative_net": -72080.38,
+          "npv_to_date": -70976.34
+        },
+        "human_factors": {
+          "resistance": 0.5123,
+          "morale": 0.7465,
+          "proficiency": 0.5108,
+          "culture_readiness": 0.536,
+          "composite_multiplier": 0.5573
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 4,
+        "adoption": {
+          "level": 0.0571,
+          "delta": 0.0189
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 1.0,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 11551.53,
+          "monthly_costs": 30907.62,
+          "monthly_net": -19356.09,
+          "cumulative_savings": 25887.35,
+          "cumulative_costs": 117323.82,
+          "cumulative_net": -91436.47,
+          "npv_to_date": -89727.15
+        },
+        "human_factors": {
+          "resistance": 0.4867,
+          "morale": 0.7629,
+          "proficiency": 0.5153,
+          "culture_readiness": 0.547,
+          "composite_multiplier": 0.5721
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 5,
+        "adoption": {
+          "level": 0.0802,
+          "delta": 0.0231
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 1.4,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 16276.3,
+          "monthly_costs": 32363.48,
+          "monthly_net": -16087.17,
+          "cumulative_savings": 42163.66,
+          "cumulative_costs": 149687.29,
+          "cumulative_net": -107523.64,
+          "npv_to_date": -105187.98
+        },
+        "human_factors": {
+          "resistance": 0.4629,
+          "morale": 0.7798,
+          "proficiency": 0.5203,
+          "culture_readiness": 0.5575,
+          "composite_multiplier": 0.5865
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.1083,
+          "delta": 0.0281
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 1.9,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 22052.34,
+          "monthly_costs": 34133.61,
+          "monthly_net": -12081.27,
+          "cumulative_savings": 64216.0,
+          "cumulative_costs": 183820.91,
+          "cumulative_net": -119604.91,
+          "npv_to_date": -116707.02
+        },
+        "human_factors": {
+          "resistance": 0.4408,
+          "morale": 0.7972,
+          "proficiency": 0.526,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6006
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 7,
+        "adoption": {
+          "level": 0.1422,
+          "delta": 0.0339
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 2.6,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.3,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 29066.9,
+          "monthly_costs": 36270.03,
+          "monthly_net": -7203.13,
+          "cumulative_savings": 93282.9,
+          "cumulative_costs": 220090.94,
+          "cumulative_net": -126808.04,
+          "npv_to_date": -123520.6
+        },
+        "human_factors": {
+          "resistance": 0.4205,
+          "morale": 0.8153,
+          "proficiency": 0.5325,
+          "culture_readiness": 0.5773,
+          "composite_multiplier": 0.6144
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 8,
+        "adoption": {
+          "level": 0.1827,
+          "delta": 0.0405
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 3.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.4,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 37508.32,
+          "monthly_costs": 38822.69,
+          "monthly_net": -1314.37,
+          "cumulative_savings": 130791.22,
+          "cumulative_costs": 258913.63,
+          "cumulative_net": -128122.41,
+          "npv_to_date": -124754.06
+        },
+        "human_factors": {
+          "resistance": 0.4019,
+          "morale": 0.8343,
+          "proficiency": 0.5399,
+          "culture_readiness": 0.5866,
+          "composite_multiplier": 0.6279
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 9,
+        "adoption": {
+          "level": 0.2304,
+          "delta": 0.0478
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 4.2,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.5,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 47544.79,
+          "monthly_costs": 41832.47,
+          "monthly_net": 5712.32,
+          "cumulative_savings": 178336.0,
+          "cumulative_costs": 300746.09,
+          "cumulative_net": -122410.09,
+          "npv_to_date": -119435.82
+        },
+        "human_factors": {
+          "resistance": 0.3848,
+          "morale": 0.8541,
+          "proficiency": 0.5484,
+          "culture_readiness": 0.5955,
+          "composite_multiplier": 0.6413
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 10,
+        "adoption": {
+          "level": 0.2858,
+          "delta": 0.0554
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 5.2,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 0.6,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 59292.75,
+          "monthly_costs": 45321.14,
+          "monthly_net": 13971.6,
+          "cumulative_savings": 237628.75,
+          "cumulative_costs": 346067.24,
+          "cumulative_net": -108438.49,
+          "npv_to_date": -106530.99
+        },
+        "human_factors": {
+          "resistance": 0.3691,
+          "morale": 0.8749,
+          "proficiency": 0.558,
+          "culture_readiness": 0.604,
+          "composite_multiplier": 0.6547
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 11,
+        "adoption": {
+          "level": 0.3486,
+          "delta": 0.0628
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 6.4,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 0.8,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 72775.94,
+          "monthly_costs": 49279.12,
+          "monthly_net": 23496.82,
+          "cumulative_savings": 310404.69,
+          "cumulative_costs": 395346.36,
+          "cumulative_net": -84941.67,
+          "npv_to_date": -84999.91
+        },
+        "human_factors": {
+          "resistance": 0.3546,
+          "morale": 0.8968,
+          "proficiency": 0.569,
+          "culture_readiness": 0.6122,
+          "composite_multiplier": 0.6683
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.418,
+          "delta": 0.0694
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 7.7,
+          "separated_this_month": 0.2,
+          "separated_cumulative": 1.1,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 87880.29,
+          "monthly_costs": 53652.84,
+          "monthly_net": 34227.45,
+          "cumulative_savings": 398284.98,
+          "cumulative_costs": 448999.21,
+          "cumulative_net": -50714.23,
+          "npv_to_date": -53884.05
+        },
+        "human_factors": {
+          "resistance": 0.3408,
+          "morale": 0.92,
+          "proficiency": 0.5813,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.6821
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 13,
+        "adoption": {
+          "level": 0.4923,
+          "delta": 0.0743
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 9.2,
+          "separated_this_month": 0.3,
+          "separated_cumulative": 1.3,
+          "redeployed_cumulative": 0.3,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 104316.14,
+          "monthly_costs": 56520.78,
+          "monthly_net": 47795.36,
+          "cumulative_savings": 502601.12,
+          "cumulative_costs": 505519.99,
+          "cumulative_net": -2918.87,
+          "npv_to_date": -10777.46
+        },
+        "human_factors": {
+          "resistance": 0.3273,
+          "morale": 0.9445,
+          "proficiency": 0.595,
+          "culture_readiness": 0.6275,
+          "composite_multiplier": 0.6963
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 14,
+        "adoption": {
+          "level": 0.569,
+          "delta": 0.0767
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 10.7,
+          "separated_this_month": 0.3,
+          "separated_cumulative": 1.7,
+          "redeployed_cumulative": 0.3,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 121605.22,
+          "monthly_costs": 61353.25,
+          "monthly_net": 60251.97,
+          "cumulative_savings": 624206.34,
+          "cumulative_costs": 566873.24,
+          "cumulative_net": 57333.1,
+          "npv_to_date": 43133.84
+        },
+        "human_factors": {
+          "resistance": 0.3135,
+          "morale": 0.9705,
+          "proficiency": 0.6098,
+          "culture_readiness": 0.6347,
+          "composite_multiplier": 0.7112
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 15,
+        "adoption": {
+          "level": 0.6449,
+          "delta": 0.0759
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 12.3,
+          "separated_this_month": 0.4,
+          "separated_cumulative": 2.0,
+          "redeployed_cumulative": 0.4,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 139109.81,
+          "monthly_costs": 66135.62,
+          "monthly_net": 72974.19,
+          "cumulative_savings": 763316.15,
+          "cumulative_costs": 633008.86,
+          "cumulative_net": 130307.29,
+          "npv_to_date": 107911.97
+        },
+        "human_factors": {
+          "resistance": 0.299,
+          "morale": 0.9978,
+          "proficiency": 0.6258,
+          "culture_readiness": 0.6416,
+          "composite_multiplier": 0.7267
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 16,
+        "adoption": {
+          "level": 0.7166,
+          "delta": 0.0717
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 13.7,
+          "separated_this_month": 0.4,
+          "separated_cumulative": 2.4,
+          "redeployed_cumulative": 0.5,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 156111.63,
+          "monthly_costs": 70655.62,
+          "monthly_net": 85456.01,
+          "cumulative_savings": 919427.78,
+          "cumulative_costs": 703664.48,
+          "cumulative_net": 215763.3,
+          "npv_to_date": 183169.92
+        },
+        "human_factors": {
+          "resistance": 0.2832,
+          "morale": 1.0,
+          "proficiency": 0.6425,
+          "culture_readiness": 0.6482,
+          "composite_multiplier": 0.7377
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 17,
+        "adoption": {
+          "level": 0.7807,
+          "delta": 0.0641
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 15.1,
+          "separated_this_month": 0.4,
+          "separated_cumulative": 2.9,
+          "redeployed_cumulative": 0.5,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 171826.37,
+          "monthly_costs": 74695.26,
+          "monthly_net": 97131.1,
+          "cumulative_savings": 1091254.15,
+          "cumulative_costs": 778359.74,
+          "cumulative_net": 312894.41,
+          "npv_to_date": 268032.98
+        },
+        "human_factors": {
+          "resistance": 0.2658,
+          "morale": 1.0,
+          "proficiency": 0.6597,
+          "culture_readiness": 0.6545,
+          "composite_multiplier": 0.7488
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.8353,
+          "delta": 0.0546
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 16.4,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 3.3,
+          "redeployed_cumulative": 0.6,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 185761.0,
+          "monthly_costs": 78133.36,
+          "monthly_net": 107627.64,
+          "cumulative_savings": 1277015.15,
+          "cumulative_costs": 856493.11,
+          "cumulative_net": 420522.05,
+          "npv_to_date": 361322.91
+        },
+        "human_factors": {
+          "resistance": 0.2469,
+          "morale": 1.0,
+          "proficiency": 0.6771,
+          "culture_readiness": 0.6605,
+          "composite_multiplier": 0.7603
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 19,
+        "adoption": {
+          "level": 0.8796,
+          "delta": 0.0443
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 17.4,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 3.8,
+          "redeployed_cumulative": 0.7,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 197673.29,
+          "monthly_costs": 45742.42,
+          "monthly_net": 151930.87,
+          "cumulative_savings": 1474688.44,
+          "cumulative_costs": 902235.53,
+          "cumulative_net": 572452.92,
+          "npv_to_date": 491972.37
+        },
+        "human_factors": {
+          "resistance": 0.2267,
+          "morale": 1.0,
+          "proficiency": 0.6944,
+          "culture_readiness": 0.6664,
+          "composite_multiplier": 0.7722
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 20,
+        "adoption": {
+          "level": 0.9142,
+          "delta": 0.0346
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 18.3,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 4.3,
+          "redeployed_cumulative": 0.8,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 207555.73,
+          "monthly_costs": 46537.84,
+          "monthly_net": 161017.89,
+          "cumulative_savings": 1682244.17,
+          "cumulative_costs": 948773.36,
+          "cumulative_net": 733470.81,
+          "npv_to_date": 629340.6
+        },
+        "human_factors": {
+          "resistance": 0.2057,
+          "morale": 1.0,
+          "proficiency": 0.7113,
+          "culture_readiness": 0.6719,
+          "composite_multiplier": 0.7841
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 21,
+        "adoption": {
+          "level": 0.9401,
+          "delta": 0.0259
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 19.0,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 4.8,
+          "redeployed_cumulative": 0.9,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 215578.4,
+          "monthly_costs": 47135.04,
+          "monthly_net": 168443.36,
+          "cumulative_savings": 1897822.57,
+          "cumulative_costs": 995908.41,
+          "cumulative_net": 901914.17,
+          "npv_to_date": 771906.84
+        },
+        "human_factors": {
+          "resistance": 0.1841,
+          "morale": 1.0,
+          "proficiency": 0.7277,
+          "culture_readiness": 0.6773,
+          "composite_multiplier": 0.796
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 22,
+        "adoption": {
+          "level": 0.959,
+          "delta": 0.0189
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 19.6,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 5.4,
+          "redeployed_cumulative": 1.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 222011.34,
+          "monthly_costs": 47569.35,
+          "monthly_net": 174441.99,
+          "cumulative_savings": 2119833.91,
+          "cumulative_costs": 1043477.76,
+          "cumulative_net": 1076356.15,
+          "npv_to_date": 918382.16
+        },
+        "human_factors": {
+          "resistance": 0.1624,
+          "morale": 1.0,
+          "proficiency": 0.7434,
+          "culture_readiness": 0.6824,
+          "composite_multiplier": 0.8077
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 23,
+        "adoption": {
+          "level": 0.9724,
+          "delta": 0.0134
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 20.0,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 5.9,
+          "redeployed_cumulative": 1.1,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 227154.62,
+          "monthly_costs": 47876.86,
+          "monthly_net": 179277.76,
+          "cumulative_savings": 2346988.53,
+          "cumulative_costs": 1091354.62,
+          "cumulative_net": 1255633.92,
+          "npv_to_date": 1067727.07
+        },
+        "human_factors": {
+          "resistance": 0.141,
+          "morale": 1.0,
+          "proficiency": 0.7584,
+          "culture_readiness": 0.6873,
+          "composite_multiplier": 0.8191
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9816,
+          "delta": 0.0093
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 20.4,
+          "separated_this_month": 0.5,
+          "separated_cumulative": 6.5,
+          "redeployed_cumulative": 1.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 231290.76,
+          "monthly_costs": 48089.83,
+          "monthly_net": 183200.93,
+          "cumulative_savings": 2578279.29,
+          "cumulative_costs": 1139444.44,
+          "cumulative_net": 1438834.85,
+          "npv_to_date": 1219132.8
+        },
+        "human_factors": {
+          "resistance": 0.1201,
+          "morale": 1.0,
+          "proficiency": 0.7727,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8301
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 25,
+        "adoption": {
+          "level": 0.9879,
+          "delta": 0.0063
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 20.7,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 7.0,
+          "redeployed_cumulative": 1.3,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 234660.35,
+          "monthly_costs": 22737.77,
+          "monthly_net": 211922.58,
+          "cumulative_savings": 2812939.64,
+          "cumulative_costs": 1162182.21,
+          "cumulative_net": 1650757.43,
+          "npv_to_date": 1392889.87
+        },
+        "human_factors": {
+          "resistance": 0.0998,
+          "morale": 1.0,
+          "proficiency": 0.7862,
+          "culture_readiness": 0.6965,
+          "composite_multiplier": 0.8407
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 26,
+        "adoption": {
+          "level": 0.9921,
+          "delta": 0.0042
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 20.9,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 7.6,
+          "redeployed_cumulative": 1.5,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 237455.03,
+          "monthly_costs": 22834.79,
+          "monthly_net": 214620.24,
+          "cumulative_savings": 3050394.67,
+          "cumulative_costs": 1185017.0,
+          "cumulative_net": 1865377.67,
+          "npv_to_date": 1567466.66
+        },
+        "human_factors": {
+          "resistance": 0.0803,
+          "morale": 1.0,
+          "proficiency": 0.7989,
+          "culture_readiness": 0.7008,
+          "composite_multiplier": 0.8509
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 27,
+        "adoption": {
+          "level": 0.9949,
+          "delta": 0.0028
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.1,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 8.1,
+          "redeployed_cumulative": 1.6,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 239820.57,
+          "monthly_costs": 22898.97,
+          "monthly_net": 216921.61,
+          "cumulative_savings": 3290215.24,
+          "cumulative_costs": 1207915.97,
+          "cumulative_net": 2082299.27,
+          "npv_to_date": 1742519.55
+        },
+        "human_factors": {
+          "resistance": 0.0615,
+          "morale": 1.0,
+          "proficiency": 0.8109,
+          "culture_readiness": 0.7049,
+          "composite_multiplier": 0.8605
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 28,
+        "adoption": {
+          "level": 0.9968,
+          "delta": 0.0018
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.3,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 8.7,
+          "redeployed_cumulative": 1.7,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 241864.39,
+          "monthly_costs": 22940.96,
+          "monthly_net": 218923.43,
+          "cumulative_savings": 3532079.63,
+          "cumulative_costs": 1230856.93,
+          "cumulative_net": 2301222.7,
+          "npv_to_date": 1917790.24
+        },
+        "human_factors": {
+          "resistance": 0.0436,
+          "morale": 1.0,
+          "proficiency": 0.8222,
+          "culture_readiness": 0.7089,
+          "composite_multiplier": 0.8697
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 29,
+        "adoption": {
+          "level": 0.9979,
+          "delta": 0.0012
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.5,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 9.2,
+          "redeployed_cumulative": 1.8,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 243663.9,
+          "monthly_costs": 22968.19,
+          "monthly_net": 220695.71,
+          "cumulative_savings": 3775743.53,
+          "cumulative_costs": 1253825.12,
+          "cumulative_net": 2521918.41,
+          "npv_to_date": 2093082.03
+        },
+        "human_factors": {
+          "resistance": 0.0266,
+          "morale": 1.0,
+          "proficiency": 0.8329,
+          "culture_readiness": 0.7127,
+          "composite_multiplier": 0.8784
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 30,
+        "adoption": {
+          "level": 0.9987,
+          "delta": 0.0008
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.6,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 9.8,
+          "redeployed_cumulative": 1.9,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 245274.21,
+          "monthly_costs": 22985.69,
+          "monthly_net": 222288.51,
+          "cumulative_savings": 4021017.74,
+          "cumulative_costs": 1276810.81,
+          "cumulative_net": 2744206.93,
+          "npv_to_date": 2268242.18
+        },
+        "human_factors": {
+          "resistance": 0.0103,
+          "morale": 1.0,
+          "proficiency": 0.8429,
+          "culture_readiness": 0.7163,
+          "composite_multiplier": 0.8867
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 31,
+        "adoption": {
+          "level": 0.9992,
+          "delta": 0.0005
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.7,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 10.4,
+          "redeployed_cumulative": 2.0,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 246734.27,
+          "monthly_costs": 22996.87,
+          "monthly_net": 223737.4,
+          "cumulative_savings": 4267752.01,
+          "cumulative_costs": 1299807.68,
+          "cumulative_net": 2967944.33,
+          "npv_to_date": 2443149.3
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8523,
+          "culture_readiness": 0.7198,
+          "composite_multiplier": 0.893
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 32,
+        "adoption": {
+          "level": 0.9995,
+          "delta": 0.0003
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 21.8,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 10.9,
+          "redeployed_cumulative": 2.1,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 248071.55,
+          "monthly_costs": 23003.94,
+          "monthly_net": 225067.61,
+          "cumulative_savings": 4515823.56,
+          "cumulative_costs": 1322811.61,
+          "cumulative_net": 3193011.94,
+          "npv_to_date": 2617704.39
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8612,
+          "culture_readiness": 0.7231,
+          "composite_multiplier": 0.8961
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 33,
+        "adoption": {
+          "level": 0.9997,
+          "delta": 0.0002
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 22.0,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 11.5,
+          "redeployed_cumulative": 2.2,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 249305.75,
+          "monthly_costs": 23008.37,
+          "monthly_net": 226297.38,
+          "cumulative_savings": 4765129.31,
+          "cumulative_costs": 1345819.99,
+          "cumulative_net": 3419309.32,
+          "npv_to_date": 2791824.78
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8695,
+          "culture_readiness": 0.7264,
+          "composite_multiplier": 0.899
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 34,
+        "adoption": {
+          "level": 0.9998,
+          "delta": 0.0001
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 22.1,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 12.0,
+          "redeployed_cumulative": 2.3,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 250451.38,
+          "monthly_costs": 23011.15,
+          "monthly_net": 227440.23,
+          "cumulative_savings": 5015580.68,
+          "cumulative_costs": 1368831.14,
+          "cumulative_net": 3646749.55,
+          "npv_to_date": 2965440.09
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8773,
+          "culture_readiness": 0.7294,
+          "composite_multiplier": 0.9017
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 35,
+        "adoption": {
+          "level": 0.9999,
+          "delta": 0.0001
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 22.1,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 12.6,
+          "redeployed_cumulative": 2.4,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 251519.07,
+          "monthly_costs": 23012.88,
+          "monthly_net": 228506.18,
+          "cumulative_savings": 5267099.75,
+          "cumulative_costs": 1391844.02,
+          "cumulative_net": 3875255.73,
+          "npv_to_date": 3138489.17
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8847,
+          "culture_readiness": 0.7324,
+          "composite_multiplier": 0.9043
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9999,
+          "delta": 0.0
+        },
+        "workforce": {
+          "current_headcount": 121,
+          "effective_freed_hc": 22.2,
+          "separated_this_month": 0.6,
+          "separated_cumulative": 13.1,
+          "redeployed_cumulative": 2.5,
+          "attrited_this_month": 1.2
+        },
+        "financial": {
+          "monthly_savings": 252516.89,
+          "monthly_costs": 23013.96,
+          "monthly_net": 229502.93,
+          "cumulative_savings": 5519616.64,
+          "cumulative_costs": 1414857.99,
+          "cumulative_net": 4104758.66,
+          "npv_to_date": 3310918.11
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.8916,
+          "culture_readiness": 0.7352,
+          "composite_multiplier": 0.9067
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "cascade": {
+      "task_changes": {
+        "tasks_affected": 83,
+        "changes": [
+          {
+            "task_id": "task_loss_prediction_and_frequency_severity_modeling_engineer_frequency_and_severity_features",
+            "task_name": "Engineer Frequency and Severity Features",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_loss_prediction_and_frequency_severity_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_loss_prediction_and_frequency_severity_modeling_optimize_model_performance_and_accuracy",
+            "task_name": "Optimize Model Performance and Accuracy",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_loss_prediction_and_frequency_severity_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_loss_prediction_and_frequency_severity_modeling_integrate_loss_predictions_into_pricing_systems",
+            "task_name": "Integrate Loss Predictions into Pricing Systems",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_loss_prediction_and_frequency_severity_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_model_documentation_and_stakeholder_communication_maintain_model_documentation_and_version_control",
+            "task_name": "Maintain Model Documentation and Version Control",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_model_documentation_and_stakeholder_communication",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 1.0
+          },
+          {
+            "task_id": "task_pricing_optimization_and_model_backtesting_collect_and_validate_historical_claims_data",
+            "task_name": "Collect and Validate Historical Claims Data",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_pricing_optimization_and_model_backtesting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 8.0
+          },
+          {
+            "task_id": "task_pricing_optimization_and_model_backtesting_execute_backtesting_scenarios_and_generate_performance_metrics",
+            "task_name": "Execute Backtesting Scenarios and Generate Performance Metrics",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_pricing_optimization_and_model_backtesting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 12.0
+          },
+          {
+            "task_id": "task_pricing_optimization_and_model_backtesting_analyze_model_performance_gaps_and_recommend_adjustments",
+            "task_name": "Analyze Model Performance Gaps and Recommend Adjustments",
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_pricing_optimization_and_model_backtesting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_risk_assessment_model_development_and_validation_engineer_risk_factors_and_feature_selection",
+            "task_name": "Engineer Risk Factors and Feature Selection",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_risk_assessment_model_development_and_validation",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_risk_assessment_model_development_and_validation_optimize_model_thresholds_and_decision_rules",
+            "task_name": "Optimize Model Thresholds and Decision Rules",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_risk_assessment_model_development_and_validation",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_model_governance_and_regulatory_compliance_maintain_model_documentation_and_change_logs",
+            "task_name": "Maintain Model Documentation and Change Logs",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_governance_and_regulatory_compliance",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_model_performance_monitoring_and_recalibration_detect_and_alert_on_model_performance_degradation",
+            "task_name": "Detect and Alert on Model Performance Degradation",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_performance_monitoring_and_recalibration",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_model_performance_monitoring_and_recalibration_monitor_model_performance_metrics_in_production",
+            "task_name": "Monitor Model Performance Metrics in Production",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_performance_monitoring_and_recalibration",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_model_performance_monitoring_and_recalibration_document_model_changes_and_performance_updates",
+            "task_name": "Document Model Changes and Performance Updates",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_performance_monitoring_and_recalibration",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_model_performance_monitoring_and_recalibration_recalibrate_model_parameters_and_thresholds",
+            "task_name": "Recalibrate Model Parameters and Thresholds",
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_performance_monitoring_and_recalibration",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_model_performance_monitoring_and_insights_delivery_monitor_data_quality_and_completeness",
+            "task_name": "Monitor Data Quality and Completeness",
+            "workload_id": "wl_data_scientist__customer_analytics_model_performance_monitoring_and_insights_delivery",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_customer_lifetime_value_and_churn_prediction_modeling_conduct_hyperparameter_tuning_and_model_optimization",
+            "task_name": "Conduct Hyperparameter Tuning and Model Optimization",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_lifetime_value_and_churn_prediction_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_customer_lifetime_value_and_churn_prediction_modeling_prepare_model_outputs_for_business_integration",
+            "task_name": "Prepare Model Outputs for Business Integration",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_lifetime_value_and_churn_prediction_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_customer_lifetime_value_and_churn_prediction_modeling_engineer_features_for_churn_prediction",
+            "task_name": "Engineer Features for Churn Prediction",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_lifetime_value_and_churn_prediction_modeling",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_customer_segmentation_and_personalization_integrate_segments_into_marketing_automation",
+            "task_name": "Integrate Segments into Marketing Automation",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_segmentation_and_personalization",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_customer_segmentation_and_personalization_monitor_segment_performance_and_engagement_metrics",
+            "task_name": "Monitor Segment Performance and Engagement Metrics",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_segmentation_and_personalization",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_customer_segmentation_and_personalization_optimize_segmentation_parameters_and_thresholds",
+            "task_name": "Optimize Segmentation Parameters and Thresholds",
+            "workload_id": "wl_data_scientist__customer_analytics_customer_segmentation_and_personalization",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_claims_automation_model_development_develop_claims_automation_algorithms",
+            "task_name": "Develop Claims Automation Algorithms",
+            "workload_id": "wl_senior_data_scientist__claims_ai_claims_automation_model_development",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claims_automation_model_development_deploy_claims_automation_models_to_production",
+            "task_name": "Deploy Claims Automation Models to Production",
+            "workload_id": "wl_senior_data_scientist__claims_ai_claims_automation_model_development",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_claims_automation_model_development_prepare_claims_data_for_model_training",
+            "task_name": "Prepare Claims Data for Model Training",
+            "workload_id": "wl_senior_data_scientist__claims_ai_claims_automation_model_development",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_fraud_detection_model_development_and_maintenance_train_and_optimize_fraud_detection_models",
+            "task_name": "Train and Optimize Fraud Detection Models",
+            "workload_id": "wl_senior_data_scientist__claims_ai_fraud_detection_model_development_and_maintenance",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_fraud_detection_model_development_and_maintenance_monitor_fraud_model_detection_accuracy",
+            "task_name": "Monitor Fraud Model Detection Accuracy",
+            "workload_id": "wl_senior_data_scientist__claims_ai_fraud_detection_model_development_and_maintenance",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_fraud_detection_model_development_and_maintenance_update_fraud_detection_models_with_new_patterns",
+            "task_name": "Update Fraud Detection Models with New Patterns",
+            "workload_id": "wl_senior_data_scientist__claims_ai_fraud_detection_model_development_and_maintenance",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_operational_metrics_monitoring_and_refinement_refine_operational_metric_definitions",
+            "task_name": "Refine Operational Metric Definitions",
+            "workload_id": "wl_data_visualization_specialist__operations_operational_metrics_monitoring_and_refinement",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_operational_metrics_monitoring_and_refinement_monitor_operational_metrics_against_baselines",
+            "task_name": "Monitor Operational Metrics Against Baselines",
+            "workload_id": "wl_data_visualization_specialist__operations_operational_metrics_monitoring_and_refinement",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 45.0
+          },
+          {
+            "task_id": "task_operational_dashboard_development_establish_operational_dashboard_alert_rules",
+            "task_name": "Establish Operational Dashboard Alert Rules",
+            "workload_id": "wl_data_visualization_specialist__operations_operational_dashboard_development",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_operational_dashboard_development_configure_operational_data_pipelines",
+            "task_name": "Configure Operational Data Pipelines",
+            "workload_id": "wl_data_visualization_specialist__operations_operational_dashboard_development",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_real_time_analytics_tool_development_integrate_real_time_data_sources_and_apis",
+            "task_name": "Integrate Real-Time Data Sources and APIs",
+            "workload_id": "wl_data_visualization_specialist__operations_real_time_analytics_tool_development",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_dashboard_performance_monitoring_and_optimization_monitor_dashboard_query_performance_and_load_times",
+            "task_name": "Monitor Dashboard Query Performance and Load Times",
+            "workload_id": "wl_data_visualization_specialist__executive_reporting_dashboard_performance_monitoring_and_optimization",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_dashboard_performance_monitoring_and_optimization_implement_dashboard_infrastructure_scaling",
+            "task_name": "Implement Dashboard Infrastructure Scaling",
+            "workload_id": "wl_data_visualization_specialist__executive_reporting_dashboard_performance_monitoring_and_optimization",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_dashboard_performance_monitoring_and_optimization_optimize_data_queries_and_refresh_schedules",
+            "task_name": "Optimize Data Queries and Refresh Schedules",
+            "workload_id": "wl_data_visualization_specialist__executive_reporting_dashboard_performance_monitoring_and_optimization",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_fraud_detection_and_indicator_analysis_analyze_fraud_indicators_and_risk_scoring",
+            "task_name": "Analyze Fraud Indicators and Risk Scoring",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_fraud_detection_and_indicator_analysis",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_fraud_detection_and_indicator_analysis_develop_fraud_detection_algorithm_models",
+            "task_name": "Develop Fraud Detection Algorithm Models",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_fraud_detection_and_indicator_analysis",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_claims_analytics_dashboard_development_automate_data_pipeline_and_refresh_schedules",
+            "task_name": "Automate Data Pipeline and Refresh Schedules",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_claims_analytics_dashboard_development",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_kpi_definition_and_performance_reporting_build_kpi_tracking_and_monitoring_reports",
+            "task_name": "Build KPI Tracking and Monitoring Reports",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_kpi_definition_and_performance_reporting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_claims_operations_analytics_and_optimization_model_impact_of_operational_changes",
+            "task_name": "Model Impact of Operational Changes",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_claims_operations_analytics_and_optimization",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_claims_operations_analytics_and_optimization_monitor_claims_operations_performance_metrics",
+            "task_name": "Monitor Claims Operations Performance Metrics",
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_claims_operations_analytics_and_optimization",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 15.0
+          },
+          {
+            "task_id": "task_underwriting_performance_metrics_and_analytics_analyze_underwriter_productivity_and_quality",
+            "task_name": "Analyze Underwriter Productivity and Quality",
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_underwriting_performance_metrics_and_analytics",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_underwriting_performance_metrics_and_analytics_calculate_underwriting_performance_metrics",
+            "task_name": "Calculate Underwriting Performance Metrics",
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_underwriting_performance_metrics_and_analytics",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_self_service_bi_tool_development_and_support_monitor_bi_tool_performance_and_usage",
+            "task_name": "Monitor BI Tool Performance and Usage",
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_self_service_bi_tool_development_and_support",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_underwriting_and_pricing_performance_dashboards_integrate_real_time_underwriting_data_sources",
+            "task_name": "Integrate Real-Time Underwriting Data Sources",
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_underwriting_and_pricing_performance_dashboards",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_market_trend_analysis_and_reporting_develop_market_trend_analysis_reports",
+            "task_name": "Develop Market Trend Analysis Reports",
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_market_trend_analysis_and_reporting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_pricing_performance_monitoring_and_analysis_analyze_loss_ratios_and_profitability_trends",
+            "task_name": "Analyze Loss Ratios and Profitability Trends",
+            "workload_id": "wl_pricing_actuary__property_and_casualty_pricing_performance_monitoring_and_analysis",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_pricing_performance_monitoring_and_analysis_generate_pricing_performance_reports",
+            "task_name": "Generate Pricing Performance Reports",
+            "workload_id": "wl_pricing_actuary__property_and_casualty_pricing_performance_monitoring_and_analysis",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_pricing_performance_monitoring_and_analysis_monitor_premium_volume_and_mix",
+            "task_name": "Monitor Premium Volume and Mix",
+            "workload_id": "wl_pricing_actuary__property_and_casualty_pricing_performance_monitoring_and_analysis",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_predictive_analytics_and_model_refinement_refine_model_features_and_variables",
+            "task_name": "Refine Model Features and Variables",
+            "workload_id": "wl_pricing_actuary__property_and_casualty_predictive_analytics_and_model_refinement",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_experience_studies_and_assumption_setting_analyze_historical_claims_and_policy_data",
+            "task_name": "Analyze Historical Claims and Policy Data",
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_experience_studies_and_assumption_setting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_pricing_validation_and_profitability_review_calculate_and_review_pricing_margins",
+            "task_name": "Calculate and Review Pricing Margins",
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_pricing_validation_and_profitability_review",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_competitive_analysis_and_market_monitoring_monitor_competitor_pricing_strategies",
+            "task_name": "Monitor Competitor Pricing Strategies",
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_competitive_analysis_and_market_monitoring",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 45.0
+          },
+          {
+            "task_id": "task_pricing_model_development_and_maintenance_document_model_specifications_and_changes",
+            "task_name": "Document Model Specifications and Changes",
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_pricing_model_development_and_maintenance",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_pricing_and_risk_assessment_for_new_products_conduct_risk_assessment_and_modeling_for_new_products",
+            "task_name": "Conduct Risk Assessment and Modeling for New Products",
+            "workload_id": "wl_senior_product_actuary__innovation_pricing_and_risk_assessment_for_new_products",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_pricing_and_risk_assessment_for_new_products_perform_sensitivity_and_break_even_analysis",
+            "task_name": "Perform Sensitivity and Break-Even Analysis",
+            "workload_id": "wl_senior_product_actuary__innovation_pricing_and_risk_assessment_for_new_products",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 5.0
+          },
+          {
+            "task_id": "task_pricing_and_risk_assessment_for_new_products_analyze_claims_data_and_develop_experience_assumptions",
+            "task_name": "Analyze Claims Data and Develop Experience Assumptions",
+            "workload_id": "wl_senior_product_actuary__innovation_pricing_and_risk_assessment_for_new_products",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_risk_management_strategy_and_implementation_establish_risk_monitoring_and_reporting_processes",
+            "task_name": "Establish Risk Monitoring and Reporting Processes",
+            "workload_id": "wl_senior_product_actuary__innovation_risk_management_strategy_and_implementation",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_health_product_design_and_development_perform_sensitivity_analysis_on_product_design",
+            "task_name": "Perform Sensitivity Analysis on Product Design",
+            "workload_id": "wl_product_actuary__health_insurance_health_product_design_and_development",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_regulatory_compliance_and_filings_maintain_regulatory_filing_records_and_documentation",
+            "task_name": "Maintain Regulatory Filing Records and Documentation",
+            "workload_id": "wl_product_actuary__health_insurance_regulatory_compliance_and_filings",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_underwriting_and_product_collaboration_analyze_underwriting_experience_and_loss_ratios",
+            "task_name": "Analyze Underwriting Experience and Loss Ratios",
+            "workload_id": "wl_product_actuary__health_insurance_underwriting_and_product_collaboration",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_profitability_analysis_and_financial_modeling_conduct_scenario_and_stress_testing",
+            "task_name": "Conduct Scenario and Stress Testing",
+            "workload_id": "wl_product_actuary__health_insurance_profitability_analysis_and_financial_modeling",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 10.0
+          },
+          {
+            "task_id": "task_profitability_analysis_and_financial_modeling_analyze_profitability_metrics_and_trends",
+            "task_name": "Analyze Profitability Metrics and Trends",
+            "workload_id": "wl_product_actuary__health_insurance_profitability_analysis_and_financial_modeling",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_reserve_report_preparation_and_documentation_compile_reserve_data_and_supporting_documentation",
+            "task_name": "Compile Reserve Data and Supporting Documentation",
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_reserve_report_preparation_and_documentation",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_variance_analysis_and_performance_monitoring_calculate_variance_metrics_and_performance_kpis",
+            "task_name": "Calculate Variance Metrics and Performance KPIs",
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_variance_analysis_and_performance_monitoring",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_variance_analysis_and_performance_monitoring_monitor_reserve_performance_against_benchmarks",
+            "task_name": "Monitor Reserve Performance Against Benchmarks",
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_variance_analysis_and_performance_monitoring",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_auto_claims_data_analysis_and_trend_identification_identify_claims_trends_and_patterns_using_ai_analytics",
+            "task_name": "Identify Claims Trends and Patterns Using AI Analytics",
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_auto_claims_data_analysis_and_trend_identification",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 45.0
+          },
+          {
+            "task_id": "task_auto_claims_data_analysis_and_trend_identification_extract_and_validate_auto_claims_data_from_core_systems",
+            "task_name": "Extract and Validate Auto Claims Data from Core Systems",
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_auto_claims_data_analysis_and_trend_identification",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 20.0
+          },
+          {
+            "task_id": "task_claim_closure_pattern_analysis_and_forecasting_analyze_claim_closure_patterns_and_timelines",
+            "task_name": "Analyze Claim Closure Patterns and Timelines",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_claim_closure_pattern_analysis_and_forecasting",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_claim_closure_pattern_analysis_and_forecasting_forecast_future_claim_closures_using_predictive_models",
+            "task_name": "Forecast Future Claim Closures Using Predictive Models",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_claim_closure_pattern_analysis_and_forecasting",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 45.0
+          },
+          {
+            "task_id": "task_workers'_compensation_claims_development_analysis_calculate_development_factors_and_tail_estimates",
+            "task_name": "Calculate Development Factors and Tail Estimates",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_workers'_compensation_claims_development_analysis",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_workers'_compensation_claims_development_analysis_extract_and_analyze_workers'_compensation_claims_development_data",
+            "task_name": "Extract and Analyze Workers' Compensation Claims Development Data",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_workers'_compensation_claims_development_analysis",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_reserve_projection_and_reporting_compile_reserve_projections_by_accident_year",
+            "task_name": "Compile Reserve Projections by Accident Year",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_reserve_projection_and_reporting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_reserve_adequacy_assessment_and_monitoring_monitor_reserve_adequacy_metrics_over_time",
+            "task_name": "Monitor Reserve Adequacy Metrics Over Time",
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_reserve_adequacy_assessment_and_monitoring",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_assumption_review_and_validation_assumption_sensitivity_and_impact_analysis",
+            "task_name": "Assumption Sensitivity and Impact Analysis",
+            "workload_id": "wl_chief_reserving_actuary_assumption_review_and_validation",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_assumption_review_and_validation_assumption_data_collection_and_validation",
+            "task_name": "Assumption Data Collection and Validation",
+            "workload_id": "wl_chief_reserving_actuary_assumption_review_and_validation",
+            "old_level": "human_led",
+            "new_level": "ai_led",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_statutory_reserve_calculations_and_annual_statement_annual_statement_compilation_and_reconciliation",
+            "task_name": "Annual Statement Compilation and Reconciliation",
+            "workload_id": "wl_chief_reserving_actuary_statutory_reserve_calculations_and_annual_statement",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_statutory_reserve_calculations_and_annual_statement_statutory_reserve_calculation_execution",
+            "task_name": "Statutory Reserve Calculation Execution",
+            "workload_id": "wl_chief_reserving_actuary_statutory_reserve_calculations_and_annual_statement",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_reserve_adequacy_monitoring_and_reporting_reserve_variance_analysis_and_reporting",
+            "task_name": "Reserve Variance Analysis and Reporting",
+            "workload_id": "wl_reserving_actuary__pandc_claims_reserve_adequacy_monitoring_and_reporting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 40.0
+          },
+          {
+            "task_id": "task_reserve_adequacy_monitoring_and_reporting_reserve_adequacy_metrics_calculation_and_monitoring",
+            "task_name": "Reserve Adequacy Metrics Calculation and Monitoring",
+            "workload_id": "wl_reserving_actuary__pandc_claims_reserve_adequacy_monitoring_and_reporting",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_stochastic_modeling_and_reserve_estimation_monte_carlo_simulation_execution_and_result_analysis",
+            "task_name": "Monte Carlo Simulation Execution and Result Analysis",
+            "workload_id": "wl_reserving_actuary__pandc_claims_stochastic_modeling_and_reserve_estimation",
+            "old_level": "ai_led",
+            "new_level": "ai_only",
+            "automation_delta": 0.25,
+            "time_allocation_pct": 35.0
+          },
+          {
+            "task_id": "task_claims_development_analysis_and_loss_triangles_loss_triangle_development_and_data_extraction",
+            "task_name": "Loss Triangle Development and Data Extraction",
+            "workload_id": "wl_reserving_actuary__pandc_claims_claims_development_analysis_and_loss_triangles",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 30.0
+          },
+          {
+            "task_id": "task_claims_development_analysis_and_loss_triangles_claims_development_pattern_analysis_and_trend_identification",
+            "task_name": "Claims Development Pattern Analysis and Trend Identification",
+            "workload_id": "wl_reserving_actuary__pandc_claims_claims_development_analysis_and_loss_triangles",
+            "old_level": "shared",
+            "new_level": "ai_only",
+            "automation_delta": 0.55,
+            "time_allocation_pct": 35.0
+          }
+        ]
+      },
+      "workload_changes": {
+        "workloads_affected": 47,
+        "changes": [
+          {
+            "workload_id": "wl_data_scientist__customer_analytics_customer_segmentation_and_personalization",
+            "workload_name": "Customer Segmentation and Personalization",
+            "role_id": "role_data_scientist__customer_analytics",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 70.0,
+            "automation_score": 79.4
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_variance_analysis_and_performance_monitoring",
+            "workload_name": "Variance Analysis and Performance Monitoring",
+            "role_id": "role_loss_reserve_analyst__auto_claims",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 73.0
+          },
+          {
+            "workload_id": "wl_product_actuary__health_insurance_health_product_design_and_development",
+            "workload_name": "Health Product Design and Development",
+            "role_id": "role_product_actuary__health_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 24.2
+          },
+          {
+            "workload_id": "wl_senior_data_scientist__claims_ai_claims_automation_model_development",
+            "workload_name": "Claims Automation Model Development",
+            "role_id": "role_senior_data_scientist__claims_ai",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 90.0
+          },
+          {
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_claims_analytics_dashboard_development",
+            "workload_name": "Claims Analytics Dashboard Development",
+            "role_id": "role_senior_bi_analyst__claims_analytics",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 56.2,
+            "automation_score": 62.5
+          },
+          {
+            "workload_id": "wl_senior_product_actuary__innovation_pricing_and_risk_assessment_for_new_products",
+            "workload_name": "Pricing and Risk Assessment for New Products",
+            "role_id": "role_senior_product_actuary__innovation",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 45.2
+          },
+          {
+            "workload_id": "wl_pricing_actuary__property_and_casualty_pricing_performance_monitoring_and_analysis",
+            "workload_name": "Pricing Performance Monitoring and Analysis",
+            "role_id": "role_pricing_actuary__property_and_casualty",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "old_automation_score": 40.0,
+            "automation_score": 95.0
+          },
+          {
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_underwriting_performance_metrics_and_analytics",
+            "workload_name": "Underwriting Performance Metrics and Analytics",
+            "role_id": "role_bi_analyst__underwriting_and_pricing",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 78.5
+          },
+          {
+            "workload_id": "wl_product_actuary__health_insurance_underwriting_and_product_collaboration",
+            "workload_name": "Underwriting and Product Collaboration",
+            "role_id": "role_product_actuary__health_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 28.7
+          },
+          {
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_fraud_detection_and_indicator_analysis",
+            "workload_name": "Fraud Detection and Indicator Analysis",
+            "role_id": "role_senior_bi_analyst__claims_analytics",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 87.5
+          },
+          {
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_kpi_definition_and_performance_reporting",
+            "workload_name": "KPI Definition and Performance Reporting",
+            "role_id": "role_senior_bi_analyst__claims_analytics",
+            "old_level": "shared",
+            "new_level": "human_led",
+            "old_automation_score": 28.7,
+            "automation_score": 48.0
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_auto_claims_data_analysis_and_trend_identification",
+            "workload_name": "Auto Claims Data Analysis and Trend Identification",
+            "role_id": "role_loss_reserve_analyst__auto_claims",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 86.2
+          },
+          {
+            "workload_id": "wl_reserving_actuary__pandc_claims_claims_development_analysis_and_loss_triangles",
+            "workload_name": "Claims Development Analysis and Loss Triangles",
+            "role_id": "role_reserving_actuary__pandc_claims",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 79.7
+          },
+          {
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_pricing_model_development_and_maintenance",
+            "workload_name": "Pricing Model Development and Maintenance",
+            "role_id": "role_senior_pricing_actuary__life_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 26.0
+          },
+          {
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_self_service_bi_tool_development_and_support",
+            "workload_name": "Self-Service BI Tool Development and Support",
+            "role_id": "role_bi_analyst__underwriting_and_pricing",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 20.5
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_claim_closure_pattern_analysis_and_forecasting",
+            "workload_name": "Claim Closure Pattern Analysis and Forecasting",
+            "role_id": "role_loss_reserve_analyst__workers'_compensation",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 90.0
+          },
+          {
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_competitive_analysis_and_market_monitoring",
+            "workload_name": "Competitive Analysis and Market Monitoring",
+            "role_id": "role_senior_pricing_actuary__life_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 39.8
+          },
+          {
+            "workload_id": "wl_senior_bi_analyst__claims_analytics_claims_operations_analytics_and_optimization",
+            "workload_name": "Claims Operations Analytics and Optimization",
+            "role_id": "role_senior_bi_analyst__claims_analytics",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 34.2
+          },
+          {
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_model_documentation_and_stakeholder_communication",
+            "workload_name": "Model Documentation and Stakeholder Communication",
+            "role_id": "role_predictive_modeler__pricing_and_loss",
+            "old_level": "human_led",
+            "new_level": "human_only",
+            "old_automation_score": 15.0,
+            "automation_score": 17.8
+          },
+          {
+            "workload_id": "wl_data_visualization_specialist__operations_operational_dashboard_development",
+            "workload_name": "Operational Dashboard Development",
+            "role_id": "role_data_visualization_specialist__operations",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 37.0
+          },
+          {
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_underwriting_and_pricing_performance_dashboards",
+            "workload_name": "Underwriting and Pricing Performance Dashboards",
+            "role_id": "role_bi_analyst__underwriting_and_pricing",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 70.0,
+            "automation_score": 75.6
+          },
+          {
+            "workload_id": "wl_bi_analyst__underwriting_and_pricing_market_trend_analysis_and_reporting",
+            "workload_name": "Market Trend Analysis and Reporting",
+            "role_id": "role_bi_analyst__underwriting_and_pricing",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 33.8,
+            "automation_score": 55.8
+          },
+          {
+            "workload_id": "wl_data_visualization_specialist__executive_reporting_dashboard_performance_monitoring_and_optimization",
+            "workload_name": "Dashboard Performance Monitoring and Optimization",
+            "role_id": "role_data_visualization_specialist__executive_reporting",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "old_automation_score": 40.0,
+            "automation_score": 95.0
+          },
+          {
+            "workload_id": "wl_data_scientist__customer_analytics_customer_lifetime_value_and_churn_prediction_modeling",
+            "workload_name": "Customer Lifetime Value and Churn Prediction Modeling",
+            "role_id": "role_data_scientist__customer_analytics",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 82.5
+          },
+          {
+            "workload_id": "wl_data_visualization_specialist__operations_operational_metrics_monitoring_and_refinement",
+            "workload_name": "Operational Metrics Monitoring and Refinement",
+            "role_id": "role_data_visualization_specialist__operations",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "old_automation_score": 40.0,
+            "automation_score": 84.0
+          },
+          {
+            "workload_id": "wl_product_actuary__health_insurance_regulatory_compliance_and_filings",
+            "workload_name": "Regulatory Compliance and Filings",
+            "role_id": "role_product_actuary__health_insurance",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 20.5
+          },
+          {
+            "workload_id": "wl_data_scientist__customer_analytics_model_performance_monitoring_and_insights_delivery",
+            "workload_name": "Model Performance Monitoring and Insights Delivery",
+            "role_id": "role_data_scientist__customer_analytics",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 22.2
+          },
+          {
+            "workload_id": "wl_senior_predictive_modeler__underwriting_risk_assessment_model_development_and_validation",
+            "workload_name": "Risk Assessment Model Development and Validation",
+            "role_id": "role_senior_predictive_modeler__underwriting",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 70.0,
+            "automation_score": 78.3
+          },
+          {
+            "workload_id": "wl_reserving_actuary__pandc_claims_reserve_adequacy_monitoring_and_reporting",
+            "workload_name": "Reserve Adequacy Monitoring and Reporting",
+            "role_id": "role_reserving_actuary__pandc_claims",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "old_automation_score": 40.0,
+            "automation_score": 81.2
+          },
+          {
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_governance_and_regulatory_compliance",
+            "workload_name": "Model Governance and Regulatory Compliance",
+            "role_id": "role_senior_predictive_modeler__underwriting",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 24.6
+          },
+          {
+            "workload_id": "wl_data_visualization_specialist__operations_real_time_analytics_tool_development",
+            "workload_name": "Real-Time Analytics Tool Development",
+            "role_id": "role_data_visualization_specialist__operations",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 28.7
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_workers'_compensation_claims_development_analysis",
+            "workload_name": "Workers' Compensation Claims Development Analysis",
+            "role_id": "role_loss_reserve_analyst__workers'_compensation",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 75.8
+          },
+          {
+            "workload_id": "wl_chief_reserving_actuary_statutory_reserve_calculations_and_annual_statement",
+            "workload_name": "Statutory Reserve Calculations and Annual Statement",
+            "role_id": "role_chief_reserving_actuary",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "old_automation_score": 40.0,
+            "automation_score": 81.2
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__auto_claims_reserve_report_preparation_and_documentation",
+            "workload_name": "Reserve Report Preparation and Documentation",
+            "role_id": "role_loss_reserve_analyst__auto_claims",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 53.8
+          },
+          {
+            "workload_id": "wl_reserving_actuary__pandc_claims_stochastic_modeling_and_reserve_estimation",
+            "workload_name": "Stochastic Modeling and Reserve Estimation",
+            "role_id": "role_reserving_actuary__pandc_claims",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 70.0,
+            "automation_score": 78.8
+          },
+          {
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_loss_prediction_and_frequency_severity_modeling",
+            "workload_name": "Loss Prediction and Frequency/Severity Modeling",
+            "role_id": "role_predictive_modeler__pricing_and_loss",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 81.5
+          },
+          {
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_experience_studies_and_assumption_setting",
+            "workload_name": "Experience Studies and Assumption Setting",
+            "role_id": "role_senior_pricing_actuary__life_insurance",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 62.0
+          },
+          {
+            "workload_id": "wl_predictive_modeler__pricing_and_loss_pricing_optimization_and_model_backtesting",
+            "workload_name": "Pricing Optimization and Model Backtesting",
+            "role_id": "role_predictive_modeler__pricing_and_loss",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 76.7
+          },
+          {
+            "workload_id": "wl_senior_predictive_modeler__underwriting_model_performance_monitoring_and_recalibration",
+            "workload_name": "Model Performance Monitoring and Recalibration",
+            "role_id": "role_senior_predictive_modeler__underwriting",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 76.7
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_reserve_projection_and_reporting",
+            "workload_name": "Reserve Projection and Reporting",
+            "role_id": "role_loss_reserve_analyst__workers'_compensation",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 56.5
+          },
+          {
+            "workload_id": "wl_senior_pricing_actuary__life_insurance_pricing_validation_and_profitability_review",
+            "workload_name": "Pricing Validation and Profitability Review",
+            "role_id": "role_senior_pricing_actuary__life_insurance",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 62.0
+          },
+          {
+            "workload_id": "wl_senior_product_actuary__innovation_risk_management_strategy_and_implementation",
+            "workload_name": "Risk Management Strategy and Implementation",
+            "role_id": "role_senior_product_actuary__innovation",
+            "old_level": "human_led",
+            "new_level": "human_led",
+            "old_automation_score": 15.0,
+            "automation_score": 28.7
+          },
+          {
+            "workload_id": "wl_product_actuary__health_insurance_profitability_analysis_and_financial_modeling",
+            "workload_name": "Profitability Analysis and Financial Modeling",
+            "role_id": "role_product_actuary__health_insurance",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 59.2
+          },
+          {
+            "workload_id": "wl_chief_reserving_actuary_assumption_review_and_validation",
+            "workload_name": "Assumption Review and Validation",
+            "role_id": "role_chief_reserving_actuary",
+            "old_level": "human_led",
+            "new_level": "shared",
+            "old_automation_score": 15.0,
+            "automation_score": 53.8
+          },
+          {
+            "workload_id": "wl_loss_reserve_analyst__workers'_compensation_reserve_adequacy_assessment_and_monitoring",
+            "workload_name": "Reserve Adequacy Assessment and Monitoring",
+            "role_id": "role_loss_reserve_analyst__workers'_compensation",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 59.2
+          },
+          {
+            "workload_id": "wl_senior_data_scientist__claims_ai_fraud_detection_model_development_and_maintenance",
+            "workload_name": "Fraud Detection Model Development and Maintenance",
+            "role_id": "role_senior_data_scientist__claims_ai",
+            "old_level": "ai_led",
+            "new_level": "ai_led",
+            "old_automation_score": 70.0,
+            "automation_score": 87.5
+          },
+          {
+            "workload_id": "wl_pricing_actuary__property_and_casualty_predictive_analytics_and_model_refinement",
+            "workload_name": "Predictive Analytics and Model Refinement",
+            "role_id": "role_pricing_actuary__property_and_casualty",
+            "old_level": "ai_led",
+            "new_level": "shared",
+            "old_automation_score": 70.0,
+            "automation_score": 78.8
+          }
+        ]
+      },
+      "role_impacts": {
+        "roles_affected": 16,
+        "impacts": [
+          {
+            "role_id": "role_bi_analyst__underwriting_and_pricing",
+            "role_name": "BI Analyst - Underwriting & Pricing",
+            "freed_capacity_pct": 16.3,
+            "title_impacts": [
+              {
+                "name": "Senior BI Analyst - Underwriting & Pricing",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 108000,
+                "freed_capacity_pct": 19.5
+              },
+              {
+                "name": "Lead BI Analyst - Underwriting & Pricing",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 122000,
+                "freed_capacity_pct": 16.3
+              },
+              {
+                "name": "BI Analyst - Underwriting & Pricing",
+                "career_band": "entry",
+                "headcount": 3,
+                "avg_salary": 92000,
+                "freed_capacity_pct": 22.8
+              }
+            ],
+            "transformation_index": 24.4
+          },
+          {
+            "role_id": "role_loss_reserve_analyst__workers'_compensation",
+            "role_name": "Loss Reserve Analyst - Workers' Compensation",
+            "freed_capacity_pct": 24.8,
+            "title_impacts": [
+              {
+                "name": "Loss Reserve Analyst - Workers' Compensation",
+                "career_band": "entry",
+                "headcount": 4,
+                "avg_salary": 70000,
+                "freed_capacity_pct": 34.7
+              },
+              {
+                "name": "Senior Loss Reserve Analyst - Workers' Compensation",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 82000,
+                "freed_capacity_pct": 29.7
+              }
+            ],
+            "transformation_index": 37.1
+          },
+          {
+            "role_id": "role_pricing_actuary__property_and_casualty",
+            "role_name": "Pricing Actuary - Property & Casualty",
+            "freed_capacity_pct": 18.3,
+            "title_impacts": [
+              {
+                "name": "Senior Pricing Actuary - Property & Casualty",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 180000,
+                "freed_capacity_pct": 18.3
+              },
+              {
+                "name": "Pricing Actuary - Property & Casualty",
+                "career_band": "mid",
+                "headcount": 6,
+                "avg_salary": 158000,
+                "freed_capacity_pct": 21.9
+              },
+              {
+                "name": "Associate Pricing Actuary - Property & Casualty",
+                "career_band": "entry",
+                "headcount": 5,
+                "avg_salary": 135000,
+                "freed_capacity_pct": 25.6
+              }
+            ],
+            "transformation_index": 27.4
+          },
+          {
+            "role_id": "role_data_scientist__customer_analytics",
+            "role_name": "Data Scientist - Customer Analytics",
+            "freed_capacity_pct": 10.1,
+            "title_impacts": [
+              {
+                "name": "Data Scientist - Customer Analytics",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 148000,
+                "freed_capacity_pct": 12.1
+              },
+              {
+                "name": "Associate Data Scientist - Customer Analytics",
+                "career_band": "entry",
+                "headcount": 2,
+                "avg_salary": 128000,
+                "freed_capacity_pct": 14.1
+              },
+              {
+                "name": "Senior Data Scientist - Customer Analytics",
+                "career_band": "senior",
+                "headcount": 1,
+                "avg_salary": 170000,
+                "freed_capacity_pct": 10.1
+              }
+            ],
+            "transformation_index": 15.1
+          },
+          {
+            "role_id": "role_reserving_actuary__pandc_claims",
+            "role_name": "Reserving Actuary - P&C Claims",
+            "freed_capacity_pct": 24.8,
+            "title_impacts": [
+              {
+                "name": "Senior Reserving Actuary - P&C Claims",
+                "career_band": "senior",
+                "headcount": 4,
+                "avg_salary": 175000,
+                "freed_capacity_pct": 24.8
+              },
+              {
+                "name": "Reserving Actuary - P&C Claims",
+                "career_band": "mid",
+                "headcount": 4,
+                "avg_salary": 155000,
+                "freed_capacity_pct": 29.7
+              }
+            ],
+            "transformation_index": 37.2
+          },
+          {
+            "role_id": "role_senior_bi_analyst__claims_analytics",
+            "role_name": "Senior BI Analyst - Claims Analytics",
+            "freed_capacity_pct": 14.3,
+            "title_impacts": [
+              {
+                "name": "Senior BI Analyst - Claims Analytics",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 112000,
+                "freed_capacity_pct": 14.3
+              },
+              {
+                "name": "Lead BI Analyst - Claims Analytics",
+                "career_band": "lead",
+                "headcount": 1,
+                "avg_salary": 128000,
+                "freed_capacity_pct": 11.4
+              },
+              {
+                "name": "BI Analyst - Claims Analytics",
+                "career_band": "mid",
+                "headcount": 4,
+                "avg_salary": 98000,
+                "freed_capacity_pct": 17.1
+              }
+            ],
+            "transformation_index": 21.4
+          },
+          {
+            "role_id": "role_senior_product_actuary__innovation",
+            "role_name": "Senior Product Actuary - Innovation",
+            "freed_capacity_pct": 11.1,
+            "title_impacts": [
+              {
+                "name": "Principal Product Actuary - Innovation",
+                "career_band": "principal",
+                "headcount": 1,
+                "avg_salary": 215000,
+                "freed_capacity_pct": 6.7
+              },
+              {
+                "name": "Lead Product Actuary - Innovation",
+                "career_band": "lead",
+                "headcount": 2,
+                "avg_salary": 195000,
+                "freed_capacity_pct": 8.9
+              },
+              {
+                "name": "Senior Product Actuary - Innovation",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 175000,
+                "freed_capacity_pct": 11.1
+              }
+            ],
+            "transformation_index": 16.7
+          },
+          {
+            "role_id": "role_data_visualization_specialist__operations",
+            "role_name": "Data Visualization Specialist - Operations",
+            "freed_capacity_pct": 23.9,
+            "title_impacts": [
+              {
+                "name": "Data Visualization Specialist - Operations",
+                "career_band": "entry",
+                "headcount": 3,
+                "avg_salary": 88000,
+                "freed_capacity_pct": 33.5
+              },
+              {
+                "name": "Senior Data Visualization Specialist - Operations",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 102000,
+                "freed_capacity_pct": 28.7
+              }
+            ],
+            "transformation_index": 35.9
+          },
+          {
+            "role_id": "role_loss_reserve_analyst__auto_claims",
+            "role_name": "Loss Reserve Analyst - Auto Claims",
+            "freed_capacity_pct": 16.4,
+            "title_impacts": [
+              {
+                "name": "Senior Loss Reserve Analyst - Auto Claims",
+                "career_band": "mid",
+                "headcount": 4,
+                "avg_salary": 84000,
+                "freed_capacity_pct": 19.7
+              },
+              {
+                "name": "Loss Reserve Analyst - Auto Claims",
+                "career_band": "entry",
+                "headcount": 5,
+                "avg_salary": 72000,
+                "freed_capacity_pct": 23.0
+              }
+            ],
+            "transformation_index": 24.6
+          },
+          {
+            "role_id": "role_product_actuary__health_insurance",
+            "role_name": "Product Actuary - Health Insurance",
+            "freed_capacity_pct": 11.7,
+            "title_impacts": [
+              {
+                "name": "Senior Product Actuary - Health Insurance",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 185000,
+                "freed_capacity_pct": 11.7
+              },
+              {
+                "name": "Product Actuary - Health Insurance",
+                "career_band": "mid",
+                "headcount": 4,
+                "avg_salary": 162000,
+                "freed_capacity_pct": 14.0
+              },
+              {
+                "name": "Associate Product Actuary - Health Insurance",
+                "career_band": "entry",
+                "headcount": 3,
+                "avg_salary": 138000,
+                "freed_capacity_pct": 16.3
+              }
+            ],
+            "transformation_index": 17.5
+          },
+          {
+            "role_id": "role_chief_reserving_actuary",
+            "role_name": "Chief Reserving Actuary",
+            "freed_capacity_pct": 22.1,
+            "title_impacts": [
+              {
+                "name": "Chief Reserving Actuary",
+                "career_band": "director",
+                "headcount": 1,
+                "avg_salary": 210000,
+                "freed_capacity_pct": 8.8
+              }
+            ],
+            "transformation_index": 33.1
+          },
+          {
+            "role_id": "role_senior_predictive_modeler__underwriting",
+            "role_name": "Senior Predictive Modeler - Underwriting",
+            "freed_capacity_pct": 15.8,
+            "title_impacts": [
+              {
+                "name": "Senior Predictive Modeler - Underwriting",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 162000,
+                "freed_capacity_pct": 15.8
+              },
+              {
+                "name": "Lead Predictive Modeler - Underwriting",
+                "career_band": "lead",
+                "headcount": 2,
+                "avg_salary": 182000,
+                "freed_capacity_pct": 12.6
+              },
+              {
+                "name": "Predictive Modeler - Underwriting",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 138000,
+                "freed_capacity_pct": 18.9
+              }
+            ],
+            "transformation_index": 23.7
+          },
+          {
+            "role_id": "role_data_visualization_specialist__executive_reporting",
+            "role_name": "Data Visualization Specialist - Executive Reporting",
+            "freed_capacity_pct": 11.0,
+            "title_impacts": [
+              {
+                "name": "Data Visualization Specialist - Executive Reporting",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 98000,
+                "freed_capacity_pct": 13.2
+              },
+              {
+                "name": "Senior Data Visualization Specialist - Executive Reporting",
+                "career_band": "senior",
+                "headcount": 2,
+                "avg_salary": 115000,
+                "freed_capacity_pct": 11.0
+              }
+            ],
+            "transformation_index": 16.5
+          },
+          {
+            "role_id": "role_senior_pricing_actuary__life_insurance",
+            "role_name": "Senior Pricing Actuary - Life Insurance",
+            "freed_capacity_pct": 18.7,
+            "title_impacts": [
+              {
+                "name": "Pricing Actuary - Life Insurance",
+                "career_band": "mid",
+                "headcount": 6,
+                "avg_salary": 145000,
+                "freed_capacity_pct": 22.5
+              },
+              {
+                "name": "Senior Pricing Actuary - Life Insurance",
+                "career_band": "senior",
+                "headcount": 4,
+                "avg_salary": 165000,
+                "freed_capacity_pct": 18.7
+              },
+              {
+                "name": "Lead Pricing Actuary - Life Insurance",
+                "career_band": "lead",
+                "headcount": 2,
+                "avg_salary": 185000,
+                "freed_capacity_pct": 15.0
+              }
+            ],
+            "transformation_index": 28.1
+          },
+          {
+            "role_id": "role_predictive_modeler__pricing_and_loss",
+            "role_name": "Predictive Modeler - Pricing & Loss",
+            "freed_capacity_pct": 18.6,
+            "title_impacts": [
+              {
+                "name": "Senior Predictive Modeler",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 150000,
+                "freed_capacity_pct": 18.6
+              },
+              {
+                "name": "Lead Predictive Modeler",
+                "career_band": "lead",
+                "headcount": 2,
+                "avg_salary": 170000,
+                "freed_capacity_pct": 14.9
+              },
+              {
+                "name": "Predictive Modeler I",
+                "career_band": "entry",
+                "headcount": 2,
+                "avg_salary": 115000,
+                "freed_capacity_pct": 26.0
+              }
+            ],
+            "transformation_index": 27.9
+          },
+          {
+            "role_id": "role_senior_data_scientist__claims_ai",
+            "role_name": "Senior Data Scientist - Claims AI",
+            "freed_capacity_pct": 14.1,
+            "title_impacts": [
+              {
+                "name": "Data Scientist - Claims AI",
+                "career_band": "mid",
+                "headcount": 3,
+                "avg_salary": 140000,
+                "freed_capacity_pct": 16.9
+              },
+              {
+                "name": "Senior Data Scientist - Claims AI",
+                "career_band": "senior",
+                "headcount": 3,
+                "avg_salary": 165000,
+                "freed_capacity_pct": 14.1
+              },
+              {
+                "name": "Lead Data Scientist - Claims AI",
+                "career_band": "lead",
+                "headcount": 1,
+                "avg_salary": 185000,
+                "freed_capacity_pct": 11.3
+              }
+            ],
+            "transformation_index": 21.2
+          }
+        ]
+      },
+      "skill_shifts": {
+        "sunset_skills": [
+          {
+            "skill_id": "skill_python_programming",
+            "name": "Python Programming",
+            "reason": "PRIMARY skill for 24 automated tasks",
+            "source": "task_mapping"
+          },
+          {
+            "skill_id": "skill_data_analysis",
+            "name": "Data Analysis",
+            "reason": "PRIMARY skill for 51 automated tasks",
+            "source": "task_mapping"
+          }
+        ],
+        "sunrise_skills": [
+          {
+            "skill_id": "skill_machine_learning",
+            "name": "Machine Learning",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_predictive_analytics_for_underwriting",
+            "name": "Predictive Analytics for Underwriting",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_customer_data_platform_cdp",
+            "name": "Customer Data Platform (CDP)",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_claims_automation",
+            "name": "Claims Automation",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_artificial_intelligence",
+            "name": "Artificial Intelligence",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_telematics_and_usage_based_insurance",
+            "name": "Telematics & Usage-Based Insurance",
+            "reason": "Emerging skill needed for AI-augmented work",
+            "source": "lifecycle"
+          },
+          {
+            "skill_id": "skill_ai_literacy",
+            "name": "AI Literacy & Prompt Engineering",
+            "reason": "Required for effective human-AI collaboration",
+            "source": "universal"
+          },
+          {
+            "skill_id": "skill_ai_oversight",
+            "name": "AI Output Validation",
+            "reason": "Quality assurance for AI-generated outputs",
+            "source": "universal"
+          }
+        ],
+        "net_skill_shift": 6
+      },
+      "workforce": {
+        "current_headcount": 121,
+        "freed_headcount": 23.6,
+        "reduction_pct": 19.5,
+        "redeployable": 3.5,
+        "redeployable_pct": 15.0
+      },
+      "financial": {
+        "timeline_months": 48,
+        "gross_savings": 12238508.0,
+        "technology_licensing": 145200.0,
+        "implementation_cost": 21780.0,
+        "reskilling_cost": 720000.0,
+        "change_management_cost": 611925.4,
+        "severance_cost": 683453.15,
+        "j_curve_cost": 0.0,
+        "total_cost": 2182358.55,
+        "net_impact": 10056149.45,
+        "roi_pct": 460.8,
+        "payback_months": 8,
+        "title_details": [
+          {
+            "title": "Senior BI Analyst - Underwriting & Pricing",
+            "headcount": 3,
+            "avg_salary": 108000,
+            "freed_capacity_pct": 19.5,
+            "savings": 252720.0
+          },
+          {
+            "title": "Lead BI Analyst - Underwriting & Pricing",
+            "headcount": 1,
+            "avg_salary": 122000,
+            "freed_capacity_pct": 16.3,
+            "savings": 79544.0
+          },
+          {
+            "title": "BI Analyst - Underwriting & Pricing",
+            "headcount": 3,
+            "avg_salary": 92000,
+            "freed_capacity_pct": 22.8,
+            "savings": 251712.0
+          },
+          {
+            "title": "Loss Reserve Analyst - Workers' Compensation",
+            "headcount": 4,
+            "avg_salary": 70000,
+            "freed_capacity_pct": 34.7,
+            "savings": 388640.0
+          },
+          {
+            "title": "Senior Loss Reserve Analyst - Workers' Compensation",
+            "headcount": 3,
+            "avg_salary": 82000,
+            "freed_capacity_pct": 29.7,
+            "savings": 292248.0
+          },
+          {
+            "title": "Senior Pricing Actuary - Property & Casualty",
+            "headcount": 3,
+            "avg_salary": 180000,
+            "freed_capacity_pct": 18.3,
+            "savings": 395280.0
+          },
+          {
+            "title": "Pricing Actuary - Property & Casualty",
+            "headcount": 6,
+            "avg_salary": 158000,
+            "freed_capacity_pct": 21.9,
+            "savings": 830448.0
+          },
+          {
+            "title": "Associate Pricing Actuary - Property & Casualty",
+            "headcount": 5,
+            "avg_salary": 135000,
+            "freed_capacity_pct": 25.6,
+            "savings": 691200.0
+          },
+          {
+            "title": "Data Scientist - Customer Analytics",
+            "headcount": 3,
+            "avg_salary": 148000,
+            "freed_capacity_pct": 12.1,
+            "savings": 214896.0
+          },
+          {
+            "title": "Associate Data Scientist - Customer Analytics",
+            "headcount": 2,
+            "avg_salary": 128000,
+            "freed_capacity_pct": 14.1,
+            "savings": 144384.0
+          },
+          {
+            "title": "Senior Data Scientist - Customer Analytics",
+            "headcount": 1,
+            "avg_salary": 170000,
+            "freed_capacity_pct": 10.1,
+            "savings": 68680.0
+          },
+          {
+            "title": "Senior Reserving Actuary - P&C Claims",
+            "headcount": 4,
+            "avg_salary": 175000,
+            "freed_capacity_pct": 24.8,
+            "savings": 694400.0
+          },
+          {
+            "title": "Reserving Actuary - P&C Claims",
+            "headcount": 4,
+            "avg_salary": 155000,
+            "freed_capacity_pct": 29.7,
+            "savings": 736560.0
+          },
+          {
+            "title": "Senior BI Analyst - Claims Analytics",
+            "headcount": 3,
+            "avg_salary": 112000,
+            "freed_capacity_pct": 14.3,
+            "savings": 192192.0
+          },
+          {
+            "title": "Lead BI Analyst - Claims Analytics",
+            "headcount": 1,
+            "avg_salary": 128000,
+            "freed_capacity_pct": 11.4,
+            "savings": 58368.0
+          },
+          {
+            "title": "BI Analyst - Claims Analytics",
+            "headcount": 4,
+            "avg_salary": 98000,
+            "freed_capacity_pct": 17.1,
+            "savings": 268128.0
+          },
+          {
+            "title": "Principal Product Actuary - Innovation",
+            "headcount": 1,
+            "avg_salary": 215000,
+            "freed_capacity_pct": 6.7,
+            "savings": 57620.0
+          },
+          {
+            "title": "Lead Product Actuary - Innovation",
+            "headcount": 2,
+            "avg_salary": 195000,
+            "freed_capacity_pct": 8.9,
+            "savings": 138840.0
+          },
+          {
+            "title": "Senior Product Actuary - Innovation",
+            "headcount": 3,
+            "avg_salary": 175000,
+            "freed_capacity_pct": 11.1,
+            "savings": 233100.0
+          },
+          {
+            "title": "Data Visualization Specialist - Operations",
+            "headcount": 3,
+            "avg_salary": 88000,
+            "freed_capacity_pct": 33.5,
+            "savings": 353760.0
+          },
+          {
+            "title": "Senior Data Visualization Specialist - Operations",
+            "headcount": 3,
+            "avg_salary": 102000,
+            "freed_capacity_pct": 28.7,
+            "savings": 351288.0
+          },
+          {
+            "title": "Senior Loss Reserve Analyst - Auto Claims",
+            "headcount": 4,
+            "avg_salary": 84000,
+            "freed_capacity_pct": 19.7,
+            "savings": 264768.0
+          },
+          {
+            "title": "Loss Reserve Analyst - Auto Claims",
+            "headcount": 5,
+            "avg_salary": 72000,
+            "freed_capacity_pct": 23.0,
+            "savings": 331200.0
+          },
+          {
+            "title": "Senior Product Actuary - Health Insurance",
+            "headcount": 3,
+            "avg_salary": 185000,
+            "freed_capacity_pct": 11.7,
+            "savings": 259740.0
+          },
+          {
+            "title": "Product Actuary - Health Insurance",
+            "headcount": 4,
+            "avg_salary": 162000,
+            "freed_capacity_pct": 14.0,
+            "savings": 362880.0
+          },
+          {
+            "title": "Associate Product Actuary - Health Insurance",
+            "headcount": 3,
+            "avg_salary": 138000,
+            "freed_capacity_pct": 16.3,
+            "savings": 269928.0
+          },
+          {
+            "title": "Chief Reserving Actuary",
+            "headcount": 1,
+            "avg_salary": 210000,
+            "freed_capacity_pct": 8.8,
+            "savings": 73920.0
+          },
+          {
+            "title": "Senior Predictive Modeler - Underwriting",
+            "headcount": 3,
+            "avg_salary": 162000,
+            "freed_capacity_pct": 15.8,
+            "savings": 307152.0
+          },
+          {
+            "title": "Lead Predictive Modeler - Underwriting",
+            "headcount": 2,
+            "avg_salary": 182000,
+            "freed_capacity_pct": 12.6,
+            "savings": 183456.0
+          },
+          {
+            "title": "Predictive Modeler - Underwriting",
+            "headcount": 3,
+            "avg_salary": 138000,
+            "freed_capacity_pct": 18.9,
+            "savings": 312984.0
+          },
+          {
+            "title": "Data Visualization Specialist - Executive Reporting",
+            "headcount": 3,
+            "avg_salary": 98000,
+            "freed_capacity_pct": 13.2,
+            "savings": 155232.0
+          },
+          {
+            "title": "Senior Data Visualization Specialist - Executive Reporting",
+            "headcount": 2,
+            "avg_salary": 115000,
+            "freed_capacity_pct": 11.0,
+            "savings": 101200.0
+          },
+          {
+            "title": "Pricing Actuary - Life Insurance",
+            "headcount": 6,
+            "avg_salary": 145000,
+            "freed_capacity_pct": 22.5,
+            "savings": 783000.0
+          },
+          {
+            "title": "Senior Pricing Actuary - Life Insurance",
+            "headcount": 4,
+            "avg_salary": 165000,
+            "freed_capacity_pct": 18.7,
+            "savings": 493680.0
+          },
+          {
+            "title": "Lead Pricing Actuary - Life Insurance",
+            "headcount": 2,
+            "avg_salary": 185000,
+            "freed_capacity_pct": 15.0,
+            "savings": 222000.0
+          },
+          {
+            "title": "Senior Predictive Modeler",
+            "headcount": 3,
+            "avg_salary": 150000,
+            "freed_capacity_pct": 18.6,
+            "savings": 334800.0
+          },
+          {
+            "title": "Lead Predictive Modeler",
+            "headcount": 2,
+            "avg_salary": 170000,
+            "freed_capacity_pct": 14.9,
+            "savings": 202640.0
+          },
+          {
+            "title": "Predictive Modeler I",
+            "headcount": 2,
+            "avg_salary": 115000,
+            "freed_capacity_pct": 26.0,
+            "savings": 239200.0
+          },
+          {
+            "title": "Data Scientist - Claims AI",
+            "headcount": 3,
+            "avg_salary": 140000,
+            "freed_capacity_pct": 16.9,
+            "savings": 283920.0
+          },
+          {
+            "title": "Senior Data Scientist - Claims AI",
+            "headcount": 3,
+            "avg_salary": 165000,
+            "freed_capacity_pct": 14.1,
+            "savings": 279180.0
+          },
+          {
+            "title": "Lead Data Scientist - Claims AI",
+            "headcount": 1,
+            "avg_salary": 185000,
+            "freed_capacity_pct": 11.3,
+            "savings": 83620.0
+          }
+        ]
+      },
+      "risks": {
+        "risk_count": 2,
+        "high_risks": 0,
+        "flags": [
+          {
+            "type": "skill_gap",
+            "severity": "medium",
+            "entity": "skills",
+            "detail": "Net 6 new skills needed - significant reskilling required"
+          },
+          {
+            "type": "broad_change",
+            "severity": "medium",
+            "entity": "tasks",
+            "detail": "83 tasks affected - phased rollout recommended"
+          }
+        ]
+      },
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "check": "headcount_non_negative",
+            "passed": true
+          },
+          {
+            "check": "freed_capacity_bounded",
+            "passed": true
+          },
+          {
+            "check": "has_impact",
+            "passed": true
+          }
+        ]
+      },
+      "summary": {
+        "tasks_affected": 83,
+        "roles_affected": 16,
+        "freed_headcount": 23.6,
+        "reduction_pct": 19.5,
+        "gross_savings": 12238508.0,
+        "net_impact": 10056149.45,
+        "roi_pct": 460.8
+      }
+    },
+    "skills_strategy": {
+      "simulation_type": "skills_strategy",
+      "demand_analysis": {
+        "sunrise": [
+          {
+            "name": "Machine Learning",
+            "category": "domain",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "Predictive Analytics for Underwriting",
+            "category": "domain",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "Customer Data Platform (CDP)",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "Claims Automation",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "Artificial Intelligence",
+            "category": "domain",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "Telematics & Usage-Based Insurance",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "AI Output Validation",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          }
+        ],
+        "sunset": [
+          {
+            "name": "Python Programming",
+            "category": "domain",
+            "trend": "falling",
+            "action": "phase_out"
+          },
+          {
+            "name": "Data Analysis",
+            "category": "domain",
+            "trend": "falling",
+            "action": "phase_out"
+          }
+        ],
+        "stable": [
+          {
+            "name": "Loss Adjustment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Statistical Analysis",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Predictive Modeling",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Data Science",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Business Intelligence & Analytics",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Critical Thinking & Problem Solving",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Model Risk Management",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Actuarial Science",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "SQL Database Management",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Communication & Presentation",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Underwriting Risk Assessment",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "SQL & Database Management",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Leadership & Team Management",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Customer Analytics",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Fraud Detection & Prevention",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Data Visualization",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Collaboration",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Cloud Computing (AWS/Azure/GCP)",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Business Process Improvement",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "User Experience (UX) Design",
+            "category": "digital",
+            "trend": "stable"
+          },
+          {
+            "name": "Underwriting Analysis",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Claims Processing",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Storytelling",
+            "category": "communication",
+            "trend": "stable"
+          },
+          {
+            "name": "Financial Analysis",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Executive Presence",
+            "category": "leadership",
+            "trend": "stable"
+          },
+          {
+            "name": "Claims Analytics",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Predictive Analytics",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Pricing & Rate Development",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Competitive Analysis",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Risk Assessment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Property & Casualty Insurance",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Rate & Form Filing",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Regulatory Reporting & Filings",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Market Research & Competitive Analysis",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Life Insurance Products",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Product Development",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Strategic Planning",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Innovation & Ideation",
+            "category": "leadership",
+            "trend": "stable"
+          },
+          {
+            "name": "Digital Transformation Strategy",
+            "category": "digital",
+            "trend": "stable"
+          },
+          {
+            "name": "Cross-functional Collaboration",
+            "category": "leadership",
+            "trend": "stable"
+          },
+          {
+            "name": "Insurance Regulation & Compliance",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "HIPAA Privacy & Security",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Affordable Care Act (ACA) Compliance",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Health Insurance Products",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Attention to Detail",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Loss Reserving",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Claims Handling",
+            "category": "analytical",
+            "trend": "stable"
+          },
+          {
+            "name": "Solvency & Capital Requirements",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Regulatory Relationship Management",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "NAIC Reporting",
+            "category": "technical",
+            "trend": "stable"
+          },
+          {
+            "name": "Own Risk & Solvency Assessment (ORSA)",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Risk-Based Capital (RBC)",
+            "category": "regulatory",
+            "trend": "stable"
+          }
+        ]
+      },
+      "concentration_risk": {
+        "total_roles_in_scope": 16,
+        "concentration_threshold": 2,
+        "high_risk_count": 35,
+        "high_risk_skills": [
+          {
+            "skill_name": "SQL Database Management",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Underwriting Risk Assessment",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Customer Analytics",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Customer Data Platform (CDP)",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Fraud Detection & Prevention",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Claims Automation",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Artificial Intelligence",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Collaboration",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Business Process Improvement",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "User Experience (UX) Design",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Underwriting Analysis",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Claims Processing",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Storytelling",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Executive Presence",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Predictive Analytics",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Competitive Analysis",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Rate & Form Filing",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Market Research & Competitive Analysis",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Life Insurance Products",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Product Development",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Strategic Planning",
+            "role_count": 2,
+            "risk": "high",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Innovation & Ideation",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Telematics & Usage-Based Insurance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Digital Transformation Strategy",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Cross-functional Collaboration",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Insurance Regulation & Compliance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "HIPAA Privacy & Security",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Affordable Care Act (ACA) Compliance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Health Insurance Products",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Claims Handling",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Solvency & Capital Requirements",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Regulatory Relationship Management",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "NAIC Reporting",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Own Risk & Solvency Assessment (ORSA)",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Risk-Based Capital (RBC)",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          }
+        ]
+      },
+      "reskilling_plan": {
+        "skills": [
+          {
+            "skill_name": "Machine Learning",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "Predictive Analytics for Underwriting",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "Customer Data Platform (CDP)",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "Claims Automation",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "Artificial Intelligence",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "Telematics & Usage-Based Insurance",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          },
+          {
+            "skill_name": "AI Output Validation",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 33,
+            "cost": 85750.0
+          }
+        ],
+        "total_cost": 686000.0,
+        "avg_months": 5.0,
+        "headcount_impacted": 33,
+        "band_breakdown": {
+          "mid": {
+            "headcount": 14,
+            "multiplier": 1.0
+          },
+          "senior": {
+            "headcount": 9,
+            "multiplier": 1.3
+          },
+          "entry": {
+            "headcount": 8,
+            "multiplier": 0.7
+          },
+          "lead": {
+            "headcount": 2,
+            "multiplier": 1.5
+          }
+        }
+      },
+      "build_vs_buy": {
+        "recommendations": [
+          {
+            "skill": "Machine Learning",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "Predictive Analytics for Underwriting",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "Customer Data Platform (CDP)",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "Claims Automation",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "Artificial Intelligence",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "Telematics & Usage-Based Insurance",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "AI Literacy & Prompt Engineering",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "AI Output Validation",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          }
+        ]
+      },
+      "summary": {
+        "sunrise_count": 8,
+        "sunset_count": 2,
+        "stable_count": 52,
+        "high_risk_skills": 35,
+        "total_reskilling_cost": 686000.0,
+        "avg_reskilling_months": 5.0
+      }
+    }
+  }
+}

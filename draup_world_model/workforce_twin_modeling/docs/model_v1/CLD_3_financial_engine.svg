@@ -1,0 +1,102 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#555"/>
+    </marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#fafafa"/>
+
+  <text x="450" y="35" text-anchor="middle" fill="#222" font-size="18" font-weight="bold">DIAGRAM 3: The Financial Engine</text>
+  <text x="450" y="55" text-anchor="middle" fill="#777" font-size="13" font-style="italic">"Savings fund transformation — but returns diminish as the easy work runs out"</text>
+
+  <!-- ============ MAIN SAVINGS FLYWHEEL (R1) ============ -->
+
+  <!-- AI automation level (top center) -->
+  <text x="300" y="130" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">AI automation</text>
+  <text x="300" y="148" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">level</text>
+
+  <!-- Cost savings (right) -->
+  <text x="560" y="240" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Cost</text>
+  <text x="560" y="258" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">savings</text>
+
+  <!-- Transformation budget (bottom) -->
+  <text x="430" y="380" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Transformation</text>
+  <text x="430" y="398" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">budget</text>
+
+  <!-- Transformation investment (left) -->
+  <text x="150" y="270" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Transformation</text>
+  <text x="150" y="288" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">investment</text>
+
+  <!-- Arrows for R1 -->
+  <!-- AI automation → Cost savings (S) -->
+  <path d="M 365,140 Q 460,165 520,230" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="455" y="175" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Cost savings → Transformation budget (S) -->
+  <path d="M 555,270 Q 520,330 475,370" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="530" y="325" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Transformation budget → Transformation investment (S) -->
+  <path d="M 370,390 Q 270,360 210,300" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="280" y="355" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Transformation investment → AI automation (S) -->
+  <path d="M 185,258 Q 220,195 260,155" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="200" y="205" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- R1 label -->
+  <text x="370" y="265" text-anchor="middle" fill="#aa0000" font-size="16" font-weight="bold">R1</text>
+  <text x="370" y="282" text-anchor="middle" fill="#aa0000" font-size="10">(savings flywheel)</text>
+
+  <!-- ============ SENIORITY OFFSET (B1) - right side ============ -->
+
+  <!-- Headcount reduction -->
+  <text x="720" y="130" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Headcount</text>
+  <text x="720" y="148" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">reduction</text>
+
+  <!-- Average seniority -->
+  <text x="790" y="280" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Average</text>
+  <text x="790" y="298" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">seniority</text>
+
+  <!-- Automation potential -->
+  <text x="700" y="420" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">Automation</text>
+  <text x="700" y="438" text-anchor="middle" fill="#222" font-size="15" font-weight="bold">potential</text>
+
+  <!-- Arrows for B1 -->
+  <!-- HC reduction → Average seniority (S) -->
+  <path d="M 740,158 Q 770,210 785,265" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="775" y="215" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- Average seniority → Automation potential (O) -->
+  <path d="M 778,310 Q 750,365 720,408" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="765" y="360" fill="#555" font-size="16" font-weight="bold" font-style="italic">O</text>
+
+  <!-- Automation potential → HC reduction (S) - closing the loop -->
+  <path d="M 695,410 Q 660,340 660,220 Q 660,170 690,148" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="645" y="270" fill="#555" font-size="15" font-weight="bold" font-style="italic">S</text>
+
+  <!-- B1 label -->
+  <text x="740" y="330" text-anchor="middle" fill="#0055aa" font-size="14" font-weight="bold">B1</text>
+  <text x="740" y="345" text-anchor="middle" fill="#0055aa" font-size="9">(diminishing returns)</text>
+
+  <!-- ============ CONNECTION: AI automation → HC reduction ============ -->
+  <path d="M 365,135 Q 530,105 680,130" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#a1)"/>
+  <text x="520" y="105" fill="#aaa" font-size="12" font-style="italic">drives</text>
+
+  <!-- ============ ADOPTION GAP CALLOUT ============ -->
+  <rect x="50" y="430" width="340" height="80" rx="8" fill="#f0fff0" stroke="#228822" stroke-width="1.5"/>
+  <text x="220" y="455" text-anchor="middle" fill="#228822" font-size="13" font-weight="bold">The Adoption Gap Insight</text>
+  <text x="220" y="475" text-anchor="middle" fill="#444" font-size="11">Phase 1 savings require ~$0 investment</text>
+  <text x="220" y="492" text-anchor="middle" fill="#444" font-size="11">(tools already deployed, just not used)</text>
+  <text x="220" y="505" text-anchor="middle" fill="#228822" font-size="11" font-weight="bold">→ R1 starts positive, no J-curve dip</text>
+
+  <!-- Annotation -->
+  <rect x="30" y="540" width="840" height="55" rx="4" fill="#f0f0f0" stroke="none"/>
+  <text x="450" y="558" text-anchor="middle" fill="#555" font-size="11">R1 (Savings Flywheel): S,S,S,S = 0 O = REINFORCING — Savings from Phase 1 fund Phase 2, Phase 2 funds Phase 3</text>
+  <text x="450" y="576" text-anchor="middle" fill="#555" font-size="11">B1 (Seniority Offset): S,O,S = 1 O = BALANCING — Entry-level goes first → remaining staff more senior → harder to automate → diminishing returns</text>
+  <text x="450" y="590" text-anchor="middle" fill="#0055aa" font-size="11" font-weight="bold">Interaction: R1 accelerates automation, B1 slows it down. B1 eventually dominates at 60-70% automation, creating a natural plateau.</text>
+</svg>

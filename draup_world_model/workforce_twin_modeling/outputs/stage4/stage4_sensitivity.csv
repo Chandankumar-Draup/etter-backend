@@ -1,0 +1,6 @@
+variant,readiness_delta,hc_reduced,net_savings,payback_month,final_adoption,final_proficiency,final_trust
+readiness -20 (25),-20,61,4309890.0,18,0.3555,39.2,44.2
+readiness -10 (35),-10,69,5358308.0,16,0.3971,40.8,45.3
+readiness +0 (45),0,76,6420161.0,15,0.4368,42.3,46.3
+readiness +10 (55),10,83,7209679.0,14,0.4709,43.6,47.2
+readiness +20 (65),20,89,8046403.0,13,0.5023,44.7,48.0

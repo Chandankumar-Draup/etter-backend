@@ -1,0 +1,1694 @@
+[
+  {
+    "id": "skill_claims_processing",
+    "name": "Claims Processing",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "End-to-end management of insurance claims from filing through settlement, including assessment, investigation, and payment processing.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_underwriting",
+    "name": "Underwriting",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Evaluation of insurance applications, risk assessment, policy pricing, and approval decisions for life, health, and P&C products.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_actuarial_science",
+    "name": "Actuarial Science",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Mathematical and statistical analysis of insurance risk, pricing models, reserve calculations, and financial forecasting.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_life_insurance_products",
+    "name": "Life Insurance Products",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Deep knowledge of term life, whole life, universal life, and variable life insurance products, features, and underwriting criteria.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_health_insurance_products",
+    "name": "Health Insurance Products",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Expertise in health insurance plans including HMO, PPO, EPO, HDHP, and medical underwriting principles.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_property_and_casualty_insurance",
+    "name": "Property & Casualty Insurance",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Knowledge of homeowners, auto, commercial property, liability, and specialty P&C insurance products and underwriting.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_risk_assessment",
+    "name": "Risk Assessment",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Systematic evaluation of insurable risks, hazard identification, and mitigation strategies across insurance lines.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_policy_administration",
+    "name": "Policy Administration",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Management of policy lifecycle including issuance, renewals, endorsements, cancellations, and customer service.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_fraud_detection",
+    "name": "Fraud Detection",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Identification and investigation of fraudulent claims and applications using analytical and investigative techniques.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_medical_underwriting",
+    "name": "Medical Underwriting",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Assessment of applicant health status, medical history, and risk factors for health and life insurance underwriting.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_loss_control",
+    "name": "Loss Control",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Risk reduction strategies and loss prevention consulting for policyholders to minimize insurance claims.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_reinsurance",
+    "name": "Reinsurance",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Management of reinsurance treaties, cessions, and recovery processes to manage company risk exposure.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_catastrophe_management",
+    "name": "Catastrophe Management",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Response and recovery planning for large-scale disasters and catastrophic events affecting multiple policyholders.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_customer_service_excellence",
+    "name": "Customer Service Excellence",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Delivery of high-quality customer support across multiple channels including phone, email, chat, and in-person.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_ai_powered_claims_automation",
+    "name": "AI-Powered Claims Automation",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Implementation and management of AI systems for automated claims triage, assessment, and decision-making.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_predictive_analytics_for_underwriting",
+    "name": "Predictive Analytics for Underwriting",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Use of machine learning models to predict risk and optimize underwriting decisions and pricing.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_natural_language_processing",
+    "name": "Natural Language Processing",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Application of NLP techniques to extract insights from unstructured claims data, medical records, and customer communications.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_generative_ai_implementation",
+    "name": "Generative AI Implementation",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Development and deployment of generative AI models for document generation, customer service, and content creation.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_insurance_regulation_state",
+    "name": "Insurance Regulation (State)",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Knowledge of state insurance department regulations, licensing requirements, and compliance obligations across multiple states.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_naic_compliance",
+    "name": "NAIC Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Understanding of National Association of Insurance Commissioners standards, model laws, and regulatory guidance.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_sarbanes_oxley_sox_compliance",
+    "name": "Sarbanes-Oxley (SOX) Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Implementation and maintenance of SOX controls for financial reporting, internal controls, and audit requirements.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_hipaa_compliance",
+    "name": "HIPAA Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Protection of health information privacy and security in accordance with HIPAA regulations and standards.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_fair_lending_compliance",
+    "name": "Fair Lending Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Adherence to fair lending laws and anti-discrimination regulations in underwriting and policy decisions.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_aml_kyc_compliance",
+    "name": "AML/KYC Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Anti-money laundering and know-your-customer procedures for customer identification and transaction monitoring.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_data_privacy_regulations",
+    "name": "Data Privacy Regulations",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Compliance with GDPR, CCPA, and other data privacy laws governing customer data collection and usage.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_cybersecurity_compliance",
+    "name": "Cybersecurity Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation of cybersecurity standards and incident response procedures required by insurance regulators.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_ai_ml_governance_and_ethics",
+    "name": "AI/ML Governance and Ethics",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Governance frameworks for responsible AI deployment, bias detection, and ethical compliance in insurance decisions.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_insurance_fraud_laws",
+    "name": "Insurance Fraud Laws",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Knowledge of state and federal laws governing insurance fraud investigation, prosecution, and penalties.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_claims_handling_regulations",
+    "name": "Claims Handling Regulations",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Compliance with state unfair claims settlement practices acts and claims handling timelines.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_underwriting_guidelines_compliance",
+    "name": "Underwriting Guidelines Compliance",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Adherence to company underwriting guidelines and regulatory requirements in policy approval decisions.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_python_programming",
+    "name": "Python Programming",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Proficiency in Python for data analysis, automation, and machine learning model development.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_sql_database_management",
+    "name": "SQL Database Management",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Design, querying, and management of relational databases for insurance data and reporting.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_data_analytics",
+    "name": "Data Analytics",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Analysis of insurance data to identify trends, patterns, and insights for business decision-making.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_business_intelligence",
+    "name": "Business Intelligence",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Creation of dashboards, reports, and visualizations for insurance business metrics and KPIs.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_machine_learning",
+    "name": "Machine Learning",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Development and deployment of machine learning models for insurance applications including classification and regression.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_deep_learning",
+    "name": "Deep Learning",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Implementation of neural networks and deep learning architectures for complex insurance pattern recognition.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_cloud_computing_aws_azure_gcp",
+    "name": "Cloud Computing (AWS/Azure/GCP)",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Deployment and management of insurance applications on cloud platforms for scalability and cost efficiency.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_data_engineering",
+    "name": "Data Engineering",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Design and implementation of data pipelines and ETL processes for insurance data integration.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_api_development",
+    "name": "API Development",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Development of RESTful and GraphQL APIs for insurance system integration and third-party connectivity.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_robotic_process_automation",
+    "name": "Robotic Process Automation",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation of RPA bots to automate repetitive insurance processes and improve efficiency.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_business_process_management",
+    "name": "Business Process Management",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Design, optimization, and management of insurance business processes and workflows.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_project_management",
+    "name": "Project Management",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Planning, execution, and monitoring of insurance projects using methodologies like Agile and Waterfall.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_agile_scrum_methodology",
+    "name": "Agile/Scrum Methodology",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Application of Agile and Scrum frameworks for iterative insurance software development and delivery.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_change_management",
+    "name": "Change Management",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Leadership of organizational change initiatives for digital transformation and process improvements.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_strategic_planning",
+    "name": "Strategic Planning",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Development of long-term strategic plans and roadmaps for insurance business growth and innovation.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_financial_analysis",
+    "name": "Financial Analysis",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Analysis of insurance financial statements, profitability, and cost management.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_budget_management",
+    "name": "Budget Management",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Planning, allocation, and monitoring of departmental budgets for insurance operations.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_leadership",
+    "name": "Leadership",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Direction and motivation of teams to achieve insurance business objectives and organizational goals.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_communication",
+    "name": "Communication",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Clear and effective communication of insurance concepts and decisions to diverse stakeholders.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_negotiation",
+    "name": "Negotiation",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Negotiation of claims settlements, reinsurance agreements, and vendor contracts.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_stakeholder_management",
+    "name": "Stakeholder Management",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Engagement and alignment of internal and external stakeholders in insurance initiatives.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_problem_solving",
+    "name": "Problem Solving",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Analytical and creative problem-solving for complex insurance challenges and issues.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_critical_thinking",
+    "name": "Critical Thinking",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Evaluation of insurance information and decisions using logical reasoning and evidence.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_emotional_intelligence",
+    "name": "Emotional Intelligence",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Understanding and management of emotions in customer interactions and team leadership.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_attention_to_detail",
+    "name": "Attention to Detail",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Careful review and accuracy in insurance documentation, claims processing, and underwriting decisions.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_continuous_learning",
+    "name": "Continuous Learning",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Commitment to ongoing professional development and adaptation to new insurance technologies and practices.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_digital_literacy",
+    "name": "Digital Literacy",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Proficiency with digital tools, platforms, and systems for insurance operations and customer engagement.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_legacy_system_integration",
+    "name": "Legacy System Integration",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Integration of new digital solutions with existing legacy insurance systems and databases.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_customer_data_platform_management",
+    "name": "Customer Data Platform Management",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation and management of CDPs for unified customer views and personalized insurance experiences.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_digital_customer_experience",
+    "name": "Digital Customer Experience",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Design and optimization of digital touchpoints for seamless insurance customer journeys.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_omnichannel_strategy",
+    "name": "Omnichannel Strategy",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Development of integrated multi-channel strategies for insurance customer engagement.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_mobile_app_development",
+    "name": "Mobile App Development",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Development of mobile applications for insurance policy management and claims submission.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_ux_ui_design",
+    "name": "UX/UI Design",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Design of user-friendly interfaces for insurance digital platforms and applications.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_blockchain_technology",
+    "name": "Blockchain Technology",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Exploration and implementation of blockchain for insurance claims, smart contracts, and data security.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_internet_of_things_iot",
+    "name": "Internet of Things (IoT)",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Integration of IoT devices for real-time risk monitoring and claims prevention in insurance.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_cybersecurity",
+    "name": "Cybersecurity",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Protection of insurance systems and customer data from cyber threats and breaches.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_vendor_management",
+    "name": "Vendor Management",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Selection, evaluation, and management of third-party vendors and service providers.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_quality_assurance",
+    "name": "Quality Assurance",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Testing and validation of insurance systems and processes to ensure quality and compliance.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_insurance_industry_knowledge",
+    "name": "Insurance Industry Knowledge",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Broad understanding of insurance industry trends, competitive landscape, and market dynamics.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_competitive_analysis",
+    "name": "Competitive Analysis",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Analysis of competitor strategies and market positioning in the insurance industry.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_market_research",
+    "name": "Market Research",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Conduct of market research to identify insurance customer needs and market opportunities.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_product_development",
+    "name": "Product Development",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Development of new insurance products and features to meet customer needs and market demands.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_pricing_strategy",
+    "name": "Pricing Strategy",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Development of competitive pricing strategies for insurance products based on risk and market analysis.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_claims_analytics",
+    "name": "Claims Analytics",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Analysis of claims data to identify trends, patterns, and opportunities for process improvement.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_telematics",
+    "name": "Telematics",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Use of vehicle telematics data for auto insurance risk assessment and pricing.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_wearable_technology_integration",
+    "name": "Wearable Technology Integration",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Integration of wearable device data for health insurance risk assessment and wellness programs.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_sentiment_analysis",
+    "name": "Sentiment Analysis",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Use of NLP and sentiment analysis to understand customer satisfaction and feedback in insurance.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_chatbot_development",
+    "name": "Chatbot Development",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Development and deployment of AI chatbots for insurance customer service and claims support.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_voice_of_customer",
+    "name": "Voice of Customer",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Capture and analysis of customer feedback to drive insurance product and service improvements.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_retention_analytics",
+    "name": "Retention Analytics",
+    "category": "domain",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Analysis of customer retention metrics and development of strategies to reduce insurance policy lapses.",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_cross_selling_and_upselling",
+    "name": "Cross-Selling and Upselling",
+    "category": "domain",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Identification and promotion of additional insurance products to existing customers.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_regulatory_reporting",
+    "name": "Regulatory Reporting",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Preparation and submission of required regulatory reports to insurance departments and NAIC.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_internal_audit",
+    "name": "Internal Audit",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Conduct of internal audits to ensure compliance with insurance regulations and company policies.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_risk_management",
+    "name": "Risk Management",
+    "category": "regulatory",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Identification and mitigation of operational, financial, and compliance risks in insurance operations.",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_artificial_intelligence",
+    "name": "Artificial Intelligence",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Design and implementation of AI systems for intelligent automation, decision-making, and customer engagement",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_generative_ai",
+    "name": "Generative AI",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Application of generative AI models for content generation, document processing, and customer service automation",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_rpa_robotic_process_automation",
+    "name": "RPA (Robotic Process Automation)",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Design and implementation of automated workflows using RPA tools to streamline repetitive business processes",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_compliance_and_regulatory_knowledge",
+    "name": "Compliance and Regulatory Knowledge",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Understanding of insurance regulations, NAIC guidelines, SOX, HIPAA, and state-specific compliance requirements",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_insurance_product_knowledge",
+    "name": "Insurance Product Knowledge",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Deep understanding of life, health, and property & casualty insurance products, coverage, and policy features",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_digital_transformation_strategy",
+    "name": "Digital Transformation Strategy",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Planning and execution of digital transformation initiatives to modernize business processes and technology",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_process_automation",
+    "name": "Process Automation",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Identification and automation of manual processes using technology to improve efficiency and reduce costs",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_web_development",
+    "name": "Web Development",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Development of web applications and portals using modern frameworks and technologies",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_devops",
+    "name": "DevOps",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Integration of development and operations through CI/CD pipelines, infrastructure automation, and monitoring",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_agile_methodology",
+    "name": "Agile Methodology",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Application of Agile principles and frameworks (Scrum, Kanban) for iterative project delivery",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_collaboration",
+    "name": "Collaboration",
+    "category": "technical",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Effective teamwork and cooperation across departments and functions to achieve shared goals",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_adaptability",
+    "name": "Adaptability",
+    "category": "technical",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Flexibility and resilience in response to changing business environments and technological disruption",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_computer_vision",
+    "name": "Computer Vision",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Implementation of image recognition and analysis for document processing and fraud detection",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_fraud_detection_and_prevention",
+    "name": "Fraud Detection and Prevention",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Identification and prevention of fraudulent claims and activities using analytics and investigative techniques",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_customer_experience_design",
+    "name": "Customer Experience Design",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Design of seamless omnichannel customer experiences across digital and traditional touchpoints",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_user_experience_ux_design",
+    "name": "User Experience (UX) Design",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Creation of intuitive and user-centered digital interfaces and applications",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_data_visualization",
+    "name": "Data Visualization",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Creation of compelling visual representations of data using tools like Tableau, Power BI, and Looker",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_statistical_analysis",
+    "name": "Statistical Analysis",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Application of statistical methods for hypothesis testing, modeling, and predictive analysis",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_insurance_claims_automation",
+    "name": "Insurance Claims Automation",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation of automation technologies to streamline claims processing and reduce manual effort",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_underwriting_automation",
+    "name": "Underwriting Automation",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Deployment of AI and automation tools to enhance underwriting decisions and accelerate policy issuance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_predictive_modeling",
+    "name": "Predictive Modeling",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Development of statistical and ML models to predict customer behavior, claims likelihood, and risk",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_iot_integration",
+    "name": "IoT Integration",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Integration of Internet of Things devices for real-time data collection and risk monitoring",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_microservices_architecture",
+    "name": "Microservices Architecture",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Design and implementation of scalable microservices-based application architectures",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_enterprise_architecture",
+    "name": "Enterprise Architecture",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Design of enterprise-wide IT systems and infrastructure aligned with business strategy",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_system_integration",
+    "name": "System Integration",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Integration of disparate systems and applications to create unified business processes",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_quality_assurance_and_testing",
+    "name": "Quality Assurance and Testing",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Development and execution of test strategies to ensure software quality and reliability",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_loss_prevention",
+    "name": "Loss Prevention",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Implementation of strategies and programs to reduce insurance losses and claims frequency",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_property_valuation",
+    "name": "Property Valuation",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Assessment and valuation of property for insurance coverage and claims purposes",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_claims_investigation",
+    "name": "Claims Investigation",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Investigation of insurance claims to verify legitimacy and determine coverage and liability",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_data_privacy_and_protection",
+    "name": "Data Privacy and Protection",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation of data privacy measures and compliance with GDPR, CCPA, and other privacy regulations",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_salesforce_administration",
+    "name": "Salesforce Administration",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Configuration and management of Salesforce CRM systems for sales and customer management",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_sap_erp",
+    "name": "SAP ERP",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Implementation and management of SAP enterprise resource planning systems",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_insurance_billing_and_accounting",
+    "name": "Insurance Billing and Accounting",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Management of premium billing, accounting, and financial transactions specific to insurance operations",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_digital_marketing",
+    "name": "Digital Marketing",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Marketing strategy and execution using digital channels including social media, email, and content marketing",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_analytics_and_insights",
+    "name": "Analytics and Insights",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Translation of data insights into actionable business recommendations and strategic decisions",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_hyperautomation",
+    "name": "Hyperautomation",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Integration of multiple automation technologies (RPA, AI, ML) for end-to-end process automation",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_prompt_engineering",
+    "name": "Prompt Engineering",
+    "category": "digital",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Optimization of prompts and queries for generative AI models to achieve desired outputs",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_ai_ethics_and_governance",
+    "name": "AI Ethics and Governance",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "emerging",
+    "description": "Understanding and implementation of ethical principles and governance frameworks for AI systems",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_model_validation_and_monitoring",
+    "name": "Model Validation and Monitoring",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Validation, testing, and ongoing monitoring of ML and AI models for performance and bias",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_knowledge_management",
+    "name": "Knowledge Management",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Creation and management of organizational knowledge systems and documentation",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_training_and_development",
+    "name": "Training and Development",
+    "category": "technical",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Design and delivery of training programs to develop employee skills and capabilities",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_talent_management",
+    "name": "Talent Management",
+    "category": "technical",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Recruitment, development, and retention of talent aligned with organizational needs",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_continuous_improvement",
+    "name": "Continuous Improvement",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Application of lean and Six Sigma methodologies to continuously improve processes and efficiency",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_api_security",
+    "name": "API Security",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Implementation of security measures to protect APIs from threats and unauthorized access",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_container_orchestration_kubernetes",
+    "name": "Container Orchestration (Kubernetes)",
+    "category": "technical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Deployment and management of containerized applications using Kubernetes",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_agile_coaching",
+    "name": "Agile Coaching",
+    "category": "digital",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Coaching and mentoring of teams in Agile practices and continuous improvement",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_underwriting_risk_assessment",
+    "name": "Underwriting Risk Assessment",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Evaluating applicant risk profiles and determining policy terms and pricing",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_machine_learning_applications",
+    "name": "Machine Learning Applications",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Applying ML algorithms for classification, regression, and clustering in insurance contexts",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_ai_ml_model_development",
+    "name": "AI/ML Model Development",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Designing, training, and validating machine learning models for insurance applications",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_generative_ai_prompt_engineering",
+    "name": "Generative AI Prompt Engineering",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Crafting effective prompts for GenAI tools to automate claims, underwriting, and customer service tasks",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_data_mining",
+    "name": "Data Mining",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Extracting meaningful patterns and insights from large insurance datasets",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_sql_and_database_querying",
+    "name": "SQL & Database Querying",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Writing SQL queries to extract and manipulate insurance data from relational databases",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_r_programming",
+    "name": "R Programming",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Using R for statistical analysis and actuarial calculations",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_business_intelligence_and_analytics",
+    "name": "Business Intelligence & Analytics",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Creating dashboards and reports using BI tools to support insurance business decisions",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_big_data_technologies",
+    "name": "Big Data Technologies",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Working with Hadoop, Spark, and other big data tools for large-scale insurance data processing",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_robotic_process_automation_rpa",
+    "name": "Robotic Process Automation (RPA)",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Automating repetitive insurance processes using RPA tools like UiPath or Blue Prism",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_api_development_and_integration",
+    "name": "API Development & Integration",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Building and integrating APIs to connect insurance systems and enable digital transformation",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_fraud_detection_analytics",
+    "name": "Fraud Detection Analytics",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Using advanced analytics to identify and prevent insurance fraud across all lines of business",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_customer_segmentation_analysis",
+    "name": "Customer Segmentation Analysis",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Analyzing customer data to identify segments for targeted marketing and product development",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_loss_ratio_analysis",
+    "name": "Loss Ratio Analysis",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Analyzing loss ratios to assess underwriting profitability and pricing adequacy",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_compliance_and_regulatory_analytics",
+    "name": "Compliance & Regulatory Analytics",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Analyzing data to ensure compliance with insurance regulations and reporting requirements",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_cybersecurity_risk_assessment",
+    "name": "Cybersecurity Risk Assessment",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Evaluating cyber risks for insurance underwriting and claims management",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_digital_transformation_leadership",
+    "name": "Digital Transformation Leadership",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "emerging",
+    "description": "Leading organizational change initiatives to adopt AI, automation, and digital technologies",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_team_leadership",
+    "name": "Team Leadership",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Directing and motivating teams to achieve performance goals and develop talent",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_cross_functional_collaboration",
+    "name": "Cross-functional Collaboration",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Working effectively across departments to align on digital transformation and business objectives",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_agile_and_scrum_methodologies",
+    "name": "Agile & Scrum Methodologies",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Using Agile frameworks to manage digital transformation and software development projects",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_performance_management",
+    "name": "Performance Management",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Setting goals, evaluating performance, and developing employees in insurance roles",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_executive_presence",
+    "name": "Executive Presence",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Demonstrating credibility and influence in senior leadership roles within insurance",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_risk_management_leadership",
+    "name": "Risk Management Leadership",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Leading enterprise risk management initiatives across insurance operations",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_innovation_management",
+    "name": "Innovation Management",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Fostering a culture of innovation and managing new product/service development in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_diversity_and_inclusion_leadership",
+    "name": "Diversity & Inclusion Leadership",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Building diverse and inclusive teams within insurance departments",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_mentoring_and_coaching",
+    "name": "Mentoring & Coaching",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Developing talent and coaching employees in insurance roles",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_business_acumen",
+    "name": "Business Acumen",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Understanding insurance business models, financials, and market dynamics",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_decision_making_under_uncertainty",
+    "name": "Decision-Making Under Uncertainty",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Making sound decisions with incomplete information in insurance contexts",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_ai_ml_strategy_and_governance",
+    "name": "AI/ML Strategy & Governance",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "emerging",
+    "description": "Developing and overseeing AI/ML strategy, governance, and ethical implementation in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_data_governance_leadership",
+    "name": "Data Governance Leadership",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Establishing data governance frameworks and policies for insurance data management",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_written_communication",
+    "name": "Written Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Writing clear, concise reports, emails, and documentation for insurance audiences",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_verbal_communication",
+    "name": "Verbal Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Presenting ideas and information effectively in meetings and presentations",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_customer_communication",
+    "name": "Customer Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Communicating with insurance customers about policies, claims, and services",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_stakeholder_communication",
+    "name": "Stakeholder Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Communicating effectively with diverse stakeholders including executives, employees, and partners",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_technical_communication",
+    "name": "Technical Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Explaining complex technical concepts to non-technical audiences in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_active_listening",
+    "name": "Active Listening",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Listening carefully to understand customer needs and concerns in insurance interactions",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_conflict_resolution",
+    "name": "Conflict Resolution",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Resolving disputes and conflicts between customers, employees, and partners",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_presentation_skills",
+    "name": "Presentation Skills",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Delivering compelling presentations to executives and stakeholders on insurance topics",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_empathy_and_emotional_intelligence",
+    "name": "Empathy & Emotional Intelligence",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Understanding and responding to customer emotions in claims and service interactions",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_feedback_delivery",
+    "name": "Feedback Delivery",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Providing constructive feedback to employees and colleagues in insurance roles",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_cross_cultural_communication",
+    "name": "Cross-cultural Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Communicating effectively with diverse cultural backgrounds in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_digital_communication_tools",
+    "name": "Digital Communication Tools",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Using digital platforms and tools for remote communication and collaboration",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_social_media_communication",
+    "name": "Social Media Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Managing insurance company social media presence and customer engagement",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_crisis_communication",
+    "name": "Crisis Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Communicating effectively during insurance crises and disasters",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_marketing_communication",
+    "name": "Marketing Communication",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Creating marketing messages and campaigns for insurance products and services",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_insurance_regulation_knowledge",
+    "name": "Insurance Regulation Knowledge",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Understanding state and federal insurance regulations, NAIC requirements, and compliance obligations",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_sox_compliance",
+    "name": "SOX Compliance",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Ensuring compliance with Sarbanes-Oxley requirements for financial reporting and controls",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_data_privacy_and_security",
+    "name": "Data Privacy & Security",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Protecting customer data and ensuring compliance with privacy laws like CCPA and GDPR",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_claims_handling",
+    "name": "Claims Handling",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Processing, investigating, and settling insurance claims across all lines of business",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_chatbot_and_ai_assistant_management",
+    "name": "Chatbot & AI Assistant Management",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "emerging",
+    "description": "Managing and optimizing AI-powered chatbots for customer service in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_omnichannel_customer_experience",
+    "name": "Omnichannel Customer Experience",
+    "category": "communication",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Delivering seamless customer experiences across digital, phone, and in-person channels",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_process_improvement",
+    "name": "Process Improvement",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "growing",
+    "description": "Identifying and implementing process improvements to increase efficiency and reduce costs",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_lean_six_sigma",
+    "name": "Lean Six Sigma",
+    "category": "leadership",
+    "skill_type": "soft",
+    "lifecycle_status": "stable",
+    "description": "Using Lean Six Sigma methodologies to optimize insurance processes",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_business_process_automation",
+    "name": "Business Process Automation",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Automating insurance business processes using technology and workflow tools",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_profitability_analysis",
+    "name": "Profitability Analysis",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "stable",
+    "description": "Analyzing profitability by product, customer, and business segment",
+    "market_demand_trend": "stable"
+  },
+  {
+    "id": "skill_automation_opportunity_identification",
+    "name": "Automation Opportunity Identification",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Identifying processes suitable for RPA, AI, and automation in insurance operations",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_model_validation_and_testing",
+    "name": "Model Validation & Testing",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "growing",
+    "description": "Validating and testing ML and AI models for accuracy and fairness in insurance",
+    "market_demand_trend": "rising"
+  },
+  {
+    "id": "skill_ethical_ai_and_bias_mitigation",
+    "name": "Ethical AI & Bias Mitigation",
+    "category": "analytical",
+    "skill_type": "core",
+    "lifecycle_status": "emerging",
+    "description": "Ensuring AI/ML models are fair, transparent, and free from bias in insurance decisions",
+    "market_demand_trend": "rising"
+  }
+]

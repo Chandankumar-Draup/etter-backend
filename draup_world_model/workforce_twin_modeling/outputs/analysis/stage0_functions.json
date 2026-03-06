@@ -1,0 +1,62 @@
+[
+  {
+    "function": "Claims",
+    "headcount": 540,
+    "annual_cost": 29505000.0,
+    "l1": 63.5,
+    "l2": 59.91,
+    "l3": 9.17,
+    "adoption_gap": 50.74,
+    "adoption_savings": 14966915.53125,
+    "full_savings": 15984544.28125,
+    "proficiency": 25.0,
+    "readiness": 45.0,
+    "trust": 35.0,
+    "eff_mult": 0.1125
+  },
+  {
+    "function": "Finance",
+    "headcount": 239,
+    "annual_cost": 15405000.0,
+    "l1": 56.64,
+    "l2": 50.31,
+    "l3": 10.49,
+    "adoption_gap": 39.82,
+    "adoption_savings": 6023605.0625,
+    "full_savings": 6987860.6875,
+    "proficiency": 30.0,
+    "readiness": 50.0,
+    "trust": 40.0,
+    "eff_mult": 0.15
+  },
+  {
+    "function": "People",
+    "headcount": 186,
+    "annual_cost": 10750000.0,
+    "l1": 55.81,
+    "l2": 52.93,
+    "l3": 13.63,
+    "adoption_gap": 39.3,
+    "adoption_savings": 4214967.59375,
+    "full_savings": 4530141.34375,
+    "proficiency": 20.0,
+    "readiness": 55.0,
+    "trust": 45.0,
+    "eff_mult": 0.11
+  },
+  {
+    "function": "Technology",
+    "headcount": 405,
+    "annual_cost": 35425000.0,
+    "l1": 47.17,
+    "l2": 39.67,
+    "l3": 7.51,
+    "adoption_gap": 32.16,
+    "adoption_savings": 11382596.90625,
+    "full_savings": 14040214.718750002,
+    "proficiency": 60.0,
+    "readiness": 70.0,
+    "trust": 65.0,
+    "eff_mult": 0.42
+  }
+]

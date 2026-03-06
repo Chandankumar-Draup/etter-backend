@@ -1,0 +1,6 @@
+tool_id,tool_name,deployed_to_function,task_categories_addressed,license_cost_per_user_month,current_adoption_pct
+TOOL-01,Microsoft Copilot,All,"directive,feedback_loop,task_iteration,learning",30,15
+TOOL-02,ServiceNow AI,"Technology,Claims","directive,feedback_loop",45,25
+TOOL-03,UiPath RPA,"Claims,Finance","directive,feedback_loop",50,20
+TOOL-04,Workday AI,"People,Finance","directive,feedback_loop,validation",25,30
+TOOL-05,Custom Claims AI,Claims,"directive,feedback_loop,validation,learning",60,10

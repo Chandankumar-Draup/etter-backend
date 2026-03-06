@@ -1,0 +1,15 @@
+{
+  "org": "InsureCo",
+  "headcount": 1370,
+  "annual_cost": 91085000.0,
+  "total_tasks": 581,
+  "compliance_tasks": 87,
+  "l1": 56.43,
+  "l2": 51.31,
+  "l3": 9.52,
+  "adoption_gap": 41.79,
+  "capability_gap": 5.13,
+  "total_gap": 46.91,
+  "adoption_gap_savings": 36588085.09375,
+  "full_gap_savings": 41542761.03125
+}

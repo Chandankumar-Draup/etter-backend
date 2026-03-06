@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "wl_senior_software_engineer__claims_platform_microservices_architecture_design_and_development",
+    "name": "Microservices Architecture Design & Development",
+    "role_id": "role_senior_software_engineer__claims_platform",
+    "function_id": "func_information_technology",
+    "description": "Designs and develops core microservices for the claims processing platform, establishing scalable architecture patterns and making critical technical decisions. Writes production code for high-throughput services handling claims data processing and routing.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_software_engineer__claims_platform_ai_powered_claims_assessment_integration",
+    "name": "AI-Powered Claims Assessment Integration",
+    "role_id": "role_senior_software_engineer__claims_platform",
+    "function_id": "func_information_technology",
+    "description": "Integrates machine learning models and AI tools into the claims platform, building APIs and data pipelines that connect assessment algorithms with core processing systems. Optimizes performance and ensures reliable model serving in production.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_software_engineer__claims_platform_technical_mentorship_and_code_review",
+    "name": "Technical Mentorship & Code Review",
+    "role_id": "role_senior_software_engineer__claims_platform",
+    "function_id": "func_information_technology",
+    "description": "Mentors junior engineers on best practices, conducts code reviews, and establishes technical standards for the claims platform team. Provides guidance on system design, testing strategies, and production readiness.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_software_engineer__claims_platform_platform_reliability_and_performance_optimization",
+    "name": "Platform Reliability & Performance Optimization",
+    "role_id": "role_senior_software_engineer__claims_platform",
+    "function_id": "func_information_technology",
+    "description": "Monitors production systems, identifies performance bottlenecks, and implements optimizations for scalability and reliability. Manages technical debt and conducts system health assessments.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_software_engineer__underwriting_systems_backend_api_development_for_underwriting",
+    "name": "Backend API Development for Underwriting",
+    "role_id": "role_software_engineer__underwriting_systems",
+    "function_id": "func_information_technology",
+    "description": "Develops and maintains RESTful APIs that power the underwriting platform, handling policy data, risk calculations, and pricing workflows. Ensures APIs are performant, well-documented, and follow architectural standards.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_software_engineer__underwriting_systems_machine_learning_model_integration",
+    "name": "Machine Learning Model Integration",
+    "role_id": "role_software_engineer__underwriting_systems",
+    "function_id": "func_information_technology",
+    "description": "Collaborates with data scientists to integrate predictive algorithms and risk assessment models into underwriting services. Builds feature pipelines, model serving infrastructure, and monitoring for ML-driven pricing decisions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_software_engineer__underwriting_systems_system_integration_and_data_pipeline_maintenance",
+    "name": "System Integration & Data Pipeline Maintenance",
+    "role_id": "role_software_engineer__underwriting_systems",
+    "function_id": "func_information_technology",
+    "description": "Maintains integrations with external systems, data sources, and third-party services used in underwriting. Develops and monitors ETL processes that feed data into risk assessment models.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_software_engineer__underwriting_systems_testing_and_performance_optimization",
+    "name": "Testing & Performance Optimization",
+    "role_id": "role_software_engineer__underwriting_systems",
+    "function_id": "func_information_technology",
+    "description": "Writes unit and integration tests for underwriting services, performs load testing, and optimizes query performance. Ensures system reliability and data accuracy in production.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__customer_portal_customer_portal_frontend_development",
+    "name": "Customer Portal Frontend Development",
+    "role_id": "role_full_stack_developer__customer_portal",
+    "function_id": "func_information_technology",
+    "description": "Builds responsive web and mobile user interfaces for policy management, claims submission, and customer service interactions. Implements modern UI/UX designs using current frameworks and ensures cross-browser compatibility.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__customer_portal_customer_portal_backend_api_development",
+    "name": "Customer Portal Backend API Development",
+    "role_id": "role_full_stack_developer__customer_portal",
+    "function_id": "func_information_technology",
+    "description": "Develops backend services and APIs that support customer portal functionality, including authentication, policy retrieval, claims processing, and customer data management. Ensures secure and efficient data handling.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__customer_portal_mobile_application_development_and_optimization",
+    "name": "Mobile Application Development & Optimization",
+    "role_id": "role_full_stack_developer__customer_portal",
+    "function_id": "func_information_technology",
+    "description": "Develops and maintains native or cross-platform mobile applications for iOS and Android, optimizing performance and user experience on mobile devices. Manages mobile-specific features and offline capabilities.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__customer_portal_customer_portal_testing_and_bug_fixes",
+    "name": "Customer Portal Testing & Bug Fixes",
+    "role_id": "role_full_stack_developer__customer_portal",
+    "function_id": "func_information_technology",
+    "description": "Performs testing of portal features, identifies and fixes bugs, and responds to customer-reported issues. Collaborates with QA team to ensure quality and user satisfaction.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__internal_tools_and_analytics_internal_dashboard_and_reporting_tool_development",
+    "name": "Internal Dashboard & Reporting Tool Development",
+    "role_id": "role_full_stack_developer__internal_tools_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Develops custom dashboards and reporting tools used by claims adjusters, underwriters, and operations teams. Creates intuitive interfaces for data visualization and operational metrics.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__internal_tools_and_analytics_data_warehouse_and_bi_platform_integration",
+    "name": "Data Warehouse & BI Platform Integration",
+    "role_id": "role_full_stack_developer__internal_tools_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Integrates internal tools with data warehouses and business intelligence platforms, building APIs and data connectors that enable real-time reporting and analytics. Optimizes query performance and data refresh cycles.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__internal_tools_and_analytics_administrative_application_development",
+    "name": "Administrative Application Development",
+    "role_id": "role_full_stack_developer__internal_tools_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Builds administrative applications for user management, configuration, audit logging, and system administration. Ensures security and access controls for sensitive operational functions.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_full_stack_developer__internal_tools_and_analytics_tool_maintenance_and_performance_optimization",
+    "name": "Tool Maintenance & Performance Optimization",
+    "role_id": "role_full_stack_developer__internal_tools_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Maintains existing internal tools, optimizes performance, and implements improvements based on user feedback. Manages technical debt and ensures tools remain scalable.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_qa_engineer__claims_and_underwriting_qa_strategy_and_test_plan_development",
+    "name": "QA Strategy & Test Plan Development",
+    "role_id": "role_senior_qa_engineer__claims_and_underwriting",
+    "function_id": "func_information_technology",
+    "description": "Develops comprehensive quality assurance strategies and test plans for critical claims and underwriting systems. Defines testing scope, risk assessment, and coverage requirements aligned with business objectives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_qa_engineer__claims_and_underwriting_regulatory_compliance_and_testing",
+    "name": "Regulatory Compliance & Testing",
+    "role_id": "role_senior_qa_engineer__claims_and_underwriting",
+    "function_id": "func_information_technology",
+    "description": "Ensures claims and underwriting systems comply with insurance regulations and industry standards. Develops test cases for compliance requirements and maintains audit trails for regulatory reporting.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_qa_engineer__claims_and_underwriting_qa_team_management_and_standards_definition",
+    "name": "QA Team Management & Standards Definition",
+    "role_id": "role_senior_qa_engineer__claims_and_underwriting",
+    "function_id": "func_information_technology",
+    "description": "Manages QA team members, assigns testing tasks, and conducts performance reviews. Establishes testing standards, best practices, and quality metrics across the organization.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_qa_engineer__claims_and_underwriting_critical_system_testing_and_defect_management",
+    "name": "Critical System Testing & Defect Management",
+    "role_id": "role_senior_qa_engineer__claims_and_underwriting",
+    "function_id": "func_information_technology",
+    "description": "Performs hands-on testing of critical claims and underwriting features, identifies defects, and manages defect resolution. Conducts root cause analysis for high-severity issues.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_qa_engineer__customer_experience_functional_testing_of_customer_portal",
+    "name": "Functional Testing of Customer Portal",
+    "role_id": "role_qa_engineer__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Performs comprehensive functional testing of customer-facing web and mobile applications, verifying that all features work as designed. Tests across multiple browsers, devices, and operating systems.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_qa_engineer__customer_experience_user_acceptance_testing_and_usability_evaluation",
+    "name": "User Acceptance Testing & Usability Evaluation",
+    "role_id": "role_qa_engineer__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Conducts user acceptance testing with stakeholders and end-users, gathering feedback on usability and user experience. Identifies usability issues and recommends improvements to UI/UX design.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_qa_engineer__customer_experience_defect_documentation_and_reproduction",
+    "name": "Defect Documentation & Reproduction",
+    "role_id": "role_qa_engineer__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Documents defects with detailed reproduction steps, screenshots, and logs to facilitate developer investigation. Tracks defect status and verifies fixes in subsequent builds.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_qa_engineer__customer_experience_mobile_and_cross_browser_compatibility_testing",
+    "name": "Mobile & Cross-Browser Compatibility Testing",
+    "role_id": "role_qa_engineer__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Tests customer applications across multiple mobile devices, browsers, and screen sizes to ensure consistent functionality and appearance. Identifies and reports platform-specific issues.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__api_and_integration_testing_rest_api_test_automation_development",
+    "name": "REST API Test Automation Development",
+    "role_id": "role_test_automation_engineer__api_and_integration_testing",
+    "function_id": "func_information_technology",
+    "description": "Develops and maintains automated test suites for REST APIs using industry-standard frameworks like Postman, RestAssured, or similar tools. Creates comprehensive test cases covering happy paths, edge cases, and error scenarios.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__api_and_integration_testing_system_integration_testing_automation",
+    "name": "System Integration Testing Automation",
+    "role_id": "role_test_automation_engineer__api_and_integration_testing",
+    "function_id": "func_information_technology",
+    "description": "Develops automated tests for system integrations between microservices, third-party systems, and data pipelines. Ensures data flows correctly across system boundaries and validates integration contracts.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__api_and_integration_testing_ci_cd_pipeline_implementation_and_maintenance",
+    "name": "CI/CD Pipeline Implementation & Maintenance",
+    "role_id": "role_test_automation_engineer__api_and_integration_testing",
+    "function_id": "func_information_technology",
+    "description": "Implements continuous testing in CI/CD pipelines, integrating automated tests into build and deployment processes. Configures test execution, reporting, and failure notifications.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__api_and_integration_testing_test_framework_and_infrastructure_management",
+    "name": "Test Framework & Infrastructure Management",
+    "role_id": "role_test_automation_engineer__api_and_integration_testing",
+    "function_id": "func_information_technology",
+    "description": "Maintains test automation frameworks, manages test data, and optimizes test execution performance. Troubleshoots test failures and improves test reliability.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__ui_and_mobile_ui_test_automation_development",
+    "name": "UI Test Automation Development",
+    "role_id": "role_test_automation_engineer__ui_and_mobile",
+    "function_id": "func_information_technology",
+    "description": "Creates and maintains automated UI tests for web applications using frameworks like Selenium, Cypress, or Playwright. Develops test scripts covering critical user workflows and business scenarios.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__ui_and_mobile_mobile_application_test_automation",
+    "name": "Mobile Application Test Automation",
+    "role_id": "role_test_automation_engineer__ui_and_mobile",
+    "function_id": "func_information_technology",
+    "description": "Develops automated tests for mobile applications across iOS and Android platforms using tools like Appium or XCUITest. Tests native features, gestures, and mobile-specific functionality.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__ui_and_mobile_cross_browser_and_device_testing_automation",
+    "name": "Cross-Browser & Device Testing Automation",
+    "role_id": "role_test_automation_engineer__ui_and_mobile",
+    "function_id": "func_information_technology",
+    "description": "Implements automated testing across multiple browsers and devices using cloud-based testing platforms. Manages test execution on different OS versions and screen sizes.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_test_automation_engineer__ui_and_mobile_test_framework_maintenance_and_defect_resolution",
+    "name": "Test Framework Maintenance & Defect Resolution",
+    "role_id": "role_test_automation_engineer__ui_and_mobile",
+    "function_id": "func_information_technology",
+    "description": "Maintains UI test frameworks, resolves flaky tests, and collaborates with developers to identify and fix defects early in the development cycle. Optimizes test execution speed and reliability.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cloud_engineer__infrastructure_and_platforms_cloud_infrastructure_design_and_management",
+    "name": "Cloud Infrastructure Design & Management",
+    "role_id": "role_senior_cloud_engineer__infrastructure_and_platforms",
+    "function_id": "func_information_technology",
+    "description": "Designs and manages cloud infrastructure on AWS/Azure, including networking, compute, storage, and security components. Establishes infrastructure-as-code practices and maintains cloud environments.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cloud_engineer__infrastructure_and_platforms_kubernetes_and_container_orchestration",
+    "name": "Kubernetes & Container Orchestration",
+    "role_id": "role_senior_cloud_engineer__infrastructure_and_platforms",
+    "function_id": "func_information_technology",
+    "description": "Designs and manages Kubernetes clusters for containerized applications, implementing deployment strategies, scaling policies, and resource management. Ensures high availability and efficient resource utilization.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cloud_engineer__infrastructure_and_platforms_serverless_architecture_and_disaster_recovery",
+    "name": "Serverless Architecture & Disaster Recovery",
+    "role_id": "role_senior_cloud_engineer__infrastructure_and_platforms",
+    "function_id": "func_information_technology",
+    "description": "Designs serverless architectures using Lambda, Cloud Functions, and managed services. Implements disaster recovery solutions, backup strategies, and business continuity plans.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cloud_engineer__infrastructure_and_platforms_cloud_migration_and_best_practices_leadership",
+    "name": "Cloud Migration & Best Practices Leadership",
+    "role_id": "role_senior_cloud_engineer__infrastructure_and_platforms",
+    "function_id": "func_information_technology",
+    "description": "Leads cloud migration initiatives, establishing best practices for cloud-native development and operations. Mentors team members on cloud architecture patterns and cost optimization strategies.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cloud_engineer__data_and_analytics_cloud_data_platform_management",
+    "name": "Cloud Data Platform Management",
+    "role_id": "role_cloud_engineer__data_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Manages cloud-based data platforms including data lakes, data warehouses, and ETL infrastructure. Configures data ingestion pipelines, storage optimization, and data governance.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cloud_engineer__data_and_analytics_analytics_and_machine_learning_infrastructure",
+    "name": "Analytics & Machine Learning Infrastructure",
+    "role_id": "role_cloud_engineer__data_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Manages cloud infrastructure supporting analytics, reporting, and machine learning workloads. Configures compute resources, manages model serving infrastructure, and optimizes performance.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cloud_engineer__data_and_analytics_cloud_cost_optimization_and_monitoring",
+    "name": "Cloud Cost Optimization & Monitoring",
+    "role_id": "role_cloud_engineer__data_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Monitors cloud spending, identifies cost optimization opportunities, and implements cost reduction strategies. Manages resource allocation and implements chargeback mechanisms.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cloud_engineer__data_and_analytics_data_security_and_compliance_management",
+    "name": "Data Security & Compliance Management",
+    "role_id": "role_cloud_engineer__data_and_analytics",
+    "function_id": "func_information_technology",
+    "description": "Ensures data security and regulatory compliance in cloud environments, implementing encryption, access controls, and audit logging. Manages data retention policies and privacy requirements.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_devops_engineer_ci_cd_pipeline_strategy_and_architecture",
+    "name": "CI/CD Pipeline Strategy & Architecture",
+    "role_id": "role_senior_devops_engineer",
+    "function_id": "func_information_technology",
+    "description": "Designs and oversees the organization's continuous integration and continuous deployment pipeline architecture, establishing standards and best practices for automated testing, building, and deployment processes.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_devops_engineer_devops_team_leadership_and_mentoring",
+    "name": "DevOps Team Leadership & Mentoring",
+    "role_id": "role_senior_devops_engineer",
+    "function_id": "func_information_technology",
+    "description": "Mentors junior DevOps engineers, conducts code reviews, establishes team processes, and drives adoption of modern DevOps tools and practices across the organization.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_devops_engineer_infrastructure_as_code_implementation",
+    "name": "Infrastructure-as-Code Implementation",
+    "role_id": "role_senior_devops_engineer",
+    "function_id": "func_information_technology",
+    "description": "Develops and maintains infrastructure-as-code frameworks using tools like Terraform and CloudFormation, enabling reproducible and version-controlled infrastructure deployments.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_devops_engineer_devops_tool_evaluation_and_integration",
+    "name": "DevOps Tool Evaluation & Integration",
+    "role_id": "role_senior_devops_engineer",
+    "function_id": "func_information_technology",
+    "description": "Evaluates emerging DevOps tools and technologies, manages tool integrations, and oversees platform upgrades to improve automation capabilities and team efficiency.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_devops_engineer__release_and_deployment_release_pipeline_management",
+    "name": "Release Pipeline Management",
+    "role_id": "role_devops_engineer__release_and_deployment",
+    "function_id": "func_information_technology",
+    "description": "Manages and optimizes release pipelines for production systems, coordinating deployments across environments and ensuring smooth transitions from development to production.",
+    "effort_allocation_pct": 35,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_devops_engineer__release_and_deployment_production_incident_response_and_monitoring",
+    "name": "Production Incident Response & Monitoring",
+    "role_id": "role_devops_engineer__release_and_deployment",
+    "function_id": "func_information_technology",
+    "description": "Monitors system performance metrics, responds to production incidents, performs root cause analysis, and implements fixes to restore service availability.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_devops_engineer__release_and_deployment_environment_provisioning_and_configuration",
+    "name": "Environment Provisioning & Configuration",
+    "role_id": "role_devops_engineer__release_and_deployment",
+    "function_id": "func_information_technology",
+    "description": "Provisions and configures development, staging, and production environments, managing infrastructure resources and ensuring consistency across deployment targets.",
+    "effort_allocation_pct": 20,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_devops_engineer__release_and_deployment_infrastructure_performance_optimization",
+    "name": "Infrastructure Performance Optimization",
+    "role_id": "role_devops_engineer__release_and_deployment",
+    "function_id": "func_information_technology",
+    "description": "Analyzes system performance data, identifies optimization opportunities, and implements infrastructure improvements to enhance reliability and reduce operational costs.",
+    "effort_allocation_pct": 15,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_network_engineer_enterprise_network_architecture_design",
+    "name": "Enterprise Network Architecture Design",
+    "role_id": "role_senior_network_engineer",
+    "function_id": "func_information_technology",
+    "description": "Designs and plans enterprise network infrastructure including firewall architectures, load balancing strategies, and VPN solutions to support business requirements and security policies.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_network_engineer_network_security_and_access_control",
+    "name": "Network Security & Access Control",
+    "role_id": "role_senior_network_engineer",
+    "function_id": "func_information_technology",
+    "description": "Oversees network security policies, manages firewall rules and access controls, and ensures compliance with security standards and regulatory requirements.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_network_engineer_capacity_planning_and_network_optimization",
+    "name": "Capacity Planning & Network Optimization",
+    "role_id": "role_senior_network_engineer",
+    "function_id": "func_information_technology",
+    "description": "Conducts capacity planning analysis, monitors network utilization, and implements optimization strategies to ensure adequate bandwidth and performance for business operations.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_network_engineer_disaster_recovery_and_business_continuity",
+    "name": "Disaster Recovery & Business Continuity",
+    "role_id": "role_senior_network_engineer",
+    "function_id": "func_information_technology",
+    "description": "Designs and maintains disaster recovery strategies for critical network systems, conducts failover testing, and ensures business continuity plans are current and effective.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_network_engineer__cloud_and_connectivity_hybrid_cloud_network_integration",
+    "name": "Hybrid Cloud Network Integration",
+    "role_id": "role_network_engineer__cloud_and_connectivity",
+    "function_id": "func_information_technology",
+    "description": "Manages connectivity between on-premises infrastructure and cloud platforms (AWS/Azure), configuring and optimizing hybrid network architectures for seamless operations.",
+    "effort_allocation_pct": 35,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_network_engineer__cloud_and_connectivity_expressroute_and_direct_connect_configuration",
+    "name": "ExpressRoute & Direct Connect Configuration",
+    "role_id": "role_network_engineer__cloud_and_connectivity",
+    "function_id": "func_information_technology",
+    "description": "Configures and manages dedicated network connections like Azure ExpressRoute and AWS Direct Connect, ensuring high-performance and secure cloud connectivity.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_network_engineer__cloud_and_connectivity_network_optimization_and_performance_tuning",
+    "name": "Network Optimization & Performance Tuning",
+    "role_id": "role_network_engineer__cloud_and_connectivity",
+    "function_id": "func_information_technology",
+    "description": "Monitors network performance across hybrid environments, identifies bottlenecks, and implements optimization strategies to improve latency and throughput.",
+    "effort_allocation_pct": 20,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_network_engineer__cloud_and_connectivity_remote_workforce_and_distributed_systems_support",
+    "name": "Remote Workforce & Distributed Systems Support",
+    "role_id": "role_network_engineer__cloud_and_connectivity",
+    "function_id": "func_information_technology",
+    "description": "Supports network requirements for remote workers and distributed systems, managing VPN access, bandwidth allocation, and connectivity troubleshooting.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cybersecurity_analyst__threat_and_vulnerability_threat_detection_and_incident_response",
+    "name": "Threat Detection & Incident Response",
+    "role_id": "role_senior_cybersecurity_analyst__threat_and_vulnerability",
+    "function_id": "func_information_technology",
+    "description": "Leads threat detection programs, investigates security incidents, coordinates incident response activities, and implements measures to contain and remediate threats.",
+    "effort_allocation_pct": 35,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cybersecurity_analyst__threat_and_vulnerability_vulnerability_management_program",
+    "name": "Vulnerability Management Program",
+    "role_id": "role_senior_cybersecurity_analyst__threat_and_vulnerability",
+    "function_id": "func_information_technology",
+    "description": "Manages vulnerability scanning, assessment, and remediation programs across the organization, prioritizing risks and tracking remediation efforts.",
+    "effort_allocation_pct": 30,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cybersecurity_analyst__threat_and_vulnerability_security_assessments_and_penetration_testing",
+    "name": "Security Assessments & Penetration Testing",
+    "role_id": "role_senior_cybersecurity_analyst__threat_and_vulnerability",
+    "function_id": "func_information_technology",
+    "description": "Conducts comprehensive security assessments and penetration tests to identify weaknesses, documents findings, and recommends remediation strategies.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_cybersecurity_analyst__threat_and_vulnerability_cyber_threat_strategy_and_emerging_threats",
+    "name": "Cyber Threat Strategy & Emerging Threats",
+    "role_id": "role_senior_cybersecurity_analyst__threat_and_vulnerability",
+    "function_id": "func_information_technology",
+    "description": "Develops strategies to mitigate emerging cyber threats, stays current with threat intelligence, and recommends security controls and architectural changes.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cybersecurity_analyst__compliance_and_risk_regulatory_compliance_management",
+    "name": "Regulatory Compliance Management",
+    "role_id": "role_cybersecurity_analyst__compliance_and_risk",
+    "function_id": "func_information_technology",
+    "description": "Ensures compliance with insurance industry regulations including HIPAA, SOC 2, and state insurance laws, maintaining documentation and implementing required controls.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cybersecurity_analyst__compliance_and_risk_security_risk_assessment_and_reporting",
+    "name": "Security Risk Assessment & Reporting",
+    "role_id": "role_cybersecurity_analyst__compliance_and_risk",
+    "function_id": "func_information_technology",
+    "description": "Conducts security risk assessments, evaluates control effectiveness, and prepares risk reports for management and external stakeholders.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cybersecurity_analyst__compliance_and_risk_security_policy_development_and_maintenance",
+    "name": "Security Policy Development & Maintenance",
+    "role_id": "role_cybersecurity_analyst__compliance_and_risk",
+    "function_id": "func_information_technology",
+    "description": "Develops, updates, and maintains security policies and procedures aligned with regulatory requirements and organizational risk tolerance.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cybersecurity_analyst__compliance_and_risk_audit_coordination_and_external_auditor_management",
+    "name": "Audit Coordination & External Auditor Management",
+    "role_id": "role_cybersecurity_analyst__compliance_and_risk",
+    "function_id": "func_information_technology",
+    "description": "Coordinates internal and external security audits, prepares audit evidence, responds to audit findings, and manages remediation tracking.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_data_engineer__data_pipeline_architecture_data_pipeline_architecture_and_design",
+    "name": "Data Pipeline Architecture & Design",
+    "role_id": "role_senior_data_engineer__data_pipeline_architecture",
+    "function_id": "func_information_technology",
+    "description": "Designs scalable and efficient data pipeline architectures supporting analytics, reporting, and machine learning initiatives across the organization.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_data_engineer__data_pipeline_architecture_etl_process_development_and_optimization",
+    "name": "ETL Process Development & Optimization",
+    "role_id": "role_senior_data_engineer__data_pipeline_architecture",
+    "function_id": "func_information_technology",
+    "description": "Develops and optimizes ETL processes for data extraction, transformation, and loading, ensuring data flows efficiently through the pipeline.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_data_engineer__data_pipeline_architecture_data_quality_framework_and_governance",
+    "name": "Data Quality Framework & Governance",
+    "role_id": "role_senior_data_engineer__data_pipeline_architecture",
+    "function_id": "func_information_technology",
+    "description": "Establishes and maintains data quality frameworks, implements validation rules, and ensures data governance standards are followed across pipelines.",
+    "effort_allocation_pct": 20,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_data_engineer__data_pipeline_architecture_data_processing_performance_tuning",
+    "name": "Data Processing Performance Tuning",
+    "role_id": "role_senior_data_engineer__data_pipeline_architecture",
+    "function_id": "func_information_technology",
+    "description": "Monitors data pipeline performance, identifies bottlenecks, and implements optimizations to improve processing speed and reduce computational costs.",
+    "effort_allocation_pct": 15,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_data_engineer__claims_and_underwriting_data_claims_data_pipeline_development",
+    "name": "Claims Data Pipeline Development",
+    "role_id": "role_data_engineer__claims_and_underwriting_data",
+    "function_id": "func_information_technology",
+    "description": "Develops and maintains data pipelines for claims data, implementing transformations that enable analytics and support claims processing workflows.",
+    "effort_allocation_pct": 35,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_data_engineer__claims_and_underwriting_data_underwriting_data_integration_and_transformation",
+    "name": "Underwriting Data Integration & Transformation",
+    "role_id": "role_data_engineer__claims_and_underwriting_data",
+    "function_id": "func_information_technology",
+    "description": "Integrates underwriting data from multiple sources, applies business logic transformations, and ensures data accuracy for underwriting analytics and AI models.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_data_engineer__claims_and_underwriting_data_business_requirements_and_data_analysis",
+    "name": "Business Requirements & Data Analysis",
+    "role_id": "role_data_engineer__claims_and_underwriting_data",
+    "function_id": "func_information_technology",
+    "description": "Collaborates with business analysts and data scientists to understand data requirements, translates business needs into technical solutions, and validates data outputs.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_data_engineer__claims_and_underwriting_data_data_quality_monitoring_and_troubleshooting",
+    "name": "Data Quality Monitoring & Troubleshooting",
+    "role_id": "role_data_engineer__claims_and_underwriting_data",
+    "function_id": "func_information_technology",
+    "description": "Monitors data pipeline health, identifies data quality issues, troubleshoots failures, and implements fixes to ensure reliable data delivery.",
+    "effort_allocation_pct": 15,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_database_administrator_enterprise_database_architecture_and_strategy",
+    "name": "Enterprise Database Architecture & Strategy",
+    "role_id": "role_senior_database_administrator",
+    "function_id": "func_information_technology",
+    "description": "Designs and plans enterprise database architectures, evaluates database technologies, and establishes standards for database implementations across the organization.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_database_administrator_database_performance_tuning_and_optimization",
+    "name": "Database Performance Tuning & Optimization",
+    "role_id": "role_senior_database_administrator",
+    "function_id": "func_information_technology",
+    "description": "Analyzes database performance metrics, identifies optimization opportunities, tunes queries and indexes, and implements performance improvements.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_database_administrator_backup_recovery_and_high_availability",
+    "name": "Backup, Recovery & High Availability",
+    "role_id": "role_senior_database_administrator",
+    "function_id": "func_information_technology",
+    "description": "Manages database backup strategies, implements disaster recovery solutions, maintains high availability configurations, and conducts recovery testing.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_database_administrator_database_security_and_compliance",
+    "name": "Database Security & Compliance",
+    "role_id": "role_senior_database_administrator",
+    "function_id": "func_information_technology",
+    "description": "Ensures database security through access controls, encryption, and audit logging, and maintains compliance with data protection and regulatory requirements.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_database_administrator__cloud_and_nosql_cloud_database_management_and_scaling",
+    "name": "Cloud Database Management & Scaling",
+    "role_id": "role_database_administrator__cloud_and_nosql",
+    "function_id": "func_information_technology",
+    "description": "Manages cloud-based databases and NoSQL solutions, configures auto-scaling policies, and optimizes cloud database costs and performance.",
+    "effort_allocation_pct": 35,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_database_administrator__cloud_and_nosql_nosql_database_administration",
+    "name": "NoSQL Database Administration",
+    "role_id": "role_database_administrator__cloud_and_nosql",
+    "function_id": "func_information_technology",
+    "description": "Administers NoSQL databases like MongoDB, DynamoDB, and Cosmos DB, managing data distribution, replication, and consistency configurations.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_database_administrator__cloud_and_nosql_database_performance_monitoring_and_alerting",
+    "name": "Database Performance Monitoring & Alerting",
+    "role_id": "role_database_administrator__cloud_and_nosql",
+    "function_id": "func_information_technology",
+    "description": "Monitors cloud and NoSQL database performance, sets up alerting thresholds, and responds to performance issues and anomalies.",
+    "effort_allocation_pct": 20,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_database_administrator__cloud_and_nosql_cloud_database_backup_and_disaster_recovery",
+    "name": "Cloud Database Backup & Disaster Recovery",
+    "role_id": "role_database_administrator__cloud_and_nosql",
+    "function_id": "func_information_technology",
+    "description": "Implements backup strategies for cloud databases, manages disaster recovery configurations, and conducts recovery drills to ensure data protection.",
+    "effort_allocation_pct": 15,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_ml_engineer__claims_intelligence_fraud_detection_model_development",
+    "name": "Fraud Detection Model Development",
+    "role_id": "role_senior_ml_engineer__claims_intelligence",
+    "function_id": "func_information_technology",
+    "description": "Design, develop, and validate machine learning models for detecting fraudulent claims patterns. Experiment with algorithms, feature engineering, and model architectures to maximize fraud detection accuracy.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_ml_engineer__claims_intelligence_model_deployment_and_production_management",
+    "name": "Model Deployment and Production Management",
+    "role_id": "role_senior_ml_engineer__claims_intelligence",
+    "function_id": "func_information_technology",
+    "description": "Deploy trained models to production environments, monitor model performance metrics, and manage the complete model lifecycle including versioning and rollbacks. Ensure models meet SLA requirements and handle model drift.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_ml_engineer__claims_intelligence_claims_severity_and_assessment_optimization",
+    "name": "Claims Severity and Assessment Optimization",
+    "role_id": "role_senior_ml_engineer__claims_intelligence",
+    "function_id": "func_information_technology",
+    "description": "Build and refine predictive models for claims severity prediction and automated assessment scoring. Collaborate with claims teams to understand business requirements and validate model outputs against actual claim outcomes.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_ml_engineer__claims_intelligence_model_performance_analysis_and_reporting",
+    "name": "Model Performance Analysis and Reporting",
+    "role_id": "role_senior_ml_engineer__claims_intelligence",
+    "function_id": "func_information_technology",
+    "description": "Analyze model performance across different segments, generate insights on model behavior, and create reports for stakeholders. Identify improvement opportunities and document model limitations and assumptions.",
+    "effort_allocation_pct": 10,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ml_engineer__underwriting_and_risk_models_risk_assessment_model_development",
+    "name": "Risk Assessment Model Development",
+    "role_id": "role_ml_engineer__underwriting_and_risk_models",
+    "function_id": "func_information_technology",
+    "description": "Build predictive models for assessing policyholder risk profiles and predicting claim likelihood. Work with historical claims data and underwriting information to develop accurate risk scoring algorithms.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ml_engineer__underwriting_and_risk_models_policy_pricing_model_engineering",
+    "name": "Policy Pricing Model Engineering",
+    "role_id": "role_ml_engineer__underwriting_and_risk_models",
+    "function_id": "func_information_technology",
+    "description": "Develop machine learning models that support dynamic pricing strategies and premium calculations. Incorporate risk factors, market conditions, and competitive analysis into pricing models.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ml_engineer__underwriting_and_risk_models_customer_acquisition_prediction",
+    "name": "Customer Acquisition Prediction",
+    "role_id": "role_ml_engineer__underwriting_and_risk_models",
+    "function_id": "func_information_technology",
+    "description": "Build models to predict customer acquisition likelihood and identify high-value prospect segments. Collaborate with marketing and sales teams to translate business objectives into predictive features and targets.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ml_engineer__underwriting_and_risk_models_underwriter_and_actuary_collaboration",
+    "name": "Underwriter and Actuary Collaboration",
+    "role_id": "role_ml_engineer__underwriting_and_risk_models",
+    "function_id": "func_information_technology",
+    "description": "Partner with underwriting and actuarial teams to understand business requirements, validate model assumptions, and ensure models align with regulatory requirements. Present findings and recommendations to non-technical stakeholders.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect_ai_solution_design_and_architecture",
+    "name": "AI Solution Design and Architecture",
+    "role_id": "role_ai_solutions_architect",
+    "function_id": "func_information_technology",
+    "description": "Design end-to-end AI/ML solutions addressing business problems across claims, underwriting, and customer service domains. Create technical specifications, data flow diagrams, and implementation roadmaps for complex AI initiatives.",
+    "effort_allocation_pct": 40,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect_ai_technology_evaluation_and_selection",
+    "name": "AI Technology Evaluation and Selection",
+    "role_id": "role_ai_solutions_architect",
+    "function_id": "func_information_technology",
+    "description": "Evaluate emerging AI technologies, frameworks, and platforms to identify best-fit solutions for organizational needs. Conduct proof-of-concepts and benchmarking studies to validate technology choices.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect_ai_implementation_project_management",
+    "name": "AI Implementation Project Management",
+    "role_id": "role_ai_solutions_architect",
+    "function_id": "func_information_technology",
+    "description": "Oversee execution of AI implementation projects from planning through deployment. Coordinate between data science, engineering, and business teams to ensure solutions meet requirements and timelines.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect_business_alignment_and_stakeholder_management",
+    "name": "Business Alignment and Stakeholder Management",
+    "role_id": "role_ai_solutions_architect",
+    "function_id": "func_information_technology",
+    "description": "Ensure AI solutions align with business objectives and organizational strategy. Communicate technical concepts to business stakeholders and manage expectations around AI capabilities and limitations.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect__customer_experience_conversational_ai_and_chatbot_development",
+    "name": "Conversational AI and Chatbot Development",
+    "role_id": "role_ai_solutions_architect__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Design and architect conversational AI solutions including chatbots and virtual assistants for customer service. Define dialogue flows, intent recognition requirements, and integration points with backend systems.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect__customer_experience_nlp_technology_implementation",
+    "name": "NLP Technology Implementation",
+    "role_id": "role_ai_solutions_architect__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Oversee implementation of natural language processing technologies across customer touchpoints. Manage NLP model selection, training data preparation, and deployment of language understanding capabilities.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect__customer_experience_customer_personalization_engine_design",
+    "name": "Customer Personalization Engine Design",
+    "role_id": "role_ai_solutions_architect__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Architect AI-powered personalization engines that deliver customized customer experiences across digital channels. Design recommendation algorithms and customer segmentation strategies.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_ai_solutions_architect__customer_experience_customer_experience_strategy_and_governance",
+    "name": "Customer Experience Strategy and Governance",
+    "role_id": "role_ai_solutions_architect__customer_experience",
+    "function_id": "func_information_technology",
+    "description": "Define customer experience AI strategy, establish governance frameworks, and ensure solutions comply with privacy and ethical AI standards. Monitor customer satisfaction metrics and iterate on AI solutions.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__tier_2_3_complex_technical_troubleshooting",
+    "name": "Complex Technical Troubleshooting",
+    "role_id": "role_it_support_specialist__tier_2_3",
+    "function_id": "func_information_technology",
+    "description": "Investigate and resolve complex technical issues escalated from Tier 1 support involving enterprise applications, networks, and systems. Perform root cause analysis and implement permanent solutions.",
+    "effort_allocation_pct": 40,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__tier_2_3_enterprise_application_support",
+    "name": "Enterprise Application Support",
+    "role_id": "role_it_support_specialist__tier_2_3",
+    "function_id": "func_information_technology",
+    "description": "Provide advanced technical support for enterprise business applications including claims management, underwriting, and policy administration systems. Troubleshoot application-specific issues and coordinate with vendors.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__tier_2_3_knowledge_base_and_documentation",
+    "name": "Knowledge Base and Documentation",
+    "role_id": "role_it_support_specialist__tier_2_3",
+    "function_id": "func_information_technology",
+    "description": "Document complex technical issues, solutions, and workarounds in knowledge management systems. Create technical guides and troubleshooting procedures for Tier 1 support teams.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__tier_2_3_critical_issue_escalation_and_coordination",
+    "name": "Critical Issue Escalation and Coordination",
+    "role_id": "role_it_support_specialist__tier_2_3",
+    "function_id": "func_information_technology",
+    "description": "Escalate critical system issues to specialized teams and vendors. Coordinate resolution efforts and communicate status updates to business stakeholders during outages.",
+    "effort_allocation_pct": 10,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__end_user_support_first_line_help_desk_support",
+    "name": "First-Line Help Desk Support",
+    "role_id": "role_it_support_specialist__end_user_support",
+    "function_id": "func_information_technology",
+    "description": "Deliver first-line technical support to end users for hardware, software, and connectivity issues. Manage incoming help desk tickets, diagnose problems, and provide solutions or escalate as needed.",
+    "effort_allocation_pct": 45,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__end_user_support_hardware_and_asset_management",
+    "name": "Hardware and Asset Management",
+    "role_id": "role_it_support_specialist__end_user_support",
+    "function_id": "func_information_technology",
+    "description": "Manage IT hardware inventory, track asset lifecycles, and coordinate hardware provisioning for new and departing employees. Maintain accurate asset records and manage hardware refresh cycles.",
+    "effort_allocation_pct": 25,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__end_user_support_user_training_and_documentation",
+    "name": "User Training and Documentation",
+    "role_id": "role_it_support_specialist__end_user_support",
+    "function_id": "func_information_technology",
+    "description": "Provide training to end users on software applications, hardware devices, and IT policies. Create user guides and conduct group training sessions for new systems or features.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_support_specialist__end_user_support_ticket_management_and_reporting",
+    "name": "Ticket Management and Reporting",
+    "role_id": "role_it_support_specialist__end_user_support",
+    "function_id": "func_information_technology",
+    "description": "Track and manage help desk tickets through resolution, maintain ticket documentation, and generate support metrics and reports. Monitor ticket queue and prioritize issues.",
+    "effort_allocation_pct": 10,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_systems_administrator_enterprise_infrastructure_management",
+    "name": "Enterprise Infrastructure Management",
+    "role_id": "role_senior_systems_administrator",
+    "function_id": "func_information_technology",
+    "description": "Oversee management of enterprise systems infrastructure including servers, storage systems, and virtualization platforms. Plan capacity, manage resource allocation, and ensure infrastructure reliability.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_systems_administrator_system_security_and_patch_management",
+    "name": "System Security and Patch Management",
+    "role_id": "role_senior_systems_administrator",
+    "function_id": "func_information_technology",
+    "description": "Manage system security policies, oversee security patch deployment, and coordinate vulnerability remediation across enterprise infrastructure. Ensure compliance with security standards and conduct security audits.",
+    "effort_allocation_pct": 30,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_systems_administrator_disaster_recovery_and_business_continuity",
+    "name": "Disaster Recovery and Business Continuity",
+    "role_id": "role_senior_systems_administrator",
+    "function_id": "func_information_technology",
+    "description": "Design and maintain disaster recovery procedures, manage backup systems, and conduct business continuity testing. Ensure recovery time objectives are met and document recovery procedures.",
+    "effort_allocation_pct": 20,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_systems_administrator_infrastructure_team_leadership_and_planning",
+    "name": "Infrastructure Team Leadership and Planning",
+    "role_id": "role_senior_systems_administrator",
+    "function_id": "func_information_technology",
+    "description": "Lead systems administration team, mentor junior administrators, and plan long-term infrastructure strategy. Evaluate new technologies and manage infrastructure budgets.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_systems_administrator__applications_and_databases_application_server_administration",
+    "name": "Application Server Administration",
+    "role_id": "role_systems_administrator__applications_and_databases",
+    "function_id": "func_information_technology",
+    "description": "Install, configure, and maintain application servers supporting critical business applications. Manage application deployments, version upgrades, and server performance optimization.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_systems_administrator__applications_and_databases_database_administration_and_optimization",
+    "name": "Database Administration and Optimization",
+    "role_id": "role_systems_administrator__applications_and_databases",
+    "function_id": "func_information_technology",
+    "description": "Administer database systems including installation, configuration, backup, and recovery procedures. Monitor database performance, optimize queries, and manage database security and access controls.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_systems_administrator__applications_and_databases_development_and_production_environment_support",
+    "name": "Development and Production Environment Support",
+    "role_id": "role_systems_administrator__applications_and_databases",
+    "function_id": "func_information_technology",
+    "description": "Support development and production environments for critical business applications. Manage environment provisioning, configuration management, and coordinate with development teams.",
+    "effort_allocation_pct": 20,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_systems_administrator__applications_and_databases_performance_monitoring_and_troubleshooting",
+    "name": "Performance Monitoring and Troubleshooting",
+    "role_id": "role_systems_administrator__applications_and_databases",
+    "function_id": "func_information_technology",
+    "description": "Monitor application and database performance metrics, identify bottlenecks, and troubleshoot performance issues. Implement performance tuning and capacity planning recommendations.",
+    "effort_allocation_pct": 10,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_it_project_manager_strategic_it_transformation_project_management",
+    "name": "Strategic IT Transformation Project Management",
+    "role_id": "role_senior_it_project_manager",
+    "function_id": "func_information_technology",
+    "description": "Manage large-scale IT transformation projects including digital transformation, cloud migration, and AI implementation initiatives. Define project scope, objectives, and success criteria.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_it_project_manager_budget_and_resource_management",
+    "name": "Budget and Resource Management",
+    "role_id": "role_senior_it_project_manager",
+    "function_id": "func_information_technology",
+    "description": "Oversee project budgets, manage resource allocation across projects, and track financial performance. Manage vendor contracts and procurement for project deliverables.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_it_project_manager_stakeholder_communication_and_governance",
+    "name": "Stakeholder Communication and Governance",
+    "role_id": "role_senior_it_project_manager",
+    "function_id": "func_information_technology",
+    "description": "Manage communication with executive stakeholders, board-level reporting, and project governance. Conduct steering committee meetings and manage stakeholder expectations.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_it_project_manager_risk_management_and_issue_resolution",
+    "name": "Risk Management and Issue Resolution",
+    "role_id": "role_senior_it_project_manager",
+    "function_id": "func_information_technology",
+    "description": "Identify project risks, develop mitigation strategies, and manage issues that arise during project execution. Escalate critical risks and coordinate resolution efforts.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_project_manager__applications_and_infrastructure_application_development_project_management",
+    "name": "Application Development Project Management",
+    "role_id": "role_it_project_manager__applications_and_infrastructure",
+    "function_id": "func_information_technology",
+    "description": "Manage application development projects coordinating between business stakeholders and development teams. Track project progress, manage scope changes, and ensure delivery of software solutions.",
+    "effort_allocation_pct": 40,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_project_manager__applications_and_infrastructure_infrastructure_project_execution",
+    "name": "Infrastructure Project Execution",
+    "role_id": "role_it_project_manager__applications_and_infrastructure",
+    "function_id": "func_information_technology",
+    "description": "Execute infrastructure projects including network upgrades, server deployments, and system migrations. Coordinate with infrastructure teams and manage project timelines and deliverables.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_project_manager__applications_and_infrastructure_risk_and_issue_management",
+    "name": "Risk and Issue Management",
+    "role_id": "role_it_project_manager__applications_and_infrastructure",
+    "function_id": "func_information_technology",
+    "description": "Identify project risks, develop mitigation plans, and manage issues that impact project delivery. Track risks and issues through resolution and communicate status to stakeholders.",
+    "effort_allocation_pct": 15,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_it_project_manager__applications_and_infrastructure_project_planning_and_reporting",
+    "name": "Project Planning and Reporting",
+    "role_id": "role_it_project_manager__applications_and_infrastructure",
+    "function_id": "func_information_technology",
+    "description": "Develop project plans, schedules, and budgets for IT initiatives. Generate project status reports, track metrics, and communicate progress to project sponsors and stakeholders.",
+    "effort_allocation_pct": 15,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_scrum_master__digital_transformation_agile_transformation_strategy_and_coaching",
+    "name": "Agile Transformation Strategy and Coaching",
+    "role_id": "role_senior_scrum_master__digital_transformation",
+    "function_id": "func_information_technology",
+    "description": "Develops and executes agile transformation roadmaps across multiple teams, provides coaching on Scrum frameworks and best practices, and mentors junior Scrum Masters and team leads on organizational change management.",
+    "effort_allocation_pct": 35,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_scrum_master__digital_transformation_impediment_resolution_and_process_optimization",
+    "name": "Impediment Resolution and Process Optimization",
+    "role_id": "role_senior_scrum_master__digital_transformation",
+    "function_id": "func_information_technology",
+    "description": "Identifies, escalates, and resolves blockers preventing team progress, analyzes process bottlenecks, and implements continuous improvement initiatives across digital transformation and AI initiatives.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_scrum_master__digital_transformation_cross_team_coordination_and_stakeholder_management",
+    "name": "Cross-Team Coordination and Stakeholder Management",
+    "role_id": "role_senior_scrum_master__digital_transformation",
+    "function_id": "func_information_technology",
+    "description": "Coordinates dependencies between multiple agile teams, manages communication with executive stakeholders, and ensures alignment of digital transformation initiatives with organizational goals.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_scrum_master__digital_transformation_metrics_tracking_and_transformation_reporting",
+    "name": "Metrics Tracking and Transformation Reporting",
+    "role_id": "role_senior_scrum_master__digital_transformation",
+    "function_id": "func_information_technology",
+    "description": "Collects and analyzes agile metrics, velocity trends, and transformation KPIs; generates reports on team performance and transformation progress for leadership review.",
+    "effort_allocation_pct": 10,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_scrum_master__product_development_daily_standup_facilitation_and_team_synchronization",
+    "name": "Daily Standup Facilitation and Team Synchronization",
+    "role_id": "role_scrum_master__product_development",
+    "function_id": "func_information_technology",
+    "description": "Facilitates daily standup meetings, ensures clear communication of progress and blockers, and keeps teams focused on sprint goals and delivery commitments.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_scrum_master__product_development_sprint_planning_and_backlog_management",
+    "name": "Sprint Planning and Backlog Management",
+    "role_id": "role_scrum_master__product_development",
+    "function_id": "func_information_technology",
+    "description": "Collaborates with product owners to prepare and refine backlogs, facilitates sprint planning sessions, and ensures user stories are properly sized and prioritized for team capacity.",
+    "effort_allocation_pct": 30,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_scrum_master__product_development_sprint_retrospectives_and_team_improvement",
+    "name": "Sprint Retrospectives and Team Improvement",
+    "role_id": "role_scrum_master__product_development",
+    "function_id": "func_information_technology",
+    "description": "Facilitates sprint retrospectives to identify process improvements, tracks action items from retros, and implements changes to enhance team velocity and collaboration.",
+    "effort_allocation_pct": 25,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_scrum_master__product_development_scrum_process_compliance_and_documentation",
+    "name": "Scrum Process Compliance and Documentation",
+    "role_id": "role_scrum_master__product_development",
+    "function_id": "func_information_technology",
+    "description": "Monitors team adherence to Scrum practices and ceremonies, maintains sprint documentation and metrics, and ensures proper use of agile tools and workflows.",
+    "effort_allocation_pct": 20,
+    "automation_level": "shared",
+    "skill_ids": []
+  }
+]

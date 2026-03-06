@@ -1,0 +1,109 @@
+{
+  "org_name": "InsureCo",
+  "headcount": 1370,
+  "annual_cost": 91085000.0,
+  "total_tasks": 581,
+  "compliance_tasks": 87,
+  "three_layer_analysis": {
+    "l1_etter_ceiling": 56.43,
+    "l2_achievable": 51.31,
+    "l3_realized": 9.52,
+    "adoption_gap_pct": 41.79,
+    "capability_gap_pct": 5.13,
+    "total_gap_pct": 46.91
+  },
+  "financial_opportunity": {
+    "adoption_gap_savings_annual": 36588085.0,
+    "full_gap_savings_annual": 41542761.0,
+    "adoption_gap_fte_equivalent": 572.7
+  },
+  "top_opportunities_adoption_gap": [
+    {
+      "role_id": "CL-001",
+      "role_name": "Claims Intake Specialist",
+      "function": "Claims",
+      "adoption_gap_hours": 11434.800000000001,
+      "savings_annual": 3430440.0,
+      "fte_freed": 71.4675
+    },
+    {
+      "role_id": "TE-002",
+      "role_name": "Senior Software Engineer",
+      "function": "Technology",
+      "adoption_gap_hours": 3526.5750000000003,
+      "savings_annual": 2534725.78125,
+      "fte_freed": 22.04109375
+    },
+    {
+      "role_id": "CL-002",
+      "role_name": "Claims Adjuster",
+      "function": "Claims",
+      "adoption_gap_hours": 7137.349999999999,
+      "savings_annual": 2453464.0624999995,
+      "fte_freed": 44.608437499999994
+    },
+    {
+      "role_id": "TE-001",
+      "role_name": "Software Engineer",
+      "function": "Technology",
+      "adoption_gap_hours": 4055.4,
+      "savings_annual": 2331855.0,
+      "fte_freed": 25.34625
+    },
+    {
+      "role_id": "CL-003",
+      "role_name": "Claims Data Entry Clerk",
+      "function": "Claims",
+      "adoption_gap_hours": 6763.12,
+      "savings_annual": 1606241.0,
+      "fte_freed": 42.2695
+    }
+  ],
+  "top_opportunities_full_potential": [
+    {
+      "role_id": "CL-001",
+      "role_name": "Claims Intake Specialist",
+      "function": "Claims",
+      "adoption_savings": 3430440.0,
+      "full_savings": 3633479.9999999995,
+      "headcount": 120,
+      "redesign_candidate": true
+    },
+    {
+      "role_id": "TE-001",
+      "role_name": "Software Engineer",
+      "function": "Technology",
+      "adoption_savings": 2331855.0,
+      "full_savings": 3108105.0000000005,
+      "headcount": 90,
+      "redesign_candidate": false
+    },
+    {
+      "role_id": "TE-002",
+      "role_name": "Senior Software Engineer",
+      "function": "Technology",
+      "adoption_savings": 2534725.78125,
+      "full_savings": 2964897.65625,
+      "headcount": 60,
+      "redesign_candidate": true
+    },
+    {
+      "role_id": "CL-002",
+      "role_name": "Claims Adjuster",
+      "function": "Claims",
+      "adoption_savings": 2453464.0624999995,
+      "full_savings": 2649401.5624999995,
+      "headcount": 95,
+      "redesign_candidate": true
+    },
+    {
+      "role_id": "TE-007",
+      "role_name": "IT Support Specialist",
+      "function": "Technology",
+      "adoption_savings": 1500798.0,
+      "full_savings": 1746757.9999999998,
+      "headcount": 80,
+      "redesign_candidate": true
+    }
+  ]
+}

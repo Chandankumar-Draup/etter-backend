@@ -1,0 +1,1349 @@
+{
+  "organization": {
+    "id": "acme_corporation",
+    "name": "Acme Corporation",
+    "industry": "Insurance",
+    "sub_industry": "Multi-line Insurance (Life, Health, P&C)",
+    "size": 15000,
+    "revenue_millions": 8000,
+    "hq_location": "Chicago, IL",
+    "description": "A mid-large insurance company offering life, health, and property & casualty insurance products across the United States. Acme is undergoing digital transformation with AI adoption across claims, underwriting, and customer service."
+  },
+  "functions": [
+    {
+      "id": "func_claims_management",
+      "name": "Claims Management",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 2500
+    },
+    {
+      "id": "func_underwriting",
+      "name": "Underwriting",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 1500
+    },
+    {
+      "id": "func_actuarial_and_analytics",
+      "name": "Actuarial and Analytics",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 800
+    },
+    {
+      "id": "func_sales_and_distribution",
+      "name": "Sales and Distribution",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 2000
+    },
+    {
+      "id": "func_policy_administration",
+      "name": "Policy Administration",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 1200
+    },
+    {
+      "id": "func_customer_service",
+      "name": "Customer Service",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 2000
+    },
+    {
+      "id": "func_information_technology",
+      "name": "Information Technology",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 1500
+    },
+    {
+      "id": "func_finance_and_accounting",
+      "name": "Finance and Accounting",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 1000
+    },
+    {
+      "id": "func_legal_and_compliance",
+      "name": "Legal and Compliance",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 600
+    },
+    {
+      "id": "func_human_resources",
+      "name": "Human Resources",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 500
+    },
+    {
+      "id": "func_marketing_and_communications",
+      "name": "Marketing and Communications",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 400
+    },
+    {
+      "id": "func_operations_and_strategy",
+      "name": "Operations and Strategy",
+      "org_id": "acme_corporation",
+      "description": "",
+      "headcount": 1000
+    }
+  ],
+  "sub_functions": [
+    {
+      "id": "sf_claims_management_claims_processing",
+      "name": "Claims Processing",
+      "function_id": "func_claims_management",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_claims_management_claims_investigation",
+      "name": "Claims Investigation",
+      "function_id": "func_claims_management",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_claims_management_claims_leadership",
+      "name": "Claims Leadership",
+      "function_id": "func_claims_management",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_underwriting_risk_assessment",
+      "name": "Risk Assessment",
+      "function_id": "func_underwriting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_underwriting_policy_underwriting",
+      "name": "Policy Underwriting",
+      "function_id": "func_underwriting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_underwriting_reinsurance",
+      "name": "Reinsurance",
+      "function_id": "func_underwriting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_actuarial_and_analytics_actuarial_science",
+      "name": "Actuarial Science",
+      "function_id": "func_actuarial_and_analytics",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_actuarial_and_analytics_data_analytics",
+      "name": "Data Analytics",
+      "function_id": "func_actuarial_and_analytics",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_sales_and_distribution_agency_management",
+      "name": "Agency Management",
+      "function_id": "func_sales_and_distribution",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_sales_and_distribution_direct_sales",
+      "name": "Direct Sales",
+      "function_id": "func_sales_and_distribution",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_sales_and_distribution_digital_sales",
+      "name": "Digital Sales",
+      "function_id": "func_sales_and_distribution",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_policy_administration_policy_servicing",
+      "name": "Policy Servicing",
+      "function_id": "func_policy_administration",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_policy_administration_billing_and_collections",
+      "name": "Billing and Collections",
+      "function_id": "func_policy_administration",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_customer_service_contact_center",
+      "name": "Contact Center",
+      "function_id": "func_customer_service",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_customer_service_customer_experience",
+      "name": "Customer Experience",
+      "function_id": "func_customer_service",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_information_technology_application_development",
+      "name": "Application Development",
+      "function_id": "func_information_technology",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_information_technology_infrastructure_and_cloud",
+      "name": "Infrastructure and Cloud",
+      "function_id": "func_information_technology",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_information_technology_data_engineering",
+      "name": "Data Engineering",
+      "function_id": "func_information_technology",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_information_technology_it_operations",
+      "name": "IT Operations",
+      "function_id": "func_information_technology",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_finance_and_accounting_financial_planning",
+      "name": "Financial Planning",
+      "function_id": "func_finance_and_accounting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_finance_and_accounting_accounting",
+      "name": "Accounting",
+      "function_id": "func_finance_and_accounting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_finance_and_accounting_treasury",
+      "name": "Treasury",
+      "function_id": "func_finance_and_accounting",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_legal_and_compliance_legal",
+      "name": "Legal",
+      "function_id": "func_legal_and_compliance",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_legal_and_compliance_regulatory_compliance",
+      "name": "Regulatory Compliance",
+      "function_id": "func_legal_and_compliance",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_human_resources_talent_acquisition",
+      "name": "Talent Acquisition",
+      "function_id": "func_human_resources",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_human_resources_learning_and_development",
+      "name": "Learning and Development",
+      "function_id": "func_human_resources",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_human_resources_hr_operations",
+      "name": "HR Operations",
+      "function_id": "func_human_resources",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_marketing_and_communications_brand_marketing",
+      "name": "Brand Marketing",
+      "function_id": "func_marketing_and_communications",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_marketing_and_communications_digital_marketing",
+      "name": "Digital Marketing",
+      "function_id": "func_marketing_and_communications",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_marketing_and_communications_product_marketing",
+      "name": "Product Marketing",
+      "function_id": "func_marketing_and_communications",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_operations_and_strategy_business_operations",
+      "name": "Business Operations",
+      "function_id": "func_operations_and_strategy",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_operations_and_strategy_corporate_strategy",
+      "name": "Corporate Strategy",
+      "function_id": "func_operations_and_strategy",
+      "description": "",
+      "headcount": 0
+    },
+    {
+      "id": "sf_operations_and_strategy_risk_management",
+      "name": "Risk Management",
+      "function_id": "func_operations_and_strategy",
+      "description": "",
+      "headcount": 0
+    }
+  ],
+  "job_family_groups": [
+    {
+      "id": "jfg_claims_management_claims_operations",
+      "name": "Claims Operations",
+      "sub_function_id": "sf_claims_management_claims_processing",
+      "description": ""
+    },
+    {
+      "id": "jfg_claims_management_claims_intake",
+      "name": "Claims Intake",
+      "sub_function_id": "sf_claims_management_claims_processing",
+      "description": ""
+    },
+    {
+      "id": "jfg_claims_management_special_investigations",
+      "name": "Special Investigations",
+      "sub_function_id": "sf_claims_management_claims_investigation",
+      "description": ""
+    },
+    {
+      "id": "jfg_claims_management_subrogation",
+      "name": "Subrogation",
+      "sub_function_id": "sf_claims_management_claims_investigation",
+      "description": ""
+    },
+    {
+      "id": "jfg_claims_management_claims_management",
+      "name": "Claims Management",
+      "sub_function_id": "sf_claims_management_claims_leadership",
+      "description": ""
+    },
+    {
+      "id": "jfg_underwriting_risk_analysis",
+      "name": "Risk Analysis",
+      "sub_function_id": "sf_underwriting_risk_assessment",
+      "description": ""
+    },
+    {
+      "id": "jfg_underwriting_risk_engineering",
+      "name": "Risk Engineering",
+      "sub_function_id": "sf_underwriting_risk_assessment",
+      "description": ""
+    },
+    {
+      "id": "jfg_underwriting_commercial_underwriting",
+      "name": "Commercial Underwriting",
+      "sub_function_id": "sf_underwriting_policy_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jfg_underwriting_personal_underwriting",
+      "name": "Personal Underwriting",
+      "sub_function_id": "sf_underwriting_policy_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jfg_underwriting_reinsurance_operations",
+      "name": "Reinsurance Operations",
+      "sub_function_id": "sf_underwriting_reinsurance",
+      "description": ""
+    },
+    {
+      "id": "jfg_actuarial_and_analytics_pricing_actuarial",
+      "name": "Pricing Actuarial",
+      "sub_function_id": "sf_actuarial_and_analytics_actuarial_science",
+      "description": ""
+    },
+    {
+      "id": "jfg_actuarial_and_analytics_reserving",
+      "name": "Reserving",
+      "sub_function_id": "sf_actuarial_and_analytics_actuarial_science",
+      "description": ""
+    },
+    {
+      "id": "jfg_actuarial_and_analytics_business_intelligence",
+      "name": "Business Intelligence",
+      "sub_function_id": "sf_actuarial_and_analytics_data_analytics",
+      "description": ""
+    },
+    {
+      "id": "jfg_actuarial_and_analytics_predictive_analytics",
+      "name": "Predictive Analytics",
+      "sub_function_id": "sf_actuarial_and_analytics_data_analytics",
+      "description": ""
+    },
+    {
+      "id": "jfg_sales_and_distribution_agent_relations",
+      "name": "Agent Relations",
+      "sub_function_id": "sf_sales_and_distribution_agency_management",
+      "description": ""
+    },
+    {
+      "id": "jfg_sales_and_distribution_agency_operations",
+      "name": "Agency Operations",
+      "sub_function_id": "sf_sales_and_distribution_agency_management",
+      "description": ""
+    },
+    {
+      "id": "jfg_sales_and_distribution_inside_sales",
+      "name": "Inside Sales",
+      "sub_function_id": "sf_sales_and_distribution_direct_sales",
+      "description": ""
+    },
+    {
+      "id": "jfg_sales_and_distribution_enterprise_sales",
+      "name": "Enterprise Sales",
+      "sub_function_id": "sf_sales_and_distribution_direct_sales",
+      "description": ""
+    },
+    {
+      "id": "jfg_sales_and_distribution_digital_distribution",
+      "name": "Digital Distribution",
+      "sub_function_id": "sf_sales_and_distribution_digital_sales",
+      "description": ""
+    },
+    {
+      "id": "jfg_policy_administration_policy_operations",
+      "name": "Policy Operations",
+      "sub_function_id": "sf_policy_administration_policy_servicing",
+      "description": ""
+    },
+    {
+      "id": "jfg_policy_administration_policy_issuance",
+      "name": "Policy Issuance",
+      "sub_function_id": "sf_policy_administration_policy_servicing",
+      "description": ""
+    },
+    {
+      "id": "jfg_policy_administration_premium_billing",
+      "name": "Premium Billing",
+      "sub_function_id": "sf_policy_administration_billing_and_collections",
+      "description": ""
+    },
+    {
+      "id": "jfg_policy_administration_collections",
+      "name": "Collections",
+      "sub_function_id": "sf_policy_administration_billing_and_collections",
+      "description": ""
+    },
+    {
+      "id": "jfg_customer_service_customer_support",
+      "name": "Customer Support",
+      "sub_function_id": "sf_customer_service_contact_center",
+      "description": ""
+    },
+    {
+      "id": "jfg_customer_service_technical_support",
+      "name": "Technical Support",
+      "sub_function_id": "sf_customer_service_contact_center",
+      "description": ""
+    },
+    {
+      "id": "jfg_customer_service_cx_strategy",
+      "name": "CX Strategy",
+      "sub_function_id": "sf_customer_service_customer_experience",
+      "description": ""
+    },
+    {
+      "id": "jfg_customer_service_quality_assurance",
+      "name": "Quality Assurance",
+      "sub_function_id": "sf_customer_service_customer_experience",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_software_engineering",
+      "name": "Software Engineering",
+      "sub_function_id": "sf_information_technology_application_development",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_quality_assurance",
+      "name": "Quality Assurance",
+      "sub_function_id": "sf_information_technology_application_development",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_cloud_operations",
+      "name": "Cloud Operations",
+      "sub_function_id": "sf_information_technology_infrastructure_and_cloud",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_network_and_security",
+      "name": "Network and Security",
+      "sub_function_id": "sf_information_technology_infrastructure_and_cloud",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_data_platform",
+      "name": "Data Platform",
+      "sub_function_id": "sf_information_technology_data_engineering",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_ai_and_ml_engineering",
+      "name": "AI and ML Engineering",
+      "sub_function_id": "sf_information_technology_data_engineering",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_service_desk",
+      "name": "Service Desk",
+      "sub_function_id": "sf_information_technology_it_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_information_technology_it_project_management",
+      "name": "IT Project Management",
+      "sub_function_id": "sf_information_technology_it_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_finance_and_accounting_fpanda",
+      "name": "FP&A",
+      "sub_function_id": "sf_finance_and_accounting_financial_planning",
+      "description": ""
+    },
+    {
+      "id": "jfg_finance_and_accounting_investment_management",
+      "name": "Investment Management",
+      "sub_function_id": "sf_finance_and_accounting_financial_planning",
+      "description": ""
+    },
+    {
+      "id": "jfg_finance_and_accounting_general_accounting",
+      "name": "General Accounting",
+      "sub_function_id": "sf_finance_and_accounting_accounting",
+      "description": ""
+    },
+    {
+      "id": "jfg_finance_and_accounting_financial_reporting",
+      "name": "Financial Reporting",
+      "sub_function_id": "sf_finance_and_accounting_accounting",
+      "description": ""
+    },
+    {
+      "id": "jfg_finance_and_accounting_treasury_operations",
+      "name": "Treasury Operations",
+      "sub_function_id": "sf_finance_and_accounting_treasury",
+      "description": ""
+    },
+    {
+      "id": "jfg_legal_and_compliance_corporate_legal",
+      "name": "Corporate Legal",
+      "sub_function_id": "sf_legal_and_compliance_legal",
+      "description": ""
+    },
+    {
+      "id": "jfg_legal_and_compliance_claims_legal",
+      "name": "Claims Legal",
+      "sub_function_id": "sf_legal_and_compliance_legal",
+      "description": ""
+    },
+    {
+      "id": "jfg_legal_and_compliance_compliance_operations",
+      "name": "Compliance Operations",
+      "sub_function_id": "sf_legal_and_compliance_regulatory_compliance",
+      "description": ""
+    },
+    {
+      "id": "jfg_legal_and_compliance_audit",
+      "name": "Audit",
+      "sub_function_id": "sf_legal_and_compliance_regulatory_compliance",
+      "description": ""
+    },
+    {
+      "id": "jfg_human_resources_recruiting",
+      "name": "Recruiting",
+      "sub_function_id": "sf_human_resources_talent_acquisition",
+      "description": ""
+    },
+    {
+      "id": "jfg_human_resources_training",
+      "name": "Training",
+      "sub_function_id": "sf_human_resources_learning_and_development",
+      "description": ""
+    },
+    {
+      "id": "jfg_human_resources_hr_services",
+      "name": "HR Services",
+      "sub_function_id": "sf_human_resources_hr_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_human_resources_compensation_and_benefits",
+      "name": "Compensation and Benefits",
+      "sub_function_id": "sf_human_resources_hr_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_marketing_and_communications_brand_strategy",
+      "name": "Brand Strategy",
+      "sub_function_id": "sf_marketing_and_communications_brand_marketing",
+      "description": ""
+    },
+    {
+      "id": "jfg_marketing_and_communications_online_marketing",
+      "name": "Online Marketing",
+      "sub_function_id": "sf_marketing_and_communications_digital_marketing",
+      "description": ""
+    },
+    {
+      "id": "jfg_marketing_and_communications_content_and_social",
+      "name": "Content and Social",
+      "sub_function_id": "sf_marketing_and_communications_digital_marketing",
+      "description": ""
+    },
+    {
+      "id": "jfg_marketing_and_communications_insurance_product_marketing",
+      "name": "Insurance Product Marketing",
+      "sub_function_id": "sf_marketing_and_communications_product_marketing",
+      "description": ""
+    },
+    {
+      "id": "jfg_operations_and_strategy_process_improvement",
+      "name": "Process Improvement",
+      "sub_function_id": "sf_operations_and_strategy_business_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_operations_and_strategy_vendor_management",
+      "name": "Vendor Management",
+      "sub_function_id": "sf_operations_and_strategy_business_operations",
+      "description": ""
+    },
+    {
+      "id": "jfg_operations_and_strategy_strategy_and_planning",
+      "name": "Strategy and Planning",
+      "sub_function_id": "sf_operations_and_strategy_corporate_strategy",
+      "description": ""
+    },
+    {
+      "id": "jfg_operations_and_strategy_enterprise_risk",
+      "name": "Enterprise Risk",
+      "sub_function_id": "sf_operations_and_strategy_risk_management",
+      "description": ""
+    }
+  ],
+  "job_families": [
+    {
+      "id": "jf_claims_adjusters",
+      "name": "Claims Adjusters",
+      "job_family_group_id": "jfg_claims_management_claims_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_examiners",
+      "name": "Claims Examiners",
+      "job_family_group_id": "jfg_claims_management_claims_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_support_specialists",
+      "name": "Claims Support Specialists",
+      "job_family_group_id": "jfg_claims_management_claims_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_intake_coordinators",
+      "name": "Claims Intake Coordinators",
+      "job_family_group_id": "jfg_claims_management_claims_intake",
+      "description": ""
+    },
+    {
+      "id": "jf_first_notice_of_loss_agents",
+      "name": "First Notice of Loss Agents",
+      "job_family_group_id": "jfg_claims_management_claims_intake",
+      "description": ""
+    },
+    {
+      "id": "jf_fraud_investigators",
+      "name": "Fraud Investigators",
+      "job_family_group_id": "jfg_claims_management_special_investigations",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_analysts",
+      "name": "Claims Analysts",
+      "job_family_group_id": "jfg_claims_management_special_investigations",
+      "description": ""
+    },
+    {
+      "id": "jf_subrogation_specialists",
+      "name": "Subrogation Specialists",
+      "job_family_group_id": "jfg_claims_management_subrogation",
+      "description": ""
+    },
+    {
+      "id": "jf_recovery_analysts",
+      "name": "Recovery Analysts",
+      "job_family_group_id": "jfg_claims_management_subrogation",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_team_leads",
+      "name": "Claims Team Leads",
+      "job_family_group_id": "jfg_claims_management_claims_management",
+      "description": ""
+    },
+    {
+      "id": "jf_claims_operations_managers",
+      "name": "Claims Operations Managers",
+      "job_family_group_id": "jfg_claims_management_claims_management",
+      "description": ""
+    },
+    {
+      "id": "jf_risk_analysts",
+      "name": "Risk Analysts",
+      "job_family_group_id": "jfg_underwriting_risk_analysis",
+      "description": ""
+    },
+    {
+      "id": "jf_pricing_analysts",
+      "name": "Pricing Analysts",
+      "job_family_group_id": "jfg_underwriting_risk_analysis",
+      "description": ""
+    },
+    {
+      "id": "jf_loss_control_engineers",
+      "name": "Loss Control Engineers",
+      "job_family_group_id": "jfg_underwriting_risk_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_risk_surveyors",
+      "name": "Risk Surveyors",
+      "job_family_group_id": "jfg_underwriting_risk_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_commercial_lines_underwriters",
+      "name": "Commercial Lines Underwriters",
+      "job_family_group_id": "jfg_underwriting_commercial_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jf_specialty_lines_underwriters",
+      "name": "Specialty Lines Underwriters",
+      "job_family_group_id": "jfg_underwriting_commercial_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jf_personal_lines_underwriters",
+      "name": "Personal Lines Underwriters",
+      "job_family_group_id": "jfg_underwriting_personal_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jf_auto_insurance_underwriters",
+      "name": "Auto Insurance Underwriters",
+      "job_family_group_id": "jfg_underwriting_personal_underwriting",
+      "description": ""
+    },
+    {
+      "id": "jf_reinsurance_analysts",
+      "name": "Reinsurance Analysts",
+      "job_family_group_id": "jfg_underwriting_reinsurance_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_treaty_underwriters",
+      "name": "Treaty Underwriters",
+      "job_family_group_id": "jfg_underwriting_reinsurance_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_pricing_actuaries",
+      "name": "Pricing Actuaries",
+      "job_family_group_id": "jfg_actuarial_and_analytics_pricing_actuarial",
+      "description": ""
+    },
+    {
+      "id": "jf_product_actuaries",
+      "name": "Product Actuaries",
+      "job_family_group_id": "jfg_actuarial_and_analytics_pricing_actuarial",
+      "description": ""
+    },
+    {
+      "id": "jf_reserving_actuaries",
+      "name": "Reserving Actuaries",
+      "job_family_group_id": "jfg_actuarial_and_analytics_reserving",
+      "description": ""
+    },
+    {
+      "id": "jf_loss_reserve_analysts",
+      "name": "Loss Reserve Analysts",
+      "job_family_group_id": "jfg_actuarial_and_analytics_reserving",
+      "description": ""
+    },
+    {
+      "id": "jf_bi_analysts",
+      "name": "BI Analysts",
+      "job_family_group_id": "jfg_actuarial_and_analytics_business_intelligence",
+      "description": ""
+    },
+    {
+      "id": "jf_data_visualization_specialists",
+      "name": "Data Visualization Specialists",
+      "job_family_group_id": "jfg_actuarial_and_analytics_business_intelligence",
+      "description": ""
+    },
+    {
+      "id": "jf_data_scientists",
+      "name": "Data Scientists",
+      "job_family_group_id": "jfg_actuarial_and_analytics_predictive_analytics",
+      "description": ""
+    },
+    {
+      "id": "jf_predictive_modelers",
+      "name": "Predictive Modelers",
+      "job_family_group_id": "jfg_actuarial_and_analytics_predictive_analytics",
+      "description": ""
+    },
+    {
+      "id": "jf_agency_managers",
+      "name": "Agency Managers",
+      "job_family_group_id": "jfg_sales_and_distribution_agent_relations",
+      "description": ""
+    },
+    {
+      "id": "jf_agent_support_specialists",
+      "name": "Agent Support Specialists",
+      "job_family_group_id": "jfg_sales_and_distribution_agent_relations",
+      "description": ""
+    },
+    {
+      "id": "jf_agency_coordinators",
+      "name": "Agency Coordinators",
+      "job_family_group_id": "jfg_sales_and_distribution_agency_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_commission_analysts",
+      "name": "Commission Analysts",
+      "job_family_group_id": "jfg_sales_and_distribution_agency_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_sales_representatives",
+      "name": "Sales Representatives",
+      "job_family_group_id": "jfg_sales_and_distribution_inside_sales",
+      "description": ""
+    },
+    {
+      "id": "jf_sales_account_executives",
+      "name": "Sales Account Executives",
+      "job_family_group_id": "jfg_sales_and_distribution_inside_sales",
+      "description": ""
+    },
+    {
+      "id": "jf_enterprise_account_managers",
+      "name": "Enterprise Account Managers",
+      "job_family_group_id": "jfg_sales_and_distribution_enterprise_sales",
+      "description": ""
+    },
+    {
+      "id": "jf_key_account_executives",
+      "name": "Key Account Executives",
+      "job_family_group_id": "jfg_sales_and_distribution_enterprise_sales",
+      "description": ""
+    },
+    {
+      "id": "jf_digital_sales_specialists",
+      "name": "Digital Sales Specialists",
+      "job_family_group_id": "jfg_sales_and_distribution_digital_distribution",
+      "description": ""
+    },
+    {
+      "id": "jf_e_commerce_analysts",
+      "name": "E-Commerce Analysts",
+      "job_family_group_id": "jfg_sales_and_distribution_digital_distribution",
+      "description": ""
+    },
+    {
+      "id": "jf_policy_administrators",
+      "name": "Policy Administrators",
+      "job_family_group_id": "jfg_policy_administration_policy_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_policy_change_processors",
+      "name": "Policy Change Processors",
+      "job_family_group_id": "jfg_policy_administration_policy_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_policy_issuance_specialists",
+      "name": "Policy Issuance Specialists",
+      "job_family_group_id": "jfg_policy_administration_policy_issuance",
+      "description": ""
+    },
+    {
+      "id": "jf_document_specialists",
+      "name": "Document Specialists",
+      "job_family_group_id": "jfg_policy_administration_policy_issuance",
+      "description": ""
+    },
+    {
+      "id": "jf_billing_specialists",
+      "name": "Billing Specialists",
+      "job_family_group_id": "jfg_policy_administration_premium_billing",
+      "description": ""
+    },
+    {
+      "id": "jf_premium_auditors",
+      "name": "Premium Auditors",
+      "job_family_group_id": "jfg_policy_administration_premium_billing",
+      "description": ""
+    },
+    {
+      "id": "jf_collections_specialists",
+      "name": "Collections Specialists",
+      "job_family_group_id": "jfg_policy_administration_collections",
+      "description": ""
+    },
+    {
+      "id": "jf_accounts_receivable_analysts",
+      "name": "Accounts Receivable Analysts",
+      "job_family_group_id": "jfg_policy_administration_collections",
+      "description": ""
+    },
+    {
+      "id": "jf_customer_service_representatives",
+      "name": "Customer Service Representatives",
+      "job_family_group_id": "jfg_customer_service_customer_support",
+      "description": ""
+    },
+    {
+      "id": "jf_senior_service_advisors",
+      "name": "Senior Service Advisors",
+      "job_family_group_id": "jfg_customer_service_customer_support",
+      "description": ""
+    },
+    {
+      "id": "jf_technical_support_analysts",
+      "name": "Technical Support Analysts",
+      "job_family_group_id": "jfg_customer_service_technical_support",
+      "description": ""
+    },
+    {
+      "id": "jf_escalation_specialists",
+      "name": "Escalation Specialists",
+      "job_family_group_id": "jfg_customer_service_technical_support",
+      "description": ""
+    },
+    {
+      "id": "jf_customer_experience_analysts",
+      "name": "Customer Experience Analysts",
+      "job_family_group_id": "jfg_customer_service_cx_strategy",
+      "description": ""
+    },
+    {
+      "id": "jf_voice_of_customer_specialists",
+      "name": "Voice of Customer Specialists",
+      "job_family_group_id": "jfg_customer_service_cx_strategy",
+      "description": ""
+    },
+    {
+      "id": "jf_quality_analysts",
+      "name": "Quality Analysts",
+      "job_family_group_id": "jfg_customer_service_quality_assurance",
+      "description": ""
+    },
+    {
+      "id": "jf_training_specialists",
+      "name": "Training Specialists",
+      "job_family_group_id": "jfg_customer_service_quality_assurance",
+      "description": ""
+    },
+    {
+      "id": "jf_software_engineers",
+      "name": "Software Engineers",
+      "job_family_group_id": "jfg_information_technology_software_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_full_stack_developers",
+      "name": "Full Stack Developers",
+      "job_family_group_id": "jfg_information_technology_software_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_qa_engineers",
+      "name": "QA Engineers",
+      "job_family_group_id": "jfg_information_technology_quality_assurance",
+      "description": ""
+    },
+    {
+      "id": "jf_test_automation_engineers",
+      "name": "Test Automation Engineers",
+      "job_family_group_id": "jfg_information_technology_quality_assurance",
+      "description": ""
+    },
+    {
+      "id": "jf_cloud_engineers",
+      "name": "Cloud Engineers",
+      "job_family_group_id": "jfg_information_technology_cloud_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_devops_engineers",
+      "name": "DevOps Engineers",
+      "job_family_group_id": "jfg_information_technology_cloud_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_network_engineers",
+      "name": "Network Engineers",
+      "job_family_group_id": "jfg_information_technology_network_and_security",
+      "description": ""
+    },
+    {
+      "id": "jf_cybersecurity_analysts",
+      "name": "Cybersecurity Analysts",
+      "job_family_group_id": "jfg_information_technology_network_and_security",
+      "description": ""
+    },
+    {
+      "id": "jf_data_engineers",
+      "name": "Data Engineers",
+      "job_family_group_id": "jfg_information_technology_data_platform",
+      "description": ""
+    },
+    {
+      "id": "jf_database_administrators",
+      "name": "Database Administrators",
+      "job_family_group_id": "jfg_information_technology_data_platform",
+      "description": ""
+    },
+    {
+      "id": "jf_ml_engineers",
+      "name": "ML Engineers",
+      "job_family_group_id": "jfg_information_technology_ai_and_ml_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_ai_solutions_architects",
+      "name": "AI Solutions Architects",
+      "job_family_group_id": "jfg_information_technology_ai_and_ml_engineering",
+      "description": ""
+    },
+    {
+      "id": "jf_it_support_specialists",
+      "name": "IT Support Specialists",
+      "job_family_group_id": "jfg_information_technology_service_desk",
+      "description": ""
+    },
+    {
+      "id": "jf_systems_administrators",
+      "name": "Systems Administrators",
+      "job_family_group_id": "jfg_information_technology_service_desk",
+      "description": ""
+    },
+    {
+      "id": "jf_it_project_managers",
+      "name": "IT Project Managers",
+      "job_family_group_id": "jfg_information_technology_it_project_management",
+      "description": ""
+    },
+    {
+      "id": "jf_scrum_masters",
+      "name": "Scrum Masters",
+      "job_family_group_id": "jfg_information_technology_it_project_management",
+      "description": ""
+    },
+    {
+      "id": "jf_financial_analysts",
+      "name": "Financial Analysts",
+      "job_family_group_id": "jfg_finance_and_accounting_fpanda",
+      "description": ""
+    },
+    {
+      "id": "jf_budget_analysts",
+      "name": "Budget Analysts",
+      "job_family_group_id": "jfg_finance_and_accounting_fpanda",
+      "description": ""
+    },
+    {
+      "id": "jf_investment_analysts",
+      "name": "Investment Analysts",
+      "job_family_group_id": "jfg_finance_and_accounting_investment_management",
+      "description": ""
+    },
+    {
+      "id": "jf_portfolio_managers",
+      "name": "Portfolio Managers",
+      "job_family_group_id": "jfg_finance_and_accounting_investment_management",
+      "description": ""
+    },
+    {
+      "id": "jf_accountants",
+      "name": "Accountants",
+      "job_family_group_id": "jfg_finance_and_accounting_general_accounting",
+      "description": ""
+    },
+    {
+      "id": "jf_accounts_payable_specialists",
+      "name": "Accounts Payable Specialists",
+      "job_family_group_id": "jfg_finance_and_accounting_general_accounting",
+      "description": ""
+    },
+    {
+      "id": "jf_financial_reporting_analysts",
+      "name": "Financial Reporting Analysts",
+      "job_family_group_id": "jfg_finance_and_accounting_financial_reporting",
+      "description": ""
+    },
+    {
+      "id": "jf_regulatory_reporting_specialists",
+      "name": "Regulatory Reporting Specialists",
+      "job_family_group_id": "jfg_finance_and_accounting_financial_reporting",
+      "description": ""
+    },
+    {
+      "id": "jf_treasury_analysts",
+      "name": "Treasury Analysts",
+      "job_family_group_id": "jfg_finance_and_accounting_treasury_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_cash_management_specialists",
+      "name": "Cash Management Specialists",
+      "job_family_group_id": "jfg_finance_and_accounting_treasury_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_corporate_attorneys",
+      "name": "Corporate Attorneys",
+      "job_family_group_id": "jfg_legal_and_compliance_corporate_legal",
+      "description": ""
+    },
+    {
+      "id": "jf_contract_specialists",
+      "name": "Contract Specialists",
+      "job_family_group_id": "jfg_legal_and_compliance_corporate_legal",
+      "description": ""
+    },
+    {
+      "id": "jf_litigation_attorneys",
+      "name": "Litigation Attorneys",
+      "job_family_group_id": "jfg_legal_and_compliance_claims_legal",
+      "description": ""
+    },
+    {
+      "id": "jf_legal_assistants",
+      "name": "Legal Assistants",
+      "job_family_group_id": "jfg_legal_and_compliance_claims_legal",
+      "description": ""
+    },
+    {
+      "id": "jf_compliance_analysts",
+      "name": "Compliance Analysts",
+      "job_family_group_id": "jfg_legal_and_compliance_compliance_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_regulatory_affairs_specialists",
+      "name": "Regulatory Affairs Specialists",
+      "job_family_group_id": "jfg_legal_and_compliance_compliance_operations",
+      "description": ""
+    },
+    {
+      "id": "jf_internal_auditors",
+      "name": "Internal Auditors",
+      "job_family_group_id": "jfg_legal_and_compliance_audit",
+      "description": ""
+    },
+    {
+      "id": "jf_compliance_auditors",
+      "name": "Compliance Auditors",
+      "job_family_group_id": "jfg_legal_and_compliance_audit",
+      "description": ""
+    },
+    {
+      "id": "jf_recruiters",
+      "name": "Recruiters",
+      "job_family_group_id": "jfg_human_resources_recruiting",
+      "description": ""
+    },
+    {
+      "id": "jf_talent_sourcing_specialists",
+      "name": "Talent Sourcing Specialists",
+      "job_family_group_id": "jfg_human_resources_recruiting",
+      "description": ""
+    },
+    {
+      "id": "jf_learning_designers",
+      "name": "Learning Designers",
+      "job_family_group_id": "jfg_human_resources_training",
+      "description": ""
+    },
+    {
+      "id": "jf_training_coordinators",
+      "name": "Training Coordinators",
+      "job_family_group_id": "jfg_human_resources_training",
+      "description": ""
+    },
+    {
+      "id": "jf_hr_generalists",
+      "name": "HR Generalists",
+      "job_family_group_id": "jfg_human_resources_hr_services",
+      "description": ""
+    },
+    {
+      "id": "jf_hris_analysts",
+      "name": "HRIS Analysts",
+      "job_family_group_id": "jfg_human_resources_hr_services",
+      "description": ""
+    },
+    {
+      "id": "jf_compensation_analysts",
+      "name": "Compensation Analysts",
+      "job_family_group_id": "jfg_human_resources_compensation_and_benefits",
+      "description": ""
+    },
+    {
+      "id": "jf_benefits_administrators",
+      "name": "Benefits Administrators",
+      "job_family_group_id": "jfg_human_resources_compensation_and_benefits",
+      "description": ""
+    },
+    {
+      "id": "jf_brand_managers",
+      "name": "Brand Managers",
+      "job_family_group_id": "jfg_marketing_and_communications_brand_strategy",
+      "description": ""
+    },
+    {
+      "id": "jf_creative_specialists",
+      "name": "Creative Specialists",
+      "job_family_group_id": "jfg_marketing_and_communications_brand_strategy",
+      "description": ""
+    },
+    {
+      "id": "jf_digital_marketing_specialists",
+      "name": "Digital Marketing Specialists",
+      "job_family_group_id": "jfg_marketing_and_communications_online_marketing",
+      "description": ""
+    },
+    {
+      "id": "jf_seo_sem_analysts",
+      "name": "SEO SEM Analysts",
+      "job_family_group_id": "jfg_marketing_and_communications_online_marketing",
+      "description": ""
+    },
+    {
+      "id": "jf_content_strategists",
+      "name": "Content Strategists",
+      "job_family_group_id": "jfg_marketing_and_communications_content_and_social",
+      "description": ""
+    },
+    {
+      "id": "jf_social_media_managers",
+      "name": "Social Media Managers",
+      "job_family_group_id": "jfg_marketing_and_communications_content_and_social",
+      "description": ""
+    },
+    {
+      "id": "jf_product_marketing_managers",
+      "name": "Product Marketing Managers",
+      "job_family_group_id": "jfg_marketing_and_communications_insurance_product_marketing",
+      "description": ""
+    },
+    {
+      "id": "jf_market_research_analysts",
+      "name": "Market Research Analysts",
+      "job_family_group_id": "jfg_marketing_and_communications_insurance_product_marketing",
+      "description": ""
+    },
+    {
+      "id": "jf_business_process_analysts",
+      "name": "Business Process Analysts",
+      "job_family_group_id": "jfg_operations_and_strategy_process_improvement",
+      "description": ""
+    },
+    {
+      "id": "jf_lean_six_sigma_specialists",
+      "name": "Lean Six Sigma Specialists",
+      "job_family_group_id": "jfg_operations_and_strategy_process_improvement",
+      "description": ""
+    },
+    {
+      "id": "jf_vendor_managers",
+      "name": "Vendor Managers",
+      "job_family_group_id": "jfg_operations_and_strategy_vendor_management",
+      "description": ""
+    },
+    {
+      "id": "jf_procurement_specialists",
+      "name": "Procurement Specialists",
+      "job_family_group_id": "jfg_operations_and_strategy_vendor_management",
+      "description": ""
+    },
+    {
+      "id": "jf_strategy_analysts",
+      "name": "Strategy Analysts",
+      "job_family_group_id": "jfg_operations_and_strategy_strategy_and_planning",
+      "description": ""
+    },
+    {
+      "id": "jf_business_planners",
+      "name": "Business Planners",
+      "job_family_group_id": "jfg_operations_and_strategy_strategy_and_planning",
+      "description": ""
+    },
+    {
+      "id": "jf_enterprise_risk_analysts",
+      "name": "Enterprise Risk Analysts",
+      "job_family_group_id": "jfg_operations_and_strategy_enterprise_risk",
+      "description": ""
+    },
+    {
+      "id": "jf_operational_risk_managers",
+      "name": "Operational Risk Managers",
+      "job_family_group_id": "jfg_operations_and_strategy_enterprise_risk",
+      "description": ""
+    }
+  ]
+}

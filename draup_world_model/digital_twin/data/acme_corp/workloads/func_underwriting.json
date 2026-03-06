@@ -1,0 +1,802 @@
+[
+  {
+    "id": "wl_senior_risk_analyst_complex_risk_assessment_and_underwriting_guidance",
+    "name": "Complex Risk Assessment and Underwriting Guidance",
+    "role_id": "role_senior_risk_analyst",
+    "function_id": "func_underwriting",
+    "description": "Evaluates complex risk profiles, loss histories, and underwriting factors to inform high-value underwriting decisions; provides expert guidance to junior analysts on challenging accounts.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_risk_analyst_risk_assessment_model_development",
+    "name": "Risk Assessment Model Development",
+    "role_id": "role_senior_risk_analyst",
+    "function_id": "func_underwriting",
+    "description": "Develops and refines risk assessment models and scoring frameworks across multiple product lines; validates model performance and recommends enhancements.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_risk_analyst_pricing_strategy_and_market_analysis",
+    "name": "Pricing Strategy and Market Analysis",
+    "role_id": "role_senior_risk_analyst",
+    "function_id": "func_underwriting",
+    "description": "Analyzes market trends, competitive positioning, and loss data to inform pricing strategies; provides recommendations on rate adjustments and product positioning.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_risk_analyst_junior_analyst_mentoring_and_quality_review",
+    "name": "Junior Analyst Mentoring and Quality Review",
+    "role_id": "role_senior_risk_analyst",
+    "function_id": "func_underwriting",
+    "description": "Reviews risk assessments and analyses prepared by junior staff, provides feedback and coaching, and ensures quality and consistency of risk evaluations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_analyst__data_and_analytics_risk_pattern_and_anomaly_detection",
+    "name": "Risk Pattern and Anomaly Detection",
+    "role_id": "role_risk_analyst__data_and_analytics",
+    "function_id": "func_underwriting",
+    "description": "Analyzes large datasets using statistical methods and AI tools to identify risk patterns, trends, and anomalies that inform underwriting and pricing decisions.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_analyst__data_and_analytics_predictive_model_development_and_validation",
+    "name": "Predictive Model Development and Validation",
+    "role_id": "role_risk_analyst__data_and_analytics",
+    "function_id": "func_underwriting",
+    "description": "Supports development of machine learning models for risk classification, loss prediction, and portfolio management; validates model accuracy and performance.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_analyst__data_and_analytics_data_quality_and_preparation",
+    "name": "Data Quality and Preparation",
+    "role_id": "role_risk_analyst__data_and_analytics",
+    "function_id": "func_underwriting",
+    "description": "Prepares, cleans, and structures large datasets for analysis; identifies data quality issues and implements solutions to ensure analytical integrity.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_analyst__data_and_analytics_analytics_reporting_and_insights_communication",
+    "name": "Analytics Reporting and Insights Communication",
+    "role_id": "role_risk_analyst__data_and_analytics",
+    "function_id": "func_underwriting",
+    "description": "Creates reports, dashboards, and visualizations to communicate analytical findings and insights to stakeholders; presents recommendations based on data analysis.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_pricing_analyst_pricing_model_development_and_refinement",
+    "name": "Pricing Model Development and Refinement",
+    "role_id": "role_senior_pricing_analyst",
+    "function_id": "func_underwriting",
+    "description": "Develops and refines pricing models for life, health, and P&C products using actuarial principles, market data, and loss experience; ensures models reflect current risk profiles.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_pricing_analyst_pricing_strategy_and_competitive_positioning",
+    "name": "Pricing Strategy and Competitive Positioning",
+    "role_id": "role_senior_pricing_analyst",
+    "function_id": "func_underwriting",
+    "description": "Manages pricing strategy for assigned product lines, analyzes competitive market positioning, and recommends rate adjustments to maintain profitability and market share.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_pricing_analyst_profitability_analysis_and_monitoring",
+    "name": "Profitability Analysis and Monitoring",
+    "role_id": "role_senior_pricing_analyst",
+    "function_id": "func_underwriting",
+    "description": "Monitors pricing performance against profitability targets, analyzes loss ratios and margin trends, and recommends pricing adjustments to optimize financial performance.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_pricing_analyst_actuarial_compliance_and_regulatory_reporting",
+    "name": "Actuarial Compliance and Regulatory Reporting",
+    "role_id": "role_senior_pricing_analyst",
+    "function_id": "func_underwriting",
+    "description": "Ensures pricing models and strategies comply with actuarial standards and regulatory requirements; prepares actuarial memoranda and regulatory filings.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_pricing_analyst__ai_and_automation_machine_learning_model_implementation_and_optimization",
+    "name": "Machine Learning Model Implementation and Optimization",
+    "role_id": "role_pricing_analyst__ai_and_automation",
+    "function_id": "func_underwriting",
+    "description": "Implements machine learning algorithms and AI models to optimize pricing decisions, predict customer behavior, and improve rate accuracy across product lines.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_pricing_analyst__ai_and_automation_pricing_workflow_automation",
+    "name": "Pricing Workflow Automation",
+    "role_id": "role_pricing_analyst__ai_and_automation",
+    "function_id": "func_underwriting",
+    "description": "Designs and automates pricing workflows using AI and automation tools to reduce manual processing, improve efficiency, and enable real-time pricing decisions.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_pricing_analyst__ai_and_automation_data_science_collaboration_and_model_validation",
+    "name": "Data Science Collaboration and Model Validation",
+    "role_id": "role_pricing_analyst__ai_and_automation",
+    "function_id": "func_underwriting",
+    "description": "Collaborates with data science teams to develop and validate AI models; tests model performance and ensures alignment with business requirements.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_pricing_analyst__ai_and_automation_pricing_tool_and_system_management",
+    "name": "Pricing Tool and System Management",
+    "role_id": "role_pricing_analyst__ai_and_automation",
+    "function_id": "func_underwriting",
+    "description": "Manages AI and automation tools used in pricing operations, monitors system performance, and implements updates and enhancements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__property_on_site_property_inspections_and_risk_assessment",
+    "name": "On-Site Property Inspections and Risk Assessment",
+    "role_id": "role_loss_control_engineer__property",
+    "function_id": "func_underwriting",
+    "description": "Conducts on-site inspections of commercial properties to identify hazards, assess structural and mechanical conditions, and evaluate loss prevention measures.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__property_loss_prevention_recommendations_and_reporting",
+    "name": "Loss Prevention Recommendations and Reporting",
+    "role_id": "role_loss_control_engineer__property",
+    "function_id": "func_underwriting",
+    "description": "Develops detailed loss prevention recommendations based on inspection findings and provides comprehensive reports to underwriters and clients.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__property_technical_guidance_to_underwriters",
+    "name": "Technical Guidance to Underwriters",
+    "role_id": "role_loss_control_engineer__property",
+    "function_id": "func_underwriting",
+    "description": "Provides expert technical guidance to underwriters on property condition, mitigation strategies, and risk management solutions for underwriting decisions.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__property_client_communication_and_training",
+    "name": "Client Communication and Training",
+    "role_id": "role_loss_control_engineer__property",
+    "function_id": "func_underwriting",
+    "description": "Communicates inspection findings and recommendations to clients, conducts loss prevention training sessions, and provides ongoing technical support.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__safety_and_compliance_workplace_safety_program_evaluation",
+    "name": "Workplace Safety Program Evaluation",
+    "role_id": "role_loss_control_engineer__safety_and_compliance",
+    "function_id": "func_underwriting",
+    "description": "Evaluates workplace safety programs and practices at commercial client locations to assess effectiveness and identify gaps in safety management.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__safety_and_compliance_osha_compliance_assessment_and_reporting",
+    "name": "OSHA Compliance Assessment and Reporting",
+    "role_id": "role_loss_control_engineer__safety_and_compliance",
+    "function_id": "func_underwriting",
+    "description": "Conducts OSHA compliance audits and assessments at client facilities, documents findings, and prepares detailed compliance reports with recommendations.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__safety_and_compliance_loss_prevention_recommendations_development",
+    "name": "Loss Prevention Recommendations Development",
+    "role_id": "role_loss_control_engineer__safety_and_compliance",
+    "function_id": "func_underwriting",
+    "description": "Develops customized loss prevention and safety recommendations tailored to client operations and risk profiles to reduce liability and workers' compensation claims.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_loss_control_engineer__safety_and_compliance_safety_training_and_client_education",
+    "name": "Safety Training and Client Education",
+    "role_id": "role_loss_control_engineer__safety_and_compliance",
+    "function_id": "func_underwriting",
+    "description": "Conducts training sessions and educational programs for client employees on safety best practices, hazard recognition, and compliance requirements.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__commercial_commercial_property_inspections_and_documentation",
+    "name": "Commercial Property Inspections and Documentation",
+    "role_id": "role_risk_surveyor__commercial",
+    "function_id": "func_underwriting",
+    "description": "Performs detailed physical inspections of commercial properties, manufacturing facilities, and specialized operations; documents findings with photographs and detailed notes.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__commercial_risk_assessment_and_report_preparation",
+    "name": "Risk Assessment and Report Preparation",
+    "role_id": "role_risk_surveyor__commercial",
+    "function_id": "func_underwriting",
+    "description": "Analyzes inspection findings to assess risk exposures and prepares comprehensive risk reports with recommendations for underwriters to support underwriting decisions.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__commercial_underwriter_consultation_and_technical_support",
+    "name": "Underwriter Consultation and Technical Support",
+    "role_id": "role_risk_surveyor__commercial",
+    "function_id": "func_underwriting",
+    "description": "Provides technical expertise and consultation to underwriters regarding property conditions, risk factors, and mitigation strategies for underwriting decisions.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__commercial_client_communication_and_follow_up",
+    "name": "Client Communication and Follow-up",
+    "role_id": "role_risk_surveyor__commercial",
+    "function_id": "func_underwriting",
+    "description": "Communicates with clients regarding inspection scheduling, findings, and recommendations; follows up on implementation of recommended risk mitigation measures.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__specialty_operations_specialized_risk_surveys_and_assessments",
+    "name": "Specialized Risk Surveys and Assessments",
+    "role_id": "role_risk_surveyor__specialty_operations",
+    "function_id": "func_underwriting",
+    "description": "Conducts specialized risk surveys for high-value and complex accounts including healthcare facilities, hospitality venues, and industrial operations; applies technical expertise to assess unique exposures.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__specialty_operations_tailored_risk_management_recommendations",
+    "name": "Tailored Risk Management Recommendations",
+    "role_id": "role_risk_surveyor__specialty_operations",
+    "function_id": "func_underwriting",
+    "description": "Develops customized risk management solutions and recommendations based on specialized knowledge of industry-specific exposures and best practices.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__specialty_operations_complex_risk_reporting_and_analysis",
+    "name": "Complex Risk Reporting and Analysis",
+    "role_id": "role_risk_surveyor__specialty_operations",
+    "function_id": "func_underwriting",
+    "description": "Prepares detailed risk reports for complex accounts that analyze unique exposures, interdependencies, and risk mitigation strategies to support underwriting decisions.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_risk_surveyor__specialty_operations_specialist_consultation_and_account_support",
+    "name": "Specialist Consultation and Account Support",
+    "role_id": "role_risk_surveyor__specialty_operations",
+    "function_id": "func_underwriting",
+    "description": "Provides specialized technical consultation to underwriters and account managers on complex risk issues and serves as subject matter expert for high-value specialty accounts.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__mid_market_application_review_and_initial_underwriting",
+    "name": "Application Review and Initial Underwriting",
+    "role_id": "role_commercial_lines_underwriter__mid_market",
+    "function_id": "func_underwriting",
+    "description": "Review incoming commercial applications, verify completeness of submissions, and conduct initial risk assessment against underwriting guidelines for GL, property, and workers' compensation coverage.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__mid_market_coverage_decision_and_rate_negotiation",
+    "name": "Coverage Decision and Rate Negotiation",
+    "role_id": "role_commercial_lines_underwriter__mid_market",
+    "function_id": "func_underwriting",
+    "description": "Make coverage approval/denial decisions, determine appropriate rates and terms, and negotiate policy conditions with brokers and applicants.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__mid_market_account_relationship_management",
+    "name": "Account Relationship Management",
+    "role_id": "role_commercial_lines_underwriter__mid_market",
+    "function_id": "func_underwriting",
+    "description": "Maintain ongoing relationships with brokers and clients, respond to inquiries, handle policy modifications, and manage renewals for assigned accounts.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__mid_market_compliance_and_documentation",
+    "name": "Compliance and Documentation",
+    "role_id": "role_commercial_lines_underwriter__mid_market",
+    "function_id": "func_underwriting",
+    "description": "Ensure all underwriting decisions are properly documented, maintain audit trails, and verify compliance with state regulations and company underwriting guidelines.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__enterprise_complex_risk_analysis_and_customization",
+    "name": "Complex Risk Analysis and Customization",
+    "role_id": "role_commercial_lines_underwriter__enterprise",
+    "function_id": "func_underwriting",
+    "description": "Analyze complex multi-exposure accounts with high premium values, develop customized coverage solutions, and determine appropriate risk transfer strategies.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__enterprise_broker_and_client_relationship_management",
+    "name": "Broker and Client Relationship Management",
+    "role_id": "role_commercial_lines_underwriter__enterprise",
+    "function_id": "func_underwriting",
+    "description": "Serve as primary underwriting contact for large brokers and clients, negotiate complex terms, and provide strategic underwriting guidance on account placement.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__enterprise_subject_matter_expertise_and_risk_consultation",
+    "name": "Subject Matter Expertise and Risk Consultation",
+    "role_id": "role_commercial_lines_underwriter__enterprise",
+    "function_id": "func_underwriting",
+    "description": "Provide expert guidance on complex risk scenarios, emerging exposures, and novel coverage situations to junior underwriters and cross-functional teams.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_commercial_lines_underwriter__enterprise_underwriting_documentation_and_compliance",
+    "name": "Underwriting Documentation and Compliance",
+    "role_id": "role_commercial_lines_underwriter__enterprise",
+    "function_id": "func_underwriting",
+    "description": "Document complex underwriting decisions with detailed risk assessments, maintain compliance with regulatory requirements, and prepare files for audit and review.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__professional_liability_professional_background_and_practice_evaluation",
+    "name": "Professional Background and Practice Evaluation",
+    "role_id": "role_specialty_lines_underwriter__professional_liability",
+    "function_id": "func_underwriting",
+    "description": "Evaluate applicant professional credentials, practice management systems, client base composition, and operational procedures to assess underwriting risk.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__professional_liability_claims_history_analysis_and_risk_assessment",
+    "name": "Claims History Analysis and Risk Assessment",
+    "role_id": "role_specialty_lines_underwriter__professional_liability",
+    "function_id": "func_underwriting",
+    "description": "Review claims history, loss patterns, and prior coverage information to determine risk profile and appropriate coverage limits and pricing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__professional_liability_coverage_customization_and_underwriting_decision",
+    "name": "Coverage Customization and Underwriting Decision",
+    "role_id": "role_specialty_lines_underwriter__professional_liability",
+    "function_id": "func_underwriting",
+    "description": "Develop customized coverage solutions for specific professional service providers, make coverage approval/denial decisions, and establish appropriate premium rates.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__professional_liability_broker_communication_and_policy_administration",
+    "name": "Broker Communication and Policy Administration",
+    "role_id": "role_specialty_lines_underwriter__professional_liability",
+    "function_id": "func_underwriting",
+    "description": "Communicate underwriting decisions to brokers, respond to coverage questions, handle policy modifications, and manage renewals.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__cyber_and_technology_it_security_and_data_protection_assessment",
+    "name": "IT Security and Data Protection Assessment",
+    "role_id": "role_specialty_lines_underwriter__cyber_and_technology",
+    "function_id": "func_underwriting",
+    "description": "Evaluate applicant IT security infrastructure, data protection practices, vulnerability management, and incident response capabilities to assess cyber risk exposure.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__cyber_and_technology_business_continuity_and_risk_evaluation",
+    "name": "Business Continuity and Risk Evaluation",
+    "role_id": "role_specialty_lines_underwriter__cyber_and_technology",
+    "function_id": "func_underwriting",
+    "description": "Assess business continuity planning, disaster recovery procedures, and operational resilience to determine coverage needs and risk profile.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__cyber_and_technology_cyber_coverage_pricing_and_underwriting_decision",
+    "name": "Cyber Coverage Pricing and Underwriting Decision",
+    "role_id": "role_specialty_lines_underwriter__cyber_and_technology",
+    "function_id": "func_underwriting",
+    "description": "Determine appropriate cyber insurance coverage limits, exclusions, and premium rates based on risk assessment findings and make coverage approval/denial decisions.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_specialty_lines_underwriter__cyber_and_technology_client_communication_and_account_management",
+    "name": "Client Communication and Account Management",
+    "role_id": "role_specialty_lines_underwriter__cyber_and_technology",
+    "function_id": "func_underwriting",
+    "description": "Communicate underwriting decisions and coverage recommendations to brokers and clients, respond to technical questions, and manage policy renewals.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__homeowners_automated_application_processing",
+    "name": "Automated Application Processing",
+    "role_id": "role_personal_lines_underwriter__homeowners",
+    "function_id": "func_underwriting",
+    "description": "Process homeowners insurance applications through automated underwriting systems, review system-generated decisions, and manage routine approvals.",
+    "effort_allocation_pct": 50.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__homeowners_exception_handling_and_manual_review",
+    "name": "Exception Handling and Manual Review",
+    "role_id": "role_personal_lines_underwriter__homeowners",
+    "function_id": "func_underwriting",
+    "description": "Review complex or flagged applications that require manual underwriting, conduct detailed risk assessments, and make coverage decisions on exceptions.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__homeowners_compliance_and_regulatory_management",
+    "name": "Compliance and Regulatory Management",
+    "role_id": "role_personal_lines_underwriter__homeowners",
+    "function_id": "func_underwriting",
+    "description": "Ensure all underwriting decisions comply with state regulations, company guidelines, and fair lending practices; maintain audit documentation.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__homeowners_customer_service_and_policy_administration",
+    "name": "Customer Service and Policy Administration",
+    "role_id": "role_personal_lines_underwriter__homeowners",
+    "function_id": "func_underwriting",
+    "description": "Respond to applicant inquiries, handle policy modifications, and manage administrative tasks related to policy issuance.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__high_net_worth_comprehensive_risk_assessment_and_underwriting",
+    "name": "Comprehensive Risk Assessment and Underwriting",
+    "role_id": "role_personal_lines_underwriter__high_net_worth",
+    "function_id": "func_underwriting",
+    "description": "Conduct detailed risk assessments for high-net-worth individuals, evaluate unique exposures including valuable assets, and determine appropriate coverage needs.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__high_net_worth_customized_coverage_solution_development",
+    "name": "Customized Coverage Solution Development",
+    "role_id": "role_personal_lines_underwriter__high_net_worth",
+    "function_id": "func_underwriting",
+    "description": "Design comprehensive insurance packages combining homeowners, umbrella, and specialty coverage tailored to individual client circumstances and risk profiles.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__high_net_worth_client_relationship_and_consultation",
+    "name": "Client Relationship and Consultation",
+    "role_id": "role_personal_lines_underwriter__high_net_worth",
+    "function_id": "func_underwriting",
+    "description": "Serve as primary underwriting contact for high-net-worth clients, provide expert guidance on coverage options, and manage ongoing account relationships.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_personal_lines_underwriter__high_net_worth_documentation_and_compliance",
+    "name": "Documentation and Compliance",
+    "role_id": "role_personal_lines_underwriter__high_net_worth",
+    "function_id": "func_underwriting",
+    "description": "Document underwriting decisions with detailed risk assessments, maintain compliance with regulatory requirements, and prepare comprehensive underwriting files.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__standard_lines_ai_powered_application_decisioning",
+    "name": "AI-Powered Application Decisioning",
+    "role_id": "role_auto_insurance_underwriter__standard_lines",
+    "function_id": "func_underwriting",
+    "description": "Oversee AI-powered underwriting system processing of personal auto applications, monitor system performance, and approve system-generated decisions.",
+    "effort_allocation_pct": 55.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__standard_lines_exception_review_and_manual_underwriting",
+    "name": "Exception Review and Manual Underwriting",
+    "role_id": "role_auto_insurance_underwriter__standard_lines",
+    "function_id": "func_underwriting",
+    "description": "Review applications flagged for manual review, evaluate driving history and vehicle information, and make coverage decisions on complex or high-risk cases.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__standard_lines_regulatory_compliance_and_quality_assurance",
+    "name": "Regulatory Compliance and Quality Assurance",
+    "role_id": "role_auto_insurance_underwriter__standard_lines",
+    "function_id": "func_underwriting",
+    "description": "Ensure compliance with state insurance regulations and company underwriting guidelines, perform quality audits on underwriting decisions, and maintain documentation.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__standard_lines_customer_service_and_administrative_support",
+    "name": "Customer Service and Administrative Support",
+    "role_id": "role_auto_insurance_underwriter__standard_lines",
+    "function_id": "func_underwriting",
+    "description": "Respond to applicant inquiries, handle policy modifications, and manage administrative tasks related to policy issuance and renewals.",
+    "effort_allocation_pct": 5.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__commercial_fleet_fleet_composition_and_risk_analysis",
+    "name": "Fleet Composition and Risk Analysis",
+    "role_id": "role_auto_insurance_underwriter__commercial_fleet",
+    "function_id": "func_underwriting",
+    "description": "Analyze commercial fleet composition, vehicle types, usage patterns, and replacement schedules to assess overall fleet risk profile.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__commercial_fleet_driver_safety_and_loss_history_evaluation",
+    "name": "Driver Safety and Loss History Evaluation",
+    "role_id": "role_auto_insurance_underwriter__commercial_fleet",
+    "function_id": "func_underwriting",
+    "description": "Review driver safety records, training programs, loss history, and claims patterns to determine fleet underwriting risk and appropriate rates.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__commercial_fleet_coverage_terms_and_rate_determination",
+    "name": "Coverage Terms and Rate Determination",
+    "role_id": "role_auto_insurance_underwriter__commercial_fleet",
+    "function_id": "func_underwriting",
+    "description": "Establish appropriate coverage limits, deductibles, and premium rates for commercial fleet policies based on risk assessment findings.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_auto_insurance_underwriter__commercial_fleet_broker_relationship_and_account_management",
+    "name": "Broker Relationship and Account Management",
+    "role_id": "role_auto_insurance_underwriter__commercial_fleet",
+    "function_id": "func_underwriting",
+    "description": "Communicate underwriting decisions to brokers, respond to coverage questions, handle policy modifications, and manage fleet account renewals.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__property_and_casualty_reinsurance_treaty_analysis_and_evaluation",
+    "name": "Reinsurance Treaty Analysis and Evaluation",
+    "role_id": "role_reinsurance_analyst__property_and_casualty",
+    "function_id": "func_underwriting",
+    "description": "Analyze reinsurance treaty terms, coverage provisions, pricing, and conditions to evaluate alignment with company risk transfer objectives.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__property_and_casualty_reinsurer_relationship_management_and_negotiation",
+    "name": "Reinsurer Relationship Management and Negotiation",
+    "role_id": "role_reinsurance_analyst__property_and_casualty",
+    "function_id": "func_underwriting",
+    "description": "Manage relationships with reinsurers, negotiate treaty terms and pricing, and coordinate placement of reinsurance programs.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__property_and_casualty_placement_strategy_and_capital_optimization",
+    "name": "Placement Strategy and Capital Optimization",
+    "role_id": "role_reinsurance_analyst__property_and_casualty",
+    "function_id": "func_underwriting",
+    "description": "Develop reinsurance placement strategies to optimize risk transfer, manage capital efficiency, and ensure appropriate coverage for company exposures.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__property_and_casualty_documentation_and_compliance_management",
+    "name": "Documentation and Compliance Management",
+    "role_id": "role_reinsurance_analyst__property_and_casualty",
+    "function_id": "func_underwriting",
+    "description": "Maintain treaty documentation, track placement details, ensure regulatory compliance, and prepare reporting for management and regulators.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__claims_and_recoveries_reinsurance_claims_processing_and_documentation",
+    "name": "Reinsurance Claims Processing and Documentation",
+    "role_id": "role_reinsurance_analyst__claims_and_recoveries",
+    "function_id": "func_underwriting",
+    "description": "Process claims submitted to reinsurers, prepare claim documentation, verify coverage under treaty terms, and submit claims for recovery.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__claims_and_recoveries_reinsurer_correspondence_and_follow_up",
+    "name": "Reinsurer Correspondence and Follow-up",
+    "role_id": "role_reinsurance_analyst__claims_and_recoveries",
+    "function_id": "func_underwriting",
+    "description": "Maintain correspondence with reinsurers regarding claim status, respond to inquiries, provide additional information, and follow up on pending recoveries.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__claims_and_recoveries_treaty_tracking_and_recovery_management",
+    "name": "Treaty Tracking and Recovery Management",
+    "role_id": "role_reinsurance_analyst__claims_and_recoveries",
+    "function_id": "func_underwriting",
+    "description": "Track claims against reinsurance treaties, monitor recovery timelines, manage deductibles and limits, and ensure timely receipt of recovery payments.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_reinsurance_analyst__claims_and_recoveries_reporting_and_reconciliation",
+    "name": "Reporting and Reconciliation",
+    "role_id": "role_reinsurance_analyst__claims_and_recoveries",
+    "function_id": "func_underwriting",
+    "description": "Prepare claims and recovery reports, reconcile reinsurer statements with company records, and maintain audit documentation for all recovery activities.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__property_exposure_data_analysis_and_risk_assessment",
+    "name": "Exposure Data Analysis and Risk Assessment",
+    "role_id": "role_treaty_underwriter__property",
+    "function_id": "func_underwriting",
+    "description": "Analyzes cedent exposure data, including property values, locations, construction types, and historical loss patterns to assess risk profile and determine appropriate coverage terms.",
+    "effort_allocation_pct": 28.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__property_treaty_pricing_and_terms_development",
+    "name": "Treaty Pricing and Terms Development",
+    "role_id": "role_treaty_underwriter__property",
+    "function_id": "func_underwriting",
+    "description": "Develops competitive treaty pricing, premium rates, and coverage terms based on risk assessment, market conditions, and company underwriting guidelines.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__property_cedent_and_broker_relationship_management",
+    "name": "Cedent and Broker Relationship Management",
+    "role_id": "role_treaty_underwriter__property",
+    "function_id": "func_underwriting",
+    "description": "Maintains ongoing relationships with cedents and brokers through negotiations, proposal presentations, contract discussions, and performance reviews.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__property_market_monitoring_and_treaty_administration",
+    "name": "Market Monitoring and Treaty Administration",
+    "role_id": "role_treaty_underwriter__property",
+    "function_id": "func_underwriting",
+    "description": "Monitors market conditions, competitive offerings, and regulatory changes while managing treaty documentation, renewals, and performance tracking.",
+    "effort_allocation_pct": 17.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__casualty_and_specialty_cedent_portfolio_analysis_and_structure_design",
+    "name": "Cedent Portfolio Analysis and Structure Design",
+    "role_id": "role_treaty_underwriter__casualty_and_specialty",
+    "function_id": "func_underwriting",
+    "description": "Analyzes cedent casualty and specialty portfolios including claims history, exposure concentration, and line-of-business mix to design optimal treaty structures.",
+    "effort_allocation_pct": 26.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__casualty_and_specialty_excess_of_loss_and_quota_share_pricing",
+    "name": "Excess of Loss and Quota Share Pricing",
+    "role_id": "role_treaty_underwriter__casualty_and_specialty",
+    "function_id": "func_underwriting",
+    "description": "Develops pricing and terms for excess of loss and quota share arrangements based on portfolio analysis, loss trends, and competitive market positioning.",
+    "effort_allocation_pct": 24.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__casualty_and_specialty_market_trend_analysis_and_competitive_positioning",
+    "name": "Market Trend Analysis and Competitive Positioning",
+    "role_id": "role_treaty_underwriter__casualty_and_specialty",
+    "function_id": "func_underwriting",
+    "description": "Monitors casualty and specialty market trends, competitor offerings, and emerging risks to inform treaty strategy and maintain competitive advantage.",
+    "effort_allocation_pct": 22.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treaty_underwriter__casualty_and_specialty_treaty_negotiation_and_client_engagement",
+    "name": "Treaty Negotiation and Client Engagement",
+    "role_id": "role_treaty_underwriter__casualty_and_specialty",
+    "function_id": "func_underwriting",
+    "description": "Negotiates treaty terms with cedents and brokers, presents proposals, addresses client concerns, and manages ongoing relationship communications.",
+    "effort_allocation_pct": 28.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  }
+]

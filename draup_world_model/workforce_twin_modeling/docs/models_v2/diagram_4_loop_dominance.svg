@@ -1,0 +1,165 @@
+<svg viewBox="0 0 1100 780" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="1100" height="780" fill="#fafafa"/>
+
+  <text x="550" y="28" text-anchor="middle" fill="#222" font-size="17" font-weight="bold">LOOP DOMINANCE — Which Loops Control the System at Each Phase</text>
+  <text x="550" y="48" text-anchor="middle" fill="#888" font-size="12" font-style="italic">"At any moment, some loops DOMINATE and others are dormant. The behavior is determined by which loop dominates."</text>
+
+  <!-- Timeline -->
+  <line x1="100" y1="100" x2="1000" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="95" x2="100" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="95" x2="250" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="95" x2="400" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="550" y1="95" x2="550" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="700" y1="95" x2="700" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="850" y1="95" x2="850" y2="105" stroke="#333" stroke-width="2"/>
+  <line x1="1000" y1="95" x2="1000" y2="105" stroke="#333" stroke-width="2"/>
+  <text x="100" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M0</text>
+  <text x="250" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M6</text>
+  <text x="400" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M12</text>
+  <text x="550" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M18</text>
+  <text x="700" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M24</text>
+  <text x="850" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M30</text>
+  <text x="1000" y="120" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">M36</text>
+
+  <!-- Phase zones -->
+  <rect x="100" y="68" width="300" height="25" fill="#c44" opacity="0.08"/>
+  <text x="250" y="80" text-anchor="middle" fill="#c44" font-size="10" font-weight="bold">PHASE 1: STARTUP</text>
+  <rect x="400" y="68" width="300" height="25" fill="#2a7a2a" opacity="0.08"/>
+  <text x="550" y="80" text-anchor="middle" fill="#2a7a2a" font-size="10" font-weight="bold">PHASE 2: ACCELERATION</text>
+  <rect x="700" y="68" width="300" height="25" fill="#2060a0" opacity="0.08"/>
+  <text x="850" y="80" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold">PHASE 3: MATURITY</text>
+
+  <!-- Breakeven marker -->
+  <line x1="550" y1="60" x2="550" y2="720" stroke="#2a7a2a" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="555" y="72" fill="#2a7a2a" font-size="9" font-weight="bold">BREAKEVEN M18</text>
+
+  <!-- BALANCING label -->
+  <text x="37" y="225" text-anchor="middle" fill="#2060a0" font-size="10" font-weight="bold" transform="rotate(-90 37 225)">BALANCING</text>
+  <line x1="50" y1="140" x2="50" y2="325" stroke="#2060a0" stroke-width="2"/>
+
+  <!-- B1: Capacity Absorption -->
+  <text x="95" y="162" text-anchor="end" fill="#2060a0" font-size="10" font-weight="bold">B1: Absorption</text>
+  <rect x="105" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.6"/>
+  <rect x="255" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.55"/>
+  <rect x="405" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.55"/>
+  <rect x="555" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.55"/>
+  <rect x="705" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.55"/>
+  <rect x="855" y="148" width="110" height="22" rx="3" fill="#5577bb" opacity="0.55"/>
+  <text x="160" y="163" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">30%</text>
+  <text x="310" y="163" text-anchor="middle" fill="#fff" font-size="9">31%</text>
+  <text x="460" y="163" text-anchor="middle" fill="#fff" font-size="9">32%</text>
+  <text x="610" y="163" text-anchor="middle" fill="#fff" font-size="9">33%</text>
+  <text x="760" y="163" text-anchor="middle" fill="#fff" font-size="9">34%</text>
+  <text x="910" y="163" text-anchor="middle" fill="#fff" font-size="9">35%</text>
+  <text x="95" y="178" text-anchor="end" fill="#888" font-size="8">always on — baseline drag</text>
+
+  <!-- B2: Skill Valley -->
+  <text x="95" y="207" text-anchor="end" fill="#2060a0" font-size="10" font-weight="bold">B2: Skill Valley</text>
+  <rect x="105" y="193" width="12" height="22" rx="3" fill="#6688cc" opacity="0.5"/>
+  <rect x="255" y="193" width="44" height="22" rx="3" fill="#6688cc" opacity="0.7"/>
+  <rect x="405" y="193" width="33" height="22" rx="3" fill="#6688cc" opacity="0.6"/>
+  <rect x="555" y="193" width="22" height="22" rx="3" fill="#6688cc" opacity="0.5"/>
+  <rect x="705" y="193" width="16" height="22" rx="3" fill="#6688cc" opacity="0.4"/>
+  <rect x="855" y="193" width="9" height="22" rx="3" fill="#6688cc" opacity="0.3"/>
+  <text x="95" y="222" text-anchor="end" fill="#888" font-size="8">peaks at M6, fades as reskilling catches up</text>
+
+  <!-- B3: Change Resistance -->
+  <text x="95" y="252" text-anchor="end" fill="#2060a0" font-size="10" font-weight="bold">B3: Resistance</text>
+  <rect x="105" y="238" width="33" height="22" rx="3" fill="#7799dd" opacity="0.6"/>
+  <rect x="255" y="238" width="55" height="22" rx="3" fill="#7799dd" opacity="0.7"/>
+  <rect x="405" y="238" width="50" height="22" rx="3" fill="#7799dd" opacity="0.65"/>
+  <rect x="555" y="238" width="38" height="22" rx="3" fill="#7799dd" opacity="0.55"/>
+  <rect x="705" y="238" width="28" height="22" rx="3" fill="#7799dd" opacity="0.45"/>
+  <rect x="855" y="238" width="11" height="22" rx="3" fill="#7799dd" opacity="0.3"/>
+  <text x="95" y="268" text-anchor="end" fill="#888" font-size="8">high early (disruption), fades with R5 counterforce</text>
+
+  <!-- B4: Seniority -->
+  <text x="95" y="298" text-anchor="end" fill="#2060a0" font-size="10" font-weight="bold">B4: Seniority</text>
+  <rect x="105" y="284" width="1" height="22" rx="1" fill="#88aaee" opacity="0.2"/>
+  <rect x="255" y="284" width="3" height="22" rx="1" fill="#88aaee" opacity="0.3"/>
+  <rect x="405" y="284" width="6" height="22" rx="2" fill="#88aaee" opacity="0.35"/>
+  <rect x="555" y="284" width="9" height="22" rx="2" fill="#88aaee" opacity="0.4"/>
+  <rect x="705" y="284" width="11" height="22" rx="2" fill="#88aaee" opacity="0.45"/>
+  <rect x="855" y="284" width="14" height="22" rx="2" fill="#88aaee" opacity="0.5"/>
+  <text x="95" y="313" text-anchor="end" fill="#888" font-size="8">grows slowly as entry-level pool shrinks</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="340" x2="1050" y2="340" stroke="#ddd" stroke-width="1"/>
+
+  <!-- REINFORCING label -->
+  <text x="37" y="475" text-anchor="middle" fill="#a03030" font-size="10" font-weight="bold" transform="rotate(-90 37 475)">REINFORCING</text>
+  <line x1="50" y1="355" x2="50" y2="600" stroke="#a03030" stroke-width="2"/>
+
+  <!-- R1: Trust -->
+  <text x="95" y="377" text-anchor="end" fill="#a03030" font-size="10" font-weight="bold">R1: Trust</text>
+  <rect x="105" y="363" width="6" height="22" rx="2" fill="#cc6644" opacity="0.3"/>
+  <rect x="255" y="363" width="13" height="22" rx="3" fill="#cc6644" opacity="0.4"/>
+  <rect x="405" y="363" width="22" height="22" rx="3" fill="#cc6644" opacity="0.5"/>
+  <rect x="555" y="363" width="33" height="22" rx="3" fill="#cc6644" opacity="0.6"/>
+  <rect x="705" y="363" width="42" height="22" rx="3" fill="#cc6644" opacity="0.7"/>
+  <rect x="855" y="363" width="50" height="22" rx="3" fill="#cc6644" opacity="0.8"/>
+  <text x="95" y="393" text-anchor="end" fill="#888" font-size="8">slow start, builds as success compounds</text>
+
+  <!-- R2: Proficiency -->
+  <text x="95" y="422" text-anchor="end" fill="#a03030" font-size="10" font-weight="bold">R2: Proficiency</text>
+  <rect x="105" y="408" width="9" height="22" rx="2" fill="#bb5533" opacity="0.3"/>
+  <rect x="255" y="408" width="20" height="22" rx="3" fill="#bb5533" opacity="0.5"/>
+  <rect x="405" y="408" width="33" height="22" rx="3" fill="#bb5533" opacity="0.6"/>
+  <rect x="555" y="408" width="46" height="22" rx="3" fill="#bb5533" opacity="0.7"/>
+  <rect x="705" y="408" width="55" height="22" rx="3" fill="#bb5533" opacity="0.8"/>
+  <rect x="855" y="408" width="55" height="22" rx="3" fill="#bb5533" opacity="0.8"/>
+  <text x="95" y="438" text-anchor="end" fill="#888" font-size="8">strongest reinforcing loop — practice drives improvement</text>
+
+  <!-- R3: Savings -->
+  <text x="95" y="467" text-anchor="end" fill="#a03030" font-size="10" font-weight="bold">R3: Savings</text>
+  <rect x="105" y="453" width="0" height="22" rx="1" fill="#dd8866" opacity="0.2"/>
+  <rect x="255" y="453" width="0" height="22" rx="1" fill="#dd8866" opacity="0.2"/>
+  <rect x="405" y="453" width="0" height="22" rx="1" fill="#dd8866" opacity="0.2"/>
+  <rect x="555" y="453" width="6" height="22" rx="2" fill="#dd8866" opacity="0.35"/>
+  <rect x="705" y="453" width="13" height="22" rx="3" fill="#dd8866" opacity="0.5"/>
+  <rect x="855" y="453" width="20" height="22" rx="3" fill="#dd8866" opacity="0.6"/>
+  <text x="95" y="483" text-anchor="end" fill="#888" font-size="8">zero until breakeven, then small but growing</text>
+
+  <!-- R4: Political Capital -->
+  <text x="95" y="512" text-anchor="end" fill="#a03030" font-size="10" font-weight="bold">R4: Capital</text>
+  <rect x="105" y="498" width="11" height="22" rx="2" fill="#ee9977" opacity="0.35"/>
+  <rect x="255" y="498" width="17" height="22" rx="3" fill="#ee9977" opacity="0.45"/>
+  <rect x="405" y="498" width="24" height="22" rx="3" fill="#ee9977" opacity="0.55"/>
+  <rect x="555" y="498" width="33" height="22" rx="3" fill="#ee9977" opacity="0.6"/>
+  <rect x="705" y="498" width="38" height="22" rx="3" fill="#ee9977" opacity="0.7"/>
+  <rect x="855" y="498" width="44" height="22" rx="3" fill="#ee9977" opacity="0.75"/>
+  <text x="95" y="528" text-anchor="end" fill="#888" font-size="8">enables bigger moves as capital accumulates</text>
+
+  <!-- R5: Readiness Boost (NEW) -->
+  <text x="95" y="557" text-anchor="end" fill="#48a" font-size="10" font-weight="bold">R5: Readiness ★</text>
+  <rect x="105" y="543" width="6" height="22" rx="2" fill="#cc7755" opacity="0.3"/>
+  <rect x="255" y="543" width="17" height="22" rx="3" fill="#cc7755" opacity="0.45"/>
+  <rect x="405" y="543" width="28" height="22" rx="3" fill="#cc7755" opacity="0.55"/>
+  <rect x="555" y="543" width="38" height="22" rx="3" fill="#cc7755" opacity="0.65"/>
+  <rect x="705" y="543" width="44" height="22" rx="3" fill="#cc7755" opacity="0.75"/>
+  <rect x="855" y="543" width="46" height="22" rx="3" fill="#cc7755" opacity="0.8"/>
+  <text x="95" y="573" text-anchor="end" fill="#48a" font-size="8" font-weight="bold">NEW in v2.1 — counterbalances B3 resistance</text>
+
+  <!-- NET EFFECT -->
+  <rect x="100" y="620" width="900" height="55" rx="6" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="550" y="638" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">NET BALANCE OF FORCES</text>
+  <text x="160" y="660" text-anchor="middle" fill="#c44" font-size="12" font-weight="bold">B ≫ R</text>
+  <text x="160" y="672" text-anchor="middle" fill="#c44" font-size="8">stuck</text>
+  <text x="310" y="660" text-anchor="middle" fill="#c44" font-size="12" font-weight="bold">B > R</text>
+  <text x="310" y="672" text-anchor="middle" fill="#c44" font-size="8">slow</text>
+  <text x="460" y="660" text-anchor="middle" fill="#886" font-size="12" font-weight="bold">B ≈ R</text>
+  <text x="460" y="672" text-anchor="middle" fill="#886" font-size="8">tipping</text>
+  <text x="610" y="660" text-anchor="middle" fill="#2a7a2a" font-size="12" font-weight="bold">R > B</text>
+  <text x="610" y="672" text-anchor="middle" fill="#2a7a2a" font-size="8">breakeven</text>
+  <text x="760" y="660" text-anchor="middle" fill="#2a7a2a" font-size="12" font-weight="bold">R > B</text>
+  <text x="760" y="672" text-anchor="middle" fill="#2a7a2a" font-size="8">growing</text>
+  <text x="910" y="660" text-anchor="middle" fill="#2060a0" font-size="12" font-weight="bold">R ≥ B</text>
+  <text x="910" y="672" text-anchor="middle" fill="#2060a0" font-size="8">stable</text>
+
+  <!-- Summary -->
+  <rect x="100" y="695" width="900" height="68" rx="5" fill="#f8f8f8" stroke="#eee"/>
+  <text x="550" y="714" text-anchor="middle" fill="#444" font-size="11" font-weight="bold">KEY INSIGHT</text>
+  <text x="550" y="732" text-anchor="middle" fill="#666" font-size="10">The system flips from balancing-dominant to reinforcing-dominant around M12-M18.</text>
+  <text x="550" y="748" text-anchor="middle" fill="#666" font-size="10">Before: the organization feels stuck — resistance, skill gaps, and absorption dominate.</text>
+  <text x="550" y="762" text-anchor="middle" fill="#2a7a2a" font-size="10" font-weight="bold">After: momentum builds on itself — proficiency, trust, readiness, and savings all compound.</text>
+</svg>

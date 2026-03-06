@@ -1,0 +1,38 @@
+role_id,role_name,function,sub_function,jfg,management_level,headcount,avg_salary,annual_cost,automation_score,augmentation_score,l1_etter_ceiling,l2_achievable,l3_realized,adoption_gap_pct,capability_gap_pct,total_gap_pct,adoption_gap_hours,capability_gap_hours,adoption_gap_savings_annual,full_gap_savings_annual,adoption_gap_fte,compliance_tasks,total_tasks,redesign_candidate
+CL-001,Claims Intake Specialist,Claims,Claims Processing,Claims Operations,Individual Contributor,120,48000.0,5760000.0,42.5,18.2,71.9,68.38,8.94,59.44,3.52,62.96,11434.8,676.8,3430440.0,3633480.0,71.5,1,12,True
+CL-002,Claims Adjuster,Claims,Claims Processing,Claims Operations,Individual Contributor,95,55000.0,5225000.0,28.3,22.5,60.12,56.38,9.42,46.96,3.75,50.71,7137.3,570.0,2453464.0,2649402.0,44.6,4,19,True
+CL-003,Claims Data Entry Clerk,Claims,Claims Processing,Claims Operations,Individual Contributor,80,38000.0,3040000.0,56.8,10.5,67.5,63.46,10.63,52.84,4.04,56.87,6763.1,516.8,1606241.0,1728981.0,42.3,3,16,True
+CL-004,Claims Examiner,Claims,Claims Processing,Claims Operations,Senior IC,45,62000.0,2790000.0,18.5,28.3,65.21,61.85,9.88,51.97,3.35,55.33,3737.4,241.2,1448254.0,1541719.0,23.4,3,18,True
+CL-005,Claims Processor,Claims,Claims Processing,Claims Operations,Individual Contributor,60,44000.0,2640000.0,48.2,15.8,47.34,41.99,6.31,35.68,5.35,41.03,3425.0,513.6,941886.0,1083126.0,21.4,4,14,True
+CL-006,Fraud Detection Analyst,Claims,Claims Processing,Claims Operations,Senior IC,20,72000.0,1440000.0,22.0,30.5,59.99,58.75,9.49,49.26,1.24,50.49,1577.2,39.6,709736.0,727556.0,9.9,3,15,True
+CL-007,Claims Team Lead,Claims,Claims Processing,Claims Operations,Manager,20,68000.0,1360000.0,12.5,20.8,64.63,60.76,8.99,51.77,3.87,55.65,1657.8,124.0,704552.0,757252.0,10.4,2,15,True
+CL-008,Claims Support Coordinator,Claims,Claims Processing,Claims Operations,Individual Contributor,10,42000.0,420000.0,38.0,16.0,61.24,60.22,9.26,50.96,1.02,51.98,814.9,16.3,213912.0,218191.0,5.1,2,18,True
+CL-009,Claims Review Specialist,Claims,Claims Review,Claims Management,Senior IC,40,68000.0,2720000.0,15.0,28.0,61.25,57.38,9.07,48.31,3.88,52.18,3091.6,248.0,1313930.0,1419330.0,19.3,5,19,True
+CL-010,Quality Assurance Auditor,Claims,Claims Review,Claims Management,Senior IC,30,72000.0,2160000.0,20.5,25.0,62.53,61.38,9.24,52.14,1.15,53.29,2476.1,54.6,1114236.0,1138806.0,15.5,2,11,True
+CL-011,Claims Review Manager,Claims,Claims Review,Claims Management,Manager,15,85000.0,1275000.0,8.0,18.5,70.4,66.67,11.23,55.45,3.73,59.17,1330.7,89.4,706940.0,754433.0,8.3,1,15,True
+CL-012,Sr. Director Claims,Claims,Claims Review,Claims Management,Director,5,135000.0,675000.0,3.5,12.0,57.73,56.4,8.5,47.9,1.33,49.23,383.2,10.6,323325.0,332269.0,2.4,2,11,True
+FI-001,Accounts Payable Clerk,Finance,Accounting,Finance Operations,Individual Contributor,55,45000.0,2475000.0,52.0,12.0,57.74,51.08,10.72,40.36,6.66,47.02,3552.1,585.7,999018.0,1163760.0,22.2,3,19,True
+FI-002,Accounts Receivable Specialist,Finance,Accounting,Finance Operations,Individual Contributor,45,48000.0,2160000.0,48.0,14.0,66.42,60.04,11.43,48.61,6.38,54.99,3497.5,459.0,1049247.0,1186947.0,21.9,1,10,True
+FI-003,General Ledger Accountant,Finance,Accounting,Finance Operations,Senior IC,40,65000.0,2600000.0,32.0,20.0,51.03,46.28,9.93,36.35,4.76,41.1,2324.6,304.2,944385.0,1067966.0,14.5,4,15,True
+FI-004,Tax Specialist,Finance,Accounting,Finance Operations,Senior IC,25,78000.0,1950000.0,22.0,25.0,51.97,43.73,9.28,34.45,8.23,42.69,1378.1,329.4,671818.0,832388.0,8.6,3,14,True
+FI-005,Accounting Manager,Finance,Accounting,Finance Operations,Manager,10,92000.0,920000.0,10.0,18.0,56.69,50.56,11.17,39.39,6.12,45.52,630.3,98.0,362423.0,418773.0,3.9,4,19,True
+FI-006,Financial Analyst,Finance,Financial Planning,Finance Analytics,Individual Contributor,35,72000.0,2520000.0,20.0,28.0,52.79,44.8,9.46,35.33,7.99,43.32,1978.8,447.3,890442.0,1091727.0,12.4,3,16,True
+FI-007,Senior Financial Analyst,Finance,Financial Planning,Finance Analytics,Senior IC,25,88000.0,2200000.0,14.0,30.0,56.64,52.74,11.96,40.78,3.91,44.68,1632.1,156.4,897676.0,983682.0,10.2,2,14,True
+FI-008,FP&A Director,Finance,Financial Planning,Finance Analytics,Director,4,145000.0,580000.0,5.0,15.0,50.09,44.22,8.24,35.99,5.87,41.86,230.2,37.5,208597.0,242618.0,1.4,3,10,True
+PE-001,HR Coordinator,People,HR Operations,People Services,Individual Contributor,60,48000.0,2880000.0,42.0,16.0,54.58,51.81,13.01,38.81,2.77,41.58,3723.1,265.8,1116945.0,1196685.0,23.3,4,19,True
+PE-002,Benefits Specialist,People,HR Operations,People Services,Individual Contributor,35,52000.0,1820000.0,38.0,18.0,56.26,53.49,13.57,39.91,2.77,42.68,2235.1,155.0,726408.0,776799.0,14.0,4,19,True
+PE-003,HRIS Analyst,People,HR Operations,People Services,Senior IC,20,68000.0,1360000.0,30.0,22.0,70.69,68.1,18.05,50.05,2.59,52.64,1599.5,82.8,679794.0,714984.0,10.0,0,12,True
+PE-004,HR Operations Manager,People,HR Operations,People Services,Manager,8,85000.0,680000.0,12.0,18.0,41.54,37.04,8.95,28.09,4.5,32.59,359.6,57.6,191012.0,221612.0,2.2,5,15,False
+PE-005,Recruiter,People,Talent & Learning,People Development,Individual Contributor,40,58000.0,2320000.0,25.0,24.0,52.59,49.72,13.36,36.35,2.87,39.22,2328.0,184.0,843886.0,910586.0,14.5,5,19,False
+PE-006,Learning & Development Specialist,People,Talent & Learning,People Development,Senior IC,20,65000.0,1300000.0,18.0,28.0,56.83,53.86,13.85,40.01,2.96,42.97,1280.4,94.8,520154.0,558667.0,8.0,3,16,True
+PE-007,Talent Director,People,Talent & Learning,People Development,Director,3,130000.0,390000.0,5.0,14.0,50.39,46.8,11.77,35.03,3.6,38.62,168.3,17.3,136769.0,150809.0,1.1,5,17,False
+TE-001,Software Engineer,Technology,Software Development,Technology,Individual Contributor,90,92000.0,8280000.0,18.0,32.5,44.62,35.25,7.09,28.16,9.38,37.54,4055.4,1350.0,2331855.0,3108105.0,25.3,1,12,False
+TE-002,Senior Software Engineer,Technology,Software Development,Technology,Senior IC,60,115000.0,6900000.0,12.5,34.5,51.41,45.18,8.42,36.76,6.24,43.0,3526.6,598.5,2534726.0,2964898.0,22.0,0,13,True
+TE-003,QA Engineer,Technology,Software Development,Technology,Individual Contributor,45,78000.0,3510000.0,35.0,22.0,44.62,36.62,6.37,30.26,8.0,38.26,2178.4,576.0,1061994.0,1342794.0,13.6,0,19,False
+TE-004,DevOps Engineer,Technology,Software Development,Technology,Senior IC,30,105000.0,3150000.0,28.0,25.0,42.34,34.73,6.27,28.46,7.61,36.07,1365.9,365.4,896372.0,1136166.0,8.5,1,21,False
+TE-005,Tech Lead,Technology,Software Development,Technology,Manager,20,130000.0,2600000.0,8.0,22.0,47.71,42.87,7.49,35.38,4.84,40.22,1133.0,155.0,920530.0,1046467.0,7.1,1,19,True
+TE-006,Engineering Director,Technology,Software Development,Technology,Director,5,165000.0,825000.0,4.0,15.0,46.47,39.95,7.57,32.38,6.52,38.91,261.7,52.7,269837.0,324184.0,1.6,0,16,False
+TE-007,IT Support Specialist,Technology,IT Operations,Technology Support,Individual Contributor,80,52000.0,4160000.0,40.0,18.0,50.35,44.49,8.77,35.72,5.85,41.57,4617.8,756.8,1500798.0,1746758.0,28.9,1,14,True
+TE-008,Systems Administrator,Technology,IT Operations,Technology Support,Senior IC,40,75000.0,3000000.0,30.0,22.0,47.56,38.88,7.16,31.72,8.68,40.4,2031.4,556.0,952200.0,1212825.0,12.7,0,19,True
+TE-009,Network Engineer,Technology,IT Operations,Technology Support,Senior IC,25,82000.0,2050000.0,25.0,20.0,47.05,38.9,6.89,32.01,8.15,40.15,1281.0,326.1,656538.0,823677.0,8.0,1,20,True
+TE-010,IT Operations Manager,Technology,IT Operations,Technology Support,Manager,10,95000.0,950000.0,10.0,18.0,43.22,35.08,7.67,27.41,8.14,35.55,434.1,129.0,257747.0,334341.0,2.7,1,11,False

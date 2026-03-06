@@ -1,0 +1,128 @@
+task_id,task_name,workload_id,role_id,category,effort_hours,previous_state,new_state,automation_pct,freed_hours,tool_used
+TK-0001,Flag missing information,WL-0001,CL-001,feedback_loop,26.7,human,ai,67.5,18.02,Microsoft Copilot
+TK-0003,Classify document type,WL-0001,CL-001,directive,26.7,human,ai,76.5,20.43,Microsoft Copilot
+TK-0004,Enter claim data into system,WL-0002,CL-001,directive,10.6,human,ai,76.5,8.11,Microsoft Copilot
+TK-0006,Flag data inconsistencies,WL-0002,CL-001,directive,10.6,human,ai,76.5,8.11,Microsoft Copilot
+TK-0007,Cross-reference policy details,WL-0002,CL-001,feedback_loop,10.6,human,ai,67.5,7.16,Microsoft Copilot
+TK-0008,Reconcile multi-source data,WL-0002,CL-001,task_iteration,10.6,human,human_ai,31.5,3.34,Microsoft Copilot
+TK-0009,Generate compliance reports,WL-0003,CL-001,directive,6.8,human,ai,76.5,5.2,Microsoft Copilot
+TK-0011,Update compliance checklists,WL-0003,CL-001,feedback_loop,6.8,human,ai,67.5,4.59,Microsoft Copilot
+TK-0012,Track regulatory deadlines,WL-0003,CL-001,directive,6.8,human,ai,76.5,5.2,Microsoft Copilot
+TK-0014,Draft status update emails,WL-0004,CL-002,directive,10.0,human,ai,76.5,7.65,Microsoft Copilot
+TK-0016,Schedule follow-up calls,WL-0004,CL-002,directive,10.0,human,ai,76.5,7.65,Microsoft Copilot
+TK-0018,Research applicable regulations,WL-0005,CL-002,learning,8.0,human,human_ai,22.5,1.8,Microsoft Copilot
+TK-0020,Enter claim data into system,WL-0006,CL-002,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0021,Reconcile multi-source data,WL-0006,CL-002,task_iteration,8.0,human,human_ai,31.5,2.52,Microsoft Copilot
+TK-0022,Cross-reference policy details,WL-0006,CL-002,feedback_loop,8.0,human,ai,67.5,5.4,Microsoft Copilot
+TK-0023,Flag data inconsistencies,WL-0006,CL-002,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0025,Track regulatory deadlines,WL-0007,CL-002,directive,4.0,human,ai,76.5,3.06,Microsoft Copilot
+TK-0026,Update compliance checklists,WL-0007,CL-002,feedback_loop,4.0,human,ai,67.5,2.7,Microsoft Copilot
+TK-0027,Generate compliance reports,WL-0007,CL-002,directive,4.0,human,ai,76.5,3.06,Microsoft Copilot
+TK-0028,Route to appropriate handler,WL-0008,CL-002,directive,12.0,human,ai,76.5,9.18,Microsoft Copilot
+TK-0029,Flag missing information,WL-0008,CL-002,feedback_loop,12.0,human,ai,67.5,8.1,Microsoft Copilot
+TK-0031,Extract data from claim forms,WL-0008,CL-002,directive,12.0,human,ai,76.5,9.18,Microsoft Copilot
+TK-0032,Cross-reference policy details,WL-0009,CL-003,feedback_loop,10.8,human,ai,67.5,7.29,Microsoft Copilot
+TK-0033,Enter claim data into system,WL-0009,CL-003,directive,10.8,human,ai,76.5,8.26,Microsoft Copilot
+TK-0035,Reconcile multi-source data,WL-0009,CL-003,task_iteration,10.8,human,human_ai,31.5,3.4,Microsoft Copilot
+TK-0036,Flag missing information,WL-0010,CL-003,feedback_loop,16.0,human,ai,67.5,10.8,Microsoft Copilot
+TK-0037,Classify document type,WL-0010,CL-003,directive,16.0,human,ai,76.5,12.24,Microsoft Copilot
+TK-0038,Extract data from claim forms,WL-0010,CL-003,directive,16.0,human,ai,76.5,12.24,Microsoft Copilot
+TK-0039,Route to appropriate handler,WL-0010,CL-003,directive,16.0,human,ai,76.5,12.24,Microsoft Copilot
+TK-0042,Compile evidence summary,WL-0011,CL-003,task_iteration,8.0,human,human_ai,31.5,2.52,Microsoft Copilot
+TK-0043,Analyze claim patterns,WL-0011,CL-003,learning,8.0,human,human_ai,22.5,1.8,Microsoft Copilot
+TK-0045,Update compliance checklists,WL-0012,CL-003,feedback_loop,5.2,human,ai,67.5,3.51,Microsoft Copilot
+TK-0046,Generate compliance reports,WL-0012,CL-003,directive,5.2,human,ai,76.5,3.98,Microsoft Copilot
+TK-0047,Track regulatory deadlines,WL-0012,CL-003,directive,5.2,human,ai,76.5,3.98,Microsoft Copilot
+TK-0049,Reconcile multi-source data,WL-0013,CL-004,task_iteration,8.6,human,human_ai,31.5,2.71,Microsoft Copilot
+TK-0050,Flag data inconsistencies,WL-0013,CL-004,directive,8.6,human,ai,76.5,6.58,Microsoft Copilot
+TK-0051,Cross-reference policy details,WL-0013,CL-004,feedback_loop,8.6,human,ai,67.5,5.8,Microsoft Copilot
+TK-0052,Enter claim data into system,WL-0013,CL-004,directive,8.6,human,ai,76.5,6.58,Microsoft Copilot
+TK-0054,Classify document type,WL-0014,CL-004,directive,12.8,human,ai,76.5,9.79,Microsoft Copilot
+TK-0055,Flag missing information,WL-0014,CL-004,feedback_loop,12.8,human,ai,67.5,8.64,Microsoft Copilot
+TK-0056,Route to appropriate handler,WL-0014,CL-004,directive,12.8,human,ai,76.5,9.79,Microsoft Copilot
+TK-0057,Extract data from claim forms,WL-0014,CL-004,directive,12.8,human,ai,76.5,9.79,Microsoft Copilot
+TK-0060,Compile evidence summary,WL-0015,CL-004,task_iteration,8.0,human,human_ai,31.5,2.52,Microsoft Copilot
+TK-0061,Research applicable regulations,WL-0015,CL-004,learning,8.0,human,human_ai,22.5,1.8,Microsoft Copilot
+TK-0062,Generate compliance reports,WL-0016,CL-004,directive,5.2,human,ai,76.5,3.98,Microsoft Copilot
+TK-0064,Track regulatory deadlines,WL-0016,CL-004,directive,5.2,human,ai,76.5,3.98,Microsoft Copilot
+TK-0065,Update compliance checklists,WL-0016,CL-004,feedback_loop,5.2,human,ai,67.5,3.51,Microsoft Copilot
+TK-0067,Draft status update emails,WL-0017,CL-005,directive,19.2,human,ai,76.5,14.69,Microsoft Copilot
+TK-0070,Generate compliance reports,WL-0018,CL-005,directive,5.6,human,ai,76.5,4.28,Microsoft Copilot
+TK-0071,Track regulatory deadlines,WL-0018,CL-005,directive,5.6,human,ai,76.5,4.28,Microsoft Copilot
+TK-0072,Update compliance checklists,WL-0018,CL-005,feedback_loop,5.6,human,ai,67.5,3.78,Microsoft Copilot
+TK-0073,Reconcile multi-source data,WL-0019,CL-005,task_iteration,11.6,human,human_ai,31.5,3.65,Microsoft Copilot
+TK-0075,Flag data inconsistencies,WL-0019,CL-005,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0076,Enter claim data into system,WL-0019,CL-005,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0077,Analyze claim patterns,WL-0020,CL-005,learning,11.2,human,human_ai,22.5,2.52,Microsoft Copilot
+TK-0079,Research applicable regulations,WL-0020,CL-005,learning,11.2,human,human_ai,22.5,2.52,Microsoft Copilot
+TK-0080,Route to appropriate handler,WL-0021,CL-006,directive,18.7,human,ai,76.5,14.31,Microsoft Copilot
+TK-0082,Flag missing information,WL-0021,CL-006,feedback_loop,18.7,human,ai,67.5,12.62,Microsoft Copilot
+TK-0083,Enter claim data into system,WL-0022,CL-006,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0085,Cross-reference policy details,WL-0022,CL-006,feedback_loop,9.6,human,ai,67.5,6.48,Microsoft Copilot
+TK-0086,Flag data inconsistencies,WL-0022,CL-006,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0090,Schedule follow-up calls,WL-0023,CL-006,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0091,Track regulatory deadlines,WL-0024,CL-006,directive,4.8,human,ai,76.5,3.67,Microsoft Copilot
+TK-0092,Update compliance checklists,WL-0024,CL-006,feedback_loop,4.8,human,ai,67.5,3.24,Microsoft Copilot
+TK-0094,Generate compliance reports,WL-0024,CL-006,directive,4.8,human,ai,76.5,3.67,Microsoft Copilot
+TK-0095,Enter claim data into system,WL-0025,CL-007,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0096,Flag data inconsistencies,WL-0025,CL-007,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0097,Reconcile multi-source data,WL-0025,CL-007,task_iteration,9.6,human,human_ai,31.5,3.02,Microsoft Copilot
+TK-0099,Schedule follow-up calls,WL-0026,CL-007,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0101,Draft status update emails,WL-0026,CL-007,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0104,Extract data from claim forms,WL-0027,CL-007,directive,18.7,human,ai,76.5,14.31,Microsoft Copilot
+TK-0105,Classify document type,WL-0027,CL-007,directive,18.7,human,ai,76.5,14.31,Microsoft Copilot
+TK-0107,Update compliance checklists,WL-0028,CL-007,feedback_loop,4.8,human,ai,67.5,3.24,Microsoft Copilot
+TK-0108,Track regulatory deadlines,WL-0028,CL-007,directive,4.8,human,ai,76.5,3.67,Microsoft Copilot
+TK-0109,Generate compliance reports,WL-0028,CL-007,directive,4.8,human,ai,76.5,3.67,Microsoft Copilot
+TK-0110,Track regulatory deadlines,WL-0029,CL-008,directive,5.3,human,ai,76.5,4.05,Microsoft Copilot
+TK-0111,Update compliance checklists,WL-0029,CL-008,feedback_loop,5.3,human,ai,67.5,3.58,Microsoft Copilot
+TK-0112,Generate compliance reports,WL-0029,CL-008,directive,5.3,human,ai,76.5,4.05,Microsoft Copilot
+TK-0113,Compile evidence summary,WL-0030,CL-008,task_iteration,6.0,human,human_ai,31.5,1.89,Microsoft Copilot
+TK-0114,Research applicable regulations,WL-0030,CL-008,learning,6.0,human,human_ai,22.5,1.35,Microsoft Copilot
+TK-0116,Analyze claim patterns,WL-0030,CL-008,learning,6.0,human,human_ai,22.5,1.35,Microsoft Copilot
+TK-0118,Flag missing information,WL-0031,CL-008,feedback_loop,9.6,human,ai,67.5,6.48,Microsoft Copilot
+TK-0119,Extract data from claim forms,WL-0031,CL-008,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0120,Route to appropriate handler,WL-0031,CL-008,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0121,Classify document type,WL-0031,CL-008,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0123,Flag data inconsistencies,WL-0032,CL-008,directive,10.7,human,ai,76.5,8.19,Microsoft Copilot
+TK-0124,Enter claim data into system,WL-0032,CL-008,directive,10.7,human,ai,76.5,8.19,Microsoft Copilot
+TK-0127,Schedule follow-up calls,WL-0033,CL-008,directive,13.3,human,ai,76.5,10.17,Microsoft Copilot
+TK-0129,Schedule follow-up calls,WL-0034,CL-009,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0131,Draft status update emails,WL-0034,CL-009,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0133,Flag missing information,WL-0035,CL-009,feedback_loop,16.0,human,ai,67.5,10.8,Microsoft Copilot
+TK-0134,Route to appropriate handler,WL-0035,CL-009,directive,16.0,human,ai,76.5,12.24,Microsoft Copilot
+TK-0135,Classify document type,WL-0035,CL-009,directive,16.0,human,ai,76.5,12.24,Microsoft Copilot
+TK-0137,Research applicable regulations,WL-0036,CL-009,learning,8.0,human,human_ai,22.5,1.8,Microsoft Copilot
+TK-0139,Track regulatory deadlines,WL-0037,CL-009,directive,4.0,human,ai,76.5,3.06,Microsoft Copilot
+TK-0140,Update compliance checklists,WL-0037,CL-009,feedback_loop,4.0,human,ai,67.5,2.7,Microsoft Copilot
+TK-0141,Generate compliance reports,WL-0037,CL-009,directive,4.0,human,ai,76.5,3.06,Microsoft Copilot
+TK-0143,Enter claim data into system,WL-0038,CL-009,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0144,Flag data inconsistencies,WL-0038,CL-009,directive,8.0,human,ai,76.5,6.12,Microsoft Copilot
+TK-0145,Cross-reference policy details,WL-0038,CL-009,feedback_loop,8.0,human,ai,67.5,5.4,Microsoft Copilot
+TK-0146,Reconcile multi-source data,WL-0038,CL-009,task_iteration,8.0,human,human_ai,31.5,2.52,Microsoft Copilot
+TK-0147,Flag missing information,WL-0039,CL-010,feedback_loop,24.5,human,ai,67.5,16.54,Microsoft Copilot
+TK-0148,Extract data from claim forms,WL-0039,CL-010,directive,24.5,human,ai,76.5,18.74,Microsoft Copilot
+TK-0151,Draft status update emails,WL-0040,CL-010,directive,15.2,human,ai,76.5,11.63,Microsoft Copilot
+TK-0152,Schedule follow-up calls,WL-0040,CL-010,directive,15.2,human,ai,76.5,11.63,Microsoft Copilot
+TK-0154,Track regulatory deadlines,WL-0041,CL-010,directive,6.0,human,ai,76.5,4.59,Microsoft Copilot
+TK-0156,Generate compliance reports,WL-0041,CL-010,directive,6.0,human,ai,76.5,4.59,Microsoft Copilot
+TK-0157,Update compliance checklists,WL-0041,CL-010,feedback_loop,6.0,human,ai,67.5,4.05,Microsoft Copilot
+TK-0158,Reconcile multi-source data,WL-0042,CL-011,task_iteration,9.6,human,human_ai,31.5,3.02,Microsoft Copilot
+TK-0159,Cross-reference policy details,WL-0042,CL-011,feedback_loop,9.6,human,ai,67.5,6.48,Microsoft Copilot
+TK-0160,Enter claim data into system,WL-0042,CL-011,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0161,Flag data inconsistencies,WL-0042,CL-011,directive,9.6,human,ai,76.5,7.34,Microsoft Copilot
+TK-0163,Draft status update emails,WL-0043,CL-011,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0165,Schedule follow-up calls,WL-0043,CL-011,directive,11.6,human,ai,76.5,8.87,Microsoft Copilot
+TK-0166,Route to appropriate handler,WL-0044,CL-011,directive,14.0,human,ai,76.5,10.71,Microsoft Copilot
+TK-0168,Extract data from claim forms,WL-0044,CL-011,directive,14.0,human,ai,76.5,10.71,Microsoft Copilot
+TK-0169,Flag missing information,WL-0044,CL-011,feedback_loop,14.0,human,ai,67.5,9.45,Microsoft Copilot
+TK-0170,Track regulatory deadlines,WL-0045,CL-011,directive,6.4,human,ai,76.5,4.9,Microsoft Copilot
+TK-0171,Generate compliance reports,WL-0045,CL-011,directive,6.4,human,ai,76.5,4.9,Microsoft Copilot
+TK-0172,Update compliance checklists,WL-0045,CL-011,feedback_loop,6.4,human,ai,67.5,4.32,Microsoft Copilot
+TK-0173,Compile evidence summary,WL-0046,CL-012,task_iteration,10.0,human,human_ai,31.5,3.15,Microsoft Copilot
+TK-0175,Analyze claim patterns,WL-0046,CL-012,learning,10.0,human,human_ai,22.5,2.25,Microsoft Copilot
+TK-0177,Enter claim data into system,WL-0047,CL-012,directive,13.2,human,ai,76.5,10.1,Microsoft Copilot
+TK-0178,Cross-reference policy details,WL-0047,CL-012,feedback_loop,13.2,human,ai,67.5,8.91,Microsoft Copilot
+TK-0180,Flag data inconsistencies,WL-0047,CL-012,directive,13.2,human,ai,76.5,10.1,Microsoft Copilot
+TK-0181,Draft status update emails,WL-0048,CL-012,directive,22.4,human,ai,76.5,17.14,Microsoft Copilot
+TK-0182,Schedule follow-up calls,WL-0048,CL-012,directive,22.4,human,ai,76.5,17.14,Microsoft Copilot

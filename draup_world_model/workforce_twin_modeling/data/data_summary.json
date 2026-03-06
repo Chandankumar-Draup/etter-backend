@@ -1,0 +1,14 @@
+{
+  "organization": "InsureCo (Synthetic)",
+  "total_roles": 37,
+  "total_workloads": 152,
+  "total_tasks": 581,
+  "total_skills": 692,
+  "total_headcount": 1370,
+  "total_annual_salary_cost": 91085000,
+  "avg_automation_score": 24.3,
+  "avg_augmentation_score": 21.0,
+  "functions": 4,
+  "tech_tools": 5,
+  "scenarios": 5
+}

@@ -1,0 +1,42 @@
+{
+  "baseline": {
+    "hc_reduced": 49,
+    "final_hc": 491,
+    "net_savings": 2918966.666666667,
+    "payback": 20,
+    "final_prof": 41.69409580568386,
+    "final_trust": 44.42400273477099,
+    "final_ready": 46.93090344992239,
+    "avg_damp": 0.3365
+  },
+  "error_m7": {
+    "hc_reduced": 41,
+    "final_hc": 499,
+    "net_savings": 2374550.0,
+    "payback": 21,
+    "final_prof": 40.32023906642846,
+    "final_trust": 34.04697585506125,
+    "final_ready": 46.965198456534985,
+    "avg_damp": 0.3085
+  },
+  "hi_ready": {
+    "hc_reduced": 95,
+    "final_hc": 445,
+    "net_savings": 8916466.666666662,
+    "payback": 13,
+    "final_prof": 66.86465417727904,
+    "final_trust": 78.10699987300995,
+    "final_ready": 81.8625158457173,
+    "avg_damp": 0.6798
+  },
+  "lo_ready": {
+    "hc_reduced": 12,
+    "final_hc": 528,
+    "net_savings": -1000366.666666667,
+    "payback": 0,
+    "final_prof": 22.26446894984421,
+    "final_trust": 24.109028678820746,
+    "final_ready": 27.659203649550076,
+    "avg_damp": 0.1142
+  }
+}

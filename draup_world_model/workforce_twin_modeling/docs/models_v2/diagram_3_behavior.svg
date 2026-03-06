@@ -1,0 +1,137 @@
+<svg viewBox="0 0 1100 860" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="1100" height="860" fill="#fafafa"/>
+
+  <text x="550" y="28" text-anchor="middle" fill="#222" font-size="17" font-weight="bold">SIMULATION BEHAVIOR — Reference Mode v2.1</text>
+  <text x="550" y="48" text-anchor="middle" fill="#888" font-size="12" font-style="italic">Claims function, Copilot deployment, P2-Balanced policy, 36-month horizon</text>
+  <text x="550" y="64" text-anchor="middle" fill="#aaa" font-size="10">"Stocks generally change slowly, even when the flows change suddenly" — Meadows</text>
+
+  <!-- ════ CHART 1: ADOPTION ════ -->
+  <rect x="80" y="90" width="940" height="200" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Phase backgrounds -->
+  <rect x="80" y="90" width="313" height="200" fill="#fff5f5" opacity="0.35"/>
+  <rect x="393" y="90" width="314" height="200" fill="#f0fff0" opacity="0.35"/>
+  <rect x="707" y="90" width="313" height="200" fill="#f0f0ff" opacity="0.35"/>
+  <text x="236" y="104" text-anchor="middle" fill="#c88" font-size="8.5" font-weight="bold">STARTUP (B dominant)</text>
+  <text x="550" y="104" text-anchor="middle" fill="#8a8" font-size="8.5" font-weight="bold">ACCELERATION (R activates)</text>
+  <text x="863" y="104" text-anchor="middle" fill="#88a" font-size="8.5" font-weight="bold">MATURITY (diminishing returns)</text>
+
+  <!-- Grid lines -->
+  <line x1="80" y1="130" x2="1020" y2="130" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="170" x2="1020" y2="170" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="210" x2="1020" y2="210" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="250" x2="1020" y2="250" stroke="#f0f0f0" stroke-width="0.5"/>
+  <text x="75" y="94" text-anchor="end" fill="#999" font-size="8">100%</text>
+  <text x="75" y="134" text-anchor="end" fill="#999" font-size="8">80%</text>
+  <text x="75" y="174" text-anchor="end" fill="#999" font-size="8">60%</text>
+  <text x="75" y="214" text-anchor="end" fill="#999" font-size="8">40%</text>
+  <text x="75" y="254" text-anchor="end" fill="#999" font-size="8">20%</text>
+  <text x="75" y="294" text-anchor="end" fill="#999" font-size="8">0%</text>
+
+  <!-- Month labels -->
+  <text x="80" y="304" text-anchor="middle" fill="#999" font-size="8">M0</text>
+  <text x="236" y="304" text-anchor="middle" fill="#999" font-size="8">M6</text>
+  <text x="393" y="304" text-anchor="middle" fill="#999" font-size="8">M12</text>
+  <text x="550" y="304" text-anchor="middle" fill="#999" font-size="8">M18</text>
+  <text x="707" y="304" text-anchor="middle" fill="#999" font-size="8">M24</text>
+  <text x="863" y="304" text-anchor="middle" fill="#999" font-size="8">M30</text>
+  <text x="1020" y="304" text-anchor="middle" fill="#999" font-size="8">M36</text>
+  <text x="45" y="195" text-anchor="middle" fill="#999" font-size="8" transform="rotate(-90 45 195)">ADOPTION %</text>
+
+  <!-- Title -->
+  <text x="85" y="85" fill="#333" font-size="12" font-weight="bold">Adoption</text>
+  <text x="165" y="85" fill="#888" font-size="10" font-style="italic">— raw S-curve vs effective (after human system dampening)</text>
+
+  <!-- Raw S-curve: 13.9→90 -->
+  <polyline points="80,262 236,198 393,139 550,116 707,109 863,107 1020,106" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="1028" y="110" fill="#bbb" font-size="9">raw 90%</text>
+
+  <!-- Effective adoption: 4→44.7 -->
+  <polyline points="80,282 236,257 393,233 550,220 707,211 863,205 1020,200" fill="none" stroke="#2060a0" stroke-width="2.8"/>
+  <text x="1028" y="204" fill="#2060a0" font-size="9" font-weight="bold">effective 44.7%</text>
+
+  <!-- Dampening gap annotation -->
+  <line x1="863" y1="107" x2="863" y2="205" stroke="#c44" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <text x="878" y="158" fill="#c44" font-size="9" font-style="italic">dampening gap</text>
+  <text x="878" y="170" fill="#c44" font-size="8">55.3% lost to</text>
+  <text x="878" y="180" fill="#c44" font-size="8">human factors</text>
+
+  <!-- ════ CHART 2: HUMAN SYSTEM ════ -->
+  <rect x="80" y="335" width="940" height="200" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="80" y1="375" x2="1020" y2="375" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="415" x2="1020" y2="415" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="455" x2="1020" y2="455" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="495" x2="1020" y2="495" stroke="#f0f0f0" stroke-width="0.5"/>
+  <text x="75" y="339" text-anchor="end" fill="#999" font-size="8">60</text>
+  <text x="75" y="379" text-anchor="end" fill="#999" font-size="8">50</text>
+  <text x="75" y="419" text-anchor="end" fill="#999" font-size="8">40</text>
+  <text x="75" y="459" text-anchor="end" fill="#999" font-size="8">30</text>
+  <text x="75" y="499" text-anchor="end" fill="#999" font-size="8">20</text>
+  <text x="45" y="435" text-anchor="middle" fill="#999" font-size="8" transform="rotate(-90 45 435)">SCORE (0-100)</text>
+
+  <text x="85" y="328" fill="#333" font-size="12" font-weight="bold">Human System</text>
+  <text x="195" y="328" fill="#888" font-size="10" font-style="italic">— the three dimensions that determine effective adoption</text>
+
+  <!-- Readiness: 45.1→55.1 (score 0-100, chart shows 20-60 range) -->
+  <!-- y = 535 - (val-20)/40 * 200 = 535 - val*5 + 100 -->
+  <polyline points="80,409 236,407 393,401 550,392 707,382 863,371 1020,359" fill="none" stroke="#48a" stroke-width="2.5"/>
+  <text x="1028" y="363" fill="#48a" font-size="9" font-weight="bold">readiness 55</text>
+
+  <!-- Proficiency: 25.1→44.9 -->
+  <polyline points="80,475 236,472 393,462 550,449 707,436 863,420 1020,405" fill="none" stroke="#6a4" stroke-width="2"/>
+  <text x="1028" y="409" fill="#6a4" font-size="9" font-weight="bold">proficiency 45</text>
+
+  <!-- Trust: 35→46.4 -->
+  <polyline points="80,449 236,447 393,441 550,434 707,427 863,419 1020,411" fill="none" stroke="#a64" stroke-width="2"/>
+  <text x="1028" y="415" fill="#a64" font-size="9" font-weight="bold">trust 46</text>
+
+  <!-- Annotation: R5 effect -->
+  <path d="M 550,388 Q 500,365 460,370" fill="none" stroke="#48a" stroke-width="0.8"/>
+  <text x="395" y="368" fill="#48a" font-size="8" font-style="italic">R5 boost lifts</text>
+  <text x="395" y="378" fill="#48a" font-size="8" font-style="italic">readiness 10 pts</text>
+
+  <!-- ════ CHART 3: FINANCIAL ════ -->
+  <rect x="80" y="580" width="940" height="200" fill="#fff" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="80" y1="611" x2="1020" y2="611" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="643" x2="1020" y2="643" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="675" x2="1020" y2="675" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="707" x2="1020" y2="707" stroke="#f0f0f0" stroke-width="0.5"/>
+  <line x1="80" y1="739" x2="1020" y2="739" stroke="#f0f0f0" stroke-width="0.5"/>
+  <text x="75" y="583" text-anchor="end" fill="#999" font-size="8">$6M</text>
+  <text x="75" y="615" text-anchor="end" fill="#999" font-size="8">$4M</text>
+  <text x="75" y="647" text-anchor="end" fill="#999" font-size="8">$2M</text>
+  <text x="75" y="679" text-anchor="end" fill="#999" font-size="8">$0</text>
+  <text x="75" y="711" text-anchor="end" fill="#999" font-size="8">-$2M</text>
+  <text x="75" y="743" text-anchor="end" fill="#999" font-size="8">-$4M</text>
+  <text x="45" y="680" text-anchor="middle" fill="#999" font-size="8" transform="rotate(-90 45 680)">NET $ (cum.)</text>
+
+  <text x="85" y="572" fill="#333" font-size="12" font-weight="bold">Financial Position</text>
+  <text x="225" y="572" fill="#888" font-size="10" font-style="italic">— cumulative net (savings − investment)</text>
+
+  <!-- Zero line -->
+  <line x1="80" y1="675" x2="1020" y2="675" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Net position: 0→-1501→-863→+179→+1525→+3056→+4657 -->
+  <!-- y = 675 - (val/6000)*96 ... scaling: $6M = y=580, -$4M = y=740 -->
+  <!-- 675 = $0, each $1M = 16px, so val*0.016 -->
+  <polyline points="80,675 236,699 393,689 550,672 707,651 863,626 1020,600" fill="none" stroke="#2a7a2a" stroke-width="2.8"/>
+  <text x="1028" y="604" fill="#2a7a2a" font-size="9" font-weight="bold">+$4.66M</text>
+
+  <!-- Breakeven marker at M18 -->
+  <line x1="550" y1="580" x2="550" y2="775" stroke="#2a7a2a" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="555" y="592" fill="#2a7a2a" font-size="10" font-weight="bold">BREAKEVEN M18</text>
+  <circle cx="550" cy="672" r="5" fill="#2a7a2a" stroke="#fff" stroke-width="2"/>
+  <text x="565" y="668" fill="#2a7a2a" font-size="8">+$179K</text>
+
+  <!-- ════ SUMMARY BAR ════ -->
+  <rect x="80" y="800" width="940" height="48" rx="5" fill="#f0f5ff" stroke="#ddd"/>
+  <text x="200" y="818" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">540 → 474 HC</text>
+  <text x="200" y="835" text-anchor="middle" fill="#888" font-size="9">66 reduced (38% ceiling)</text>
+  <text x="400" y="818" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">$4.66M net savings</text>
+  <text x="400" y="835" text-anchor="middle" fill="#888" font-size="9">26% of open-loop</text>
+  <text x="600" y="818" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">M18 breakeven</text>
+  <text x="600" y="835" text-anchor="middle" fill="#888" font-size="9">real-world: M12-M24</text>
+  <text x="800" y="818" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">44.7% Year 3 adoption</text>
+  <text x="800" y="835" text-anchor="middle" fill="#888" font-size="9">real-world: 40-60%</text>
+  <text x="980" y="818" text-anchor="middle" fill="#333" font-size="10" font-weight="bold">35% avg dampening</text>
+  <text x="980" y="835" text-anchor="middle" fill="#888" font-size="9">human system cost</text>
+</svg>

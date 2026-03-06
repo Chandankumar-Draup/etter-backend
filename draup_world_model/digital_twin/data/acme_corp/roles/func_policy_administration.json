@@ -1,0 +1,498 @@
+[
+  {
+    "id": "role_senior_policy_administrator",
+    "name": "Senior Policy Administrator",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_administrators",
+    "description": "Manages complex policy lifecycle activities including renewals, endorsements, and customer inquiries for multiple insurance lines. Serves as subject matter expert and mentor for junior staff while ensuring compliance with regulatory requirements.",
+    "total_headcount": 45,
+    "avg_salary": 58000,
+    "automation_score": 35.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_insurance_product_knowledge",
+      "skill_life_insurance_products",
+      "skill_health_insurance_products",
+      "skill_property_and_casualty_insurance",
+      "skill_insurance_regulation_knowledge",
+      "skill_naic_compliance",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_customer_service_excellence",
+      "skill_leadership",
+      "skill_mentoring_and_coaching",
+      "skill_training_and_development",
+      "skill_attention_to_detail",
+      "skill_knowledge_management"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_guidewire_insurancesuite",
+      "tech_servicenow_workflow_automation",
+      "tech_tableau",
+      "tech_microsoft_power_bi",
+      "tech_salesforce_insurance_cloud"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_policy_administrator_i",
+    "name": "Policy Administrator I",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_administrators",
+    "description": "Processes routine policy maintenance requests, updates customer information, and handles standard policy inquiries across life, health, and P&C products. Works with policy management systems to ensure accurate record-keeping.",
+    "total_headcount": 120,
+    "avg_salary": 42000,
+    "automation_score": 72.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_insurance_product_knowledge",
+      "skill_life_insurance_products",
+      "skill_health_insurance_products",
+      "skill_property_and_casualty_insurance",
+      "skill_customer_service_excellence",
+      "skill_attention_to_detail",
+      "skill_digital_literacy",
+      "skill_communication",
+      "skill_problem_solving",
+      "skill_compliance_and_regulatory_knowledge"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_guidewire_insurancesuite",
+      "tech_servicenow_workflow_automation",
+      "tech_microsoft_dynamics_365"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_policy_change_processor__complex_cases",
+    "name": "Policy Change Processor - Complex Cases",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_change_processors",
+    "description": "Handles intricate policy modifications including coverage changes, beneficiary updates, and multi-product adjustments that require manual review and underwriting approval. Coordinates with underwriting and compliance teams on non-standard requests.",
+    "total_headcount": 35,
+    "avg_salary": 52000,
+    "automation_score": 28.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_insurance_product_knowledge",
+      "skill_underwriting",
+      "skill_risk_assessment",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_insurance_regulation_knowledge",
+      "skill_critical_thinking",
+      "skill_problem_solving",
+      "skill_attention_to_detail",
+      "skill_communication",
+      "skill_stakeholder_management",
+      "skill_knowledge_management"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_guidewire_insurancesuite",
+      "tech_servicenow_workflow_automation",
+      "tech_microsoft_copilot_for_microsoft_365",
+      "tech_custom_fraud_detection_ml_model"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_policy_change_processor__standard_transactions",
+    "name": "Policy Change Processor - Standard Transactions",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_change_processors",
+    "description": "Processes routine policy changes such as address updates, name changes, and standard coverage modifications using automated workflows and policy management systems. Ensures timely processing and customer communication.",
+    "total_headcount": 95,
+    "avg_salary": 40000,
+    "automation_score": 85.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_insurance_product_knowledge",
+      "skill_process_automation",
+      "skill_robotic_process_automation",
+      "skill_attention_to_detail",
+      "skill_digital_literacy",
+      "skill_customer_service_excellence",
+      "skill_communication",
+      "skill_problem_solving",
+      "skill_quality_assurance"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_servicenow_workflow_automation"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_policy_issuance_specialist__new_business",
+    "name": "Policy Issuance Specialist - New Business",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_issuance_specialists",
+    "description": "Coordinates final policy issuance for new business applications across all product lines, including document generation, quality assurance, and delivery coordination. Manages communication with agents and customers regarding policy delivery.",
+    "total_headcount": 60,
+    "avg_salary": 46000,
+    "automation_score": 68.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_insurance_product_knowledge",
+      "skill_life_insurance_products",
+      "skill_health_insurance_products",
+      "skill_property_and_casualty_insurance",
+      "skill_quality_assurance",
+      "skill_attention_to_detail",
+      "skill_communication",
+      "skill_customer_service_excellence",
+      "skill_stakeholder_management",
+      "skill_problem_solving"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_guidewire_insurancesuite",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_servicenow_workflow_automation"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_policy_issuance_specialist__renewals_and_conversions",
+    "name": "Policy Issuance Specialist - Renewals & Conversions",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_policy_issuance_specialists",
+    "description": "Manages issuance of renewal policies and policy conversions, ensuring all documentation is accurate and compliant. Handles expedited issuance for time-sensitive renewals and coordinates with underwriting on conditional approvals.",
+    "total_headcount": 50,
+    "avg_salary": 45000,
+    "automation_score": 70.0,
+    "skill_ids": [
+      "skill_policy_administration",
+      "skill_underwriting_guidelines_compliance",
+      "skill_insurance_regulation_state",
+      "skill_naic_compliance",
+      "skill_attention_to_detail",
+      "skill_customer_service_excellence",
+      "skill_communication",
+      "skill_problem_solving",
+      "skill_digital_literacy",
+      "skill_insurance_industry_knowledge"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy_administration_ai",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_servicenow_workflow_automation",
+      "tech_microsoft_copilot_for_insurance"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_senior_document_specialist",
+    "name": "Senior Document Specialist",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_document_specialists",
+    "description": "Oversees document management operations including scanning, indexing, and quality control for policy files and customer records. Manages document retention policies, compliance with regulatory requirements, and system optimization.",
+    "total_headcount": 20,
+    "avg_salary": 51000,
+    "automation_score": 45.0,
+    "skill_ids": [
+      "skill_data_privacy_regulations",
+      "skill_naic_compliance",
+      "skill_insurance_regulation_state",
+      "skill_quality_assurance",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_leadership",
+      "skill_process_improvement",
+      "skill_vendor_management",
+      "skill_digital_literacy",
+      "skill_knowledge_management",
+      "skill_continuous_improvement",
+      "skill_stakeholder_management"
+    ],
+    "technology_ids": [
+      "tech_servicenow",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_bi",
+      "tech_tableau",
+      "tech_splunk_enterprise",
+      "tech_varonis_data_security_platform"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_document_specialist__processing_and_imaging",
+    "name": "Document Specialist - Processing & Imaging",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_document_specialists",
+    "description": "Scans, indexes, and organizes policy documents and customer correspondence into the document management system. Performs quality assurance checks and maintains accurate filing systems for policy administration.",
+    "total_headcount": 85,
+    "avg_salary": 38000,
+    "automation_score": 78.0,
+    "skill_ids": [
+      "skill_quality_assurance",
+      "skill_attention_to_detail",
+      "skill_digital_literacy",
+      "skill_data_privacy_and_protection",
+      "skill_insurance_industry_knowledge",
+      "skill_problem_solving",
+      "skill_customer_service_excellence",
+      "skill_continuous_learning"
+    ],
+    "technology_ids": [
+      "tech_uipath_robotic_process_automation",
+      "tech_automation_anywhere_enterprise",
+      "tech_microsoft_power_automate",
+      "tech_servicenow",
+      "tech_custom_ml_models_tensorflow_pytorch"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_senior_billing_specialist",
+    "name": "Senior Billing Specialist",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_billing_specialists",
+    "description": "Manages complex billing scenarios including multi-policy accounts, payment plan arrangements, and billing disputes. Provides oversight of billing operations and serves as escalation point for customer billing issues.",
+    "total_headcount": 25,
+    "avg_salary": 54000,
+    "automation_score": 32.0,
+    "skill_ids": [
+      "skill_insurance_billing_and_accounting",
+      "skill_financial_analysis",
+      "skill_negotiation",
+      "skill_customer_service_excellence",
+      "skill_problem_solving",
+      "skill_leadership",
+      "skill_stakeholder_management",
+      "skill_regulatory_reporting",
+      "skill_communication",
+      "skill_conflict_resolution",
+      "skill_profitability_analysis",
+      "skill_continuous_improvement"
+    ],
+    "technology_ids": [
+      "tech_sap_s_4hana",
+      "tech_microsoft_power_bi",
+      "tech_tableau",
+      "tech_servicenow",
+      "tech_sas_viya",
+      "tech_looker"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_billing_specialist__transactions",
+    "name": "Billing Specialist - Transactions",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_billing_specialists",
+    "description": "Processes premium billings, payment applications, and billing adjustments for individual and group policies. Maintains billing accuracy and resolves routine billing inquiries from customers and agents.",
+    "total_headcount": 110,
+    "avg_salary": 41000,
+    "automation_score": 80.0,
+    "skill_ids": [
+      "skill_insurance_billing_and_accounting",
+      "skill_attention_to_detail",
+      "skill_customer_service_excellence",
+      "skill_problem_solving",
+      "skill_digital_literacy",
+      "skill_communication",
+      "skill_policy_administration",
+      "skill_data_privacy_and_protection",
+      "skill_continuous_learning"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_servicenow",
+      "tech_microsoft_copilot_for_microsoft_365"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_premium_auditor__field_audits",
+    "name": "Premium Auditor - Field Audits",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_premium_auditors",
+    "description": "Conducts on-site premium audits for commercial policies, reviewing payroll records, sales data, and operational metrics to verify accurate premium calculations. Prepares audit reports and communicates findings to customers and underwriting.",
+    "total_headcount": 30,
+    "avg_salary": 55000,
+    "automation_score": 25.0,
+    "skill_ids": [
+      "skill_property_and_casualty_insurance",
+      "skill_risk_assessment",
+      "skill_financial_analysis",
+      "skill_communication",
+      "skill_negotiation",
+      "skill_problem_solving",
+      "skill_attention_to_detail",
+      "skill_insurance_industry_knowledge",
+      "skill_data_analytics",
+      "skill_regulatory_reporting",
+      "skill_loss_prevention"
+    ],
+    "technology_ids": [
+      "tech_microsoft_power_bi",
+      "tech_tableau",
+      "tech_sas_viya",
+      "tech_microsoft_copilot_for_insurance",
+      "tech_aws_quicksight"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_premium_auditor__desk_audits",
+    "name": "Premium Auditor - Desk Audits",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_premium_auditors",
+    "description": "Performs remote premium audits and reconciliation of policy records against billing and claims data to identify discrepancies and ensure compliance. Processes audit adjustments and premium corrections.",
+    "total_headcount": 40,
+    "avg_salary": 48000,
+    "automation_score": 65.0,
+    "skill_ids": [
+      "skill_financial_analysis",
+      "skill_data_analytics",
+      "skill_attention_to_detail",
+      "skill_problem_solving",
+      "skill_insurance_billing_and_accounting",
+      "skill_regulatory_reporting",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_sql_database_management",
+      "skill_critical_thinking",
+      "skill_continuous_learning"
+    ],
+    "technology_ids": [
+      "tech_duck_creek_policy",
+      "tech_microsoft_power_bi",
+      "tech_tableau",
+      "tech_sas_viya",
+      "tech_uipath_robotic_process_automation",
+      "tech_custom_ml_models_tensorflow_pytorch"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_collections_specialist__high_priority_accounts",
+    "name": "Collections Specialist - High Priority Accounts",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_collections_specialists",
+    "description": "Manages collection efforts for high-value delinquent accounts and complex payment situations, including negotiation of payment arrangements and policy reinstatement. Escalates cases requiring legal action or policy cancellation.",
+    "total_headcount": 28,
+    "avg_salary": 50000,
+    "automation_score": 30.0,
+    "skill_ids": [
+      "skill_negotiation",
+      "skill_customer_service_excellence",
+      "skill_communication",
+      "skill_problem_solving",
+      "skill_emotional_intelligence",
+      "skill_conflict_resolution",
+      "skill_stakeholder_management",
+      "skill_regulatory_reporting",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_digital_literacy",
+      "skill_empathy_and_emotional_intelligence"
+    ],
+    "technology_ids": [
+      "tech_salesforce_service_cloud",
+      "tech_servicenow",
+      "tech_microsoft_dynamics_365",
+      "tech_microsoft_teams",
+      "tech_custom_fraud_detection_ml_model"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_collections_specialist__standard_collections",
+    "name": "Collections Specialist - Standard Collections",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_collections_specialists",
+    "description": "Contacts policyholders with overdue premiums, processes payment arrangements, and manages policy cancellations for non-payment. Uses collection management systems to track outreach efforts and payment status.",
+    "total_headcount": 105,
+    "avg_salary": 39000,
+    "automation_score": 75.0,
+    "skill_ids": [
+      "skill_customer_service_excellence",
+      "skill_communication",
+      "skill_problem_solving",
+      "skill_negotiation",
+      "skill_digital_literacy",
+      "skill_attention_to_detail",
+      "skill_emotional_intelligence",
+      "skill_compliance_and_regulatory_knowledge",
+      "skill_conflict_resolution",
+      "skill_active_listening"
+    ],
+    "technology_ids": [
+      "tech_salesforce_service_cloud",
+      "tech_servicenow",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_microsoft_teams"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_senior_accounts_receivable_analyst",
+    "name": "Senior Accounts Receivable Analyst",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_accounts_receivable_analysts",
+    "description": "Analyzes accounts receivable aging, identifies trends in delinquency, and develops strategies to improve cash flow and collection rates. Manages reconciliation of AR subsidiary ledgers and prepares financial reporting.",
+    "total_headcount": 18,
+    "avg_salary": 62000,
+    "automation_score": 40.0,
+    "skill_ids": [
+      "skill_financial_analysis",
+      "skill_data_analytics",
+      "skill_insurance_billing_and_accounting",
+      "skill_regulatory_reporting",
+      "skill_business_intelligence",
+      "skill_problem_solving",
+      "skill_leadership",
+      "skill_stakeholder_management",
+      "skill_profitability_analysis",
+      "skill_continuous_improvement",
+      "skill_critical_thinking",
+      "skill_communication"
+    ],
+    "technology_ids": [
+      "tech_sap_s_4hana",
+      "tech_microsoft_power_bi",
+      "tech_tableau",
+      "tech_sas_viya",
+      "tech_looker",
+      "tech_aws_quicksight"
+    ],
+    "adjacency_role_ids": []
+  },
+  {
+    "id": "role_accounts_receivable_analyst__reconciliation",
+    "name": "Accounts Receivable Analyst - Reconciliation",
+    "function_id": "func_policy_administration",
+    "job_family_id": "jf_accounts_receivable_analysts",
+    "description": "Reconciles billing system records with general ledger accounts, investigates discrepancies, and processes adjustments for billing errors and credits. Maintains accurate AR records and supports month-end close processes.",
+    "total_headcount": 55,
+    "avg_salary": 47000,
+    "automation_score": 82.0,
+    "skill_ids": [
+      "skill_insurance_billing_and_accounting",
+      "skill_financial_analysis",
+      "skill_data_analytics",
+      "skill_attention_to_detail",
+      "skill_problem_solving",
+      "skill_sql_database_management",
+      "skill_regulatory_reporting",
+      "skill_critical_thinking",
+      "skill_digital_literacy",
+      "skill_continuous_learning"
+    ],
+    "technology_ids": [
+      "tech_sap_s_4hana",
+      "tech_uipath_robotic_process_automation",
+      "tech_microsoft_power_automate",
+      "tech_microsoft_power_bi",
+      "tech_servicenow"
+    ],
+    "adjacency_role_ids": []
+  }
+]

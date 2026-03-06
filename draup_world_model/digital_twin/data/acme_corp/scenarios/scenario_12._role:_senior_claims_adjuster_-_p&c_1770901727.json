@@ -1,0 +1,1946 @@
+{
+  "_metadata": {
+    "config": {
+      "name": "12. Role: Senior Claims Adjuster - P&C",
+      "simulation_type": "role_redesign",
+      "scope_type": "role",
+      "scope_name": "Senior Claims Adjuster - Property & Casualty",
+      "parameters": {
+        "automation_factor": 0.5
+      },
+      "constraints": {},
+      "timeline_months": 36
+    },
+    "created_at": 1770901727.9400089,
+    "completed_at": 1770901728.051211
+  },
+  "result": {
+    "engine": "v2_time_stepped",
+    "simulation_type": "role_redesign",
+    "trajectory_summary": {
+      "engine": "v2_time_stepped",
+      "timeline_months": 36,
+      "theoretical_max": {
+        "freed_headcount": 6.3,
+        "gross_savings": 1261770.0
+      },
+      "actual_at_end": {
+        "adoption_level": 0.999,
+        "effective_freed_hc": 5.5,
+        "cumulative_savings": 554996.33,
+        "cumulative_costs": 400934.69,
+        "cumulative_net": 154061.63,
+        "npv": 99519.47,
+        "roi_pct": 38.4
+      },
+      "human_factors_final": {
+        "resistance": 0.0,
+        "morale": 1.0,
+        "proficiency": 0.7676,
+        "culture_readiness": 0.692,
+        "composite_multiplier": 0.8649
+      },
+      "payback_month": 29,
+      "breakeven_month": 29
+    },
+    "milestones": [
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0259,
+          "delta": 0.0102
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.1,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 515.52,
+          "monthly_costs": 13814.03,
+          "monthly_net": -13298.51,
+          "cumulative_savings": 968.65,
+          "cumulative_costs": 45882.35,
+          "cumulative_net": -44913.7,
+          "npv_to_date": -44233.01
+        },
+        "human_factors": {
+          "resistance": 0.5142,
+          "morale": 0.7167,
+          "proficiency": 0.1184,
+          "culture_readiness": 0.3599,
+          "composite_multiplier": 0.4087
+        },
+        "productivity_multiplier": 0.9,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.0694,
+          "delta": 0.017
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 1406.02,
+          "monthly_costs": 9838.44,
+          "monthly_net": -8432.42,
+          "cumulative_savings": 4189.04,
+          "cumulative_costs": 79216.03,
+          "cumulative_net": -75026.98,
+          "npv_to_date": -73199.04
+        },
+        "human_factors": {
+          "resistance": 0.4449,
+          "morale": 0.738,
+          "proficiency": 0.1417,
+          "culture_readiness": 0.4127,
+          "composite_multiplier": 0.4527
+        },
+        "productivity_multiplier": 0.975,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.2536,
+          "delta": 0.0428
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.0,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 5437.62,
+          "monthly_costs": 13930.32,
+          "monthly_net": -8492.7,
+          "cumulative_savings": 24814.21,
+          "cumulative_costs": 145563.27,
+          "cumulative_net": -120749.06,
+          "npv_to_date": -115560.11
+        },
+        "human_factors": {
+          "resistance": 0.3553,
+          "morale": 0.7999,
+          "proficiency": 0.2154,
+          "culture_readiness": 0.5,
+          "composite_multiplier": 0.5322
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.6059,
+          "delta": 0.0653
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 2.5,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.3,
+          "redeployed_cumulative": 0.4,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 14310.82,
+          "monthly_costs": 21973.71,
+          "monthly_net": -7662.89,
+          "cumulative_savings": 86141.52,
+          "cumulative_costs": 247329.5,
+          "cumulative_net": -161187.98,
+          "npv_to_date": -151269.53
+        },
+        "human_factors": {
+          "resistance": 0.3076,
+          "morale": 0.9037,
+          "proficiency": 0.3474,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6172
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9055,
+          "delta": 0.0329
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.2,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.6,
+          "redeployed_cumulative": 1.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 24116.17,
+          "monthly_costs": 10159.55,
+          "monthly_net": 13956.62,
+          "cumulative_savings": 208110.21,
+          "cumulative_costs": 302974.2,
+          "cumulative_net": -94863.99,
+          "npv_to_date": -95493.7
+        },
+        "human_factors": {
+          "resistance": 0.22,
+          "morale": 1.0,
+          "proficiency": 0.5178,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.7184
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9992,
+          "delta": 0.0005
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.5,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.4,
+          "redeployed_cumulative": 2.3,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 31308.43,
+          "monthly_costs": 8309.88,
+          "monthly_net": 22998.55,
+          "cumulative_savings": 554996.33,
+          "cumulative_costs": 400934.69,
+          "cumulative_net": 154061.63,
+          "npv_to_date": 99519.47
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.7676,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8649
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "monthly_snapshots": [
+      {
+        "month": 1,
+        "adoption": {
+          "level": 0.0072,
+          "delta": 0.0072
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.0,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 141.59,
+          "monthly_costs": 16791.4,
+          "monthly_net": -16649.81,
+          "cumulative_savings": 141.59,
+          "cumulative_costs": 16791.4,
+          "cumulative_net": -16649.81,
+          "npv_to_date": -16518.09
+        },
+        "human_factors": {
+          "resistance": 0.5695,
+          "morale": 0.7051,
+          "proficiency": 0.1057,
+          "culture_readiness": 0.3208,
+          "composite_multiplier": 0.3768
+        },
+        "productivity_multiplier": 0.85,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 2,
+        "adoption": {
+          "level": 0.0158,
+          "delta": 0.0086
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.1,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 311.54,
+          "monthly_costs": 15276.92,
+          "monthly_net": -14965.38,
+          "cumulative_savings": 453.13,
+          "cumulative_costs": 32068.32,
+          "cumulative_net": -31615.19,
+          "npv_to_date": -31247.63
+        },
+        "human_factors": {
+          "resistance": 0.5409,
+          "morale": 0.7107,
+          "proficiency": 0.1119,
+          "culture_readiness": 0.3408,
+          "composite_multiplier": 0.393
+        },
+        "productivity_multiplier": 0.875,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 3,
+        "adoption": {
+          "level": 0.0259,
+          "delta": 0.0102
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.1,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 515.52,
+          "monthly_costs": 13814.03,
+          "monthly_net": -13298.51,
+          "cumulative_savings": 968.65,
+          "cumulative_costs": 45882.35,
+          "cumulative_net": -44913.7,
+          "npv_to_date": -44233.01
+        },
+        "human_factors": {
+          "resistance": 0.5142,
+          "morale": 0.7167,
+          "proficiency": 0.1184,
+          "culture_readiness": 0.3599,
+          "composite_multiplier": 0.4087
+        },
+        "productivity_multiplier": 0.9,
+        "j_curve_active": true,
+        "active_feedback_loops": [
+          "B1_change_resistance"
+        ]
+      },
+      {
+        "month": 4,
+        "adoption": {
+          "level": 0.038,
+          "delta": 0.0121
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.1,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 760.34,
+          "monthly_costs": 12412.33,
+          "monthly_net": -11651.98,
+          "cumulative_savings": 1728.99,
+          "cumulative_costs": 58294.68,
+          "cumulative_net": -56565.69,
+          "npv_to_date": -55520.63
+        },
+        "human_factors": {
+          "resistance": 0.4893,
+          "morale": 0.7232,
+          "proficiency": 0.1255,
+          "culture_readiness": 0.3783,
+          "composite_multiplier": 0.4238
+        },
+        "productivity_multiplier": 0.925,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 5,
+        "adoption": {
+          "level": 0.0524,
+          "delta": 0.0144
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 1054.03,
+          "monthly_costs": 11082.91,
+          "monthly_net": -10028.87,
+          "cumulative_savings": 2783.03,
+          "cumulative_costs": 69377.58,
+          "cumulative_net": -66594.56,
+          "npv_to_date": -65159.03
+        },
+        "human_factors": {
+          "resistance": 0.4662,
+          "morale": 0.7303,
+          "proficiency": 0.1333,
+          "culture_readiness": 0.3958,
+          "composite_multiplier": 0.4385
+        },
+        "productivity_multiplier": 0.95,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 6,
+        "adoption": {
+          "level": 0.0694,
+          "delta": 0.017
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 1406.02,
+          "monthly_costs": 9838.44,
+          "monthly_net": -8432.42,
+          "cumulative_savings": 4189.04,
+          "cumulative_costs": 79216.03,
+          "cumulative_net": -75026.98,
+          "npv_to_date": -73199.04
+        },
+        "human_factors": {
+          "resistance": 0.4449,
+          "morale": 0.738,
+          "proficiency": 0.1417,
+          "culture_readiness": 0.4127,
+          "composite_multiplier": 0.4527
+        },
+        "productivity_multiplier": 0.975,
+        "j_curve_active": true,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 7,
+        "adoption": {
+          "level": 0.0895,
+          "delta": 0.0201
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.3,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 1827.19,
+          "monthly_costs": 8693.09,
+          "monthly_net": -6865.9,
+          "cumulative_savings": 6016.23,
+          "cumulative_costs": 87909.11,
+          "cumulative_net": -81892.89,
+          "npv_to_date": -79693.63
+        },
+        "human_factors": {
+          "resistance": 0.4255,
+          "morale": 0.7463,
+          "proficiency": 0.151,
+          "culture_readiness": 0.4288,
+          "composite_multiplier": 0.4666
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 8,
+        "adoption": {
+          "level": 0.1132,
+          "delta": 0.0237
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.4,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 2329.88,
+          "monthly_costs": 9449.98,
+          "monthly_net": -7120.1,
+          "cumulative_savings": 8346.11,
+          "cumulative_costs": 97359.1,
+          "cumulative_net": -89012.99,
+          "npv_to_date": -86375.39
+        },
+        "human_factors": {
+          "resistance": 0.4079,
+          "morale": 0.7553,
+          "proficiency": 0.1613,
+          "culture_readiness": 0.4443,
+          "composite_multiplier": 0.4801
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 9,
+        "adoption": {
+          "level": 0.141,
+          "delta": 0.0278
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.5,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.0,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 2927.75,
+          "monthly_costs": 10337.41,
+          "monthly_net": -7409.65,
+          "cumulative_savings": 11273.86,
+          "cumulative_costs": 107696.5,
+          "cumulative_net": -96422.64,
+          "npv_to_date": -93273.87
+        },
+        "human_factors": {
+          "resistance": 0.3922,
+          "morale": 0.765,
+          "proficiency": 0.1727,
+          "culture_readiness": 0.4591,
+          "composite_multiplier": 0.4933
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 10,
+        "adoption": {
+          "level": 0.1734,
+          "delta": 0.0324
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.6,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 3635.34,
+          "monthly_costs": 11371.15,
+          "monthly_net": -7735.8,
+          "cumulative_savings": 14909.21,
+          "cumulative_costs": 119067.65,
+          "cumulative_net": -104158.44,
+          "npv_to_date": -100419.02
+        },
+        "human_factors": {
+          "resistance": 0.3782,
+          "morale": 0.7757,
+          "proficiency": 0.1854,
+          "culture_readiness": 0.4733,
+          "composite_multiplier": 0.5064
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 11,
+        "adoption": {
+          "level": 0.2108,
+          "delta": 0.0374
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 0.8,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 4467.38,
+          "monthly_costs": 12565.3,
+          "monthly_net": -8097.92,
+          "cumulative_savings": 19376.59,
+          "cumulative_costs": 131632.95,
+          "cumulative_net": -112256.36,
+          "npv_to_date": -107839.47
+        },
+        "human_factors": {
+          "resistance": 0.366,
+          "morale": 0.7873,
+          "proficiency": 0.1996,
+          "culture_readiness": 0.4869,
+          "composite_multiplier": 0.5193
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 12,
+        "adoption": {
+          "level": 0.2536,
+          "delta": 0.0428
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.0,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 5437.62,
+          "monthly_costs": 13930.32,
+          "monthly_net": -8492.7,
+          "cumulative_savings": 24814.21,
+          "cumulative_costs": 145563.27,
+          "cumulative_net": -120749.06,
+          "npv_to_date": -115560.11
+        },
+        "human_factors": {
+          "resistance": 0.3553,
+          "morale": 0.7999,
+          "proficiency": 0.2154,
+          "culture_readiness": 0.5,
+          "composite_multiplier": 0.5322
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 13,
+        "adoption": {
+          "level": 0.3018,
+          "delta": 0.0482
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 6557.15,
+          "monthly_costs": 12264.19,
+          "monthly_net": -5707.04,
+          "cumulative_savings": 31371.35,
+          "cumulative_costs": 157827.46,
+          "cumulative_net": -126456.11,
+          "npv_to_date": -120707.29
+        },
+        "human_factors": {
+          "resistance": 0.3461,
+          "morale": 0.8137,
+          "proficiency": 0.2328,
+          "culture_readiness": 0.5125,
+          "composite_multiplier": 0.5453
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 14,
+        "adoption": {
+          "level": 0.3554,
+          "delta": 0.0536
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.4,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.1,
+          "redeployed_cumulative": 0.2,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 7832.26,
+          "monthly_costs": 13974.6,
+          "monthly_net": -6142.34,
+          "cumulative_savings": 39203.61,
+          "cumulative_costs": 171802.06,
+          "cumulative_net": -132598.45,
+          "npv_to_date": -126203.23
+        },
+        "human_factors": {
+          "resistance": 0.3379,
+          "morale": 0.8288,
+          "proficiency": 0.2522,
+          "culture_readiness": 0.5244,
+          "composite_multiplier": 0.5585
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 15,
+        "adoption": {
+          "level": 0.4137,
+          "delta": 0.0584
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.6,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.3,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 9261.93,
+          "monthly_costs": 15838.58,
+          "monthly_net": -6576.65,
+          "cumulative_savings": 48465.54,
+          "cumulative_costs": 187640.64,
+          "cumulative_net": -139175.1,
+          "npv_to_date": -132041.23
+        },
+        "human_factors": {
+          "resistance": 0.3305,
+          "morale": 0.8453,
+          "proficiency": 0.2734,
+          "culture_readiness": 0.5359,
+          "composite_multiplier": 0.5722
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 16,
+        "adoption": {
+          "level": 0.476,
+          "delta": 0.0622
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 1.9,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.3,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 10835.31,
+          "monthly_costs": 17825.4,
+          "monthly_net": -6990.09,
+          "cumulative_savings": 59300.85,
+          "cumulative_costs": 205466.04,
+          "cumulative_net": -146165.19,
+          "npv_to_date": -138197.14
+        },
+        "human_factors": {
+          "resistance": 0.3234,
+          "morale": 0.8632,
+          "proficiency": 0.2964,
+          "culture_readiness": 0.5469,
+          "composite_multiplier": 0.5865
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "B2_skill_gap_brake"
+        ]
+      },
+      {
+        "month": 17,
+        "adoption": {
+          "level": 0.5406,
+          "delta": 0.0647
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 2.2,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.2,
+          "redeployed_cumulative": 0.4,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 12529.85,
+          "monthly_costs": 19889.76,
+          "monthly_net": -7359.91,
+          "cumulative_savings": 71830.7,
+          "cumulative_costs": 225355.8,
+          "cumulative_net": -153525.09,
+          "npv_to_date": -144627.46
+        },
+        "human_factors": {
+          "resistance": 0.3159,
+          "morale": 0.8827,
+          "proficiency": 0.3212,
+          "culture_readiness": 0.5575,
+          "composite_multiplier": 0.6014
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 18,
+        "adoption": {
+          "level": 0.6059,
+          "delta": 0.0653
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 2.5,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.3,
+          "redeployed_cumulative": 0.4,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 14310.82,
+          "monthly_costs": 21973.71,
+          "monthly_net": -7662.89,
+          "cumulative_savings": 86141.52,
+          "cumulative_costs": 247329.5,
+          "cumulative_net": -161187.98,
+          "npv_to_date": -151269.53
+        },
+        "human_factors": {
+          "resistance": 0.3076,
+          "morale": 0.9037,
+          "proficiency": 0.3474,
+          "culture_readiness": 0.5676,
+          "composite_multiplier": 0.6172
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": []
+      },
+      {
+        "month": 19,
+        "adoption": {
+          "level": 0.6697,
+          "delta": 0.0638
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 2.8,
+          "separated_this_month": 0.0,
+          "separated_cumulative": 0.3,
+          "redeployed_cumulative": 0.5,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 16132.87,
+          "monthly_costs": 8198.6,
+          "monthly_net": 7934.27,
+          "cumulative_savings": 102274.39,
+          "cumulative_costs": 255528.1,
+          "cumulative_net": -153253.71,
+          "npv_to_date": -144446.64
+        },
+        "human_factors": {
+          "resistance": 0.2978,
+          "morale": 0.9163,
+          "proficiency": 0.375,
+          "culture_readiness": 0.5773,
+          "composite_multiplier": 0.632
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel"
+        ]
+      },
+      {
+        "month": 20,
+        "adoption": {
+          "level": 0.7298,
+          "delta": 0.0601
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 3.2,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.4,
+          "redeployed_cumulative": 0.6,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 17939.4,
+          "monthly_costs": 8698.37,
+          "monthly_net": 9241.03,
+          "cumulative_savings": 120213.79,
+          "cumulative_costs": 264226.48,
+          "cumulative_net": -144012.68,
+          "npv_to_date": -136562.89
+        },
+        "human_factors": {
+          "resistance": 0.2862,
+          "morale": 0.9305,
+          "proficiency": 0.4033,
+          "culture_readiness": 0.5865,
+          "composite_multiplier": 0.6477
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 21,
+        "adoption": {
+          "level": 0.7844,
+          "delta": 0.0546
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 3.5,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.4,
+          "redeployed_cumulative": 0.7,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 19679.27,
+          "monthly_costs": 9152.38,
+          "monthly_net": 10526.89,
+          "cumulative_savings": 139893.07,
+          "cumulative_costs": 273378.85,
+          "cumulative_net": -133485.79,
+          "npv_to_date": -127653.19
+        },
+        "human_factors": {
+          "resistance": 0.2725,
+          "morale": 0.9461,
+          "proficiency": 0.4322,
+          "culture_readiness": 0.5954,
+          "composite_multiplier": 0.6644
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 22,
+        "adoption": {
+          "level": 0.8322,
+          "delta": 0.0478
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 3.8,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.5,
+          "redeployed_cumulative": 0.8,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 21308.0,
+          "monthly_costs": 9550.0,
+          "monthly_net": 11758.0,
+          "cumulative_savings": 161201.06,
+          "cumulative_costs": 282928.85,
+          "cumulative_net": -121727.79,
+          "npv_to_date": -117780.25
+        },
+        "human_factors": {
+          "resistance": 0.2567,
+          "morale": 0.9632,
+          "proficiency": 0.4611,
+          "culture_readiness": 0.604,
+          "composite_multiplier": 0.6819
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 23,
+        "adoption": {
+          "level": 0.8726,
+          "delta": 0.0404
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.0,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.5,
+          "redeployed_cumulative": 0.9,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 22792.97,
+          "monthly_costs": 9885.8,
+          "monthly_net": 12907.18,
+          "cumulative_savings": 183994.04,
+          "cumulative_costs": 292814.65,
+          "cumulative_net": -108820.61,
+          "npv_to_date": -107028.1
+        },
+        "human_factors": {
+          "resistance": 0.2391,
+          "morale": 0.9814,
+          "proficiency": 0.4897,
+          "culture_readiness": 0.6121,
+          "composite_multiplier": 0.7
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 24,
+        "adoption": {
+          "level": 0.9055,
+          "delta": 0.0329
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.2,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.6,
+          "redeployed_cumulative": 1.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 24116.17,
+          "monthly_costs": 10159.55,
+          "monthly_net": 13956.62,
+          "cumulative_savings": 208110.21,
+          "cumulative_costs": 302974.2,
+          "cumulative_net": -94863.99,
+          "npv_to_date": -95493.7
+        },
+        "human_factors": {
+          "resistance": 0.22,
+          "morale": 1.0,
+          "proficiency": 0.5178,
+          "culture_readiness": 0.62,
+          "composite_multiplier": 0.7184
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 25,
+        "adoption": {
+          "level": 0.9314,
+          "delta": 0.0259
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.5,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.7,
+          "redeployed_cumulative": 1.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 25273.72,
+          "monthly_costs": 7746.68,
+          "monthly_net": 17527.04,
+          "cumulative_savings": 233383.93,
+          "cumulative_costs": 310720.88,
+          "cumulative_net": -77336.95,
+          "npv_to_date": -81123.14
+        },
+        "human_factors": {
+          "resistance": 0.1999,
+          "morale": 1.0,
+          "proficiency": 0.5449,
+          "culture_readiness": 0.6275,
+          "composite_multiplier": 0.7331
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 26,
+        "adoption": {
+          "level": 0.9512,
+          "delta": 0.0197
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.6,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.7,
+          "redeployed_cumulative": 1.2,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 26270.76,
+          "monthly_costs": 7910.78,
+          "monthly_net": 18359.99,
+          "cumulative_savings": 259654.69,
+          "cumulative_costs": 318631.66,
+          "cumulative_net": -58976.97,
+          "npv_to_date": -66188.72
+        },
+        "human_factors": {
+          "resistance": 0.179,
+          "morale": 1.0,
+          "proficiency": 0.571,
+          "culture_readiness": 0.6347,
+          "composite_multiplier": 0.7477
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 27,
+        "adoption": {
+          "level": 0.9658,
+          "delta": 0.0146
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.8,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.8,
+          "redeployed_cumulative": 1.3,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 27125.29,
+          "monthly_costs": 8032.37,
+          "monthly_net": 19092.93,
+          "cumulative_savings": 286779.99,
+          "cumulative_costs": 326664.03,
+          "cumulative_net": -39884.04,
+          "npv_to_date": -50780.98
+        },
+        "human_factors": {
+          "resistance": 0.158,
+          "morale": 1.0,
+          "proficiency": 0.596,
+          "culture_readiness": 0.6415,
+          "composite_multiplier": 0.762
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 28,
+        "adoption": {
+          "level": 0.9764,
+          "delta": 0.0106
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 4.9,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.9,
+          "redeployed_cumulative": 1.4,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 27858.18,
+          "monthly_costs": 8120.44,
+          "monthly_net": 19737.74,
+          "cumulative_savings": 314638.17,
+          "cumulative_costs": 334784.47,
+          "cumulative_net": -20146.3,
+          "npv_to_date": -34978.9
+        },
+        "human_factors": {
+          "resistance": 0.1371,
+          "morale": 1.0,
+          "proficiency": 0.6197,
+          "culture_readiness": 0.6481,
+          "composite_multiplier": 0.7758
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 29,
+        "adoption": {
+          "level": 0.9839,
+          "delta": 0.0075
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.0,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 0.9,
+          "redeployed_cumulative": 1.5,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 28490.15,
+          "monthly_costs": 8183.0,
+          "monthly_net": 20307.15,
+          "cumulative_savings": 343128.32,
+          "cumulative_costs": 342967.47,
+          "cumulative_net": 160.85,
+          "npv_to_date": -18849.55
+        },
+        "human_factors": {
+          "resistance": 0.1166,
+          "morale": 1.0,
+          "proficiency": 0.6422,
+          "culture_readiness": 0.6545,
+          "composite_multiplier": 0.7892
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 30,
+        "adoption": {
+          "level": 0.9892,
+          "delta": 0.0053
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.1,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.0,
+          "redeployed_cumulative": 1.7,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 29039.92,
+          "monthly_costs": 8226.68,
+          "monthly_net": 20813.24,
+          "cumulative_savings": 372168.24,
+          "cumulative_costs": 351194.15,
+          "cumulative_net": 20974.09,
+          "npv_to_date": -2449.02
+        },
+        "human_factors": {
+          "resistance": 0.0966,
+          "morale": 1.0,
+          "proficiency": 0.6634,
+          "culture_readiness": 0.6605,
+          "composite_multiplier": 0.802
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 31,
+        "adoption": {
+          "level": 0.9928,
+          "delta": 0.0036
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.2,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.1,
+          "redeployed_cumulative": 1.8,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 29523.35,
+          "monthly_costs": 8256.74,
+          "monthly_net": 21266.61,
+          "cumulative_savings": 401691.59,
+          "cumulative_costs": 359450.89,
+          "cumulative_net": 42240.7,
+          "npv_to_date": 14176.19
+        },
+        "human_factors": {
+          "resistance": 0.0774,
+          "morale": 1.0,
+          "proficiency": 0.6835,
+          "culture_readiness": 0.6663,
+          "composite_multiplier": 0.8142
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 32,
+        "adoption": {
+          "level": 0.9952,
+          "delta": 0.0025
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.2,
+          "redeployed_cumulative": 1.9,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 29953.3,
+          "monthly_costs": 8277.15,
+          "monthly_net": 21676.15,
+          "cumulative_savings": 431644.89,
+          "cumulative_costs": 367728.04,
+          "cumulative_net": 63916.85,
+          "npv_to_date": 30987.51
+        },
+        "human_factors": {
+          "resistance": 0.0589,
+          "morale": 1.0,
+          "proficiency": 0.7024,
+          "culture_readiness": 0.6719,
+          "composite_multiplier": 0.8259
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 33,
+        "adoption": {
+          "level": 0.9969,
+          "delta": 0.0016
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.3,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.2,
+          "redeployed_cumulative": 2.0,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 30339.88,
+          "monthly_costs": 8290.86,
+          "monthly_net": 22049.03,
+          "cumulative_savings": 461984.77,
+          "cumulative_costs": 376018.89,
+          "cumulative_net": 85965.88,
+          "npv_to_date": 47952.73
+        },
+        "human_factors": {
+          "resistance": 0.0412,
+          "morale": 1.0,
+          "proficiency": 0.7202,
+          "culture_readiness": 0.6773,
+          "composite_multiplier": 0.837
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 34,
+        "adoption": {
+          "level": 0.998,
+          "delta": 0.0011
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.4,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.3,
+          "redeployed_cumulative": 2.1,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 30690.89,
+          "monthly_costs": 8299.96,
+          "monthly_net": 22390.92,
+          "cumulative_savings": 492675.66,
+          "cumulative_costs": 384318.86,
+          "cumulative_net": 108356.8,
+          "npv_to_date": 65044.72
+        },
+        "human_factors": {
+          "resistance": 0.0243,
+          "morale": 1.0,
+          "proficiency": 0.737,
+          "culture_readiness": 0.6824,
+          "composite_multiplier": 0.8476
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 35,
+        "adoption": {
+          "level": 0.9987,
+          "delta": 0.0007
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.5,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.4,
+          "redeployed_cumulative": 2.2,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 31012.24,
+          "monthly_costs": 8305.96,
+          "monthly_net": 22706.28,
+          "cumulative_savings": 523687.9,
+          "cumulative_costs": 392624.82,
+          "cumulative_net": 131063.08,
+          "npv_to_date": 82240.32
+        },
+        "human_factors": {
+          "resistance": 0.0081,
+          "morale": 1.0,
+          "proficiency": 0.7527,
+          "culture_readiness": 0.6873,
+          "composite_multiplier": 0.8576
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      },
+      {
+        "month": 36,
+        "adoption": {
+          "level": 0.9992,
+          "delta": 0.0005
+        },
+        "workforce": {
+          "current_headcount": 285,
+          "effective_freed_hc": 5.5,
+          "separated_this_month": 0.1,
+          "separated_cumulative": 1.4,
+          "redeployed_cumulative": 2.3,
+          "attrited_this_month": 2.9
+        },
+        "financial": {
+          "monthly_savings": 31308.43,
+          "monthly_costs": 8309.88,
+          "monthly_net": 22998.55,
+          "cumulative_savings": 554996.33,
+          "cumulative_costs": 400934.69,
+          "cumulative_net": 154061.63,
+          "npv_to_date": 99519.47
+        },
+        "human_factors": {
+          "resistance": 0.0,
+          "morale": 1.0,
+          "proficiency": 0.7676,
+          "culture_readiness": 0.692,
+          "composite_multiplier": 0.8649
+        },
+        "productivity_multiplier": 1.0,
+        "j_curve_active": false,
+        "active_feedback_loops": [
+          "R1_productivity_flywheel",
+          "R2_capability_compounding"
+        ]
+      }
+    ],
+    "cascade": {
+      "task_changes": {
+        "tasks_affected": 2,
+        "changes": [
+          {
+            "task_id": "task_claim_documentation_and_settlement_administration_payment_processing_and_fund_disbursement",
+            "task_name": "Payment Processing and Fund Disbursement",
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 25.0
+          },
+          {
+            "task_id": "task_claim_documentation_and_settlement_administration_claims_file_organization_and_documentation_compilation",
+            "task_name": "Claims File Organization and Documentation Compilation",
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "old_level": "shared",
+            "new_level": "ai_led",
+            "automation_delta": 0.3,
+            "time_allocation_pct": 35.0
+          }
+        ]
+      },
+      "workload_changes": {
+        "workloads_affected": 1,
+        "changes": [
+          {
+            "workload_id": "wl_senior_claims_adjuster__property_and_casualty_claim_documentation_and_settlement_administration",
+            "workload_name": "Claim Documentation and Settlement Administration",
+            "role_id": "role_senior_claims_adjuster__property_and_casualty",
+            "old_level": "shared",
+            "new_level": "shared",
+            "old_automation_score": 40.0,
+            "automation_score": 58.0
+          }
+        ]
+      },
+      "role_impacts": {
+        "roles_affected": 1,
+        "impacts": [
+          {
+            "role_id": "role_senior_claims_adjuster__property_and_casualty",
+            "role_name": "Senior Claims Adjuster - Property & Casualty",
+            "freed_capacity_pct": 1.8,
+            "title_impacts": [
+              {
+                "name": "Claims Adjuster II - Property & Casualty",
+                "career_band": "mid",
+                "headcount": 120,
+                "avg_salary": 68000,
+                "freed_capacity_pct": 2.2
+              },
+              {
+                "name": "Senior Claims Adjuster - Property & Casualty",
+                "career_band": "senior",
+                "headcount": 70,
+                "avg_salary": 82000,
+                "freed_capacity_pct": 1.8
+              },
+              {
+                "name": "Claims Adjuster I - Property & Casualty",
+                "career_band": "entry",
+                "headcount": 95,
+                "avg_salary": 58000,
+                "freed_capacity_pct": 2.5
+              }
+            ],
+            "transformation_index": 2.7
+          }
+        ]
+      },
+      "skill_shifts": {
+        "sunset_skills": [
+          {
+            "skill_id": "skill_claims_processing",
+            "name": "Claims Processing",
+            "reason": "PRIMARY skill for 2 automated tasks",
+            "source": "task_mapping"
+          }
+        ],
+        "sunrise_skills": [
+          {
+            "skill_id": "skill_ai_literacy",
+            "name": "AI Literacy & Prompt Engineering",
+            "reason": "Required for effective human-AI collaboration",
+            "source": "universal"
+          },
+          {
+            "skill_id": "skill_ai_oversight",
+            "name": "AI Output Validation",
+            "reason": "Quality assurance for AI-generated outputs",
+            "source": "universal"
+          }
+        ],
+        "net_skill_shift": 1
+      },
+      "workforce": {
+        "current_headcount": 285,
+        "freed_headcount": 6.3,
+        "reduction_pct": 2.2,
+        "redeployable": 3.8,
+        "redeployable_pct": 60.0
+      },
+      "financial": {
+        "timeline_months": 36,
+        "gross_savings": 1261770.0,
+        "technology_licensing": 256500.0,
+        "implementation_cost": 38475.0,
+        "reskilling_cost": 425000.0,
+        "change_management_cost": 63088.5,
+        "severance_cost": 42736.05,
+        "j_curve_cost": 1455750.0,
+        "total_cost": 2281549.55,
+        "net_impact": -1019779.55,
+        "roi_pct": -44.7,
+        "payback_months": 65,
+        "title_details": [
+          {
+            "title": "Claims Adjuster II - Property & Casualty",
+            "headcount": 120,
+            "avg_salary": 68000,
+            "freed_capacity_pct": 2.2,
+            "savings": 538560.0
+          },
+          {
+            "title": "Senior Claims Adjuster - Property & Casualty",
+            "headcount": 70,
+            "avg_salary": 82000,
+            "freed_capacity_pct": 1.8,
+            "savings": 309960.0
+          },
+          {
+            "title": "Claims Adjuster I - Property & Casualty",
+            "headcount": 95,
+            "avg_salary": 58000,
+            "freed_capacity_pct": 2.5,
+            "savings": 413250.0
+          }
+        ]
+      },
+      "risks": {
+        "risk_count": 0,
+        "high_risks": 0,
+        "flags": []
+      },
+      "validation": {
+        "valid": true,
+        "checks": [
+          {
+            "check": "headcount_non_negative",
+            "passed": true
+          },
+          {
+            "check": "freed_capacity_bounded",
+            "passed": true
+          },
+          {
+            "check": "has_impact",
+            "passed": true
+          }
+        ]
+      },
+      "summary": {
+        "tasks_affected": 2,
+        "roles_affected": 1,
+        "freed_headcount": 6.3,
+        "reduction_pct": 2.2,
+        "gross_savings": 1261770.0,
+        "net_impact": -1019779.55,
+        "roi_pct": -44.7
+      }
+    },
+    "skills_strategy": {
+      "simulation_type": "skills_strategy",
+      "demand_analysis": {
+        "sunrise": [
+          {
+            "name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          },
+          {
+            "name": "AI Output Validation",
+            "category": "digital",
+            "trend": "rising",
+            "priority": "high"
+          }
+        ],
+        "sunset": [
+          {
+            "name": "Claims Processing",
+            "category": "domain",
+            "trend": "falling",
+            "action": "phase_out"
+          }
+        ],
+        "stable": [
+          {
+            "name": "Leadership & Management",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Communication Skills",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Negotiation",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Insurance Compliance",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Critical Thinking",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Claims Handling Regulations",
+            "category": "regulatory",
+            "trend": "stable"
+          },
+          {
+            "name": "Fraud Detection",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Loss Adjustment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Risk Assessment",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Property & Casualty Insurance",
+            "category": "domain",
+            "trend": "stable"
+          },
+          {
+            "name": "Coaching & Mentoring",
+            "category": "leadership",
+            "trend": "stable"
+          }
+        ]
+      },
+      "concentration_risk": {
+        "total_roles_in_scope": 1,
+        "concentration_threshold": 2,
+        "high_risk_count": 12,
+        "high_risk_skills": [
+          {
+            "skill_name": "Claims Processing",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Leadership & Management",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Communication Skills",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Negotiation",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Insurance Compliance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Critical Thinking",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Claims Handling Regulations",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Fraud Detection",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Loss Adjustment",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Risk Assessment",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Property & Casualty Insurance",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          },
+          {
+            "skill_name": "Coaching & Mentoring",
+            "role_count": 1,
+            "risk": "critical",
+            "recommendation": "Cross-train immediately"
+          }
+        ]
+      },
+      "reskilling_plan": {
+        "skills": [
+          {
+            "skill_name": "AI Literacy & Prompt Engineering",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 1,
+            "cost": 0
+          },
+          {
+            "skill_name": "AI Output Validation",
+            "category": "digital",
+            "timeline_months": 5,
+            "headcount": 1,
+            "cost": 0
+          }
+        ],
+        "total_cost": 0,
+        "avg_months": 5.0,
+        "headcount_impacted": 1,
+        "band_breakdown": {}
+      },
+      "build_vs_buy": {
+        "recommendations": [
+          {
+            "skill": "AI Literacy & Prompt Engineering",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          },
+          {
+            "skill": "AI Output Validation",
+            "action": "buy_and_build",
+            "reasoning": "High priority - hire externally while training internally"
+          }
+        ]
+      },
+      "summary": {
+        "sunrise_count": 2,
+        "sunset_count": 1,
+        "stable_count": 11,
+        "high_risk_skills": 12,
+        "total_reskilling_cost": 0,
+        "avg_reskilling_months": 5.0
+      }
+    }
+  }
+}

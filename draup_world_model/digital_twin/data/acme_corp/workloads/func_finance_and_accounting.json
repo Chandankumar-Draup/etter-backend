@@ -1,0 +1,802 @@
+[
+  {
+    "id": "wl_senior_financial_analyst__claims_claims_financial_performance_analysis",
+    "name": "Claims Financial Performance Analysis",
+    "role_id": "role_senior_financial_analyst__claims",
+    "function_id": "func_finance_and_accounting",
+    "description": "Analyzes financial metrics, trends, and variances across claims operations for life, health, and P&C lines. Produces monthly and quarterly performance reports identifying cost drivers and profitability impacts.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_financial_analyst__claims_claims_cost_forecasting_and_modeling",
+    "name": "Claims Cost Forecasting and Modeling",
+    "role_id": "role_senior_financial_analyst__claims",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops expense forecasts and financial projections for claims operations using historical data and trend analysis. Supports budget planning and scenario modeling for cost management initiatives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_financial_analyst__claims_claims_process_improvement_identification",
+    "name": "Claims Process Improvement Identification",
+    "role_id": "role_senior_financial_analyst__claims",
+    "function_id": "func_finance_and_accounting",
+    "description": "Identifies inefficiencies and optimization opportunities within claims operations through data analysis and collaboration with claims leadership. Evaluates financial impact of proposed process improvements.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_financial_analyst__claims_claims_leadership_reporting_and_consultation",
+    "name": "Claims Leadership Reporting and Consultation",
+    "role_id": "role_senior_financial_analyst__claims",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares executive summaries and financial insights for claims leadership meetings. Provides strategic recommendations on cost management and profitability optimization.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_analyst__underwriting_and_pricing_underwriting_decision_financial_impact_analysis",
+    "name": "Underwriting Decision Financial Impact Analysis",
+    "role_id": "role_financial_analyst__underwriting_and_pricing",
+    "function_id": "func_finance_and_accounting",
+    "description": "Evaluates the financial consequences of underwriting decisions and pricing strategies across risk segments. Analyzes loss ratios and premium adequacy to assess profitability impact.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_analyst__underwriting_and_pricing_loss_ratio_and_profitability_monitoring",
+    "name": "Loss Ratio and Profitability Monitoring",
+    "role_id": "role_financial_analyst__underwriting_and_pricing",
+    "function_id": "func_finance_and_accounting",
+    "description": "Tracks loss ratios and profitability metrics by risk segment and product line. Identifies adverse trends and recommends pricing or underwriting adjustments.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_analyst__underwriting_and_pricing_ai_model_validation_and_performance_assessment",
+    "name": "AI Model Validation and Performance Assessment",
+    "role_id": "role_financial_analyst__underwriting_and_pricing",
+    "function_id": "func_finance_and_accounting",
+    "description": "Validates automated underwriting models and assesses their financial outcomes against baseline performance. Monitors model accuracy and profitability impact post-implementation.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_analyst__underwriting_and_pricing_pricing_strategy_development_support",
+    "name": "Pricing Strategy Development Support",
+    "role_id": "role_financial_analyst__underwriting_and_pricing",
+    "function_id": "func_finance_and_accounting",
+    "description": "Supports pricing strategy development by analyzing competitive positioning and financial implications of rate changes. Provides data-driven recommendations for pricing optimization.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_annual_budget_manager_annual_budget_development_and_consolidation",
+    "name": "Annual Budget Development and Consolidation",
+    "role_id": "role_annual_budget_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Leads the annual budgeting process by collecting departmental submissions, consolidating data, and ensuring consistency across business units. Manages timeline and coordinates with all stakeholders.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_annual_budget_manager_budget_variance_analysis_and_investigation",
+    "name": "Budget Variance Analysis and Investigation",
+    "role_id": "role_annual_budget_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Analyzes variances between budgeted and actual results, investigates significant deviations, and documents findings. Provides insights on budget performance and spending patterns.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_annual_budget_manager_budget_recommendations_and_executive_presentation",
+    "name": "Budget Recommendations and Executive Presentation",
+    "role_id": "role_annual_budget_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Synthesizes budget analysis into strategic recommendations and presents findings to senior leadership. Addresses questions and supports decision-making on budget allocation.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_annual_budget_manager_finance_business_partner_coordination",
+    "name": "Finance Business Partner Coordination",
+    "role_id": "role_annual_budget_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Coordinates with finance business partners across departments to ensure alignment on budget assumptions, methodologies, and timelines. Resolves conflicts and ensures data consistency.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_operational_budget_analyst_monthly_and_quarterly_budget_performance_monitoring",
+    "name": "Monthly and Quarterly Budget Performance Monitoring",
+    "role_id": "role_operational_budget_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Tracks actual spending against approved budgets on a monthly and quarterly basis across operational departments. Produces variance reports and identifies trends.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_operational_budget_analyst_budget_variance_investigation_and_root_cause_analysis",
+    "name": "Budget Variance Investigation and Root Cause Analysis",
+    "role_id": "role_operational_budget_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Investigates significant budget variances to identify root causes and business drivers. Prepares detailed explanations and recommendations for variance resolution.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_operational_budget_analyst_financial_forecasting_and_projection_updates",
+    "name": "Financial Forecasting and Projection Updates",
+    "role_id": "role_operational_budget_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops and updates financial forecasts for the remainder of the fiscal year based on current performance and operational trends. Provides revised budget projections to leadership.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_operational_budget_analyst_digital_transformation_budget_and_roi_tracking",
+    "name": "Digital Transformation Budget and ROI Tracking",
+    "role_id": "role_operational_budget_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors technology investment budgets and tracks return on investment metrics for digital transformation initiatives. Evaluates cost-benefit of technology implementations.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fixed_income_investment_analyst_bond_portfolio_analysis_and_optimization",
+    "name": "Bond Portfolio Analysis and Optimization",
+    "role_id": "role_fixed_income_investment_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Analyzes bond holdings and fixed income securities to optimize yield and manage interest rate risk. Evaluates portfolio composition and recommends rebalancing actions.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fixed_income_investment_analyst_credit_quality_assessment_and_monitoring",
+    "name": "Credit Quality Assessment and Monitoring",
+    "role_id": "role_fixed_income_investment_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Evaluates credit quality of fixed income securities and monitors credit risk exposure. Tracks credit rating changes and assesses default risk implications.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fixed_income_investment_analyst_duration_and_interest_rate_strategy_development",
+    "name": "Duration and Interest Rate Strategy Development",
+    "role_id": "role_fixed_income_investment_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops duration strategies aligned with insurance liability profiles and interest rate outlook. Analyzes duration risk and recommends adjustments to portfolio positioning.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_fixed_income_investment_analyst_fixed_income_market_research_and_reporting",
+    "name": "Fixed Income Market Research and Reporting",
+    "role_id": "role_fixed_income_investment_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Conducts market research on fixed income trends, economic indicators, and yield curve dynamics. Prepares reports and recommendations for portfolio management team.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_equity_and_alternative_investments_analyst_equity_securities_fundamental_analysis",
+    "name": "Equity Securities Fundamental Analysis",
+    "role_id": "role_equity_and_alternative_investments_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Conducts fundamental analysis of equity securities including financial statement review, valuation modeling, and competitive positioning assessment. Identifies investment opportunities and risks.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_equity_and_alternative_investments_analyst_real_estate_and_alternative_investment_evaluation",
+    "name": "Real Estate and Alternative Investment Evaluation",
+    "role_id": "role_equity_and_alternative_investments_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Evaluates real estate properties and alternative investment opportunities for portfolio diversification. Assesses risk-return profiles and alignment with investment objectives.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_equity_and_alternative_investments_analyst_portfolio_performance_monitoring_and_benchmarking",
+    "name": "Portfolio Performance Monitoring and Benchmarking",
+    "role_id": "role_equity_and_alternative_investments_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors equity and alternative investment performance against established benchmarks. Analyzes performance attribution and identifies underperforming holdings.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_equity_and_alternative_investments_analyst_investment_opportunity_screening_and_recommendation",
+    "name": "Investment Opportunity Screening and Recommendation",
+    "role_id": "role_equity_and_alternative_investments_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Screens potential equity and alternative investments against portfolio criteria. Prepares investment recommendations with supporting analysis for portfolio management review.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_portfolio_manager__fixed_income_fixed_income_portfolio_strategic_allocation",
+    "name": "Fixed Income Portfolio Strategic Allocation",
+    "role_id": "role_senior_portfolio_manager__fixed_income",
+    "function_id": "func_finance_and_accounting",
+    "description": "Makes strategic allocation decisions for multi-billion dollar fixed income portfolio including sector allocation, duration positioning, and credit quality targets. Aligns portfolio with investment policy.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_portfolio_manager__fixed_income_fixed_income_trading_and_execution",
+    "name": "Fixed Income Trading and Execution",
+    "role_id": "role_senior_portfolio_manager__fixed_income",
+    "function_id": "func_finance_and_accounting",
+    "description": "Oversees day-to-day trading activities and execution of fixed income transactions. Manages trading relationships and ensures optimal execution pricing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_portfolio_manager__fixed_income_regulatory_capital_and_liability_matching_management",
+    "name": "Regulatory Capital and Liability Matching Management",
+    "role_id": "role_senior_portfolio_manager__fixed_income",
+    "function_id": "func_finance_and_accounting",
+    "description": "Ensures portfolio alignment with regulatory capital requirements and liability matching strategies. Monitors capital adequacy and adjusts portfolio positioning as needed.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_portfolio_manager__fixed_income_fixed_income_risk_management_and_reporting",
+    "name": "Fixed Income Risk Management and Reporting",
+    "role_id": "role_senior_portfolio_manager__fixed_income",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages interest rate risk, credit risk, and liquidity risk across the fixed income portfolio. Prepares risk reports and recommendations for senior management.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_portfolio_manager__equity_and_alternatives_equity_and_alternative_investment_allocation_strategy",
+    "name": "Equity and Alternative Investment Allocation Strategy",
+    "role_id": "role_portfolio_manager__equity_and_alternatives",
+    "function_id": "func_finance_and_accounting",
+    "description": "Oversees strategic allocation decisions for equity and alternative investments. Balances risk-return objectives with regulatory and liquidity constraints.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_portfolio_manager__equity_and_alternatives_external_fund_manager_relationship_management",
+    "name": "External Fund Manager Relationship Management",
+    "role_id": "role_portfolio_manager__equity_and_alternatives",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages relationships with external fund managers and investment partners. Conducts manager due diligence and negotiates investment terms and fees.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_portfolio_manager__equity_and_alternatives_equity_and_alternative_investment_performance_monitoring",
+    "name": "Equity and Alternative Investment Performance Monitoring",
+    "role_id": "role_portfolio_manager__equity_and_alternatives",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors performance of equity and alternative investments against benchmarks and targets. Evaluates manager performance and identifies underperforming allocations.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_portfolio_manager__equity_and_alternatives_portfolio_risk_and_compliance_management",
+    "name": "Portfolio Risk and Compliance Management",
+    "role_id": "role_portfolio_manager__equity_and_alternatives",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages regulatory compliance and risk constraints for equity and alternative investments. Ensures portfolio alignment with investment policy and regulatory requirements.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accountant__general_ledger_general_ledger_account_management_and_reconciliation",
+    "name": "General Ledger Account Management and Reconciliation",
+    "role_id": "role_senior_accountant__general_ledger",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages general ledger accounts and performs monthly account reconciliations across multiple business units. Ensures accuracy and completeness of account balances.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accountant__general_ledger_journal_entry_preparation_and_processing",
+    "name": "Journal Entry Preparation and Processing",
+    "role_id": "role_senior_accountant__general_ledger",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares and processes journal entries for various business transactions and accounting adjustments. Reviews entries for accuracy and proper documentation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accountant__general_ledger_month_end_and_year_end_close_support",
+    "name": "Month-End and Year-End Close Support",
+    "role_id": "role_senior_accountant__general_ledger",
+    "function_id": "func_finance_and_accounting",
+    "description": "Supports month-end and year-end close processes by preparing closing entries, accruals, and adjustments. Ensures timely and accurate financial statement preparation.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_accountant__general_ledger_financial_record_accuracy_and_audit_support",
+    "name": "Financial Record Accuracy and Audit Support",
+    "role_id": "role_senior_accountant__general_ledger",
+    "function_id": "func_finance_and_accounting",
+    "description": "Ensures accuracy of financial records and supports internal and external audit activities. Responds to audit inquiries and provides supporting documentation.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_insurance_accounting_specialist_premium_revenue_recognition_accounting",
+    "name": "Premium Revenue Recognition Accounting",
+    "role_id": "role_insurance_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Handles premium revenue recognition accounting including policy issuance, premium collection, and revenue accrual. Ensures compliance with GAAP and insurance accounting standards.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_insurance_accounting_specialist_loss_reserve_accounting_and_management",
+    "name": "Loss Reserve Accounting and Management",
+    "role_id": "role_insurance_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages loss reserve accounting including reserve establishment, adjustment, and settlement. Ensures reserves are appropriate and comply with regulatory requirements.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_insurance_accounting_specialist_reinsurance_accounting_and_reporting",
+    "name": "Reinsurance Accounting and Reporting",
+    "role_id": "role_insurance_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Handles reinsurance accounting including ceded premium, recoveries, and reinsurance receivables. Ensures proper accounting treatment and regulatory compliance.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_insurance_accounting_specialist_insurance_regulatory_compliance_and_reporting",
+    "name": "Insurance Regulatory Compliance and Reporting",
+    "role_id": "role_insurance_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Ensures compliance with GAAP and insurance regulatory accounting principles. Prepares regulatory filings and responds to regulatory inquiries.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_specialist_invoice_processing_and_matching",
+    "name": "Invoice Processing and Matching",
+    "role_id": "role_accounts_payable_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Receives, validates, and matches vendor invoices to purchase orders and receipts; identifies and resolves discrepancies before payment processing.",
+    "effort_allocation_pct": 45.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_specialist_payment_processing_and_execution",
+    "name": "Payment Processing and Execution",
+    "role_id": "role_accounts_payable_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Processes approved payments through accounting systems, manages payment schedules, and maintains payment records for audit trails.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_specialist_vendor_master_data_management",
+    "name": "Vendor Master Data Management",
+    "role_id": "role_accounts_payable_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Maintains vendor information in accounting systems, updates vendor records, and manages vendor master file accuracy and compliance.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_specialist_discrepancy_resolution_and_reconciliation",
+    "name": "Discrepancy Resolution and Reconciliation",
+    "role_id": "role_accounts_payable_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Investigates invoice discrepancies, resolves three-way matching issues, and coordinates with vendors and internal departments to clear exceptions.",
+    "effort_allocation_pct": 10.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_manager_ap_operations_strategy_and_process_improvement",
+    "name": "AP Operations Strategy and Process Improvement",
+    "role_id": "role_accounts_payable_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Identifies opportunities for process optimization, leads automation initiatives, and develops strategies to improve AP efficiency and cost reduction.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_manager_vendor_relationship_management",
+    "name": "Vendor Relationship Management",
+    "role_id": "role_accounts_payable_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages relationships with key vendors, negotiates payment terms, addresses vendor concerns, and coordinates dispute resolution.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_manager_ap_reconciliation_and_controls",
+    "name": "AP Reconciliation and Controls",
+    "role_id": "role_accounts_payable_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Oversees reconciliation of accounts payable ledgers, ensures internal controls compliance, and manages month-end close activities.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_accounts_payable_manager_team_leadership_and_performance_management",
+    "name": "Team Leadership and Performance Management",
+    "role_id": "role_accounts_payable_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Supervises AP team, manages performance evaluations, provides training, and ensures quality standards and compliance across AP operations.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_analyst_financial_statement_preparation",
+    "name": "Financial Statement Preparation",
+    "role_id": "role_financial_reporting_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares consolidated and subsidiary financial statements, ensures accuracy of account balances, and formats statements for internal and external distribution.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_analyst_variance_analysis_and_investigation",
+    "name": "Variance Analysis and Investigation",
+    "role_id": "role_financial_reporting_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Analyzes variances between actual and budgeted results, investigates significant deviations, and documents findings for management review.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_analyst_subsidiary_ledger_reconciliation",
+    "name": "Subsidiary Ledger Reconciliation",
+    "role_id": "role_financial_reporting_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Reconciles subsidiary ledgers to general ledger accounts, identifies and resolves reconciling items, and maintains detailed reconciliation documentation.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_analyst_management_reporting_and_analysis",
+    "name": "Management Reporting and Analysis",
+    "role_id": "role_financial_reporting_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares management reports, dashboards, and analytical packages supporting business decision-making and performance monitoring.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_manager_financial_close_process_leadership",
+    "name": "Financial Close Process Leadership",
+    "role_id": "role_financial_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Directs monthly, quarterly, and annual financial close activities, coordinates across departments, and ensures timely completion of closing procedures.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_manager_consolidated_financial_statement_oversight",
+    "name": "Consolidated Financial Statement Oversight",
+    "role_id": "role_financial_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Reviews and approves consolidated financial statements, ensures compliance with accounting standards, and manages consolidation adjustments and eliminations.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_manager_external_audit_coordination",
+    "name": "External Audit Coordination",
+    "role_id": "role_financial_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages relationships with external auditors, coordinates audit fieldwork, prepares audit schedules, and addresses audit findings and recommendations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_financial_reporting_manager_management_reporting_package_development",
+    "name": "Management Reporting Package Development",
+    "role_id": "role_financial_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops comprehensive management reporting packages including financial analysis, KPIs, and executive summaries for senior leadership.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regulatory_reporting_manager_regulatory_filing_preparation_and_submission",
+    "name": "Regulatory Filing Preparation and Submission",
+    "role_id": "role_regulatory_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares and submits statutory financial filings to state insurance departments and federal regulators, ensuring accuracy and timely compliance.",
+    "effort_allocation_pct": 35.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regulatory_reporting_manager_regulatory_compliance_monitoring",
+    "name": "Regulatory Compliance Monitoring",
+    "role_id": "role_regulatory_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors changes in regulatory requirements, updates reporting processes to reflect new standards, and maintains compliance calendars.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regulatory_reporting_manager_regulatory_relationship_management",
+    "name": "Regulatory Relationship Management",
+    "role_id": "role_regulatory_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages communications with state insurance departments and federal regulators, responds to information requests, and coordinates regulatory examinations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_regulatory_reporting_manager_compliance_and_audit_coordination",
+    "name": "Compliance and Audit Coordination",
+    "role_id": "role_regulatory_reporting_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Coordinates with internal compliance and audit functions, ensures alignment of regulatory reporting with audit requirements, and supports regulatory examinations.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_statutory_accounting_specialist_statutory_financial_statement_preparation",
+    "name": "Statutory Financial Statement Preparation",
+    "role_id": "role_statutory_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Prepares statutory financial statements using SAP and insurance-specific reporting systems, ensuring compliance with state accounting rules and NAIC guidelines.",
+    "effort_allocation_pct": 40.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_statutory_accounting_specialist_regulatory_filing_data_management",
+    "name": "Regulatory Filing Data Management",
+    "role_id": "role_statutory_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Maintains regulatory filing data in specialized insurance systems, validates data accuracy, and manages submission files for regulatory filings.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_statutory_accounting_specialist_state_specific_accounting_rule_application",
+    "name": "State-Specific Accounting Rule Application",
+    "role_id": "role_statutory_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Applies state-specific accounting rules and regulatory requirements to financial reporting, maintains knowledge of jurisdiction-specific standards.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_statutory_accounting_specialist_regulatory_change_tracking_and_implementation",
+    "name": "Regulatory Change Tracking and Implementation",
+    "role_id": "role_statutory_accounting_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors regulatory changes and updates, assesses impact on reporting processes, and implements necessary system and procedural changes.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_treasury_analyst_capital_structure_and_debt_strategy",
+    "name": "Capital Structure and Debt Strategy",
+    "role_id": "role_senior_treasury_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Analyzes capital structure optimization opportunities, evaluates debt issuance strategies, and develops recommendations for capital allocation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_treasury_analyst_funding_strategy_and_analysis",
+    "name": "Funding Strategy and Analysis",
+    "role_id": "role_senior_treasury_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Evaluates funding alternatives, analyzes cost of capital, and develops strategies for optimal debt and equity financing.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_treasury_analyst_banking_and_rating_agency_relationships",
+    "name": "Banking and Rating Agency Relationships",
+    "role_id": "role_senior_treasury_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages relationships with banks and credit rating agencies, coordinates debt negotiations, and maintains communication on credit ratings and covenants.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_senior_treasury_analyst_corporate_liquidity_management",
+    "name": "Corporate Liquidity Management",
+    "role_id": "role_senior_treasury_analyst",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors corporate liquidity positions, manages cash reserves, and ensures adequate funding for operational and strategic needs.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treasury_analyst__investments_and_funding_investment_portfolio_monitoring",
+    "name": "Investment Portfolio Monitoring",
+    "role_id": "role_treasury_analyst__investments_and_funding",
+    "function_id": "func_finance_and_accounting",
+    "description": "Monitors short-term investment portfolios, tracks investment performance, and ensures compliance with investment policies and guidelines.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treasury_analyst__investments_and_funding_debt_portfolio_management",
+    "name": "Debt Portfolio Management",
+    "role_id": "role_treasury_analyst__investments_and_funding",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages debt portfolios, monitors debt maturity schedules, and analyzes refinancing opportunities and debt reduction strategies.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treasury_analyst__investments_and_funding_cash_forecasting_and_funding_analysis",
+    "name": "Cash Forecasting and Funding Analysis",
+    "role_id": "role_treasury_analyst__investments_and_funding",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops cash forecasts, analyzes funding requirements, and coordinates with investment management on liquidity needs and cash positioning.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_treasury_analyst__investments_and_funding_investment_management_coordination",
+    "name": "Investment Management Coordination",
+    "role_id": "role_treasury_analyst__investments_and_funding",
+    "function_id": "func_finance_and_accounting",
+    "description": "Coordinates with investment management teams on liquidity requirements, supports investment strategy alignment, and manages cash flow timing.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_management_manager_daily_cash_operations_management",
+    "name": "Daily Cash Operations Management",
+    "role_id": "role_cash_management_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Oversees daily cash receipts and disbursements, manages cash positioning across accounts, and optimizes cash flow timing.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_management_manager_bank_account_and_relationship_management",
+    "name": "Bank Account and Relationship Management",
+    "role_id": "role_cash_management_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Manages bank accounts, negotiates banking services and fees, and maintains relationships with banking partners.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_only",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_management_manager_payment_system_optimization",
+    "name": "Payment System Optimization",
+    "role_id": "role_cash_management_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Oversees implementation and optimization of automated payment and collection systems, evaluates payment technologies, and improves cash processing efficiency.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_management_manager_cash_positioning_and_liquidity_optimization",
+    "name": "Cash Positioning and Liquidity Optimization",
+    "role_id": "role_cash_management_manager",
+    "function_id": "func_finance_and_accounting",
+    "description": "Develops cash positioning strategies, optimizes liquidity across the organization, and manages working capital efficiency.",
+    "effort_allocation_pct": 20.0,
+    "automation_level": "human_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_operations_specialist_daily_cash_receipt_processing",
+    "name": "Daily Cash Receipt Processing",
+    "role_id": "role_cash_operations_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Processes daily cash receipts, records transactions in accounting systems, and reconciles receipt documentation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "ai_led",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_operations_specialist_daily_cash_disbursement_processing",
+    "name": "Daily Cash Disbursement Processing",
+    "role_id": "role_cash_operations_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Processes daily cash disbursements, verifies payment authorizations, and maintains disbursement records and documentation.",
+    "effort_allocation_pct": 30.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_operations_specialist_bank_account_reconciliation",
+    "name": "Bank Account Reconciliation",
+    "role_id": "role_cash_operations_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Reconciles bank accounts daily, identifies and resolves reconciling items, and maintains reconciliation documentation.",
+    "effort_allocation_pct": 25.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  },
+  {
+    "id": "wl_cash_operations_specialist_automated_payment_system_support",
+    "name": "Automated Payment System Support",
+    "role_id": "role_cash_operations_specialist",
+    "function_id": "func_finance_and_accounting",
+    "description": "Supports implementation and maintenance of automated payment and collection systems, monitors system performance, and resolves technical issues.",
+    "effort_allocation_pct": 15.0,
+    "automation_level": "shared",
+    "skill_ids": []
+  }
+]
