@@ -31,7 +31,7 @@ DATA_ROOT = os.path.join(PROJECT_ROOT, "data")
 # Skip auth in local dev: set WORKFORCE_TWIN_SKIP_AUTH=1
 _SKIP_AUTH = os.environ.get("WORKFORCE_TWIN_SKIP_AUTH", "").strip() in ("1", "true")
 # Default company for local dev: set WORKFORCE_TWIN_DEFAULT_COMPANY
-_DEFAULT_COMPANY = os.environ.get("WORKFORCE_TWIN_DEFAULT_COMPANY", "NTT Data")
+_DEFAULT_COMPANY = os.environ.get("WORKFORCE_TWIN_DEFAULT_COMPANY", "Acme Corporation")
 
 if _SKIP_AUTH:
     logger.info("Auth SKIPPED (WORKFORCE_TWIN_SKIP_AUTH=1)")
