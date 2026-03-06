@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
+import { extractTokenFromURL } from './auth'
 import './styles/globals.css'
+
+// Extract token from URL before React renders (e.g. https://host/<token>)
+extractTokenFromURL()
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -131,6 +131,41 @@ This means: **one Docker image works for all environments** — just change the 
 
 ---
 
+## Authentication
+
+All API endpoints require a Bearer token (`Authorization: Bearer <token>` header).
+The backend uses the same `verify_token` mechanism as the rest of the Etter app.
+
+### How token flows
+
+1. User receives a link: `https://<workforce-twin-host>/<token>`
+2. UI extracts the token from the URL path on load (`src/auth.ts`)
+3. Token is saved to `localStorage` (key: `workforce_twin_token`)
+4. URL is cleaned to `/` (via `history.replaceState`)
+5. All subsequent API calls include `Authorization: Bearer <token>` header
+
+### Token in the URL
+
+The token is the **first path segment** that doesn't match a known route
+(`/`, `/explorer`, `/simulation`, `/nova`, `/deep-dive`).
+
+Example:
+```
+https://workforce-twin.draup.com/eyJhbGciOiJIUzI1NiIsInR5cCI6...
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                  this gets extracted and stored
+```
+
+After extraction, the URL becomes `https://workforce-twin.draup.com/`.
+
+### Backend protection
+
+The workforce twin router has `dependencies=[Depends(verify_token)]` at the
+router level in `api/app.py`, so **all endpoints** are protected without needing
+to add the dependency to each individual route handler.
+
+---
+
 ## CORS
 
 The backend must allow requests from the UI's origin. The etter backend already has CORS middleware configured in `middleware/cors_middleware.py`. Ensure the UI's domain is allowed.
