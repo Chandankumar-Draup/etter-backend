@@ -1,10 +1,10 @@
 """Multi-scenario comparison endpoint."""
 from typing import List, Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 
-from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.app import get_org, resolve_company
 from workforce_twin_modeling.api.serializers import serialize_fb_result, _r
 
 from workforce_twin_modeling.engine.cascade import Stimulus
@@ -38,9 +38,9 @@ class CompareRequest(BaseModel):
 
 
 @router.post("/compare")
-async def compare_scenarios(req: CompareRequest):
+async def compare_scenarios(req: CompareRequest, company: str = Depends(resolve_company)):
     """Run multiple scenarios and return comparison data."""
-    org = get_org()
+    org = get_org(company)
     results = []
 
     for sc in req.scenarios:

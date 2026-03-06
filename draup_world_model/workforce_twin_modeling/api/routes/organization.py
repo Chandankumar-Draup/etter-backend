@@ -1,29 +1,28 @@
 """Organization data endpoints."""
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
-from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.app import get_org, get_snapshot, resolve_company
 from workforce_twin_modeling.api.serializers import serialize_org, serialize_org_hierarchy, serialize_role, serialize_role_gap
-from workforce_twin_modeling.api.app import get_snapshot
 
 router = APIRouter(tags=["organization"])
 
 
 @router.get("/org")
-async def get_organization():
+async def get_organization(company: str = Depends(resolve_company)):
     """Full organization data — roles, workloads, tasks, skills, tools, human system."""
-    return serialize_org(get_org())
+    return serialize_org(get_org(company))
 
 
 @router.get("/org/hierarchy")
-async def get_hierarchy():
+async def get_hierarchy(company: str = Depends(resolve_company)):
     """Org tree: function → sub_function → jfg → role."""
-    return serialize_org_hierarchy(get_org())
+    return serialize_org_hierarchy(get_org(company))
 
 
 @router.get("/org/functions")
-async def get_functions():
+async def get_functions(company: str = Depends(resolve_company)):
     """List of function names."""
-    org = get_org()
+    org = get_org(company)
     result = []
     for fn in org.functions:
         role_ids = org.roles_by_function.get(fn, [])
@@ -41,9 +40,9 @@ async def get_functions():
 
 
 @router.get("/org/roles/{role_id}")
-async def get_role_detail(role_id: str):
+async def get_role_detail(role_id: str, company: str = Depends(resolve_company)):
     """Detailed role info with workloads, tasks, skills."""
-    org = get_org()
+    org = get_org(company)
     role = org.roles.get(role_id)
     if not role:
         return {"error": f"Role {role_id} not found"}
@@ -101,9 +100,9 @@ async def get_role_detail(role_id: str):
 
 
 @router.get("/org/tools")
-async def get_tools():
+async def get_tools(company: str = Depends(resolve_company)):
     """Available technology tools."""
-    org = get_org()
+    org = get_org(company)
     return [
         {
             "tool_id": t.tool_id,

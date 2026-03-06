@@ -1,9 +1,9 @@
 """Scenario catalog endpoints."""
 import os
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 
-from workforce_twin_modeling.api.app import get_org, PROJECT_ROOT
+from workforce_twin_modeling.api.app import get_org, resolve_company, PROJECT_ROOT
 from workforce_twin_modeling.api.serializers import _r
 
 from workforce_twin_modeling.stages.scenario_executor import load_catalog, run_scenario, run_batch
@@ -29,12 +29,13 @@ async def get_catalog():
 async def run_scenarios(
     scenario_ids: list[str] | None = None,
     families: list[str] | None = None,
+    company: str = Depends(resolve_company),
 ):
     """Run a batch of scenarios from the catalog."""
     if not os.path.exists(CATALOG_PATH):
         return {"error": "Scenario catalog not found"}
 
-    org = get_org()
+    org = get_org(company)
     results = run_batch(CATALOG_PATH, org, scenario_ids=scenario_ids, families=families)
 
     return {
@@ -64,12 +65,12 @@ async def run_scenarios(
 
 
 @router.post("/scenarios/run-single/{scenario_id}")
-async def run_single_scenario(scenario_id: str, trace: bool = False):
+async def run_single_scenario(scenario_id: str, trace: bool = False, company: str = Depends(resolve_company)):
     """Run a single scenario from the catalog with optional trace."""
     if not os.path.exists(CATALOG_PATH):
         return {"error": "Scenario catalog not found"}
 
-    org = get_org()
+    org = get_org(company)
     rows = load_catalog(CATALOG_PATH)
     row = next((r for r in rows if r["scenario_id"] == scenario_id), None)
     if not row:

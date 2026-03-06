@@ -1,10 +1,10 @@
 """9-Step Cascade endpoints."""
 from typing import List, Optional
 
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 
-from workforce_twin_modeling.api.app import get_org
+from workforce_twin_modeling.api.app import get_org, resolve_company
 from workforce_twin_modeling.api.serializers import serialize_cascade
 
 from workforce_twin_modeling.engine.cascade import Stimulus, run_cascade
@@ -25,9 +25,9 @@ class CascadeRequest(BaseModel):
 
 
 @router.post("/cascade")
-async def run_cascade_endpoint(req: CascadeRequest):
+async def run_cascade_endpoint(req: CascadeRequest, company: str = Depends(resolve_company)):
     """Run the 9-step cascade for a given stimulus configuration."""
-    org = get_org()
+    org = get_org(company)
 
     target_fns = req.target_functions if req.target_functions else org.functions
     stimulus = Stimulus(
